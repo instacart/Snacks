@@ -34,15 +34,15 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-3": "^6.17.0",
     "jest": "^18.1.0",
+    "radium": "^0.18.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "underscore": "^1.8.3",
     "webpack": "^2.2.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
-  },
-  "dependencies": {
+    "react-dom": "^15.4.2",
     "radium": "^0.18.2",
     "underscore": "^1.8.3"
   }
