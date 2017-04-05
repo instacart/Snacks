@@ -1,0 +1,49 @@
+{
+  "name": "caret",
+  "version": "1.0.0",
+  "description": "The Instacart Component Library",
+  "main": "",
+  "scripts": {
+    "test": "jest --coverage --silent",
+    "start": "webpack --progress --watch --config webpack.config.js src/index.js dist/caret.js",
+    "build": "npm test && webpack --progress --config webpack.config.js src/index.js dist/caret.js",
+    "test:watch": "npm test -- --watch --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/instacart/Caret.git"
+  },
+  "keywords": [
+    "design",
+    "caret",
+    "instacart",
+    "style"
+  ],
+  "author": "Dominic Cocchiarella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/instacart/Caret/issues"
+  },
+  "homepage": "https://github.com/instacart/Caret#readme",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-jest": "^18.0.0",
+    "babel-loader": "^6.2.10",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "jest": "^18.1.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^2.2.0"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "dependencies": {
+    "radium": "^0.18.2",
+    "underscore": "^1.8.3"
+  }
+}
