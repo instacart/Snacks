@@ -57,6 +57,7 @@ exports[`renders cart icon with styles 1`] = `
   onClick={undefined}
   style={
     Object {
+      "color": "#fff",
       "fontFamily": "ic-icons",
       "fontSize": "16px",
       "fontSmoothing": "antialiased",

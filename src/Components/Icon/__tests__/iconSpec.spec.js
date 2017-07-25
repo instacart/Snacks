@@ -18,7 +18,7 @@ it('renders cart icon with hex code correctly', () => {
 
 it('renders cart icon with styles', () => {
   const tree = renderer.create(
-    <Icon name='cart' styles={{ color: '#fff' }} />
+    <Icon name='cart' style={{ color: '#fff' }} />
   ).toJSON();
   expect(tree).toMatchSnapshot()
 })
