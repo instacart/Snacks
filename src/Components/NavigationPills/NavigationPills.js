@@ -1,4 +1,5 @@
 import React           from 'react'
+import PropTypes       from 'prop-types'
 import Radium          from 'radium'
 import Icon            from '../Icon/Icon'
 import componentStyles from './NavigationPillStyles'
@@ -43,10 +44,10 @@ const NavigationPills = props => {
 }
 
 NavigationPills.propTypes = {
-  pills: React.PropTypes.array,
-  onPillClick: React.PropTypes.func,
-  label: React.PropTypes.string,
-  activePill: React.PropTypes.string
+  pills: PropTypes.array,
+  onPillClick: PropTypes.func,
+  label: PropTypes.string,
+  activePill: PropTypes.string
 }
 
 export default Radium(NavigationPills)

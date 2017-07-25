@@ -1,5 +1,6 @@
-import React  from 'react'
-import Radium from 'radium'
+import React     from 'react'
+import PropTypes from 'prop-types'
+import Radium    from 'radium'
 import { pill as pillStyles } from './NavigationPillStyles'
 
 const NavigationPill = props => {
@@ -24,10 +25,10 @@ const NavigationPill = props => {
 }
 
 NavigationPill.propTypes = {
-  isActive: React.PropTypes.bool,
-  onClick: React.PropTypes.func,
-  path: React.PropTypes.string,
-  text: React.PropTypes.string
+  isActive: PropTypes.bool,
+  onClick: PropTypes.func,
+  path: PropTypes.string,
+  text: PropTypes.string
 }
 
 export default Radium(NavigationPill)

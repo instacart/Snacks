@@ -1,5 +1,7 @@
+import React     from 'react'
 import Radium    from 'radium'
 import hexValues from './hexValues'
+import PropTypes from 'prop-types'
 
 const baseStyles = {
   fontSize: '16px',
@@ -21,7 +23,7 @@ const getIcon = ({ name, code }) => {
   return String.fromCodePoint(codePoint)
 }
 
-const Icon = (props) => {
+const Icon = props => {
   const { style, onClick } = props
   const icon = getIcon(props)
   return (
@@ -36,13 +38,13 @@ const Icon = (props) => {
 }
 
 Icon.propTypes = {
-  name: React.PropTypes.oneOf(Object.keys(hexValues)),
-  code: React.PropTypes.string,
-  style: React.PropTypes.oneOfType([
-    React.PropTypes.object,
-    React.PropTypes.array
+  name: PropTypes.oneOf(Object.keys(hexValues)),
+  code: PropTypes.string,
+  style: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
   ]),
-  onClick: React.PropTypes.func
+  onClick: PropTypes.func
 }
 
 export default Radium(Icon)
