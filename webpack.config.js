@@ -10,7 +10,7 @@ module.exports = {
     main: "./src/index.js"
   },
   output: {
-    library: 'Caret',
+    library: 'Snacks',
     libraryTarget: 'umd'
   },
   devtool: "cheap-module-eval-source-map"

@@ -1,4 +1,3 @@
-import React     from 'react'
 import Radium    from 'radium'
 import hexValues from './hexValues'
 
@@ -16,20 +15,34 @@ const baseStyles = {
   osxFontSmoothing: 'grayscale',
 }
 
-function Icon (props) {
-  const { name, style } = props
-  const icon = String.fromCodePoint(parseInt(hexValues[name], 16))
+const getIcon = ({ name, code }) => {
+  const iconCode = !code ? hexValues[name] : code
+  const codePoint = parseInt(iconCode, 16)
+  return String.fromCodePoint(codePoint)
+}
 
-  return <i style={[baseStyles, style]} aria-hidden={true}>{icon}</i>
+const Icon = (props) => {
+  const { style, onClick } = props
+  const icon = getIcon(props)
+  return (
+    <i
+      style={[baseStyles, style]}
+      aria-hidden={true}
+      onClick={onClick}
+    >
+      {icon}
+    </i>
+  )
 }
 
 Icon.propTypes = {
-  name: React.PropTypes.oneOf(Object.keys(hexValues)).isRequired,
+  name: React.PropTypes.oneOf(Object.keys(hexValues)),
+  code: React.PropTypes.string,
   style: React.PropTypes.oneOfType([
     React.PropTypes.object,
     React.PropTypes.array
-  ])
+  ]),
+  onClick: React.PropTypes.func
 }
-
 
 export default Radium(Icon)

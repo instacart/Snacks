@@ -1,30 +1,30 @@
 {
-  "name": "caret",
-  "version": "1.0.0",
-  "description": "The Instacart Component Library",
-  "main": "",
+  "name": "snacks",
+  "version": "0.1.0",
+  "description": "The Instacart Component Library for Web",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest --coverage --silent",
-    "start": "webpack --progress --watch --config webpack.config.js src/index.js dist/caret.js",
-    "build": "npm test && webpack --progress --config webpack.config.js src/index.js dist/caret.js",
+    "start": "webpack --progress --watch --config webpack.config.js src/index.js dist/snacks.js",
+    "build": "npm test && webpack --progress --config webpack.config.js src/index.js dist/snacks.js",
     "test:watch": "npm test -- --watch --bail"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/instacart/Caret.git"
+    "url": "git+https://github.com/instacart/Snacks.git"
   },
   "keywords": [
     "design",
-    "caret",
+    "snacks",
     "instacart",
     "style"
   ],
   "author": "Dominic Cocchiarella",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/instacart/Caret/issues"
+    "url": "https://github.com/instacart/Snacks/issues"
   },
-  "homepage": "https://github.com/instacart/Caret#readme",
+  "homepage": "https://github.com/instacart/Snacks#readme",
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-jest": "^18.0.0",

@@ -1,17 +1,16 @@
 import React  from 'react'
 import Radium from 'radium'
-import NavigationPillStyles from './NavigationPillStyles'
+import { pill as pillStyles } from './NavigationPillStyles'
 
-function NavigationPill(props) {
+const NavigationPill = props => {
   const { isActive, text } = props
-  const pillStyles = NavigationPillStyles.pill
 
   return (
     <li style={pillStyles.container}>
       <a
-        href={props.path || '#'}
+        href={this.props.path || '#'}
         data-bypass={true}
-        onClick={e => props.onClick && props.onClick(e, props)}
+        onClick={e => this.props.onClick(e, this.props)}
         style={[
           pillStyles.main.default,
           isActive && pillStyles.main.active
