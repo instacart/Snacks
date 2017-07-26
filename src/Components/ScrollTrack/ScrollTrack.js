@@ -1,8 +1,10 @@
 import componentStyles from './ScrollTrackStyles'
 
-import Icon   from '../Icon/Icon'
-import Radium from 'radium'
-import React  from 'react'
+import Icon     from '../Icon/Icon'
+import Radium   from 'radium'
+import React    from 'react'
+import ReactDOM from 'react-dom'
+import _        from 'underscore'
 
 const ScrollTrack = React.createClass({
   propTypes: {

@@ -1,20 +1,20 @@
-import React     from 'react'
-import PropTypes from 'prop-types'
-import Radium    from 'radium'
-import { pill as pillStyles } from './NavigationPillStyles'
+import React      from 'react'
+import PropTypes  from 'prop-types'
+import Radium     from 'radium'
+import pillStyles from './NavigationPillStyles'
 
 const NavigationPill = props => {
   const { isActive, text } = props
 
   return (
-    <li style={pillStyles.container}>
+    <li style={pillStyles.pill.container}>
       <a
-        href={this.props.path || '#'}
+        href={props.path || '#'}
         data-bypass={true}
-        onClick={e => this.props.onClick(e, this.props)}
+        onClick={e => props.onClick(e, props)}
         style={[
-          pillStyles.main.default,
-          isActive && pillStyles.main.active
+          pillStyles.pill.main.default,
+          isActive && pillStyles.pill.main.active
         ]}
         key={`pill-anchor-${text}`}
       >

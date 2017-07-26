@@ -13,5 +13,11 @@ module.exports = {
     library: 'Snacks',
     libraryTarget: 'umd'
   },
+  externals: {
+    'react': 'react',
+    'react-dom': 'react-dom',
+    'radium': 'radium',
+    'prop-types': 'prop-types'
+  },
   devtool: "cheap-module-eval-source-map"
 }

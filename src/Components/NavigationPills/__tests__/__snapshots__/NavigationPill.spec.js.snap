@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders active pill correctly 1`] = `
+<li
+  data-radium={true}
+  style={
+    Object {
+      "display": "inline-block",
+    }
+  }
+>
+  <a
+    data-bypass={true}
+    data-radium={true}
+    href="#"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#43B02A",
+        "borderRadius": "24px",
+        "color": "#fff",
+        "display": "block",
+        "fontSize": "14px",
+        "lineHeight": "1.2",
+        "margin": "0 4px",
+        "padding": "12px 16px",
+        "transition": "background-color 150ms ease-in-out",
+      }
+    }
+  >
+    Active pill
+  </a>
+</li>
+`;
+
+exports[`renders href pill correctly 1`] = `
+<li
+  data-radium={true}
+  style={
+    Object {
+      "display": "inline-block",
+    }
+  }
+>
+  <a
+    data-bypass={true}
+    data-radium={true}
+    href="/store/doms-cool-store"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#f7f7f7",
+        "borderRadius": "24px",
+        "color": "#3ea327",
+        "display": "block",
+        "fontSize": "14px",
+        "lineHeight": "1.2",
+        "margin": "0 4px",
+        "padding": "12px 16px",
+        "transition": "background-color 150ms ease-in-out",
+      }
+    }
+  >
+    Pill with href
+  </a>
+</li>
+`;
+
+exports[`renders inactive pill correctly 1`] = `
+<li
+  data-radium={true}
+  style={
+    Object {
+      "display": "inline-block",
+    }
+  }
+>
+  <a
+    data-bypass={true}
+    data-radium={true}
+    href="#"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#f7f7f7",
+        "borderRadius": "24px",
+        "color": "#3ea327",
+        "display": "block",
+        "fontSize": "14px",
+        "lineHeight": "1.2",
+        "margin": "0 4px",
+        "padding": "12px 16px",
+        "transition": "background-color 150ms ease-in-out",
+      }
+    }
+  >
+    Not active pill
+  </a>
+</li>
+`;
