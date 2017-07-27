@@ -1,14 +1,15 @@
 import componentStyles from './ScrollTrackStyles'
 
-import Icon     from '../Icon/Icon'
-import Radium   from 'radium'
-import React    from 'react'
-import ReactDOM from 'react-dom'
-import _        from 'underscore'
+import Icon      from '../Icon/Icon'
+import Radium    from 'radium'
+import React     from 'react'
+import ReactDOM  from 'react-dom'
+import PropTypes from 'prop-types'
+import _         from 'underscore'
 
 const ScrollTrack = React.createClass({
   propTypes: {
-    leftOverride: React.PropTypes.number
+    leftOverride: PropTypes.number
   },
 
   getInitialState() {
@@ -48,9 +49,9 @@ const ScrollTrack = React.createClass({
   },
 
   getNodeWidths() {
-    const parentNode = ReactDOM.findDOMNode(this)
+    const parentNode = this.refs.container
     const parentNodeBounds = parentNode && parentNode.getBoundingClientRect()
-    const trackNode = ReactDOM.findDOMNode(this.refs.track)
+    const trackNode = this.refs.track
     const trackNodeBounds = trackNode && trackNode.getBoundingClientRect()
     const parentWidth = parentNodeBounds && parentNodeBounds.width
     const trackWidth = trackNode && (trackNode.offsetLeft + trackNode.scrollWidth)
@@ -167,7 +168,10 @@ const ScrollTrack = React.createClass({
     if (!children) { return null }
 
     return (
-      <div style={containerStyles}>
+      <div
+        ref='container'
+        style={containerStyles}
+      >
         {this.renderLeftArrow()}
         <div
           style={[

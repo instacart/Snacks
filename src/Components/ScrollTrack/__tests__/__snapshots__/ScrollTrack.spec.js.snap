@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ScrollTrack correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        className="rmq-16b35912"
+        data-radium={true}
+        style={
+          Object {
+            "left": 0,
+            "position": "relative",
+            "transition": "left 150ms ease-in-out",
+            "whiteSpace": "nowrap",
+          }
+        }
+      >
+        <div
+          data-radium={true}
+        >
+          <p>
+            one
+          </p>
+          <p>
+            two
+          </p>
+          <p>
+            three
+          </p>
+          <p>
+            four
+          </p>
+          <p>
+            five
+          </p>
+          <p>
+            six
+          </p>
+          <p>
+            seven
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
+      overflow-x: scroll !important;
+      display: block !important;
+      -ms-overflow-style: none !important;
+      overflow: -moz-scrollbars-none !important;
+      webkit-overflow-scrolling: touch !important;}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders ScrollTrack without children correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div />
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
