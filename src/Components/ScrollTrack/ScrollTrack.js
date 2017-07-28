@@ -1,6 +1,7 @@
 import componentStyles from './ScrollTrackStyles'
 
 import React, { Component } from "react";
+import CircleButton  from '../Buttons/CircleButton'
 import Icon          from '../Icon/Icon'
 import Radium        from 'radium'
 import ReactDOM      from 'react-dom'
@@ -128,20 +129,16 @@ class ScrollTrack extends Component {
     if (!this.state.showRightArrow) { return }
 
     return (
-      <button
-        onClick={e => {
-          e.preventDefault()
-          this.slideForward()
-        }}
-        aria-label='next'
-        key='navigation-next-btn'
-        style={[
+      <CircleButton
+        onClick={this.slideForward}
+        ariaLabel='next'
+        styles={Object.assign({},
           slideButtonStyles.default,
           slideButtonStyles.right
-        ]}
+        )}
       >
         <Icon name='arrowRightSmallBold' />
-      </button>
+      </CircleButton>
     )
   }
 
@@ -151,20 +148,16 @@ class ScrollTrack extends Component {
     if (!this.state.showLeftArrow) { return }
 
     return (
-      <button
-        onClick={e => {
-          e.preventDefault()
-          this.slideBack()
-        }}
-        aria-label='back'
-        key='navigation-back-btn'
-        style={[
+      <CircleButton
+        onClick={this.slideBack}
+        ariaLabel='back'
+        styles={Object.assign({},
           slideButtonStyles.default,
           slideButtonStyles.left
-        ]}
+        )}
       >
         <Icon name='arrowLeftSmallBold' />
-      </button>
+      </CircleButton>
     )
   }
 

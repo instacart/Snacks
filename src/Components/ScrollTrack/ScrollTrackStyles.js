@@ -1,4 +1,5 @@
 import responsive from '../../Styles/responsive'
+import spacing    from '../../Styles/spacing'
 
 export default {
   containerStyles: {
@@ -22,37 +23,9 @@ export default {
   slideButtonStyles: {
     default: {
       position: 'absolute',
-      zIndex: '10',
-      top: '8px',
-      backgroundColor: '#fff',
-      border: '0',
-      color: 'green',
-      width: '40px',
-      height: '40px',
-      borderRadius: '50%',
-      boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)',
-      transition: 'background-color 150ms ease-in-out',
-      textAlign: 'center',
-      lineHeight: '1',
-      ':hover': {
-        backgroundColor: '#f7f7f7'
-      },
-      ':active': {
-        backgroundColor: '#f7f7f7'
-      },
-      ':focus': {
-        backgroundColor: '#f7f7f7',
-        outline: 'none'
-      },
-      [responsive.xs]: {
-        display: 'none'
-      }
+      ...spacing.TOP_XS,
     },
-    left: {
-      left: '8px'
-    },
-    right: {
-      right: '8px'
-    }
+    left: spacing.LEFT_XS,
+    right: spacing.RIGHT_XS
   }
 }
