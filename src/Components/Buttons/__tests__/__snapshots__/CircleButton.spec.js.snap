@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders CircleButton with Icon correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <button
+      aria-label={undefined}
+      className="rmq-4534e6b"
+      data-radium={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "border": "0",
+          "borderRadius": "50%",
+          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
+          "color": "#43B02A",
+          "height": "40px",
+          "lineHeight": "1",
+          "textAlign": "center",
+          "transition": "background-color 150ms ease-in-out",
+          "width": "40px",
+          "zIndex": 100,
+        }
+      }
+    >
+      <i
+        aria-hidden={true}
+        data-radium={true}
+        onClick={undefined}
+        style={
+          Object {
+            "fontFamily": "ic-icons",
+            "fontSize": "16px",
+            "fontSmoothing": "antialiased",
+            "fontStyle": "normal",
+            "fontVariant": "normal",
+            "fontWeight": "normal",
+            "lineHeight": "1",
+            "osxFontSmoothing": "grayscale",
+            "position": "relative",
+            "speak": "none",
+            "textTransform": "none",
+          }
+        }
+      >
+        
+      </i>
+    </button>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders CircleButton with passed ariaLabel correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <button
+      aria-label="this is a button test"
+      className="rmq-4534e6b"
+      data-radium={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "border": "0",
+          "borderRadius": "50%",
+          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
+          "color": "#43B02A",
+          "height": "40px",
+          "lineHeight": "1",
+          "textAlign": "center",
+          "transition": "background-color 150ms ease-in-out",
+          "width": "40px",
+          "zIndex": 100,
+        }
+      }
+    >
+      1
+    </button>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders CircleButton with passed styles correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <button
+      aria-label={undefined}
+      className="rmq-4534e6b"
+      data-radium={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "border": "0",
+          "borderRadius": "50%",
+          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
+          "color": "#43B02A",
+          "height": "40px",
+          "lineHeight": "1",
+          "position": "absolute",
+          "right": "8px",
+          "textAlign": "center",
+          "top": "8px",
+          "transition": "background-color 150ms ease-in-out",
+          "width": "40px",
+          "zIndex": 100,
+        }
+      }
+    >
+      1
+    </button>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders basic CircleButton correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <button
+      aria-label={undefined}
+      className="rmq-4534e6b"
+      data-radium={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "border": "0",
+          "borderRadius": "50%",
+          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
+          "color": "#43B02A",
+          "height": "40px",
+          "lineHeight": "1",
+          "textAlign": "center",
+          "transition": "background-color 150ms ease-in-out",
+          "width": "40px",
+          "zIndex": 100,
+        }
+      }
+    >
+      1
+    </button>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
+      }
+    }
+  />
+</div>
+`;
