@@ -1,31 +1,38 @@
 import componentStyles from './ScrollTrackStyles'
 
-import Icon      from '../Icon/Icon'
-import Radium    from 'radium'
-import React     from 'react'
-import ReactDOM  from 'react-dom'
-import PropTypes from 'prop-types'
-import _         from 'underscore'
+import React, { Component } from "react";
+import Icon          from '../Icon/Icon'
+import Radium        from 'radium'
+import ReactDOM      from 'react-dom'
+import PropTypes     from 'prop-types'
+import _             from 'underscore'
 
-const ScrollTrack = React.createClass({
-  propTypes: {
+@Radium
+class ScrollTrack extends Component {
+  static propTypes = {
     leftOverride: PropTypes.number
-  },
+  }
 
-  getInitialState() {
-    return {
+  static defaultProps = {
+    leftOverride: 0
+  }
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
       showLeftArrow: false,
       showRightArrow: false,
-      left: this.props.leftOverride || 0
+      left: props.leftOverride
     }
-  },
+  }
 
   componentDidMount() {
     this.debouncdComputeSlideAttributes = _.debounce(this.computeSlideAttributes, 200)
     this.computeSlideAttributes()
 
     window.addEventListener('resize', this.debouncdComputeSlideAttributes)
-  },
+  }
 
   componentDidUpdate(prevProps) {
     const prevChildren = prevProps.children || []
@@ -34,7 +41,7 @@ const ScrollTrack = React.createClass({
     if (!_.isEqual(prevChildren, newChildren)) {
       this.computeSlideAttributes()
     }
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.leftOverride !== this.props.leftOverride) {
@@ -42,13 +49,13 @@ const ScrollTrack = React.createClass({
       this.setState({ left: nextProps.leftOverride })
       this.computeSlideAttributes()
     }
-  },
+  }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.debouncdComputeSlideAttributes)
-  },
+  }
 
-  getNodeWidths() {
+  getNodeWidths = () => {
     const parentNode = this.refs.container
     const parentNodeBounds = parentNode && parentNode.getBoundingClientRect()
     const trackNode = this.refs.track
@@ -58,43 +65,43 @@ const ScrollTrack = React.createClass({
     const trackBounds = trackNodeBounds
 
     return { parentWidth, trackWidth, trackBounds }
-  },
+  }
 
-  computeSlideAttributes() {
+  computeSlideAttributes = () => {
     const { parentWidth, trackWidth } = this.getNodeWidths()
     const trackAtEnd = parentWidth < trackWidth && this.state.left <= (parentWidth - trackWidth)
     const trackAtBeginning = this.state.left >= 0
 
     if (!parentWidth || !trackWidth) { return }
-    if (parentWidth >= trackWidth) { return this.hideArrows() }
+    if (Math.ceil(parentWidth) >= trackWidth) { return this.hideArrows() }
     if (!trackAtEnd) { this.showRightArrow() } else { this.hideRightArrow() }
     if (!trackAtBeginning) { this.showLeftArrow() } else { this.hideLeftArrow() }
-  },
+  }
 
-  hideArrows() {
+  hideArrows = () => {
     this.setState({
       showLeftArrow: false,
       showRightArrow: false
     })
-  },
+  }
 
-  hideRightArrow() {
+  hideRightArrow = () => {
     this.setState({ showRightArrow: false })
-  },
+  }
 
-  hideLeftArrow() {
+  hideLeftArrow = () => {
     this.setState({ showLeftArrow: false })
-  },
+  }
 
-  showRightArrow() {
+  showRightArrow = () => {
     this.setState({ showRightArrow: true })
-  },
+  }
 
-  showLeftArrow() {
+  showLeftArrow = () => {
     this.setState({ showLeftArrow: true })
-  },
+  }
 
-  slideForward() {
+  slideForward = () => {
     const { parentWidth, trackWidth } = this.getNodeWidths()
     let nextForward = this.state.left - parentWidth
     const fullForward = parentWidth - trackWidth
@@ -103,9 +110,9 @@ const ScrollTrack = React.createClass({
     if (nextForward <= fullForward) { nextForward = fullForward }
 
     this.setState({ left: nextForward }, this.computeSlideAttributes)
-  },
+  }
 
-  slideBack() {
+  slideBack = () => {
     const { parentWidth, trackWidth, trackBounds } = this.getNodeWidths()
     let nextBack = this.state.left + parentWidth
 
@@ -113,9 +120,9 @@ const ScrollTrack = React.createClass({
     if (this.state.left >= 0 || nextBack >= 0) { nextBack = 0 }
 
     this.setState({ left: nextBack }, this.computeSlideAttributes)
-  },
+  }
 
-  renderRightArrow() {
+  renderRightArrow = () => {
     const { slideButtonStyles, icons } = componentStyles
 
     if (!this.state.showRightArrow) { return }
@@ -136,9 +143,9 @@ const ScrollTrack = React.createClass({
         <Icon name='arrowRightSmallBold' />
       </button>
     )
-  },
+  }
 
-  renderLeftArrow() {
+  renderLeftArrow = () => {
     const { slideButtonStyles } = componentStyles
 
     if (!this.state.showLeftArrow) { return }
@@ -159,7 +166,7 @@ const ScrollTrack = React.createClass({
         <Icon name='arrowLeftSmallBold' />
       </button>
     )
-  },
+  }
 
   render() {
     const { containerStyles, innerContainerStyles } = componentStyles
@@ -187,6 +194,6 @@ const ScrollTrack = React.createClass({
       </div>
     )
   }
-})
+}
 
-export default Radium(ScrollTrack)
+export default ScrollTrack
