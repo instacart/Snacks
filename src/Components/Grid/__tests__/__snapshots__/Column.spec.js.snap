@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Column correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <div
+      className="rmq-6827400b rmq-f3dfff3a rmq-1c50d32d rmq-6264ae62 rmq-68d17749"
+      data-radium={true}
+      style={Object {}}
+    />
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (min-width: 768px) and (max-width: 831px){ .rmq-6827400b{grid-column: span 3 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-f3dfff3a{grid-column: span 3 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-1c50d32d{grid-column: span 3 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-6264ae62{grid-column: span 3 !important;}}
+      @media (min-width: 1456px){ .rmq-68d17749{grid-column: span 3 !important;}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders Column multi-sizes correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+  >
+    <div
+      className="rmq-8f6274a rmq-9b0e1a5b rmq-a542a9ac rmq-f1cb9e65 rmq-dd3ac64f"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-8f6274a rmq-9b0e1a5b rmq-a542a9ac rmq-f1cb9e65 rmq-dd3ac64f"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-8f6274a rmq-9b0e1a5b rmq-a542a9ac rmq-f1cb9e65 rmq-9836020e"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-4a502409 rmq-9b0e1a5b rmq-a542a9ac rmq-f1cb9e65 rmq-dd3ac64f"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-8f6274a rmq-9b0e1a5b rmq-a542a9ac rmq-a23df0e3 rmq-dd3ac64f"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-c321f64e rmq-9b0e1a5b rmq-a542a9ac rmq-a23df0e3 rmq-6f8f884b"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-4a502409 rmq-32e4a8df rmq-467ef0a8 rmq-5d26cee7 rmq-68d17749"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-c321f64e rmq-aaca1a9d rmq-da453daa rmq-f1cb9e65 rmq-eec84579"
+      data-radium={true}
+      style={Object {}}
+    />
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (min-width: 768px) and (max-width: 831px){ .rmq-8f6274a{grid-column: span 2 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-9b0e1a5b{grid-column: span 2 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-a542a9ac{grid-column: span 2 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-f1cb9e65{grid-column: span 4 !important;}}
+      @media (min-width: 1456px){ .rmq-dd3ac64f{grid-column: span 5 !important;}}
+      @media (min-width: 1456px){ .rmq-9836020e{grid-column: span 4 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-4a502409{grid-column: span 1 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-a23df0e3{grid-column: span 2 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-c321f64e{grid-column: span 6 !important;}}
+      @media (min-width: 1456px){ .rmq-6f8f884b{grid-column: span 1 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-32e4a8df{grid-column: span 6 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-467ef0a8{grid-column: span 6 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-5d26cee7{grid-column: span 6 !important;}}
+      @media (min-width: 1456px){ .rmq-68d17749{grid-column: span 3 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-aaca1a9d{grid-column: span 4 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-da453daa{grid-column: span 4 !important;}}
+      @media (min-width: 1456px){ .rmq-eec84579{grid-column: span 12 !important;}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders Column sizes correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+  >
+    <div
+      className="rmq-4a502409 rmq-50de76f8 rmq-1c5e872f rmq-92ad8e0 rmq-6f8f884b"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-8f6274a rmq-9b0e1a5b rmq-a542a9ac rmq-a23df0e3 rmq-67a17308"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-6827400b rmq-f3dfff3a rmq-1c50d32d rmq-6264ae62 rmq-68d17749"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-e695dc4c rmq-aaca1a9d rmq-da453daa rmq-f1cb9e65 rmq-9836020e"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-47bf30d rmq-e8b5057c rmq-bd9ace2b rmq-c413b6e4 rmq-dd3ac64f"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-c321f64e rmq-32e4a8df rmq-467ef0a8 rmq-5d26cee7 rmq-d54cb10c"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-22530f0f rmq-8bb68dbe rmq-bd8d1a29 rmq-1d4d8c66 rmq-d67cb54d"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-d0c16940 rmq-3a4a3111 rmq-37806aa6 rmq-70743e69 rmq-e7313e02"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-eea78001 rmq-78351bf0 rmq-1ad5fb27 rmq-42bc56e8 rmq-2c360243"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-3d8893f9 rmq-2ce10208 rmq-fa12f81f rmq-8da3edd0 rmq-b189533b"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-9765a498 rmq-9310a349 rmq-d0c888fe rmq-fe2a0bb1 rmq-d102b5da"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-9b13a4bb rmq-e56f790a rmq-b7c17bdd rmq-d421b412 rmq-eec84579"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-7503ea5a rmq-5f28734b rmq-a1644bc rmq-7118bf3 rmq-f8832218"
+      data-radium={true}
+      style={Object {}}
+    />
+    <div
+      className="rmq-b6ee427d rmq-6b2d600c rmq-107efe9b rmq-bdbc8b54 rmq-f0cdd0bf"
+      data-radium={true}
+      style={Object {}}
+    />
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (min-width: 768px) and (max-width: 831px){ .rmq-4a502409{grid-column: span 1 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-50de76f8{grid-column: span 1 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-1c5e872f{grid-column: span 1 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-92ad8e0{grid-column: span 1 !important;}}
+      @media (min-width: 1456px){ .rmq-6f8f884b{grid-column: span 1 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-8f6274a{grid-column: span 2 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-9b0e1a5b{grid-column: span 2 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-a542a9ac{grid-column: span 2 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-a23df0e3{grid-column: span 2 !important;}}
+      @media (min-width: 1456px){ .rmq-67a17308{grid-column: span 2 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-6827400b{grid-column: span 3 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-f3dfff3a{grid-column: span 3 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-1c50d32d{grid-column: span 3 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-6264ae62{grid-column: span 3 !important;}}
+      @media (min-width: 1456px){ .rmq-68d17749{grid-column: span 3 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-e695dc4c{grid-column: span 4 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-aaca1a9d{grid-column: span 4 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-da453daa{grid-column: span 4 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-f1cb9e65{grid-column: span 4 !important;}}
+      @media (min-width: 1456px){ .rmq-9836020e{grid-column: span 4 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-47bf30d{grid-column: span 5 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-e8b5057c{grid-column: span 5 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-bd9ace2b{grid-column: span 5 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-c413b6e4{grid-column: span 5 !important;}}
+      @media (min-width: 1456px){ .rmq-dd3ac64f{grid-column: span 5 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-c321f64e{grid-column: span 6 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-32e4a8df{grid-column: span 6 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-467ef0a8{grid-column: span 6 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-5d26cee7{grid-column: span 6 !important;}}
+      @media (min-width: 1456px){ .rmq-d54cb10c{grid-column: span 6 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-22530f0f{grid-column: span 7 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-8bb68dbe{grid-column: span 7 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-bd8d1a29{grid-column: span 7 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-1d4d8c66{grid-column: span 7 !important;}}
+      @media (min-width: 1456px){ .rmq-d67cb54d{grid-column: span 7 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-d0c16940{grid-column: span 8 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-3a4a3111{grid-column: span 8 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-37806aa6{grid-column: span 8 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-70743e69{grid-column: span 8 !important;}}
+      @media (min-width: 1456px){ .rmq-e7313e02{grid-column: span 8 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-eea78001{grid-column: span 9 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-78351bf0{grid-column: span 9 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-1ad5fb27{grid-column: span 9 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-42bc56e8{grid-column: span 9 !important;}}
+      @media (min-width: 1456px){ .rmq-2c360243{grid-column: span 9 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-3d8893f9{grid-column: span 10 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-2ce10208{grid-column: span 10 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-fa12f81f{grid-column: span 10 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-8da3edd0{grid-column: span 10 !important;}}
+      @media (min-width: 1456px){ .rmq-b189533b{grid-column: span 10 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-9765a498{grid-column: span 11 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-9310a349{grid-column: span 11 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-d0c888fe{grid-column: span 11 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-fe2a0bb1{grid-column: span 11 !important;}}
+      @media (min-width: 1456px){ .rmq-d102b5da{grid-column: span 11 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-9b13a4bb{grid-column: span 12 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-e56f790a{grid-column: span 12 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-b7c17bdd{grid-column: span 12 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-d421b412{grid-column: span 12 !important;}}
+      @media (min-width: 1456px){ .rmq-eec84579{grid-column: span 12 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-7503ea5a{grid-column: span 13 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-5f28734b{grid-column: span 13 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-a1644bc{grid-column: span 13 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-7118bf3{grid-column: span 13 !important;}}
+      @media (min-width: 1456px){ .rmq-f8832218{grid-column: span 13 !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-b6ee427d{grid-column: span 14 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-6b2d600c{grid-column: span 14 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-107efe9b{grid-column: span 14 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-bdbc8b54{grid-column: span 14 !important;}}
+      @media (min-width: 1456px){ .rmq-f0cdd0bf{grid-column: span 14 !important;}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders Column with passed styles correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <div
+      className="rmq-6827400b rmq-f3dfff3a rmq-1c50d32d rmq-6264ae62 rmq-68d17749"
+      data-radium={true}
+      style={
+        Object {
+          "color": "#ccc",
+          "display": "block",
+        }
+      }
+    />
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (min-width: 768px) and (max-width: 831px){ .rmq-6827400b{grid-column: span 3 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-f3dfff3a{grid-column: span 3 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-1c50d32d{grid-column: span 3 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-6264ae62{grid-column: span 3 !important;}}
+      @media (min-width: 1456px){ .rmq-68d17749{grid-column: span 3 !important;}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders Column without passed size correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <div
+      className="rmq-4a502409 rmq-50de76f8 rmq-1c5e872f rmq-92ad8e0 rmq-6f8f884b"
+      data-radium={true}
+      style={Object {}}
+    />
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (min-width: 768px) and (max-width: 831px){ .rmq-4a502409{grid-column: span 1 !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-50de76f8{grid-column: span 1 !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-1c5e872f{grid-column: span 1 !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-92ad8e0{grid-column: span 1 !important;}}
+      @media (min-width: 1456px){ .rmq-6f8f884b{grid-column: span 1 !important;}}",
+      }
+    }
+  />
+</div>
+`;

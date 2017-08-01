@@ -3,7 +3,6 @@ import renderer from 'react-test-renderer'
 import ScrollTrack from '../ScrollTrack'
 import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
-import { spy } from 'sinon'
 
 it('renders ScrollTrack correctly', () => {
   const tree = renderer.create(
