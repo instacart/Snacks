@@ -1,12 +1,12 @@
-import colors from './Styles/colors/index'
-import Icon from './Components/Icon/Icon'
-import Grid from './Components/Grid/Grid'
-import Row from './Components/Grid/Row'
-import Column from './Components/Grid/Column'
-import NavigationPills from './Components/NavigationPills/NavigationPills'
-import normalize from './Styles/normalize'
-import globalTheme from './Styles/globalTheme'
-import SetStyles from './Styles/SetStyles'
+import colors from './styles/colors/index'
+import Icon from './components/Icon/Icon'
+import Grid from './components/Grid/Grid'
+import Row from './components/Grid/Row'
+import Column from './components/Grid/Column'
+import NavigationPills from './components/NavigationPills/NavigationPills'
+import normalize from './styles/normalize'
+import globalTheme from './styles/globalTheme'
+import SetStyles from './styles/SetStyles'
 
 export {
   globalTheme,

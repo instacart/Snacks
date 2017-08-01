@@ -1,6 +1,6 @@
-import colors     from '../../Styles/colors'
-import responsive from '../../Styles/responsive'
-import zIndex     from '../../Styles/zIndex'
+import colors     from '../../styles/colors'
+import responsive from '../../styles/responsive'
+import zIndex     from '../../styles/zIndex'
 
 import Radium    from 'radium'
 import React     from 'react'
