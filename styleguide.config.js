@@ -15,6 +15,13 @@ module.exports = {
       content: {
         maxWidth: '1600px'
       }
+    },
+    ReactComponent: {
+      root: {
+        marginBottom: '48px',
+        backgroundColor: '#fff',
+        padding: '16px'
+      }
     }
   },
   theme: {
@@ -28,10 +35,10 @@ module.exports = {
       name: '#FF467E',
       type: '#5FCA44',
       error: '#fff',
-      baseBackground: '#fff',
-      errorBackground: '#c00',
-      codeBackground: '#f7f7f7',
-      sidebarBackground: '#f7f7f7',
+      baseBackground: '#f7f7f7',
+      errorBackground: '#E6003D',
+      codeBackground: '#fff',
+      sidebarBackground: '#fff',
     },
     fontFamily: {
       base: [
