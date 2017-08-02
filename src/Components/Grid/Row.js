@@ -89,8 +89,14 @@ const Row = props => {
 }
 
 Row.propTypes = {
+  /** Maximum number of columns this Row should grow to as screen width increases. Cannot exceed 14. */
   maxColumns: PropTypes.number,
+  /** Optional style overrides */
   styles: PropTypes.object
+}
+
+Row.defaultProps = {
+  maxColumns: 14
 }
 
 export default Radium(Row)

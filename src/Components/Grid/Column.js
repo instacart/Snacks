@@ -47,6 +47,7 @@ const Column = props => {
 }
 
 Column.propTypes = {
+  /** object where keys are breakpoint and value is number of columns to span at that breakpoint */
   sizes: PropTypes.shape({
     sm: PropTypes.number,
     md: PropTypes.number,
@@ -54,6 +55,7 @@ Column.propTypes = {
     lg: PropTypes.number,
     xl: PropTypes.number,
   }),
+  /** Optional style overrides */
   styles: PropTypes.object
 }
 

@@ -44,6 +44,7 @@ const Grid = props => {
 }
 
 Grid.propTypes = {
+  /** Optional style overrides */
   styles: PropTypes.object
 }
 
