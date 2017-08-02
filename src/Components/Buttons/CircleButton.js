@@ -5,6 +5,7 @@
 */
 import colors     from '../../styles/colors'
 import responsive from '../../styles/responsive'
+import themer     from '../../styles/themer'
 import zIndex     from '../../styles/zIndex'
 
 import Radium    from 'radium'
@@ -14,9 +15,9 @@ import PropTypes from 'prop-types'
 const styles = {
   default: {
     ...zIndex.Z_INDEX1,
-    backgroundColor: colors.WHITE,
+    backgroundColor: themer.get('colors', 'primaryBackground'),
     border: '0',
-    color: colors.GREEN_500,
+    color: themer.get('colors', 'primaryForeground'),
     width: '40px',
     height: '40px',
     borderRadius: '50%',

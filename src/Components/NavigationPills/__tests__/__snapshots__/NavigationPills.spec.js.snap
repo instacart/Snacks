@@ -32,6 +32,7 @@ exports[`renders NavigationPills correctly 1`] = `
             style={
               Object {
                 "backgroundColor": "#fff",
+                "boxSizing": "border-box",
                 "display": "inline-block",
                 "height": "56px",
                 "minWidth": "100%",
@@ -279,6 +280,7 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
             style={
               Object {
                 "backgroundColor": "#fff",
+                "boxSizing": "border-box",
                 "display": "inline-block",
                 "height": "56px",
                 "minWidth": "100%",
