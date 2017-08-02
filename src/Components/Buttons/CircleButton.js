@@ -1,3 +1,8 @@
+/**
+ * A simple circular button
+ *
+ * @author [Dominic Cocchiarella ](https://github.com/docchia)
+*/
 import colors     from '../../styles/colors'
 import responsive from '../../styles/responsive'
 import zIndex     from '../../styles/zIndex'
@@ -56,8 +61,11 @@ const CircleButton = props => {
 }
 
 CircleButton.propTypes = {
+  /** Label to be used by screen readers */
   ariaLabel: PropTypes.string,
+  /** Callback function called after button click */
   onClick: PropTypes.func,
+  /** Optional style overrides */
   styles: PropTypes.object,
 }
 

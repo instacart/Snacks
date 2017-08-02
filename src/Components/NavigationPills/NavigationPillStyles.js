@@ -8,6 +8,7 @@ export default {
     minWidth: '100%',
     padding: '8px 8px 8px 24px',
     backgroundColor: '#fff',
+    boxSizing: 'border-box'
   },
   pillsContainerStyles: {
     display: 'inline-block',

@@ -38,12 +38,17 @@ const Icon = props => {
 }
 
 Icon.propTypes = {
+  /**
+  * String name of icon - ex 'cart'
+  */
   name: PropTypes.oneOf(Object.keys(hexValues)),
+  /** Hexcode of desired icon from ic-icons */
   code: PropTypes.string,
-  style: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array
-  ]),
+  /** Optional style overrides */
+  style: PropTypes.object,
+  /** Callback function called after button click
+   * @param {SyntheticEvent} event The react `SyntheticEvent`
+  */
   onClick: PropTypes.func
 }
 

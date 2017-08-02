@@ -7,7 +7,9 @@
     "test": "jest --coverage",
     "start": "webpack --progress --watch --config webpack.config.js src/index.js dist/snacks.js",
     "build": "npm test && webpack --progress --config webpack.config.js src/index.js dist/snacks.js",
-    "test:watch": "npm test -- --watch --bail"
+    "test:watch": "npm test -- --watch --bail",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "repository": {
     "type": "git",
@@ -39,6 +41,7 @@
     "radium": "^0.18.2",
     "react": "^15.5.0",
     "react-dom": "^15.5.0",
+    "react-styleguidist": "^6.0.2",
     "react-test-renderer": "^15.5.0",
     "sinon": "^2.3.8",
     "underscore": "^1.8.3",

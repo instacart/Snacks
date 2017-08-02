@@ -44,9 +44,16 @@ const NavigationPills = props => {
 }
 
 NavigationPills.propTypes = {
+  /** array of pill objects */
   pills: PropTypes.array,
+  /** Callback function called after pill click
+   * @param {SyntheticEvent} event The react `SyntheticEvent`
+   * @param {props} object All the props passed to the component
+  */
   onPillClick: PropTypes.func,
+  /** optional label placed in front of pills */
   label: PropTypes.string,
+  /** string matching the text of one of the pills. Determines which pill is active, if any */
   activePill: PropTypes.string
 }
 

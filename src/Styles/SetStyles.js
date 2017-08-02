@@ -1,18 +1,19 @@
-import React from 'react'
-import Radium, { Style } from 'radium'
+import React, { Component }       from "react"
+import PropTypes                  from 'prop-types'
+import Radium, { Style }          from 'radium'
 import { normalize, globalTheme } from '../index'
 
 const getFonts = (assetsUrl) => {
   return (
     `@font-face {
       font-family: 'ic-icons';
-      src: url('${assetsUrl}/Fonts/ic-icons.eot');
+      font-weight: normal;
+      font-style: normal;
+      src: url('${assetsUrl}/ic-icons.eot');
       src: url('${assetsUrl}/ic-icons.eot?#iefix') format('embedded-opentype'),
            url('${assetsUrl}/ic-icons.woff') format('woff'),
            url('${assetsUrl}/ic-icons.ttf') format('truetype'),
            url('${assetsUrl}/ic-icons.svg#ic-icons') format('svg');
-      font-weight: normal;
-      font-style: normal;
     }
 
     @font-face {
@@ -81,21 +82,22 @@ const writeFonts = (assetsUrl) => {
   document.head.appendChild(style)
 }
 
-const Styles = React.createClass({
-  propTypes: {
-    assetsUrl: React.PropTypes.string.isRequired
-  },
+@Radium
+class Styles extends Component {
+  static propTypes = {
+    assetsUrl: PropTypes.string.isRequired
+  }
 
   componentWillMount() {
     if (fontLoaded) { return }
 
     writeFonts(this.props.assetsUrl)
     fontLoaded = true
-  },
+  }
 
   render() {
     return <Style rules={Object.assign({}, normalize, globalTheme)} />
   }
-})
+}
 
-export default Radium(Styles)
+export default Styles
