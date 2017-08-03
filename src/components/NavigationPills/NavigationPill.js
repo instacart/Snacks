@@ -1,6 +1,8 @@
 import React      from 'react'
 import PropTypes  from 'prop-types'
 import Radium     from 'radium'
+import colors     from '../../styles/colors'
+import themer     from '../../styles/themer'
 
 const styles = {
   container: {
@@ -11,8 +13,8 @@ const styles = {
       padding: '12px 16px',
       display: 'block',
       fontSize: '14px',
-      color: '#3ea327',
-      backgroundColor: '#f7f7f7',
+      color: themer.get('colors', 'primaryForeground'),
+      backgroundColor: colors.GRAY_97,
       borderRadius: '24px',
       margin: '0 4px',
       lineHeight: '1.2',
@@ -20,23 +22,23 @@ const styles = {
 
       ':hover': {
         textDecoration: 'none',
-        backgroundColor: '#eee'
+        backgroundColor: colors.GRAY_93
       },
       ':focus': {
         textDecoration: 'none',
-        backgroundColor: '#eee',
+        backgroundColor: colors.GRAY_93,
         outline: 'none'
       }
     },
     active: {
-      backgroundColor: '#43B02A',
-      color: '#fff',
+      backgroundColor: themer.get('colors', 'primaryForeground'),
+      color: colors.WHITE,
 
       ':hover': {
-        backgroundColor: '#43B02A'
+        backgroundColor: themer.get('colors', 'primaryForeground')
       },
       ':focus': {
-        backgroundColor: '#43B02A',
+        backgroundColor: themer.get('colors', 'primaryForeground'),
       }
     }
   }
