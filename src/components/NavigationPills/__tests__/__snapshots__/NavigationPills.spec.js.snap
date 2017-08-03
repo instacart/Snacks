@@ -31,7 +31,7 @@ exports[`renders NavigationPills correctly 1`] = `
             data-radium={true}
             style={
               Object {
-                "backgroundColor": "#fff",
+                "backgroundColor": "#FFFFFF",
                 "boxSizing": "border-box",
                 "display": "inline-block",
                 "height": "56px",
@@ -279,7 +279,7 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
             data-radium={true}
             style={
               Object {
-                "backgroundColor": "#fff",
+                "backgroundColor": "#FFFFFF",
                 "boxSizing": "border-box",
                 "display": "inline-block",
                 "height": "56px",

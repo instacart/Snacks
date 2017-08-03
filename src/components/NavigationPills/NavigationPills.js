@@ -15,7 +15,7 @@ const styles = {
     display: 'inline-block',
     height: '56px',
     minWidth: '100%',
-    padding: `${spacings.XS} ${spacings.XS} ${spacings.XS} ${spacings.MD}`,
+    padding: `${spacings.XS}px ${spacings.XS}px ${spacings.XS}px ${spacings.MD}px`,
     backgroundColor: colors.WHITE,
     boxSizing: 'border-box'
   },
