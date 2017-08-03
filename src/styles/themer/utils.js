@@ -1,3 +1,5 @@
+import colors from '../colors'
+
 export const themeTemplate = {
   colors: {
     action: true,
@@ -8,6 +10,15 @@ export const themeTemplate = {
   }
 }
 
+export const defaultTheme = {
+  colors: {
+    action: colors.GREEN_500,
+    primaryBackground: colors.WHITE,
+    primaryForeground: colors.GREEN_500,
+    secondaryBackground: colors.GREEN_500,
+    secondaryForeground: colors.WHITE,
+  }
+}
 export function cleanConfig(themeConfig) {
   const cleanConfig = {}
 

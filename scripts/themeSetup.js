@@ -1,5 +1,5 @@
-import themer from '../../src/styles/themer'
-import colors from '../../src/styles/colors'
+import themer from '../src/styles/themer'
+import colors from '../src/styles/colors'
 
 themer.themeConfig = {
   colors: {

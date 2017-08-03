@@ -58,7 +58,7 @@
   },
   "jest": {
     "setupFiles": [
-      "<rootDir>/lib/styleguide/themeSetup.js"
+      "<rootDir>/scripts/themeSetup.js"
     ]
   }
 }

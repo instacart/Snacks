@@ -8,9 +8,6 @@ module.exports = {
     '**/*.spec.js',
     '**/*/*hexValues.js'
   ],
-  require: [
-    path.join(__dirname, 'lib/styleguide/themeSetup')
-  ],
   showCode: true,
   showUsage: true,
   styles: {

@@ -1,6 +1,10 @@
 import { spy } from 'sinon'
 import themer from '../index'
-import { themeTemplate } from '../utils'
+import { defaultTheme, themeTemplate } from '../utils'
+
+it('should instantiate with default theme', () => {
+  expect(themer.themeConfig).toEqual(defaultTheme)
+})
 
 it('should warn when no config is set', () => {
   const oldWarn = console.warn

@@ -1,6 +1,15 @@
-import { cleanConfig, themeTemplate, validConfigValue } from './utils'
+import {
+  cleanConfig,
+  defaultTheme,
+  themeTemplate,
+  validConfigValue
+} from './utils'
 
 class Themer {
+  constructor() {
+    this._themeConfig = defaultTheme
+  }
+
   get themeConfig() {
     return this._themeConfig
   }
