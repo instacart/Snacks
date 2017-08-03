@@ -2,15 +2,32 @@ import React           from 'react'
 import PropTypes       from 'prop-types'
 import Radium          from 'radium'
 import Icon            from '../Icon/Icon'
-import componentStyles from './NavigationPillStyles'
 import NavigationPill  from './NavigationPill'
 import ScrollTrack     from '../ScrollTrack/ScrollTrack'
+
+const styles = {
+  labelStyles: {
+    marginRight: '10px',
+  },
+  wrapperStyles: {
+    display: 'inline-block',
+    height: '56px',
+    minWidth: '100%',
+    padding: '8px 8px 8px 24px',
+    backgroundColor: '#fff',
+    boxSizing: 'border-box'
+  },
+  pillsContainerStyles: {
+    display: 'inline-block',
+    margin: '0'
+  }
+}
 
 const NavigationPills = props => {
   const renderLabel = () => {
     if (!props.label) { return }
 
-    return <label style={componentStyles.labelStyles}>{props.label}</label>
+    return <label style={styles.labelStyles}>{props.label}</label>
   }
 
   const renderPill = (pill, idx) => {
@@ -24,7 +41,7 @@ const NavigationPills = props => {
     )
   }
 
-  const { pillsContainerStyles, wrapperStyles } = componentStyles
+  const { pillsContainerStyles, wrapperStyles } = styles
 
   if (!props.pills || props.pills.length <= 1) { return null }
 

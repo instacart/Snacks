@@ -1,20 +1,59 @@
 import React      from 'react'
 import PropTypes  from 'prop-types'
 import Radium     from 'radium'
-import pillStyles from './NavigationPillStyles'
+
+const styles = {
+  container: {
+    display: 'inline-block'
+  },
+  main: {
+    default: {
+      padding: '12px 16px',
+      display: 'block',
+      fontSize: '14px',
+      color: '#3ea327',
+      backgroundColor: '#f7f7f7',
+      borderRadius: '24px',
+      margin: '0 4px',
+      lineHeight: '1.2',
+      transition: 'background-color 150ms ease-in-out',
+
+      ':hover': {
+        textDecoration: 'none',
+        backgroundColor: '#eee'
+      },
+      ':focus': {
+        textDecoration: 'none',
+        backgroundColor: '#eee',
+        outline: 'none'
+      }
+    },
+    active: {
+      backgroundColor: '#43B02A',
+      color: '#fff',
+
+      ':hover': {
+        backgroundColor: '#43B02A'
+      },
+      ':focus': {
+        backgroundColor: '#43B02A',
+      }
+    }
+  }
+}
 
 const NavigationPill = props => {
   const { isActive, text } = props
 
   return (
-    <li style={pillStyles.pill.container}>
+    <li style={styles.container}>
       <a
         href={props.path || '#'}
         data-bypass={true}
         onClick={e => props.onClick(e, props)}
         style={[
-          pillStyles.pill.main.default,
-          isActive && pillStyles.pill.main.active
+          styles.main.default,
+          isActive && styles.main.active
         ]}
         key={`pill-anchor-${text}`}
       >
