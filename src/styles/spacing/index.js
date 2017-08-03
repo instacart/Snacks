@@ -10,7 +10,7 @@
 //     // ...spacing.LEFT_8 // => { left: 8 }
 //   }
 const DIRECTIONS = ['TOP', 'LEFT', 'BOTTOM', 'RIGHT']
-const SPACINGS = {
+export const spacings = {
   XS: 8,
   SM: 16,
   MD: 24,
@@ -20,8 +20,8 @@ const SPACINGS = {
 }
 
 const finalSpacings = {}
-Object.keys(SPACINGS).forEach(spacing => {
-  const pxValue = SPACINGS[spacing]
+Object.keys(spacings).forEach(spacing => {
+  const pxValue = spacings[spacing]
   finalSpacings[`MARGIN_${spacing}`] = { margin: pxValue }
   finalSpacings[`PADDING_${spacing}`] = { padding: pxValue }
   DIRECTIONS.forEach(direction => {
