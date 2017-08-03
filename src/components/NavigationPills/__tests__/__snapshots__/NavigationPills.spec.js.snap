@@ -78,9 +78,9 @@ exports[`renders NavigationPills correctly 1`] = `
                   onMouseLeave={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "#f7f7f7",
+                      "backgroundColor": "#F7F7F7",
                       "borderRadius": "24px",
-                      "color": "#3ea327",
+                      "color": "#43B02A",
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
@@ -112,9 +112,9 @@ exports[`renders NavigationPills correctly 1`] = `
                   onMouseLeave={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "#f7f7f7",
+                      "backgroundColor": "#F7F7F7",
                       "borderRadius": "24px",
-                      "color": "#3ea327",
+                      "color": "#43B02A",
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
@@ -146,9 +146,9 @@ exports[`renders NavigationPills correctly 1`] = `
                   onMouseLeave={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "#f7f7f7",
+                      "backgroundColor": "#F7F7F7",
                       "borderRadius": "24px",
-                      "color": "#3ea327",
+                      "color": "#43B02A",
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
@@ -180,9 +180,9 @@ exports[`renders NavigationPills correctly 1`] = `
                   onMouseLeave={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "#f7f7f7",
+                      "backgroundColor": "#F7F7F7",
                       "borderRadius": "24px",
-                      "color": "#3ea327",
+                      "color": "#43B02A",
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
@@ -214,9 +214,9 @@ exports[`renders NavigationPills correctly 1`] = `
                   onMouseLeave={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "#f7f7f7",
+                      "backgroundColor": "#F7F7F7",
                       "borderRadius": "24px",
-                      "color": "#3ea327",
+                      "color": "#43B02A",
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
@@ -316,9 +316,9 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
                   onMouseLeave={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "#f7f7f7",
+                      "backgroundColor": "#F7F7F7",
                       "borderRadius": "24px",
-                      "color": "#3ea327",
+                      "color": "#43B02A",
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
@@ -350,9 +350,9 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
                   onMouseLeave={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "#f7f7f7",
+                      "backgroundColor": "#F7F7F7",
                       "borderRadius": "24px",
-                      "color": "#3ea327",
+                      "color": "#43B02A",
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
@@ -384,9 +384,9 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
                   onMouseLeave={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "#f7f7f7",
+                      "backgroundColor": "#F7F7F7",
                       "borderRadius": "24px",
-                      "color": "#3ea327",
+                      "color": "#43B02A",
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
@@ -418,9 +418,9 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
                   onMouseLeave={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "#f7f7f7",
+                      "backgroundColor": "#F7F7F7",
                       "borderRadius": "24px",
-                      "color": "#3ea327",
+                      "color": "#43B02A",
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
@@ -452,9 +452,9 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
                   onMouseLeave={[Function]}
                   style={
                     Object {
-                      "backgroundColor": "#f7f7f7",
+                      "backgroundColor": "#F7F7F7",
                       "borderRadius": "24px",
-                      "color": "#3ea327",
+                      "color": "#43B02A",
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",

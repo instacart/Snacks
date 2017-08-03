@@ -22,7 +22,7 @@ exports[`renders active pill correctly 1`] = `
       Object {
         "backgroundColor": "#43B02A",
         "borderRadius": "24px",
-        "color": "#fff",
+        "color": "#FFFFFF",
         "display": "block",
         "fontSize": "14px",
         "lineHeight": "1.2",
@@ -57,9 +57,9 @@ exports[`renders href pill correctly 1`] = `
     onMouseLeave={[Function]}
     style={
       Object {
-        "backgroundColor": "#f7f7f7",
+        "backgroundColor": "#F7F7F7",
         "borderRadius": "24px",
-        "color": "#3ea327",
+        "color": "#43B02A",
         "display": "block",
         "fontSize": "14px",
         "lineHeight": "1.2",
@@ -94,9 +94,9 @@ exports[`renders inactive pill correctly 1`] = `
     onMouseLeave={[Function]}
     style={
       Object {
-        "backgroundColor": "#f7f7f7",
+        "backgroundColor": "#F7F7F7",
         "borderRadius": "24px",
-        "color": "#3ea327",
+        "color": "#43B02A",
         "display": "block",
         "fontSize": "14px",
         "lineHeight": "1.2",
