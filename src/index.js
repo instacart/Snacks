@@ -4,16 +4,16 @@ import Grid from './components/Grid/Grid'
 import Row from './components/Grid/Row'
 import Column from './components/Grid/Column'
 import NavigationPills from './components/NavigationPills/NavigationPills'
-import normalize from './styles/normalize'
-import globalTheme from './styles/globalTheme'
+import Normalize from './styles/Normalize'
+import GlobalTheme from './styles/GlobalTheme'
 import SetStyles from './styles/SetStyles'
 
 export {
-  globalTheme,
+  GlobalTheme,
   colors,
   Icon,
   NavigationPills,
-  normalize,
+  Normalize,
   SetStyles,
   Grid,
   Row,

@@ -1,7 +1,7 @@
 import React, { Component }       from "react"
 import PropTypes                  from 'prop-types'
 import Radium, { Style }          from 'radium'
-import { normalize, globalTheme } from '../index'
+import { Normalize, GlobalTheme } from '../index'
 
 const getFonts = (assetsUrl) => {
   return (
@@ -96,7 +96,7 @@ class Styles extends Component {
   }
 
   render() {
-    return <Style rules={Object.assign({}, normalize, globalTheme)} />
+    return <Style rules={Object.assign({}, Normalize, GlobalTheme)} />
   }
 }
 
