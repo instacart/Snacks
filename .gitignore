@@ -47,6 +47,3 @@ jspm_packages
 .yarn-integrity
 
 .DS_Store
-
-# distribution folder
-dist
