@@ -4,12 +4,13 @@
   "description": "The Instacart Component Library for Web",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest --coverage",
-    "start": "webpack --progress --watch --config webpack.config.js src/index.js dist/snacks.js",
     "build": "npm test && webpack --progress --config webpack.config.js src/index.js dist/snacks.js",
-    "test:watch": "npm test -- --watch --bail",
+    "prepublish": "npm run build",
+    "start": "webpack --progress --watch --config webpack.config.js src/index.js dist/snacks.js",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "test:watch": "npm test -- --watch --bail",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -19,10 +20,12 @@
     "design",
     "snacks",
     "instacart",
-    "style"
+    "style",
+    "components",
+    "component library"
   ],
   "author": "Dominic Cocchiarella",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/instacart/Snacks/issues"
   },
