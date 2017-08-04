@@ -1,1 +1,1 @@
-# Snacks - Javascript Component Library by Instacart
+# Snacks - JavaScript Component Library by Instacart
