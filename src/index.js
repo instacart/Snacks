@@ -1,21 +1,23 @@
 import colors from './styles/colors/index'
-import Icon from './components/Icon/Icon'
-import Grid from './components/Grid/Grid'
-import Row from './components/Grid/Row'
 import Column from './components/Grid/Column'
+import GlobalTheme from './styles/GlobalTheme'
+import Grid from './components/Grid/Grid'
+import Icon from './components/Icon/Icon'
 import NavigationPills from './components/NavigationPills/NavigationPills'
 import Normalize from './styles/Normalize'
-import GlobalTheme from './styles/GlobalTheme'
+import Row from './components/Grid/Row'
+import ScrollTrack from './components/ScrollTrack/ScrollTrack'
 import SetStyles from './styles/SetStyles'
 
 export {
-  GlobalTheme,
   colors,
+  Column,
+  GlobalTheme,
+  Grid,
   Icon,
   NavigationPills,
   Normalize,
-  SetStyles,
-  Grid,
   Row,
-  Column
+  ScrollTrack,
+  SetStyles,
 }
