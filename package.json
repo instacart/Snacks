@@ -2,7 +2,7 @@
   "name": "ic-snacks",
   "version": "0.0.1",
   "description": "The Instacart Component Library for Web",
-  "main": "src/index.js",
+  "main": "dist/snacks.js",
   "scripts": {
     "build": "npm test && webpack --progress --config webpack.config.js src/index.js dist/snacks.js",
     "prepublish": "npm run build",
