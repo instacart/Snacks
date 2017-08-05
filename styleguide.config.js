@@ -1,12 +1,52 @@
 const path = require('path');
 module.exports = {
-  styleguideComponents: {
-    Wrapper: path.join(__dirname, 'lib/styleguide/Wrapper')
+  getExampleFilename(componentPath) {
+    var parts = componentPath.split('/');
+    var componentName = parts[parts.length - 1];
+    return componentPath.replace(`/${componentName}`, `/docs/${componentName.replace('.js', '')}.md`);
   },
+  highlightTheme: 'pastel-on-dark',
   ignore: [
     '**/*/*Styles.js',
     '**/*.spec.js',
     '**/*/*hexValues.js'
+  ],
+  sections: [
+    {
+      name: 'Introduction',
+      content: 'docs/introduction.md'
+    },
+    {
+      name: 'Installation',
+      content: 'docs/installation.md'
+    },
+    {
+      name: 'Components',
+      content: 'docs/components.md',
+      sections: [
+        {
+          name: 'Buttons',
+          components: 'src/components/Buttons/[A-Z]*.js'
+        },
+        {
+          name: 'Grid',
+          components: 'src/components/Grid/[A-Z]*.js'
+        },
+        {
+          name: 'Icon',
+          components: 'src/components/Icon/Icon.js'
+        },
+        {
+          name: 'NavigationPills',
+          components: 'src/components/NavigationPills/[A-Z]*.js'
+        },
+        {
+          name: 'ScrollTrack',
+          components: 'src/components/ScrollTrack/[A-Z]*.js'
+        }
+      ]
+
+    }
   ],
   showCode: true,
   showUsage: true,
@@ -23,6 +63,9 @@ module.exports = {
         padding: '16px'
       }
     }
+  },
+  styleguideComponents: {
+    Wrapper: path.join(__dirname, 'lib/styleguide/Wrapper')
   },
   theme: {
     color: {
@@ -48,5 +91,6 @@ module.exports = {
         'sans-serif'
       ]
     }
-  }
+  },
+  title: "Snacks"
 }
