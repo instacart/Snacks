@@ -1,5 +1,6 @@
 Snacks
 =========================
+[![npm](https://img.shields.io/npm/v/ic-snacks.svg?style=flat-square)](https://www.npmjs.com/package/ic-snacks) [![license](https://img.shields.io/npm/l/ic-snacks.svg?style=flat-square)](https://github.com/instacart/Snacks/blob/master/LICENSE)
 JavaScript Component Library by Instacart
 
 ## Installation
