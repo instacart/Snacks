@@ -21,6 +21,24 @@ module.exports = {
       content: 'docs/installation.md'
     },
     {
+      name: 'Colors',
+      content: 'docs/colors.md'
+    },
+    {
+      name: 'Icons',
+      content: 'docs/icons.md'
+    },
+    {
+      name: 'Themes',
+      content: 'docs/themes.md',
+      sections: [
+        {
+          name: 'Themer',
+          content: 'src/styles/themer/docs/themer.md'
+        }
+      ]
+    },
+    {
       name: 'Components',
       content: 'docs/components.md',
       sections: [
