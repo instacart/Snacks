@@ -1,4 +1,4 @@
-# Snacks
+Snacks
 =========================
 JavaScript Component Library by Instacart
 
@@ -36,7 +36,7 @@ const MyComponent = props => {
 
 A more complicated component:
 ```js
-import React, { Component } from "react";
+import React, { Component } from 'react'
 import { NavigationPills } from 'ic-snacks'
 
 const choices = [
