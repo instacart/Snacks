@@ -118,7 +118,7 @@ or
 npm run stlyeguide
 ```
 
-Running the `styleguide:build` command will generate a static style guide site under the `styleguide` directory
+Running the `styleguide:build` command will generate a static style guide site under the top-level `docs` directory. This gets built and hosted at https://instacart.github.io/Snacks/
 ```
 yarn stlyeguide:build
 ```
