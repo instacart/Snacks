@@ -1,10 +1,9 @@
 import componentStyles from './ScrollTrackStyles'
 
-import React, { Component } from "react";
+import React, { Component } from 'react'
 import CircleButton  from '../Buttons/CircleButton'
 import Icon          from '../Icon/Icon'
 import Radium        from 'radium'
-import ReactDOM      from 'react-dom'
 import PropTypes     from 'prop-types'
 import _             from 'underscore'
 
@@ -36,19 +35,19 @@ class ScrollTrack extends Component {
     window.addEventListener('resize', this.debouncdComputeSlideAttributes)
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.leftOverride !== this.props.leftOverride) {
+      // this allows for control of the scrolltrack by parent components
+      this.setState({ left: nextProps.leftOverride })
+      this.computeSlideAttributes()
+    }
+  }
+
   componentDidUpdate(prevProps) {
     const prevChildren = prevProps.children || []
     const newChildren = this.props.children || []
 
     if (!_.isEqual(prevChildren, newChildren)) {
-      this.computeSlideAttributes()
-    }
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.leftOverride !== this.props.leftOverride) {
-      // this allows for control of the scrolltrack by parent components
-      this.setState({ left: nextProps.leftOverride })
       this.computeSlideAttributes()
     }
   }
@@ -115,7 +114,7 @@ class ScrollTrack extends Component {
   }
 
   slideBack = () => {
-    const { parentWidth, trackWidth, trackBounds } = this.getNodeWidths()
+    const { parentWidth } = this.getNodeWidths()
     let nextBack = this.state.left + parentWidth
 
     // already is, or is going to be, full back
@@ -125,7 +124,7 @@ class ScrollTrack extends Component {
   }
 
   renderRightArrow = () => {
-    const { slideButtonStyles, icons } = componentStyles
+    const { slideButtonStyles } = componentStyles
 
     if (!this.state.showRightArrow) { return }
 

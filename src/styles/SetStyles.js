@@ -1,4 +1,4 @@
-import React, { Component }       from "react"
+import React, { Component }       from 'react'
 import PropTypes                  from 'prop-types'
 import Radium, { Style }          from 'radium'
 import { Normalize, GlobalTheme } from '../index'

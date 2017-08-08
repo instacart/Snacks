@@ -33,7 +33,8 @@ const styles = {
 
 const Grid = props => {
   return (
-    <div style={[
+    <div
+      style={[
         styles,
         props.styles
       ]}

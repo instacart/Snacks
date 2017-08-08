@@ -20,7 +20,7 @@ class Themer {
 
   get(section, sectionKey) {
     if (!this._themeConfig) {
-      console.warn(`Snacks theme error: No themeConfig defined. Please use Themer template: `, themeTemplate)
+      console.warn('Snacks theme error: No themeConfig defined. Please use Themer template: ', themeTemplate)
     } else if (validConfigValue(section, sectionKey)) {
       return this._themeConfig[section][sectionKey]
     }
