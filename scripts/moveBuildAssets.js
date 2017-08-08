@@ -4,7 +4,7 @@ const fs = require('fs-extra')
 
 console.log('Copying static assets...')
 
-fs.copy('src/fonts/','docs/build/src/fonts', err => {
+fs.copy('src/fonts/','docs/src/fonts', err => {
   if (err) { return console.error(err) }
   console.log('Copied fonts')
 })
