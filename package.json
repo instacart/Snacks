@@ -8,7 +8,7 @@
     "prepublish": "npm run build",
     "start": "webpack --progress --watch --config webpack.config.js src/index.js dist/snacks.js",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build",
+    "styleguide:build": "styleguidist build && node scripts/moveBuildAssets.js",
     "test:watch": "npm test -- --watch --bail",
     "test": "jest --coverage"
   },
