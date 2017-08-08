@@ -85,6 +85,7 @@ module.exports = {
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'lib/styleguide/Wrapper')
   },
+  styleguideDir: path.join(__dirname, 'docs'),
   theme: {
     color: {
       base: '#333',
