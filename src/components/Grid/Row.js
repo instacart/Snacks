@@ -77,7 +77,8 @@ const Row = props => {
   }
 
   return (
-    <div style={[
+    <div
+      style={[
         styles,
         getMaxColumnsStyles(),
         props.styles

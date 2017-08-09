@@ -6,11 +6,13 @@
   "scripts": {
     "build": "npm test && webpack --progress --config webpack.config.js src/index.js dist/snacks.js",
     "prepublish": "npm run build",
+    "lint": "eslint src --ext .js,.jsx --ignore-pattern '*.spec.js'",
+    "test:lint": "npm run lint -- --quiet",
     "start": "webpack --progress --watch --config webpack.config.js src/index.js dist/snacks.js",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build && node scripts/moveBuildAssets.js",
     "test:watch": "npm test -- --watch --bail",
-    "test": "jest --coverage"
+    "test": "jest --coverage --silent && npm run test:lint"
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,7 @@
   "homepage": "https://github.com/instacart/Snacks#readme",
   "devDependencies": {
     "babel-core": "^6.21.0",
+    "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
     "babel-loader": "^6.2.10",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
@@ -40,6 +43,9 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.22.0",
     "enzyme": "^2.9.1",
+    "eslint": "^4.4.1",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.1.0",
     "jest": "^20.0.4",
     "radium": "^0.18.2",
     "react": "^15.5.0",

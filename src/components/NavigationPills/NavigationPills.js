@@ -1,7 +1,6 @@
 import React           from 'react'
 import PropTypes       from 'prop-types'
 import Radium          from 'radium'
-import Icon            from '../Icon/Icon'
 import NavigationPill  from './NavigationPill'
 import ScrollTrack     from '../ScrollTrack/ScrollTrack'
 import colors          from '../../styles/colors'

@@ -6,8 +6,10 @@ import responsive from '../../styles/responsive'
 const Column = props => {
   if (props.sizes.xs) {
     console.warn('xs size prop passed to Column!',
-    'This will be ignored. All columns at xs screen size are full-width. ',
-    'Please remove this definition. Sizes passed: ', props.sizes)
+      'This will be ignored. All columns at xs screen size are full-width. ',
+      'Please remove this definition. Sizes passed: ',
+      props.sizes
+    )
   }
 
   const getSizedStyles = () => {
@@ -49,6 +51,7 @@ const Column = props => {
 Column.propTypes = {
   /** object where keys are breakpoint and value is number of columns to span at that breakpoint */
   sizes: PropTypes.shape({
+    xs: PropTypes.number, // should never be passed
     sm: PropTypes.number,
     md: PropTypes.number,
     mdLg: PropTypes.number,
