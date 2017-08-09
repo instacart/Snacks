@@ -55,6 +55,7 @@ const CircleButton = props => {
         styles.default,
         props.styles
       ]}
+      disabled={props.disabled}
     >
       { props.children }
     </button>
@@ -64,6 +65,8 @@ const CircleButton = props => {
 CircleButton.propTypes = {
   /** Label to be used by screen readers */
   ariaLabel: PropTypes.string,
+  /** Bool to disable click/touch listeners */
+  disabled: PropTypes.bool,
   /** Callback function called after button click */
   onClick: PropTypes.func,
   /** Optional style overrides */
