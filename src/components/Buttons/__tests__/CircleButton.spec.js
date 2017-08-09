@@ -66,6 +66,21 @@ it('renders CircleButton with passed ariaLabel correctly', () => {
   expect(tree).toMatchSnapshot()
 })
 
+it('renders CircleButton with passed disabled prop correctly', () => {
+  const tree = renderer.create(
+    <StyleRoot>
+      <div>
+        <CircleButton
+          disabled={true}
+        >
+          1
+        </CircleButton>
+      </div>
+    </StyleRoot>
+  ).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
 it('calls onClick callback correctly', () => {
   const onClick = spy()
   const CButton = mount(
@@ -85,11 +100,15 @@ it('calls onClick callback correctly', () => {
   expect(onClick.calledOnce).toBeTruthy()
 })
 
-it('does not call onClick when not passed one', () => {
+it('does not call onClick when disabled prop is true', () => {
+  const onClick = spy()
   const CButton = mount(
     <StyleRoot>
       <div>
-        <CircleButton>
+        <CircleButton
+          onClick={onClick}
+          disabled={true}
+        >
           1
         </CircleButton>
       </div>
@@ -98,4 +117,5 @@ it('does not call onClick when not passed one', () => {
 
   const button = CButton.find('button').first()
   button.simulate('click')
+  expect(onClick.calledOnce).toBeFalsy()
 })
