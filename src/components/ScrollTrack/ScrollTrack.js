@@ -11,11 +11,19 @@ import _             from 'underscore'
 class ScrollTrack extends Component {
   static propTypes = {
     /** prop to manually control left positioning of ScrollTrack */
-    leftOverride: PropTypes.number
+    leftOverride: PropTypes.number,
+    style: PropTypes.object,
+    styles: PropTypes.object,
   }
 
   static defaultProps = {
-    leftOverride: 0
+    leftOverride: 0,
+    styles: {
+      LeftArrow: {},
+      RightArrow: {},
+      Track: {}
+    },
+    style: {}
   }
 
   constructor(props) {
@@ -128,14 +136,16 @@ class ScrollTrack extends Component {
 
     if (!this.state.showRightArrow) { return }
 
+    const { styles: { RightArrow = {} } } = this.props
     return (
       <CircleButton
         onClick={this.slideForward}
         ariaLabel='next'
-        styles={Object.assign({},
-          slideButtonStyles.default,
-          slideButtonStyles.right
-        )}
+        styles={{
+          ...slideButtonStyles.default,
+          ...slideButtonStyles.right,
+          ...RightArrow
+        }}
       >
         <Icon
           name='arrowRightSmallBold'
@@ -150,14 +160,17 @@ class ScrollTrack extends Component {
 
     if (!this.state.showLeftArrow) { return }
 
+    const { styles: { LeftArrow = {} } } = this.props
+
     return (
       <CircleButton
         onClick={this.slideBack}
         ariaLabel='back'
-        styles={Object.assign({},
-          slideButtonStyles.default,
-          slideButtonStyles.left
-        )}
+        styles={{
+          ...slideButtonStyles.default,
+          ...slideButtonStyles.left,
+          ...LeftArrow
+        }}
       >
         <Icon
           name='arrowLeftSmallBold'
@@ -169,14 +182,14 @@ class ScrollTrack extends Component {
 
   render() {
     const { containerStyles, innerContainerStyles } = componentStyles
-    const { children } = this.props
+    const { children, style, styles: { Track = {} } } = this.props
 
     if (!children) { return null }
 
     return (
       <div
         ref='container'
-        style={containerStyles}
+        style={{ ...containerStyles, ...style }}
       >
         {this.renderLeftArrow()}
         <div
@@ -185,7 +198,7 @@ class ScrollTrack extends Component {
             innerContainerStyles
           ]}
         >
-          <div ref='track'>
+          <div ref='track' style={Track}>
             {children}
           </div>
         </div>
