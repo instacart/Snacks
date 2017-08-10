@@ -76,7 +76,8 @@ ScollTrack example:
 
 ScrollTrack with equalWidthTrack wrapper:
 
-    const CustomComponent = ScrollTrack.equalWidthTrack(186)(({ startIndex, lastIndex, showRightArrow, showLeftArrow }) => {
+    const CustomComponent = ScrollTrack.equalWidthTrack(186)(({ startIndex, lastIndex, trackProps }) => {
+      const { showRightArrow, showLeftArrow } = trackProps;
       const children = new Array(20).fill(1).map((_, index) => {
         const style = {
           backgroundColor: 'red',
@@ -95,6 +96,10 @@ ScrollTrack with equalWidthTrack wrapper:
         </div>
       );
     });
+
+    CustomComponent.propTypes = {
+      trackProps: ScrollTrack.ScrollTrackPropTypes.trackProps,
+    };
 
     <ScrollTrack>
       <CustomComponent />

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import PropTypes            from 'prop-types'
+import ScrollTrackPropTypes from './ScrollTrackPropTypes'
 
 class EqualWidthTrackError extends TypeError {
   name = 'EqualWidthTrackError'
@@ -13,13 +13,11 @@ const equalWidthTrack = (childWidth) => {
   return (WrappedComponent) => {
     class EqualWidthTrack extends PureComponent {
       static propTypes = {
-        left: PropTypes.number.isRequired,
-        parentWidth: PropTypes.number.isRequired,
-        trackWidth: PropTypes.number.isRequired,
+        trackProps: ScrollTrackPropTypes.trackProps
       }
 
       render() {
-        const { left, parentWidth } = this.props
+        const { left, parentWidth } = this.props.trackProps
 
         const startIndex = Math.floor(Math.abs(left)/childWidth)
         const lastIndex = Math.floor((Math.abs(left) + parentWidth)/childWidth)
