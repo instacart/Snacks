@@ -36,10 +36,19 @@ it('renders ScrollTrack without children correctly', () => {
 })
 
 it('renders ScrollTrack buttons correctly', () => {
+  const styles = {
+    RightArrow: {
+      backgroundColor: 'blue'
+    },
+    LeftArrow: {
+      backgroundColor: 'red'
+    },
+  }
+
   const track = mount(
     <StyleRoot>
       <div>
-        <ScrollTrack leftOverride={0}>
+        <ScrollTrack leftOverride={0} styles={styles}>
           <p>one</p>
           <p>two</p>
           <p>three</p>
@@ -55,8 +64,14 @@ it('renders ScrollTrack buttons correctly', () => {
   track.find(ScrollTrack).node.showRightArrow()
   expect(track.find('button')).toHaveLength(1)
 
+  const rightButtonStyle = track.find('button').props().style.backgroundColor
+  expect(rightButtonStyle).toEqual(styles.RightArrow.backgroundColor)
+
   track.find(ScrollTrack).node.showLeftArrow()
   expect(track.find('button')).toHaveLength(2)
+
+  const leftButtonStyle = track.find('button').at(0).props().style.backgroundColor
+  expect(leftButtonStyle).toEqual(styles.LeftArrow.backgroundColor)
 
   track.find(ScrollTrack).node.hideRightArrow()
   expect(track.find('button')).toHaveLength(1)

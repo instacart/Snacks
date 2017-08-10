@@ -1,8 +1,14 @@
 ScollTrack example:
 
+    internalTrackStyles = {
+      RightArrow: {
+        backgroundColor: 'blue'
+      }
+    }
+
     styles = { padding: '8px 20px', marginRight: '5px', fontSize: '24px', borderRadius: '4px', backgroundColor: '#eee', color: '#43B02A', top: '8px' };
     <div style={{ height: '56px' }}>
-      <ScrollTrack>
+      <ScrollTrack styles={internalTrackStyles}>
         <div style={{ padding: '8px 0' }}>
           <Icon name="cart" style={styles} />
           <Icon name="cart" style={styles} />

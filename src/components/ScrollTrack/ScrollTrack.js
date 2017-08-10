@@ -10,10 +10,18 @@ import _             from 'underscore'
 @Radium
 class ScrollTrack extends Component {
   static propTypes = {
-    /** prop to manually control left positioning of ScrollTrack */
+    /** Manually control left positioning of ScrollTrack */
     leftOverride: PropTypes.number,
+
+    /** Style top level element */
     style: PropTypes.object,
-    styles: PropTypes.object,
+
+    /** Style specifc children elements [LeftArrow, RightArrow, Track] */
+    styles: PropTypes.shape({
+      LeftArrow: PropTypes.object,
+      RightArrow: PropTypes.object,
+      Track: PropTypes.object,
+    }),
   }
 
   static defaultProps = {
