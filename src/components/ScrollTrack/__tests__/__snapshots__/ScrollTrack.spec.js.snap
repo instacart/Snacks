@@ -30,25 +30,109 @@ exports[`renders ScrollTrack correctly 1`] = `
           data-radium={true}
           style={Object {}}
         >
-          <p>
+          <p
+            trackProps={
+              Object {
+                "_radiumStyleState": Object {},
+                "left": 0,
+                "parentWidth": undefined,
+                "showLeftArrow": false,
+                "showRightArrow": false,
+                "trackBounds": undefined,
+                "trackWidth": undefined,
+              }
+            }
+          >
             one
           </p>
-          <p>
+          <p
+            trackProps={
+              Object {
+                "_radiumStyleState": Object {},
+                "left": 0,
+                "parentWidth": undefined,
+                "showLeftArrow": false,
+                "showRightArrow": false,
+                "trackBounds": undefined,
+                "trackWidth": undefined,
+              }
+            }
+          >
             two
           </p>
-          <p>
+          <p
+            trackProps={
+              Object {
+                "_radiumStyleState": Object {},
+                "left": 0,
+                "parentWidth": undefined,
+                "showLeftArrow": false,
+                "showRightArrow": false,
+                "trackBounds": undefined,
+                "trackWidth": undefined,
+              }
+            }
+          >
             three
           </p>
-          <p>
+          <p
+            trackProps={
+              Object {
+                "_radiumStyleState": Object {},
+                "left": 0,
+                "parentWidth": undefined,
+                "showLeftArrow": false,
+                "showRightArrow": false,
+                "trackBounds": undefined,
+                "trackWidth": undefined,
+              }
+            }
+          >
             four
           </p>
-          <p>
+          <p
+            trackProps={
+              Object {
+                "_radiumStyleState": Object {},
+                "left": 0,
+                "parentWidth": undefined,
+                "showLeftArrow": false,
+                "showRightArrow": false,
+                "trackBounds": undefined,
+                "trackWidth": undefined,
+              }
+            }
+          >
             five
           </p>
-          <p>
+          <p
+            trackProps={
+              Object {
+                "_radiumStyleState": Object {},
+                "left": 0,
+                "parentWidth": undefined,
+                "showLeftArrow": false,
+                "showRightArrow": false,
+                "trackBounds": undefined,
+                "trackWidth": undefined,
+              }
+            }
+          >
             six
           </p>
-          <p>
+          <p
+            trackProps={
+              Object {
+                "_radiumStyleState": Object {},
+                "left": 0,
+                "parentWidth": undefined,
+                "showLeftArrow": false,
+                "showRightArrow": false,
+                "trackBounds": undefined,
+                "trackWidth": undefined,
+              }
+            }
+          >
             seven
           </p>
         </div>

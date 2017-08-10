@@ -42,6 +42,17 @@ exports[`renders NavigationPills correctly 1`] = `
                 "padding": "8px 8px 8px 24px",
               }
             }
+            trackProps={
+              Object {
+                "_radiumStyleState": Object {},
+                "left": 0,
+                "parentWidth": undefined,
+                "showLeftArrow": false,
+                "showRightArrow": false,
+                "trackBounds": undefined,
+                "trackWidth": undefined,
+              }
+            }
           >
             <label
               data-radium={true}
@@ -291,6 +302,17 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
                 "height": "56px",
                 "minWidth": "100%",
                 "padding": "8px 8px 8px 24px",
+              }
+            }
+            trackProps={
+              Object {
+                "_radiumStyleState": Object {},
+                "left": 0,
+                "parentWidth": undefined,
+                "showLeftArrow": false,
+                "showRightArrow": false,
+                "trackBounds": undefined,
+                "trackWidth": undefined,
               }
             }
           >

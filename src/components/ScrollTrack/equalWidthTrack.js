@@ -13,7 +13,7 @@ const equalWidthTrack = (childWidth) => {
   return (WrappedComponent) => {
     class EqualWidthTrack extends PureComponent {
       static propTypes = {
-        trackProps: ScrollTrackPropTypes.trackProps
+        trackProps: ScrollTrackPropTypes.trackProps.isRequired
       }
 
       render() {
@@ -25,6 +25,11 @@ const equalWidthTrack = (childWidth) => {
         return <WrappedComponent {...this.props} startIndex={startIndex} lastIndex={lastIndex} />
       }
     }
+
+    // Access component that is being wrapped
+    EqualWidthTrack.WrappedComponent = WrappedComponent.WrappedComponent
+      ? WrappedComponent.WrappedComponent
+      : WrappedComponent
 
     return EqualWidthTrack
   }
