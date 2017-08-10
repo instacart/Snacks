@@ -5,6 +5,12 @@ class EqualWidthTrackError extends TypeError {
   name = 'EqualWidthTrackError'
 }
 
+/**
+ * A higher order component that will supply the wrapped
+ * component with two additional props: `startIndex` and `lastIndex`. This will enable the
+ * child to determine how it wants to treat elements that are shown within the track
+ * or hidden off the overflow.
+ */
 const equalWidthTrack = (childWidth) => {
   if (typeof childWidth !== 'number') {
     throw new EqualWidthTrackError('childWidth must be a number')
