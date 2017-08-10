@@ -23,7 +23,7 @@ export default {
   slideButtonStyles: {
     default: {
       position: 'absolute',
-      ...spacing.TOP_XS,
+      top: '5px',
     },
     left: spacing.LEFT_XS,
     right: spacing.RIGHT_XS

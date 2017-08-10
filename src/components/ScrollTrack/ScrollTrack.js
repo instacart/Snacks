@@ -137,7 +137,10 @@ class ScrollTrack extends Component {
           slideButtonStyles.right
         )}
       >
-        <Icon name='arrowRightSmallBold' />
+        <Icon
+          name='arrowRightSmallBold'
+          style={{ fontSize: '20px' }}
+        />
       </CircleButton>
     )
   }
@@ -156,7 +159,10 @@ class ScrollTrack extends Component {
           slideButtonStyles.left
         )}
       >
-        <Icon name='arrowLeftSmallBold' />
+        <Icon
+          name='arrowLeftSmallBold'
+          style={{ fontSize: '20px' }}
+        />
       </CircleButton>
     )
   }

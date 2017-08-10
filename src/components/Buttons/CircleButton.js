@@ -3,10 +3,11 @@
  *
  * @author [Dominic Cocchiarella ](https://github.com/docchia)
 */
-import colors     from '../../styles/colors'
-import responsive from '../../styles/responsive'
-import themer     from '../../styles/themer'
-import zIndex     from '../../styles/zIndex'
+import colors       from '../../styles/colors'
+import responsive   from '../../styles/responsive'
+import themer       from '../../styles/themer'
+import zIndex       from '../../styles/zIndex'
+import { spacings } from '../../styles/spacing'
 
 import Radium    from 'radium'
 import React     from 'react'
@@ -15,24 +16,24 @@ import PropTypes from 'prop-types'
 const styles = {
   default: {
     ...zIndex.Z_INDEX1,
-    backgroundColor: themer.get('colors', 'primaryBackground'),
+    backgroundColor: themer.get('colors', 'primaryForeground'),
     border: '0',
-    color: themer.get('colors', 'primaryForeground'),
-    width: '40px',
-    height: '40px',
+    color: themer.get('colors', 'primaryBackground'),
+    width: `${spacings.XL}px`,
+    height: `${spacings.XL}px`,
     borderRadius: '50%',
     boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)',
     transition: 'background-color 150ms ease-in-out',
     textAlign: 'center',
     lineHeight: '1',
     ':hover': {
-      backgroundColor: colors.GRAY_97
+      backgroundColor: colors.GREEN_600
     },
     ':active': {
-      backgroundColor: colors.GRAY_97
+      backgroundColor: colors.GREEN_700
     },
     ':focus': {
-      backgroundColor: colors.GRAY_97,
+      backgroundColor: colors.GREEN_600,
       outline: 'none'
     },
     [responsive.xs]: {
