@@ -20,16 +20,16 @@ exports[`renders CircleButton with Icon correctly 1`] = `
       onMouseLeave={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#43B02A",
           "border": "0",
           "borderRadius": "50%",
           "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-          "color": "#43B02A",
-          "height": "40px",
+          "color": "#FFFFFF",
+          "height": "48px",
           "lineHeight": "1",
           "textAlign": "center",
           "transition": "background-color 150ms ease-in-out",
-          "width": "40px",
+          "width": "48px",
           "zIndex": 100,
         }
       }
@@ -88,16 +88,16 @@ exports[`renders CircleButton with passed ariaLabel correctly 1`] = `
       onMouseLeave={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#43B02A",
           "border": "0",
           "borderRadius": "50%",
           "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-          "color": "#43B02A",
-          "height": "40px",
+          "color": "#FFFFFF",
+          "height": "48px",
           "lineHeight": "1",
           "textAlign": "center",
           "transition": "background-color 150ms ease-in-out",
-          "width": "40px",
+          "width": "48px",
           "zIndex": 100,
         }
       }
@@ -135,16 +135,16 @@ exports[`renders CircleButton with passed disabled prop correctly 1`] = `
       onMouseLeave={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#43B02A",
           "border": "0",
           "borderRadius": "50%",
           "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-          "color": "#43B02A",
-          "height": "40px",
+          "color": "#FFFFFF",
+          "height": "48px",
           "lineHeight": "1",
           "textAlign": "center",
           "transition": "background-color 150ms ease-in-out",
-          "width": "40px",
+          "width": "48px",
           "zIndex": 100,
         }
       }
@@ -182,19 +182,19 @@ exports[`renders CircleButton with passed styles correctly 1`] = `
       onMouseLeave={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#43B02A",
           "border": "0",
           "borderRadius": "50%",
           "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-          "color": "#43B02A",
-          "height": "40px",
+          "color": "#FFFFFF",
+          "height": "48px",
           "lineHeight": "1",
           "position": "absolute",
           "right": "8px",
           "textAlign": "center",
           "top": "8px",
           "transition": "background-color 150ms ease-in-out",
-          "width": "40px",
+          "width": "48px",
           "zIndex": 100,
         }
       }
@@ -232,16 +232,16 @@ exports[`renders basic CircleButton correctly 1`] = `
       onMouseLeave={[Function]}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#43B02A",
           "border": "0",
           "borderRadius": "50%",
           "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-          "color": "#43B02A",
-          "height": "40px",
+          "color": "#FFFFFF",
+          "height": "48px",
           "lineHeight": "1",
           "textAlign": "center",
           "transition": "background-color 150ms ease-in-out",
-          "width": "40px",
+          "width": "48px",
           "zIndex": 100,
         }
       }
