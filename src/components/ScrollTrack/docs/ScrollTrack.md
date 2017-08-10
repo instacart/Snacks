@@ -73,3 +73,29 @@ ScollTrack example:
         </div>
       </ScrollTrack>
     </div>
+
+ScrollTrack with equalWidthTrack wrapper:
+
+    const CustomComponent = ScrollTrack.equalWidthTrack(186)(({ startIndex, lastIndex, showRightArrow, showLeftArrow }) => {
+      const children = new Array(20).fill(1).map((_, index) => {
+        const style = {
+          backgroundColor: 'red',
+          minWidth: '176px',
+          minHeight: '176px',
+          margin: '0 5px',
+          opacity: (showLeftArrow && index === startIndex) || (showRightArrow && index === lastIndex) ? 0.6 : 1
+        };
+
+        return <div style={style}>Item</div>;
+      });
+
+      return (
+        <div style={{ display: 'flex' }}>
+          {children}
+        </div>
+      );
+    });
+
+    <ScrollTrack>
+      <CustomComponent />
+    </ScrollTrack>

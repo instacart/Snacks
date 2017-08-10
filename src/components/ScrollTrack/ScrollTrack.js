@@ -1,4 +1,5 @@
 import componentStyles from './ScrollTrackStyles'
+import equalWidthTrack from './EqualWidthTrack'
 
 import React, { Component } from 'react'
 import CircleButton  from '../Buttons/CircleButton'
@@ -9,6 +10,8 @@ import _             from 'underscore'
 
 @Radium
 class ScrollTrack extends Component {
+  static equalWidthTrack = equalWidthTrack
+
   static propTypes = {
     /** Manually control left positioning of ScrollTrack */
     leftOverride: PropTypes.number,
@@ -70,6 +73,14 @@ class ScrollTrack extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.debouncdComputeSlideAttributes)
+  }
+
+  get childrenWithTrackProps() {
+    const nodeWidths = this.getNodeWidths()
+
+    return React.Children.map(this.props.children, child => {
+      return React.cloneElement(child, { ...this.state, ...nodeWidths })
+    })
   }
 
   getNodeWidths = () => {
@@ -207,7 +218,7 @@ class ScrollTrack extends Component {
           ]}
         >
           <div ref='track' style={Track}>
-            {children}
+            {this.childrenWithTrackProps}
           </div>
         </div>
         {this.renderRightArrow()}
