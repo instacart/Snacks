@@ -26,7 +26,10 @@ exports[`renders NavigationPills correctly 1`] = `
           }
         }
       >
-        <div>
+        <div
+          data-radium={true}
+          style={Object {}}
+        >
           <div
             data-radium={true}
             style={
@@ -274,7 +277,10 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
           }
         }
       >
-        <div>
+        <div
+          data-radium={true}
+          style={Object {}}
+        >
           <div
             data-radium={true}
             style={

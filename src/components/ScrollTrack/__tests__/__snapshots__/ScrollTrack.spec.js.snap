@@ -28,6 +28,7 @@ exports[`renders ScrollTrack correctly 1`] = `
       >
         <div
           data-radium={true}
+          style={Object {}}
         >
           <p>
             one
