@@ -1,4 +1,4 @@
-ScollTrack example:
+### ScollTrack example:
 
     internalTrackStyles = {
       RightArrow: {
@@ -73,3 +73,59 @@ ScollTrack example:
         </div>
       </ScrollTrack>
     </div>
+
+### ScrollTrack with equalWidthTrack wrapper
+**NOTE: This HOC assumes the wrapped component is a container of equally and static sized elements**
+
+`ScrollTrack.equalWidthTrack` is a higher order component that will supply the wrapped
+component with two additional props: `startIndex` and `lastIndex`. This will enable the
+child to determine how it wants to treat elements that are shown within the track
+or hidden off the overflow.
+
+Example use case: *A container of item cards that all have a width of 90px and margins of 5px on both sides*
+
+```js static
+  const childWidth = 100;
+
+  @ScrollTrack.equalWidthTrack(childWidth)
+  class ItemCardsContainer extends Component {
+    static propTypes = {
+      trackProps: ScrollTrack.ScrollTrackPropTypes.trackProps,
+      startIndex: PropTypes.number,
+      lastIndex: PropTypes.number
+    };
+
+    render () {
+      ...
+    }
+  }
+```
+
+    const CustomComponent = ScrollTrack.equalWidthTrack(186)(({ startIndex, lastIndex, trackProps }) => {
+      const { showRightArrow, showLeftArrow } = trackProps;
+      const children = new Array(20).fill(1).map((_, index) => {
+        const style = {
+          backgroundColor: 'red',
+          minWidth: '176px',
+          minHeight: '176px',
+          margin: '0 5px',
+          opacity: (showLeftArrow && index === startIndex) || (showRightArrow && index === lastIndex) ? 0.6 : 1
+        };
+
+        return <div style={style}>Item</div>;
+      });
+
+      return (
+        <div style={{ display: 'flex' }}>
+          {children}
+        </div>
+      );
+    });
+
+    CustomComponent.propTypes = {
+      trackProps: ScrollTrack.ScrollTrackPropTypes.trackProps,
+    };
+
+    <ScrollTrack>
+      <CustomComponent />
+    </ScrollTrack>
