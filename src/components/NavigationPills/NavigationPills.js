@@ -1,10 +1,10 @@
 import React           from 'react'
 import PropTypes       from 'prop-types'
 import Radium          from 'radium'
-import NavigationPill  from './NavigationPill'
-import ScrollTrack     from '../ScrollTrack/ScrollTrack'
-import colors          from '../../styles/colors'
-import { spacings }    from '../../styles/spacing'
+import colors          from 'styles/colors'
+import { spacings }    from 'styles/spacing'
+import NavigationPill  from 'components/NavigationPills/NavigationPill'
+import ScrollTrack     from 'components/ScrollTrack/ScrollTrack'
 
 const styles = {
   labelStyles: {

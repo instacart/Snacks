@@ -1,5 +1,5 @@
-import responsive from '../../styles/responsive'
-import spacing    from '../../styles/spacing'
+import responsive from 'styles/responsive'
+import spacing    from 'styles/spacing'
 
 export default {
   containerStyles: {

@@ -3,11 +3,11 @@
  *
  * @author [Dominic Cocchiarella ](https://github.com/docchia)
 */
-import colors       from '../../styles/colors'
-import responsive   from '../../styles/responsive'
-import themer       from '../../styles/themer'
-import zIndex       from '../../styles/zIndex'
-import { spacings } from '../../styles/spacing'
+import colors       from 'styles/colors'
+import responsive   from 'styles/responsive'
+import themer       from 'styles/themer'
+import zIndex       from 'styles/zIndex'
+import { spacings } from 'styles/spacing'
 
 import Radium    from 'radium'
 import React     from 'react'

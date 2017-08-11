@@ -1,6 +1,6 @@
 import React     from 'react'
 import Radium    from 'radium'
-import hexValues from './hexValues'
+import hexValues from 'components/Icon/hexValues'
 import PropTypes from 'prop-types'
 
 const baseStyles = {

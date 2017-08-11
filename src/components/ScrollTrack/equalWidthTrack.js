@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import ScrollTrackPropTypes from './ScrollTrackPropTypes'
+import ScrollTrackPropTypes     from 'components/ScrollTrack/ScrollTrackPropTypes'
 
 class EqualWidthTrackError extends TypeError {
   name = 'EqualWidthTrackError'

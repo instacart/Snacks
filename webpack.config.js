@@ -1,4 +1,5 @@
-const webpack = require("webpack");
+const webpack = require('webpack')
+const path = require('path')
 
 module.exports = {
   module: {
@@ -12,6 +13,9 @@ module.exports = {
   output: {
     library: 'Snacks',
     libraryTarget: 'umd'
+  },
+  resolve: {
+    modules: [path.resolve('src'), 'node_modules']
   },
   externals: {
     'react': 'react',

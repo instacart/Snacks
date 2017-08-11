@@ -1,7 +1,7 @@
 import React      from 'react'
 import PropTypes  from 'prop-types'
-import Radium from 'radium'
-import responsive from '../../styles/responsive'
+import Radium     from 'radium'
+import responsive from 'styles/responsive'
 
 const styles = {
   [responsive.xs]: {
