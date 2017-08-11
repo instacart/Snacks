@@ -7,7 +7,7 @@ const propTypes = {
     left: PropTypes.number,
     parentWidth: PropTypes.number,
     trackWidth: PropTypes.number,
-    trackBounds: PropTypes.number
+    trackBounds: PropTypes.object
   })
 }
 
