@@ -19,10 +19,12 @@ const equalWidthTrack = (childWidth) => {
   return (WrappedComponent) => {
     class EqualWidthTrack extends PureComponent {
       static propTypes = {
-        trackProps: ScrollTrackPropTypes.trackProps.isRequired
+        trackProps: ScrollTrackPropTypes.trackProps
       }
 
       render() {
+        if (!this.props.trackProps) { return null }
+
         const { left, parentWidth } = this.props.trackProps
 
         const startIndex = Math.floor(Math.abs(left)/childWidth)
