@@ -1,13 +1,12 @@
-import componentStyles from './ScrollTrackStyles'
-import equalWidthTrack from './equalWidthTrack'
-import ScrollTrackPropTypes from './ScrollTrackPropTypes'
-
 import React, { Component } from 'react'
-import CircleButton  from '../Buttons/CircleButton'
-import Icon          from '../Icon/Icon'
-import Radium        from 'radium'
-import PropTypes     from 'prop-types'
-import _             from 'underscore'
+import Radium               from 'radium'
+import PropTypes            from 'prop-types'
+import _                    from 'underscore'
+import componentStyles      from 'components/ScrollTrack/ScrollTrackStyles'
+import equalWidthTrack      from 'components/ScrollTrack/equalWidthTrack'
+import ScrollTrackPropTypes from 'components/ScrollTrack/ScrollTrackPropTypes'
+import CircleButton         from 'components/Buttons/CircleButton'
+import Icon                 from 'components/Icon/Icon'
 
 @Radium
 class ScrollTrack extends Component {

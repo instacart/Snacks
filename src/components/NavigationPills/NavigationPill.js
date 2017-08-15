@@ -1,8 +1,8 @@
 import React      from 'react'
 import PropTypes  from 'prop-types'
 import Radium     from 'radium'
-import colors     from '../../styles/colors'
-import themer     from '../../styles/themer'
+import colors     from 'styles/colors'
+import themer     from 'styles/themer'
 
 const styles = {
   container: {
