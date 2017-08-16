@@ -39,27 +39,27 @@ exports[`renders Row with maxColumns correctly 1`] = `
     data-radium={true}
   >
     <div
-      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-797f2370 rmq-4560f2a7 rmq-6d474e68 rmq-d80279c3"
       data-radium={true}
       style={Object {}}
     />
     <div
-      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-d1a52bb3 rmq-164f544 rmq-8beb698b rmq-57e78aa0"
       data-radium={true}
       style={Object {}}
     />
     <div
-      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-45d5972 rmq-15fad365 rmq-363873aa rmq-d1024a01"
       data-radium={true}
       style={Object {}}
     />
     <div
-      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-454212b5 rmq-d3dba02 rmq-b91980cd rmq-da5d6e6"
       data-radium={true}
       style={Object {}}
     />
     <div
-      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-77fa4074 rmq-21d39823 rmq-63668aec rmq-86c09647"
       data-radium={true}
       style={Object {}}
     />
@@ -69,7 +69,7 @@ exports[`renders Row with maxColumns correctly 1`] = `
       style={Object {}}
     />
     <div
-      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-f26d78e1 rmq-2c57b02e rmq-7fc06685"
       data-radium={true}
       style={Object {}}
     />
@@ -79,7 +79,7 @@ exports[`renders Row with maxColumns correctly 1`] = `
       style={Object {}}
     />
     <div
-      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-ad4d4960 rmq-41b878cb"
       data-radium={true}
       style={Object {}}
     />
@@ -89,12 +89,12 @@ exports[`renders Row with maxColumns correctly 1`] = `
       style={Object {}}
     />
     <div
-      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-692dd1d2"
       data-radium={true}
       style={Object {}}
     />
     <div
-      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-7ff1dad1"
       data-radium={true}
       style={Object {}}
     />
@@ -123,6 +123,46 @@ exports[`renders Row with maxColumns correctly 1`] = `
       grid-template-columns: repeat(12, 104px) !important;}}
       @media (min-width: 1456px){ .rmq-108b114{display: grid !important;
       grid-template-columns: repeat(14, 104px) !important;}}
+      @media (min-width: 832px) and (max-width: 1039px) { .rmq-797f2370{grid-template-columns: repeat(1, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px) { .rmq-4560f2a7{grid-template-columns: repeat(1, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-6d474e68{grid-template-columns: repeat(1, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1456px) { .rmq-d80279c3{grid-template-columns: repeat(1, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 832px) and (max-width: 1039px) { .rmq-d1a52bb3{grid-template-columns: repeat(2, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px) { .rmq-164f544{grid-template-columns: repeat(2, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-8beb698b{grid-template-columns: repeat(2, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1456px) { .rmq-57e78aa0{grid-template-columns: repeat(2, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 832px) and (max-width: 1039px) { .rmq-45d5972{grid-template-columns: repeat(3, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px) { .rmq-15fad365{grid-template-columns: repeat(3, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-363873aa{grid-template-columns: repeat(3, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1456px) { .rmq-d1024a01{grid-template-columns: repeat(3, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 832px) and (max-width: 1039px) { .rmq-454212b5{grid-template-columns: repeat(4, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px) { .rmq-d3dba02{grid-template-columns: repeat(4, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-b91980cd{grid-template-columns: repeat(4, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1456px) { .rmq-da5d6e6{grid-template-columns: repeat(4, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 832px) and (max-width: 1039px) { .rmq-77fa4074{grid-template-columns: repeat(5, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px) { .rmq-21d39823{grid-template-columns: repeat(5, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-63668aec{grid-template-columns: repeat(5, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1456px) { .rmq-86c09647{grid-template-columns: repeat(5, 104px) !important;
+      justify-content: center !important;}}
       @media (min-width: 832px) and (max-width: 1039px) { .rmq-d02048b7{grid-template-columns: repeat(6, 104px) !important;
       justify-content: center !important;}}
       @media (min-width: 1040px) and (max-width: 1247px) { .rmq-ddd79ac0{grid-template-columns: repeat(6, 104px) !important;
@@ -131,15 +171,29 @@ exports[`renders Row with maxColumns correctly 1`] = `
       justify-content: center !important;}}
       @media (min-width: 1456px) { .rmq-6a5a724{grid-template-columns: repeat(6, 104px) !important;
       justify-content: center !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px) { .rmq-f26d78e1{grid-template-columns: repeat(7, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-2c57b02e{grid-template-columns: repeat(7, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1456px) { .rmq-7fc06685{grid-template-columns: repeat(7, 104px) !important;
+      justify-content: center !important;}}
       @media (min-width: 1040px) and (max-width: 1247px) { .rmq-abeb198e{grid-template-columns: repeat(8, 104px) !important;
       justify-content: center !important;}}
       @media (min-width: 1248px) and (max-width: 1455px) { .rmq-3003f41{grid-template-columns: repeat(8, 104px) !important;
       justify-content: center !important;}}
       @media (min-width: 1456px) { .rmq-c89db96a{grid-template-columns: repeat(8, 104px) !important;
       justify-content: center !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-ad4d4960{grid-template-columns: repeat(9, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1456px) { .rmq-41b878cb{grid-template-columns: repeat(9, 104px) !important;
+      justify-content: center !important;}}
       @media (min-width: 1248px) and (max-width: 1455px) { .rmq-820d5078{grid-template-columns: repeat(10, 104px) !important;
       justify-content: center !important;}}
       @media (min-width: 1456px) { .rmq-98718fd3{grid-template-columns: repeat(10, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1456px) { .rmq-692dd1d2{grid-template-columns: repeat(11, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1456px) { .rmq-7ff1dad1{grid-template-columns: repeat(12, 104px) !important;
       justify-content: center !important;}}",
       }
     }
@@ -155,7 +209,7 @@ exports[`renders Row with styles and maxColumns passed in correctly 1`] = `
     data-radium={true}
   >
     <div
-      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-797f2370 rmq-4560f2a7 rmq-6d474e68 rmq-d80279c3"
       data-radium={true}
       style={
         Object {
@@ -199,6 +253,14 @@ exports[`renders Row with styles and maxColumns passed in correctly 1`] = `
       grid-template-columns: repeat(12, 104px) !important;}}
       @media (min-width: 1456px){ .rmq-108b114{display: grid !important;
       grid-template-columns: repeat(14, 104px) !important;}}
+      @media (min-width: 832px) and (max-width: 1039px) { .rmq-797f2370{grid-template-columns: repeat(1, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px) { .rmq-4560f2a7{grid-template-columns: repeat(1, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-6d474e68{grid-template-columns: repeat(1, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1456px) { .rmq-d80279c3{grid-template-columns: repeat(1, 104px) !important;
+      justify-content: center !important;}}
       @media (min-width: 832px) and (max-width: 1039px) { .rmq-d02048b7{grid-template-columns: repeat(6, 104px) !important;
       justify-content: center !important;}}
       @media (min-width: 1040px) and (max-width: 1247px) { .rmq-ddd79ac0{grid-template-columns: repeat(6, 104px) !important;
