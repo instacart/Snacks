@@ -43,37 +43,31 @@ const Row = props => {
       justifyContent: 'center'
     }
 
-    switch(maxColumns) {
-      case 6: {
-        return {
-          [responsive.md]: override,
-          [responsive.mdLg]: override,
-          [responsive.lg]: override,
-          [responsive.xl]: override
-        }
+    if (maxColumns <= 6) {
+      return {
+        [responsive.md]: override,
+        [responsive.mdLg]: override,
+        [responsive.lg]: override,
+        [responsive.xl]: override
       }
-      case 8: {
-        return {
-          [responsive.mdLg]: override,
-          [responsive.lg]: override,
-          [responsive.xl]: override
-        }
+    } else if (maxColumns <= 8) {
+      return {
+        [responsive.mdLg]: override,
+        [responsive.lg]: override,
+        [responsive.xl]: override
       }
-      case 10: {
-        return {
-          [responsive.lg]:override,
-          [responsive.xl]: override
-        }
+    } else if (maxColumns <= 10) {
+      return {
+        [responsive.lg]:override,
+        [responsive.xl]: override
       }
-      case 12: {
-        // grid already maxes at 12, no overrides needed
-        return {}
-      }
-      default: {
-        return {}
+    } else if (maxColumns <= 12) {
+      return {
+        [responsive.xl]: override
       }
     }
 
+    return {}
   }
 
   return (
