@@ -85,7 +85,10 @@ class ScrollTrack extends Component {
     }
 
     return React.Children.map(this.props.children, child => {
-      return React.cloneElement(child, { trackProps })
+      const isHtmlTag = child.type[0] === child.type[0].toLowerCase()
+      const childProps = isHtmlTag ? {} : { trackProps }
+
+      return React.cloneElement(child, childProps)
     })
   }
 
