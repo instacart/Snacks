@@ -70,3 +70,26 @@ it('renders Row with styles and maxColumns passed in correctly', () => {
   ).toJSON()
   expect(tree).toMatchSnapshot()
 })
+
+it('renders Row with styles, maxColumns and forceFullPage passed in correctly', () => {
+  const tree = renderer.create(
+    <StyleRoot>
+      <div>
+        <Row
+          forceFullPage={true}
+          maxColumns={8}
+        />
+        <Row
+          forceFullPage={true}
+          styles={{ color: '#ccc', width: '100%' }}
+        />
+        <Row
+          forceFullPage={true}
+          maxColumns={10}
+          styles={{ color: '#ccc', width: '100%' }}
+        />
+      </div>
+    </StyleRoot>
+  ).toJSON()
+  expect(tree).toMatchSnapshot()
+})

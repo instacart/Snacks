@@ -314,3 +314,82 @@ exports[`renders Row with styles passed in correctly 1`] = `
   />
 </div>
 `;
+
+exports[`renders Row with styles, maxColumns and forceFullPage passed in correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+  >
+    <div
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-abeb198e rmq-3003f41 rmq-c89db96a rmq-b1f6f11b rmq-dc02619d rmq-69c466a5 rmq-eda2c7ee rmq-a1a4c0ab rmq-6b22c469"
+      data-radium={true}
+      style={
+        Object {
+          "justifyContent": "center",
+          "width": "100vw",
+        }
+      }
+    />
+    <div
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-b1f6f11b rmq-dc02619d rmq-69c466a5 rmq-9b120b4e rmq-640e2e4b rmq-6211ca9"
+      data-radium={true}
+      style={
+        Object {
+          "color": "#ccc",
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    />
+    <div
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-820d5078 rmq-98718fd3 rmq-b1f6f11b rmq-dc02619d rmq-69c466a5 rmq-9b120b4e rmq-a1a4c0ab rmq-6b22c469"
+      data-radium={true}
+      style={
+        Object {
+          "color": "#ccc",
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (max-width: 767px){ .rmq-e9fd10a8{display: block !important;}}
+      @media (min-width: 768px) and (max-width: 831px){ .rmq-94de0125{display: grid !important;
+      grid-template-columns: repeat(6, 104px) !important;}}
+      @media (min-width: 832px) and (max-width: 1039px){ .rmq-eeb4761a{display: grid !important;
+      grid-template-columns: repeat(8, 104px) !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-3e10bf34{display: grid !important;
+      grid-template-columns: repeat(10, 104px) !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-2295bbb9{display: grid !important;
+      grid-template-columns: repeat(12, 104px) !important;}}
+      @media (min-width: 1456px){ .rmq-108b114{display: grid !important;
+      grid-template-columns: repeat(14, 104px) !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px) { .rmq-abeb198e{grid-template-columns: repeat(8, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-3003f41{grid-template-columns: repeat(8, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1456px) { .rmq-c89db96a{grid-template-columns: repeat(8, 104px) !important;
+      justify-content: center !important;}}
+      @media (max-width: 767px) { .rmq-b1f6f11b{margin-left: calc(-1 * ((100vw - undefinedpx) / 2)) !important;}}
+      @media (min-width: 768px) and (max-width: 831px) { .rmq-dc02619d{margin-left: calc(-1 * ((100vw - 624px) / 2)) !important;}}
+      @media (min-width: 832px) and (max-width: 1039px) { .rmq-69c466a5{margin-left: calc(-1 * ((100vw - 832px) / 2)) !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px)  { .rmq-eda2c7ee{margin-left: calc(-1 * ((100vw - 1040px) / 2)) !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px)  { .rmq-a1a4c0ab{margin-left: calc(-1 * ((100vw - 1248px) / 2)) !important;}}
+      @media (min-width: 1456px)  { .rmq-6b22c469{margin-left: calc(-1 * ((100vw - 1456px) / 2)) !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px) { .rmq-9b120b4e{margin-left: calc(-1 * ((100vw - 1040px) / 2)) !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-640e2e4b{margin-left: calc(-1 * ((100vw - 1248px) / 2)) !important;}}
+      @media (min-width: 1456px) { .rmq-6211ca9{margin-left: calc(-1 * ((100vw - 1456px) / 2)) !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-820d5078{grid-template-columns: repeat(10, 104px) !important;
+      justify-content: center !important;}}
+      @media (min-width: 1456px) { .rmq-98718fd3{grid-template-columns: repeat(10, 104px) !important;
+      justify-content: center !important;}}",
+      }
+    }
+  />
+</div>
+`;
