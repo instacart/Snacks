@@ -323,32 +323,35 @@ exports[`renders Row with styles, maxColumns and forceFullPage passed in correct
     data-radium={true}
   >
     <div
-      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-abeb198e rmq-3003f41 rmq-c89db96a rmq-1d5dd81 rmq-6e41f2c7 rmq-6f1ba7ff rmq-5845e374 rmq-52cc0331 rmq-ce584333"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-abeb198e rmq-3003f41 rmq-c89db96a rmq-df49b95c rmq-52b1fba rmq-cd871ee2 rmq-ee389 rmq-dede964c rmq-171bfece"
       data-radium={true}
       style={
         Object {
+          "display": "block",
           "justifyContent": "center",
           "width": "100vw",
         }
       }
     />
     <div
-      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-1d5dd81 rmq-6e41f2c7 rmq-6f1ba7ff rmq-3fced614 rmq-f19fdc91 rmq-f4ac2eb3"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-df49b95c rmq-52b1fba rmq-cd871ee2 rmq-453405c9 rmq-73d7df4c rmq-8805c92e"
       data-radium={true}
       style={
         Object {
           "color": "#ccc",
+          "display": "block",
           "justifyContent": "center",
           "width": "100%",
         }
       }
     />
     <div
-      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-820d5078 rmq-98718fd3 rmq-1d5dd81 rmq-6e41f2c7 rmq-6f1ba7ff rmq-3fced614 rmq-52cc0331 rmq-ce584333"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-820d5078 rmq-98718fd3 rmq-df49b95c rmq-52b1fba rmq-cd871ee2 rmq-453405c9 rmq-dede964c rmq-171bfece"
       data-radium={true}
       style={
         Object {
           "color": "#ccc",
+          "display": "block",
           "justifyContent": "center",
           "width": "100%",
         }
@@ -375,15 +378,15 @@ exports[`renders Row with styles, maxColumns and forceFullPage passed in correct
       justify-content: center !important;}}
       @media (min-width: 1456px) { .rmq-c89db96a{grid-template-columns: repeat(8, 104px) !important;
       justify-content: center !important;}}
-      @media (max-width: 767px) { .rmq-1d5dd81{margin: 0 calc(-1 * (100vw - undefinedpx)) !important;}}
-      @media (min-width: 768px) and (max-width: 831px) { .rmq-6e41f2c7{margin: 0 calc(-1 * (100vw - 624px)) !important;}}
-      @media (min-width: 832px) and (max-width: 1039px) { .rmq-6f1ba7ff{margin: 0 calc(-1 * (100vw - 832px)) !important;}}
-      @media (min-width: 1040px) and (max-width: 1247px)  { .rmq-5845e374{margin: 0 calc(-1 * (100vw - 1040px)) !important;}}
-      @media (min-width: 1248px) and (max-width: 1455px)  { .rmq-52cc0331{margin: 0 calc(-1 * (100vw - 1248px)) !important;}}
-      @media (min-width: 1456px)  { .rmq-ce584333{margin: 0 calc(-1 * (100vw - 1456px)) !important;}}
-      @media (min-width: 1040px) and (max-width: 1247px) { .rmq-3fced614{margin: 0 calc(-1 * (100vw - 1040px)) !important;}}
-      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-f19fdc91{margin: 0 calc(-1 * (100vw - 1248px)) !important;}}
-      @media (min-width: 1456px) { .rmq-f4ac2eb3{margin: 0 calc(-1 * (100vw - 1456px)) !important;}}
+      @media (max-width: 767px) { .rmq-df49b95c{margin: 0 calc(-1 * (100vw - undefinedpx) / 2) !important;}}
+      @media (min-width: 768px) and (max-width: 831px) { .rmq-52b1fba{margin: 0 calc(-1 * (100vw - 624px) / 2) !important;}}
+      @media (min-width: 832px) and (max-width: 1039px) { .rmq-cd871ee2{margin: 0 calc(-1 * (100vw - 832px) / 2) !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px)  { .rmq-ee389{margin: 0 calc(-1 * (100vw - 1040px) / 2) !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px)  { .rmq-dede964c{margin: 0 calc(-1 * (100vw - 1248px) / 2) !important;}}
+      @media (min-width: 1456px)  { .rmq-171bfece{margin: 0 calc(-1 * (100vw - 1456px) / 2) !important;}}
+      @media (min-width: 1040px) and (max-width: 1247px) { .rmq-453405c9{margin: 0 calc(-1 * (100vw - 1040px) / 2) !important;}}
+      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-73d7df4c{margin: 0 calc(-1 * (100vw - 1248px) / 2) !important;}}
+      @media (min-width: 1456px) { .rmq-8805c92e{margin: 0 calc(-1 * (100vw - 1456px) / 2) !important;}}
       @media (min-width: 1248px) and (max-width: 1455px) { .rmq-820d5078{grid-template-columns: repeat(10, 104px) !important;
       justify-content: center !important;}}
       @media (min-width: 1456px) { .rmq-98718fd3{grid-template-columns: repeat(10, 104px) !important;
