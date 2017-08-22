@@ -77,28 +77,29 @@ const Row = props => {
     return {
       width: '100vw',
       justifyContent: 'center',
+      display: 'block',
       [responsive.xs]: {
-        margin: `0 calc(-1 * (100vw - ${screenWidths.xs}px))`
+        margin: `0 calc(-1 * (100vw - ${screenWidths.xs}px) / 2)`
       },
 
       [responsive.sm]: {
-        margin: `0 calc(-1 * (100vw - ${screenWidths.sm}px))`
+        margin: `0 calc(-1 * (100vw - ${screenWidths.sm}px) / 2)`
       },
 
       [responsive.md]: {
-        margin: `0 calc(-1 * (100vw - ${screenWidths.md}px))`
+        margin: `0 calc(-1 * (100vw - ${screenWidths.md}px) / 2)`
       },
 
       [responsive.mdLg]: {
-        margin: `0 calc(-1 * (100vw - ${screenWidths.mdLg}px))`
+        margin: `0 calc(-1 * (100vw - ${screenWidths.mdLg}px) / 2)`
       },
 
       [responsive.lg]: {
-        margin: `0 calc(-1 * (100vw - ${screenWidths.lg}px))`
+        margin: `0 calc(-1 * (100vw - ${screenWidths.lg}px) / 2)`
       },
 
       [responsive.xl]: {
-        margin: `0 calc(-1 * (100vw - ${screenWidths.xl}px))`
+        margin: `0 calc(-1 * (100vw - ${screenWidths.xl}px) / 2)`
       }
     }
   }
