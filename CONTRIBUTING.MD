@@ -5,7 +5,7 @@ Before opening an issue, please search the [issue tracker](https://github.com/in
 
 Visit the [Issue tracker](https://github.com/instacart/Snacks/issues) to find a list of open issues that need attention.
 
-Fork, then clone the repo:
+Clone the repo:
 ```
 git clone git@github.com:instacart/Snacks.git
 ```
@@ -63,8 +63,7 @@ npm run test:watch
 
 ## Submitting Changes
 
-* Open a new issue in the [Issue tracker](https://github.com/instacart/Snacks/issues).
-* Fork the repo.
+* If it's a bug fix, open a new issue in the [Issue tracker](https://github.com/instacart/Snacks/issues).
 * Create a new feature branch based off the `master` branch.
 * Make sure all tests pass.
 * Submit a pull request, referencing any issues it addresses.
@@ -91,6 +90,8 @@ New components must:
 * Create React `PureComponent`s if not stateless
 * Create es6 classes inheriting from React's `Component` class if not pure or stateless
 * Always include propTypes with as much specificity as possible - ie propTypes.shape is better than propTypes.object
+
+Linting will run when you run tests, and most of the above rules will be caught.
 
 ### Tests
 Tests are done using a few frameworks/libraries:
