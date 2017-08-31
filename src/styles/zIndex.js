@@ -1,5 +1,5 @@
 // Usage:
-//   import { zIndex } from 'common/styles'
+//   import { zIndex } from '...'
 //
 //   const style = {
 //     ...zIndex.Z_INDEX1
