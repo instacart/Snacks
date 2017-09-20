@@ -22,8 +22,15 @@ export const spacings = {
 const finalSpacings = {}
 Object.keys(spacings).forEach(spacing => {
   const pxValue = spacings[spacing]
+
   finalSpacings[`MARGIN_${spacing}`] = { margin: pxValue }
   finalSpacings[`PADDING_${spacing}`] = { padding: pxValue }
+
+  finalSpacings[`PADDING_X_${spacing}`] = { paddingLeft: pxValue, paddingRight: pxValue }
+  finalSpacings[`PADDING_Y_${spacing}`] = { paddingTop: pxValue, paddingBottom: pxValue }
+  finalSpacings[`MARGIN_X_${spacing}`] = { marginLeft: pxValue, marginRight: pxValue }
+  finalSpacings[`MARGIN_Y_${spacing}`] = { marginTop: pxValue, marginBottom: pxValue }
+
   DIRECTIONS.forEach(direction => {
     finalSpacings[`MARGIN_${direction}_${spacing}`] = {
       [`margin${capitalize(direction)}`]: pxValue
