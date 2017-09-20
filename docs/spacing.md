@@ -1,6 +1,7 @@
-The spacing module is based on the design system's base 8 spacing.
-Using predefined values for padding and margin help us keep things visually consistent.
+The spacing module exports values which can be used for padding, margin, and positioning (top, left, bottom, right).
+Using predefined values for spacing help us keep things visually consistent.
 
+The pixel values are a base-8 strategy as defined by the design system.
 ### Sizes
 | Property   | Px value  |
 |------------|-----------|
@@ -31,5 +32,9 @@ const styles = {
   // Padding/margin along one dimension
   ...spacing.PADDING_Y_XL              // => { paddingTop: 64, paddingBottom: 64 }
   ...spacing.MARGIN_X_LG,              // => { marginLeft: 32, marginRight: 32 }
+
+  // Positioning
+  ...spacing.LEFT_8                    // => { left: 8 }
+  ...spacing.RIGHT_16,                 // => { right: 16 }
 }
 ```
