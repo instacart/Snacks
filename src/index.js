@@ -10,6 +10,7 @@ import responsive from './styles/responsive'
 import Row from './components/Grid/Row'
 import ScrollTrack from './components/ScrollTrack/ScrollTrack'
 import SetStyles from './styles/SetStyles'
+import spacing from './styles/spacing'
 import zIndex from './styles/zIndex'
 import themer from './styles/themer/index'
 
@@ -26,6 +27,7 @@ export {
   Row,
   ScrollTrack,
   SetStyles,
+  spacing,
   themer,
   zIndex
 }

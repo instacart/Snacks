@@ -25,6 +25,10 @@ module.exports = {
       content: 'docs/colors.md'
     },
     {
+      name: 'Spacing',
+      content: 'docs/spacing.md'
+    },
+    {
       name: 'Icons',
       content: 'docs/icons.md'
     },
