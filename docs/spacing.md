@@ -34,7 +34,7 @@ const styles = {
   ...spacing.MARGIN_X_LG,              // => { marginLeft: 32, marginRight: 32 }
 
   // Positioning
-  ...spacing.LEFT_8                    // => { left: 8 }
-  ...spacing.RIGHT_16,                 // => { right: 16 }
+  ...spacing.LEFT_XS                   // => { left: 8 }
+  ...spacing.RIGHT_SM,                 // => { right: 16 }
 }
 ```

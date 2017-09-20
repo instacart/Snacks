@@ -7,7 +7,7 @@
 //     // Or,
 //     // ...spacing.PADDING_X_MD // => { paddingLeft: 24, paddingRight: 24 }
 //     // Or
-//     // ...spacing.LEFT_8 // => { left: 8 }
+//     // ...spacing.LEFT_XS // => { left: 8 }
 //   }
 const DIRECTIONS = ['TOP', 'LEFT', 'BOTTOM', 'RIGHT']
 export const spacings = {
