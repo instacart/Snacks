@@ -27,8 +27,8 @@ function withTheme(InnerComponent) {
     render() {
       return (
         <InnerComponent
-          snacksTheme={themer.themeConfig}
           {...this.props}
+          snacksTheme={themer.themeConfig}
         />
       )
     }
