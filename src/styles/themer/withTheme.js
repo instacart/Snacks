@@ -20,14 +20,13 @@ function withTheme(InnerComponent) {
       this.unsubscribe()
     }
 
-    onThemeChange() {
+    onThemeChange = () => {
       this.forceUpdate()
     }
 
     render() {
       return (
         <InnerComponent
-          ref={(node) => this.wrapped = node}
           snacksTheme={themer.themeConfig}
           {...this.props}
         />
