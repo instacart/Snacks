@@ -66,10 +66,12 @@ export function validConfigValue(section, sectionKey) {
 export const themePropTypes = PropTypes.shape({
   colors: PropTypes.shape({
     action: PropTypes.string,
+    actionHover: PropTypes.string,
     primaryBackground: PropTypes.string,
     primaryForeground: PropTypes.string,
     secondaryBackground: PropTypes.string,
     secondaryForeground: PropTypes.string,
+    secondaryForegroundFocus: PropTypes.string,
   })
 })
 
