@@ -64,10 +64,5 @@
     "radium": "^0.18.0",
     "react": "^15.4.0",
     "react-dom": "^15.4.0"
-  },
-  "jest": {
-    "setupFiles": [
-      "<rootDir>/scripts/themeSetup.js"
-    ]
   }
 }

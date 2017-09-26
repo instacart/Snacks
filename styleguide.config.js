@@ -39,6 +39,10 @@ module.exports = {
         {
           name: 'Themer',
           content: 'src/styles/themer/docs/themer.md'
+        },
+        {
+          name: 'withTheme HOC',
+          content: 'src/styles/themer/docs/withTheme.md'
         }
       ]
     },
