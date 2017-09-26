@@ -4,22 +4,27 @@ import PropTypes from 'prop-types'
 export const themeTemplate = {
   colors: {
     action: true,
+    actionHover: true,
     primaryBackground: true,
     primaryForeground: true,
     secondaryBackground: true,
     secondaryForeground: true,
+    secondaryForegroundFocus: true
   }
 }
 
 export const defaultTheme = {
   colors: {
     action: colors.GREEN_500,
+    actionHover: colors.GREEN_700,
     primaryBackground: colors.WHITE,
     primaryForeground: colors.GREEN_500,
     secondaryBackground: colors.GREEN_500,
     secondaryForeground: colors.WHITE,
+    secondaryForegroundFocus: colors.GRAY_46
   }
 }
+
 export function cleanConfig(themeConfig) {
   const cleanConfig = {}
 
