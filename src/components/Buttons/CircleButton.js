@@ -5,9 +5,10 @@
 */
 import colors       from '../../styles/colors'
 import responsive   from '../../styles/responsive'
-import themer       from '../../styles/themer'
 import zIndex       from '../../styles/zIndex'
 import { spacings } from '../../styles/spacing'
+import withTheme          from '../../styles/themer/withTheme'
+import { themePropTypes } from '../../styles/themer/utils'
 
 import Radium    from 'radium'
 import React     from 'react'
@@ -16,9 +17,7 @@ import PropTypes from 'prop-types'
 const styles = {
   default: {
     ...zIndex.Z_INDEX1,
-    backgroundColor: themer.get('colors', 'primaryForeground'),
     border: '0',
-    color: themer.get('colors', 'primaryBackground'),
     width: `${spacings.XL}px`,
     height: `${spacings.XL}px`,
     borderRadius: '50%',
@@ -43,6 +42,8 @@ const styles = {
 }
 
 const CircleButton = props => {
+  const { primaryBackground, primaryForeground } = props.snacksTheme.colors
+
   return (
     <button
       onClick={e => {
@@ -54,6 +55,10 @@ const CircleButton = props => {
       aria-label={props.ariaLabel}
       style={[
         styles.default,
+        {
+          backgroundColor: primaryForeground,
+          color: primaryBackground,
+        },
         props.styles
       ]}
       disabled={props.disabled}
@@ -70,8 +75,10 @@ CircleButton.propTypes = {
   disabled: PropTypes.bool,
   /** Callback function called after button click */
   onClick: PropTypes.func,
+  /** snacks theme attributes */
+  snacksTheme: themePropTypes,
   /** Optional style overrides */
   styles: PropTypes.object,
 }
 
-export default Radium(CircleButton)
+export default withTheme(Radium(CircleButton))

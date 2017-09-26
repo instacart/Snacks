@@ -1,4 +1,5 @@
 import colors from '../colors'
+import PropTypes from 'prop-types'
 
 export const themeTemplate = {
   colors: {
@@ -57,8 +58,19 @@ export function validConfigValue(section, sectionKey) {
   return true
 }
 
+export const themePropTypes = PropTypes.shape({
+  colors: PropTypes.shape({
+    action: PropTypes.string,
+    primaryBackground: PropTypes.string,
+    primaryForeground: PropTypes.string,
+    secondaryBackground: PropTypes.string,
+    secondaryForeground: PropTypes.string,
+  })
+})
+
 export default {
   cleanConfig,
+  themePropTypes,
   themeTemplate,
   validConfigValue
 }

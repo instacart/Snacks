@@ -8,6 +8,11 @@ import {
 class Themer {
   constructor() {
     this._themeConfig = defaultTheme
+    this._onChangeListeners = []
+  }
+
+  _callListeners() {
+    this._onChangeListeners.forEach(listener => { listener(this._themeConfig) })
   }
 
   get themeConfig() {
@@ -16,6 +21,7 @@ class Themer {
 
   set themeConfig(themeConfig) {
     this._themeConfig = cleanConfig(themeConfig)
+    this._callListeners()
   }
 
   get(section, sectionKey) {
@@ -29,7 +35,20 @@ class Themer {
   set(section, sectionKey, themeValue) {
     if (validConfigValue(section, sectionKey)) {
       this._themeConfig[section][sectionKey] = themeValue
+      this._callListeners()
     }
+  }
+
+  subscribe(listener) {
+    this._onChangeListeners.push(listener)
+
+    const unsubscribe = () => {
+      const index = this._onChangeListeners.indexOf(listener)
+      if (index === -1) { return }
+      this._onChangeListeners.splice(index, 1)
+    }
+
+    return unsubscribe
   }
 }
 

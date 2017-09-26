@@ -1,8 +1,9 @@
-import React      from 'react'
-import PropTypes  from 'prop-types'
-import Radium     from 'radium'
-import colors     from '../../styles/colors'
-import themer     from '../../styles/themer'
+import React              from 'react'
+import PropTypes          from 'prop-types'
+import Radium             from 'radium'
+import colors             from '../../styles/colors'
+import withTheme          from '../../styles/themer/withTheme'
+import { themePropTypes } from '../../styles/themer/utils'
 
 const styles = {
   container: {
@@ -13,7 +14,6 @@ const styles = {
       padding: '12px 16px',
       display: 'block',
       fontSize: '14px',
-      color: themer.get('colors', 'primaryForeground'),
       backgroundColor: colors.GRAY_97,
       borderRadius: '24px',
       margin: '0 4px',
@@ -24,28 +24,31 @@ const styles = {
         textDecoration: 'none',
         backgroundColor: colors.GRAY_93
       },
+
       ':focus': {
         textDecoration: 'none',
         backgroundColor: colors.GRAY_93,
         outline: 'none'
-      }
-    },
-    active: {
-      backgroundColor: themer.get('colors', 'primaryForeground'),
-      color: colors.WHITE,
-
-      ':hover': {
-        backgroundColor: themer.get('colors', 'primaryForeground')
-      },
-      ':focus': {
-        backgroundColor: themer.get('colors', 'primaryForeground'),
       }
     }
   }
 }
 
 const NavigationPill = props => {
-  const { isActive, text } = props
+  const { isActive, snacksTheme, text } = props
+  const { primaryForeground } = snacksTheme.colors
+
+  const activeStyles = {
+    backgroundColor: primaryForeground,
+    color: colors.WHITE,
+
+    ':hover': {
+      backgroundColor: primaryForeground
+    },
+    ':focus': {
+      backgroundColor: primaryForeground,
+    }
+  }
 
   return (
     <li style={styles.container}>
@@ -55,7 +58,8 @@ const NavigationPill = props => {
         onClick={e => props.onClick(e, props)}
         style={[
           styles.main.default,
-          isActive && styles.main.active
+          { color: primaryForeground },
+          isActive && activeStyles
         ]}
         key={`pill-anchor-${text}`}
       >
@@ -75,6 +79,8 @@ NavigationPill.propTypes = {
   onClick: PropTypes.func,
   /** url used for href property */
   path: PropTypes.string,
+  /** snacks theme attributes */
+  snacksTheme: themePropTypes,
   /** text to appear inside pill */
   text: PropTypes.string
 }
@@ -83,4 +89,4 @@ NavigationPill.defaultProps = {
   isActive: false
 }
 
-export default Radium(NavigationPill)
+export default withTheme(Radium(NavigationPill))
