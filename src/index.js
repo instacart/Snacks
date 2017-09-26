@@ -13,6 +13,7 @@ import SetStyles from './styles/SetStyles'
 import spacing from './styles/spacing'
 import zIndex from './styles/zIndex'
 import themer from './styles/themer/index'
+import withTheme from './styles/themer/withTheme'
 
 export {
   colors,
@@ -29,5 +30,6 @@ export {
   SetStyles,
   spacing,
   themer,
+  withTheme,
   zIndex
 }
