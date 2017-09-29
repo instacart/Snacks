@@ -25,16 +25,6 @@ const styles = {
     transition: 'background-color 150ms ease-in-out',
     textAlign: 'center',
     lineHeight: '1',
-    ':hover': {
-      backgroundColor: colors.GREEN_600
-    },
-    ':active': {
-      backgroundColor: colors.GREEN_700
-    },
-    ':focus': {
-      backgroundColor: colors.GREEN_600,
-      outline: 'none'
-    },
     [responsive.xs]: {
       display: 'none'
     }
@@ -42,7 +32,7 @@ const styles = {
 }
 
 const CircleButton = props => {
-  const { primaryBackground, primaryForeground } = props.snacksTheme.colors
+  const { action, actionHover, primaryBackground } = props.snacksTheme.colors
 
   return (
     <button
@@ -56,8 +46,18 @@ const CircleButton = props => {
       style={[
         styles.default,
         {
-          backgroundColor: primaryForeground,
+          backgroundColor: action,
           color: primaryBackground,
+          ':hover': {
+            backgroundColor: actionHover
+          },
+          ':active': {
+            backgroundColor: actionHover
+          },
+          ':focus': {
+            backgroundColor: actionHover,
+            outline: 'none'
+          },
         },
         props.styles
       ]}
