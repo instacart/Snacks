@@ -165,7 +165,11 @@ const Button = props => {
       props.styles
     ],
     onClick: e => {
-      e.preventDefault()
+      if (props.disabled) {
+        e.preventDefault()
+        return
+      }
+
       props.onClick()
     },
     ...props.extraProps
