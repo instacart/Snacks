@@ -7,7 +7,7 @@ Class with decorator style
   import React, { Component } from 'react'
   import { withTheme } from 'ic-snacks'
 
-  @withTheme()
+  @withTheme
   class MyComponent extends Component {
     render() {
       <p style={{ color: this.props.snacksTheme.color.action }}>
