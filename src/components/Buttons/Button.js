@@ -178,10 +178,8 @@ const Button = props => {
     finalProps.href = props.href
   }
 
-  let icon = props.icon
-  if (typeof props.icon === 'string') {
-    icon = <Icon name={props.icon} />
-  }
+  const icon =
+    typeof props.icon === 'string' ? <Icon name={props.icon} /> : props.icon
 
   if (icon && props.iconPosition === 'left') {
     return (
