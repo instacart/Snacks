@@ -81,11 +81,9 @@ const getSnacksStyles = props => {
         color: action,
 
         ':hover': {
-          backgroundColor: primaryBackground,
           opacity: '0.9'
         },
         ':active': {
-          backgroundColor: primaryBackground,
           opacity: '0.8'
         }
       }
@@ -112,13 +110,9 @@ const getSnacksStyles = props => {
         border: `1px solid ${primaryBackground}`,
 
         ':hover': {
-          color: primaryBackground,
-          border: `1px solid ${primaryBackground}`,
           opacity: '0.9'
         },
         ':active': {
-          color: primaryBackground,
-          border: `1px solid ${primaryBackground}`,
           opacity: '0.8'
         }
       }
