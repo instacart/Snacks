@@ -3,7 +3,6 @@
  *
  * @author [Dominic Cocchiarella ](https://github.com/docchia)
 */
-import colors       from '../../styles/colors'
 import responsive   from '../../styles/responsive'
 import zIndex       from '../../styles/zIndex'
 import { spacings } from '../../styles/spacing'
