@@ -63,6 +63,10 @@ module.exports = {
           components: 'src/components/Icon/Icon.js'
         },
         {
+          name: 'Link',
+          components: 'src/components/Link/Link.js'
+        },
+        {
           name: 'NavigationPills',
           components: 'src/components/NavigationPills/[A-Z]*.js'
         },
