@@ -162,7 +162,7 @@ const Button = props => {
       snacksStyles[snacksStyle].base,
       props.inverted && snacksStyles[snacksStyle].inverted,
       ElementType === 'a' && linkStyles,
-      props.styles
+      props.style
     ],
     onClick: e => {
       if (props.disabled) {
@@ -214,7 +214,7 @@ Button.propTypes = {
   snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'coupon']),
 
   /** Optional style overrides. */
-  styles: PropTypes.object,
+  style: PropTypes.object,
 
   /** Whether or not the button is disabled. */
   disabled: PropTypes.bool,
