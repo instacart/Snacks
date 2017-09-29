@@ -172,7 +172,7 @@ const Button = props => {
 
       props.onClick(e, props)
     },
-    ...props.extraProps
+    ...props.elementAttributes
   }
   if (props.href) {
     finalProps.href = props.href
@@ -250,7 +250,7 @@ Button.propTypes = {
   children: PropTypes.node,
 
   /** Any additonal props to add to the element (e.g. data attributes). */
-  extraProps: PropTypes.object,
+  elementAttributes: PropTypes.object,
 
   /** Snacks theme attributes provided by `Themer` */
   snacksTheme: themePropTypes
@@ -264,7 +264,7 @@ Button.defaultProps = {
   iconPosition: 'left',
   onClick: noop,
   inverted: false,
-  extraProps: {}
+  elementAttributes: {}
 }
 
 export default withTheme(Radium(Button))

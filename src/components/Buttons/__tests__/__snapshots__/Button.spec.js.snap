@@ -1,5 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button applies the elementAttributes prop correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <button
+    aria-label="foo"
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "backgroundColor": "#43B02A",
+        "backgroundImage": "none",
+        "border": "1px solid transparent",
+        "borderRadius": "4px",
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "height": "40px",
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    Hi
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`Button can render as a link if an href is provided 1`] = `
 <div
   data-radium={true}
@@ -729,6 +780,36 @@ exports[`Button renders icons correctly 4`] = `
     type="button"
   >
     Hi
+    <span
+      data-radium={true}
+      style={
+        Object {
+          "marginLeft": 8,
+        }
+      }
+    />
+    <i
+      aria-hidden={true}
+      data-radium={true}
+      onClick={undefined}
+      style={
+        Object {
+          "fontFamily": "ic-icons",
+          "fontSize": "16px",
+          "fontSmoothing": "antialiased",
+          "fontStyle": "normal",
+          "fontVariant": "normal",
+          "fontWeight": "normal",
+          "lineHeight": "1",
+          "osxFontSmoothing": "grayscale",
+          "position": "relative",
+          "speak": "none",
+          "textTransform": "none",
+        }
+      }
+    >
+      
+    </i>
   </button>
   <style
     dangerouslySetInnerHTML={

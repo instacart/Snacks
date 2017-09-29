@@ -64,7 +64,7 @@ describe('Button', () => {
       { icon: 'cart' },
       { icon: 'cart', iconPosition: 'right' },
       { icon: <Icon name="cart" /> },
-      { icon: <Icon name="cart" />, iconPosition: 'right ' }
+      { icon: <Icon name="cart" />, iconPosition: 'right' }
     ]
 
     testCases.forEach(props => {
@@ -78,6 +78,20 @@ describe('Button', () => {
       expect(tree).toMatchSnapshot()
     })
   })
+
+  it('applies the elementAttributes prop correctly', () => {
+    const tree = renderer
+      .create(
+        <StyleRoot>
+          <Button elementAttributes={{'aria-label': 'foo'}} nacksType="primary">
+            Hi
+          </Button>
+        </StyleRoot>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
 
   it('fires the onClick prop', () => {
     const onClick = spy()
