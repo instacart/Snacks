@@ -1,0 +1,791 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button can render as a link if an href is provided 1`] = `
+<div
+  data-radium={true}
+>
+  <a
+    data-radium={true}
+    disabled={false}
+    href="/carrot"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "alignItems": "center",
+        "backgroundColor": "#43B02A",
+        "backgroundImage": "none",
+        "border": "1px solid transparent",
+        "borderRadius": "4px",
+        "boxSizing": "border-box",
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "display": "flex",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "height": "40px",
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    Hi
+  </a>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button renders all sizes correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <button
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "backgroundColor": "#43B02A",
+        "backgroundImage": "none",
+        "border": "1px solid transparent",
+        "borderRadius": "4px",
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "fontSize": "11px",
+        "fontWeight": 600,
+        "height": "24px",
+        "paddingLeft": 8,
+        "paddingRight": 8,
+        "textTransform": "uppercase",
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    Primary Button
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button renders all sizes correctly 2`] = `
+<div
+  data-radium={true}
+>
+  <button
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "backgroundColor": "#43B02A",
+        "backgroundImage": "none",
+        "border": "1px solid transparent",
+        "borderRadius": "4px",
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "fontSize": "14px",
+        "fontWeight": 600,
+        "height": "32px",
+        "paddingLeft": 8,
+        "paddingRight": 8,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    Primary Button
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button renders all sizes correctly 3`] = `
+<div
+  data-radium={true}
+>
+  <button
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "backgroundColor": "#43B02A",
+        "backgroundImage": "none",
+        "border": "1px solid transparent",
+        "borderRadius": "4px",
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "height": "40px",
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    Primary Button
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button renders all sizes correctly 4`] = `
+<div
+  data-radium={true}
+>
+  <button
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "backgroundColor": "#43B02A",
+        "backgroundImage": "none",
+        "border": "1px solid transparent",
+        "borderRadius": "4px",
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "fontSize": "18px",
+        "fontWeight": 600,
+        "height": "48px",
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    Primary Button
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button renders all snacks button variants correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <button
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "backgroundColor": "#43B02A",
+        "backgroundImage": "none",
+        "border": "1px solid transparent",
+        "borderRadius": "4px",
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "height": "40px",
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    Hi
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button renders all snacks button variants correctly 2`] = `
+<div
+  data-radium={true}
+>
+  <button
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "backgroundColor": "transparent",
+        "backgroundImage": "none",
+        "border": "1px solid #43B02A",
+        "borderRadius": "4px",
+        "color": "#43B02A",
+        "cursor": "pointer",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "height": "40px",
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    Hi
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button renders all snacks button variants correctly 3`] = `
+<div
+  data-radium={true}
+>
+  <button
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "backgroundColor": "#FFFFFF",
+        "backgroundImage": "none",
+        "border": "1px dashed #E0E0E0",
+        "borderRadius": "4px",
+        "color": "#E6003D",
+        "cursor": "pointer",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "height": "40px",
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    Hi
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button renders correctly when disabled 1`] = `
+<div
+  data-radium={true}
+>
+  <button
+    data-radium={true}
+    disabled={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "backgroundColor": "#BDBDBD",
+        "backgroundImage": "none",
+        "border": "1px solid transparent",
+        "borderRadius": "4px",
+        "color": "#FFFFFF",
+        "cursor": "not-allowed",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "height": "40px",
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    Hi
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button renders icons correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <button
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "backgroundColor": "#43B02A",
+        "backgroundImage": "none",
+        "border": "1px solid transparent",
+        "borderRadius": "4px",
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "height": "40px",
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    <i
+      aria-hidden={true}
+      data-radium={true}
+      onClick={undefined}
+      style={
+        Object {
+          "fontFamily": "ic-icons",
+          "fontSize": "16px",
+          "fontSmoothing": "antialiased",
+          "fontStyle": "normal",
+          "fontVariant": "normal",
+          "fontWeight": "normal",
+          "lineHeight": "1",
+          "osxFontSmoothing": "grayscale",
+          "position": "relative",
+          "speak": "none",
+          "textTransform": "none",
+        }
+      }
+    >
+      
+    </i>
+    <span
+      data-radium={true}
+      style={
+        Object {
+          "marginRight": 8,
+        }
+      }
+    />
+    Hi
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button renders icons correctly 2`] = `
+<div
+  data-radium={true}
+>
+  <button
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "backgroundColor": "#43B02A",
+        "backgroundImage": "none",
+        "border": "1px solid transparent",
+        "borderRadius": "4px",
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "height": "40px",
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    Hi
+    <span
+      data-radium={true}
+      style={
+        Object {
+          "marginLeft": 8,
+        }
+      }
+    />
+    <i
+      aria-hidden={true}
+      data-radium={true}
+      onClick={undefined}
+      style={
+        Object {
+          "fontFamily": "ic-icons",
+          "fontSize": "16px",
+          "fontSmoothing": "antialiased",
+          "fontStyle": "normal",
+          "fontVariant": "normal",
+          "fontWeight": "normal",
+          "lineHeight": "1",
+          "osxFontSmoothing": "grayscale",
+          "position": "relative",
+          "speak": "none",
+          "textTransform": "none",
+        }
+      }
+    >
+      
+    </i>
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button renders icons correctly 3`] = `
+<div
+  data-radium={true}
+>
+  <button
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "backgroundColor": "#43B02A",
+        "backgroundImage": "none",
+        "border": "1px solid transparent",
+        "borderRadius": "4px",
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "height": "40px",
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    <i
+      aria-hidden={true}
+      data-radium={true}
+      onClick={undefined}
+      style={
+        Object {
+          "fontFamily": "ic-icons",
+          "fontSize": "16px",
+          "fontSmoothing": "antialiased",
+          "fontStyle": "normal",
+          "fontVariant": "normal",
+          "fontWeight": "normal",
+          "lineHeight": "1",
+          "osxFontSmoothing": "grayscale",
+          "position": "relative",
+          "speak": "none",
+          "textTransform": "none",
+        }
+      }
+    >
+      
+    </i>
+    <span
+      data-radium={true}
+      style={
+        Object {
+          "marginRight": 8,
+        }
+      }
+    />
+    Hi
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button renders icons correctly 4`] = `
+<div
+  data-radium={true}
+>
+  <button
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "backgroundColor": "#43B02A",
+        "backgroundImage": "none",
+        "border": "1px solid transparent",
+        "borderRadius": "4px",
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "height": "40px",
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    Hi
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button renders with inverted colors 1`] = `
+<div
+  data-radium={true}
+>
+  <button
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "backgroundColor": "#FFFFFF",
+        "backgroundImage": "none",
+        "border": "1px solid #43B02A",
+        "borderRadius": "4px",
+        "color": "#43B02A",
+        "cursor": "pointer",
+        "fontSize": "14px",
+        "fontWeight": 600,
+        "height": "32px",
+        "paddingLeft": 8,
+        "paddingRight": 8,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    Hi
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;

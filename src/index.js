@@ -1,4 +1,5 @@
 import colors from './styles/colors/index'
+import Button from './components/Buttons/Button'
 import CircleButton from './components/Buttons/CircleButton'
 import Column from './components/Grid/Column'
 import GlobalTheme from './styles/GlobalTheme'
@@ -17,6 +18,7 @@ import withTheme from './styles/themer/withTheme'
 
 export {
   colors,
+  Button,
   CircleButton,
   Column,
   GlobalTheme,
