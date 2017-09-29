@@ -170,7 +170,7 @@ const Button = props => {
         return
       }
 
-      props.onClick()
+      props.onClick(e, props)
     },
     ...props.extraProps
   }
