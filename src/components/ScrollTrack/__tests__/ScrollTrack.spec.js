@@ -178,3 +178,30 @@ it('onAfter promises & callbacks called correctly', async () => {
   expect(onAfterBack.calledWith({})).toBeTruthy
   expect(onAfterBack.calledAfter(onBeforeBack)).toBeTruthy
 })
+
+it('works without any callbacks passed in', async () => {
+  const track = mount(
+    <StyleRoot>
+      <div>
+        <ScrollTrack>
+          <p>one</p>
+          <p>two</p>
+          <p>three</p>
+          <p>four</p>
+          <p>five</p>
+          <p>six</p>
+          <p>seven</p>
+        </ScrollTrack>
+      </div>
+    </StyleRoot>
+  )
+
+  // show and click next
+  track.find(ScrollTrack).node.showRightArrow()
+  track.find('button').simulate('click')
+
+  // show and click back
+  track.find(ScrollTrack).node.hideRightArrow()
+  track.find(ScrollTrack).node.showLeftArrow()
+  track.find('button').simulate('click')
+})

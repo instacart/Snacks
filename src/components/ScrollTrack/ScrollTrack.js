@@ -9,6 +9,8 @@ import Radium        from 'radium'
 import PropTypes     from 'prop-types'
 import _             from 'underscore'
 
+const noOp = () => {} // eslint-disable-line no-empty-function
+
 @Radium
 class ScrollTrack extends Component {
   static equalWidthTrack = equalWidthTrack
@@ -53,7 +55,11 @@ class ScrollTrack extends Component {
       RightArrow: {},
       Track: {}
     },
-    style: {}
+    style: {},
+    onBeforeBack: noOp,
+    onAfterNext: noOp,
+    onAfterBack: noOp,
+    onBeforeNext: () => new Promise(resolve => resolve())
   }
 
   constructor(props) {
@@ -172,21 +178,13 @@ class ScrollTrack extends Component {
       trackWidth
     }
 
-    if (!onBeforeNext) {
+    onBeforeNext(callbackProps).then(() => {
       this.updateLeftValue({
         left: nextForward,
         callback: onAfterNext,
         callbackProps
       })
-    } else {
-      onBeforeNext(callbackProps).then(() => {
-        this.updateLeftValue({
-          left: nextForward,
-          callback: onAfterNext,
-          callbackProps
-        })
-      })
-    }
+    })
   }
 
   slideBack = () => {
@@ -205,7 +203,7 @@ class ScrollTrack extends Component {
       trackWidth
     }
 
-    onBeforeBack && onBeforeBack(callbackProps)
+    onBeforeBack(callbackProps)
 
     this.updateLeftValue({
       left: nextBack,
@@ -217,7 +215,7 @@ class ScrollTrack extends Component {
   updateLeftValue({left, callback, callbackProps}) {
     this.setState({ left }, () => {
       this.computeSlideAttributes()
-      callback && callback(callbackProps)
+      callback(callbackProps)
     })
   }
 
