@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer'
 import ScrollTrack from '../ScrollTrack'
 import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
+import { spy } from 'sinon'
 
 it('renders ScrollTrack correctly', () => {
   const tree = renderer.create(
@@ -84,4 +85,123 @@ it('renders ScrollTrack buttons correctly', () => {
   expect(track.find('button')).toHaveLength(2)
   track.find(ScrollTrack).node.hideArrows()
   expect(track.find('button')).toHaveLength(0)
+})
+
+it('onBefore promises & callbacks called correctly', async () => {
+  const onBeforeNext = spy()
+  const onBeforeBack = spy()
+  const track = mount(
+    <StyleRoot>
+      <div>
+        <ScrollTrack
+          onBeforeNext={() => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                  onBeforeNext()
+                  resolve()
+                }, 1)
+            })
+          }}
+          onBeforeBack={() => { onBeforeBack() }}
+        >
+          <p>one</p>
+          <p>two</p>
+          <p>three</p>
+          <p>four</p>
+          <p>five</p>
+          <p>six</p>
+          <p>seven</p>
+        </ScrollTrack>
+      </div>
+    </StyleRoot>
+  )
+
+  // show and click next
+  track.find(ScrollTrack).node.showRightArrow()
+  track.find('button').simulate('click')
+  await expect(onBeforeNext.calledOnce).resolves.toBeTruthy
+  await expect(onBeforeNext.calledWith({})).resolves.toBeTruthy
+
+  // show and click back
+  track.find(ScrollTrack).node.hideRightArrow()
+  track.find(ScrollTrack).node.showLeftArrow()
+  track.find('button').simulate('click')
+  await expect(onBeforeBack.calledOnce).resolves.toBeTruthy
+  await expect(onBeforeBack.calledWith({})).resolves.toBeTruthy
+})
+
+it('onAfter promises & callbacks called correctly', async () => {
+  const onBeforeNext = spy()
+  const onBeforeBack = spy()
+  const onAfterNext = spy()
+  const onAfterBack = spy()
+  const track = mount(
+    <StyleRoot>
+      <div>
+        <ScrollTrack
+          onBeforeBack={onBeforeBack}
+          onAfterBack={onAfterBack}
+          onAfterNext={onAfterNext}
+          onBeforeNext={() => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                  onBeforeNext()
+                  resolve()
+                }, 1)
+            })
+          }}
+        >
+          <p>one</p>
+          <p>two</p>
+          <p>three</p>
+          <p>four</p>
+          <p>five</p>
+          <p>six</p>
+          <p>seven</p>
+        </ScrollTrack>
+      </div>
+    </StyleRoot>
+  )
+
+  // show and click next
+  track.find(ScrollTrack).node.showRightArrow()
+  track.find('button').simulate('click')
+  expect(onAfterNext.calledOnce).toBeTruthy
+  expect(onAfterNext.calledWith({})).toBeTruthy
+  await expect(onAfterBack.calledAfter(onBeforeNext)).resolves.toBeTruthy
+
+  // show and click back
+  track.find(ScrollTrack).node.hideRightArrow()
+  track.find(ScrollTrack).node.showLeftArrow()
+  track.find('button').simulate('click')
+  expect(onAfterBack.calledOnce).toBeTruthy
+  expect(onAfterBack.calledWith({})).toBeTruthy
+  expect(onAfterBack.calledAfter(onBeforeBack)).toBeTruthy
+})
+
+it('works without any callbacks passed in', async () => {
+  const track = mount(
+    <StyleRoot>
+      <div>
+        <ScrollTrack>
+          <p>one</p>
+          <p>two</p>
+          <p>three</p>
+          <p>four</p>
+          <p>five</p>
+          <p>six</p>
+          <p>seven</p>
+        </ScrollTrack>
+      </div>
+    </StyleRoot>
+  )
+
+  // show and click next
+  track.find(ScrollTrack).node.showRightArrow()
+  track.find('button').simulate('click')
+
+  // show and click back
+  track.find(ScrollTrack).node.hideRightArrow()
+  track.find(ScrollTrack).node.showLeftArrow()
+  track.find('button').simulate('click')
 })
