@@ -173,15 +173,17 @@ class ScrollTrack extends Component {
     }
 
     if (!onBeforeNext) {
-      this.setState({ left: nextForward }, () => {
-        this.computeSlideAttributes()
-        onAfterNext && onAfterNext(callbackProps)
+      this.updateLeftValue({
+        left: nextForward,
+        callback: onAfterNext,
+        callbackProps
       })
     } else {
       onBeforeNext(callbackProps).then(() => {
-        this.setState({ left: nextForward }, () => {
-          this.computeSlideAttributes()
-          onAfterNext && onAfterNext(callbackProps)
+        this.updateLeftValue({
+          left: nextForward,
+          callback: onAfterNext,
+          callbackProps
         })
       })
     }
@@ -203,18 +205,20 @@ class ScrollTrack extends Component {
       trackWidth
     }
 
-    if (!onBeforeBack) {
-      this.setState({ left: nextBack }, () => {
-        this.computeSlideAttributes()
-        onAfterBack && onAfterBack(callbackProps)
-      })
-    } else {
-      onBeforeBack(callbackProps)
-      this.setState({ left: nextBack }, () => {
-        this.computeSlideAttributes()
-        onAfterBack && onAfterBack(callbackProps)
-      })
-    }
+    onBeforeBack && onBeforeBack(callbackProps)
+
+    this.updateLeftValue({
+      left: nextBack,
+      callback: onAfterBack,
+      callbackProps
+    })
+  }
+
+  updateLeftValue({left, callback, callbackProps}) {
+    this.setState({ left }, () => {
+      this.computeSlideAttributes()
+      callback && callback(callbackProps)
+    })
   }
 
   renderRightArrow = () => {
