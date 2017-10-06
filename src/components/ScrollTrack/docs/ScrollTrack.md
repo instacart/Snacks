@@ -129,3 +129,30 @@ Example use case: *A container of item cards that all have a width of 90px and m
     <ScrollTrack>
       <CustomComponent />
     </ScrollTrack>
+
+
+Using callbacks
+```js static
+  <ScrollTrack
+    onBeforeNext={(props) => {
+      return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log('before next!', props)
+            resolve()
+          }, 1000)
+      })
+    }}
+    onAfterNext={(props) => { console.log('after next!', props) }}
+    onBeforeBack={(props) => { console.log('before back!', props) }}
+    onAfterBack={(props) => { console.log('after back!', props) }}
+  >
+    <div>
+      <Icon name="cart" style={styles} />
+      <Icon name="cart" style={styles} />
+      <Icon name="cart" style={styles} />
+      <Icon name="cart" style={styles} />
+      <Icon name="cart" style={styles} />
+      <Icon name="cart" style={styles} />
+    </div>
+  </ScrollTrack>
+```

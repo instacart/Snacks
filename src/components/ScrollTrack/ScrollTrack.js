@@ -18,6 +18,23 @@ class ScrollTrack extends Component {
     /** Manually control left positioning of ScrollTrack */
     leftOverride: PropTypes.number,
 
+    /**
+    * A callback called before sliding to next set.
+    * ** Passed function must return a promsie **
+    * -- will wait for promise resolution before continuing slide.
+    * Use for high levels of control
+    */
+    onBeforeNext: PropTypes.func,
+
+    /**  function to be called before sliding to previous set. */
+    onBeforeBack: PropTypes.func,
+
+    /**  function to be called after sliding to next set. */
+    onAfterNext: PropTypes.func,
+
+    /**  function to be called after sliding to previous set. */
+    onAfterBack: PropTypes.func,
+
     /** Style top level element */
     style: PropTypes.object,
 
@@ -142,21 +159,62 @@ class ScrollTrack extends Component {
     const { parentWidth, trackWidth } = this.getNodeWidths()
     let nextForward = this.state.left - parentWidth
     const fullForward = parentWidth - trackWidth
+    const { onBeforeNext, onAfterNext } = this.props
 
     // already is, or is going to be, full forward
     if (nextForward <= fullForward) { nextForward = fullForward }
 
-    this.setState({ left: nextForward }, this.computeSlideAttributes)
+    const callbackProps = {
+      atStart: trackWidth <= parentWidth,
+      atEnd: fullForward === nextForward,
+      slideTo: nextForward,
+      parentWidth,
+      trackWidth
+    }
+
+    if (!onBeforeNext) {
+      this.setState({ left: nextForward }, () => {
+        this.computeSlideAttributes()
+        onAfterNext && onAfterNext(callbackProps)
+      })
+    } else {
+      onBeforeNext(callbackProps).then(() => {
+        this.setState({ left: nextForward }, () => {
+          this.computeSlideAttributes()
+          onAfterNext && onAfterNext(callbackProps)
+        })
+      })
+    }
   }
 
   slideBack = () => {
-    const { parentWidth } = this.getNodeWidths()
+    const { parentWidth, trackWidth } = this.getNodeWidths()
     let nextBack = this.state.left + parentWidth
+    const { onBeforeBack, onAfterBack } = this.props
 
     // already is, or is going to be, full back
     if (this.state.left >= 0 || nextBack >= 0) { nextBack = 0 }
 
-    this.setState({ left: nextBack }, this.computeSlideAttributes)
+    const callbackProps = {
+      atStart: nextBack === 0,
+      atEnd: false,
+      slideTo: nextBack,
+      parentWidth,
+      trackWidth
+    }
+
+    if (!onBeforeBack) {
+      this.setState({ left: nextBack }, () => {
+        this.computeSlideAttributes()
+        onAfterBack && onAfterBack(callbackProps)
+      })
+    } else {
+      onBeforeBack(callbackProps)
+      this.setState({ left: nextBack }, () => {
+        this.computeSlideAttributes()
+        onAfterBack && onAfterBack(callbackProps)
+      })
+    }
   }
 
   renderRightArrow = () => {
