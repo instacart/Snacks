@@ -1,6 +1,6 @@
 {
   "name": "ic-snacks",
-  "version": "0.0.43",
+  "version": "0.0.48",
   "description": "The Instacart Component Library for Web",
   "main": "dist/snacks.js",
   "scripts": {
@@ -54,7 +54,7 @@
     "react-test-renderer": "^15.5.0",
     "sinon": "^2.3.8",
     "underscore": "^1.8.3",
-    "webpack": "^2.2.0"
+    "webpack": "^3.6.0"
   },
   "dependencies": {
     "underscore": "^1.8.3"
@@ -64,10 +64,5 @@
     "radium": "^0.18.0",
     "react": "^15.4.0",
     "react-dom": "^15.4.0"
-  },
-  "jest": {
-    "setupFiles": [
-      "<rootDir>/scripts/themeSetup.js"
-    ]
   }
 }

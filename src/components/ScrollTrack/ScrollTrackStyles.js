@@ -9,7 +9,6 @@ export default {
   innerContainerStyles: {
     whiteSpace: 'nowrap',
     position: 'relative',
-    transition: 'left 150ms ease-in-out',
 
     [responsive.xs]: {
       left: 'inherit',

@@ -1,24 +1,30 @@
 import colors from '../colors'
+import PropTypes from 'prop-types'
 
 export const themeTemplate = {
   colors: {
     action: true,
+    actionHover: true,
     primaryBackground: true,
     primaryForeground: true,
     secondaryBackground: true,
     secondaryForeground: true,
+    secondaryForegroundFocus: true
   }
 }
 
 export const defaultTheme = {
   colors: {
     action: colors.GREEN_500,
+    actionHover: colors.GREEN_700,
     primaryBackground: colors.WHITE,
     primaryForeground: colors.GREEN_500,
     secondaryBackground: colors.GREEN_500,
     secondaryForeground: colors.WHITE,
+    secondaryForegroundFocus: colors.GRAY_46
   }
 }
+
 export function cleanConfig(themeConfig) {
   const cleanConfig = {}
 
@@ -57,8 +63,21 @@ export function validConfigValue(section, sectionKey) {
   return true
 }
 
+export const themePropTypes = PropTypes.shape({
+  colors: PropTypes.shape({
+    action: PropTypes.string,
+    actionHover: PropTypes.string,
+    primaryBackground: PropTypes.string,
+    primaryForeground: PropTypes.string,
+    secondaryBackground: PropTypes.string,
+    secondaryForeground: PropTypes.string,
+    secondaryForegroundFocus: PropTypes.string,
+  })
+})
+
 export default {
   cleanConfig,
+  themePropTypes,
   themeTemplate,
   validConfigValue
 }

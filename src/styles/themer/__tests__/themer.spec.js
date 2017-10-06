@@ -197,3 +197,73 @@ it('should not get bad value in config', () => {
 
   console.warn = oldWarn
 })
+
+it('should add listener to list', () => {
+  const listener = theme => {}
+  themer.subscribe(listener)
+
+  expect(themer._onChangeListeners.length).toEqual(1)
+  expect(themer._onChangeListeners[0]).toEqual(listener)
+})
+
+it('should remove listener from list', () => {
+  themer._onChangeListeners.length = 0
+
+  const listener = theme => {}
+  const unsubscribe = themer.subscribe(listener)
+
+  expect(themer._onChangeListeners.length).toEqual(1)
+  expect(themer._onChangeListeners[0]).toEqual(listener)
+
+  unsubscribe()
+
+  expect(themer._onChangeListeners.includes(listener)).toBeFalsy()
+  expect(themer._onChangeListeners.length).toEqual(0)
+})
+
+it('should call listener callback on theme config change', () => {
+  themer._onChangeListeners.length = 0
+
+  const listener = spy()
+  const unsubscribe = themer.subscribe(listener)
+
+  themer.themeConfig = {
+    colors: {
+      action: '#4a4gsa',
+      primaryBackground: '#sg444h',
+    }
+  }
+
+  expect(themer.themeConfig).toEqual({
+    colors: {
+      action: '#4a4gsa',
+      primaryBackground: '#sg444h',
+    }
+  })
+
+  expect(listener.calledWith(themer.themerConfig))
+  expect(listener.calledOnce).toBeTruthy()
+})
+
+it('should call listener callback on theme config set call', () => {
+  themer._onChangeListeners.length = 0
+
+  const listener = spy()
+  const unsubscribe = themer.subscribe(listener)
+
+  themer.set('colors', 'action', '#fff')
+
+  expect(listener.calledWith(themer.themerConfig))
+  expect(listener.calledOnce).toBeTruthy()
+})
+
+it('should handle bad listener array remove', () => {
+  themer._onChangeListeners.length = 0
+
+  const listener = spy()
+  const unsubscribe = themer.subscribe(listener)
+
+  themer._onChangeListeners.length = 0 // oh no!
+
+  unsubscribe() // should not cause an error
+})

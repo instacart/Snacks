@@ -25,6 +25,10 @@ module.exports = {
       content: 'docs/colors.md'
     },
     {
+      name: 'Spacing',
+      content: 'docs/spacing.md'
+    },
+    {
       name: 'Icons',
       content: 'docs/icons.md'
     },
@@ -35,6 +39,10 @@ module.exports = {
         {
           name: 'Themer',
           content: 'src/styles/themer/docs/themer.md'
+        },
+        {
+          name: 'withTheme HOC',
+          content: 'src/styles/themer/docs/withTheme.md'
         }
       ]
     },

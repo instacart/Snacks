@@ -3,11 +3,11 @@
  *
  * @author [Dominic Cocchiarella ](https://github.com/docchia)
 */
-import colors       from '../../styles/colors'
 import responsive   from '../../styles/responsive'
-import themer       from '../../styles/themer'
 import zIndex       from '../../styles/zIndex'
 import { spacings } from '../../styles/spacing'
+import withTheme          from '../../styles/themer/withTheme'
+import { themePropTypes } from '../../styles/themer/utils'
 
 import Radium    from 'radium'
 import React     from 'react'
@@ -16,9 +16,7 @@ import PropTypes from 'prop-types'
 const styles = {
   default: {
     ...zIndex.Z_INDEX1,
-    backgroundColor: themer.get('colors', 'primaryForeground'),
     border: '0',
-    color: themer.get('colors', 'primaryBackground'),
     width: `${spacings.XL}px`,
     height: `${spacings.XL}px`,
     borderRadius: '50%',
@@ -26,16 +24,6 @@ const styles = {
     transition: 'background-color 150ms ease-in-out',
     textAlign: 'center',
     lineHeight: '1',
-    ':hover': {
-      backgroundColor: colors.GREEN_600
-    },
-    ':active': {
-      backgroundColor: colors.GREEN_700
-    },
-    ':focus': {
-      backgroundColor: colors.GREEN_600,
-      outline: 'none'
-    },
     [responsive.xs]: {
       display: 'none'
     }
@@ -43,6 +31,8 @@ const styles = {
 }
 
 const CircleButton = props => {
+  const { action, actionHover, primaryBackground } = props.snacksTheme.colors
+
   return (
     <button
       onClick={e => {
@@ -54,6 +44,20 @@ const CircleButton = props => {
       aria-label={props.ariaLabel}
       style={[
         styles.default,
+        {
+          backgroundColor: action,
+          color: primaryBackground,
+          ':hover': {
+            backgroundColor: actionHover
+          },
+          ':active': {
+            backgroundColor: actionHover
+          },
+          ':focus': {
+            backgroundColor: actionHover,
+            outline: 'none'
+          },
+        },
         props.styles
       ]}
       disabled={props.disabled}
@@ -70,8 +74,10 @@ CircleButton.propTypes = {
   disabled: PropTypes.bool,
   /** Callback function called after button click */
   onClick: PropTypes.func,
+  /** snacks theme attributes */
+  snacksTheme: themePropTypes,
   /** Optional style overrides */
   styles: PropTypes.object,
 }
 
-export default Radium(CircleButton)
+export default withTheme(Radium(CircleButton))
