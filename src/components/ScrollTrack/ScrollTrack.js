@@ -37,6 +37,12 @@ class ScrollTrack extends Component {
     /**  function to be called after sliding to previous set. */
     onAfterBack: PropTypes.func,
 
+    /** Transition timing function to use for scrolling animation - defaults to ease-in-out */
+    scrollTimingFunction: PropTypes.string,
+
+    /** Speed of scrolling animaton in milleseconds - defaults to 150ms */
+    scrollSpeed: PropTypes.number,
+
     /** Style top level element */
     style: PropTypes.object,
 
@@ -50,6 +56,8 @@ class ScrollTrack extends Component {
 
   static defaultProps = {
     leftOverride: 0,
+    scrollSpeed: 150,
+    scrollTimingFunction: 'ease-in-out',
     styles: {
       LeftArrow: {},
       RightArrow: {},
@@ -270,7 +278,7 @@ class ScrollTrack extends Component {
 
   render() {
     const { containerStyles, innerContainerStyles } = componentStyles
-    const { children, style, styles: { Track = {} } } = this.props
+    const { children, scrollSpeed, scrollTimingFunction, style, styles: { Track = {} } } = this.props
 
     if (!children) { return null }
 
@@ -282,7 +290,10 @@ class ScrollTrack extends Component {
         {this.renderLeftArrow()}
         <div
           style={[
-            { left: this.state.left }, // order matters!
+            {
+              left: this.state.left,
+              transition: `left ${scrollSpeed}ms ${scrollTimingFunction}`,
+            },
             innerContainerStyles
           ]}
         >
