@@ -87,6 +87,28 @@ it('renders ScrollTrack buttons correctly', () => {
   expect(track.find('button')).toHaveLength(0)
 })
 
+it('renders ScrollTrack with animation props correctly', () => {
+  const tree = renderer.create(
+    <StyleRoot>
+      <div>
+        <ScrollTrack
+          scrollTimingFunction={'ease-in'}
+          scrollSpeed={1000}
+        >
+          <p>one</p>
+          <p>two</p>
+          <p>three</p>
+          <p>four</p>
+          <p>five</p>
+          <p>six</p>
+          <p>seven</p>
+        </ScrollTrack>
+      </div>
+    </StyleRoot>
+  ).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
 it('onBefore promises & callbacks called correctly', async () => {
   const onBeforeNext = spy()
   const onBeforeBack = spy()
