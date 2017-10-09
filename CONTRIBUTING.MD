@@ -21,6 +21,20 @@ cd ./Snacks
 npm install
 ```
 
+### Working on a component
+Start stylguide locally
+```
+yarn styleguide
+```
+or
+```
+npm styleguide
+```
+
+Go to http://0.0.0.0:6060 to see all components. This environment has hot reloading and components can be added on the fly though the various doc files. Look for any file in a component's folder with `.md` for examples of component code that the styeguide will run automatically.
+
+You can also enable continous testing (linting, snapshot and unit tests) on every file save by following instructions in the testing step below.
+
 ### Building
 
 Running the `build` task will run tests and create a lib/dist.js file
