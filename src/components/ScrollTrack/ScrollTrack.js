@@ -291,8 +291,8 @@ class ScrollTrack extends Component {
         <div
           style={[
             {
-              left: this.state.left,
-              transition: `left ${scrollSpeed}ms ${scrollTimingFunction}`,
+              transition: `transform ${scrollSpeed}ms ${scrollTimingFunction}`,
+              transform: `translate3d(${this.state.left}px, 0, 0)`
             },
             innerContainerStyles
           ]}
