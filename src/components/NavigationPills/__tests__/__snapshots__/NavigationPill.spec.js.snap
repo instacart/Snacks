@@ -37,6 +37,45 @@ exports[`renders active pill correctly 1`] = `
 </li>
 `;
 
+exports[`renders element attributes on pill correctly 1`] = `
+<li
+  ariaLabel="this is an aria label"
+  data-radium={true}
+  role="tab"
+  style={
+    Object {
+      "display": "inline-block",
+    }
+  }
+>
+  <a
+    data-bypass={true}
+    data-radium={true}
+    href="#"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#F7F7F7",
+        "borderRadius": "24px",
+        "color": "#43B02A",
+        "display": "block",
+        "fontSize": "14px",
+        "lineHeight": "1.2",
+        "margin": "0 4px",
+        "padding": "12px 16px",
+        "transition": "background-color 150ms ease-in-out",
+      }
+    }
+  >
+    pill with attributes
+  </a>
+</li>
+`;
+
 exports[`renders href pill correctly 1`] = `
 <li
   data-radium={true}

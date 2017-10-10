@@ -59,6 +59,23 @@ it('renders NavigationPills without pills correctly', () => {
   expect(tree).toMatchSnapshot()
 })
 
+it('renders NavigationPills with elementAttributes correctly', () => {
+  const tree = renderer.create(
+    <StyleRoot>
+      <div>
+        <NavigationPills
+            pills={ testPills }
+            onPillClick={(e, pill) => { console.log(pill) }}
+            label={'Filter by'}
+            activePill={'dom2'}
+            elementAttributes={{ ariaLabel:'this is an aria label', role:'tabs'}}
+          />
+      </div>
+    </StyleRoot>
+  ).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
 it('it handles onPillClick correctly', () => {
   const onPillClick = spy()
   const Pills = mount(
