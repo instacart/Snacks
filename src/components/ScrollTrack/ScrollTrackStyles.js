@@ -23,6 +23,7 @@ export default {
     default: {
       position: 'absolute',
       top: '5px',
+      display: 'none'
     },
     left: spacing.LEFT_XS,
     right: spacing.RIGHT_XS
