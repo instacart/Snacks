@@ -19,9 +19,9 @@ exports[`renders ScrollTrack correctly 1`] = `
         data-radium={true}
         style={
           Object {
-            "left": 0,
             "position": "relative",
-            "transition": "left 150ms ease-in-out",
+            "transform": "translate3d(0px, 0, 0)",
+            "transition": "transform 150ms ease-in-out",
             "whiteSpace": "nowrap",
           }
         }
@@ -89,9 +89,9 @@ exports[`renders ScrollTrack with animation props correctly 1`] = `
         data-radium={true}
         style={
           Object {
-            "left": 0,
             "position": "relative",
-            "transition": "left 1000ms ease-in",
+            "transform": "translate3d(0px, 0, 0)",
+            "transition": "transform 1000ms ease-in",
             "whiteSpace": "nowrap",
           }
         }
