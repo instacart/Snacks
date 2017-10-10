@@ -53,7 +53,7 @@ const NavigationPills = props => {
         ref='pillsTrack'
       >
         {renderLabel()}
-        <ul style={pillsContainerStyles}>
+        <ul style={pillsContainerStyles} role='tablist'>
           {props.pills.map(renderPill)}
         </ul>
       </div>

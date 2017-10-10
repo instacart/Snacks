@@ -51,7 +51,7 @@ const NavigationPill = props => {
   }
 
   return (
-    <li style={styles.container}>
+    <li style={styles.container} role='tab'>
       <a
         href={props.path || '#'}
         data-bypass={true}
