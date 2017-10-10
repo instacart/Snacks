@@ -77,7 +77,10 @@ CircleButton.propTypes = {
   /** snacks theme attributes */
   snacksTheme: themePropTypes,
   /** Optional style overrides */
-  styles: PropTypes.object,
+  styles: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]),
 }
 
 export default withTheme(Radium(CircleButton))
