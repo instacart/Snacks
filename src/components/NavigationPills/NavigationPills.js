@@ -51,6 +51,7 @@ const NavigationPills = props => {
       <div
         style={wrapperStyles}
         ref='pillsTrack'
+        { ...props.elementAttributes }
       >
         {renderLabel()}
         <ul style={pillsContainerStyles}>
@@ -62,6 +63,9 @@ const NavigationPills = props => {
 }
 
 NavigationPills.propTypes = {
+  /** Any additonal props to add to the element (e.g. data attributes). */
+  elementAttributes: PropTypes.object,
+
   /** array of pill objects */
   pills: PropTypes.array,
   /** Callback function called after pill click
@@ -73,6 +77,10 @@ NavigationPills.propTypes = {
   label: PropTypes.string,
   /** string matching the text of one of the pills. Determines which pill is active, if any */
   activePill: PropTypes.string
+}
+
+NavigationPills.defaultProps = {
+  elementAttributes: {}
 }
 
 export default Radium(NavigationPills)

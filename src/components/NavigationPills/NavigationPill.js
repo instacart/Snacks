@@ -51,7 +51,10 @@ const NavigationPill = props => {
   }
 
   return (
-    <li style={styles.container}>
+    <li
+      style={styles.container}
+      { ...props.elementAttributes }
+    >
       <a
         href={props.path || '#'}
         data-bypass={true}
@@ -70,6 +73,9 @@ const NavigationPill = props => {
 }
 
 NavigationPill.propTypes = {
+  /** Any additonal props to add to the element (e.g. data attributes). */
+  elementAttributes: PropTypes.object,
+
   /** determines wether or not active styles are applied */
   isActive: PropTypes.bool,
   /** Callback function called after pill click
@@ -86,6 +92,7 @@ NavigationPill.propTypes = {
 }
 
 NavigationPill.defaultProps = {
+  elementAttributes: {},
   isActive: false
 }
 
