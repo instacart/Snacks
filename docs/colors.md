@@ -12,8 +12,8 @@ const wrapperStyles = {
 
 const colorWrapStyles = {
   flex: 1,
-  height: '200px',
-  flexBasis: '200px',
+  height: '220px',
+  flexBasis: '220px',
   boxSizing: 'border-box',
   textAlign: 'center',
   listStyle: 'none',
@@ -32,7 +32,8 @@ const colorsSwatches = Object.keys(colors).map(name => {
           { backgroundColor: colors[name] }
         )}
       ></div>
-      <p>{name}</p>
+      <p style={{ fontWeight: '600', marginBottom: 0 }}>{name}</p>
+      <p style={{ fontSize: '12px', margin: 0 }}>{colors[name]}</p>
     </li>
   );
 });
