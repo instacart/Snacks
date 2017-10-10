@@ -2,7 +2,7 @@ import componentStyles from './ScrollTrackStyles'
 import equalWidthTrack from './equalWidthTrack'
 import ScrollTrackPropTypes from './ScrollTrackPropTypes'
 
-import React, { Component } from 'react'
+import React, { cloneElement, Component } from 'react'
 import CircleButton  from '../Buttons/CircleButton'
 import Icon          from '../Icon/Icon'
 import Radium        from 'radium'
@@ -17,8 +17,14 @@ class ScrollTrack extends Component {
   static ScrollTrackPropTypes = ScrollTrackPropTypes
 
   static propTypes = {
+    /** Prop for passing in custom button element for back button */
+    backButtonElement: PropTypes.Symbol,
+
     /** Manually control left positioning of ScrollTrack */
     leftOverride: PropTypes.number,
+
+    /** Prop for passing in custom button element for next button */
+    nextButtonElement: PropTypes.Symbol,
 
     /**
     * A callback called before sliding to next set.
@@ -230,8 +236,21 @@ class ScrollTrack extends Component {
   renderRightArrow = () => {
     const { slideButtonStyles } = componentStyles
     const { showRightArrow } = this.state
+    const { styles: { RightArrow = {} }, nextButtonElement } = this.props
 
-    const { styles: { RightArrow = {} } } = this.props
+    if (nextButtonElement) {
+      return cloneElement(nextButtonElement, {
+        onClick: this.slideForward,
+        'aria-label': 'next',
+        style: {
+          ...slideButtonStyles.default,
+          ...slideButtonStyles.right,
+          ...{ display: showRightArrow ? 'block' : 'none'},
+          ...RightArrow
+        }
+      })
+    }
+
     return (
       <CircleButton
         onClick={this.slideForward}
@@ -254,8 +273,20 @@ class ScrollTrack extends Component {
   renderLeftArrow = () => {
     const { slideButtonStyles } = componentStyles
     const { showLeftArrow } = this.state
+    const { styles: { LeftArrow = {} }, backButtonElement } = this.props
 
-    const { styles: { LeftArrow = {} } } = this.props
+    if (backButtonElement) {
+      return cloneElement(backButtonElement, {
+        onClick: this.slideBack,
+        'aria-label':'back',
+        style: {
+          ...slideButtonStyles.default,
+          ...slideButtonStyles.left,
+          ...{ display: showLeftArrow ? 'block' : 'none'},
+          ...LeftArrow
+        }
+      })
+    }
 
     return (
       <CircleButton

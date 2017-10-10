@@ -116,6 +116,98 @@ it('renders ScrollTrack buttons correctly', () => {
   expect(rightButtonStyle.display).toEqual('none')
 })
 
+it('renders custom ScrollTrack buttons correctly', () => {
+  const styles = {
+    RightArrow: {
+      backgroundColor: 'blue'
+    },
+    LeftArrow: {
+      backgroundColor: 'red'
+    },
+  }
+
+  const track = mount(
+    <StyleRoot>
+      <div>
+        <ScrollTrack
+          styles={styles}
+          backButtonElement={(
+            <button>
+              <span>back</span>
+            </button>
+          )}
+          nextButtonElement={(
+            <button>
+              <span>next</span>
+            </button>
+          )}
+        >
+          <p>one</p>
+          <p>two</p>
+          <p>three</p>
+          <p>four</p>
+          <p>five</p>
+          <p>six</p>
+          <p>seven</p>
+        </ScrollTrack>
+      </div>
+    </StyleRoot>
+  )
+
+  // should have 2 buttons
+  let buttons = track.find('button')
+  let leftButton = buttons.first()
+  let rightButton = buttons.last()
+  expect(buttons).toHaveLength(2)
+
+  // check that neither are showing
+  let leftButtonStyle = leftButton.props().style
+  let rightButtonStyle = rightButton.props().style
+  expect(leftButtonStyle.display).toEqual('none')
+  expect(rightButtonStyle.display).toEqual('none')
+
+  // show right arrow
+  track.find(ScrollTrack).node.showRightArrow()
+
+  // check arrow is showing and has correct styles
+  buttons = track.find('button')
+  leftButton = buttons.first()
+  rightButton = buttons.last()
+  leftButtonStyle = leftButton.props().style
+  rightButtonStyle = rightButton.props().style
+
+  // make sure styles are correct
+  expect(buttons).toHaveLength(2)
+  expect(rightButtonStyle.backgroundColor).toEqual(styles.RightArrow.backgroundColor)
+  expect(rightButtonStyle.display).toEqual('block')
+  expect(leftButtonStyle.display).toEqual('none')
+
+  // show left arrow
+  track.find(ScrollTrack).node.showLeftArrow()
+  buttons = track.find('button')
+  leftButton = buttons.first()
+  rightButton = buttons.last()
+  leftButtonStyle = leftButton.props().style
+  rightButtonStyle = rightButton.props().style
+
+  // make sure styles are correct
+  expect(rightButtonStyle.display).toEqual('block')
+  expect(leftButtonStyle.display).toEqual('block')
+  expect(leftButtonStyle.backgroundColor).toEqual(styles.LeftArrow.backgroundColor)
+
+  // hide both arrows
+  track.find(ScrollTrack).node.hideArrows()
+  buttons = track.find('button')
+  leftButton = buttons.first()
+  rightButton = buttons.last()
+  leftButtonStyle = leftButton.props().style
+  rightButtonStyle = rightButton.props().style
+
+  // ensure both are hidden
+  expect(leftButtonStyle.display).toEqual('none')
+  expect(rightButtonStyle.display).toEqual('none')
+})
+
 it('renders ScrollTrack with animation props correctly', () => {
   const tree = renderer.create(
     <StyleRoot>

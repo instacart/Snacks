@@ -156,3 +156,50 @@ Using callbacks
     </div>
   </ScrollTrack>
 ```
+
+Using custom next and back buttons
+
+    <ScrollTrack
+      backButtonElement={(
+        <button>
+          <Icon name="arrowLeft" />
+        </button>
+      )}
+      nextButtonElement={(
+        <button>
+          <Icon name="arrowRight" />
+        </button>
+      )}
+      styles={{
+          Track: { height: '56px' },
+          LeftArrow: { backgroundColor: '#7FE364', color: '#fff', border: 'none', borderRadius: '50%', height: '30px', width: '30px', lineHeight: '30px', fontWeight: '600' },
+          RightArrow: { backgroundColor: '#7FE364', color: '#fff', border: 'none', borderRadius: '50%', height: '30px', width: '30px', lineHeight: '30px', fontWeight: '600' }
+      }}
+    >
+      <div>
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+        <Icon name="cart" style={styles} />
+      </div>
+    </ScrollTrack>
