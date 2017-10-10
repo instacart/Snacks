@@ -229,19 +229,19 @@ class ScrollTrack extends Component {
 
   renderRightArrow = () => {
     const { slideButtonStyles } = componentStyles
-
-    if (!this.state.showRightArrow) { return }
+    const { showRightArrow } = this.state
 
     const { styles: { RightArrow = {} } } = this.props
     return (
       <CircleButton
         onClick={this.slideForward}
         ariaLabel='next'
-        styles={{
-          ...slideButtonStyles.default,
-          ...slideButtonStyles.right,
-          ...RightArrow
-        }}
+        styles={[
+          slideButtonStyles.default,
+          slideButtonStyles.right,
+          showRightArrow && { display: 'block' },
+          RightArrow
+        ]}
       >
         <Icon
           name='arrowRightSmallBold'
@@ -253,8 +253,7 @@ class ScrollTrack extends Component {
 
   renderLeftArrow = () => {
     const { slideButtonStyles } = componentStyles
-
-    if (!this.state.showLeftArrow) { return }
+    const { showLeftArrow } = this.state
 
     const { styles: { LeftArrow = {} } } = this.props
 
@@ -262,11 +261,12 @@ class ScrollTrack extends Component {
       <CircleButton
         onClick={this.slideBack}
         ariaLabel='back'
-        styles={{
-          ...slideButtonStyles.default,
-          ...slideButtonStyles.left,
-          ...LeftArrow
-        }}
+        styles={[
+          slideButtonStyles.default,
+          slideButtonStyles.left,
+          showLeftArrow && { display: 'block' },
+          LeftArrow
+        ]}
       >
         <Icon
           name='arrowLeftSmallBold'
