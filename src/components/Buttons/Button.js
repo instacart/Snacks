@@ -5,6 +5,7 @@ import Icon from '../Icon/Icon'
 import withTheme from '../../styles/themer/withTheme'
 import { themePropTypes } from '../../styles/themer/utils'
 import { spacing, colors } from '../../styles'
+import { darken } from 'utils'
 
 const noop = () => {} // eslint-disable-line no-empty-function
 
@@ -69,6 +70,12 @@ const linkStyles = {
 
 const getSnacksStyles = props => {
   const { action, actionHover, primaryBackground } = props.snacksTheme.colors
+  let actionActive
+  try {
+    actionActive = darken(actionHover, 15)
+  } catch(e) {
+    actionActive = actionHover
+  }
 
   return {
     primary: {
@@ -80,7 +87,7 @@ const getSnacksStyles = props => {
           backgroundColor: actionHover
         },
         ':active': {
-          backgroundColor: actionHover
+          backgroundColor: actionActive
         }
       },
 
@@ -111,8 +118,8 @@ const getSnacksStyles = props => {
           border: `1px solid ${actionHover}`
         },
         ':active': {
-          color: actionHover,
-          border: `1px solid ${actionHover}`
+          color: actionActive,
+          border: `1px solid ${actionActive}`
         }
       },
 
