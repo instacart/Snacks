@@ -11,14 +11,23 @@ const noop = () => {} // eslint-disable-line no-empty-function
 const baseStyles = {
   touchAction: 'manipulation',
   cursor: 'pointer',
-  backgroundImage: 'none', // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: '1px solid transparent',
   borderRadius: '4px',
   fontWeight: 600,
   whiteSpace: 'nowrap',
   userSelect: 'none',
   WebkitFontSmoothing: 'antialiased',
-  MozOsxFontSmoothing: 'grayscale', // Takes care of the heavier default font-weights in firefox
+
+  // Reset unusual Firefox-on-Android default style;
+  // see https://github.com/necolas/normalize.css/issues/214
+  backgroundImage: 'none',
+
+  // Takes care of the heavier default font-weights in firefox
+  MozOsxFontSmoothing: 'grayscale',
+
+  // Ensures any icons stay vertically centered
+  display: 'inline-flex',
+  alignItems: 'center',
 
   ':focus': {
     outline: 'none'
