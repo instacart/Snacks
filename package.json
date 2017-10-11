@@ -64,5 +64,10 @@
     "radium": "^0.18.0",
     "react": "^15.4.0",
     "react-dom": "^15.4.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^utils": "<rootDir>/src/utils"
+    }
   }
 }
