@@ -5,7 +5,7 @@ import Icon from '../Icon/Icon'
 import withTheme from '../../styles/themer/withTheme'
 import { themePropTypes } from '../../styles/themer/utils'
 import { spacing, colors } from '../../styles'
-import tinycolor from 'tinycolor2'
+import { darken } from '../../utils'
 
 const noop = () => {} // eslint-disable-line no-empty-function
 
@@ -70,12 +70,9 @@ const linkStyles = {
 
 const getSnacksStyles = props => {
   const { action, actionHover, primaryBackground } = props.snacksTheme.colors
-  let actionActive
-  try {
-    actionActive = tinycolor(actionHover).darken(5).toHexString()
-  } catch(e) {
-    actionActive = actionHover
-  }
+  const actionActive = darken(actionHover, 3)
+
+  console.log(actionActive)
 
   return {
     primary: {
