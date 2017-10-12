@@ -72,8 +72,6 @@ const getSnacksStyles = props => {
   const { action, actionHover, primaryBackground } = props.snacksTheme.colors
   const actionActive = darken(actionHover, 3)
 
-  console.log(actionActive)
-
   return {
     primary: {
       base: {
