@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link applies the elementAttributes prop correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <a
+    aria-label="foo"
+    data-radium={true}
+    href="#"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "color": "#43B02A",
+        "cursor": "pointer",
+        "textDecoration": "none",
+      }
+    }
+  >
+    HI
+  </a>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Link renders correctly when style overrides are provided 1`] = `
+<div
+  data-radium={true}
+>
+  <a
+    data-radium={true}
+    href="#"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "color": "#43B02A",
+        "cursor": "pointer",
+        "textDecoration": "underline",
+      }
+    }
+  >
+    HI
+  </a>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Link renders without throwing 1`] = `
+<div
+  data-radium={true}
+>
+  <a
+    data-radium={true}
+    href="#"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "color": "#43B02A",
+        "cursor": "pointer",
+        "textDecoration": "none",
+      }
+    }
+  >
+    HI
+  </a>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
