@@ -1,4 +1,5 @@
-Links!
+The `Link` component is valuable mainly because it's hooked up to Themer.
+The link's resting/hover colors will match the current theme's action and actionHover values.
 
 ```js
 <div>
