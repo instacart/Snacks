@@ -5,7 +5,7 @@ import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
 import { spy, match } from 'sinon'
 
-fdescribe('Link', () => {
+describe('Link', () => {
   it('renders without throwing', () => {
     const tree = renderer
       .create(
