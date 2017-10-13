@@ -57,6 +57,7 @@
     "webpack": "^3.6.0"
   },
   "dependencies": {
+    "tinycolor2": "^1.4.1",
     "underscore": "^1.8.3"
   },
   "peerDependencies": {
@@ -64,5 +65,10 @@
     "radium": "^0.18.0",
     "react": "^15.4.0",
     "react-dom": "^15.4.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^utils": "<rootDir>/src/utils"
+    }
   }
 }
