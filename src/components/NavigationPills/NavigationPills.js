@@ -38,6 +38,7 @@ const NavigationPills = props => {
         onClick={e => props.onPillClick(e, pill)}
         text={pill.text}
         key={`pill-${idx}`}
+        elementAttributes={pill.elementAttributes}
       />
     )
   }

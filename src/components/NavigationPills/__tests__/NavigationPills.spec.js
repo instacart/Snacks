@@ -76,6 +76,31 @@ it('renders NavigationPills with elementAttributes correctly', () => {
   expect(tree).toMatchSnapshot()
 })
 
+it('renders NavigationPills with each pill\'s elementAttributes correctly', () => {
+  const testPillsElmAttrs = [
+    { path: '/store/doms-pizza-store',  text: 'doms', elementAttributes: { 'aria-label': 'doms', role: 'tab' }},
+    { text: 'doms1', elementAttributes: { 'aria-label': 'doms1', role: 'tab' }},
+    { path: '/store/doms-pizza-store-two',  text: 'doms2', elementAttributes: { 'aria-label': 'doms2', role: 'tab' }},
+    { path: '/store/doms-pizza-store-three',  text: 'doms3', elementAttributes: { 'aria-label': 'doms3', role: 'tab' }},
+    { path: '/store/doms-pizza-store-four', elementAttributes: { 'aria-label': 'four', role: 'tab' }},
+  ]
+
+  const tree = renderer.create(
+    <StyleRoot>
+      <div>
+        <NavigationPills
+            pills={ testPillsElmAttrs }
+            onPillClick={(e, pill) => { console.log(pill) }}
+            label={'Filter by'}
+            activePill={'dom2'}
+            elementAttributes={{ ariaLabel:'this is an aria label', role:'tabs'}}
+          />
+      </div>
+    </StyleRoot>
+  ).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
 it('it handles onPillClick correctly', () => {
   const onPillClick = spy()
   const Pills = mount(
