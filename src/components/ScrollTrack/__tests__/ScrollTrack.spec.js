@@ -1,6 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import ScrollTrack from '../ScrollTrack'
+import Icon from '../../Icon/Icon'
 import { StyleRoot } from 'radium'
 import { ReactWrapper, mount } from 'enzyme'
 import { spy } from 'sinon'
@@ -125,22 +126,46 @@ it('renders custom ScrollTrack buttons correctly', () => {
       backgroundColor: 'red'
     },
   }
+  
+  const tree = renderer.create(
+    <StyleRoot>
+      <div>
+        <ScrollTrack
+          styles={styles}
+          backButtonContent={'HI'}
+          nextButtonElement={<Icon name='cart' />}
+        >
+          <p>one</p>
+          <p>two</p>
+          <p>three</p>
+          <p>four</p>
+          <p>five</p>
+          <p>six</p>
+          <p>seven</p>
+        </ScrollTrack>
+      </div>
+    </StyleRoot>
+  ).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+it('works with custom ScrollTrack buttons correctly', () => {
+  const styles = {
+    RightArrow: {
+      backgroundColor: 'blue'
+    },
+    LeftArrow: {
+      backgroundColor: 'red'
+    },
+  }
 
   const track = mount(
     <StyleRoot>
       <div>
         <ScrollTrack
           styles={styles}
-          backButtonElement={(
-            <button>
-              <span>back</span>
-            </button>
-          )}
-          nextButtonElement={(
-            <button>
-              <span>next</span>
-            </button>
-          )}
+          backButtonContent={'HI'}
+          nextButtonElement={<Icon name='cart' />}
         >
           <p>one</p>
           <p>two</p>

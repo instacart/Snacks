@@ -157,19 +157,11 @@ Using callbacks
   </ScrollTrack>
 ```
 
-Using custom next and back buttons
+Using custom next and back button content
 
     <ScrollTrack
-      backButtonElement={(
-        <button>
-          <Icon name="arrowLeft" />
-        </button>
-      )}
-      nextButtonElement={(
-        <button>
-          <Icon name="arrowRight" />
-        </button>
-      )}
+      backButtonContent={<Icon name="arrowLeft" />}
+      nextButtonElement={<Icon name="arrowRight" />}
       styles={{
           Track: { height: '56px' },
           LeftArrow: { backgroundColor: '#7FE364', color: '#fff', border: 'none', borderRadius: '50%', height: '30px', width: '30px', lineHeight: '30px', fontWeight: '600' },
