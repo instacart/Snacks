@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ValidationError correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <div
+      aria-atomic={true}
+      aria-live="assertive"
+      data-radium={true}
+      id="error_undefined"
+      style={
+        Object {
+          "color": "#B30029",
+          "display": "initial",
+          "fontSize": "12px",
+          "marginLeft": "1px",
+          "marginTop": "2px",
+          "opacity": "1",
+          "pointerEvents": "none",
+          "textAlign": "left",
+          "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+        }
+      }
+    >
+      Error Text
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders ValidationError correctly when show is false 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <div
+      aria-atomic={true}
+      aria-live="assertive"
+      data-radium={true}
+      id="error_undefined"
+      style={
+        Object {
+          "color": "#B30029",
+          "display": "none",
+          "fontSize": "12px",
+          "marginLeft": "1px",
+          "marginTop": "2px",
+          "opacity": "0",
+          "pointerEvents": "none",
+          "textAlign": "left",
+          "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+        }
+      }
+    >
+      Error Text
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;

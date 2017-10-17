@@ -13,6 +13,10 @@ import Row from './components/Grid/Row'
 import ScrollTrack from './components/ScrollTrack/ScrollTrack'
 import SetStyles from './styles/SetStyles'
 import spacing from './styles/spacing'
+import TextField from './components/Forms/TextField'
+import ServerError from './components/Forms/ServerError'
+import ValidationError from './components/Forms/ValidationError'
+import FloatingLabel from './components/Forms/FloatingLabel'
 import zIndex from './styles/zIndex'
 import themer from './styles/themer/index'
 import withTheme from './styles/themer/withTheme'
@@ -35,5 +39,9 @@ export {
   spacing,
   themer,
   withTheme,
-  zIndex
+  zIndex,
+  TextField,
+  ServerError,
+  ValidationError,
+  FloatingLabel
 }

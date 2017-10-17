@@ -55,6 +55,10 @@ module.exports = {
           components: 'src/components/Buttons/[A-Z]*.js'
         },
         {
+          name: 'Forms',
+          components: 'src/components/Forms/[A-Z]*.js'
+        },
+        {
           name: 'Grid',
           components: 'src/components/Grid/[A-Z]*.js'
         },
