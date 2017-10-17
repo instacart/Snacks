@@ -8,7 +8,7 @@ ValidationError is small red styled text that is used for clientside validation 
     floatingLabelText="Email"
     hintText="Enter your email address"
     validationErrorText="Please enter a valid email address."
-    value="foobars.com"
+    defaultValue="foobars.com"
     isValid={false}
   />
 </div>
