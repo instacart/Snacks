@@ -8,7 +8,7 @@ ServerError Example:
     floatingLabelText="Email"
     hintText="Enter your email address"
     serverError="The email you have entered is already taken"
-    value="foobar@instacart.com"
+    defaultValue="foobar@instacart.com"
     isValid={false}
   />
 </div>
