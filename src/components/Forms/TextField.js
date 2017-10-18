@@ -123,6 +123,7 @@ class TextField extends React.Component {
   componentWillMount() {
     const { name } = this.props
 
+    // uniqueId is needed label htmlFor properties
     const uniqueId = `${name}-${Math.floor(Math.random() * 0xFFFF)}`
     this.uniqueId = uniqueId.replace(/[^A-Za-z0-9-]/gi, '')
   }
