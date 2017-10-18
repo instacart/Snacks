@@ -121,11 +121,10 @@ class TextField extends React.Component {
   }
 
   componentWillMount() {
-    const { name } = this.props
+    const { id, name } = this.props
 
     // uniqueId is needed label htmlFor properties
-    const uniqueId = `${name}-${Math.floor(Math.random() * 0xFFFF)}`
-    this.uniqueId = uniqueId.replace(/[^A-Za-z0-9-]/gi, '')
+    this.uniqueId = id || `${name}-${Math.floor(Math.random() * 0xFFFF)}`.replace(/[^A-Za-z0-9-]/gi, '')
   }
 
   componentWillReceiveProps(nextProps) {
@@ -170,7 +169,6 @@ class TextField extends React.Component {
       fullWidth,
       halfWidth,
       hintText,
-      id,
       inputStyle,
       isValid,
       name,
@@ -190,7 +188,7 @@ class TextField extends React.Component {
       isFocused
     } = this.state
 
-    const inputId = id || this.uniqueId
+    const inputId = this.uniqueId
     const showHintText = hintText && !hasValue && isFocused
     const hasError = (!disabled && (!isValid && isValid !== undefined)) || !!serverError
 
