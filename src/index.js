@@ -20,7 +20,6 @@ import FloatingLabel from './components/Forms/FloatingLabel'
 import zIndex from './styles/zIndex'
 import themer from './styles/themer/index'
 import withTheme from './styles/themer/withTheme'
-import { Form } from 'ic-formable'
 
 export {
   colors,
@@ -44,6 +43,5 @@ export {
   TextField,
   ServerError,
   ValidationError,
-  FloatingLabel,
-  Form
+  FloatingLabel
 }
