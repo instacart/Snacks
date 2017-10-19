@@ -3,13 +3,15 @@ ValidationError is small red styled text that is used for clientside validation 
 ```js
 <div>
   <TextField
-    name="test"
+    name="email"
     type="email"
     floatingLabelText="Email"
     hintText="Enter your email address"
-    validationErrorText="Please enter a valid email address."
+    validations={{isEmail: null, isLength: {min: 3, max: 15}}}
+    validationErrorText="Please enter a valid email"
     defaultValue="foobars.com"
     isValid={false}
+    required
   />
 </div>
 ```
