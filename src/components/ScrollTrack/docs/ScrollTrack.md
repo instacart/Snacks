@@ -82,6 +82,9 @@ component with two additional props: `startIndex` and `lastIndex`. This will ena
 child to determine how it wants to treat elements that are shown within the track
 or hidden off the overflow.
 
+The argument supplied to `equalWidthTrack` is the width of each element as defined
+as a number or a function of props that will output the width of each element.
+
 Example use case: *A container of item cards that all have a width of 90px and margins of 5px on both sides*
 
 ```js static
@@ -89,6 +92,21 @@ Example use case: *A container of item cards that all have a width of 90px and m
 
   @ScrollTrack.equalWidthTrack(childWidth)
   class ItemCardsContainer extends Component {
+    static propTypes = {
+      trackProps: ScrollTrack.ScrollTrackPropTypes.trackProps,
+      startIndex: PropTypes.number,
+      lastIndex: PropTypes.number
+    };
+
+    render () {
+      ...
+    }
+  }
+
+  const childWidthFn = (props) => props.childWidth;
+
+  @ScrollTrack.equalWidthTrack(childWidth)
+  class ItemCardsContainerBasedOnFunction extends Component {
     static propTypes = {
       trackProps: ScrollTrack.ScrollTrackPropTypes.trackProps,
       startIndex: PropTypes.number,
