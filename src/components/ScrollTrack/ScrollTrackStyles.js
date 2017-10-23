@@ -1,5 +1,6 @@
 import responsive from '../../styles/responsive'
 import spacing    from '../../styles/spacing'
+import zIndex     from '../../styles/zIndex'
 
 export default {
   containerStyles: {
@@ -23,7 +24,8 @@ export default {
     default: {
       position: 'absolute',
       top: '5px',
-      display: 'none'
+      display: 'none',
+      ...zIndex.Z_INDEX1
     },
     left: spacing.LEFT_XS,
     right: spacing.RIGHT_XS

@@ -380,3 +380,165 @@ exports[`renders ScrollTrack without children correctly 1`] = `
   />
 </div>
 `;
+
+exports[`renders custom ScrollTrack buttons correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
+      <button
+        aria-label="back"
+        className="rmq-4534e6b"
+        data-radium={true}
+        disabled={undefined}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "backgroundColor": "red",
+            "border": "0",
+            "borderRadius": "50%",
+            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
+            "color": "#FFFFFF",
+            "display": "none",
+            "height": "48px",
+            "left": 8,
+            "lineHeight": "1",
+            "position": "absolute",
+            "textAlign": "center",
+            "top": "5px",
+            "transition": "background-color 150ms ease-in-out",
+            "width": "48px",
+            "zIndex": 100,
+          }
+        }
+      >
+        HI
+      </button>
+      <div
+        className="rmq-16b35912"
+        data-radium={true}
+        style={
+          Object {
+            "position": "relative",
+            "transform": "translate3d(0px, 0, 0)",
+            "transition": "transform 150ms ease-in-out",
+            "whiteSpace": "nowrap",
+          }
+        }
+      >
+        <div
+          data-radium={true}
+          style={Object {}}
+        >
+          <p>
+            one
+          </p>
+          <p>
+            two
+          </p>
+          <p>
+            three
+          </p>
+          <p>
+            four
+          </p>
+          <p>
+            five
+          </p>
+          <p>
+            six
+          </p>
+          <p>
+            seven
+          </p>
+        </div>
+      </div>
+      <button
+        aria-label="next"
+        className="rmq-4534e6b"
+        data-radium={true}
+        disabled={undefined}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "backgroundColor": "blue",
+            "border": "0",
+            "borderRadius": "50%",
+            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
+            "color": "#FFFFFF",
+            "display": "none",
+            "height": "48px",
+            "lineHeight": "1",
+            "position": "absolute",
+            "right": 8,
+            "textAlign": "center",
+            "top": "5px",
+            "transition": "background-color 150ms ease-in-out",
+            "width": "48px",
+            "zIndex": 100,
+          }
+        }
+      >
+        <i
+          aria-hidden={true}
+          data-radium={true}
+          onClick={undefined}
+          style={
+            Object {
+              "fontFamily": "ic-icons",
+              "fontSize": "20px",
+              "fontSmoothing": "antialiased",
+              "fontStyle": "normal",
+              "fontVariant": "normal",
+              "fontWeight": "normal",
+              "lineHeight": "1",
+              "osxFontSmoothing": "grayscale",
+              "position": "relative",
+              "speak": "none",
+              "textTransform": "none",
+            }
+          }
+        >
+          
+        </i>
+      </button>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
+      overflow-x: scroll !important;
+      display: block !important;
+      -ms-overflow-style: none !important;
+      overflow: -moz-scrollbars-none !important;
+      webkit-overflow-scrolling: touch !important;}}
+      @media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
+      }
+    }
+  />
+</div>
+`;

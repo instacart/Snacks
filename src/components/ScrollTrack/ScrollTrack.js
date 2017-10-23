@@ -17,8 +17,14 @@ class ScrollTrack extends Component {
   static ScrollTrackPropTypes = ScrollTrackPropTypes
 
   static propTypes = {
+    /** Prop for passing in custom button content for back button */
+    backButtonContent: React.PropTypes.node,
+
     /** Manually control left positioning of ScrollTrack */
     leftOverride: PropTypes.number,
+
+    /** Prop for passing in custom button content for next button */
+    nextButtonContent: React.PropTypes.node,
 
     /**
     * A callback called before sliding to next set.
@@ -230,8 +236,8 @@ class ScrollTrack extends Component {
   renderRightArrow = () => {
     const { slideButtonStyles } = componentStyles
     const { showRightArrow } = this.state
+    const { styles: { RightArrow = {} }, nextButtonContent } = this.props
 
-    const { styles: { RightArrow = {} } } = this.props
     return (
       <CircleButton
         onClick={this.slideForward}
@@ -243,10 +249,12 @@ class ScrollTrack extends Component {
           RightArrow
         ]}
       >
-        <Icon
-          name='arrowRightSmallBold'
-          style={{ fontSize: '20px' }}
-        />
+        { nextButtonContent ||
+          <Icon
+            name='arrowRightSmallBold'
+            style={{ fontSize: '20px' }}
+          />
+        }
       </CircleButton>
     )
   }
@@ -254,8 +262,7 @@ class ScrollTrack extends Component {
   renderLeftArrow = () => {
     const { slideButtonStyles } = componentStyles
     const { showLeftArrow } = this.state
-
-    const { styles: { LeftArrow = {} } } = this.props
+    const { styles: { LeftArrow = {} }, backButtonContent } = this.props
 
     return (
       <CircleButton
@@ -268,10 +275,12 @@ class ScrollTrack extends Component {
           LeftArrow
         ]}
       >
-        <Icon
-          name='arrowLeftSmallBold'
-          style={{ fontSize: '20px' }}
-        />
+        { backButtonContent ||
+          <Icon
+            name='arrowLeftSmallBold'
+            style={{ fontSize: '20px' }}
+          />
+        }
       </CircleButton>
     )
   }
