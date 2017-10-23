@@ -12,7 +12,7 @@ class EqualWidthTrackError extends TypeError {
  * or hidden off the overflow.
  */
 const equalWidthTrack = (childWidth) => {
-  if (typeof childWidth !== 'number' || typeof childWidth !==  'function') {
+  if (!['number', 'function'].includes(typeof childWidth)) {
     throw new EqualWidthTrackError('childWidth must be a number or function bassed on props')
   }
 

@@ -105,7 +105,7 @@ Example use case: *A container of item cards that all have a width of 90px and m
 
   const childWidthFn = (props) => props.childWidth;
 
-  @ScrollTrack.equalWidthTrack(childWidth)
+  @ScrollTrack.equalWidthTrack(childWidthFn)
   class ItemCardsContainerBasedOnFunction extends Component {
     static propTypes = {
       trackProps: ScrollTrack.ScrollTrackPropTypes.trackProps,
