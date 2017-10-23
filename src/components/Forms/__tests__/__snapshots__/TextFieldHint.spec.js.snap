@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders TextFieldHint correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "color": "#BDBDBD",
+          "cursor": "inherit",
+          "fontSize": "16px",
+          "opacity": 1,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "transform": "scale(1) translate(9px, 23px)",
+          "transformOrigin": "left top",
+          "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+          "zIndex": 1,
+        }
+      }
+    >
+      Text field hint text
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders TextFieldHint when disabled 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "color": "#BDBDBD",
+          "cursor": "not-allowed",
+          "fontSize": "16px",
+          "opacity": 1,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "transform": "scale(1) translate(9px, 23px)",
+          "transformOrigin": "left top",
+          "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+          "zIndex": 1,
+        }
+      }
+    >
+      Text field hint text
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders TextFieldHint when show is false 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "color": "#BDBDBD",
+          "cursor": "inherit",
+          "fontSize": "16px",
+          "opacity": 0,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "transform": "scale(1) translate(9px, 23px)",
+          "transformOrigin": "left top",
+          "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+          "zIndex": 1,
+        }
+      }
+    >
+      Text field hint text
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;

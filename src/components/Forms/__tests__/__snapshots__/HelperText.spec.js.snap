@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders HelperText correctly when floated 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <div
+      style={
+        Object {
+          "color": "#757575",
+          "fontSize": "12px",
+          "lineHeight": "1.33",
+          "textAlign": "right",
+          "width": "100%",
+        }
+      }
+    >
+      helperText Text
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
