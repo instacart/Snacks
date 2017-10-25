@@ -1,10 +1,12 @@
 const path = require('path')
-const webpack = require("webpack");
+const webpack = require("webpack")
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 
 module.exports = {
   module: {
    loaders: [
-     { test: /\.js$/, loaders: ['babel-loader'], exclude: /node_modules/ }
+     { test: /\.js$/, loaders: ['babel-loader'], exclude: /node_modules/ },
+     { test: /\.svg$/, loader: 'svg-sprite-loader', exclude: /node_modules/, options: { extract: true } }
    ]
   },
   entry: {
@@ -19,6 +21,9 @@ module.exports = {
       utils: path.resolve(__dirname, 'src/utils')
     }
   },
+  plugins: [
+    new SpriteLoaderPlugin()
+  ],
   externals: {
     'react': 'react',
     'react-dom': 'react-dom',
