@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio generates a label if a child prop of text is supplied 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "display": "flex",
+    }
+  }
+>
+  <input
+    aria-label={undefined}
+    checked={false}
+    data-radium={true}
+    id={1}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    style={
+      Object {
+        "-moz-appearance": "none",
+        "-ms-appearance": "none",
+        "-webkit-appearance": "none",
+        "appearance": "none",
+        "backgroundColor": "transparent",
+        "backgroundImage": "url(test-file-stub)",
+        "backgroundPosition": "center",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "contain",
+        "height": 22,
+        "margin": "0 10px -7px 0",
+        "width": 22,
+      }
+    }
+    type="radio"
+    value={undefined}
+  />
+  <label
+    data-radium={true}
+    htmlFor={1}
+    style={Object {}}
+  >
+    Test label
+  </label>
+</div>
+`;
+
+exports[`Radio incorporates user styles if passed 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "background": "pink",
+      "display": "flex",
+    }
+  }
+>
+  <input
+    aria-label={undefined}
+    checked={false}
+    data-radium={true}
+    id={1}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    style={
+      Object {
+        "-moz-appearance": "none",
+        "-ms-appearance": "none",
+        "-webkit-appearance": "none",
+        "appearance": "none",
+        "backgroundColor": "transparent",
+        "backgroundImage": "url(test-file-stub)",
+        "backgroundPosition": "center",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "contain",
+        "border": "2px solid purple",
+        "height": 22,
+        "margin": "0 10px -7px 0",
+        "width": 22,
+      }
+    }
+    type="radio"
+    value={undefined}
+  />
+  <label
+    data-radium={true}
+    htmlFor={1}
+    style={
+      Object {
+        "color": "green",
+      }
+    }
+  >
+    Test label
+  </label>
+</div>
+`;
+
+exports[`Radio incorporates user styles if passed 2`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "display": "flex",
+    }
+  }
+>
+  <input
+    aria-label={undefined}
+    checked={false}
+    data-radium={true}
+    id={2}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    style={
+      Object {
+        "-moz-appearance": "none",
+        "-ms-appearance": "none",
+        "-webkit-appearance": "none",
+        "appearance": "none",
+        "backgroundColor": "transparent",
+        "backgroundImage": "url(test-file-stub)",
+        "backgroundPosition": "center",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "contain",
+        "height": 22,
+        "margin": "0 10px -7px 0",
+        "width": 22,
+      }
+    }
+    type="radio"
+    value={undefined}
+  />
+  <label
+    data-radium={true}
+    htmlFor={2}
+    style={Object {}}
+  >
+    Test label
+  </label>
+</div>
+`;
+
+exports[`Radio renders the correct button type 1`] = `
+<input
+  aria-label={undefined}
+  checked={false}
+  data-radium={true}
+  id={1}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  style={
+    Object {
+      "-moz-appearance": "none",
+      "-ms-appearance": "none",
+      "-webkit-appearance": "none",
+      "appearance": "none",
+      "backgroundColor": "transparent",
+      "backgroundImage": "url(test-file-stub)",
+      "backgroundPosition": "center",
+      "backgroundRepeat": "no-repeat",
+      "backgroundSize": "contain",
+      "height": 22,
+      "margin": "0 10px -7px 0",
+      "width": 22,
+    }
+  }
+  type="radio"
+  value={undefined}
+/>
+`;
+
+exports[`Radio renders the correct checked state 1`] = `
+<input
+  aria-label={undefined}
+  checked={false}
+  data-radium={true}
+  id={1}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  style={
+    Object {
+      "-moz-appearance": "none",
+      "-ms-appearance": "none",
+      "-webkit-appearance": "none",
+      "appearance": "none",
+      "backgroundColor": "transparent",
+      "backgroundImage": "url(test-file-stub)",
+      "backgroundPosition": "center",
+      "backgroundRepeat": "no-repeat",
+      "backgroundSize": "contain",
+      "height": 22,
+      "margin": "0 10px -7px 0",
+      "width": 22,
+    }
+  }
+  type="radio"
+  value={undefined}
+/>
+`;
+
+exports[`Radio renders the correct checked state 2`] = `
+<input
+  aria-label={undefined}
+  checked={true}
+  data-radium={true}
+  id={2}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  style={
+    Object {
+      "-moz-appearance": "none",
+      "-ms-appearance": "none",
+      "-webkit-appearance": "none",
+      "appearance": "none",
+      "backgroundColor": "transparent",
+      "backgroundImage": "url(test-file-stub)",
+      "backgroundPosition": "center",
+      "backgroundRepeat": "no-repeat",
+      "backgroundSize": "contain",
+      "height": 22,
+      "margin": "0 10px -7px 0",
+      "width": 22,
+    }
+  }
+  type="radio"
+  value={undefined}
+/>
+`;
