@@ -37,7 +37,9 @@ class RadioCheckboxBase extends Component {
     aria          : PropTypes.shape({
       label         :PropTypes.string,
     }),
-    assets        : PropTypes.object,
+    assets        : PropTypes.shape({
+      btnBkg        : PropTypes.object.isRequired,
+    }),
     btnType       : PropTypes.oneOf(['radio', 'checkbox']).isRequired,
     children      : PropTypes.string,
     id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
