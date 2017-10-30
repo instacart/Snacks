@@ -1,8 +1,8 @@
 import React             from 'react'
 import PropTypes         from 'prop-types'
 import Radium            from 'radium'
-import { FormComponent } from 'ic-formable'
 import { colors }        from '../../styles'
+import FormComponent     from './FormComponent'
 import ValidationError   from './ValidationError'
 import FloatingLabel     from './FloatingLabel'
 import TextFieldHint     from './TextFieldHint'
@@ -122,7 +122,6 @@ class TextField extends React.Component {
 
   componentWillMount() {
     const { id, name } = this.props
-
     // uniqueId is needed label htmlFor properties
     this.uniqueId = id || `${name}-${Math.floor(Math.random() * 0xFFFF)}`.replace(/[^A-Za-z0-9-]/gi, '')
   }
@@ -135,6 +134,14 @@ class TextField extends React.Component {
     if (!this.state.hasValue && nextProps.value) {
       this.setState({hasValue: true})
     }
+  }
+
+  getValue = () => {
+    if (!this.input) {
+      return null
+    }
+
+    return this.input.value
   }
 
   handleInputChange = (e) => {
@@ -229,7 +236,7 @@ class TextField extends React.Component {
           <input
             value={value}
             id={inputId}
-            ref="input"
+            ref={ (node) => {this.input = node} }
             defaultValue={value !== undefined ? undefined : defaultValue}
             disabled={disabled}
             name={name}
