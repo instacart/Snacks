@@ -20,12 +20,21 @@ module.exports = {
       content: 'docs/installation.md'
     },
     {
-      name: 'Colors',
-      content: 'docs/colors.md'
-    },
-    {
-      name: 'Spacing',
-      content: 'docs/spacing.md'
+      name: 'Utilities',
+      sections: [
+        {
+          name: 'Colors',
+          content: 'docs/colors.md'
+        },
+        {
+          name: 'Spacing',
+          content: 'docs/spacing.md'
+        },
+        {
+          name: 'Responsive',
+          content: 'src/styles/docs/responsive.md'
+        },
+      ]
     },
     {
       name: 'Icons',

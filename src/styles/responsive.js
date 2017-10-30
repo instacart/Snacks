@@ -12,10 +12,9 @@ const SCREEN_MD_MAX = SCREEN_MDLG_MIN - 1 // 1039
 const SCREEN_MDLG_MAX = SCREEN_LG_MIN - 1 // 1247
 const SCREEN_LG_MAX = SCREEN_XL_MIN - 1   // 1455
 
-// TODO: exporting just for test (so far at least), smell?
-export const sizes = {
+export const breakpoints = {
   xs: {
-    // TODO: no min, hmmm
+    min: 0,
     max: SCREEN_XS_MAX
   },
   sm: {
@@ -36,18 +35,21 @@ export const sizes = {
   },
   xl: {
     min: SCREEN_XL_MIN
-    // TODO: no max, hmmm
   }
 }
 
-// all sizes: xs, sm, md, mdLg, lg, xl
-// TODO: better error messages
-const up = (size) => {
-  if (size === 'xs') {
-    throw new Error('size "xs" not supported')
-  }
+const assertValidSizes = (...sizes) => {
+  sizes.forEach(size => {
+    if (breakpoints[size] === undefined) {
+      throw new Error(`Screen size(s) ${sizes.join(', ')} not supported. Must be one of ${Object.keys(breakpoints).join(', ')}`) // eslint-disable-line
+    }
+  })
+}
 
-  return `@media (min-width: ${sizes[size].min}px)`
+const up = (size) => {
+  assertValidSizes(size)
+
+  return `@media (min-width: ${breakpoints[size].min}px)`
 }
 
 const down = (size) => {
@@ -55,11 +57,15 @@ const down = (size) => {
     throw new Error('size "xl" not supported')
   }
 
-  return `@media (max-width: ${sizes[size].max}px)`
+  assertValidSizes(size)
+
+  return `@media (max-width: ${breakpoints[size].max}px)`
 }
 
 const only = (size) => {
-  const { min, max } = sizes[size]
+  assertValidSizes(size)
+
+  const { min, max } = breakpoints[size]
 
   if (!min) {
     return `@media (max-width: ${max}px)`
@@ -72,10 +78,13 @@ const only = (size) => {
   return `@media (min-width: ${min}px) and (max-width: ${max}px)`
 }
 
-const between = (lower, upper) => {
-  const min = sizes[lower].min
-  const max = sizes[upper].max
-  return `@media (min-width: ${min}px) and (max-width: ${max}px)`
+const between = (lowerSize, upperSize) => {
+  assertValidSizes(lowerSize, upperSize)
+
+  const lower = breakpoints[lowerSize].min
+  const upper = breakpoints[upperSize].min
+
+  return `@media (min-width: ${lower}px) and (max-width: ${upper}px)`
 }
 
 export default {
@@ -94,7 +103,9 @@ export default {
     xl: SCREEN_XL_MIN
   },
 
-  // Helpers
+  // New breakpoint helpers. These do everything the existing
+  // breakpoints do and are more flexible, so they should eventually
+  // replace the individual size exports.
   up,
   down,
   only,
