@@ -175,6 +175,73 @@ Using callbacks
   </ScrollTrack>
 ```
 
+Doing async pagination:
+
+    initialState = {
+      items: [
+        { id: 1 },
+        { id: 2 },
+        { id: 3 },
+        { id: 4 },
+        { id: 5 },
+        { id: 6 },
+        { id: 7 },
+        { id: 8 },
+        { id: 9 },
+        { id: 10 },
+        { id: 11 },
+        { id: 12 },
+        { id: 13 },
+        { id: 14 },
+        { id: 15 },
+        { id: 16 },
+        { id: 17 },
+        { id: 18 },
+        { id: 19 }
+      ]
+    };
+
+
+    const itemsToAddLater = (itemsCount) => {
+      // generate more items
+      const arr = []
+      let i = 0
+      while (i <= itemsCount) {
+        i += 1
+        arr.push({ id: itemsCount + i })
+      }
+
+      return arr
+    };
+
+    <ScrollTrack
+      styles={{ Track: { height: '56px', padding: '10px 0' }, RightArrow: { top: '6px' }}}
+      onBeforeNext={({atStart, atEnd, slideTo, parentWidth, trackWidth}) => {
+          return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                // add items 1 second later, then resolve
+                setState({items: state.items.concat(itemsToAddLater(state.items.length))}, resolve)
+            }, 1000)
+          })
+      }}
+    >
+      <div>
+        { state.items.map(item =>
+          <Icon
+            name="cart"
+            style={{
+              ...styles,
+              ...{
+                backgroundColor: item.id % 2 != 0 ? '#eee' : '#43B02A',
+                color: item.id % 2 != 0 ? '#43B02A' : '#eee'
+              }
+            }}
+            key={`pagination_item_${item.id}`}
+          />
+        )}
+      </div>
+    </ScrollTrack>
+
 Using custom next and back button content
 
     <ScrollTrack
