@@ -193,10 +193,21 @@ class ScrollTrack extends Component {
     }
 
     onBeforeNext(callbackProps).then(() => {
+      // calcuate track values once more, in case children have changed the track size
+      const { parentWidth, trackWidth } = this.getNodeWidths()
+      let nextForward = this.state.left - parentWidth
+
       this.updateLeftValue({
         left: nextForward,
         callback: onAfterNext,
-        callbackProps
+        callbackProps: {
+          ...callbackProps,
+          ...{
+            slideTo: nextForward,
+            parentWidth,
+            trackWidth
+          }
+        }
       })
     })
   }
