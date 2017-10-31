@@ -53,6 +53,7 @@
     "react-styleguidist": "^6.0.2",
     "react-test-renderer": "^15.5.0",
     "sinon": "^2.3.8",
+    "svg-sprite-loader": "^3.4.1",
     "underscore": "^1.8.3",
     "webpack": "^3.8.1"
   },
@@ -69,7 +70,9 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^utils": "<rootDir>/src/utils"
+      "^utils": "<rootDir>/src/utils",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/scripts/test/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/scripts/test/styleMock.js"
     }
   }
 }

@@ -1,6 +1,8 @@
 import colors from './styles/colors/index'
 import Button from './components/Buttons/Button'
 import CircleButton from './components/Buttons/CircleButton'
+import Radio from './components/Buttons/Radio'
+import Checkbox from './components/Buttons/Checkbox'
 import Column from './components/Grid/Column'
 import GlobalTheme from './styles/GlobalTheme'
 import Grid from './components/Grid/Grid'
@@ -22,26 +24,33 @@ import themer from './styles/themer/index'
 import withTheme from './styles/themer/withTheme'
 
 export {
+  // base
   colors,
+  zIndex,
+  // styles
+  GlobalTheme,
+  Normalize,
+  SetStyles,
+  themer,
+  withTheme,
+  // grid system
+  responsive,
+  spacing,
+  Grid,
+  Column,
+  Row,
+  //forms
+  FloatingLabel,
+  ServerError,
+  TextField,
+  ValidationError,
+  // components
   Button,
   CircleButton,
-  Column,
-  GlobalTheme,
-  Grid,
+  Radio,
+  Checkbox,
   Icon,
   Link,
   NavigationPills,
-  Normalize,
-  responsive,
-  Row,
   ScrollTrack,
-  SetStyles,
-  spacing,
-  themer,
-  withTheme,
-  zIndex,
-  TextField,
-  ServerError,
-  ValidationError,
-  FloatingLabel
 }
