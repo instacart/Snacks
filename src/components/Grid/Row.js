@@ -2,6 +2,32 @@ import React      from 'react'
 import PropTypes  from 'prop-types'
 import Radium from 'radium'
 import responsive from '../../styles/responsive'
+import { supportsCSSGrid } from '../../utils/detectFeature'
+
+// used for browsers without css grid support
+const legacyStyles = {
+  display: 'block',
+
+  [responsive.sm]: {
+    width: `${6 * responsive.columnWidth}px`
+  },
+
+  [responsive.md]: {
+    width: `${8 * responsive.columnWidth}px`
+  },
+
+  [responsive.mdLg]: {
+    width: `${10 * responsive.columnWidth}px`
+  },
+
+  [responsive.lg]: {
+    width: `${12 * responsive.columnWidth}px`
+  },
+
+  [responsive.xl]: {
+    width: `${14 * responsive.columnWidth}px`
+  }
+}
 
 const styles = {
   [responsive.xs]: {
@@ -34,87 +60,92 @@ const styles = {
   }
 }
 
-const Row = props => {
-  const getMaxColumnsStyles = () => {
-    const { maxColumns } = props
+const getMaxColumnsStyles = props => {
+  const { maxColumns } = props
 
-    const override = {
-      gridTemplateColumns: `repeat(${maxColumns}, ${responsive.columnWidth}px)`,
-      justifyContent: 'center'
-    }
-
-    if (maxColumns <= 6) {
-      return {
-        [responsive.md]: override,
-        [responsive.mdLg]: override,
-        [responsive.lg]: override,
-        [responsive.xl]: override
-      }
-    } else if (maxColumns <= 8) {
-      return {
-        [responsive.mdLg]: override,
-        [responsive.lg]: override,
-        [responsive.xl]: override
-      }
-    } else if (maxColumns <= 10) {
-      return {
-        [responsive.lg]:override,
-        [responsive.xl]: override
-      }
-    } else if (maxColumns <= 12) {
-      return {
-        [responsive.xl]: override
-      }
-    }
-
-    return {}
+  const override = supportsCSSGrid() ? {
+    gridTemplateColumns: `repeat(${maxColumns}, ${responsive.columnWidth}px)`,
+    justifyContent: 'center'
+  } : {
+    width: `${maxColumns * responsive.columnWidth}px`,
+    margin: '0 auto'
   }
 
-  const getFullWidthStyles = () => {
-    const { screenWidths } = responsive
-    if (!props.forceFullPage) { return {} }
-
+  if (maxColumns <= 6) {
     return {
-      width: '100vw',
-      justifyContent: 'center',
-      [responsive.xs]: {
-        display: 'block',
-        margin: `0 calc(-1 * (100vw - ${screenWidths.xs}px) / 2)`
-      },
-
-      [responsive.sm]: {
-        display: 'block',
-        margin: `0 calc(-1 * (100vw - ${screenWidths.sm}px) / 2)`
-      },
-
-      [responsive.md]: {
-        display: 'block',
-        margin: `0 calc(-1 * (100vw - ${screenWidths.md}px) / 2)`
-      },
-
-      [responsive.mdLg]: {
-        display: 'block',
-        margin: `0 calc(-1 * (100vw - ${screenWidths.mdLg}px) / 2)`
-      },
-
-      [responsive.lg]: {
-        display: 'block',
-        margin: `0 calc(-1 * (100vw - ${screenWidths.lg}px) / 2)`
-      },
-
-      [responsive.xl]: {
-        display: 'block',
-        margin: `0 calc(-1 * (100vw - ${screenWidths.xl}px) / 2)`
-      }
+      [responsive.md]: override,
+      [responsive.mdLg]: override,
+      [responsive.lg]: override,
+      [responsive.xl]: override
+    }
+  } else if (maxColumns <= 8) {
+    return {
+      [responsive.mdLg]: override,
+      [responsive.lg]: override,
+      [responsive.xl]: override
+    }
+  } else if (maxColumns <= 10) {
+    return {
+      [responsive.lg]:override,
+      [responsive.xl]: override
+    }
+  } else if (maxColumns <= 12) {
+    return {
+      [responsive.xl]: override
     }
   }
+
+  return {}
+}
+
+const getFullWidthStyles = props => {
+  const { screenWidths } = responsive
+  if (!props.forceFullPage) { return {} }
+
+  return {
+    width: '100vw',
+    justifyContent: 'center',
+    [responsive.xs]: {
+      display: 'block',
+      margin: `0 calc(-1 * (100vw - ${screenWidths.xs}px) / 2)`
+    },
+
+    [responsive.sm]: {
+      display: 'block',
+      margin: `0 calc(-1 * (100vw - ${screenWidths.sm}px) / 2)`
+    },
+
+    [responsive.md]: {
+      display: 'block',
+      margin: `0 calc(-1 * (100vw - ${screenWidths.md}px) / 2)`
+    },
+
+    [responsive.mdLg]: {
+      display: 'block',
+      margin: `0 calc(-1 * (100vw - ${screenWidths.mdLg}px) / 2)`
+    },
+
+    [responsive.lg]: {
+      display: 'block',
+      margin: `0 calc(-1 * (100vw - ${screenWidths.lg}px) / 2)`
+    },
+
+    [responsive.xl]: {
+      display: 'block',
+      margin: `0 calc(-1 * (100vw - ${screenWidths.xl}px) / 2)`
+    }
+  }
+}
+
+const Row = props => {
+  const componentStyles = supportsCSSGrid() ? styles : legacyStyles
 
   return (
     <div
       style={[
-        styles,
-        getMaxColumnsStyles(),
-        getFullWidthStyles(),
+        componentStyles,
+        getMaxColumnsStyles(props),
+        getFullWidthStyles(props),
         props.styles
       ]}
     >

@@ -2,8 +2,68 @@ import React      from 'react'
 import PropTypes  from 'prop-types'
 import Radium from 'radium'
 import responsive from '../../styles/responsive'
+import { supportsCSSGrid } from '../../utils/detectFeature'
+
+const { columnWidth } = responsive
+
+const getLecacySizedStyles = sizes => {
+  return {
+    display: 'inline-block',
+
+    [responsive.xs]: {
+      display: 'block',
+      width: '100%'
+    },
+
+    [responsive.sm]: {
+      width: `${(sizes.sm || 1) * columnWidth}px`
+    },
+
+    [responsive.md]: {
+      width: `${(sizes.md || sizes.sm || 1) * columnWidth}px`
+    },
+
+    [responsive.mdLg]: {
+      width: `${(sizes.mdLg || sizes.md || sizes.sm || 1) * columnWidth}px`
+    },
+
+    [responsive.lg]: {
+      width: `${(sizes.lg || sizes.mdLg || sizes.md || sizes.sm || 1) * columnWidth}px`
+    },
+
+    [responsive.xl]: {
+      width: `${(sizes.xl || sizes.lg || sizes.mdLg || sizes.md || sizes.sm || 1) * columnWidth}px`
+    }
+  }
+}
+
+const getSizedStyles = sizes => {
+  return {
+    [responsive.sm]: {
+      gridColumn: `span ${sizes.sm || 1}`
+    },
+
+    [responsive.md]: {
+      gridColumn: `span ${sizes.md || sizes.sm || 1}`
+    },
+
+    [responsive.mdLg]: {
+      gridColumn: `span ${sizes.mdLg || sizes.md || sizes.sm || 1}`
+    },
+
+    [responsive.lg]: {
+      gridColumn: `span ${sizes.lg || sizes.mdLg || sizes.md || sizes.sm || 1}`
+    },
+
+    [responsive.xl]: {
+      gridColumn: `span ${sizes.xl || sizes.lg || sizes.mdLg || sizes.md || sizes.sm || 1}`
+    }
+  }
+}
 
 const Column = props => {
+  const { sizes } = props
+
   if (props.sizes.xs) {
     console.warn('xs size prop passed to Column!',
       'This will be ignored. All columns at xs screen size are full-width. ',
@@ -12,34 +72,12 @@ const Column = props => {
     )
   }
 
-  const getSizedStyles = () => {
-    return {
-      [responsive.sm]: {
-        gridColumn: `span ${props.sizes.sm || 1}`
-      },
-
-      [responsive.md]: {
-        gridColumn: `span ${props.sizes.md || props.sizes.sm || 1}`
-      },
-
-      [responsive.mdLg]: {
-        gridColumn: `span ${props.sizes.mdLg || props.sizes.md || props.sizes.sm || 1}`
-      },
-
-      [responsive.lg]: {
-        gridColumn: `span ${props.sizes.lg || props.sizes.mdLg || props.sizes.md || props.sizes.sm || 1}`
-      },
-
-      [responsive.xl]: {
-        gridColumn: `span ${props.sizes.xl || props.sizes.lg || props.sizes.mdLg || props.sizes.md || props.sizes.sm || 1}`
-      }
-    }
-  }
+  const styles = supportsCSSGrid() ? getSizedStyles(sizes) : getLecacySizedStyles(sizes)
 
   return (
     <div
       style={[
-        getSizedStyles(),
+        styles,
         props.styles
       ]}
     >
