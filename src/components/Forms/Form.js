@@ -18,12 +18,8 @@ class Form extends React.Component {
     ICFormable: PropTypes.object
   }
 
-  constructor() {
-    super()
-    this.model          = {}
-    this.formComponents = {}
-  }
-
+  model = {}
+  formComponents = {}
   state = {
     serverErrors: null
   }

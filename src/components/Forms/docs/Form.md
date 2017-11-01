@@ -1,3 +1,24 @@
+#### Features
+
+* Function and flexible validation using Validator.js (https://github.com/chriso/validator.js) or custom regex
+* Flexibility to build custom inputs
+* onSubmit callback with form model serialized. No more “e.target.value” for every input!
+* Pass “serverErrors” to the form that will map to each component appropriately
+
+## Build Custom Components
+
+#### FormComponent
+
+In order to build custom inputs you'll want to use FormComponent as a Higher Order Component to inherit validation and form functionality.
+
+**Props:**
+
+* **name** (required) - the key for the form model
+* **disabled** - to disable the input
+* **required** - to mark the field as a required field
+* **regexValidation** - a regex string to validate via regex
+* **validations** - Validator.js (https://github.com/chriso/validator.js) validations use syntax: {validatorMethod: arguments}
+
 Read more @ https://github.com/nbwar/icformable
 
 ```js
