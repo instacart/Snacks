@@ -19,8 +19,6 @@ In order to build custom inputs you'll want to use FormComponent as a Higher Ord
 * **regexValidation** - a regex string to validate via regex
 * **validations** - Validator.js (https://github.com/chriso/validator.js) validations use syntax: {validatorMethod: arguments}
 
-Read more @ https://github.com/nbwar/icformable
-
 ```js
 <Form
   onSubmit={(model) => ( console.log(model) ) }
