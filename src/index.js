@@ -19,6 +19,8 @@ import TextField from './components/Forms/TextField'
 import ServerError from './components/Forms/ServerError'
 import ValidationError from './components/Forms/ValidationError'
 import FloatingLabel from './components/Forms/FloatingLabel'
+import Form from './components/Forms/Form'
+import FormComponent from './components/Forms/FormComponent'
 import zIndex from './styles/zIndex'
 import themer from './styles/themer/index'
 import withTheme from './styles/themer/withTheme'
@@ -40,6 +42,8 @@ export {
   Column,
   Row,
   //forms
+  Form,
+  FormComponent,
   FloatingLabel,
   ServerError,
   TextField,
@@ -52,5 +56,5 @@ export {
   Icon,
   Link,
   NavigationPills,
-  ScrollTrack,
+  ScrollTrack
 }

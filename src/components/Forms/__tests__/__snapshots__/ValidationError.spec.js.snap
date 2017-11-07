@@ -9,7 +9,7 @@ exports[`renders ValidationError correctly 1`] = `
       aria-atomic={true}
       aria-live="assertive"
       data-radium={true}
-      id="error_undefined"
+      id="error_foo"
       style={
         Object {
           "color": "#B30029",
@@ -46,7 +46,7 @@ exports[`renders ValidationError correctly when show is false 1`] = `
       aria-atomic={true}
       aria-live="assertive"
       data-radium={true}
-      id="error_undefined"
+      id="error_foo"
       style={
         Object {
           "color": "#B30029",

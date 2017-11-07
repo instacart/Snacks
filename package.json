@@ -58,9 +58,9 @@
     "webpack": "^3.8.1"
   },
   "dependencies": {
-    "ic-formable": "^0.0.3",
     "tinycolor2": "^1.4.1",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "validator": "^9.1.1"
   },
   "peerDependencies": {
     "prop-types": ">=15",

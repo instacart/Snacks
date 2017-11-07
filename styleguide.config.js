@@ -56,6 +56,7 @@ module.exports = {
         },
         {
           name: 'Forms',
+          content: 'docs/forms.md',
           components: 'src/components/Forms/[A-Z]*.js'
         },
         {

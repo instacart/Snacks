@@ -7,7 +7,7 @@ it('renders ValidationError correctly', () => {
   const tree = renderer.create(
     <StyleRoot>
       <div>
-        <ValidationError text="Error Text" show />
+        <ValidationError text="Error Text" show inputId="foo"/>
       </div>
     </StyleRoot>
   ).toJSON()
@@ -18,7 +18,7 @@ it('renders ValidationError correctly when show is false', () => {
   const tree = renderer.create(
     <StyleRoot>
       <div>
-        <ValidationError text="Error Text" show={false} />
+        <ValidationError text="Error Text" show={false} inputId="foo"/>
       </div>
     </StyleRoot>
   ).toJSON()
