@@ -152,6 +152,20 @@ class ScrollTrack extends Component {
     if (!trackAtBeginning) { this.showLeftArrow() } else { this.hideLeftArrow() }
   }
 
+  onKeyDown = (e) => {
+    if (![39, 37].includes(e.keyCode)) { return }
+
+    e.preventDefault()
+
+    if (e.keyCode === 39) {
+      // right arrow
+      this.slideForward()
+    } else {
+      // left arrow
+      this.slideBack()
+    }
+  }
+
   hideArrows = () => {
     this.setState({
       showLeftArrow: false,
@@ -309,6 +323,7 @@ class ScrollTrack extends Component {
       <div
         ref='container'
         style={{ ...containerStyles, ...style }}
+        onKeyDown={this.onKeyDown}
       >
         {this.renderLeftArrow()}
         <div
