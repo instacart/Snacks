@@ -7,6 +7,7 @@ exports[`renders NavigationPills correctly 1`] = `
   <div>
     <div
       data-radium={true}
+      onKeyDown={[Function]}
       style={
         Object {
           "overflow": "hidden",
@@ -371,6 +372,7 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
   <div>
     <div
       data-radium={true}
+      onKeyDown={[Function]}
       style={
         Object {
           "overflow": "hidden",
@@ -725,6 +727,7 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
   <div>
     <div
       data-radium={true}
+      onKeyDown={[Function]}
       style={
         Object {
           "overflow": "hidden",
@@ -1101,6 +1104,7 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
   <div>
     <div
       data-radium={true}
+      onKeyDown={[Function]}
       style={
         Object {
           "overflow": "hidden",

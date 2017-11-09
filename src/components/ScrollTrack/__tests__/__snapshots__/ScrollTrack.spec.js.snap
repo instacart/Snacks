@@ -7,6 +7,7 @@ exports[`renders ScrollTrack correctly 1`] = `
   <div>
     <div
       data-radium={true}
+      onKeyDown={[Function]}
       style={
         Object {
           "overflow": "hidden",
@@ -190,6 +191,7 @@ exports[`renders ScrollTrack with animation props correctly 1`] = `
   <div>
     <div
       data-radium={true}
+      onKeyDown={[Function]}
       style={
         Object {
           "overflow": "hidden",
@@ -388,6 +390,7 @@ exports[`renders custom ScrollTrack buttons correctly 1`] = `
   <div>
     <div
       data-radium={true}
+      onKeyDown={[Function]}
       style={
         Object {
           "overflow": "hidden",

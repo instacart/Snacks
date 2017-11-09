@@ -55,6 +55,7 @@ module.exports = {
     "react/jsx-indent": [2, 2],
     "react/jsx-key": "error",
     "react/jsx-no-duplicate-props": [2],
-    "jsx-a11y/label-has-for": "off"
+    "jsx-a11y/label-has-for": "off",
+    "jsx-a11y/no-static-element-interactions": "off"
   }
 }
