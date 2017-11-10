@@ -279,8 +279,10 @@ class ScrollTrack extends Component {
   updateLeftValue({left, callback, callbackProps}) {
     this.setState({ left }, () => {
       this.computeSlideAttributes()
-      callback(callbackProps)
-      setTimeout(this.setNotSliding, this.props.scrollSpeed)
+      setTimeout(() => {
+        this.setNotSliding()
+        callback(callbackProps)
+      }, this.props.scrollSpeed)
     })
   }
 
