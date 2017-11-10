@@ -226,6 +226,7 @@ class ScrollTrack extends Component {
     onBeforeNext(callbackProps).then(() => {
       // calcuate track values once more, in case children have changed the track size
       const { parentWidth, trackWidth } = this.getNodeWidths()
+      const fullForward = parentWidth - trackWidth
       let nextForward = (this.state.left - parentWidth) + scrollOffset
 
       // already is, or is going to be, full forward
