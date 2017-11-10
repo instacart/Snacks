@@ -43,11 +43,14 @@ class ScrollTrack extends Component {
     /**  function to be called after sliding to previous set. */
     onAfterBack: PropTypes.func,
 
-    /** Transition timing function to use for scrolling animation - defaults to ease-in-out */
-    scrollTimingFunction: PropTypes.string,
+    /** number of pixels to offset forward scrolls by */
+    scrollOffset: PropTypes.number,
 
     /** Speed of scrolling animaton in milleseconds - defaults to 150ms */
     scrollSpeed: PropTypes.number,
+
+    /** Transition timing function to use for scrolling animation - defaults to ease-in-out */
+    scrollTimingFunction: PropTypes.string,
 
     /** Style top level element */
     style: PropTypes.object,
@@ -62,6 +65,7 @@ class ScrollTrack extends Component {
 
   static defaultProps = {
     leftOverride: 0,
+    scrollOffset: 0,
     scrollSpeed: 150,
     scrollTimingFunction: 'ease-in-out',
     styles: {
@@ -191,9 +195,9 @@ class ScrollTrack extends Component {
 
   slideForward = () => {
     const { parentWidth, trackWidth } = this.getNodeWidths()
-    let nextForward = this.state.left - parentWidth
+    let nextForward = (this.state.left - parentWidth) + scrollOffset
     const fullForward = parentWidth - trackWidth
-    const { onBeforeNext, onAfterNext } = this.props
+    const { onBeforeNext, onAfterNext, scrollOffset } = this.props
 
     // already is, or is going to be, full forward
     if (nextForward <= fullForward) { nextForward = fullForward }
@@ -209,7 +213,7 @@ class ScrollTrack extends Component {
     onBeforeNext(callbackProps).then(() => {
       // calcuate track values once more, in case children have changed the track size
       const { parentWidth, trackWidth } = this.getNodeWidths()
-      let nextForward = this.state.left - parentWidth
+      let nextForward = (this.state.left - parentWidth) + scrollOffset
 
       // already is, or is going to be, full forward
       if (nextForward <= fullForward) { nextForward = fullForward }

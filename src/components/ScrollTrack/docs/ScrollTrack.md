@@ -280,3 +280,47 @@ Using custom next and back button content
         <Icon name="cart" style={styles} />
       </div>
     </ScrollTrack>
+
+Using Scroll offset
+
+
+    offsetStyles = { height: '56px', lineHeight: '56px', width: '208px', backgroundColor: '#fff', display: 'inline-block', textAlign: 'center'};
+    innerOffsetStyles={ margin: '0 16px', backgroundColor: '#efefef' };
+    <div style={{ width: '1248px' }}>
+      <ScrollTrack
+        styles={{ Track: { height: '56px' } }}
+        scrollOffset={104}
+      >
+        <div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>1</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>2</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>3</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>4</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>5</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>6</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>7</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>8</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>9</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>10</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>11</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>12</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>13</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>14</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>15</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>16</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>17</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>18</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>19</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>20</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>21</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>22</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>23</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>24</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>25</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>26</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>27</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>28</div></div>
+          <div style={offsetStyles}><div style={innerOffsetStyles}>29</div></div>
+        </div>
+      </ScrollTrack>
+    </div>
