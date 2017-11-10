@@ -68,6 +68,7 @@ class ScrollTrack extends Component {
     scrollOffset: 0,
     scrollSpeed: 150,
     scrollTimingFunction: 'ease-in-out',
+    isSliding: false,
     styles: {
       LeftArrow: {},
       RightArrow: {},
@@ -193,7 +194,17 @@ class ScrollTrack extends Component {
     this.setState({ showLeftArrow: true })
   }
 
+  setSliding = () => {
+    this.setState({ isSliding: true })
+  }
+
+  setNotSliding = () => {
+    this.setState({ isSliding: false })
+  }
+
   slideForward = () => {
+    if (this.state.isSliding) { return } //already sliding
+    
     const { parentWidth, trackWidth } = this.getNodeWidths()
     let nextForward = (this.state.left - parentWidth) + scrollOffset
     const fullForward = parentWidth - trackWidth
@@ -209,6 +220,8 @@ class ScrollTrack extends Component {
       parentWidth,
       trackWidth
     }
+
+    this.setSliding()
 
     onBeforeNext(callbackProps).then(() => {
       // calcuate track values once more, in case children have changed the track size
@@ -234,9 +247,11 @@ class ScrollTrack extends Component {
   }
 
   slideBack = () => {
+    if (this.state.isSliding) { return } //already sliding
+
     const { parentWidth, trackWidth } = this.getNodeWidths()
-    let nextBack = this.state.left + parentWidth
-    const { onBeforeBack, onAfterBack } = this.props
+    const { onBeforeBack, onAfterBack, scrollOffset } = this.props
+    let nextBack = (this.state.left + parentWidth) - scrollOffset
 
     // already is, or is going to be, full back
     if (this.state.left >= 0 || nextBack >= 0) { nextBack = 0 }
@@ -248,6 +263,8 @@ class ScrollTrack extends Component {
       parentWidth,
       trackWidth
     }
+
+    this.setSliding()
 
     onBeforeBack(callbackProps)
 
@@ -262,12 +279,13 @@ class ScrollTrack extends Component {
     this.setState({ left }, () => {
       this.computeSlideAttributes()
       callback(callbackProps)
+      setTimeout(this.setNotSliding, this.props.scrollSpeed)
     })
   }
 
   renderRightArrow = () => {
     const { slideButtonStyles } = componentStyles
-    const { showRightArrow } = this.state
+    const { isSliding, showRightArrow } = this.state
     const { styles: { RightArrow = {} }, nextButtonContent } = this.props
 
     return (
@@ -293,7 +311,7 @@ class ScrollTrack extends Component {
 
   renderLeftArrow = () => {
     const { slideButtonStyles } = componentStyles
-    const { showLeftArrow } = this.state
+    const { isSliding, showLeftArrow } = this.state
     const { styles: { LeftArrow = {} }, backButtonContent } = this.props
 
     return (

@@ -286,7 +286,7 @@ Using Scroll offset
 
     offsetStyles = { height: '56px', lineHeight: '56px', width: '208px', backgroundColor: '#fff', display: 'inline-block', textAlign: 'center'};
     innerOffsetStyles={ margin: '0 16px', backgroundColor: '#efefef' };
-    <div style={{ width: '1248px' }}>
+    <div style={{ margin: '0 auto', width: '816px' }}>
       <ScrollTrack
         styles={{ Track: { height: '56px' } }}
         scrollOffset={104}
