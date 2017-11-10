@@ -68,7 +68,6 @@ class ScrollTrack extends Component {
     scrollOffset: 0,
     scrollSpeed: 150,
     scrollTimingFunction: 'ease-in-out',
-    isSliding: false,
     styles: {
       LeftArrow: {},
       RightArrow: {},
@@ -85,6 +84,7 @@ class ScrollTrack extends Component {
     super(props)
 
     this.state = {
+      isSliding: false,
       showLeftArrow: false,
       showRightArrow: false,
       left: props.leftOverride
@@ -204,7 +204,7 @@ class ScrollTrack extends Component {
 
   slideForward = () => {
     if (this.state.isSliding) { return } //already sliding
-    
+
     const { parentWidth, trackWidth } = this.getNodeWidths()
     let nextForward = (this.state.left - parentWidth) + scrollOffset
     const fullForward = parentWidth - trackWidth
@@ -285,7 +285,7 @@ class ScrollTrack extends Component {
 
   renderRightArrow = () => {
     const { slideButtonStyles } = componentStyles
-    const { isSliding, showRightArrow } = this.state
+    const { showRightArrow } = this.state
     const { styles: { RightArrow = {} }, nextButtonContent } = this.props
 
     return (
@@ -311,7 +311,7 @@ class ScrollTrack extends Component {
 
   renderLeftArrow = () => {
     const { slideButtonStyles } = componentStyles
-    const { isSliding, showLeftArrow } = this.state
+    const { showLeftArrow } = this.state
     const { styles: { LeftArrow = {} }, backButtonContent } = this.props
 
     return (
