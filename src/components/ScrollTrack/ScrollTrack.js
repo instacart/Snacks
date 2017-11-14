@@ -34,7 +34,12 @@ class ScrollTrack extends Component {
     */
     onBeforeNext: PropTypes.func,
 
-    /**  function to be called before sliding to previous set. */
+    /**
+    * A callback called before sliding to previous set.
+    * ** Passed function must return a promsie **
+    * -- will wait for promise resolution before continuing slide.
+    * Use for high levels of control
+    */
     onBeforeBack: PropTypes.func,
 
     /**  function to be called after sliding to next set. */
@@ -74,7 +79,7 @@ class ScrollTrack extends Component {
       Track: {}
     },
     style: {},
-    onBeforeBack: noOp,
+    onBeforeBack: () => new Promise(resolve => resolve()),
     onAfterNext: noOp,
     onAfterBack: noOp,
     onBeforeNext: () => new Promise(resolve => resolve())
@@ -226,6 +231,7 @@ class ScrollTrack extends Component {
     onBeforeNext(callbackProps).then(() => {
       // calcuate track values once more, in case children have changed the track size
       const { parentWidth, trackWidth } = this.getNodeWidths()
+      const { scrollOffset } = this.props
       const fullForward = parentWidth - trackWidth
       let nextForward = (this.state.left - parentWidth) + scrollOffset
 
@@ -267,12 +273,27 @@ class ScrollTrack extends Component {
 
     this.setSliding()
 
-    onBeforeBack(callbackProps)
+    onBeforeBack(callbackProps).then(() => {
+      // calcuate track values once more, in case children have changed the track size
+      const { parentWidth, trackWidth } = this.getNodeWidths()
+      const { scrollOffset } = this.props
+      let nextBack = (this.state.left + parentWidth) - scrollOffset
 
-    this.updateLeftValue({
-      left: nextBack,
-      callback: onAfterBack,
-      callbackProps
+      // already is, or is going to be, full back
+      if (this.state.left >= 0 || nextBack >= 0) { nextBack = 0 }
+
+      this.updateLeftValue({
+        left: nextBack,
+        callback: onAfterBack,
+        callbackProps: {
+          ...callbackProps,
+          ...{
+            slideTo: nextBack,
+            parentWidth,
+            trackWidth
+          }
+        }
+      })
     })
   }
 

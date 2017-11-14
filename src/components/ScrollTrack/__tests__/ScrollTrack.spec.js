@@ -126,7 +126,7 @@ it('renders custom ScrollTrack buttons correctly', () => {
       backgroundColor: 'red'
     },
   }
-  
+
   const tree = renderer.create(
     <StyleRoot>
       <div>
@@ -270,7 +270,14 @@ it('onBefore promises & callbacks called correctly', async () => {
                 }, 1)
             })
           }}
-          onBeforeBack={() => { onBeforeBack() }}
+          onBeforeBack={() => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                  onBeforeBack()
+                  resolve()
+                }, 1)
+            })
+          }}
         >
           <p>one</p>
           <p>two</p>
@@ -307,7 +314,14 @@ it('onAfter promises & callbacks called correctly', async () => {
     <StyleRoot>
       <div>
         <ScrollTrack
-          onBeforeBack={onBeforeBack}
+          onBeforeBack={() => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                  onBeforeBack()
+                  resolve()
+                }, 1)
+            })
+          }}
           onAfterBack={onAfterBack}
           onAfterNext={onAfterNext}
           onBeforeNext={() => {
