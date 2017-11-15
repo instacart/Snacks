@@ -233,7 +233,7 @@ class ScrollTrack extends Component {
       const { parentWidth, trackWidth } = this.getNodeWidths()
       const offset = scrollOffset || this.props.scrollOffset
       const fullForward = parentWidth - trackWidth
-      let nextForward = (this.state.left - parentWidth) + scrollOffset
+      let nextForward = (this.state.left - parentWidth) + offset
 
       // already is, or is going to be, full forward
       if (nextForward <= fullForward) { nextForward = fullForward }
@@ -279,7 +279,7 @@ class ScrollTrack extends Component {
       // calcuate track values once more, in case children have changed the track size
       const { parentWidth, trackWidth } = this.getNodeWidths()
       const offset = scrollOffset || this.props.scrollOffset
-      let nextBack = (this.state.left + parentWidth) - scrollOffset
+      let nextBack = (this.state.left + parentWidth) - offset
 
       // already is, or is going to be, full back
       if (this.state.left >= 0 || nextBack >= 0) { nextBack = 0 }
