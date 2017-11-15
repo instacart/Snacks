@@ -20,7 +20,8 @@ Radio.propTypes = {
   }),
   children      : PropTypes.string,
   id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  isChecked     : PropTypes.bool,
+  isSelected    : PropTypes.bool,
+  name          : PropTypes.string,
   onClick       : PropTypes.func,
   styles        : PropTypes.shape({
     button        : PropTypes.object,

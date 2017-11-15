@@ -9,38 +9,57 @@ exports[`Checkbox generates a label if a child prop of text is supplied 1`] = `
     }
   }
 >
-  <input
-    aria-label={undefined}
-    checked={false}
+  <div
     data-radium={true}
-    id={1}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
     style={
       Object {
-        "-moz-appearance": "none",
-        "-ms-appearance": "none",
-        "-webkit-appearance": "none",
-        "appearance": "none",
-        "backgroundColor": "transparent",
-        "backgroundImage": "url(test-file-stub)",
-        "backgroundPosition": "center",
-        "backgroundRepeat": "no-repeat",
-        "backgroundSize": "contain",
-        "height": 22,
-        "margin": "0 10px -7px 0",
-        "width": 22,
+        "position": "relative",
       }
     }
-    type="checkbox"
-    value={undefined}
-  />
+  >
+    <img
+      alt=""
+      data-radium={true}
+      src="test-file-stub"
+      style={
+        Object {
+          "height": 22,
+          "width": 22,
+        }
+      }
+      tabIndex="-1"
+    />
+    <input
+      aria-label={undefined}
+      checked={false}
+      data-radium={true}
+      id={1}
+      onClick={[Function]}
+      style={
+        Object {
+          "-moz-appearance": "none",
+          "-ms-appearance": "none",
+          "-webkit-appearance": "none",
+          "appearance": "none",
+          "height": 22,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 22,
+        }
+      }
+      type="checkbox"
+      value={undefined}
+    />
+  </div>
   <label
     data-radium={true}
     htmlFor={1}
-    style={Object {}}
+    style={
+      Object {
+        "marginLeft": 10,
+      }
+    }
   >
     Test label
   </label>
@@ -57,41 +76,57 @@ exports[`Checkbox incorporates user styles if passed 1`] = `
     }
   }
 >
-  <input
-    aria-label={undefined}
-    checked={false}
+  <div
     data-radium={true}
-    id={1}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
     style={
       Object {
-        "-moz-appearance": "none",
-        "-ms-appearance": "none",
-        "-webkit-appearance": "none",
-        "appearance": "none",
-        "backgroundColor": "transparent",
-        "backgroundImage": "url(test-file-stub)",
-        "backgroundPosition": "center",
-        "backgroundRepeat": "no-repeat",
-        "backgroundSize": "contain",
         "border": "2px solid purple",
-        "height": 22,
-        "margin": "0 10px -7px 0",
-        "width": 22,
+        "position": "relative",
       }
     }
-    type="checkbox"
-    value={undefined}
-  />
+  >
+    <img
+      alt=""
+      data-radium={true}
+      src="test-file-stub"
+      style={
+        Object {
+          "height": 22,
+          "width": 22,
+        }
+      }
+      tabIndex="-1"
+    />
+    <input
+      aria-label={undefined}
+      checked={false}
+      data-radium={true}
+      id={1}
+      onClick={[Function]}
+      style={
+        Object {
+          "-moz-appearance": "none",
+          "-ms-appearance": "none",
+          "-webkit-appearance": "none",
+          "appearance": "none",
+          "height": 22,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 22,
+        }
+      }
+      type="checkbox"
+      value={undefined}
+    />
+  </div>
   <label
     data-radium={true}
     htmlFor={1}
     style={
       Object {
         "color": "green",
+        "marginLeft": 10,
       }
     }
   >
@@ -109,38 +144,57 @@ exports[`Checkbox incorporates user styles if passed 2`] = `
     }
   }
 >
-  <input
-    aria-label={undefined}
-    checked={false}
+  <div
     data-radium={true}
-    id={2}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
     style={
       Object {
-        "-moz-appearance": "none",
-        "-ms-appearance": "none",
-        "-webkit-appearance": "none",
-        "appearance": "none",
-        "backgroundColor": "transparent",
-        "backgroundImage": "url(test-file-stub)",
-        "backgroundPosition": "center",
-        "backgroundRepeat": "no-repeat",
-        "backgroundSize": "contain",
-        "height": 22,
-        "margin": "0 10px -7px 0",
-        "width": 22,
+        "position": "relative",
       }
     }
-    type="checkbox"
-    value={undefined}
-  />
+  >
+    <img
+      alt=""
+      data-radium={true}
+      src="test-file-stub"
+      style={
+        Object {
+          "height": 22,
+          "width": 22,
+        }
+      }
+      tabIndex="-1"
+    />
+    <input
+      aria-label={undefined}
+      checked={false}
+      data-radium={true}
+      id={2}
+      onClick={[Function]}
+      style={
+        Object {
+          "-moz-appearance": "none",
+          "-ms-appearance": "none",
+          "-webkit-appearance": "none",
+          "appearance": "none",
+          "height": 22,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 22,
+        }
+      }
+      type="checkbox"
+      value={undefined}
+    />
+  </div>
   <label
     data-radium={true}
     htmlFor={2}
-    style={Object {}}
+    style={
+      Object {
+        "marginLeft": 10,
+      }
+    }
   >
     Test label
   </label>
@@ -148,94 +202,139 @@ exports[`Checkbox incorporates user styles if passed 2`] = `
 `;
 
 exports[`Checkbox renders the correct button type 1`] = `
-<input
-  aria-label={undefined}
-  checked={false}
+<div
   data-radium={true}
-  id={1}
-  onClick={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onMouseDown={[Function]}
   style={
     Object {
-      "-moz-appearance": "none",
-      "-ms-appearance": "none",
-      "-webkit-appearance": "none",
-      "appearance": "none",
-      "backgroundColor": "transparent",
-      "backgroundImage": "url(test-file-stub)",
-      "backgroundPosition": "center",
-      "backgroundRepeat": "no-repeat",
-      "backgroundSize": "contain",
-      "height": 22,
-      "margin": "0 10px -7px 0",
-      "width": 22,
+      "position": "relative",
     }
   }
-  type="checkbox"
-  value={undefined}
-/>
+>
+  <img
+    alt=""
+    data-radium={true}
+    src="test-file-stub"
+    style={
+      Object {
+        "height": 22,
+        "width": 22,
+      }
+    }
+    tabIndex="-1"
+  />
+  <input
+    aria-label={undefined}
+    checked={false}
+    data-radium={true}
+    id={1}
+    onClick={[Function]}
+    style={
+      Object {
+        "-moz-appearance": "none",
+        "-ms-appearance": "none",
+        "-webkit-appearance": "none",
+        "appearance": "none",
+        "height": 22,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 22,
+      }
+    }
+    type="checkbox"
+    value={undefined}
+  />
+</div>
 `;
 
-exports[`Checkbox renders the correct checked state 1`] = `
-<input
-  aria-label={undefined}
-  checked={false}
+exports[`Checkbox renders the correct selected state 1`] = `
+<div
   data-radium={true}
-  id={1}
-  onClick={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onMouseDown={[Function]}
   style={
     Object {
-      "-moz-appearance": "none",
-      "-ms-appearance": "none",
-      "-webkit-appearance": "none",
-      "appearance": "none",
-      "backgroundColor": "transparent",
-      "backgroundImage": "url(test-file-stub)",
-      "backgroundPosition": "center",
-      "backgroundRepeat": "no-repeat",
-      "backgroundSize": "contain",
-      "height": 22,
-      "margin": "0 10px -7px 0",
-      "width": 22,
+      "position": "relative",
     }
   }
-  type="checkbox"
-  value={undefined}
-/>
+>
+  <img
+    alt=""
+    data-radium={true}
+    src="test-file-stub"
+    style={
+      Object {
+        "height": 22,
+        "width": 22,
+      }
+    }
+    tabIndex="-1"
+  />
+  <input
+    aria-label={undefined}
+    checked={false}
+    data-radium={true}
+    id={1}
+    onClick={[Function]}
+    style={
+      Object {
+        "-moz-appearance": "none",
+        "-ms-appearance": "none",
+        "-webkit-appearance": "none",
+        "appearance": "none",
+        "height": 22,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 22,
+      }
+    }
+    type="checkbox"
+    value={undefined}
+  />
+</div>
 `;
 
-exports[`Checkbox renders the correct checked state 2`] = `
-<input
-  aria-label={undefined}
-  checked={true}
+exports[`Checkbox renders the correct selected state 2`] = `
+<div
   data-radium={true}
-  id={2}
-  onClick={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onMouseDown={[Function]}
   style={
     Object {
-      "-moz-appearance": "none",
-      "-ms-appearance": "none",
-      "-webkit-appearance": "none",
-      "appearance": "none",
-      "backgroundColor": "transparent",
-      "backgroundImage": "url(test-file-stub)",
-      "backgroundPosition": "center",
-      "backgroundRepeat": "no-repeat",
-      "backgroundSize": "contain",
-      "height": 22,
-      "margin": "0 10px -7px 0",
-      "width": 22,
+      "position": "relative",
     }
   }
-  type="checkbox"
-  value={undefined}
-/>
+>
+  <img
+    alt=""
+    data-radium={true}
+    src="test-file-stub"
+    style={
+      Object {
+        "height": 22,
+        "width": 22,
+      }
+    }
+    tabIndex="-1"
+  />
+  <input
+    aria-label={undefined}
+    checked={true}
+    data-radium={true}
+    id={2}
+    onClick={[Function]}
+    style={
+      Object {
+        "-moz-appearance": "none",
+        "-ms-appearance": "none",
+        "-webkit-appearance": "none",
+        "appearance": "none",
+        "height": 22,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 22,
+      }
+    }
+    type="checkbox"
+    value={undefined}
+  />
+</div>
 `;
