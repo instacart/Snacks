@@ -228,10 +228,10 @@ class ScrollTrack extends Component {
 
     this.setSliding()
 
-    onBeforeNext(callbackProps).then(() => {
+    onBeforeNext(callbackProps).then(({ scrollOffset }) => {
       // calcuate track values once more, in case children have changed the track size
       const { parentWidth, trackWidth } = this.getNodeWidths()
-      const { scrollOffset } = this.props
+      const offset = scrollOffset || this.props.scrollOffset
       const fullForward = parentWidth - trackWidth
       let nextForward = (this.state.left - parentWidth) + scrollOffset
 
@@ -244,6 +244,8 @@ class ScrollTrack extends Component {
         callbackProps: {
           ...callbackProps,
           ...{
+            atStart: trackWidth <= parentWidth,
+            atEnd: fullForward === nextForward,
             slideTo: nextForward,
             parentWidth,
             trackWidth
@@ -273,10 +275,10 @@ class ScrollTrack extends Component {
 
     this.setSliding()
 
-    onBeforeBack(callbackProps).then(() => {
+    onBeforeBack(callbackProps).then(({ scrollOffset }) => {
       // calcuate track values once more, in case children have changed the track size
       const { parentWidth, trackWidth } = this.getNodeWidths()
-      const { scrollOffset } = this.props
+      const offset = scrollOffset || this.props.scrollOffset
       let nextBack = (this.state.left + parentWidth) - scrollOffset
 
       // already is, or is going to be, full back
