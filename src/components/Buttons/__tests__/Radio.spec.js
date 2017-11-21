@@ -61,7 +61,6 @@ describe('Radio', () => {
 
   it('calls the user-supplied onClick function', () => {
     const onClick = sinon.spy()
-    const testOnClick = () => testText
     const wrapper = mount(<Radio id={1} onClick={onClick} />)
 
     wrapper.find('input').simulate('click')

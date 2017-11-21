@@ -18,3 +18,17 @@ You can pass an object to the `styles` prop for styling the parent element. Opti
   <Radio id="radioColorGroup3" value="mail" styles={{label: {color: 'blue'}}}>Blue</Radio>
 </RadioGroup>
 ```
+
+### Callback
+You can keep track of the currently selected radio button by passing a callback to the `onChange` prop:
+```js
+function alertMeal(value, props) {
+  alert(`The current meal is "${value}" and the id is "${props.id}"`)
+}
+
+<RadioGroup name="radioMeal" onChange={alertMeal}>
+  <Radio id="radioMealGroup1" value="sushi">Sushi</Radio>
+  <Radio id="radioMealGroup2" value="hamburger">Hamburger</Radio>
+  <Radio id="radioMealGroup3" value="soup">Soup</Radio>
+</RadioGroup>
+```

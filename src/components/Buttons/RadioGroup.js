@@ -9,6 +9,8 @@ class RadioGroup extends React.Component {
   static propTypes = {
     children: PropTypes.arrayOf(Radio).isRequired,
     name: PropTypes.string.isRequired,
+    selectedBtn: PropTypes.instanceOf(Radio),
+    onChange: PropTypes.func,
     wrapEl: PropTypes.string,
     styles: PropTypes.shape({
       wrapEl: PropTypes.object,
@@ -21,27 +23,37 @@ class RadioGroup extends React.Component {
   }
 
   state = {
-    selectedInputBtnId: null,
+    selectedBtn: this.props.selectedBtn,
   }
 
-  inputBtnOnClick = (inputBtn) => {
-    return () => {
-      this.setState({selectedInputBtnId: inputBtn.props.id})
+  btnOnClick = (inputBtn) => {
+    const { onChange } = this.props
+
+    return (event) => {
+      if (onChange && inputBtn && inputBtn !== this.state.selectedBtn) {
+        onChange(event.target.value, inputBtn.props)
+      }
+
+      this.setState({selectedBtn: inputBtn})
     }
   }
 
   render() {
     const { children, styles, wrapEl: Element } = this.props
     const childrenWithProps = React.Children.map(children, child => {
+      const { selectedBtn } = this.state
+
       return React.cloneElement(child, {
         name: this.props.name,
-        onClick: this.inputBtnOnClick(child),
-        isSelected: child.props.id === this.state.selectedInputBtnId
+        onClick: this.btnOnClick(child),
+        isSelected: child.props.id === (selectedBtn ? selectedBtn.props.id : false)
       })
     })
 
     return (
-      <Element style={{...STYLES.wrapEl, ...styles.wrapEl}}>
+      <Element
+        style={{...STYLES.wrapEl, ...styles.wrapEl}}
+      >
         {childrenWithProps}
       </Element>
     )
