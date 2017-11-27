@@ -2,33 +2,32 @@ import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 
 const NOOP = () => {} // eslint-disable-line no-empty-function
+const INPUT_BTN_SIZE = 22
 
 const STYLES = {
   button: {
-    margin: '0 10px -7px 0',
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    backgroundColor: 'transparent',
+    position: 'relative',
+  },
+  inputBtn: {
+    width: INPUT_BTN_SIZE,
+    height: INPUT_BTN_SIZE,
     appearance: 'none',
-    '-ms-appearance': 'none',
-    '-moz-appearance': 'none',
-    '-webkit-appearance': 'none',
-    width: 22,
-    height: 22,
+    msAppearance: 'none',
+    mozAppearance: 'none',
+    webkitAppearance: 'none',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+  },
+  image: {
+    width: INPUT_BTN_SIZE,
+    height: INPUT_BTN_SIZE,
+  },
+  label: {
+    marginLeft: 10,
   },
   wrapEl: {
     display: 'flex',
-  }
-}
-
-function btnBkgStyle(asset) {
-  return {
-    backgroundImage: `url(${asset})`,
-    ':active': {
-      backgroundImage: `url(${asset})`,
-      border: '0 solid transparent'
-    }
   }
 }
 
@@ -43,7 +42,7 @@ class RadioCheckboxBase extends Component {
     btnType       : PropTypes.oneOf(['radio', 'checkbox']).isRequired,
     children      : PropTypes.string,
     id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    isChecked     : PropTypes.bool,
+    isSelected    : PropTypes.bool,
     onClick       : PropTypes.func,
     styles        : PropTypes.shape({
       button        : PropTypes.object,
@@ -56,83 +55,70 @@ class RadioCheckboxBase extends Component {
 
   static defaultProps = {
     aria        : {},
-    isChecked   : false,
+    isSelected  : false,
     onClick     : NOOP,
     styles      : {},
     wrapEl      : 'div',
   }
 
   state = {
-    isChecked   : this.props.isChecked,
+    isSelected  : this.props.isSelected,
   }
 
   componentWillReceiveProps(nextProps) {
-    const { isChecked } = nextProps
-    if (isChecked !== this.props.isChecked) { this.setState({isChecked}) }
-  }
-
-  getStyles() {
-    const { styles, assets } = this.props
-    const { isChecked } = this.state
-    const { btnBkg } = assets
-    const isCheckedStyle = btnBkgStyle(isChecked ? btnBkg.checked : btnBkg.base)
-
-    return {
-      button  : { ...STYLES.button, ...isCheckedStyle, ...styles.button },
-      label   : {...styles.label},
-      wrapEl  : {...STYLES.wrapEl, ...styles.wrapEl},
-    }
+    this.setState({isSelected: nextProps.isSelected})
   }
 
   onClick = (event) => {
-    const { isChecked } = this.state
+    const { isSelected } = this.state
 
-    this.setState({isChecked: !isChecked})
-    this.props.onClick(event, {...this.props, isChecked: !isChecked})
+    this.setState({isSelected: !isSelected})
+    this.props.onClick(event, {...this.props, isSelected: !isSelected})
   }
 
-  renderButtonOnly() {
-    const { aria, btnType, id, value } = this.props
-    const { isChecked } = this.state
-    const styles = this.getStyles()
+  renderInputBtn() {
+    const { aria, assets, btnType, id, styles, value } = this.props
+    const { isSelected } = this.state
+    const isSelectedImg = isSelected ? assets.btnBkg.checked : assets.btnBkg.base
 
     return (
-      <input
-        id={id}
-        type={btnType}
-        onClick={this.onClick}
-        style={styles.button}
-        aria-label={aria.label}
-        value={value}
-        checked={isChecked}
-      />
-    )
-  }
-
-  renderButtonGroup() {
-    const { aria, btnType, children, id, value, wrapEl } = this.props
-    const { isChecked } = this.state
-    const Element = wrapEl
-    const styles = this.getStyles()
-
-    return (
-      <Element style={styles.wrapEl}>
+      <div style={{...STYLES.button, ...styles.button}}>
+        <img
+          style={STYLES.image}
+          src={isSelectedImg}
+          tabIndex='-1'
+          alt=''
+        />
         <input
           id={id}
           type={btnType}
           onClick={this.onClick}
-          style={styles.button}
-          aria-label={aria.label}
+          style={STYLES.inputBtn}
           value={value}
-          checked={isChecked}
+          checked={isSelected}
+          aria-label={aria.label}
         />
-        <label htmlFor={id} style={styles.label}>{children}</label>
-      </Element>
+      </div>
     )
   }
 
   render() {
-    return this.props.children ? this.renderButtonGroup() : this.renderButtonOnly()
+    const { children: labelText, id, styles,  wrapEl } = this.props
+    const Element = wrapEl
+
+    // ensure both text and id were supplied so the button and label are correctly associated
+    if (labelText && id) {
+      return (
+        <Element style={{...STYLES.wrapEl, ...styles.wrapEl}}>
+          {this.renderInputBtn()}
+          <label htmlFor={id} style={{...STYLES.label, ...styles.label}}>
+            {labelText}
+          </label>
+        </Element>
+      )
+    }
+    
+    return this.renderInputBtn()
   }
 }
 

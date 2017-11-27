@@ -12,10 +12,10 @@ describe('Checkbox', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it("renders the correct checked state", () => {
+  it("renders the correct selected state", () => {
     const testCases = [
-      { id: 1, isChecked: false },
-      { id: 2, isChecked: true },
+      { id: 1, isSelected: false },
+      { id: 2, isSelected: true },
     ]
 
     testCases.forEach(props => {

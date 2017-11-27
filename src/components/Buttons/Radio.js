@@ -1,12 +1,12 @@
 import React, { PropTypes } from 'react'
 import RadioCheckboxBase from '../../base/RadioCheckboxBase'
-import svgRadioBtnBase from '../../assets/radioBtnBase.svg'
-import svgRadioBtnChecked from '../../assets/radioBtnChecked.svg'
+import svgRadioBase from '../../assets/radioBase.svg'
+import svgRadioChecked from '../../assets/radioChecked.svg'
 
 const ASSETS = {
   btnBkg: {
-    base: svgRadioBtnBase,
-    checked: svgRadioBtnChecked,
+    base: svgRadioBase,
+    checked: svgRadioChecked,
   }
 }
 
@@ -20,7 +20,8 @@ Radio.propTypes = {
   }),
   children      : PropTypes.string,
   id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  isChecked     : PropTypes.bool,
+  isSelected    : PropTypes.bool,
+  name          : PropTypes.string,
   onClick       : PropTypes.func,
   styles        : PropTypes.shape({
     button        : PropTypes.object,

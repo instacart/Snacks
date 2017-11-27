@@ -12,10 +12,10 @@ describe('Radio', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it("renders the correct checked state", () => {
+  it("renders the correct selected state", () => {
     const testCases = [
-      { id: 1, isChecked: false },
-      { id: 2, isChecked: true },
+      { id: 1, isSelected: false },
+      { id: 2, isSelected: true },
     ]
 
     testCases.forEach(props => {
@@ -61,7 +61,6 @@ describe('Radio', () => {
 
   it('calls the user-supplied onClick function', () => {
     const onClick = sinon.spy()
-    const testOnClick = () => testText
     const wrapper = mount(<Radio id={1} onClick={onClick} />)
 
     wrapper.find('input').simulate('click')

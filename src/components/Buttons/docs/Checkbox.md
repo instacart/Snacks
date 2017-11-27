@@ -9,7 +9,7 @@ Associating a label to every radio button is very important for accessibility pu
 <div style={{display: 'flex', flexDirection: 'column'}}>
   <div style={{display: 'flex', marginBottom: 20}}>
     <Checkbox id="checkbox1" isChecked />
-    <label htmlFor="checkbox1">Label associated manually</label>
+    <label htmlFor="checkbox1" style={{marginLeft: 10}}>Label associated manually</label>
   </div>
   <Checkbox id="checkbox2">Label auto-generated</Checkbox>
 </div>
@@ -22,8 +22,8 @@ You can pass an object to the `styles` prop for styling the label, radio button 
   id="checkbox3"
   wrapEl='span'
   styles={{
-    wrapEl: {padding: 10, border: '1px dotted gray'},
-    button: {':hover': {backgroundColor: 'salmon', borderRadius: '15%'}},
+    wrapEl: {padding: 10, border: '2px dotted lightblue'},
+    button: {marginRight: 40},
     label: {color: 'salmon'},
   }}
 >
@@ -36,8 +36,8 @@ You can pass an object to the `styles` prop for styling the label, radio button 
 You can pass a callback through the `onClick` prop:
 
 ```js
-function onClick(event, isChecked) {
-  alert(`This button is ${isChecked ? '' : 'not '}checked`)
+function onClick(event, props) {
+  alert(`This button is ${props.isSelected ? '' : 'not '}checked`)
 }
 
 <Checkbox id="checkbox4" onClick={onClick}>Click me!</Checkbox>
