@@ -12,9 +12,9 @@ const STYLES = {
     width: INPUT_BTN_SIZE,
     height: INPUT_BTN_SIZE,
     appearance: 'none',
-    msAppearance: 'none',
-    mozAppearance: 'none',
-    webkitAppearance: 'none',
+    MsAppearance: 'none',
+    MozAppearance: 'none',
+    WebkitAppearance: 'none',
     position: 'absolute',
     top: 0,
     left: 0,
@@ -117,7 +117,7 @@ class RadioCheckboxBase extends Component {
         </Element>
       )
     }
-    
+
     return this.renderInputBtn()
   }
 }
