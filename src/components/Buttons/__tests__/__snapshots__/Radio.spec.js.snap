@@ -37,14 +37,14 @@ exports[`Radio generates a label if a child prop of text is supplied 1`] = `
       onClick={[Function]}
       style={
         Object {
+          "MozAppearance": "none",
+          "MsAppearance": "none",
+          "WebkitAppearance": "none",
           "appearance": "none",
           "height": 22,
           "left": 0,
-          "mozAppearance": "none",
-          "msAppearance": "none",
           "position": "absolute",
           "top": 0,
-          "webkitAppearance": "none",
           "width": 22,
         }
       }
@@ -105,14 +105,14 @@ exports[`Radio incorporates user styles if passed 1`] = `
       onClick={[Function]}
       style={
         Object {
+          "MozAppearance": "none",
+          "MsAppearance": "none",
+          "WebkitAppearance": "none",
           "appearance": "none",
           "height": 22,
           "left": 0,
-          "mozAppearance": "none",
-          "msAppearance": "none",
           "position": "absolute",
           "top": 0,
-          "webkitAppearance": "none",
           "width": 22,
         }
       }
@@ -172,14 +172,14 @@ exports[`Radio incorporates user styles if passed 2`] = `
       onClick={[Function]}
       style={
         Object {
+          "MozAppearance": "none",
+          "MsAppearance": "none",
+          "WebkitAppearance": "none",
           "appearance": "none",
           "height": 22,
           "left": 0,
-          "mozAppearance": "none",
-          "msAppearance": "none",
           "position": "absolute",
           "top": 0,
-          "webkitAppearance": "none",
           "width": 22,
         }
       }
@@ -230,14 +230,14 @@ exports[`Radio renders the correct button type 1`] = `
     onClick={[Function]}
     style={
       Object {
+        "MozAppearance": "none",
+        "MsAppearance": "none",
+        "WebkitAppearance": "none",
         "appearance": "none",
         "height": 22,
         "left": 0,
-        "mozAppearance": "none",
-        "msAppearance": "none",
         "position": "absolute",
         "top": 0,
-        "webkitAppearance": "none",
         "width": 22,
       }
     }
@@ -276,14 +276,14 @@ exports[`Radio renders the correct selected state 1`] = `
     onClick={[Function]}
     style={
       Object {
+        "MozAppearance": "none",
+        "MsAppearance": "none",
+        "WebkitAppearance": "none",
         "appearance": "none",
         "height": 22,
         "left": 0,
-        "mozAppearance": "none",
-        "msAppearance": "none",
         "position": "absolute",
         "top": 0,
-        "webkitAppearance": "none",
         "width": 22,
       }
     }
@@ -322,14 +322,14 @@ exports[`Radio renders the correct selected state 2`] = `
     onClick={[Function]}
     style={
       Object {
+        "MozAppearance": "none",
+        "MsAppearance": "none",
+        "WebkitAppearance": "none",
         "appearance": "none",
         "height": 22,
         "left": 0,
-        "mozAppearance": "none",
-        "msAppearance": "none",
         "position": "absolute",
         "top": 0,
-        "webkitAppearance": "none",
         "width": 22,
       }
     }
