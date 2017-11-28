@@ -10,6 +10,7 @@ import { darken } from '../../utils'
 const noop = () => {} // eslint-disable-line no-empty-function
 
 const baseStyles = {
+  textAlign: 'center',
   touchAction: 'manipulation',
   cursor: 'pointer',
   border: '1px solid transparent',
