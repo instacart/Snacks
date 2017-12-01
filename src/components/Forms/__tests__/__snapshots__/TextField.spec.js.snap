@@ -79,6 +79,7 @@ exports[`renders TextField correctly 1`] = `
           onChange={[Function]}
           onFocus={[Function]}
           onKeyDown={undefined}
+          placeholder=""
           style={
             Object {
               "WebkitOpacity": 1,
