@@ -1,0 +1,1233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Select correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "cursor": "auto",
+          "display": "inline-block",
+          "position": "relative",
+          "width": "343px",
+        }
+      }
+    >
+      <div
+        data-radium={true}
+      >
+        <div
+          data-radium={true}
+          onKeyDown={[Function]}
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              aria-expanded={false}
+              aria-haspopup={true}
+              data-radium={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                aria-invalid={false}
+                aria-required={undefined}
+                data-radium={true}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "WebkitOpacity": 1,
+                    "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+                    "backgroundColor": "#FFF",
+                    "border": "solid 1px #BDBDBD",
+                    "borderRadius": "4px",
+                    "boxSizing": "border-box",
+                    "color": "#424242",
+                    "fontSize": "16px",
+                    "height": "56px",
+                    "margin": "0",
+                    "outline": "none",
+                    "padding": "25px 8px 8px 8px",
+                    "position": "relative",
+                  }
+                }
+                tabIndex={0}
+              >
+                <label
+                  data-radium={true}
+                  htmlFor={undefined}
+                  style={
+                    Object {
+                      "color": "#757575",
+                      "cursor": "text",
+                      "fontSize": "16px",
+                      "left": 0,
+                      "margin": "0",
+                      "pointerEvents": "auto",
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": "scale(1) translate(8px, 17px)",
+                      "transformOrigin": "left top",
+                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                      "userSelect": "none",
+                      "zIndex": 1,
+                    }
+                  }
+                >
+                  Country
+                </label>
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "overflow": "hidden",
+                      "textOverflow": "ellipsis",
+                      "userSelect": "none",
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "color": "#BDBDBD",
+                        "cursor": "inherit",
+                        "fontSize": "16px",
+                        "left": 0,
+                        "opacity": 0,
+                        "pointerEvents": "none",
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": "scale(1) translate(9px, 23px)",
+                        "transformOrigin": "left top",
+                        "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "zIndex": 1,
+                      }
+                    }
+                  >
+                    Select a country
+                  </div>
+                </div>
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "column",
+                      "float": "right",
+                      "paddingLeft": "1px",
+                      "userSelect": "none",
+                    }
+                  }
+                >
+                  <i
+                    aria-hidden={true}
+                    data-radium={true}
+                    onClick={undefined}
+                    style={
+                      Object {
+                        "color": "#43B02A",
+                        "fontFamily": "ic-icons",
+                        "fontSize": "16px",
+                        "fontSmoothing": "antialiased",
+                        "fontStyle": "normal",
+                        "fontVariant": "normal",
+                        "fontWeight": "normal",
+                        "lineHeight": "1",
+                        "osxFontSmoothing": "grayscale",
+                        "position": "relative",
+                        "speak": "none",
+                        "textTransform": "none",
+                        "transition": "transform 100ms",
+                        "userSelect": "none",
+                      }
+                    }
+                  >
+                    
+                  </i>
+                </div>
+              </div>
+            </div>
+            <div
+              data-radium={true}
+              style={
+                Object {
+                  "display": "none",
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 9999,
+                }
+              }
+            >
+              <div
+                aria-hidden={true}
+                onBlur={[Function]}
+                onKeyDown={[Function]}
+                role="menu"
+                style={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderRadius": "4px",
+                    "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
+                    "display": "inline-block",
+                    "maxHeight": 500,
+                    "outline": "none",
+                    "overflowY": "auto",
+                    "padding": "8px 0",
+                    "userSelect": "none",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  data-radium={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="menuitem"
+                  style={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "padding": "16px 0",
+                    }
+                  }
+                  tabIndex={0}
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "display": "table",
+                      }
+                    }
+                  >
+                    <div
+                      data-radium={true}
+                      style={
+                        Object {
+                          "padding": "0 16px",
+                          "whiteSpace": "nowrap",
+                        }
+                      }
+                    >
+                      United States
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-radium={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="menuitem"
+                  style={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "padding": "16px 0",
+                    }
+                  }
+                  tabIndex={0}
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "display": "table",
+                      }
+                    }
+                  >
+                    <div
+                      data-radium={true}
+                      style={
+                        Object {
+                          "padding": "0 16px",
+                          "whiteSpace": "nowrap",
+                        }
+                      }
+                    >
+                      Canada
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-atomic={true}
+          aria-live="assertive"
+          data-radium={true}
+          id="error_test_id"
+          style={
+            Object {
+              "color": "#B30029",
+              "display": "none",
+              "fontSize": "12px",
+              "marginLeft": "1px",
+              "marginTop": "2px",
+              "opacity": "0",
+              "pointerEvents": "none",
+              "textAlign": "left",
+              "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders Select w/ server error correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "cursor": "auto",
+          "display": "inline-block",
+          "position": "relative",
+          "width": "343px",
+        }
+      }
+    >
+      <div
+        data-radium={true}
+      >
+        <div
+          data-radium={true}
+          onKeyDown={[Function]}
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              aria-expanded={false}
+              aria-haspopup={true}
+              data-radium={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                aria-invalid={false}
+                aria-required={undefined}
+                data-radium={true}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "WebkitOpacity": 1,
+                    "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+                    "backgroundColor": "#EEEEEE",
+                    "border": "1px dashed #BDBDBD",
+                    "borderRadius": "4px",
+                    "boxSizing": "border-box",
+                    "color": "#757575",
+                    "fontSize": "16px",
+                    "height": "56px",
+                    "margin": "0",
+                    "outline": "none",
+                    "padding": "25px 8px 8px 8px",
+                    "position": "relative",
+                  }
+                }
+                tabIndex={0}
+              >
+                <label
+                  data-radium={true}
+                  htmlFor={undefined}
+                  style={
+                    Object {
+                      "color": "#BDBDBD",
+                      "cursor": "not-allowed",
+                      "fontSize": "16px",
+                      "left": 0,
+                      "margin": "0",
+                      "pointerEvents": "auto",
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": "scale(1) translate(8px, 17px)",
+                      "transformOrigin": "left top",
+                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                      "userSelect": "none",
+                      "zIndex": 1,
+                    }
+                  }
+                >
+                  Country
+                </label>
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "overflow": "hidden",
+                      "textOverflow": "ellipsis",
+                      "userSelect": "none",
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "color": "#BDBDBD",
+                        "cursor": "not-allowed",
+                        "fontSize": "16px",
+                        "left": 0,
+                        "opacity": 0,
+                        "pointerEvents": "none",
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": "scale(1) translate(9px, 23px)",
+                        "transformOrigin": "left top",
+                        "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "zIndex": 1,
+                      }
+                    }
+                  >
+                    Select a country
+                  </div>
+                </div>
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "column",
+                      "float": "right",
+                      "paddingLeft": "1px",
+                      "userSelect": "none",
+                    }
+                  }
+                >
+                  <i
+                    aria-hidden={true}
+                    data-radium={true}
+                    onClick={undefined}
+                    style={
+                      Object {
+                        "color": "#757575",
+                        "fontFamily": "ic-icons",
+                        "fontSize": "16px",
+                        "fontSmoothing": "antialiased",
+                        "fontStyle": "normal",
+                        "fontVariant": "normal",
+                        "fontWeight": "normal",
+                        "lineHeight": "1",
+                        "osxFontSmoothing": "grayscale",
+                        "position": "relative",
+                        "speak": "none",
+                        "textTransform": "none",
+                        "transition": "transform 100ms",
+                        "userSelect": "none",
+                      }
+                    }
+                  >
+                    
+                  </i>
+                </div>
+              </div>
+            </div>
+            <div
+              data-radium={true}
+              style={
+                Object {
+                  "display": "none",
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 9999,
+                }
+              }
+            >
+              <div
+                aria-hidden={true}
+                onBlur={[Function]}
+                onKeyDown={[Function]}
+                role="menu"
+                style={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderRadius": "4px",
+                    "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
+                    "display": "inline-block",
+                    "maxHeight": 500,
+                    "outline": "none",
+                    "overflowY": "auto",
+                    "padding": "8px 0",
+                    "userSelect": "none",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  data-radium={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="menuitem"
+                  style={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "padding": "16px 0",
+                    }
+                  }
+                  tabIndex={0}
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "display": "table",
+                      }
+                    }
+                  >
+                    <div
+                      data-radium={true}
+                      style={
+                        Object {
+                          "padding": "0 16px",
+                          "whiteSpace": "nowrap",
+                        }
+                      }
+                    >
+                      United States
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-radium={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="menuitem"
+                  style={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "padding": "16px 0",
+                    }
+                  }
+                  tabIndex={0}
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "display": "table",
+                      }
+                    }
+                  >
+                    <div
+                      data-radium={true}
+                      style={
+                        Object {
+                          "padding": "0 16px",
+                          "whiteSpace": "nowrap",
+                        }
+                      }
+                    >
+                      Canada
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-atomic={true}
+          aria-live="assertive"
+          data-radium={true}
+          id="error_test_id"
+          style={
+            Object {
+              "color": "#B30029",
+              "display": "none",
+              "fontSize": "12px",
+              "marginLeft": "1px",
+              "marginTop": "2px",
+              "opacity": "0",
+              "pointerEvents": "none",
+              "textAlign": "left",
+              "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+            }
+          }
+        >
+          Select a valid country
+        </div>
+      </div>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders disabled Select correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "cursor": "auto",
+          "display": "inline-block",
+          "position": "relative",
+          "width": "343px",
+        }
+      }
+    >
+      <div
+        data-radium={true}
+      >
+        <div
+          data-radium={true}
+          onKeyDown={[Function]}
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              aria-expanded={false}
+              aria-haspopup={true}
+              data-radium={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                aria-invalid={false}
+                aria-required={undefined}
+                data-radium={true}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "WebkitOpacity": 1,
+                    "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+                    "backgroundColor": "#EEEEEE",
+                    "border": "1px dashed #BDBDBD",
+                    "borderRadius": "4px",
+                    "boxSizing": "border-box",
+                    "color": "#757575",
+                    "fontSize": "16px",
+                    "height": "56px",
+                    "margin": "0",
+                    "outline": "none",
+                    "padding": "25px 8px 8px 8px",
+                    "position": "relative",
+                  }
+                }
+                tabIndex={0}
+              >
+                <label
+                  data-radium={true}
+                  htmlFor={undefined}
+                  style={
+                    Object {
+                      "color": "#BDBDBD",
+                      "cursor": "not-allowed",
+                      "fontSize": "16px",
+                      "left": 0,
+                      "margin": "0",
+                      "pointerEvents": "auto",
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": "scale(1) translate(8px, 17px)",
+                      "transformOrigin": "left top",
+                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                      "userSelect": "none",
+                      "zIndex": 1,
+                    }
+                  }
+                >
+                  Country
+                </label>
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "overflow": "hidden",
+                      "textOverflow": "ellipsis",
+                      "userSelect": "none",
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "color": "#BDBDBD",
+                        "cursor": "not-allowed",
+                        "fontSize": "16px",
+                        "left": 0,
+                        "opacity": 0,
+                        "pointerEvents": "none",
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": "scale(1) translate(9px, 23px)",
+                        "transformOrigin": "left top",
+                        "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "zIndex": 1,
+                      }
+                    }
+                  >
+                    Select a country
+                  </div>
+                </div>
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "column",
+                      "float": "right",
+                      "paddingLeft": "1px",
+                      "userSelect": "none",
+                    }
+                  }
+                >
+                  <i
+                    aria-hidden={true}
+                    data-radium={true}
+                    onClick={undefined}
+                    style={
+                      Object {
+                        "color": "#757575",
+                        "fontFamily": "ic-icons",
+                        "fontSize": "16px",
+                        "fontSmoothing": "antialiased",
+                        "fontStyle": "normal",
+                        "fontVariant": "normal",
+                        "fontWeight": "normal",
+                        "lineHeight": "1",
+                        "osxFontSmoothing": "grayscale",
+                        "position": "relative",
+                        "speak": "none",
+                        "textTransform": "none",
+                        "transition": "transform 100ms",
+                        "userSelect": "none",
+                      }
+                    }
+                  >
+                    
+                  </i>
+                </div>
+              </div>
+            </div>
+            <div
+              data-radium={true}
+              style={
+                Object {
+                  "display": "none",
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 9999,
+                }
+              }
+            >
+              <div
+                aria-hidden={true}
+                onBlur={[Function]}
+                onKeyDown={[Function]}
+                role="menu"
+                style={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderRadius": "4px",
+                    "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
+                    "display": "inline-block",
+                    "maxHeight": 500,
+                    "outline": "none",
+                    "overflowY": "auto",
+                    "padding": "8px 0",
+                    "userSelect": "none",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  data-radium={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="menuitem"
+                  style={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "padding": "16px 0",
+                    }
+                  }
+                  tabIndex={0}
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "display": "table",
+                      }
+                    }
+                  >
+                    <div
+                      data-radium={true}
+                      style={
+                        Object {
+                          "padding": "0 16px",
+                          "whiteSpace": "nowrap",
+                        }
+                      }
+                    >
+                      United States
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-radium={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="menuitem"
+                  style={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "padding": "16px 0",
+                    }
+                  }
+                  tabIndex={0}
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "display": "table",
+                      }
+                    }
+                  >
+                    <div
+                      data-radium={true}
+                      style={
+                        Object {
+                          "padding": "0 16px",
+                          "whiteSpace": "nowrap",
+                        }
+                      }
+                    >
+                      Canada
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-atomic={true}
+          aria-live="assertive"
+          data-radium={true}
+          id="error_test_id"
+          style={
+            Object {
+              "color": "#B30029",
+              "display": "none",
+              "fontSize": "12px",
+              "marginLeft": "1px",
+              "marginTop": "2px",
+              "opacity": "0",
+              "pointerEvents": "none",
+              "textAlign": "left",
+              "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders invalid Select correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "cursor": "auto",
+          "display": "inline-block",
+          "position": "relative",
+          "width": "343px",
+        }
+      }
+    >
+      <div
+        data-radium={true}
+      >
+        <div
+          data-radium={true}
+          onKeyDown={[Function]}
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              aria-expanded={false}
+              aria-haspopup={true}
+              data-radium={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                aria-invalid={false}
+                aria-required={undefined}
+                data-radium={true}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "WebkitOpacity": 1,
+                    "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+                    "backgroundColor": "#EEEEEE",
+                    "border": "1px dashed #BDBDBD",
+                    "borderRadius": "4px",
+                    "boxSizing": "border-box",
+                    "color": "#757575",
+                    "fontSize": "16px",
+                    "height": "56px",
+                    "margin": "0",
+                    "outline": "none",
+                    "padding": "25px 8px 8px 8px",
+                    "position": "relative",
+                  }
+                }
+                tabIndex={0}
+              >
+                <label
+                  data-radium={true}
+                  htmlFor={undefined}
+                  style={
+                    Object {
+                      "color": "#BDBDBD",
+                      "cursor": "not-allowed",
+                      "fontSize": "16px",
+                      "left": 0,
+                      "margin": "0",
+                      "pointerEvents": "auto",
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": "scale(1) translate(8px, 17px)",
+                      "transformOrigin": "left top",
+                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                      "userSelect": "none",
+                      "zIndex": 1,
+                    }
+                  }
+                >
+                  Country
+                </label>
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "overflow": "hidden",
+                      "textOverflow": "ellipsis",
+                      "userSelect": "none",
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "color": "#BDBDBD",
+                        "cursor": "not-allowed",
+                        "fontSize": "16px",
+                        "left": 0,
+                        "opacity": 0,
+                        "pointerEvents": "none",
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": "scale(1) translate(9px, 23px)",
+                        "transformOrigin": "left top",
+                        "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "zIndex": 1,
+                      }
+                    }
+                  >
+                    Select a country
+                  </div>
+                </div>
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "column",
+                      "float": "right",
+                      "paddingLeft": "1px",
+                      "userSelect": "none",
+                    }
+                  }
+                >
+                  <i
+                    aria-hidden={true}
+                    data-radium={true}
+                    onClick={undefined}
+                    style={
+                      Object {
+                        "color": "#757575",
+                        "fontFamily": "ic-icons",
+                        "fontSize": "16px",
+                        "fontSmoothing": "antialiased",
+                        "fontStyle": "normal",
+                        "fontVariant": "normal",
+                        "fontWeight": "normal",
+                        "lineHeight": "1",
+                        "osxFontSmoothing": "grayscale",
+                        "position": "relative",
+                        "speak": "none",
+                        "textTransform": "none",
+                        "transition": "transform 100ms",
+                        "userSelect": "none",
+                      }
+                    }
+                  >
+                    
+                  </i>
+                </div>
+              </div>
+            </div>
+            <div
+              data-radium={true}
+              style={
+                Object {
+                  "display": "none",
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 9999,
+                }
+              }
+            >
+              <div
+                aria-hidden={true}
+                onBlur={[Function]}
+                onKeyDown={[Function]}
+                role="menu"
+                style={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "borderRadius": "4px",
+                    "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
+                    "display": "inline-block",
+                    "maxHeight": 500,
+                    "outline": "none",
+                    "overflowY": "auto",
+                    "padding": "8px 0",
+                    "userSelect": "none",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                <div
+                  data-radium={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="menuitem"
+                  style={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "padding": "16px 0",
+                    }
+                  }
+                  tabIndex={0}
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "display": "table",
+                      }
+                    }
+                  >
+                    <div
+                      data-radium={true}
+                      style={
+                        Object {
+                          "padding": "0 16px",
+                          "whiteSpace": "nowrap",
+                        }
+                      }
+                    >
+                      United States
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-radium={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="menuitem"
+                  style={
+                    Object {
+                      "backgroundColor": "#ffffff",
+                      "padding": "16px 0",
+                    }
+                  }
+                  tabIndex={0}
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "display": "table",
+                      }
+                    }
+                  >
+                    <div
+                      data-radium={true}
+                      style={
+                        Object {
+                          "padding": "0 16px",
+                          "whiteSpace": "nowrap",
+                        }
+                      }
+                    >
+                      Canada
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-atomic={true}
+          aria-live="assertive"
+          data-radium={true}
+          id="error_test_id"
+          style={
+            Object {
+              "color": "#B30029",
+              "display": "none",
+              "fontSize": "12px",
+              "marginLeft": "1px",
+              "marginTop": "2px",
+              "opacity": "0",
+              "pointerEvents": "none",
+              "textAlign": "left",
+              "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+            }
+          }
+        >
+          Select a valid country
+        </div>
+      </div>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;

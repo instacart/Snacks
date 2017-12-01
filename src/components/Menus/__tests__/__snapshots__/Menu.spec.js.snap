@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Menu with MenuItems correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+  >
+    <div
+      aria-hidden={false}
+      onBlur={[Function]}
+      onKeyDown={[Function]}
+      role="menu"
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderRadius": "4px",
+          "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
+          "display": "inline-block",
+          "maxHeight": 500,
+          "outline": "none",
+          "overflowY": "auto",
+          "padding": "8px 0",
+          "userSelect": "none",
+        }
+      }
+      tabIndex={-1}
+    >
+      <div
+        data-radium={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        role="menuitem"
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "padding": "16px 0",
+          }
+        }
+        tabIndex={0}
+      >
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "display": "table",
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "padding": "0 16px",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            First
+          </div>
+        </div>
+      </div>
+      <div
+        data-radium={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        role="menuitem"
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "padding": "16px 0",
+          }
+        }
+        tabIndex={0}
+      >
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "display": "table",
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "padding": "0 16px",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Second
+          </div>
+        </div>
+      </div>
+      <div
+        data-radium={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        role="menuitem"
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "padding": "16px 0",
+          }
+        }
+        tabIndex={0}
+      >
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "display": "table",
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "padding": "0 16px",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Third
+          </div>
+        </div>
+      </div>
+      <hr
+        style={
+          Object {
+            "backgroundColor": "#E0E0E0",
+            "border": "none",
+            "height": 1,
+            "margin": "8px 0",
+            "width": "100%",
+          }
+        }
+      />
+      <div
+        data-radium={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        role="menuitem"
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "padding": "16px 0",
+          }
+        }
+        tabIndex={0}
+      >
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "display": "table",
+            }
+          }
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "padding": "0 16px",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Fourth
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;

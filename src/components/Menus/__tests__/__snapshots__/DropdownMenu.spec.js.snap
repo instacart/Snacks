@@ -1,0 +1,344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <div
+      data-radium={true}
+      onKeyDown={[Function]}
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "position": "relative",
+          }
+        }
+      >
+        <button
+          data-radium={true}
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "MozOsxFontSmoothing": "grayscale",
+              "WebkitFontSmoothing": "antialiased",
+              "alignItems": "center",
+              "backgroundColor": "#43B02A",
+              "backgroundImage": "none",
+              "border": "1px solid transparent",
+              "borderRadius": "4px",
+              "color": "#FFFFFF",
+              "cursor": "pointer",
+              "display": "inline-flex",
+              "fontSize": "16px",
+              "fontWeight": 600,
+              "height": "40px",
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "touchAction": "manipulation",
+              "userSelect": "none",
+              "whiteSpace": "nowrap",
+            }
+          }
+          tabIndex={undefined}
+          type="button"
+        >
+           Share 
+        </button>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "display": "none",
+              "position": "absolute",
+              "width": "100%",
+              "zIndex": 9999,
+            }
+          }
+        >
+          <div
+            aria-hidden={true}
+            onBlur={[Function]}
+            onKeyDown={[Function]}
+            role="menu"
+            style={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "4px",
+                "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
+                "display": "inline-block",
+                "maxHeight": 500,
+                "outline": "none",
+                "overflowY": "auto",
+                "padding": "8px 0",
+                "userSelect": "none",
+              }
+            }
+            tabIndex={-1}
+          >
+            <div
+              data-radium={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              role="menuitem"
+              style={
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "padding": "16px 0",
+                }
+              }
+              tabIndex={0}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "display": "table",
+                  }
+                }
+              >
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "display": "table-cell",
+                      "paddingLeft": "16px",
+                      "verticalAlign": "middle",
+                    }
+                  }
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "display": "flex",
+                      }
+                    }
+                  >
+                    <i
+                      aria-hidden={true}
+                      data-radium={true}
+                      onClick={undefined}
+                      style={
+                        Object {
+                          "fontFamily": "ic-icons",
+                          "fontSize": "22px",
+                          "fontSmoothing": "antialiased",
+                          "fontStyle": "normal",
+                          "fontVariant": "normal",
+                          "fontWeight": "normal",
+                          "lineHeight": "1",
+                          "osxFontSmoothing": "grayscale",
+                          "position": "relative",
+                          "speak": "none",
+                          "textTransform": "none",
+                        }
+                      }
+                    >
+                      
+                    </i>
+                  </div>
+                </div>
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "padding": "0 16px",
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  Share via Email
+                </div>
+              </div>
+            </div>
+            <div
+              data-radium={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              role="menuitem"
+              style={
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "padding": "16px 0",
+                }
+              }
+              tabIndex={0}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "display": "table",
+                  }
+                }
+              >
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "display": "table-cell",
+                      "paddingLeft": "16px",
+                      "verticalAlign": "middle",
+                    }
+                  }
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "display": "flex",
+                      }
+                    }
+                  >
+                    <i
+                      aria-hidden={true}
+                      data-radium={true}
+                      onClick={undefined}
+                      style={
+                        Object {
+                          "color": "#3c5a99",
+                          "fontFamily": "ic-icons",
+                          "fontSize": "22px",
+                          "fontSmoothing": "antialiased",
+                          "fontStyle": "normal",
+                          "fontVariant": "normal",
+                          "fontWeight": "normal",
+                          "lineHeight": "1",
+                          "osxFontSmoothing": "grayscale",
+                          "position": "relative",
+                          "speak": "none",
+                          "textTransform": "none",
+                        }
+                      }
+                    >
+                      
+                    </i>
+                  </div>
+                </div>
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "padding": "0 16px",
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  Share via Facebook
+                </div>
+              </div>
+            </div>
+            <div
+              data-radium={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              role="menuitem"
+              style={
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "padding": "16px 0",
+                }
+              }
+              tabIndex={0}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "display": "table",
+                  }
+                }
+              >
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "display": "table-cell",
+                      "paddingLeft": "16px",
+                      "verticalAlign": "middle",
+                    }
+                  }
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "display": "flex",
+                      }
+                    }
+                  >
+                    <i
+                      aria-hidden={true}
+                      data-radium={true}
+                      onClick={undefined}
+                      style={
+                        Object {
+                          "color": "#1da1f2",
+                          "fontFamily": "ic-icons",
+                          "fontSize": "22px",
+                          "fontSmoothing": "antialiased",
+                          "fontStyle": "normal",
+                          "fontVariant": "normal",
+                          "fontWeight": "normal",
+                          "lineHeight": "1",
+                          "osxFontSmoothing": "grayscale",
+                          "position": "relative",
+                          "speak": "none",
+                          "textTransform": "none",
+                        }
+                      }
+                    >
+                      
+                    </i>
+                  </div>
+                </div>
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "padding": "0 16px",
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  Share via Twitter
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;

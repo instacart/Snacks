@@ -59,6 +59,10 @@ module.exports = {
           components: 'src/components/Buttons/[A-Z]*.js'
         },
         {
+          name: 'Menus',
+          components: 'src/components/Menus/[A-Z]*.js'
+        },
+        {
           name: 'Forms',
           content: 'docs/forms.md',
           components: 'src/components/Forms/[A-Z]*.js'

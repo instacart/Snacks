@@ -9,6 +9,8 @@ const formComponent = (WrappedComponent) => {
       name           : PropTypes.string.isRequired,
       /** Disable the input; Will be removed from model in Form onSubmit callback */
       disabled       : PropTypes.bool,
+      /** Uniq id for input */
+      id                 : PropTypes.string,
       /** Mark input as required */
       required       : PropTypes.bool,
       /** Regex Validation pattern */
@@ -27,6 +29,10 @@ const formComponent = (WrappedComponent) => {
     }
 
     componentWillMount() {
+      const { id, name } = this.props
+      // uniqueId is needed label htmlFor properties etc.
+      this.uniqueId = id || `${name}-${Math.floor(Math.random() * 0xFFFF)}`.replace(/[^A-Za-z0-9-]/gi, '')
+
       this.context.ICFormable && this.context.ICFormable.registerComponent(this)
     }
 
@@ -97,13 +103,18 @@ const formComponent = (WrappedComponent) => {
     render() {
       const {
         isValid,
-        serverError
+        serverError,
+        disabled
       } = this.state
+
+      const hasError = (!disabled && (!isValid && isValid !== undefined)) || !!serverError
 
       const formComponentProps = {
         isValid      : isValid,
         ref          : (node) => {this.FormComponent = node},
         serverError  : serverError,
+        hasError     : hasError,
+        id           : this.uniqueId,
         ...this.props
       }
 

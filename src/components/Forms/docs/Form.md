@@ -19,7 +19,7 @@
       />
     </div>
 
-    <div>
+    <div style={{marginBottom: '10px'}}>
       <TextField
         name="password"
         type="password"
@@ -31,6 +31,21 @@
         required
       />
     </div>
+
+    <div>
+      <Select
+        name="country"
+        floatingLabelText="Country"
+        hintText="Select a country"
+        validationErrorText="Please select a country."
+        fullWidth
+        required
+      >
+        <MenuItem label="United States" value="US"/>
+        <MenuItem label="Canada" value="CA"/>
+      </Select>
+    </div>
+
 
     <div style={{marginTop: '10px'}}>
       <Button type="submit">
