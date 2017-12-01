@@ -256,6 +256,7 @@ class TextField extends React.Component {
             onFocus={this.handleInputFocus}
             onKeyDown={onKeyDown && onKeyDown()}
             autoComplete={autoComplete}
+            placeholder=""
           />
         </div>
 
