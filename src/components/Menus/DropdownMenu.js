@@ -1,11 +1,12 @@
-import React             from 'react'
-import PropTypes         from 'prop-types'
-import Radium            from 'radium'
-import Menu              from './Menu'
+import React     from 'react'
+import PropTypes from 'prop-types'
+import Radium    from 'radium'
+import Menu      from './Menu'
+import zIndex    from '../../styles/zIndex'
 
 const styles = {
   menuContainer: {
-    zIndex: 9999,
+    zIndex: zIndex.Z_INDEX9,
     position: 'absolute',
     display: 'none',
     width: '100%'
