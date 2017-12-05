@@ -187,7 +187,6 @@ class TextField extends React.Component {
       style,
       value,
       helperText,
-      onKeyDown,
       autoComplete
     } = this.props
 
