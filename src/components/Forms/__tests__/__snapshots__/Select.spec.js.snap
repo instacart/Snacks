@@ -69,6 +69,8 @@ exports[`renders Select correctly 1`] = `
                 <label
                   data-radium={true}
                   htmlFor={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
                   style={
                     Object {
                       "color": "#757575",
@@ -103,6 +105,8 @@ exports[`renders Select correctly 1`] = `
                 >
                   <div
                     data-radium={true}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
                     style={
                       Object {
                         "color": "#BDBDBD",
@@ -185,7 +189,7 @@ exports[`renders Select correctly 1`] = `
                     "borderRadius": "4px",
                     "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
                     "display": "inline-block",
-                    "maxHeight": 500,
+                    "maxHeight": "500px",
                     "outline": "none",
                     "overflowY": "auto",
                     "padding": "8px 0",
@@ -376,6 +380,8 @@ exports[`renders Select w/ server error correctly 1`] = `
                 <label
                   data-radium={true}
                   htmlFor={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
                   style={
                     Object {
                       "color": "#BDBDBD",
@@ -410,6 +416,8 @@ exports[`renders Select w/ server error correctly 1`] = `
                 >
                   <div
                     data-radium={true}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
                     style={
                       Object {
                         "color": "#BDBDBD",
@@ -492,7 +500,7 @@ exports[`renders Select w/ server error correctly 1`] = `
                     "borderRadius": "4px",
                     "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
                     "display": "inline-block",
-                    "maxHeight": 500,
+                    "maxHeight": "500px",
                     "outline": "none",
                     "overflowY": "auto",
                     "padding": "8px 0",
@@ -685,6 +693,8 @@ exports[`renders disabled Select correctly 1`] = `
                 <label
                   data-radium={true}
                   htmlFor={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
                   style={
                     Object {
                       "color": "#BDBDBD",
@@ -719,6 +729,8 @@ exports[`renders disabled Select correctly 1`] = `
                 >
                   <div
                     data-radium={true}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
                     style={
                       Object {
                         "color": "#BDBDBD",
@@ -801,7 +813,7 @@ exports[`renders disabled Select correctly 1`] = `
                     "borderRadius": "4px",
                     "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
                     "display": "inline-block",
-                    "maxHeight": 500,
+                    "maxHeight": "500px",
                     "outline": "none",
                     "overflowY": "auto",
                     "padding": "8px 0",
@@ -992,6 +1004,8 @@ exports[`renders invalid Select correctly 1`] = `
                 <label
                   data-radium={true}
                   htmlFor={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
                   style={
                     Object {
                       "color": "#BDBDBD",
@@ -1026,6 +1040,8 @@ exports[`renders invalid Select correctly 1`] = `
                 >
                   <div
                     data-radium={true}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
                     style={
                       Object {
                         "color": "#BDBDBD",
@@ -1108,7 +1124,7 @@ exports[`renders invalid Select correctly 1`] = `
                     "borderRadius": "4px",
                     "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
                     "display": "inline-block",
-                    "maxHeight": 500,
+                    "maxHeight": "500px",
                     "outline": "none",
                     "overflowY": "auto",
                     "padding": "8px 0",

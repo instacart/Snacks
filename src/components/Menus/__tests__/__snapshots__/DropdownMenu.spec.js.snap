@@ -77,7 +77,7 @@ exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
                 "borderRadius": "4px",
                 "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
                 "display": "inline-block",
-                "maxHeight": 500,
+                "maxHeight": "500px",
                 "outline": "none",
                 "overflowY": "auto",
                 "padding": "8px 0",
