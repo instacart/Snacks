@@ -86,7 +86,10 @@ const styles = {
   floatingLabel: {
     position: 'absolute',
     top: 0,
-    left: 0
+    left: 0,
+    ':hover': {
+      cursor: 'pointer'
+    }
   },
   error: {
     border: `1px solid ${colors.RED_700}`,
