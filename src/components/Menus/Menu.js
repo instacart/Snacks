@@ -9,6 +9,7 @@ const styles = {
   padding: '8px 0',
   overflowY: 'auto',
   userSelect: 'none',
+  maxHeight: '500px',
   outline: 'none'
 }
 
@@ -18,8 +19,6 @@ class Menu extends React.Component {
     ariaHidden: PropTypes.bool,
     /** MenuItems or Divider */
     children: PropTypes.node.isRequired,
-    /** The maximum height of the Menu when it is displayed */
-    maxHeight: PropTypes.number,
     /** Callback function fired on key down */
     onKeyDown: PropTypes.func,
     /** Callback function fired when a MenuItem is selected */
@@ -34,7 +33,6 @@ class Menu extends React.Component {
 
   static defaultProps = {
     role: 'menu',
-    maxHeight: 500,
     ariaHidden: false,
     style: {},
   }
@@ -176,11 +174,9 @@ class Menu extends React.Component {
       ariaHidden,
       style,
       role,
-      maxHeight
     } = this.props
 
     const mergedStyles = {
-      maxHeight: maxHeight,
       ...styles,
       ...style
     }
