@@ -174,7 +174,6 @@ exports[`renders Select correctly 1`] = `
                   "display": "none",
                   "position": "absolute",
                   "width": "100%",
-                  "zIndex": 9999,
                 }
               }
             >
@@ -485,7 +484,6 @@ exports[`renders Select w/ server error correctly 1`] = `
                   "display": "none",
                   "position": "absolute",
                   "width": "100%",
-                  "zIndex": 9999,
                 }
               }
             >
@@ -798,7 +796,6 @@ exports[`renders disabled Select correctly 1`] = `
                   "display": "none",
                   "position": "absolute",
                   "width": "100%",
-                  "zIndex": 9999,
                 }
               }
             >
@@ -1109,7 +1106,6 @@ exports[`renders invalid Select correctly 1`] = `
                   "display": "none",
                   "position": "absolute",
                   "width": "100%",
-                  "zIndex": 9999,
                 }
               }
             >
