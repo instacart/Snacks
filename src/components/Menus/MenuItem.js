@@ -133,15 +133,11 @@ class MenuItem extends React.Component {
 
   renderLeftIcon() {
     const { leftIcon, leftIconStyles } = this.props
-    let iconComponent = null
+    if (!leftIcon) { return }
 
-    if (!leftIcon) {
-      return
-    } else if (React.isValidElement(leftIcon)) {
-      iconComponent = leftIcon
-    } else {
-      iconComponent = <Icon name={leftIcon} style={[styles.leftIconStyles, leftIconStyles]} />
-    }
+    const iconComponent = typeof leftIcon === 'string'
+      ? <Icon name={leftIcon} style={[styles.leftIconStyles, leftIconStyles]} />
+      : leftIcon
 
     return (
       <div
