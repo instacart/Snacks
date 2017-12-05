@@ -163,6 +163,10 @@ class TextField extends React.Component {
     this.props.onBlur && this.props.onBlur(e)
   }
 
+  handleKeyDown = (e) => {
+    this.props.onKeyDown(e)
+  }
+
   render() {
     const {
       floatingLabelText,
@@ -250,7 +254,7 @@ class TextField extends React.Component {
             onBlur={this.handleInputBlur}
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
-            onKeyDown={ (e) => onKeyDown(e) }
+            onKeyDown={this.handleKeyDown}
             autoComplete={autoComplete}
             placeholder=""
           />

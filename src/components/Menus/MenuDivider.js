@@ -14,7 +14,7 @@ const MenuDivider = (props) => {
   const { style } = props
 
   return (
-    <hr style={Object.assign(styles, style)}/>
+    <hr style={{...styles, ...style}}/>
   )
 }
 
