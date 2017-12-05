@@ -64,14 +64,16 @@ class Menu extends React.Component {
     const { onKeyDown } = this.props
 
     switch(event.key) {
-      case 'ArrowDown':
+      case 'ArrowDown': {
         event.preventDefault()
         this.incrementTabIndex()
         break
-      case 'ArrowUp':
+      }
+      case 'ArrowUp': {
         event.preventDefault()
         this.decrementTabIndex()
         break
+      }
     }
 
     onKeyDown && onKeyDown(event)
