@@ -192,30 +192,30 @@ class Select extends React.Component {
     return (this.state.selectedOption && this.state.selectedOption.value) || null
   }
 
-  _handleClose = () => {
+  handleClose = () => {
     this.trigger.focus()
     this.props.onClose()
   }
 
-  _handleRequestChange = (open) => {
+  handleRequestChange = (open) => {
     if (!this.props.disabled) {
       this.setState({isOpen: open})
     }
   }
 
-  _handleFocus = (e) => {
+  handleFocus = (e) => {
     this.setState({isFocused: true}, () => {
       this.props.onFocus(e)
     })
   }
 
-  _handleBlur = (e) => {
+  handleBlur = (e) => {
     this.setState({isFocused: false}, () => {
       this.props.onBlur(e)
     })
   }
 
-  _handleSelect = (option) => {
+  handleSelect = (option) => {
     const { onSelect, selectedOption } = this.props
 
     // For manual control
@@ -243,8 +243,8 @@ class Select extends React.Component {
 
     return (
       <div
-        onFocus={this._handleFocus}
-        onBlur={this._handleBlur}
+        onFocus={this.handleFocus}
+        onBlur={this.handleBlur}
       >
         <div
           style={[
@@ -331,10 +331,10 @@ class Select extends React.Component {
           <DropdownMenu
             triggerElement={this.renderTrigger()}
             open={isOpen}
-            onRequestChange={this._handleRequestChange}
-            onSelect={this._handleSelect}
+            onRequestChange={this.handleRequestChange}
+            onSelect={this.handleSelect}
             menuProps={{style: styles.menu}}
-            onClose={this._handleClose}
+            onClose={this.handleClose}
             onOpen={onOpen}
           >
             {children}

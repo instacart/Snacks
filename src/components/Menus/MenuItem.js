@@ -103,7 +103,7 @@ class MenuItem extends React.Component {
     }
   }
 
-  _handleClick = () => {
+  handleClick = () => {
     const {
       disabled,
       index,
@@ -117,15 +117,15 @@ class MenuItem extends React.Component {
     !disabled && onClick && onClick(option, index)
   }
 
-  _handleKeyDown = (event) => {
+  handleKeyDown = (event) => {
     switch(event.key) {
       case 'Enter':
         event.preventDefault()
-        this._handleClick()
+        this.handleClick()
     }
   }
 
-  _handleFocus = (event) => {
+  handleFocus = (event) => {
     const { onFocus, onMenuItemFocus, index } = this.props
     onMenuItemFocus && onMenuItemFocus(index)
     onFocus && onFocus(index, event)
@@ -189,10 +189,10 @@ class MenuItem extends React.Component {
           style,
           disabled && styles.disabled
         ]}
-        onClick={this._handleClick}
-        onFocus={this._handleFocus}
+        onClick={this.handleClick}
+        onFocus={this.handleFocus}
         tabIndex={useTabIndex && !disabled && (tabIndex || 0)}
-        onKeyDown={this._handleKeyDown}
+        onKeyDown={this.handleKeyDown}
       >
         { this.renderMenuItem() }
       </div>

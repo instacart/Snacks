@@ -60,7 +60,7 @@ class DropdownMenu extends React.Component {
     }
   }
 
-  _handleSelect = (option) => {
+  handleSelect = (option) => {
     const { onSelect, onRequestChange } = this.props
 
     if (this.controlledOpen()) {
@@ -73,7 +73,7 @@ class DropdownMenu extends React.Component {
     onSelect && onSelect(option)
   }
 
-  _handleClick = (event) => {
+  handleClick = (event) => {
     event.preventDefault()
     const { open, onClick, onRequestChange } = this.props
 
@@ -90,7 +90,7 @@ class DropdownMenu extends React.Component {
     onClick && onClick(event)
   }
 
-  _handleMenuBlur = () => {
+  handleMenuBlur = () => {
     const { onRequestChange } = this.props
     // Timeout ensures click event has correct state when attempting to close
     setTimeout( () => {
@@ -102,7 +102,7 @@ class DropdownMenu extends React.Component {
     }, 100)
   }
 
-  _handleKeyDown = (event) => {
+  handleKeyDown = (event) => {
     const { onRequestChange } = this.props
     switch(event.key) {
       case 'Enter':
@@ -157,7 +157,7 @@ class DropdownMenu extends React.Component {
 
     if (triggerElement) {
       return React.cloneElement(triggerElement, {
-        onClick: this._handleClick,
+        onClick: this.handleClick,
         'aria-haspopup': true,
         'aria-expanded': open,
       })
@@ -175,7 +175,7 @@ class DropdownMenu extends React.Component {
 
     return (
       <div
-        onKeyDown={this._handleKeyDown}
+        onKeyDown={this.handleKeyDown}
       >
         <div style={{position: 'relative'}}>
           { this.renderTriggerElement() }
@@ -190,8 +190,8 @@ class DropdownMenu extends React.Component {
             <Menu
               ref={(node) => this.menu = node}
               ariaHidden={!isOpen}
-              onBlur={this._handleMenuBlur}
-              onSelect={this._handleSelect}
+              onBlur={this.handleMenuBlur}
+              onSelect={this.handleSelect}
               {...menuProps}
             >
               {children}
