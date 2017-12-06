@@ -41,13 +41,13 @@ class Menu extends React.Component {
     currentTabIndex: null
   }
 
-  _handleClick = (option, index) => {
+  handleClick = (option, index) => {
     const { onSelect } = this.props
 
     onSelect && onSelect(option, index)
   }
 
-  _handleBlur = (event) => {
+  handleBlur = (event) => {
     const { onBlur } = this.props
     const currentTarget = event.currentTarget
 
@@ -60,7 +60,7 @@ class Menu extends React.Component {
     }, 0)
   }
 
-  _handleKeyDown = (event) => {
+  handleKeyDown = (event) => {
     const { onKeyDown } = this.props
 
     switch(event.key) {
@@ -79,7 +79,7 @@ class Menu extends React.Component {
     onKeyDown && onKeyDown(event)
   }
 
-  _handleMenuItemFocus = (index) => {
+  handleMenuItemFocus = (index) => {
     this.setState({currentTabIndex: index})
   }
 
@@ -160,8 +160,8 @@ class Menu extends React.Component {
         const component = React.cloneElement(child, {
           index: index,
           focus: currentTabIndex === index,
-          onClick: this._handleClick,
-          onMenuItemFocus: this._handleMenuItemFocus
+          onClick: this.handleClick,
+          onMenuItemFocus: this.handleMenuItemFocus
         })
         index += 1
         return component
@@ -188,8 +188,8 @@ class Menu extends React.Component {
         ref={(node) => this.menu = node}
         role={role}
         style={mergedStyles}
-        onKeyDown={this._handleKeyDown}
-        onBlur={this._handleBlur}
+        onKeyDown={this.handleKeyDown}
+        onBlur={this.handleBlur}
         aria-hidden={ariaHidden}
         tabIndex={-1}
       >
