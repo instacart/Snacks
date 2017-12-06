@@ -155,7 +155,6 @@ class DropdownMenu extends React.Component {
   renderTriggerElement() {
     const { triggerElement } = this.props
     const { open } = this.state
-
     if (triggerElement) {
       return React.cloneElement(triggerElement, {
         onClick: this.handleClick,
