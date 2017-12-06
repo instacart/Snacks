@@ -105,7 +105,7 @@ const styles = {
 
 @FormComponent
 @Radium
-class Select extends React.Component {
+class Select extends React.PureComponent {
   static propTypes = {
     /** Name of the field */
     name               : PropTypes.string.isRequired,
