@@ -60,7 +60,7 @@ exports[`renders Select correctly 1`] = `
                     "height": "56px",
                     "margin": "0",
                     "outline": "none",
-                    "padding": "25px 8px 8px 8px",
+                    "padding": "25px 25px 8px 8px",
                     "position": "relative",
                   }
                 }
@@ -133,8 +133,9 @@ exports[`renders Select correctly 1`] = `
                     Object {
                       "display": "flex",
                       "flexDirection": "column",
-                      "float": "right",
-                      "paddingLeft": "1px",
+                      "position": "absolute",
+                      "right": "8px",
+                      "top": "22px",
                       "userSelect": "none",
                     }
                   }
@@ -370,7 +371,7 @@ exports[`renders Select w/ server error correctly 1`] = `
                     "height": "56px",
                     "margin": "0",
                     "outline": "none",
-                    "padding": "25px 8px 8px 8px",
+                    "padding": "25px 25px 8px 8px",
                     "position": "relative",
                   }
                 }
@@ -443,8 +444,9 @@ exports[`renders Select w/ server error correctly 1`] = `
                     Object {
                       "display": "flex",
                       "flexDirection": "column",
-                      "float": "right",
-                      "paddingLeft": "1px",
+                      "position": "absolute",
+                      "right": "8px",
+                      "top": "22px",
                       "userSelect": "none",
                     }
                   }
@@ -682,7 +684,7 @@ exports[`renders disabled Select correctly 1`] = `
                     "height": "56px",
                     "margin": "0",
                     "outline": "none",
-                    "padding": "25px 8px 8px 8px",
+                    "padding": "25px 25px 8px 8px",
                     "position": "relative",
                   }
                 }
@@ -755,8 +757,9 @@ exports[`renders disabled Select correctly 1`] = `
                     Object {
                       "display": "flex",
                       "flexDirection": "column",
-                      "float": "right",
-                      "paddingLeft": "1px",
+                      "position": "absolute",
+                      "right": "8px",
+                      "top": "22px",
                       "userSelect": "none",
                     }
                   }
@@ -992,7 +995,7 @@ exports[`renders invalid Select correctly 1`] = `
                     "height": "56px",
                     "margin": "0",
                     "outline": "none",
-                    "padding": "25px 8px 8px 8px",
+                    "padding": "25px 25px 8px 8px",
                     "position": "relative",
                   }
                 }
@@ -1065,8 +1068,9 @@ exports[`renders invalid Select correctly 1`] = `
                     Object {
                       "display": "flex",
                       "flexDirection": "column",
-                      "float": "right",
-                      "paddingLeft": "1px",
+                      "position": "absolute",
+                      "right": "8px",
+                      "top": "22px",
                       "userSelect": "none",
                     }
                   }
