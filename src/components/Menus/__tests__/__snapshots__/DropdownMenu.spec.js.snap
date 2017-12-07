@@ -8,6 +8,7 @@ exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
     <div
       data-radium={true}
       onKeyDown={[Function]}
+      style={undefined}
     >
       <div
         data-radium={true}

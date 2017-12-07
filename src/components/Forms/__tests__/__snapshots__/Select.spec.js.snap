@@ -24,6 +24,7 @@ exports[`renders Select correctly 1`] = `
         <div
           data-radium={true}
           onKeyDown={[Function]}
+          style={undefined}
         >
           <div
             data-radium={true}
@@ -335,6 +336,7 @@ exports[`renders Select w/ server error correctly 1`] = `
         <div
           data-radium={true}
           onKeyDown={[Function]}
+          style={undefined}
         >
           <div
             data-radium={true}
@@ -648,6 +650,7 @@ exports[`renders disabled Select correctly 1`] = `
         <div
           data-radium={true}
           onKeyDown={[Function]}
+          style={undefined}
         >
           <div
             data-radium={true}
@@ -959,6 +962,7 @@ exports[`renders invalid Select correctly 1`] = `
         <div
           data-radium={true}
           onKeyDown={[Function]}
+          style={undefined}
         >
           <div
             data-radium={true}

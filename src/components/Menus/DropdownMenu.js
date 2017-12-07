@@ -37,8 +37,10 @@ class DropdownMenu extends React.Component {
     onRequestChange: PropTypes.func,
     /** Callback function fired when a MenuItem is selected */
     onSelect: PropTypes.func,
-    /** Customize style of menu parent */
+    /** Customize style root element */
     style: PropTypes.shape({}),
+    /** Customize style of menu parent */
+    menuContainerStyle: PropTypes.shape({}),
     /** Props passed to Menu component */
     menuProps: PropTypes.shape({})
   }
@@ -168,7 +170,8 @@ class DropdownMenu extends React.Component {
     const {
       style,
       children,
-      menuProps
+      menuProps,
+      menuContainerStyle
     } = this.props
 
     const isOpen = this.state.open
@@ -176,6 +179,7 @@ class DropdownMenu extends React.Component {
     return (
       <div
         onKeyDown={this.handleKeyDown}
+        style={style}
       >
         <div style={{position: 'relative'}}>
           { this.renderTriggerElement() }
@@ -183,7 +187,7 @@ class DropdownMenu extends React.Component {
           <div
             style={[
               styles.menuContainer,
-              style,
+              menuContainerStyle,
               isOpen && styles.menuContainerOpen
             ]}
           >
