@@ -133,7 +133,7 @@ export default {
   quickAdd: 'e0a6',
   reactionAdd: 'e0a0',
   receipt: 'e028',
-  reccuring: 'e0a7',
+  recurring: 'e0a7',
   refund: 'e085',
   replaceBold: 'e06c',
   replace: 'e067',
