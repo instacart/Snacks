@@ -32,7 +32,7 @@ const styles = {
     fontSize: '16px',
     height: '56px',
     margin: '0',
-    padding: '25px 8px 8px 8px',
+    padding: '25px 25px 8px 8px',
     outline: 'none',
     position: 'relative',
     WebkitOpacity: 1,
@@ -56,11 +56,12 @@ const styles = {
     width: '100%'
   },
   iconContainer: {
-    paddingLeft: '1px',
     display: 'flex',
     flexDirection: 'column',
     userSelect: 'none',
-    float: 'right'
+    position: 'absolute',
+    right: '8px',
+    top: '22px'
   },
   icon: {
     color: colors.GREEN_500,
