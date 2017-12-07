@@ -155,7 +155,7 @@ class Menu extends React.Component {
 
     return React.Children.map(children, (child) => {
       if (!React.isValidElement(child)) {
-        return null
+        throw 'Passing invalid element to Menu'
       } else if (child.type && child.type.displayName === 'MenuItem') {
         const component = React.cloneElement(child, {
           index: index,
