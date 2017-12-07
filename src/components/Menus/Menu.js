@@ -35,16 +35,11 @@ class Menu extends React.Component {
     role: 'menu',
     ariaHidden: false,
     style: {},
+    onSelect: () => {} // eslint-disable-line no-empty-function
   }
 
   state = {
     currentTabIndex: null
-  }
-
-  handleClick = (option, index) => {
-    const { onSelect } = this.props
-
-    onSelect && onSelect(option, index)
   }
 
   handleBlur = (event) => {
@@ -149,7 +144,7 @@ class Menu extends React.Component {
   }
 
   renderChildren() {
-    const { children } = this.props
+    const { children, onSelect } = this.props
     const { currentTabIndex } = this.state
     let index = 0
 
@@ -160,7 +155,7 @@ class Menu extends React.Component {
         const component = React.cloneElement(child, {
           index: index,
           focus: currentTabIndex === index,
-          onClick: this.handleClick,
+          onClick: onSelect,
           onMenuItemFocus: this.handleMenuItemFocus
         })
         index += 1
