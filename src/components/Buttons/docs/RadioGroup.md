@@ -32,3 +32,19 @@ function alertMeal(value, props) {
   <Radio id="radioMealGroup3" value="soup">Soup</Radio>
 </RadioGroup>
 ```
+
+### Disabeling radio buttons
+You can disable radio buttons inside a group and the remaining enabled buttons will function as expected. Note that if you passed both `isSelected` and `isDisabled` the former will be ignored (see example below).
+```js
+function alertCity(value, props) {
+  alert(`The selected city is "${value}"`)
+}
+
+<RadioGroup name="radioCity" onChange={alertCity}>
+  <Radio id="radioCityGroup1" value="New York" isDisabled>New York</Radio>
+  <Radio id="radioCityGroup2" value="San Fracisco" isSelected isDisabled>San Francisco</Radio>
+  <Radio id="radioCityGroup3" value="Chicago">Chicago</Radio>
+  <Radio id="radioCityGroup4" value="Chicago">San Diego</Radio>
+  <Radio id="radioCityGroup5" value="Chicago">Atlanta</Radio>
+</RadioGroup>
+```

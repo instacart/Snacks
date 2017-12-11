@@ -338,3 +338,50 @@ exports[`Radio renders the correct selected state 2`] = `
   />
 </div>
 `;
+
+exports[`Radio renders the correct selected state 3`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <img
+    alt=""
+    data-radium={true}
+    src="test-file-stub"
+    style={
+      Object {
+        "height": 22,
+        "width": 22,
+      }
+    }
+    tabIndex="-1"
+  />
+  <input
+    aria-label={undefined}
+    checked={true}
+    data-radium={true}
+    disabled={true}
+    id={2}
+    onClick={[Function]}
+    style={
+      Object {
+        "MozAppearance": "none",
+        "MsAppearance": "none",
+        "WebkitAppearance": "none",
+        "appearance": "none",
+        "height": 22,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 22,
+      }
+    }
+    type="radio"
+    value={undefined}
+  />
+</div>
+`;

@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
+import colors from '../styles/colors'
 
-const NOOP = () => {} // eslint-disable-line no-empty-function
+const NoOp = () => {} // eslint-disable-line no-empty-function
 const INPUT_BTN_SIZE = 22
 
 const STYLES = {
@@ -28,6 +29,21 @@ const STYLES = {
   },
   wrapEl: {
     display: 'flex',
+  },
+  disabled: {
+    color: colors.GRAY_74,
+  },
+}
+
+function imgValidator (props, propName) {
+  const asset = props[propName]
+
+  if (!asset) {
+    return new Error(`The asset "${propName}" is required.`)
+  }
+
+  if (asset.url && !asset.url.includes('.svg')) {
+    return new Error('Image type is not supported.')
   }
 }
 
@@ -37,9 +53,12 @@ class RadioCheckboxBase extends Component {
       label         :PropTypes.string,
     }),
     assets        : PropTypes.shape({
-      btnBkg        : PropTypes.object.isRequired,
+      base          : imgValidator,
+      checked       : imgValidator,
+      disabled      : imgValidator,
     }),
     btnType       : PropTypes.oneOf(['radio', 'checkbox']).isRequired,
+    isDisabled    : PropTypes.bool,
     children      : PropTypes.string,
     id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     isSelected    : PropTypes.bool,
@@ -56,36 +75,46 @@ class RadioCheckboxBase extends Component {
   static defaultProps = {
     aria        : {},
     isSelected  : false,
-    onClick     : NOOP,
+    onClick     : NoOp,
     styles      : {},
     wrapEl      : 'div',
   }
 
   state = {
-    isSelected  : this.props.isSelected,
+    isSelected  : this.props.isDisabled ? false : this.props.isSelected,
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({isSelected: nextProps.isSelected})
+    const { isDisabled, isSelected } = nextProps
+
+    if (this.props.isSelected !== isSelected || this.props.isDisabled !== isDisabled) {
+      this.setState({isDisabled, isSelected: isDisabled ? false : isSelected})
+    }
   }
 
   onClick = (event) => {
+    const { btnType, onClick } = this.props
     const { isSelected } = this.state
 
+    if (btnType === 'radio' && isSelected) { return }
+
     this.setState({isSelected: !isSelected})
-    this.props.onClick(event, {...this.props, isSelected: !isSelected})
+    onClick(event, {...this.props, isSelected: !isSelected})
   }
 
   renderInputBtn() {
-    const { aria, assets, btnType, id, styles, value } = this.props
+    let bkgImage
+    const { aria, assets, btnType, isDisabled, id, styles, value } = this.props
     const { isSelected } = this.state
-    const isSelectedImg = isSelected ? assets.btnBkg.checked : assets.btnBkg.base
+
+    if (isDisabled) { bkgImage = assets.disabled }
+    else { bkgImage = isSelected ? assets.checked : assets.base }
 
     return (
       <div style={{...STYLES.button, ...styles.button}}>
         <img
           style={STYLES.image}
-          src={isSelectedImg}
+          src={bkgImage}
           tabIndex='-1'
           alt=''
         />
@@ -96,6 +125,7 @@ class RadioCheckboxBase extends Component {
           style={STYLES.inputBtn}
           value={value}
           checked={isSelected}
+          disabled={isDisabled}
           aria-label={aria.label}
         />
       </div>
@@ -104,14 +134,16 @@ class RadioCheckboxBase extends Component {
 
   render() {
     const { children: labelText, id, styles,  wrapEl } = this.props
+    const { isDisabled } = this.props
     const Element = wrapEl
+    const isDisabledStyle = isDisabled ? STYLES.disabled : {}
 
-    // ensure both text and id were supplied so the button and label are correctly associated
+    // ensure both text and id are supplied so the button and label are correctly associated
     if (labelText && id) {
       return (
         <Element style={{...STYLES.wrapEl, ...styles.wrapEl}}>
           {this.renderInputBtn()}
-          <label htmlFor={id} style={{...STYLES.label, ...styles.label}}>
+          <label htmlFor={id} style={{...STYLES.label, ...styles.label, ...isDisabledStyle}}>
             {labelText}
           </label>
         </Element>

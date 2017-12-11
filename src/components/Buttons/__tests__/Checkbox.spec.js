@@ -16,6 +16,7 @@ describe('Checkbox', () => {
     const testCases = [
       { id: 1, isSelected: false },
       { id: 2, isSelected: true },
+      { id: 2, isSelected: true, isDisabled: true },
     ]
 
     testCases.forEach(props => {
@@ -24,6 +25,19 @@ describe('Checkbox', () => {
         .toJSON()
       expect(tree).toMatchSnapshot()
     })
+  })
+
+  it.only('sets isSelected=false if isDisabled is set to true', () => {
+    const wrapper = mount(<Checkbox id="1" value="test" isSelected>Testing disabled</Checkbox>)
+    const htmlBtn = wrapper.find('input').get(0)
+
+    expect(htmlBtn.checked).toBe(true)
+    expect(htmlBtn.disabled).toBe(false)
+    
+    wrapper.setProps({isDisabled: true})
+
+    expect(htmlBtn.checked).toBe(false)
+    expect(htmlBtn.disabled).toBe(true)
   })
 
   
