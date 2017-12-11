@@ -71,6 +71,8 @@ class MenuItem extends React.Component {
     onFocus         : PropTypes.func,
     /** Used by menu to keep track of current focus index. */
     onMenuItemFocus : PropTypes.func,
+    /** Whether or not to prevent default when menu item is clicked */
+    preventDefault     : PropTypes.bool,
     /** Role HTML attribute */
     role            : PropTypes.string,
     /** Customize style of MenuItem */
@@ -91,7 +93,8 @@ class MenuItem extends React.Component {
     disabled: false,
     role: 'menuitem',
     useTabIndex: true,
-    focus: false
+    focus: false,
+    preventDefault: true
   }
 
   componentWillReceiveProps(nextProps) {
@@ -103,24 +106,25 @@ class MenuItem extends React.Component {
     }
   }
 
-  handleClick = () => {
+  handleClick = (e) => {
     const {
       disabled,
       index,
       onClick,
       value,
-      label
+      label,
+      preventDefault
     } = this.props
+    preventDefault && e.preventDefault()
 
     const option = {value: value, label: label}
-
-    !disabled && onClick && onClick(option, index)
+    !disabled && onClick && onClick(e, option, index)
   }
 
   handleKeyDown = (event) => {
     switch(event.key) {
       case 'Enter':
-        event.preventDefault()
+        this.props.preventDefault && event.preventDefault()
         this.handleClick()
     }
   }

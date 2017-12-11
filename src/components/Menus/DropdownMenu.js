@@ -63,7 +63,7 @@ class DropdownMenu extends React.Component {
     }
   }
 
-  handleSelect = (option) => {
+  handleSelect = (e, option) => {
     const { onSelect, onRequestChange } = this.props
 
     if (this.controlledOpen()) {
@@ -73,7 +73,7 @@ class DropdownMenu extends React.Component {
       this.close()
     }
 
-    onSelect && onSelect(option)
+    onSelect && onSelect(e, option)
   }
 
   handleClick = (event) => {

@@ -2,7 +2,7 @@ Menu Example:
 
 ```js
 
-function onSelect(foo) {
+function onSelect(e, foo) {
   console.log(foo)
 }
 

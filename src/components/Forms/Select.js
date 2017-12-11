@@ -216,16 +216,16 @@ class Select extends React.PureComponent {
     })
   }
 
-  handleSelect = (option) => {
+  handleSelect = (e, option) => {
     const { onSelect, selectedOption } = this.props
 
     // For manual control
     if (!selectedOption) {
       this.setState({selectedOption: option}, () => {
-        onSelect(option)
+        onSelect(e, option)
       })
     } else {
-      onSelect(option)
+      onSelect(e, option)
     }
   }
 
