@@ -104,6 +104,8 @@ const styles = {
   }
 }
 
+const noOp = () => {} // eslint-disable-line no-empty-function
+
 @FormComponent
 @Radium
 class Select extends React.PureComponent {
@@ -170,11 +172,11 @@ class Select extends React.PureComponent {
   static defaultProps = {
     disabled    : false,
     defaultOption: null,
-    onFocus: () => {}, // eslint-disable-line no-empty-function
-    onBlur: () => {}, // eslint-disable-line no-empty-function
-    onOpen: () => {}, // eslint-disable-line no-empty-function
-    onClose: () => {}, // eslint-disable-line no-empty-function
-    onSelect: () => {} // eslint-disable-line no-empty-function
+    onFocus: noOp, // eslint-disable-line no-empty-function
+    onBlur: noOp, // eslint-disable-line no-empty-function
+    onOpen: noOp, // eslint-disable-line no-empty-function
+    onClose: noOp, // eslint-disable-line no-empty-function
+    onSelect: noOp // eslint-disable-line no-empty-function
   }
 
   state = {
