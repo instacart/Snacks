@@ -6,7 +6,7 @@ import zIndex    from '../../styles/zIndex'
 
 const styles = {
   menuContainer: {
-    zIndex: zIndex.Z_INDEX9,
+    zIndex: 9000,
     position: 'absolute',
     display: 'none',
     width: '100%'
