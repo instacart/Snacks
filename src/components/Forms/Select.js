@@ -185,7 +185,7 @@ class Select extends React.PureComponent {
 
   componentWillReceiveProps(nextProps) {
     const { selectedOption } = nextProps
-    if (typeof selectedOption !== 'undefined' && selectedOption !== this.state.selectedOption) {
+    if (selectedOption && selectedOption !== this.state.selectedOption) {
       this.setState({selectedOption: selectedOption})
     }
   }
@@ -240,7 +240,7 @@ class Select extends React.PureComponent {
     } = this.props
 
     const { isOpen, selectedOption, isFocused } = this.state
-    const hasValue = selectedOption !== null
+    const hasValue = selectedOption ? true : false
     const showHintText = hintText && !hasValue && isOpen
 
     return (
