@@ -14,7 +14,6 @@ import Icon            from '../Icon/Icon'
 
 const styles = {
   root: {
-    cursor: 'auto',
     display: 'inline-block',
     position: 'relative',
     width: '343px',
