@@ -2,7 +2,6 @@ import React     from 'react'
 import PropTypes from 'prop-types'
 import Radium    from 'radium'
 import Menu      from './Menu'
-import zIndex    from '../../styles/zIndex'
 
 const styles = {
   menuContainer: {

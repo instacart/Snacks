@@ -11,7 +11,6 @@ exports[`renders Select correctly 1`] = `
       data-radium={true}
       style={
         Object {
-          "cursor": "auto",
           "display": "inline-block",
           "position": "relative",
           "width": "343px",
@@ -176,6 +175,7 @@ exports[`renders Select correctly 1`] = `
                   "display": "none",
                   "position": "absolute",
                   "width": "100%",
+                  "zIndex": 9000,
                 }
               }
             >
@@ -323,7 +323,6 @@ exports[`renders Select w/ server error correctly 1`] = `
       data-radium={true}
       style={
         Object {
-          "cursor": "auto",
           "display": "inline-block",
           "position": "relative",
           "width": "343px",
@@ -488,6 +487,7 @@ exports[`renders Select w/ server error correctly 1`] = `
                   "display": "none",
                   "position": "absolute",
                   "width": "100%",
+                  "zIndex": 9000,
                 }
               }
             >
@@ -637,7 +637,6 @@ exports[`renders disabled Select correctly 1`] = `
       data-radium={true}
       style={
         Object {
-          "cursor": "auto",
           "display": "inline-block",
           "position": "relative",
           "width": "343px",
@@ -802,6 +801,7 @@ exports[`renders disabled Select correctly 1`] = `
                   "display": "none",
                   "position": "absolute",
                   "width": "100%",
+                  "zIndex": 9000,
                 }
               }
             >
@@ -949,7 +949,6 @@ exports[`renders invalid Select correctly 1`] = `
       data-radium={true}
       style={
         Object {
-          "cursor": "auto",
           "display": "inline-block",
           "position": "relative",
           "width": "343px",
@@ -1114,6 +1113,7 @@ exports[`renders invalid Select correctly 1`] = `
                   "display": "none",
                   "position": "absolute",
                   "width": "100%",
+                  "zIndex": 9000,
                 }
               }
             >
