@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the standard LoadingBox correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "animation": "x 3s ease-in-out infinite",
+        "animationName": "loading-radium-animation-2dabe53b",
+        "backgroundColor": "#EEEEEE",
+        "height": "20px",
+        "width": "50px",
+      }
+    }
+  />
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@keyframes loading-radium-animation-2dabe53b {
+      0%{background-color: #EEEEEE;}
+      50%{background-color: #E0E0E0;}
+      100%{background-color: #EEEEEE;}
+      }
+      ",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders the standard LoadingBox dark 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "animation": "x 3s ease-in-out infinite",
+        "animationName": "darkLoading-radium-animation-f5235588",
+        "backgroundColor": "#E0E0E0",
+        "height": "20px",
+        "width": "50px",
+      }
+    }
+  />
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@keyframes darkLoading-radium-animation-f5235588 {
+      0%{background-color: #E0E0E0;}
+      50%{background-color: #BDBDBD;}
+      100%{background-color: #E0E0E0;}
+      }
+      ",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders the standard LoadingBox light 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "animation": "x 3s ease-in-out infinite",
+        "animationName": "lightLoading-radium-animation-438c49ee",
+        "backgroundColor": "#F7F7F7",
+        "height": "20px",
+        "width": "50px",
+      }
+    }
+  />
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@keyframes lightLoading-radium-animation-438c49ee {
+      0%{background-color: #F7F7F7;}
+      50%{background-color: #EEEEEE;}
+      100%{background-color: #F7F7F7;}
+      }
+      ",
+      }
+    }
+  />
+</div>
+`;

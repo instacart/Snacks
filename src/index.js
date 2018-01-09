@@ -8,6 +8,7 @@ import GlobalTheme from './styles/GlobalTheme'
 import Grid from './components/Grid/Grid'
 import Icon from './components/Icon/Icon'
 import Link from './components/Link/Link'
+import LoadingBox from './components/Loading/LoadingBox'
 import NavigationPills from './components/NavigationPills/NavigationPills'
 import Normalize from './styles/Normalize'
 import responsive from './styles/responsive'
@@ -55,6 +56,7 @@ export {
   Checkbox,
   Icon,
   Link,
+  LoadingBox,
   NavigationPills,
   ScrollTrack
 }
