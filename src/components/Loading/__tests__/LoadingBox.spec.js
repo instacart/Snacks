@@ -12,19 +12,64 @@ it('renders the standard LoadingBox correctly', () => {
   expect(tree).toMatchSnapshot()
 })
 
-it('renders the standard LoadingBox light', () => {
+it('renders the line LoadingBox', () => {
   const tree = renderer.create(
     <StyleRoot>
-      <LoadingBox light style={{ width: '50px' }} />
+      <LoadingBox shape='line' />
     </StyleRoot>
   ).toJSON()
   expect(tree).toMatchSnapshot()
 })
 
-it('renders the standard LoadingBox dark', () => {
+it('renders the circle LoadingBox', () => {
   const tree = renderer.create(
     <StyleRoot>
-      <LoadingBox dark style={{ width: '50px' }} />
+      <LoadingBox shape='circle' />
+    </StyleRoot>
+  ).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+it('renders the square LoadingBox', () => {
+  const tree = renderer.create(
+    <StyleRoot>
+      <LoadingBox shape='square' />
+    </StyleRoot>
+  ).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+it('renders the dark LoadingBox', () => {
+  const tree = renderer.create(
+    <StyleRoot>
+      <LoadingBox background='dark' />
+    </StyleRoot>
+  ).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+it('renders the light LoadingBox', () => {
+  const tree = renderer.create(
+    <StyleRoot>
+      <LoadingBox background='light' />
+    </StyleRoot>
+  ).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+it('renders the LoadingBox with a size', () => {
+  const tree = renderer.create(
+    <StyleRoot>
+      <LoadingBox size={100} />
+    </StyleRoot>
+  ).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+it('renders the LoadingBox with a combination of props', () => {
+  const tree = renderer.create(
+    <StyleRoot>
+      <LoadingBox size={200} background='dark' shape='circle' />
     </StyleRoot>
   ).toJSON()
   expect(tree).toMatchSnapshot()

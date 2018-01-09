@@ -55,10 +55,10 @@ const determineStyle = (background, shape, size) => {
 class LoadingBox extends PureComponent {
   static propTypes = {
     /** Use for rendering dark backgrounds. */
-    background: PropTypes.oneOf('light', 'dark'),
+    background: PropTypes.oneOf(['light', 'dark']),
 
     /** Use for rendering light backgrounds, overrides dark */
-    shape: PropTypes.oneOf('circle', 'square', 'line'),
+    shape: PropTypes.oneOf(['circle', 'square', 'line']),
 
     /**
      *  By default, `size` will determine the components width in pixels.
