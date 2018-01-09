@@ -61,9 +61,9 @@ class LoadingBox extends PureComponent {
     shape: PropTypes.oneOf(['circle', 'square', 'line']),
 
     /**
-     *  By default, `size` will determine the components width in pixels.
+     *  By default, `size` will determine the components width.
      *
-     *  If a `shape` props circle or square, `size` will apply to height and width.
+     *  If the `shape` is prop `circle` or `square`, `size` will apply to height and width.
      */
     size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 

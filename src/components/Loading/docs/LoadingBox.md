@@ -52,3 +52,9 @@ Example Combination:
         <LoadingBox shape='circle' />
       </div>
     </div>
+
+**Note:** the size prop can be a percentage (supplied as a string) or a number in pixels:
+    <div style={{ width: 200 }}>
+      <LoadingBox shape='line' size='50%' />
+      <LoadingBox shape='line' size={100} />
+    </div>
