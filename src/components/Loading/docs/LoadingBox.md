@@ -1,7 +1,7 @@
 ### LoadingBox example:
 Light:
     <div>
-      <LoadingBox light />
+      <LoadingBox background='light' />
     </div>
 
 Standard:
@@ -11,7 +11,25 @@ Standard:
 
 Dark:
     <div>
-      <LoadingBox dark />
+      <LoadingBox background='dark' />
+    </div>
+
+Circle:
+    <div>
+      <LoadingBox shape='circle' background='dark' size={150} />
+    </div>
+
+Square:
+    <div>
+      <LoadingBox shape='square' background='light' size={150} />
+    </div>
+
+Line:
+    <div>
+      <LoadingBox shape='line' />
+      <LoadingBox shape='line' />
+      <LoadingBox shape='line' />
+      <LoadingBox shape='line' />
     </div>
 
 Example Combination:
@@ -19,19 +37,18 @@ Example Combination:
     const cardStyles = {
       display: 'flex',
       flexDirection: 'row',
-      width: '330px'
+      width: '280px'
     };
-    const baseLineStyle = { width: 200, marginTop: 10 };
-    const LoadingLine = () => <LoadingBox style={baseLineStyle} />;
+    const baseLineStyle = { marginTop: 10 };
 
     <div style={cardStyles}>
       <div style={{ flexGrow: 1 }}>
-        <LoadingBox style={{ width: '100px' }} dark />
-        <LoadingLine />
-        <LoadingLine />
-        <LoadingLine />
+        <LoadingBox size={100} background='dark' />
+        <LoadingBox shape='line' />
+        <LoadingBox shape='line' />
+        <LoadingBox shape='line' />
       </div>
       <div>
-        <LoadingBox style={{ borderRadius: '50%', height: 100, width: 100, marginBottom: 10 }} light />
+        <LoadingBox shape='circle' />
       </div>
     </div>

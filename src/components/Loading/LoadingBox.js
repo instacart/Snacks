@@ -19,45 +19,64 @@ const baseLoadingStyle = {
   height: '20px'
 }
 
-const darkStyles = buildKeyFramesStyles(colors.GRAY_88, colors.GRAY_74, 'darkLoading')
-const lightStyles = buildKeyFramesStyles(colors.GRAY_97, colors.GRAY_93, 'lightLoading')
+const backgroundStyles = {
+  dark: buildKeyFramesStyles(colors.GRAY_88, colors.GRAY_74, 'darkLoading'),
+  light: buildKeyFramesStyles(colors.GRAY_97, colors.GRAY_93, 'lightLoading'),
+}
+
+const shapeStyles = {
+  circle: {
+    borderRadius: '50%',
+    height: 100,
+    width: 100,
+  },
+  square: {
+    height: 100,
+    width: 100,
+  },
+  line: {
+    marginTop: 10,
+    marginBottom: 10,
+    width: 150,
+  }
+}
+
+const determineStyle = (background, shape, size) => {
+  const sizeStyles = !shape || shape === 'line' ? { width: size } : { width: size, height: size }
+
+  return {
+    ...(backgroundStyles[background] || {}),
+    ...(shapeStyles[shape] || {}),
+    ...(size ? sizeStyles : {}),
+  }
+}
 
 @Radium
 class LoadingBox extends PureComponent {
   static propTypes = {
     /** Use for rendering dark backgrounds. */
-    dark: PropTypes.bool,
+    background: PropTypes.oneOf('light', 'dark'),
 
     /** Use for rendering light backgrounds, overrides dark */
-    light: PropTypes.bool,
+    shape: PropTypes.oneOf('circle', 'square', 'line'),
+
+    /**
+     *  By default, `size` will determine the components width in pixels.
+     *
+     *  If a `shape` props circle or square, `size` will apply to height and width.
+     */
+    size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /** Optional style overrides. */
     style: PropTypes.object,
   }
 
-  static defaultProps = {
-    dark: false,
-    light: false,
-  }
-
-  componentWillReceiveProps({ dark, light }) {
-    if (dark && light) {
-      throw new TypeError('LoadingBox can not receive both dark and light props')
-    }
-  }
-
-  shouldComponentUpdate({ dark, light, style }) {
-    const { dark: oldDark, light: oldLight, style: oldStyle } = this.props
-    return dark !== oldDark || light !== oldLight || style !== oldStyle
-  }
-
   render() {
-    const { dark, light, style } = this.props
+    const { background, shape, size, style } = this.props
 
     const boxStyle = {
       ...baseLoadingStyle,
-      ...(dark ? darkStyles : {}),
-      ...(light ? lightStyles : {}),
+      ...determineStyle(background, shape, size),
       ...style,
     }
 

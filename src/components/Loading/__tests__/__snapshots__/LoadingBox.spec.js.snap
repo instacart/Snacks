@@ -40,8 +40,8 @@ exports[`renders the standard LoadingBox dark 1`] = `
     style={
       Object {
         "animation": "x 3s ease-in-out infinite",
-        "animationName": "darkLoading-radium-animation-f5235588",
-        "backgroundColor": "#E0E0E0",
+        "animationName": "loading-radium-animation-2dabe53b",
+        "backgroundColor": "#EEEEEE",
         "height": "20px",
         "width": "50px",
       }
@@ -50,10 +50,10 @@ exports[`renders the standard LoadingBox dark 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@keyframes darkLoading-radium-animation-f5235588 {
-      0%{background-color: #E0E0E0;}
-      50%{background-color: #BDBDBD;}
-      100%{background-color: #E0E0E0;}
+        "__html": "@keyframes loading-radium-animation-2dabe53b {
+      0%{background-color: #EEEEEE;}
+      50%{background-color: #E0E0E0;}
+      100%{background-color: #EEEEEE;}
       }
       ",
       }
@@ -71,8 +71,8 @@ exports[`renders the standard LoadingBox light 1`] = `
     style={
       Object {
         "animation": "x 3s ease-in-out infinite",
-        "animationName": "lightLoading-radium-animation-438c49ee",
-        "backgroundColor": "#F7F7F7",
+        "animationName": "loading-radium-animation-2dabe53b",
+        "backgroundColor": "#EEEEEE",
         "height": "20px",
         "width": "50px",
       }
@@ -81,10 +81,10 @@ exports[`renders the standard LoadingBox light 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@keyframes lightLoading-radium-animation-438c49ee {
-      0%{background-color: #F7F7F7;}
-      50%{background-color: #EEEEEE;}
-      100%{background-color: #F7F7F7;}
+        "__html": "@keyframes loading-radium-animation-2dabe53b {
+      0%{background-color: #EEEEEE;}
+      50%{background-color: #E0E0E0;}
+      100%{background-color: #EEEEEE;}
       }
       ",
       }
