@@ -18,13 +18,13 @@ class ScrollTrack extends Component {
 
   static propTypes = {
     /** Prop for passing in custom button content for back button */
-    backButtonContent: React.PropTypes.node,
+    backButtonContent: PropTypes.node,
 
     /** Manually control left positioning of ScrollTrack */
     leftOverride: PropTypes.number,
 
     /** Prop for passing in custom button content for next button */
-    nextButtonContent: React.PropTypes.node,
+    nextButtonContent: PropTypes.node,
 
     /**
     * A callback called before sliding to next set.
