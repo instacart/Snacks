@@ -51,6 +51,10 @@ module.exports = {
       content: 'docs/components.md',
       sections: [
         {
+          name: 'Transitions',
+          components: 'src/components/Transitions/[A-Z]*.js'
+        },
+        {
           name: 'Loading',
           components: 'src/components/Loading/[A-Z]*.js'
         },

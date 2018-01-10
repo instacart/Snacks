@@ -1,4 +1,3 @@
-### LoadingBox example:
 Light:
     <div>
       <LoadingBox background='light' />

@@ -58,6 +58,7 @@
     "webpack": "^3.8.1"
   },
   "dependencies": {
+    "react-transition-group": "^2.2.1",
     "tinycolor2": "^1.4.1",
     "underscore": "^1.8.3",
     "validator": "^9.1.1"
@@ -66,7 +67,8 @@
     "prop-types": ">=15",
     "radium": "^0.18.0",
     "react": ">=15",
-    "react-dom": ">=15"
+    "react-dom": ">=15",
+    "react-transition-group": "^2.2.1"
   },
   "jest": {
     "moduleNameMapper": {
