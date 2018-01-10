@@ -125,7 +125,7 @@ class MenuItem extends React.Component {
     switch(event.key) {
       case 'Enter':
         this.props.preventDefault && event.preventDefault()
-        this.handleClick()
+        this.handleClick(event)
     }
   }
 
