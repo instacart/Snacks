@@ -1,7 +1,8 @@
-import React     from 'react'
-import PropTypes from 'prop-types'
-import Radium    from 'radium'
-import Menu      from './Menu'
+import React           from 'react'
+import { findDOMNode } from 'react-dom'
+import PropTypes       from 'prop-types'
+import Radium          from 'radium'
+import Menu            from './Menu'
 
 const styles = {
   menuContainer: {
@@ -88,6 +89,7 @@ class DropdownMenu extends React.Component {
       this.open()
     } else {
       this.close()
+
     }
     onClick && onClick(event)
   }
@@ -149,6 +151,7 @@ class DropdownMenu extends React.Component {
     const { onClose } = this.props
     this.setState({open: false}, () => {
       this.menu.blur()
+      findDOMNode(this.trigger).focus()
       onClose && onClose()
     })
   }
@@ -158,6 +161,13 @@ class DropdownMenu extends React.Component {
     const { open } = this.state
     if (triggerElement) {
       return React.cloneElement(triggerElement, {
+        ref: (node) => {
+          this.trigger = node
+          const { ref } = triggerElement
+          if (typeof ref === 'function') {
+            ref(node)
+          }
+        },
         onClick: this.handleClick,
         'aria-haspopup': true,
         'aria-expanded': open,
