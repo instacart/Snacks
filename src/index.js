@@ -17,11 +17,16 @@ import ScrollTrack from './components/ScrollTrack/ScrollTrack'
 import SetStyles from './styles/SetStyles'
 import spacing from './styles/spacing'
 import TextField from './components/Forms/TextField'
+import Select from './components/Forms/Select'
 import ServerError from './components/Forms/ServerError'
 import ValidationError from './components/Forms/ValidationError'
 import FloatingLabel from './components/Forms/FloatingLabel'
 import Form from './components/Forms/Form'
 import FormComponent from './components/Forms/FormComponent'
+import Menu from './components/Menus/Menu'
+import MenuItem from './components/Menus/MenuItem'
+import MenuDivider from './components/Menus/MenuDivider'
+import DropdownMenu from './components/Menus/DropdownMenu'
 import zIndex from './styles/zIndex'
 import themer from './styles/themer/index'
 import withTheme from './styles/themer/withTheme'
@@ -48,6 +53,7 @@ export {
   FloatingLabel,
   ServerError,
   TextField,
+  Select,
   ValidationError,
   // components
   Button,
@@ -58,5 +64,9 @@ export {
   Link,
   LoadingBox,
   NavigationPills,
-  ScrollTrack
+  ScrollTrack,
+  Menu,
+  MenuItem,
+  MenuDivider,
+  DropdownMenu
 }

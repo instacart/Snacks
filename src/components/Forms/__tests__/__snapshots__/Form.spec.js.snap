@@ -61,7 +61,7 @@ exports[`renders Form with TextField correctly 1`] = `
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
-          onKeyDown={undefined}
+          onKeyDown={[Function]}
           placeholder=""
           style={
             Object {

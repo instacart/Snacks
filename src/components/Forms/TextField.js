@@ -75,12 +75,12 @@ class TextField extends React.Component {
     fullWidth          : PropTypes.bool,
     /** Sets width to 162px */
     halfWidth          : PropTypes.bool,
+    /** FormComponent error for validation */
+    hasError           : PropTypes.bool,
     /** Helper text will show up in bottom right corner below TextField */
     helperText         : PropTypes.string,
     /** Hint text will show up when input is focused and there is no value */
     hintText           : PropTypes.string,
-    /** Style for hint text */
-    hintTextStyle      : PropTypes.object,
     /** Uniq id for input */
     id                 : PropTypes.string,
     /** Style for input */
@@ -113,17 +113,12 @@ class TextField extends React.Component {
     autoComplete: 'on',
     disabled    : false,
     type        : 'text',
-    defaultValue: null
+    defaultValue: null,
+    onKeyDown: () => {} // eslint-disable-line no-empty-function
   }
 
   state = {
     hasValue: this.props.defaultValue !== null || Boolean(this.props.value)
-  }
-
-  componentWillMount() {
-    const { id, name } = this.props
-    // uniqueId is needed label htmlFor properties
-    this.uniqueId = id || `${name}-${Math.floor(Math.random() * 0xFFFF)}`.replace(/[^A-Za-z0-9-]/gi, '')
   }
 
   componentWillReceiveProps(nextProps) {
@@ -168,6 +163,10 @@ class TextField extends React.Component {
     this.props.onBlur && this.props.onBlur(e)
   }
 
+  handleKeyDown = (e) => {
+    this.props.onKeyDown(e)
+  }
+
   render() {
     const {
       floatingLabelText,
@@ -175,7 +174,9 @@ class TextField extends React.Component {
       disabled,
       fullWidth,
       halfWidth,
+      hasError,
       hintText,
+      id,
       inputStyle,
       isValid,
       name,
@@ -186,7 +187,6 @@ class TextField extends React.Component {
       style,
       value,
       helperText,
-      onKeyDown,
       autoComplete
     } = this.props
 
@@ -195,9 +195,8 @@ class TextField extends React.Component {
       isFocused
     } = this.state
 
-    const inputId = this.uniqueId
+    const inputId = id
     const showHintText = hintText && !hasValue && isFocused
-    const hasError = (!disabled && (!isValid && isValid !== undefined)) || !!serverError
 
     return (
       <div
@@ -254,7 +253,7 @@ class TextField extends React.Component {
             onBlur={this.handleInputBlur}
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
-            onKeyDown={onKeyDown && onKeyDown()}
+            onKeyDown={this.handleKeyDown}
             autoComplete={autoComplete}
             placeholder=""
           />
