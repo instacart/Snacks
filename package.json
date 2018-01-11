@@ -51,6 +51,7 @@
     "react": "^15.5.0",
     "react-dom": "^15.5.0",
     "react-styleguidist": "^6.0.2",
+    "react-transition-group": "^2.2.1",
     "react-test-renderer": "^15.5.0",
     "sinon": "^2.3.8",
     "svg-sprite-loader": "^3.4.1",

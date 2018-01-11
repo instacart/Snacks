@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 const TIMEOUT = 0
 const TRASITION_TIME = 200
+const TIMING_FUNCTION = 'ease-in-out'
 const START_SCALE = 0
 const END_SCALE = 1
 const START_MAX_HEIGHT = 0
@@ -22,22 +23,18 @@ const AXIS = 'y'
 
 class Grow extends PureComponent {
   static propTypes = {
-    /** Delay in milliseconds until animation start. */
-    timeout: PropTypes.number,
-
-    /** Time of animation in milliseconds. */
-    transitionTime: PropTypes.number,
-
     /**
-     * Settings for starting and ending transformation to scale.
-     *
-     * Default start: 0
-     * Default end: 1
+     * A convenience prop that enables or disabled appear animations for
+     * all children. Note that specifying this will override any defaults
+     * set on individual children Transitions.
     */
-    scale: PropTypes.shape({
-      start: PropTypes.number,
-      end: PropTypes.number,
-    }),
+    appear: PropTypes.bool,
+
+    /** Axis that is animated */
+    axis: PropTypes.oneOf(['x', 'y']),
+
+    /** Show the component; triggers the enter or exit states */
+    in: PropTypes.bool,
 
     /**
      * Settings for max-height during animation (this is what animates the element's height).
@@ -50,26 +47,34 @@ class Grow extends PureComponent {
       end: PropTypes.number,
     }),
 
-    /** Axis that is animated */
-    axis: PropTypes.oneOf(['x', 'y']),
-
-    /** Show the component; triggers the enter or exit states */
-    in: PropTypes.bool,
-
     /**
-     * A convenience prop that enables or disabled appear animations for
-     * all children. Note that specifying this will override any defaults
-     * set on individual children Transitions.
-     */
-    appear: PropTypes.bool,
+     * Settings for starting and ending transformation to scale.
+     *
+     * Default start: 0
+     * Default end: 1
+    */
+    scale: PropTypes.shape({
+      start: PropTypes.number,
+      end: PropTypes.number,
+    }),
 
     /** Optional style overrides. */
     style: PropTypes.object,
+
+    /** Delay in milliseconds until animation start. */
+    timeout: PropTypes.number,
+
+    /** Name of the transition-timing-function CSS property. */
+    timingFunction: PropTypes.oneOf(['ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear']),
+
+    /** Time of animation in milliseconds. */
+    transitionTime: PropTypes.number,
   }
 
   static defaultProps = {
     timeout: TIMEOUT,
     transitionTime: TRASITION_TIME,
+    timingFunction: TIMING_FUNCTION,
     scale: SCALE_DEFAULT,
     maxHeight: MAX_HEIGHT,
     axis: AXIS,
@@ -116,21 +121,21 @@ class Grow extends PureComponent {
 
   get initialStyles () {
     const { start: startScale } = this.scale
-    const { transitionTime } = this.props
+    const { transitionTime, timingFunction } = this.props
 
     return {
       maxHeight: 0,
       overflow: 'hidden',
       transform: `${this.transformAxis}(${startScale})`,
-      transition: `all ${transitionTime}ms ease-in-out`,
+      transition: `all ${transitionTime}ms ${timingFunction}`,
     }
   }
 
   renderChild = (state) => {
     const { style, children } = this.props
     const styles = {
-      ...style,
       ...this.initialStyles,
+      ...style,
       ...this.transitionStyles[state]
     }
     return (

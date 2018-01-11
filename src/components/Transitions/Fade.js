@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 const TIMEOUT = 0
 const TRASITION_TIME = 400
+const TIMING_FUNCTION = 'ease-in-out'
 const START_OPACITY = 0
 const END_OPACITY = 1
 
@@ -16,11 +17,18 @@ const AXIS = 'y'
 
 class Fade extends PureComponent {
   static propTypes = {
-    /** Delay in milliseconds until animation start. */
-    timeout: PropTypes.number,
+    /**
+     * A convenience prop that enables or disabled appear animations for
+     * all children. Note that specifying this will override any defaults
+     * set on individual children Transitions.
+     */
+    appear: PropTypes.bool,
 
-    /** Time of animation in milliseconds. */
-    transitionTime: PropTypes.number,
+    /** Axis that is animated */
+    axis: PropTypes.oneOf(['x', 'y']),
+
+    /** Show the component; triggers the enter or exit states */
+    in: PropTypes.bool,
 
     /**
      * Settings for opacity during animation.
@@ -33,26 +41,23 @@ class Fade extends PureComponent {
       end: PropTypes.number,
     }),
 
-    /** Axis that is animated */
-    axis: PropTypes.oneOf(['x', 'y']),
-
-    /** Show the component; triggers the enter or exit states */
-    in: PropTypes.bool,
-
-    /**
-     * A convenience prop that enables or disabled appear animations for
-     * all children. Note that specifying this will override any defaults
-     * set on individual children Transitions.
-     */
-    appear: PropTypes.bool,
-
     /** Optional style overrides. */
     style: PropTypes.object,
+
+    /** Delay in milliseconds until animation start. */
+    timeout: PropTypes.number,
+
+    /** Time of animation in milliseconds. */
+    transitionTime: PropTypes.number,
+
+    /** Name of the transition-timing-function CSS property. */
+    timingFunction: PropTypes.oneOf(['ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear']),
   }
 
   static defaultProps = {
     timeout: TIMEOUT,
     transitionTime: TRASITION_TIME,
+    timingFunction: TIMING_FUNCTION,
     opacity: OPACITY_DEFAULT,
     axis: AXIS,
     style: {},
@@ -82,11 +87,11 @@ class Fade extends PureComponent {
   }
 
   get initialStyles() {
-    const { transitionTime } = this.props
+    const { transitionTime, timingFunction } = this.props
     const { start: opacityStart } = this.opacity
     return {
       opacity: opacityStart,
-      transition: `all ${transitionTime}ms ease-in-out`,
+      transition: `all ${transitionTime}ms ${timingFunction}`,
     }
   }
 

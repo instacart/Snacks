@@ -51,20 +51,8 @@ module.exports = {
       content: 'docs/components.md',
       sections: [
         {
-          name: 'Transitions',
-          components: 'src/components/Transitions/[A-Z]*.js'
-        },
-        {
-          name: 'Loading',
-          components: 'src/components/Loading/[A-Z]*.js'
-        },
-        {
           name: 'Buttons',
           components: 'src/components/Buttons/[A-Z]*.js'
-        },
-        {
-          name: 'Menus',
-          components: 'src/components/Menus/[A-Z]*.js'
         },
         {
           name: 'Forms',
@@ -84,12 +72,24 @@ module.exports = {
           components: 'src/components/Link/Link.js'
         },
         {
+          name: 'Loading',
+          components: 'src/components/Loading/[A-Z]*.js'
+        },
+        {
+          name: 'Menus',
+          components: 'src/components/Menus/[A-Z]*.js'
+        },
+        {
           name: 'NavigationPills',
           components: 'src/components/NavigationPills/[A-Z]*.js'
         },
         {
           name: 'ScrollTrack',
           components: 'src/components/ScrollTrack/[A-Z]*.js'
+        },
+        {
+          name: 'Transitions',
+          components: 'src/components/Transitions/[A-Z]*.js'
         }
       ]
 
