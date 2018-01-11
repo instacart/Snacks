@@ -24,6 +24,9 @@ class Slide extends PureComponent {
     /** Show the component; triggers the enter or exit states */
     in: PropTypes.bool,
 
+    /** Inverts offset direction, e.g. changes animation direction from right to left */
+    invert: PropTypes.bool,
+
     /** Optional style overrides. */
     style: PropTypes.object,
 
@@ -49,6 +52,7 @@ class Slide extends PureComponent {
     style: {},
     in: true,
     appear: true,
+    invert: false,
   }
 
   get transformAxis() {
@@ -56,11 +60,11 @@ class Slide extends PureComponent {
   }
 
   get transitionStyles() {
-    const { width } = this.props
-
+    const { width, invert } = this.props
+    const offsetDirection = invert ? '-' : ''
     return {
       entering: {
-        transform: `${this.transformAxis}(-${width}px)`
+        transform: `${this.transformAxis}(${offsetDirection}${width}px)`
       },
       entered: {
         transform: `${this.transformAxis}(0)`
@@ -69,25 +73,32 @@ class Slide extends PureComponent {
   }
 
   get initialStyles() {
-    const { transitionTime, timingFunction, width } = this.props
-
+    const { transitionTime, timingFunction, width, invert } = this.props
+    const offsetDirection = invert ? '' : '-'
     return {
-      width: width,
-      transform: `${this.transformAxis}(-${width}px)`,
+      width,
+      transform: `${this.transformAxis}(${offsetDirection}${width}px)`,
       transition: `all ${transitionTime}ms ${timingFunction}`,
     }
   }
 
   renderChild = (state) => {
-    const { style, children } = this.props
+    const { style, children, width } = this.props
     const styles = {
-      ...style,
       ...this.initialStyles,
       ...this.transitionStyles[state]
     }
+    const containerStyle = {
+      overflow: 'hidden',
+      width,
+      ...style,
+    }
+
     return (
-      <div style={styles} >
-        {children}
+      <div style={containerStyle}>
+        <div style={styles} >
+          {children}
+        </div>
       </div>
     )
   }

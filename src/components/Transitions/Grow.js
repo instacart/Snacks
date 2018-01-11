@@ -100,7 +100,7 @@ class Grow extends PureComponent {
   }
 
   get transformAxis () {
-    return this.props.axis == 'x' ? 'scaleX' : 'scaleY'
+    return this.props.axis === 'x' ? 'scaleX' : 'scaleY'
   }
 
   get transitionStyles () {
@@ -121,10 +121,11 @@ class Grow extends PureComponent {
 
   get initialStyles () {
     const { start: startScale } = this.scale
+    const { start: startMaxHeight } = this.maxHeight
     const { transitionTime, timingFunction } = this.props
 
     return {
-      maxHeight: 0,
+      maxHeight: startMaxHeight,
       overflow: 'hidden',
       transform: `${this.transformAxis}(${startScale})`,
       transition: `all ${transitionTime}ms ${timingFunction}`,
@@ -138,6 +139,7 @@ class Grow extends PureComponent {
       ...style,
       ...this.transitionStyles[state]
     }
+
     return (
       <div style={styles} >
         {children}
@@ -147,6 +149,7 @@ class Grow extends PureComponent {
 
   render() {
     const { in: inProp, timeout, appear } = this.props
+
     return (
       <Transition
         in={inProp}
