@@ -173,6 +173,7 @@ const Button = props => {
     disabled: props.disabled,
     tabIndex: props.tabIndex,
     type: props.type,
+    'aria-label': props.aria.label,
     style: [
       baseStyles,
       sizeStyles[props.size],
@@ -222,6 +223,11 @@ const Button = props => {
 }
 
 Button.propTypes = {
+  /** Hash of Aria attibributes used by screen readers */
+  aria: PropTypes.shape({
+    label:PropTypes.string,
+  }),
+
   /** Size of the button. */
   size: PropTypes.oneOf(['tiny', 'small', 'standard', 'large']),
 
@@ -272,6 +278,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
+  aria: {},
   size: 'standard',
   snacksStyle: 'primary',
   disabled: false,
