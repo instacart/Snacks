@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>RadioDisabled</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="RadioDisabled" fill-rule="nonzero" fill="#BDBDBD">
+            <g id="Web/Radio-Button/Disabled">
+                <path d="M2,12 C2,17.5237031 6.47667235,22 12,22 C17.5237031,22 22,17.5233276 22,12 C22,6.47629686 17.5233276,2 12,2 C6.47629686,2 2,6.47667235 2,12 Z M1,12 C1,5.92486775 5.923532,1 12,1 C18.0751322,1 23,5.923532 23,12 C23,18.0751322 18.076468,23 12,23 C5.92486775,23 1,18.076468 1,12 Z" id="Rectangle-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

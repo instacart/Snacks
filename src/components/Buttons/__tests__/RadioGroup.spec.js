@@ -1,7 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import sinon from 'sinon'
-import renderer from 'react-test-renderer'
 import RadioGroup from '../RadioGroup'
 import Radio from '../Radio'
 
@@ -20,7 +19,7 @@ describe('RadioGroup', () => {
     })
   })
 
-  it('one radio button can be selected at a time', () => {
+  it('only one radio button can be selected at a time', () => {
     const wrapper = mount(
       <RadioGroup name="radioTest">
         <Radio id="1" value="val1">Value 1</Radio>
@@ -43,24 +42,6 @@ describe('RadioGroup', () => {
         }
       })
     })
-  })
-
-  
-  it('does not allow unselecting a previously selected button', () => {
-    const wrapper = mount(
-      <RadioGroup name="radioTest">
-        <Radio id="1" value="val1">Value 1</Radio>
-        <Radio id="2" value="val2">Value 2</Radio>
-        <Radio id="3" value="val3">Value 3</Radio>
-      </RadioGroup>
-    )
-
-    const testBtn = wrapper.find('#1')
-    expect(testBtn.prop('checked')).toBe(false)
-    testBtn.simulate('click', { target: { checked: true } })
-    expect(testBtn.prop('checked')).toBe(true)
-    testBtn.simulate('click', { target: { checked: false } })
-    expect(testBtn.prop('checked')).toBe(true)
   })
 
   it('fires a passed callback on radio selection change', () => {

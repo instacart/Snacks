@@ -5,9 +5,24 @@ const STYLES = {
   wrapEl: {}
 }
 
+const NoOp = () => {} // eslint-disable-line no-empty-function
+let initHasSelectedRadio
+
 class RadioGroup extends React.Component {
   static propTypes = {
-    children: PropTypes.arrayOf(Radio).isRequired,
+    children: PropTypes.arrayOf((propValue, key) => {
+      const child = propValue[key]
+
+      if (child.type.name !== 'Radio') {
+        return new Error('Children must be an Array of Radio components.')
+      }
+
+      if (initHasSelectedRadio && child.props.isSelected) {
+        return new Error('Only one radio button can be selected in the group.')
+      }
+
+      if (child.props.isSelected) { initHasSelectedRadio = true }
+    }).isRequired,
     name: PropTypes.string.isRequired,
     selectedBtn: PropTypes.instanceOf(Radio),
     onChange: PropTypes.func,
@@ -18,8 +33,9 @@ class RadioGroup extends React.Component {
   }
 
   static defaultProps = {
+    onChange: NoOp,
+    styles: {},
     wrapEl: 'div',
-    styles: {}
   }
 
   state = {
@@ -30,10 +46,7 @@ class RadioGroup extends React.Component {
     const { onChange } = this.props
 
     return (event) => {
-      if (onChange && inputBtn && inputBtn !== this.state.selectedBtn) {
-        onChange(event.target.value, inputBtn.props)
-      }
-
+      onChange(event.target.value, inputBtn.props)
       this.setState({selectedBtn: inputBtn})
     }
   }

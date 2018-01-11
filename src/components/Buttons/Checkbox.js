@@ -2,12 +2,12 @@ import React, { PropTypes } from 'react'
 import RadioCheckboxBase from '../../base/RadioCheckboxBase'
 import svgCheckboxBase from '../../assets/checkboxBase.svg'
 import svgCheckboxChecked from '../../assets/checkboxChecked.svg'
+import svgCheckboxDisabled from '../../assets/checkboxDisabled.svg'
 
 const ASSETS = {
-  btnBkg: {
-    base: svgCheckboxBase,
-    checked: svgCheckboxChecked,
-  }
+  base: svgCheckboxBase,
+  checked: svgCheckboxChecked,
+  disabled: svgCheckboxDisabled,
 }
 
 const Checkbox = (props) => {
@@ -20,6 +20,7 @@ Checkbox.propTypes = {
   }),
   children      : PropTypes.string,
   id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  isDisabled    : PropTypes.bool,
   isSelected    : PropTypes.bool,
   name          : PropTypes.string,
   onClick       : PropTypes.func,

@@ -2,6 +2,8 @@ This component outputs a radio button with an optional label.
 
 You can define whether the button starts in the pressed on unpressed state through the `isChecked` prop. In addition, you can change the checked/unchecked state at any moment after the mount state by redifining the prop `isChecked`.
 
+**Note:** Radio buttons are not supposed to be unselected once pressed. If you need that behavior, a button or a checkbox is a better solution.
+
 ### Label
 Associating a label to every radio button is very important for accessibility purposes. There are two ways to do it. The easiest is to enclose the text with the component: `<Radio>My label<Radio>`. The other option is to associate a label yourself:
 
@@ -44,4 +46,17 @@ function onClick(event, props) {
 }
 
 <Radio id="radio4" onClick={onClick}>Click me!</Radio>
+```
+
+### Disabling
+You can disable a checkbox by declaring the `isDisabled` prop:
+
+**Important!** If you attach a label to a Radio button manually, make sure the styleguide is followed for the disabled state.
+
+```js
+function onClick(event, props) {
+  alert(`This function will not be called`)
+}
+
+<Radio id="radio5" onClick={onClick} isDisabled>I am disabled</Radio>
 ```

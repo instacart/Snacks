@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>CheckboxDisabled</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="CheckboxDisabled" fill-rule="nonzero" fill="#BDBDBD">
+            <g id="Web/Checkbox/Disabled">
+                <path d="M3,5.99922997 L3,18.00077 C3,19.655997 4.34355018,21 5.99922997,21 L18.00077,21 C19.655997,21 21,19.6564498 21,18.00077 L21,5.99922997 C21,4.34400301 19.6564498,3 18.00077,3 L5.99922997,3 C4.34400301,3 3,4.34355018 3,5.99922997 Z M2,5.99922997 C2,3.79051625 3.79246765,2 5.99922997,2 L18.00077,2 C20.2094838,2 22,3.79246765 22,5.99922997 L22,18.00077 C22,20.2094838 20.2075324,22 18.00077,22 L5.99922997,22 C3.79051625,22 2,20.2075324 2,18.00077 L2,5.99922997 Z" id="Rectangle-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>
