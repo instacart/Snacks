@@ -114,7 +114,7 @@ it('should fire callbacks', () => {
     </Select>
   )
 
-  wrapper.find('FloatingLabel').first().simulate('click')
+  wrapper.find('FloatingLabel').first().simulate('mouseDown')
   expect(onOpen.calledOnce).toBe(true)
 
   wrapper.find(MenuItem).first().simulate('click')

@@ -189,6 +189,14 @@ const Button = props => {
 
       props.onClick(e, props)
     },
+    onMouseDown: e => {
+      if (props.disabled) {
+        e.preventDefault()
+        return
+      }
+
+      props.onMouseDown(e, props)
+    },
     ...props.elementAttributes
   }
   if (props.href) {
@@ -248,6 +256,9 @@ Button.propTypes = {
 
   /** Callback that fires when the button is clicked. */
   onClick: PropTypes.func,
+
+  /** Callback that fires on mouse down. */
+  onMouseDown: PropTypes.func,
 
   /** Reverses colors. Use for rendering buttons on dark backgrounds. */
   inverted: PropTypes.bool,

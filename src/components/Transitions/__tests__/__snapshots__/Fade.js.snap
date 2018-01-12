@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Fade correctly with custom props 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    style={
+      Object {
+        "background": "red",
+        "opacity": 0.2,
+        "transition": "all 500ms ease-in-out",
+      }
+    }
+  >
+    <h3>
+       Content 
+    </h3>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders Fade in correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    style={
+      Object {
+        "opacity": 0,
+        "transition": "all 400ms ease-in-out",
+      }
+    }
+  >
+    <h3>
+       Content 
+    </h3>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;

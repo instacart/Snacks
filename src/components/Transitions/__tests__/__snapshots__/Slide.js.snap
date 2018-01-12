@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Slide correctly with custom props 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    style={
+      Object {
+        "background": "red",
+        "overflowX": "visible",
+        "overflowY": "hidden",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "transform": "translateY(200px)",
+          "transition": "all 500ms ease-in-out",
+        }
+      }
+    >
+      <h3>
+         Content 
+      </h3>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders Slide in correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    style={
+      Object {
+        "overflowX": "visible",
+        "overflowY": "hidden",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "transform": "translateX(200px)",
+          "transition": "all 200ms ease-in-out",
+        }
+      }
+    >
+      <h3>
+         Content 
+      </h3>
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;

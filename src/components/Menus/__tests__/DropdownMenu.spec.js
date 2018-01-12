@@ -40,7 +40,7 @@ it('should call callbacks correctly', () => {
     </DropdownMenu>
   )
 
-  wrapper.find(Button).first().simulate('click')
+  wrapper.find(Button).first().simulate('mouseDown')
   expect(onOpen.calledOnce).toBe(true)
 
   wrapper.find(MenuItem).first().simulate('click')

@@ -3,16 +3,20 @@ import { findDOMNode } from 'react-dom'
 import PropTypes       from 'prop-types'
 import Radium          from 'radium'
 import Menu            from './Menu'
+import Slide from '../../components/Transitions/Slide'
+import Fade from '../../components/Transitions/Fade'
 
 const styles = {
   menuContainer: {
     zIndex: 9000,
     position: 'absolute',
-    display: 'none',
-    width: '100%'
-  },
-  menuContainerOpen: {
+    width: '100%',
     display: 'block'
+  },
+  transitionContainer: {
+    padding: '2px 5px 5px',
+    width: '100%',
+    transform: 'translateX(-5px)'
   }
 }
 
@@ -73,6 +77,7 @@ class DropdownMenu extends React.Component {
       this.close()
     }
 
+    findDOMNode(this.trigger).focus()
     onSelect && onSelect(e, option)
   }
 
@@ -96,14 +101,11 @@ class DropdownMenu extends React.Component {
 
   handleMenuBlur = () => {
     const { onRequestChange } = this.props
-    // Timeout ensures click event has correct state when attempting to close
-    setTimeout( () => {
-      if (this.controlledOpen()) {
-        onRequestChange && onRequestChange(false)
-      } else {
-        this.close()
-      }
-    }, 100)
+    if (this.controlledOpen()) {
+      onRequestChange && onRequestChange(false)
+    } else {
+      this.close()
+    }
   }
 
   handleKeyDown = (event) => {
@@ -140,7 +142,6 @@ class DropdownMenu extends React.Component {
 
   open() {
     const { onOpen } = this.props
-
     this.setState({open: true}, () => {
       this.menu.focus()
       onOpen && onOpen()
@@ -151,7 +152,6 @@ class DropdownMenu extends React.Component {
     const { onClose } = this.props
     this.setState({open: false}, () => {
       this.menu.blur()
-      findDOMNode(this.trigger).focus()
       onClose && onClose()
     })
   }
@@ -168,7 +168,7 @@ class DropdownMenu extends React.Component {
             ref(node)
           }
         },
-        onClick: this.handleClick,
+        onMouseDown: this.handleClick,
         'aria-haspopup': true,
         'aria-expanded': open,
       })
@@ -192,26 +192,27 @@ class DropdownMenu extends React.Component {
       >
         <div style={{position: 'relative'}}>
           { this.renderTriggerElement() }
-
-          <div
-            style={[
-              styles.menuContainer,
-              menuContainerStyle,
-              isOpen && styles.menuContainerOpen
-            ]}
-          >
-            <Menu
-              ref={(node) => this.menu = node}
-              ariaHidden={!isOpen}
-              onBlur={this.handleMenuBlur}
-              onSelect={this.handleSelect}
-              {...menuProps}
-            >
-              {children}
-            </Menu>
-          </div>
         </div>
-
+        <div
+          style={[
+            styles.menuContainer,
+            menuContainerStyle,
+          ]}
+        >
+          <Slide in={isOpen} axis='y' style={styles.transitionContainer} offset={30}>
+            <Fade in={isOpen} transitionTime={200}>
+              <Menu
+                ref={(node) => this.menu = node}
+                ariaHidden={!isOpen}
+                onBlur={this.handleMenuBlur}
+                onSelect={this.handleSelect}
+                {...menuProps}
+              >
+                {children}
+              </Menu>
+            </Fade>
+          </Slide>
+        </div>
       </div>
     )
   }
