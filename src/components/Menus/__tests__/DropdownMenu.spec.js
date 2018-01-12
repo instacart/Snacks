@@ -7,8 +7,6 @@ import DropdownMenu  from '../DropdownMenu'
 import MenuItem      from '../MenuItem'
 import Button        from '../../Buttons/Button'
 
-jest.useFakeTimers()
-
 it('renders DropdownMenu with icons and trigger correctly', () => {
   const tree = renderer.create(
     <StyleRoot>
@@ -42,8 +40,7 @@ it('should call callbacks correctly', () => {
     </DropdownMenu>
   )
 
-  wrapper.find(Button).first().simulate('click')
-  jest.runAllTimers()
+  wrapper.find(Button).first().simulate('mouseDown')
   expect(onOpen.calledOnce).toBe(true)
 
   wrapper.find(MenuItem).first().simulate('click')

@@ -16,7 +16,7 @@ exports[`renders Slide correctly with custom props 1`] = `
     <div
       style={
         Object {
-          "transform": "translateY(250px)",
+          "transform": "translateY(200px)",
           "transition": "all 500ms ease-in-out",
         }
       }
