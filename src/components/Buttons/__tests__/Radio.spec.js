@@ -53,7 +53,7 @@ describe('Radio', () => {
     const testCases = [
       {
         id: 1,
-        styles: {
+        style: {
           wrapEl: {background: 'pink'},
           button: {border: '2px solid purple' },
           label: {color: 'green'}
@@ -61,7 +61,7 @@ describe('Radio', () => {
       },
       {
         id: 2,
-        styles: undefined
+        style: undefined
       },
     ]
 

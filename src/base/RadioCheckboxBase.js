@@ -5,7 +5,7 @@ import colors from '../styles/colors'
 const NoOp = () => {} // eslint-disable-line no-empty-function
 const INPUT_BTN_SIZE = 22
 
-const STYLES = {
+const STYLE = {
   button: {
     position: 'relative',
   },
@@ -63,7 +63,7 @@ class RadioCheckboxBase extends Component {
     id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     isSelected    : PropTypes.bool,
     onClick       : PropTypes.func,
-    styles        : PropTypes.shape({
+    style         : PropTypes.shape({
       button        : PropTypes.object,
       label         : PropTypes.object,
       wrapEl        : PropTypes.object,
@@ -76,7 +76,7 @@ class RadioCheckboxBase extends Component {
     aria        : {},
     isSelected  : false,
     onClick     : NoOp,
-    styles      : {},
+    style      : {},
     wrapEl      : 'div',
   }
 
@@ -104,16 +104,16 @@ class RadioCheckboxBase extends Component {
 
   renderInputBtn() {
     let bkgImage
-    const { aria, assets, btnType, isDisabled, id, styles, value } = this.props
+    const { aria, assets, btnType, isDisabled, id, style, value } = this.props
     const { isSelected } = this.state
 
     if (isDisabled) { bkgImage = assets.disabled }
     else { bkgImage = isSelected ? assets.checked : assets.base }
 
     return (
-      <div style={{...STYLES.button, ...styles.button}}>
+      <div style={{...STYLE.button, ...style.button}}>
         <img
-          style={STYLES.image}
+          style={STYLE.image}
           src={bkgImage}
           tabIndex='-1'
           alt=''
@@ -122,7 +122,7 @@ class RadioCheckboxBase extends Component {
           id={id}
           type={btnType}
           onClick={this.onClick}
-          style={STYLES.inputBtn}
+          style={STYLE.inputBtn}
           value={value}
           checked={isSelected}
           disabled={isDisabled}
@@ -133,17 +133,17 @@ class RadioCheckboxBase extends Component {
   }
 
   render() {
-    const { children: labelText, id, styles,  wrapEl } = this.props
+    const { children: labelText, id, style,  wrapEl } = this.props
     const { isDisabled } = this.props
     const Element = wrapEl
-    const isDisabledStyle = isDisabled ? STYLES.disabled : {}
+    const isDisabledStyle = isDisabled ? STYLE.disabled : {}
 
     // ensure both text and id are supplied so the button and label are correctly associated
     if (labelText && id) {
       return (
-        <Element style={{...STYLES.wrapEl, ...styles.wrapEl}}>
+        <Element style={{...STYLE.wrapEl, ...style.wrapEl}}>
           {this.renderInputBtn()}
-          <label htmlFor={id} style={{...STYLES.label, ...styles.label, ...isDisabledStyle}}>
+          <label htmlFor={id} style={{...STYLE.label, ...style.label, ...isDisabledStyle}}>
             {labelText}
           </label>
         </Element>

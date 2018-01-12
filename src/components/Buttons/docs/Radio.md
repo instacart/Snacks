@@ -21,12 +21,12 @@ Associating a label to every radio button is very important for accessibility pu
 To create a radio group where only one button can be checked [see here](#radiogroup).
 
 ### Styling
-You can pass an object to the `styles` prop for styling the label, radio button and wrap element using Radium's structure:
+You can pass an object to the `style` prop for styling the label, radio button and wrap element using Radium's structure:
 ```js
 <Radio
   id="radio3"
   wrapEl='span'
-  styles={{
+  style={{
     wrapEl: {padding: 10, border: '2px dotted lightblue'},
     button: {marginRight: 40},
     label: {color: 'salmon'},

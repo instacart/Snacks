@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import Radio from './Radio'
 
-const STYLES = {
+const STYLE = {
   wrapEl: {}
 }
 
@@ -27,14 +27,14 @@ class RadioGroup extends React.Component {
     selectedBtn: PropTypes.instanceOf(Radio),
     onChange: PropTypes.func,
     wrapEl: PropTypes.string,
-    styles: PropTypes.shape({
+    style: PropTypes.shape({
       wrapEl: PropTypes.object,
     })
   }
 
   static defaultProps = {
     onChange: NoOp,
-    styles: {},
+    style: {},
     wrapEl: 'div',
   }
 
@@ -52,7 +52,7 @@ class RadioGroup extends React.Component {
   }
 
   render() {
-    const { children, styles, wrapEl: Element } = this.props
+    const { children, style, wrapEl: Element } = this.props
     const childrenWithProps = React.Children.map(children, child => {
       const { selectedBtn } = this.state
 
@@ -65,7 +65,7 @@ class RadioGroup extends React.Component {
 
     return (
       <Element
-        style={{...STYLES.wrapEl, ...styles.wrapEl}}
+        style={{...STYLE.wrapEl, ...style.wrapEl}}
       >
         {childrenWithProps}
       </Element>
