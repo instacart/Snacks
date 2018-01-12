@@ -24,7 +24,7 @@ Checkbox.propTypes = {
   isSelected    : PropTypes.bool,
   name          : PropTypes.string,
   onClick       : PropTypes.func,
-  styles        : PropTypes.shape({
+  style         : PropTypes.shape({
     button        : PropTypes.object,
     label         : PropTypes.object,
     wrapEl        : PropTypes.object,

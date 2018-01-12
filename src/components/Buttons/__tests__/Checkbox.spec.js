@@ -49,11 +49,11 @@ describe('Checkbox', () => {
   });
   
 
-  it('incorporates user styles if passed', () => {
+  it('incorporates user style if passed', () => {
     const testCases = [
       {
         id: 1,
-        styles: {
+        style: {
           wrapEl: {background: 'pink'},
           button: {border: '2px solid purple' },
           label: {color: 'green'}
@@ -61,7 +61,7 @@ describe('Checkbox', () => {
       },
       {
         id: 2,
-        styles: undefined
+        style: undefined
       },
     ]
 
