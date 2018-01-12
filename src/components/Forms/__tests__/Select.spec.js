@@ -5,7 +5,7 @@ import { mount }     from 'enzyme'
 import { spy }       from 'sinon'
 import Select        from '../Select'
 import MenuItem      from '../../Menus/MenuItem'
-
+jest.useFakeTimers()
 it('renders Select correctly', () => {
   const tree = renderer.create(
     <StyleRoot>
@@ -95,7 +95,7 @@ it('renders Select w/ server error correctly', () => {
 })
 
 it('should fire callbacks', () => {
-  const onOpen = spy()
+  const onOpen = jest.fn()
   const onClose = spy()
   const onSelect = spy()
 
@@ -115,7 +115,8 @@ it('should fire callbacks', () => {
   )
 
   wrapper.find('FloatingLabel').first().simulate('click')
-  expect(onOpen.calledOnce).toBe(true)
+  jest.runAllTimers()
+  expect(onOpen).toBeCalled()
 
   wrapper.find(MenuItem).first().simulate('click')
   expect(onSelect.calledOnce).toBe(true)
