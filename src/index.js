@@ -30,6 +30,7 @@ import DropdownMenu from './components/Menus/DropdownMenu'
 import zIndex from './styles/zIndex'
 import themer from './styles/themer/index'
 import withTheme from './styles/themer/withTheme'
+import { Grow, Fade, Slide } from './components/Transitions'
 
 export {
   // base
@@ -55,6 +56,12 @@ export {
   TextField,
   Select,
   ValidationError,
+
+  // transitions
+  Grow,
+  Fade,
+  Slide,
+
   // components
   Button,
   CircleButton,
