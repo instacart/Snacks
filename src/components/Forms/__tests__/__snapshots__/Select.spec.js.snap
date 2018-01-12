@@ -168,111 +168,132 @@ exports[`renders Select correctly 1`] = `
                 </div>
               </div>
             </div>
+          </div>
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "display": "block",
+                "position": "absolute",
+                "width": "100%",
+                "zIndex": 9000,
+              }
+            }
+          >
             <div
-              data-radium={true}
               style={
                 Object {
-                  "display": "none",
-                  "position": "absolute",
+                  "overflowX": "visible",
+                  "overflowY": "hidden",
+                  "padding": "2px 5px 5px",
+                  "transform": "translateX(-5px)",
                   "width": "100%",
-                  "zIndex": 9000,
                 }
               }
             >
               <div
-                aria-hidden={true}
-                onBlur={[Function]}
-                onKeyDown={[Function]}
-                role="menu"
                 style={
                   Object {
-                    "backgroundColor": "#ffffff",
-                    "borderRadius": "4px",
-                    "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
-                    "display": "inline-block",
-                    "maxHeight": "500px",
-                    "outline": "none",
-                    "overflowY": "auto",
-                    "padding": "8px 0",
-                    "userSelect": "none",
-                    "width": "100%",
+                    "transform": "translateY(-200px)",
+                    "transition": "all 200ms ease-in-out",
                   }
                 }
-                tabIndex={-1}
               >
                 <div
-                  data-radium={true}
+                  aria-hidden={true}
                   onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
                   onKeyDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="menuitem"
+                  role="menu"
                   style={
                     Object {
                       "backgroundColor": "#ffffff",
-                      "padding": "16px 0",
+                      "borderRadius": "4px",
+                      "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
+                      "display": "inline-block",
+                      "maxHeight": "500px",
+                      "outline": "none",
+                      "overflowY": "auto",
+                      "padding": "8px 0",
+                      "userSelect": "none",
+                      "width": "100%",
                     }
                   }
-                  tabIndex={0}
+                  tabIndex={-1}
                 >
                   <div
                     data-radium={true}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    role="menuitem"
                     style={
                       Object {
-                        "display": "table",
+                        "backgroundColor": "#ffffff",
+                        "padding": "16px 0",
                       }
                     }
+                    tabIndex={0}
                   >
                     <div
                       data-radium={true}
                       style={
                         Object {
-                          "padding": "0 16px",
-                          "whiteSpace": "nowrap",
+                          "display": "table",
                         }
                       }
                     >
-                      United States
+                      <div
+                        data-radium={true}
+                        style={
+                          Object {
+                            "padding": "0 16px",
+                            "whiteSpace": "nowrap",
+                          }
+                        }
+                      >
+                        United States
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  data-radium={true}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="menuitem"
-                  style={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "padding": "16px 0",
-                    }
-                  }
-                  tabIndex={0}
-                >
                   <div
                     data-radium={true}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    role="menuitem"
                     style={
                       Object {
-                        "display": "table",
+                        "backgroundColor": "#ffffff",
+                        "padding": "16px 0",
                       }
                     }
+                    tabIndex={0}
                   >
                     <div
                       data-radium={true}
                       style={
                         Object {
-                          "padding": "0 16px",
-                          "whiteSpace": "nowrap",
+                          "display": "table",
                         }
                       }
                     >
-                      Canada
+                      <div
+                        data-radium={true}
+                        style={
+                          Object {
+                            "padding": "0 16px",
+                            "whiteSpace": "nowrap",
+                          }
+                        }
+                      >
+                        Canada
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -480,111 +501,132 @@ exports[`renders Select w/ server error correctly 1`] = `
                 </div>
               </div>
             </div>
+          </div>
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "display": "block",
+                "position": "absolute",
+                "width": "100%",
+                "zIndex": 9000,
+              }
+            }
+          >
             <div
-              data-radium={true}
               style={
                 Object {
-                  "display": "none",
-                  "position": "absolute",
+                  "overflowX": "visible",
+                  "overflowY": "hidden",
+                  "padding": "2px 5px 5px",
+                  "transform": "translateX(-5px)",
                   "width": "100%",
-                  "zIndex": 9000,
                 }
               }
             >
               <div
-                aria-hidden={true}
-                onBlur={[Function]}
-                onKeyDown={[Function]}
-                role="menu"
                 style={
                   Object {
-                    "backgroundColor": "#ffffff",
-                    "borderRadius": "4px",
-                    "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
-                    "display": "inline-block",
-                    "maxHeight": "500px",
-                    "outline": "none",
-                    "overflowY": "auto",
-                    "padding": "8px 0",
-                    "userSelect": "none",
-                    "width": "100%",
+                    "transform": "translateY(-200px)",
+                    "transition": "all 200ms ease-in-out",
                   }
                 }
-                tabIndex={-1}
               >
                 <div
-                  data-radium={true}
+                  aria-hidden={true}
                   onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
                   onKeyDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="menuitem"
+                  role="menu"
                   style={
                     Object {
                       "backgroundColor": "#ffffff",
-                      "padding": "16px 0",
+                      "borderRadius": "4px",
+                      "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
+                      "display": "inline-block",
+                      "maxHeight": "500px",
+                      "outline": "none",
+                      "overflowY": "auto",
+                      "padding": "8px 0",
+                      "userSelect": "none",
+                      "width": "100%",
                     }
                   }
-                  tabIndex={0}
+                  tabIndex={-1}
                 >
                   <div
                     data-radium={true}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    role="menuitem"
                     style={
                       Object {
-                        "display": "table",
+                        "backgroundColor": "#ffffff",
+                        "padding": "16px 0",
                       }
                     }
+                    tabIndex={0}
                   >
                     <div
                       data-radium={true}
                       style={
                         Object {
-                          "padding": "0 16px",
-                          "whiteSpace": "nowrap",
+                          "display": "table",
                         }
                       }
                     >
-                      United States
+                      <div
+                        data-radium={true}
+                        style={
+                          Object {
+                            "padding": "0 16px",
+                            "whiteSpace": "nowrap",
+                          }
+                        }
+                      >
+                        United States
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  data-radium={true}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="menuitem"
-                  style={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "padding": "16px 0",
-                    }
-                  }
-                  tabIndex={0}
-                >
                   <div
                     data-radium={true}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    role="menuitem"
                     style={
                       Object {
-                        "display": "table",
+                        "backgroundColor": "#ffffff",
+                        "padding": "16px 0",
                       }
                     }
+                    tabIndex={0}
                   >
                     <div
                       data-radium={true}
                       style={
                         Object {
-                          "padding": "0 16px",
-                          "whiteSpace": "nowrap",
+                          "display": "table",
                         }
                       }
                     >
-                      Canada
+                      <div
+                        data-radium={true}
+                        style={
+                          Object {
+                            "padding": "0 16px",
+                            "whiteSpace": "nowrap",
+                          }
+                        }
+                      >
+                        Canada
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -794,111 +836,132 @@ exports[`renders disabled Select correctly 1`] = `
                 </div>
               </div>
             </div>
+          </div>
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "display": "block",
+                "position": "absolute",
+                "width": "100%",
+                "zIndex": 9000,
+              }
+            }
+          >
             <div
-              data-radium={true}
               style={
                 Object {
-                  "display": "none",
-                  "position": "absolute",
+                  "overflowX": "visible",
+                  "overflowY": "hidden",
+                  "padding": "2px 5px 5px",
+                  "transform": "translateX(-5px)",
                   "width": "100%",
-                  "zIndex": 9000,
                 }
               }
             >
               <div
-                aria-hidden={true}
-                onBlur={[Function]}
-                onKeyDown={[Function]}
-                role="menu"
                 style={
                   Object {
-                    "backgroundColor": "#ffffff",
-                    "borderRadius": "4px",
-                    "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
-                    "display": "inline-block",
-                    "maxHeight": "500px",
-                    "outline": "none",
-                    "overflowY": "auto",
-                    "padding": "8px 0",
-                    "userSelect": "none",
-                    "width": "100%",
+                    "transform": "translateY(-200px)",
+                    "transition": "all 200ms ease-in-out",
                   }
                 }
-                tabIndex={-1}
               >
                 <div
-                  data-radium={true}
+                  aria-hidden={true}
                   onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
                   onKeyDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="menuitem"
+                  role="menu"
                   style={
                     Object {
                       "backgroundColor": "#ffffff",
-                      "padding": "16px 0",
+                      "borderRadius": "4px",
+                      "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
+                      "display": "inline-block",
+                      "maxHeight": "500px",
+                      "outline": "none",
+                      "overflowY": "auto",
+                      "padding": "8px 0",
+                      "userSelect": "none",
+                      "width": "100%",
                     }
                   }
-                  tabIndex={0}
+                  tabIndex={-1}
                 >
                   <div
                     data-radium={true}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    role="menuitem"
                     style={
                       Object {
-                        "display": "table",
+                        "backgroundColor": "#ffffff",
+                        "padding": "16px 0",
                       }
                     }
+                    tabIndex={0}
                   >
                     <div
                       data-radium={true}
                       style={
                         Object {
-                          "padding": "0 16px",
-                          "whiteSpace": "nowrap",
+                          "display": "table",
                         }
                       }
                     >
-                      United States
+                      <div
+                        data-radium={true}
+                        style={
+                          Object {
+                            "padding": "0 16px",
+                            "whiteSpace": "nowrap",
+                          }
+                        }
+                      >
+                        United States
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  data-radium={true}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="menuitem"
-                  style={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "padding": "16px 0",
-                    }
-                  }
-                  tabIndex={0}
-                >
                   <div
                     data-radium={true}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    role="menuitem"
                     style={
                       Object {
-                        "display": "table",
+                        "backgroundColor": "#ffffff",
+                        "padding": "16px 0",
                       }
                     }
+                    tabIndex={0}
                   >
                     <div
                       data-radium={true}
                       style={
                         Object {
-                          "padding": "0 16px",
-                          "whiteSpace": "nowrap",
+                          "display": "table",
                         }
                       }
                     >
-                      Canada
+                      <div
+                        data-radium={true}
+                        style={
+                          Object {
+                            "padding": "0 16px",
+                            "whiteSpace": "nowrap",
+                          }
+                        }
+                      >
+                        Canada
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1106,111 +1169,132 @@ exports[`renders invalid Select correctly 1`] = `
                 </div>
               </div>
             </div>
+          </div>
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "display": "block",
+                "position": "absolute",
+                "width": "100%",
+                "zIndex": 9000,
+              }
+            }
+          >
             <div
-              data-radium={true}
               style={
                 Object {
-                  "display": "none",
-                  "position": "absolute",
+                  "overflowX": "visible",
+                  "overflowY": "hidden",
+                  "padding": "2px 5px 5px",
+                  "transform": "translateX(-5px)",
                   "width": "100%",
-                  "zIndex": 9000,
                 }
               }
             >
               <div
-                aria-hidden={true}
-                onBlur={[Function]}
-                onKeyDown={[Function]}
-                role="menu"
                 style={
                   Object {
-                    "backgroundColor": "#ffffff",
-                    "borderRadius": "4px",
-                    "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
-                    "display": "inline-block",
-                    "maxHeight": "500px",
-                    "outline": "none",
-                    "overflowY": "auto",
-                    "padding": "8px 0",
-                    "userSelect": "none",
-                    "width": "100%",
+                    "transform": "translateY(-200px)",
+                    "transition": "all 200ms ease-in-out",
                   }
                 }
-                tabIndex={-1}
               >
                 <div
-                  data-radium={true}
+                  aria-hidden={true}
                   onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
                   onKeyDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="menuitem"
+                  role="menu"
                   style={
                     Object {
                       "backgroundColor": "#ffffff",
-                      "padding": "16px 0",
+                      "borderRadius": "4px",
+                      "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
+                      "display": "inline-block",
+                      "maxHeight": "500px",
+                      "outline": "none",
+                      "overflowY": "auto",
+                      "padding": "8px 0",
+                      "userSelect": "none",
+                      "width": "100%",
                     }
                   }
-                  tabIndex={0}
+                  tabIndex={-1}
                 >
                   <div
                     data-radium={true}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    role="menuitem"
                     style={
                       Object {
-                        "display": "table",
+                        "backgroundColor": "#ffffff",
+                        "padding": "16px 0",
                       }
                     }
+                    tabIndex={0}
                   >
                     <div
                       data-radium={true}
                       style={
                         Object {
-                          "padding": "0 16px",
-                          "whiteSpace": "nowrap",
+                          "display": "table",
                         }
                       }
                     >
-                      United States
+                      <div
+                        data-radium={true}
+                        style={
+                          Object {
+                            "padding": "0 16px",
+                            "whiteSpace": "nowrap",
+                          }
+                        }
+                      >
+                        United States
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  data-radium={true}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="menuitem"
-                  style={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "padding": "16px 0",
-                    }
-                  }
-                  tabIndex={0}
-                >
                   <div
                     data-radium={true}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    role="menuitem"
                     style={
                       Object {
-                        "display": "table",
+                        "backgroundColor": "#ffffff",
+                        "padding": "16px 0",
                       }
                     }
+                    tabIndex={0}
                   >
                     <div
                       data-radium={true}
                       style={
                         Object {
-                          "padding": "0 16px",
-                          "whiteSpace": "nowrap",
+                          "display": "table",
                         }
                       }
                     >
-                      Canada
+                      <div
+                        data-radium={true}
+                        style={
+                          Object {
+                            "padding": "0 16px",
+                            "whiteSpace": "nowrap",
+                          }
+                        }
+                      >
+                        Canada
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -4,7 +4,7 @@ Example:
     width = 250;
 
     <div>
-      <button onClick={() => setState({ isOpen: !state.isOpen })} style={{ marginBottom: 10 }}>Toggle</button>
+      <Button onClick={() => setState({ isOpen: !state.isOpen })} style={{ marginBottom: 10 }}>Toggle</Button>
       <div style={{ overflow: 'hidden'}}>
         <Slide in={state.isOpen} width={width + 42}>
           <div style={{padding: 20, display: 'flex', alignItems:'center', background: '#43B02A', flexDirection: 'column', width: width, border: '1px solid black' }}>
@@ -24,7 +24,7 @@ Example:
 
     initialState = { isOpen: false };
     <div>
-      <button onClick={() => setState({ isOpen: !state.isOpen })} style={{ marginBottom: 10 }}>Toggle</button>
+      <Button onClick={() => setState({ isOpen: !state.isOpen })} style={{ marginBottom: 10 }}>Toggle</Button>
       <div style={{ overflow: 'hidden'}}>
         <Grow in={state.isOpen}>
           <Fade in={state.isOpen}>

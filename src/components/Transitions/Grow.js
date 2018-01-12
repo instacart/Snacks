@@ -16,7 +16,7 @@ const SCALE_DEFAULT = {
 }
 const MAX_HEIGHT = {
   start: 0,
-  end: 1000,
+  end: 1500,
 }
 
 const AXIS = 'y'
@@ -126,7 +126,6 @@ class Grow extends PureComponent {
 
     return {
       maxHeight: startMaxHeight,
-      overflow: 'hidden',
       transform: `${this.transformAxis}(${startScale})`,
       transition: `all ${transitionTime}ms ${timingFunction}`,
     }
@@ -136,8 +135,8 @@ class Grow extends PureComponent {
     const { style, children } = this.props
     const styles = {
       ...this.initialStyles,
+      ...this.transitionStyles[state],
       ...style,
-      ...this.transitionStyles[state]
     }
 
     return (

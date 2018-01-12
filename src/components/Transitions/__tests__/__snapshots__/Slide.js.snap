@@ -8,15 +8,23 @@ exports[`renders Slide correctly with custom props 1`] = `
     style={
       Object {
         "background": "red",
-        "transform": "translateY(-250px)",
-        "transition": "all 500ms ease-in-out",
-        "width": 250,
+        "overflowX": "visible",
+        "overflowY": "hidden",
       }
     }
   >
-    <h3>
-       Content 
-    </h3>
+    <div
+      style={
+        Object {
+          "transform": "translateY(250px)",
+          "transition": "all 500ms ease-in-out",
+        }
+      }
+    >
+      <h3>
+         Content 
+      </h3>
+    </div>
   </div>
   <style
     dangerouslySetInnerHTML={
@@ -35,15 +43,23 @@ exports[`renders Slide in correctly 1`] = `
   <div
     style={
       Object {
-        "transform": "translateX(-200px)",
-        "transition": "all 200ms ease-in-out",
-        "width": 200,
+        "overflowX": "visible",
+        "overflowY": "hidden",
       }
     }
   >
-    <h3>
-       Content 
-    </h3>
+    <div
+      style={
+        Object {
+          "transform": "translateX(200px)",
+          "transition": "all 200ms ease-in-out",
+        }
+      }
+    >
+      <h3>
+         Content 
+      </h3>
+    </div>
   </div>
   <style
     dangerouslySetInnerHTML={

@@ -3,16 +3,19 @@ import { findDOMNode } from 'react-dom'
 import PropTypes       from 'prop-types'
 import Radium          from 'radium'
 import Menu            from './Menu'
+import Slide from '../../components/Transitions/Slide'
 
 const styles = {
   menuContainer: {
     zIndex: 9000,
     position: 'absolute',
-    display: 'none',
-    width: '100%'
-  },
-  menuContainerOpen: {
+    width: '100%',
     display: 'block'
+  },
+  transitionContainer: {
+    padding: '2px 5px 5px',
+    width: '100%',
+    transform: 'translateX(-5px)'
   }
 }
 
@@ -192,14 +195,14 @@ class DropdownMenu extends React.Component {
       >
         <div style={{position: 'relative'}}>
           { this.renderTriggerElement() }
-
-          <div
-            style={[
-              styles.menuContainer,
-              menuContainerStyle,
-              isOpen && styles.menuContainerOpen
-            ]}
-          >
+        </div>
+        <div
+          style={[
+            styles.menuContainer,
+            menuContainerStyle,
+          ]}
+        >
+          <Slide in={isOpen} axis='y' style={styles.transitionContainer}>
             <Menu
               ref={(node) => this.menu = node}
               ariaHidden={!isOpen}
@@ -209,9 +212,8 @@ class DropdownMenu extends React.Component {
             >
               {children}
             </Menu>
-          </div>
+          </Slide>
         </div>
-
       </div>
     )
   }

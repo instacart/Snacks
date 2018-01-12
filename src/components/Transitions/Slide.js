@@ -76,21 +76,20 @@ class Slide extends PureComponent {
     const { transitionTime, timingFunction, width, invert } = this.props
     const offsetDirection = invert ? '' : '-'
     return {
-      width,
       transform: `${this.transformAxis}(${offsetDirection}${width}px)`,
       transition: `all ${transitionTime}ms ${timingFunction}`,
     }
   }
 
   renderChild = (state) => {
-    const { style, children, width } = this.props
+    const { style, children } = this.props
     const styles = {
       ...this.initialStyles,
       ...this.transitionStyles[state]
     }
     const containerStyle = {
-      overflow: 'hidden',
-      width,
+      overflowY: 'hidden',
+      overflowX: 'visible',
       ...style,
     }
 
