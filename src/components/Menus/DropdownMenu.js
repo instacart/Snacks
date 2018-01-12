@@ -143,11 +143,12 @@ class DropdownMenu extends React.Component {
 
   open() {
     const { onOpen } = this.props
-
-    this.setState({open: true}, () => {
-      this.menu.focus()
-      onOpen && onOpen()
-    })
+    setTimeout(() => {
+      this.setState({open: true}, () => {
+        this.menu.focus()
+        onOpen && onOpen()
+      })
+    }, 100)
   }
 
   close() {
