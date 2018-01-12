@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const TIMEOUT = 0
 const TRASITION_TIME = 200
-const WIDTH = 200
+const OFFSET = 200
 const TIMING_FUNCTION = 'ease-in-out'
 
 const AXIS = 'x'
@@ -27,6 +27,12 @@ class Slide extends PureComponent {
     /** Inverts offset direction, e.g. changes animation direction from right to left */
     invert: PropTypes.bool,
 
+    /**
+     * Number of pixels to offset the children. To have the children completely hidden
+     * prior to animation, offset should equal the width of the widest child.
+    */
+    offset: PropTypes.number,
+
     /** Optional style overrides. */
     style: PropTypes.object,
 
@@ -38,16 +44,13 @@ class Slide extends PureComponent {
 
     /** Time of animation in milliseconds. */
     transitionTime: PropTypes.number,
-
-    /** Width in pixels of the container, this value is used for the translation offset. */
-    width: PropTypes.number,
   }
 
   static defaultProps = {
     timeout: TIMEOUT,
     transitionTime: TRASITION_TIME,
     timingFunction: TIMING_FUNCTION,
-    width: WIDTH,
+    offset: OFFSET,
     axis: AXIS,
     style: {},
     in: true,
@@ -60,11 +63,11 @@ class Slide extends PureComponent {
   }
 
   get transitionStyles() {
-    const { width, invert } = this.props
+    const { offset, invert } = this.props
     const offsetDirection = invert ? '-' : ''
     return {
       entering: {
-        transform: `${this.transformAxis}(${offsetDirection}${width}px)`
+        transform: `${this.transformAxis}(${offsetDirection}${offset}px)`
       },
       entered: {
         transform: `${this.transformAxis}(0)`
@@ -73,10 +76,10 @@ class Slide extends PureComponent {
   }
 
   get initialStyles() {
-    const { transitionTime, timingFunction, width, invert } = this.props
+    const { transitionTime, timingFunction, offset, invert } = this.props
     const offsetDirection = invert ? '' : '-'
     return {
-      transform: `${this.transformAxis}(${offsetDirection}${width}px)`,
+      transform: `${this.transformAxis}(${offsetDirection}${offset}px)`,
       transition: `all ${transitionTime}ms ${timingFunction}`,
     }
   }

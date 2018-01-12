@@ -4,6 +4,7 @@ import PropTypes       from 'prop-types'
 import Radium          from 'radium'
 import Menu            from './Menu'
 import Slide from '../../components/Transitions/Slide'
+import Fade from '../../components/Transitions/Fade'
 
 const styles = {
   menuContainer: {
@@ -76,6 +77,7 @@ class DropdownMenu extends React.Component {
       this.close()
     }
 
+    findDOMNode(this.trigger).focus()
     onSelect && onSelect(e, option)
   }
 
@@ -99,14 +101,11 @@ class DropdownMenu extends React.Component {
 
   handleMenuBlur = () => {
     const { onRequestChange } = this.props
-    // Timeout ensures click event has correct state when attempting to close
-    setTimeout( () => {
-      if (this.controlledOpen()) {
-        onRequestChange && onRequestChange(false)
-      } else {
-        this.close()
-      }
-    }, 100)
+    if (this.controlledOpen()) {
+      onRequestChange && onRequestChange(false)
+    } else {
+      this.close()
+    }
   }
 
   handleKeyDown = (event) => {
@@ -143,19 +142,16 @@ class DropdownMenu extends React.Component {
 
   open() {
     const { onOpen } = this.props
-    setTimeout(() => {
-      this.setState({open: true}, () => {
-        this.menu.focus()
-        onOpen && onOpen()
-      })
-    }, 100)
+    this.setState({open: true}, () => {
+      this.menu.focus()
+      onOpen && onOpen()
+    })
   }
 
   close() {
     const { onClose } = this.props
     this.setState({open: false}, () => {
       this.menu.blur()
-      findDOMNode(this.trigger).focus()
       onClose && onClose()
     })
   }
@@ -172,7 +168,7 @@ class DropdownMenu extends React.Component {
             ref(node)
           }
         },
-        onClick: this.handleClick,
+        onMouseDown: this.handleClick,
         'aria-haspopup': true,
         'aria-expanded': open,
       })
@@ -203,16 +199,18 @@ class DropdownMenu extends React.Component {
             menuContainerStyle,
           ]}
         >
-          <Slide in={isOpen} axis='y' style={styles.transitionContainer}>
-            <Menu
-              ref={(node) => this.menu = node}
-              ariaHidden={!isOpen}
-              onBlur={this.handleMenuBlur}
-              onSelect={this.handleSelect}
-              {...menuProps}
-            >
-              {children}
-            </Menu>
+          <Slide in={isOpen} axis='y' style={styles.transitionContainer} offset={30}>
+            <Fade in={isOpen} transitionTime={200}>
+              <Menu
+                ref={(node) => this.menu = node}
+                ariaHidden={!isOpen}
+                onBlur={this.handleMenuBlur}
+                onSelect={this.handleSelect}
+                {...menuProps}
+              >
+                {children}
+              </Menu>
+            </Fade>
           </Slide>
         </div>
       </div>

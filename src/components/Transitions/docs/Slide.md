@@ -6,7 +6,7 @@ Example:
     <div>
       <Button onClick={() => setState({ isOpen: !state.isOpen })} style={{ marginBottom: 10 }}>Toggle</Button>
       <div style={{ overflow: 'hidden'}}>
-        <Slide in={state.isOpen} width={width + 42}>
+        <Slide in={state.isOpen} offset={width + 42}>
           <div style={{padding: 20, display: 'flex', alignItems:'center', background: '#43B02A', flexDirection: 'column', width: width, border: '1px solid black' }}>
             <LoadingBox shape='circle' />
             <LoadingBox shape='line' />
@@ -28,7 +28,7 @@ Example:
       <div style={{ overflow: 'hidden'}}>
         <Grow in={state.isOpen}>
           <Fade in={state.isOpen}>
-            <Slide in={state.isOpen} width={width + 42}>
+            <Slide in={state.isOpen} offset={width + 42}>
               <div style={{padding: 20, display: 'flex', alignItems:'center', background: '#43B02A', flexDirection: 'column', width: width, border: '1px solid black' }}>
                 <LoadingBox shape='circle' />
                 <LoadingBox shape='line' />
