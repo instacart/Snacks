@@ -32,12 +32,12 @@ it('renders CircleButton with Icon correctly', () => {
   expect(tree).toMatchSnapshot()
 })
 
-it('renders CircleButton with passed styles correctly', () => {
+it('renders CircleButton with passed style prop correctly', () => {
   const tree = renderer.create(
     <StyleRoot>
       <div>
         <CircleButton
-          styles={{
+          style={{
             top: '8px',
             right: '8px',
             position: 'absolute'

@@ -162,7 +162,7 @@ exports[`renders CircleButton with passed disabled prop correctly 1`] = `
 </div>
 `;
 
-exports[`renders CircleButton with passed styles correctly 1`] = `
+exports[`renders CircleButton with passed style prop correctly 1`] = `
 <div
   data-radium={true}
 >
@@ -189,7 +189,10 @@ exports[`renders CircleButton with passed styles correctly 1`] = `
           "color": "#FFFFFF",
           "height": "48px",
           "lineHeight": "1",
+          "position": "absolute",
+          "right": "8px",
           "textAlign": "center",
+          "top": "8px",
           "transition": "background-color 150ms ease-in-out",
           "width": "48px",
           "zIndex": 100,
