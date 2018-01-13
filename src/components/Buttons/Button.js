@@ -289,6 +289,7 @@ Button.defaultProps = {
   type: 'button',
   iconPosition: 'left',
   onClick: noop,
+  onMouseDown: noop,
   inverted: false,
   elementAttributes: {}
 }
