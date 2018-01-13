@@ -36,7 +36,7 @@ const Grid = props => {
     <div
       style={[
         styles,
-        props.styles
+        props.style
       ]}
     >
       { props.children }
@@ -46,7 +46,7 @@ const Grid = props => {
 
 Grid.propTypes = {
   /** Optional style overrides */
-  styles: PropTypes.object
+  style: PropTypes.object
 }
 
 export default Radium(Grid)

@@ -20,7 +20,7 @@ it('renders Grid with styles correctly', () => {
   const tree = renderer.create(
     <StyleRoot>
       <div>
-        <Grid styles={{ width: '100%', color: '#ccc' }} />
+        <Grid style={{ width: '100%', color: '#ccc' }} />
       </div>
     </StyleRoot>
   ).toJSON()

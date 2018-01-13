@@ -75,7 +75,7 @@ it('renders Column with passed styles correctly', () => {
       <div>
         <Column
           sizes={{ sm: 3 }}
-          styles={{ display: 'block', color: '#ccc' }}
+          style={{ display: 'block', color: '#ccc' }}
         />
       </div>
     </StyleRoot>
