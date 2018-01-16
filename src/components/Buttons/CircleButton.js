@@ -58,7 +58,7 @@ const CircleButton = props => {
             outline: 'none'
           },
         },
-        props.styles
+        props.style
       ]}
       disabled={props.disabled}
     >
@@ -77,7 +77,7 @@ CircleButton.propTypes = {
   /** snacks theme attributes */
   snacksTheme: themePropTypes,
   /** Optional style overrides */
-  styles: PropTypes.oneOfType([
+  style: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array
   ]),
