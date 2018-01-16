@@ -318,7 +318,7 @@ class ScrollTrack extends Component {
       <CircleButton
         onClick={this.slideForward}
         ariaLabel='next'
-        styles={[
+        style={[
           slideButtonStyles.default,
           slideButtonStyles.right,
           showRightArrow && { display: 'block' },
@@ -344,7 +344,7 @@ class ScrollTrack extends Component {
       <CircleButton
         onClick={this.slideBack}
         ariaLabel='back'
-        styles={[
+        style={[
           slideButtonStyles.default,
           slideButtonStyles.left,
           showLeftArrow && { display: 'block' },
