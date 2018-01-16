@@ -146,7 +146,7 @@ const Row = props => {
         componentStyles,
         getMaxColumnsStyles(props),
         getFullWidthStyles(props),
-        props.styles
+        props.style
       ]}
     >
       { props.children }
@@ -160,7 +160,7 @@ Row.propTypes = {
   /** Maximum number of columns this Row should grow to as screen width increases. Cannot exceed 14. */
   maxColumns: PropTypes.number,
   /** Optional style overrides */
-  styles: PropTypes.object
+  style: PropTypes.object
 }
 
 Row.defaultProps = {

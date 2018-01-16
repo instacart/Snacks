@@ -18,7 +18,7 @@ it('renders Row with styles passed in correctly', () => {
   const tree = renderer.create(
     <StyleRoot>
       <div>
-        <Row styles={{ color: '#ccc', width: '100%' }} />
+        <Row style={{ color: '#ccc', width: '100%' }} />
       </div>
     </StyleRoot>
   ).toJSON()
@@ -55,15 +55,15 @@ it('renders Row with styles and maxColumns passed in correctly', () => {
       <div>
         <Row
           maxColumns={1}
-          styles={{ color: '#ccc', width: '100%' }}
+          style={{ color: '#ccc', width: '100%' }}
         />
         <Row
           maxColumns={6}
-          styles={{ color: '#ccc', width: '100%' }}
+          style={{ color: '#ccc', width: '100%' }}
         />
         <Row
           maxColumns={10}
-          styles={{ color: '#ccc', width: '100%' }}
+          style={{ color: '#ccc', width: '100%' }}
         />
       </div>
     </StyleRoot>
@@ -81,12 +81,12 @@ it('renders Row with styles, maxColumns and forceFullPage passed in correctly', 
         />
         <Row
           forceFullPage={true}
-          styles={{ color: '#ccc', width: '100%' }}
+          style={{ color: '#ccc', width: '100%' }}
         />
         <Row
           forceFullPage={true}
           maxColumns={10}
-          styles={{ color: '#ccc', width: '100%' }}
+          style={{ color: '#ccc', width: '100%' }}
         />
       </div>
     </StyleRoot>

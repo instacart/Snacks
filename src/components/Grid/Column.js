@@ -78,7 +78,7 @@ const Column = props => {
     <div
       style={[
         styles,
-        props.styles
+        props.style
       ]}
     >
       { props.children }
@@ -97,7 +97,7 @@ Column.propTypes = {
     xl: PropTypes.number,
   }),
   /** Optional style overrides */
-  styles: PropTypes.object
+  style: PropTypes.object
 }
 
 Column.defaultProps = {
