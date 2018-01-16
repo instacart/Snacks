@@ -21,6 +21,9 @@ class Slide extends PureComponent {
     /** Axis that is animated */
     axis: PropTypes.oneOf(['x', 'y']),
 
+    /** Optional style overrides for div that is offset and contains children. */
+    containerStyle: PropTypes.object,
+
     /** Show the component; triggers the enter or exit states */
     in: PropTypes.bool,
 
@@ -85,19 +88,20 @@ class Slide extends PureComponent {
   }
 
   renderChild = (state) => {
-    const { style, children } = this.props
+    const { style, children, containerStyle } = this.props
     const styles = {
       ...this.initialStyles,
-      ...this.transitionStyles[state]
+      ...this.transitionStyles[state],
+      ...containerStyle
     }
-    const containerStyle = {
+    const topLevelStyle = {
       overflowY: 'hidden',
       overflowX: 'visible',
       ...style,
     }
 
     return (
-      <div style={containerStyle}>
+      <div style={topLevelStyle}>
         <div style={styles} >
           {children}
         </div>
