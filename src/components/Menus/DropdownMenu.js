@@ -8,10 +8,13 @@ import Fade from '../../components/Transitions/Fade'
 
 const styles = {
   menuContainer: {
-    zIndex: 9000,
+    zIndex: -9000,
     position: 'absolute',
     width: '100%',
     display: 'block'
+  },
+  menuContainerOpen: {
+    zIndex: 9000,
   },
   transitionContainer: {
     padding: '2px 5px 5px',
@@ -197,6 +200,7 @@ class DropdownMenu extends React.Component {
           style={[
             styles.menuContainer,
             menuContainerStyle,
+            isOpen && styles.menuContainerOpen,
           ]}
         >
           <Slide in={isOpen} axis='y' style={styles.transitionContainer} offset={30}>
