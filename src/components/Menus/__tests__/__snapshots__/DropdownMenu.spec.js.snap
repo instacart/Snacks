@@ -64,7 +64,7 @@ exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
             "display": "block",
             "position": "absolute",
             "width": "100%",
-            "zIndex": 9000,
+            "zIndex": -9000,
           }
         }
       >
