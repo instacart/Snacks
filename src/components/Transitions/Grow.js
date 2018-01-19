@@ -91,7 +91,7 @@ class Grow extends PureComponent {
     }
   }
 
-  get maxHeight() {
+  get maxSize() {
     const { start = START_MAX_HEIGHT, end = END_MAX_HEIGHT } = this.props.maxHeight
     return {
       start,
@@ -105,15 +105,17 @@ class Grow extends PureComponent {
 
   get transitionStyles () {
     const { start: startScale , end: endScale } = this.scale
-    const { start: startMaxHeight, end: endMaxHeight } = this.maxHeight
+    const { start: startMaxSize, end: endMaxSize } = this.maxSize
 
     return {
       entering: {
-        maxHeight: startMaxHeight,
+        maxWidth: startMaxSize,
+        maxHeight: startMaxSize,
         transform: `${this.transformAxis}(${startScale})`
       },
       entered: {
-        maxHeight: endMaxHeight,
+        maxWidth: endMaxSize,
+        maxHeight: endMaxSize,
         transform: `${this.transformAxis}(${endScale})`
       },
     }
@@ -121,11 +123,12 @@ class Grow extends PureComponent {
 
   get initialStyles () {
     const { start: startScale } = this.scale
-    const { start: startMaxHeight } = this.maxHeight
+    const { start: startMaxSize } = this.maxSize
     const { transitionTime, timingFunction } = this.props
 
     return {
-      maxHeight: startMaxHeight,
+      maxWidth: startMaxSize,
+      maxHeight: startMaxSize,
       transform: `${this.transformAxis}(${startScale})`,
       transition: `all ${transitionTime}ms ${timingFunction}`,
     }

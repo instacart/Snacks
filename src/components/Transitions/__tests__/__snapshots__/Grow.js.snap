@@ -8,6 +8,7 @@ exports[`renders Fade in correctly 1`] = `
     style={
       Object {
         "maxHeight": 0,
+        "maxWidth": 0,
         "transform": "scaleY(0)",
         "transition": "all 200ms ease-in-out",
       }
@@ -36,6 +37,7 @@ exports[`renders Grow correctly with custom props 1`] = `
       Object {
         "background": "red",
         "maxHeight": 10,
+        "maxWidth": 10,
         "transform": "scaleY(0.2)",
         "transition": "all 500ms ease-in-out",
       }
