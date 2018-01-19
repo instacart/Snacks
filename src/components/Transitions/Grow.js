@@ -7,14 +7,14 @@ const TRASITION_TIME = 200
 const TIMING_FUNCTION = 'ease-in-out'
 const START_SCALE = 0
 const END_SCALE = 1
-const START_MAX_HEIGHT = 0
-const END_MAX_HEIGHT = 1500
+const START_MAX_SIZE = 0
+const END_MAX_SIZE = 1500
 
 const SCALE_DEFAULT = {
   start: 0,
   end: 1,
 }
-const MAX_HEIGHT = {
+const MAX_SIZE = {
   start: 0,
   end: 1500,
 }
@@ -37,12 +37,12 @@ class Grow extends PureComponent {
     in: PropTypes.bool,
 
     /**
-     * Settings for max-height during animation (this is what animates the element's height).
+     * Settings for max-height and max-width during animation (this is what animates the element's height/width).
      *
      * Default start: 0
      * Default end: 1500 (If content's height is larger than 1500, pass the content's height here )
     */
-    maxHeight: PropTypes.shape({
+    maxSize: PropTypes.shape({
       start: PropTypes.number,
       end: PropTypes.number,
     }),
@@ -76,7 +76,7 @@ class Grow extends PureComponent {
     transitionTime: TRASITION_TIME,
     timingFunction: TIMING_FUNCTION,
     scale: SCALE_DEFAULT,
-    maxHeight: MAX_HEIGHT,
+    maxSize: MAX_SIZE,
     axis: AXIS,
     style: {},
     in: true,
@@ -92,7 +92,7 @@ class Grow extends PureComponent {
   }
 
   get maxSize() {
-    const { start = START_MAX_HEIGHT, end = END_MAX_HEIGHT } = this.props.maxHeight
+    const { start = START_MAX_SIZE, end = END_MAX_SIZE } = this.props.maxSize
     return {
       start,
       end

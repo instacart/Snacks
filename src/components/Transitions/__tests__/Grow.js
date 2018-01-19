@@ -25,13 +25,13 @@ it('renders Grow correctly with custom props', () => {
     start: 0.2,
     end: 0.8,
   }
-  const maxHeight = {
+  const maxSize = {
     start: 10,
     end: 500,
   }
   const tree = renderer.create(
     <StyleRoot>
-      <Grow in axis='y' style={{ background: 'red' }} transitionTime={500} scale={scale} maxHeight={maxHeight}>
+      <Grow in axis='y' style={{ background: 'red' }} transitionTime={500} scale={scale} maxSize={maxSize}>
         <h3> Content </h3>
       </Grow>
     </StyleRoot>
