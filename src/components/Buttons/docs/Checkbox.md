@@ -1,6 +1,6 @@
 This component outputs a checkbox with an optional label.
 
-You can define whether the button starts in the pressed on unpressed state through the `isChecked` prop. In addition, you can change the checked/unchecked state at any moment after the mount state by redifining the prop `isChecked`.
+You can define whether the button starts in the pressed on unpressed state through the `isSelected` prop. In addition, you can change the checked/unchecked state at any moment after the mount state by redifining the prop `isSelected`.
 
 ### Label
 Associating a label to every radio button is very important for accessibility purposes. There are two ways to do it. The easiest is to enclose the text with the component: `<Checkbox>My label</Checkbox>`. The other option is to associate a label yourself:
@@ -8,7 +8,7 @@ Associating a label to every radio button is very important for accessibility pu
 ```js
 <div style={{display: 'flex', flexDirection: 'column'}}>
   <div style={{display: 'flex', marginBottom: 20}}>
-    <Checkbox id="checkbox1" isChecked />
+    <Checkbox id="checkbox1" isSelected />
     <label htmlFor="checkbox1" style={{marginLeft: 10}}>Label associated manually</label>
   </div>
   <Checkbox id="checkbox2">Label auto-generated</Checkbox>
