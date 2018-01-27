@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import Radium from 'radium'
 import colors from '../styles/colors'
 
@@ -58,7 +59,7 @@ class RadioCheckboxBase extends React.PureComponent {
     children      : PropTypes.string,
     id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     isSelected    : PropTypes.bool,
-    onChange       : PropTypes.func,
+    onChange      : PropTypes.func,
     style         : PropTypes.shape({
       button        : PropTypes.object,
       label         : PropTypes.object,
