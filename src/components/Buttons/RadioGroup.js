@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import Radio from './Radio'
 
 const STYLE = {
@@ -42,7 +43,7 @@ class RadioGroup extends React.Component {
     selectedBtn: this.props.selectedBtn,
   }
 
-  btnOnClick = (inputBtn) => {
+  handleBtnChange = (inputBtn) => {
     const { onChange } = this.props
 
     return (event) => {
@@ -58,7 +59,7 @@ class RadioGroup extends React.Component {
 
       return React.cloneElement(child, {
         name: this.props.name,
-        onClick: this.btnOnClick(child),
+        onChange: this.handleBtnChange(child),
         isSelected: child.props.id === (selectedBtn ? selectedBtn.props.id : false)
       })
     })
