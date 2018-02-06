@@ -25,7 +25,7 @@ Example:
     initialState = { isOpen: false };
     <div>
       <Button onClick={() => setState({ isOpen: !state.isOpen })} style={{ marginBottom: 10 }}>Toggle</Button>
-      <div style={{ overflow: 'hidden'}}>
+      <div style={{ overflow: 'hidden', display: 'flex', alignItems: 'center'}}>
         <Grow in={state.isOpen}>
           <Fade in={state.isOpen}>
             <Slide in={state.isOpen} offset={width + 42}>
@@ -38,6 +38,9 @@ Example:
             </Slide>
           </Fade>
         </Grow>
+        <div style={{ marginTop: 10 }}>
+          Content right
+        </div>
       </div>
       <div style={{ marginTop: 10 }}>
         Content below
