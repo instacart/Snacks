@@ -27,13 +27,13 @@ describe('Radio', () => {
     })
   })
 
-  it.only('sets isSelected=false if isDisabled set to true', () => {
+  it('sets isSelected to false if isDisabled is set to true', () => {
     const wrapper = mount(<Radio id="1" value="test" isSelected>Testing disabled</Radio>)
     const htmlBtn = wrapper.find('#1').get(0)
 
     expect(htmlBtn.checked).toBe(true)
     expect(htmlBtn.disabled).toBe(false)
-    
+
     wrapper.setProps({isDisabled: true})
 
     expect(htmlBtn.checked).toBe(false)
@@ -73,11 +73,11 @@ describe('Radio', () => {
     })
   })
 
-  it('calls the user-supplied onClick function', () => {
-    const onClick = sinon.spy()
-    const wrapper = mount(<Radio id={1} onClick={onClick} />)
+  it('calls the user-supplied onChange function', () => {
+    const onChange = sinon.spy()
+    const wrapper = mount(<Radio id={1} onChange={onChange} />)
 
-    wrapper.find('input').simulate('click')
-    expect(onClick.calledOnce).toBe(true)
+    wrapper.find('input').simulate('change')
+    expect(onChange.calledOnce).toBe(true)
   })
 })

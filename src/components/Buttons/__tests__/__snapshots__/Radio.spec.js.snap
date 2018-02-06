@@ -17,24 +17,14 @@ exports[`Radio generates a label if a child prop of text is supplied 1`] = `
       }
     }
   >
-    <img
-      alt=""
-      data-radium={true}
-      src="test-file-stub"
-      style={
-        Object {
-          "height": 22,
-          "width": 22,
-        }
-      }
-      tabIndex="-1"
-    />
+    <test-file-stub />
     <input
       aria-label={undefined}
       checked={false}
       data-radium={true}
+      disabled={undefined}
       id={1}
-      onClick={[Function]}
+      onChange={[Function]}
       style={
         Object {
           "MozAppearance": "none",
@@ -85,24 +75,14 @@ exports[`Radio incorporates user styles if passed 1`] = `
       }
     }
   >
-    <img
-      alt=""
-      data-radium={true}
-      src="test-file-stub"
-      style={
-        Object {
-          "height": 22,
-          "width": 22,
-        }
-      }
-      tabIndex="-1"
-    />
+    <test-file-stub />
     <input
       aria-label={undefined}
       checked={false}
       data-radium={true}
+      disabled={undefined}
       id={1}
-      onClick={[Function]}
+      onChange={[Function]}
       style={
         Object {
           "MozAppearance": "none",
@@ -152,24 +132,14 @@ exports[`Radio incorporates user styles if passed 2`] = `
       }
     }
   >
-    <img
-      alt=""
-      data-radium={true}
-      src="test-file-stub"
-      style={
-        Object {
-          "height": 22,
-          "width": 22,
-        }
-      }
-      tabIndex="-1"
-    />
+    <test-file-stub />
     <input
       aria-label={undefined}
       checked={false}
       data-radium={true}
+      disabled={undefined}
       id={2}
-      onClick={[Function]}
+      onChange={[Function]}
       style={
         Object {
           "MozAppearance": "none",
@@ -210,24 +180,14 @@ exports[`Radio renders the correct button type 1`] = `
     }
   }
 >
-  <img
-    alt=""
-    data-radium={true}
-    src="test-file-stub"
-    style={
-      Object {
-        "height": 22,
-        "width": 22,
-      }
-    }
-    tabIndex="-1"
-  />
+  <test-file-stub />
   <input
     aria-label={undefined}
     checked={false}
     data-radium={true}
+    disabled={undefined}
     id={1}
-    onClick={[Function]}
+    onChange={[Function]}
     style={
       Object {
         "MozAppearance": "none",
@@ -256,24 +216,14 @@ exports[`Radio renders the correct selected state 1`] = `
     }
   }
 >
-  <img
-    alt=""
-    data-radium={true}
-    src="test-file-stub"
-    style={
-      Object {
-        "height": 22,
-        "width": 22,
-      }
-    }
-    tabIndex="-1"
-  />
+  <test-file-stub />
   <input
     aria-label={undefined}
     checked={false}
     data-radium={true}
+    disabled={undefined}
     id={1}
-    onClick={[Function]}
+    onChange={[Function]}
     style={
       Object {
         "MozAppearance": "none",
@@ -302,24 +252,14 @@ exports[`Radio renders the correct selected state 2`] = `
     }
   }
 >
-  <img
-    alt=""
-    data-radium={true}
-    src="test-file-stub"
-    style={
-      Object {
-        "height": 22,
-        "width": 22,
-      }
-    }
-    tabIndex="-1"
-  />
+  <test-file-stub />
   <input
     aria-label={undefined}
     checked={true}
     data-radium={true}
+    disabled={undefined}
     id={2}
-    onClick={[Function]}
+    onChange={[Function]}
     style={
       Object {
         "MozAppearance": "none",
@@ -348,25 +288,14 @@ exports[`Radio renders the correct selected state 3`] = `
     }
   }
 >
-  <img
-    alt=""
-    data-radium={true}
-    src="test-file-stub"
-    style={
-      Object {
-        "height": 22,
-        "width": 22,
-      }
-    }
-    tabIndex="-1"
-  />
+  <test-file-stub />
   <input
     aria-label={undefined}
-    checked={true}
+    checked={false}
     data-radium={true}
     disabled={true}
     id={2}
-    onClick={[Function]}
+    onChange={[Function]}
     style={
       Object {
         "MozAppearance": "none",

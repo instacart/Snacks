@@ -31,7 +31,7 @@ describe('RadioGroup', () => {
     const radioIds = ['1', '3', '2']
     
     radioIds.forEach(radioId => {
-      wrapper.find(`#${radioId}`).simulate('click', { target: { checked: true } })
+      wrapper.find(`#${radioId}`).simulate('change', { target: { checked: true } })
 
       wrapper.children().forEach(input => {
         // only the clicked button should have a state of checked=true
@@ -53,10 +53,10 @@ describe('RadioGroup', () => {
       </RadioGroup>
     )
 
-    wrapper.find('#1').simulate('click')
+    wrapper.find('#1').simulate('change')
     expect(onChange.calledOnce).toBe(true)
 
-    wrapper.find('#2').simulate('click')
+    wrapper.find('#2').simulate('change')
     expect(onChange.calledTwice).toBe(true)
   })
 
@@ -71,13 +71,13 @@ describe('RadioGroup', () => {
 
     expect(onChange.notCalled).toBe(true)
 
-    wrapper.find('#1').simulate('click')
+    wrapper.find('#1').simulate('change')
     expect(onChange.calledOnce).toBe(true)
 
-    wrapper.find('#1').simulate('click')
+    wrapper.find('#1').simulate('change')
     expect(onChange.calledOnce).toBe(true)
 
-    wrapper.find('#2').simulate('click')
+    wrapper.find('#2').simulate('change')
     expect(onChange.calledTwice).toBe(true)
 
     
