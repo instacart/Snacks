@@ -17,24 +17,14 @@ exports[`Checkbox generates a label if a child prop of text is supplied 1`] = `
       }
     }
   >
-    <img
-      alt=""
-      data-radium={true}
-      src="test-file-stub"
-      style={
-        Object {
-          "height": 22,
-          "width": 22,
-        }
-      }
-      tabIndex="-1"
-    />
+    <test-file-stub />
     <input
       aria-label={undefined}
       checked={false}
       data-radium={true}
+      disabled={undefined}
       id={1}
-      onClick={[Function]}
+      onChange={[Function]}
       style={
         Object {
           "MozAppearance": "none",
@@ -66,6 +56,121 @@ exports[`Checkbox generates a label if a child prop of text is supplied 1`] = `
 </div>
 `;
 
+exports[`Checkbox incorporates user style if passed 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "background": "pink",
+      "display": "flex",
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "border": "2px solid purple",
+        "position": "relative",
+      }
+    }
+  >
+    <test-file-stub />
+    <input
+      aria-label={undefined}
+      checked={false}
+      data-radium={true}
+      disabled={undefined}
+      id={1}
+      onChange={[Function]}
+      style={
+        Object {
+          "MozAppearance": "none",
+          "MsAppearance": "none",
+          "WebkitAppearance": "none",
+          "appearance": "none",
+          "height": 22,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 22,
+        }
+      }
+      type="checkbox"
+      value={undefined}
+    />
+  </div>
+  <label
+    data-radium={true}
+    htmlFor={1}
+    style={
+      Object {
+        "color": "green",
+        "marginLeft": 10,
+      }
+    }
+  >
+    Test label
+  </label>
+</div>
+`;
+
+exports[`Checkbox incorporates user style if passed 2`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "display": "flex",
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <test-file-stub />
+    <input
+      aria-label={undefined}
+      checked={false}
+      data-radium={true}
+      disabled={undefined}
+      id={2}
+      onChange={[Function]}
+      style={
+        Object {
+          "MozAppearance": "none",
+          "MsAppearance": "none",
+          "WebkitAppearance": "none",
+          "appearance": "none",
+          "height": 22,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 22,
+        }
+      }
+      type="checkbox"
+      value={undefined}
+    />
+  </div>
+  <label
+    data-radium={true}
+    htmlFor={2}
+    style={
+      Object {
+        "marginLeft": 10,
+      }
+    }
+  >
+    Test label
+  </label>
+</div>
+`;
+
 exports[`Checkbox renders the correct button type 1`] = `
 <div
   data-radium={true}
@@ -75,24 +180,14 @@ exports[`Checkbox renders the correct button type 1`] = `
     }
   }
 >
-  <img
-    alt=""
-    data-radium={true}
-    src="test-file-stub"
-    style={
-      Object {
-        "height": 22,
-        "width": 22,
-      }
-    }
-    tabIndex="-1"
-  />
+  <test-file-stub />
   <input
     aria-label={undefined}
     checked={false}
     data-radium={true}
+    disabled={undefined}
     id={1}
-    onClick={[Function]}
+    onChange={[Function]}
     style={
       Object {
         "MozAppearance": "none",
@@ -121,24 +216,14 @@ exports[`Checkbox renders the correct selected state 1`] = `
     }
   }
 >
-  <img
-    alt=""
-    data-radium={true}
-    src="test-file-stub"
-    style={
-      Object {
-        "height": 22,
-        "width": 22,
-      }
-    }
-    tabIndex="-1"
-  />
+  <test-file-stub />
   <input
     aria-label={undefined}
     checked={false}
     data-radium={true}
+    disabled={undefined}
     id={1}
-    onClick={[Function]}
+    onChange={[Function]}
     style={
       Object {
         "MozAppearance": "none",
@@ -167,24 +252,50 @@ exports[`Checkbox renders the correct selected state 2`] = `
     }
   }
 >
-  <img
-    alt=""
-    data-radium={true}
-    src="test-file-stub"
-    style={
-      Object {
-        "height": 22,
-        "width": 22,
-      }
-    }
-    tabIndex="-1"
-  />
+  <test-file-stub />
   <input
     aria-label={undefined}
     checked={true}
     data-radium={true}
+    disabled={undefined}
     id={2}
-    onClick={[Function]}
+    onChange={[Function]}
+    style={
+      Object {
+        "MozAppearance": "none",
+        "MsAppearance": "none",
+        "WebkitAppearance": "none",
+        "appearance": "none",
+        "height": 22,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 22,
+      }
+    }
+    type="checkbox"
+    value={undefined}
+  />
+</div>
+`;
+
+exports[`Checkbox renders the correct selected state 3`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <test-file-stub />
+  <input
+    aria-label={undefined}
+    checked={false}
+    data-radium={true}
+    disabled={true}
+    id={2}
+    onChange={[Function]}
     style={
       Object {
         "MozAppearance": "none",

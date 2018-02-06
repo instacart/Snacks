@@ -27,7 +27,7 @@ describe('Checkbox', () => {
     })
   })
 
-  it.only('sets isSelected=false if isDisabled is set to true', () => {
+  it('sets isSelected to false if isDisabled is set to true', () => {
     const wrapper = mount(<Checkbox id="1" value="test" isSelected>Testing disabled</Checkbox>)
     const htmlBtn = wrapper.find('input').get(0)
 
@@ -73,12 +73,11 @@ describe('Checkbox', () => {
     })
   })
 
-  it('calls the user-supplied onClick function', () => {
-    const onClick = sinon.spy()
-    const testOnClick = () => testText
-    const wrapper = mount(<Checkbox id={1} onClick={onClick} />)
+  it('calls the user-supplied onChange function', () => {
+    const onChange = sinon.spy()
+    const wrapper = mount(<Checkbox id={1} onChange={onChange} />)
 
-    wrapper.find('input').simulate('click')
-    expect(onClick.calledOnce).toBe(true)
+    wrapper.find('input').simulate('change')
+    expect(onChange.calledOnce).toBe(true)
   })
 })

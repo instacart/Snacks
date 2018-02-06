@@ -10,12 +10,12 @@ Create a radio button group where only one radio button can be selected at a tim
 ```
 
 ### Styling
-You can pass an object to the `styles` prop for styling the parent element. Optionally, you can pass styles to each radio button:
+You can pass an object to the `style` prop for styling the parent element. Optionally, you can pass styles to each radio button:
 ```js
-<RadioGroup name="radioColors" styles={{wrapEl: {border: '2px dotted lightblue', padding: 20}}}>
-  <Radio id="radioColorGroup1" value="email" styles={{label: {color: 'green'}}}>Green</Radio>
-  <Radio id="radioColorGroup2" value="phone" styles={{label: {color: 'red'}}}>Red</Radio>
-  <Radio id="radioColorGroup3" value="mail" styles={{label: {color: 'blue'}}}>Blue</Radio>
+<RadioGroup name="radioColors" style={{wrapEl: {border: '2px dotted lightblue', padding: 20}}}>
+  <Radio id="radioColorGroup1" value="email" style={{label: {color: 'green'}}}>Green</Radio>
+  <Radio id="radioColorGroup2" value="phone" style={{label: {color: 'red'}}}>Red</Radio>
+  <Radio id="radioColorGroup3" value="mail" style={{label: {color: 'blue'}}}>Blue</Radio>
 </RadioGroup>
 ```
 
@@ -44,7 +44,7 @@ function alertCity(value, props) {
   <Radio id="radioCityGroup1" value="New York" isDisabled>New York</Radio>
   <Radio id="radioCityGroup2" value="San Fracisco" isSelected isDisabled>San Francisco</Radio>
   <Radio id="radioCityGroup3" value="Chicago">Chicago</Radio>
-  <Radio id="radioCityGroup4" value="Chicago">San Diego</Radio>
-  <Radio id="radioCityGroup5" value="Chicago">Atlanta</Radio>
+  <Radio id="radioCityGroup4" value="San Diego">San Diego</Radio>
+  <Radio id="radioCityGroup5" value="Atlanta">Atlanta</Radio>
 </RadioGroup>
 ```

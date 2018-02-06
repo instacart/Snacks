@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import Radium from 'radium'
 import colors from '../styles/colors'
 
@@ -39,22 +40,18 @@ function imgValidator (props, propName) {
   const asset = props[propName]
 
   if (!asset) {
-    return new Error(`The asset "${propName}" is required.`)
-  }
-
-  if (asset.url && !asset.url.includes('.svg')) {
-    return new Error('Image type is not supported.')
+    return new Error(`The background image "${propName}" is required.`)
   }
 }
 
-class RadioCheckboxBase extends Component {
+class RadioCheckboxBase extends React.PureComponent {
   static propTypes = {
     aria          : PropTypes.shape({
       label         :PropTypes.string,
     }),
-    assets        : PropTypes.shape({
+    bkgSvg        : PropTypes.shape({
       base          : imgValidator,
-      checked       : imgValidator,
+      selected      : imgValidator,
       disabled      : imgValidator,
     }),
     btnType       : PropTypes.oneOf(['radio', 'checkbox']).isRequired,
@@ -62,7 +59,7 @@ class RadioCheckboxBase extends Component {
     children      : PropTypes.string,
     id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     isSelected    : PropTypes.bool,
-    onClick       : PropTypes.func,
+    onChange      : PropTypes.func,
     style         : PropTypes.shape({
       button        : PropTypes.object,
       label         : PropTypes.object,
@@ -75,8 +72,8 @@ class RadioCheckboxBase extends Component {
   static defaultProps = {
     aria        : {},
     isSelected  : false,
-    onClick     : NoOp,
-    style      : {},
+    onChange    : NoOp,
+    style       : {},
     wrapEl      : 'div',
   }
 
@@ -88,40 +85,35 @@ class RadioCheckboxBase extends Component {
     const { isDisabled, isSelected } = nextProps
 
     if (this.props.isSelected !== isSelected || this.props.isDisabled !== isDisabled) {
-      this.setState({isDisabled, isSelected: isDisabled ? false : isSelected})
+      this.setState({isSelected: isDisabled ? false : isSelected})
     }
   }
 
-  onClick = (event) => {
-    const { btnType, onClick } = this.props
+  handleChange = (event) => {
+    const { btnType, onChange } = this.props
     const { isSelected } = this.state
 
     if (btnType === 'radio' && isSelected) { return }
 
     this.setState({isSelected: !isSelected})
-    onClick(event, {...this.props, isSelected: !isSelected})
+    onChange(event, {...this.props, isSelected: !isSelected})
   }
 
   renderInputBtn() {
-    let bkgImage
-    const { aria, assets, btnType, isDisabled, id, style, value } = this.props
+    let BkgSvg
+    const { aria, bkgSvg, btnType, isDisabled, id, style, value } = this.props
     const { isSelected } = this.state
 
-    if (isDisabled) { bkgImage = assets.disabled }
-    else { bkgImage = isSelected ? assets.checked : assets.base }
+    if (isDisabled) { BkgSvg = bkgSvg.disabled }
+    else { BkgSvg = isSelected ? bkgSvg.selected : bkgSvg.base }
 
     return (
       <div style={{...STYLE.button, ...style.button}}>
-        <img
-          style={STYLE.image}
-          src={bkgImage}
-          tabIndex='-1'
-          alt=''
-        />
+        <BkgSvg />
         <input
           id={id}
           type={btnType}
-          onClick={this.onClick}
+          onChange={this.handleChange}
           style={STYLE.inputBtn}
           value={value}
           checked={isSelected}

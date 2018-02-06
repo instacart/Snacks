@@ -38,14 +38,14 @@ You can pass an object to the `style` prop for styling the label, radio button a
 
 
 ### Callback
-You can pass a callback through the `onClick` prop:
+You can pass a callback through the `onChange` prop:
 
 ```js
-function onClick(event, props) {
+function onChange(event, props) {
   alert(`This button is ${props.isSelected ? '' : 'not '}checked`)
 }
 
-<Radio id="radio4" onClick={onClick}>Click me!</Radio>
+<Radio id="radio4" onChange={onChange}>Click me!</Radio>
 ```
 
 ### Disabling
@@ -54,9 +54,9 @@ You can disable a checkbox by declaring the `isDisabled` prop:
 **Important!** If you attach a label to a Radio button manually, make sure the styleguide is followed for the disabled state.
 
 ```js
-function onClick(event, props) {
+function onChange(event, props) {
   alert(`This function will not be called`)
 }
 
-<Radio id="radio5" onClick={onClick} isDisabled>I am disabled</Radio>
+<Radio id="radio5" onChange={onChange} isDisabled>I am disabled</Radio>
 ```
