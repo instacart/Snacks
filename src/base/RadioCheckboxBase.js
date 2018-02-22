@@ -44,12 +44,22 @@ function imgValidator (props, propName) {
   }
 }
 
+function renderSvg(svgSprite) {
+  return (
+    <div style={STYLE.image}>
+      <svg viewBox={svgSprite.viewBox}>
+        <use xlinkHref={`sprite.svg#${svgSprite.id}`} />
+      </svg>
+    </div>
+  )
+}
+
 class RadioCheckboxBase extends React.PureComponent {
   static propTypes = {
     aria          : PropTypes.shape({
       label         :PropTypes.string,
     }),
-    bkgSvg        : PropTypes.shape({
+    bkgSvgSprites : PropTypes.shape({
       base          : imgValidator,
       selected      : imgValidator,
       disabled      : imgValidator,
@@ -100,16 +110,16 @@ class RadioCheckboxBase extends React.PureComponent {
   }
 
   renderInputBtn() {
-    let BkgSvg
-    const { aria, bkgSvg, btnType, isDisabled, id, style, value } = this.props
+    let svgSprite
+    const { aria, bkgSvgSprites, btnType, isDisabled, id, style, value } = this.props
     const { isSelected } = this.state
 
-    if (isDisabled) { BkgSvg = bkgSvg.disabled }
-    else { BkgSvg = isSelected ? bkgSvg.selected : bkgSvg.base }
+    if (isDisabled) { svgSprite = bkgSvgSprites.disabled }
+    else { svgSprite = isSelected ? bkgSvgSprites.selected : bkgSvgSprites.base }
 
     return (
       <div style={{...STYLE.button, ...style.button}}>
-        <BkgSvg />
+        {renderSvg(svgSprite)}
         <input
           id={id}
           type={btnType}

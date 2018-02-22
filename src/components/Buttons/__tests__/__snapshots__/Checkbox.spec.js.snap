@@ -17,7 +17,23 @@ exports[`Checkbox generates a label if a child prop of text is supplied 1`] = `
       }
     }
   >
-    <test-file-stub />
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "height": 22,
+          "width": 22,
+        }
+      }
+    >
+      <svg
+        viewBox={undefined}
+      >
+        <use
+          xlinkHref="sprite.svg#undefined"
+        />
+      </svg>
+    </div>
     <input
       aria-label={undefined}
       checked={false}
@@ -75,7 +91,23 @@ exports[`Checkbox incorporates user style if passed 1`] = `
       }
     }
   >
-    <test-file-stub />
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "height": 22,
+          "width": 22,
+        }
+      }
+    >
+      <svg
+        viewBox={undefined}
+      >
+        <use
+          xlinkHref="sprite.svg#undefined"
+        />
+      </svg>
+    </div>
     <input
       aria-label={undefined}
       checked={false}
@@ -132,7 +164,23 @@ exports[`Checkbox incorporates user style if passed 2`] = `
       }
     }
   >
-    <test-file-stub />
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "height": 22,
+          "width": 22,
+        }
+      }
+    >
+      <svg
+        viewBox={undefined}
+      >
+        <use
+          xlinkHref="sprite.svg#undefined"
+        />
+      </svg>
+    </div>
     <input
       aria-label={undefined}
       checked={false}
@@ -180,7 +228,23 @@ exports[`Checkbox renders the correct button type 1`] = `
     }
   }
 >
-  <test-file-stub />
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "height": 22,
+        "width": 22,
+      }
+    }
+  >
+    <svg
+      viewBox={undefined}
+    >
+      <use
+        xlinkHref="sprite.svg#undefined"
+      />
+    </svg>
+  </div>
   <input
     aria-label={undefined}
     checked={false}
@@ -216,7 +280,23 @@ exports[`Checkbox renders the correct selected state 1`] = `
     }
   }
 >
-  <test-file-stub />
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "height": 22,
+        "width": 22,
+      }
+    }
+  >
+    <svg
+      viewBox={undefined}
+    >
+      <use
+        xlinkHref="sprite.svg#undefined"
+      />
+    </svg>
+  </div>
   <input
     aria-label={undefined}
     checked={false}
@@ -252,7 +332,23 @@ exports[`Checkbox renders the correct selected state 2`] = `
     }
   }
 >
-  <test-file-stub />
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "height": 22,
+        "width": 22,
+      }
+    }
+  >
+    <svg
+      viewBox={undefined}
+    >
+      <use
+        xlinkHref="sprite.svg#undefined"
+      />
+    </svg>
+  </div>
   <input
     aria-label={undefined}
     checked={true}
@@ -288,7 +384,23 @@ exports[`Checkbox renders the correct selected state 3`] = `
     }
   }
 >
-  <test-file-stub />
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "height": 22,
+        "width": 22,
+      }
+    }
+  >
+    <svg
+      viewBox={undefined}
+    >
+      <use
+        xlinkHref="sprite.svg#undefined"
+      />
+    </svg>
+  </div>
   <input
     aria-label={undefined}
     checked={false}

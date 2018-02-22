@@ -1,6 +1,6 @@
 This component outputs a radio button with an optional label.
 
-You can define whether the button starts in the pressed on unpressed state through the `isSelected` prop. In addition, you can change the checked/unchecked state at any moment after the mount state by redifining the prop `isSelected`.
+You can define whether the button starts in the pressed on unpressed state through the `isSelected` prop. In addition, you can change the selected/unselected state at any moment after the mount state by redifining the prop `isSelected`.
 
 **Note:** Radio buttons are not supposed to be unselected once pressed. If you need that behavior, a button or a checkbox is a better solution.
 
@@ -18,7 +18,7 @@ Associating a label to every radio button is very important for accessibility pu
 ```
 
 ### Groups
-To create a radio group where only one button can be checked [see here](#radiogroup).
+To create a radio group where only one button can be selected [see here](#radiogroup).
 
 ### Styling
 You can pass an object to the `style` prop for styling the label, radio button and wrap element using Radium's structure:
@@ -42,7 +42,7 @@ You can pass a callback through the `onChange` prop:
 
 ```js
 function onChange(event, props) {
-  alert(`This button is ${props.isSelected ? '' : 'not '}checked`)
+  alert(`This button is ${props.isSelected ? '' : 'not '}selected`)
 }
 
 <Radio id="radio4" onChange={onChange}>Click me!</Radio>

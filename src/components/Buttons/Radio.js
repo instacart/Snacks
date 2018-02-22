@@ -5,14 +5,14 @@ import bkgSvgBase from '../../assets/radioBase.svg'
 import bkgSvgSelected from '../../assets/radioSelected.svg'
 import bkgSvgDisabled from '../../assets/radioDisabled.svg'
 
-const BKG_SVGS = {
-  base: bkgSvgBase,
-  selected: bkgSvgSelected,
-  disabled: bkgSvgDisabled,
+const BKG_SVG_SPRITES = {
+  base:       bkgSvgBase,
+  selected:   bkgSvgSelected,
+  disabled:   bkgSvgDisabled,
 }
 
 const Radio = (props) => {
-  return <RadioCheckboxBase btnType='radio' bkgSvg={BKG_SVGS} {...props} />
+  return <RadioCheckboxBase btnType='radio' bkgSvgSprites={BKG_SVG_SPRITES} {...props} />
 }
 
 Radio.propTypes = {

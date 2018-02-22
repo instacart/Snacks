@@ -52,10 +52,10 @@
     "react": "^15.5.0",
     "react-dom": "^15.5.0",
     "react-styleguidist": "^6.2.5",
-    "react-svg-loader": "^2.1.0",
     "react-test-renderer": "^15.5.0",
     "react-transition-group": "^2.2.1",
     "sinon": "^2.3.8",
+    "svg-sprite-loader": "^3.6.2",
     "underscore": "^1.8.3",
     "webpack": "^3.8.1"
   },
