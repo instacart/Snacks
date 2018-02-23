@@ -12,7 +12,13 @@ const BKG_SVG_SPRITES = {
 }
 
 const Checkbox = (props) => {
-  return <RadioCheckboxBase btnType='checkbox' bkgSvgSprites={BKG_SVG_SPRITES} {...props} />
+  return (
+    <RadioCheckboxBase
+      btnType='checkbox'
+      bkgSvgSprites={BKG_SVG_SPRITES}
+      {...props}
+    />
+  )
 }
 
 Checkbox.propTypes = {
