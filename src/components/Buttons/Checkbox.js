@@ -5,14 +5,20 @@ import bkgSvgBase from '../../assets/checkboxBase.svg'
 import bkgSvgSelected from '../../assets/checkboxSelected.svg'
 import bkgSvgDisabled from '../../assets/checkboxDisabled.svg'
 
-const BKG_SVGS = {
-  base: bkgSvgBase,
-  selected: bkgSvgSelected,
-  disabled: bkgSvgDisabled,
+const BKG_SVG_SPRITES = {
+  base:       bkgSvgBase,
+  selected:   bkgSvgSelected,
+  disabled:   bkgSvgDisabled,
 }
 
 const Checkbox = (props) => {
-  return <RadioCheckboxBase btnType='checkbox' bkgSvg={BKG_SVGS} {...props} />
+  return (
+    <RadioCheckboxBase
+      btnType='checkbox'
+      bkgSvgSprites={BKG_SVG_SPRITES}
+      {...props}
+    />
+  )
 }
 
 Checkbox.propTypes = {
