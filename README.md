@@ -20,7 +20,7 @@ npm install ic-snacks
 
 Using a component:
 ```js
-import { CircleButton } from `ic-snacks`
+import { CircleButton } from 'ic-snacks'
 
 const MyComponent = props => {
   const doYes = e => { alert("Snacks are the best!") }
