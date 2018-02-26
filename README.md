@@ -23,8 +23,8 @@ Using a component:
 import { CircleButton } from 'ic-snacks'
 
 const MyComponent = props => {
-  const doYes = e => { alert("Snacks are the best!") }
-  const doNo = e => { alert("Wrong choice, choose again.") }
+  const doYes = e => { alert('Snacks are the best!') }
+  const doNo = e => { alert('Wrong choice, choose again.') }
 
   return (
     <div>
@@ -68,7 +68,7 @@ class Navigation extends Component {
             setState({ activePill: choice.text })
             console.log('Choice clicked!', choice)
           }}
-          label={'Favorite healthy snack:'}
+          label='Favorite healthy snack:'
           activePill={state.activePill}
         />
       </div>
