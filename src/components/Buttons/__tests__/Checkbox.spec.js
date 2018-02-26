@@ -31,13 +31,13 @@ describe('Checkbox', () => {
     const wrapper = mount(<Checkbox id="1" value="test" isSelected>Testing disabled</Checkbox>)
     const htmlBtn = wrapper.find('input').get(0)
 
-    expect(htmlBtn.checked).toBe(true)
-    expect(htmlBtn.disabled).toBe(false)
+    expect(htmlBtn.props().checked).toBe(true)
+    expect(htmlBtn.props().disabled).toBe(false)
     
     wrapper.setProps({isDisabled: true})
 
-    expect(htmlBtn.checked).toBe(false)
-    expect(htmlBtn.disabled).toBe(true)
+    expect(htmlBtn.props().checked).toBe(false)
+    expect(htmlBtn.props().disabled).toBe(true)
   })
 
   
