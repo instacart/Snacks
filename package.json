@@ -26,6 +26,9 @@
     "components",
     "component library"
   ],
+  "files": [
+    "dist"
+  ],
   "author": "Dominic Cocchiarella",
   "license": "Apache-2.0",
   "bugs": {
