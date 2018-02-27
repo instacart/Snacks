@@ -33,9 +33,9 @@
   },
   "homepage": "https://github.com/instacart/Snacks#readme",
   "devDependencies": {
-    "babel-core": "^6.21.0",
+    "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
-    "babel-jest": "^20.0.3",
+    "babel-jest": "^22.4.1",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-polyfill": "^6.22.0",
