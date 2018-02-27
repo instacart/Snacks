@@ -27,7 +27,10 @@
     "component library"
   ],
   "files": [
-    "dist"
+    "dist",
+    "CONTRIBUTING.MD",
+    "package-locak.json",
+    "yarn.lock"
   ],
   "author": "Dominic Cocchiarella",
   "license": "Apache-2.0",
