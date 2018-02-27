@@ -76,7 +76,7 @@ it('renders ScrollTrack buttons correctly', () => {
   expect(rightButtonStyle.display).toEqual('none')
 
   // show right arrow
-  track.find(ScrollTrack).node.showRightArrow()
+  track.find(ScrollTrack).getElement().showRightArrow()
 
   // check arrow is showing and has correct styles
   buttons = track.find('button')
@@ -92,7 +92,7 @@ it('renders ScrollTrack buttons correctly', () => {
   expect(leftButtonStyle.display).toEqual('none')
 
   // show left arrow
-  track.find(ScrollTrack).node.showLeftArrow()
+  track.find(ScrollTrack).getElement().showLeftArrow()
   buttons = track.find('button')
   leftButton = buttons.first()
   rightButton = buttons.last()
@@ -105,7 +105,7 @@ it('renders ScrollTrack buttons correctly', () => {
   expect(leftButtonStyle.backgroundColor).toEqual(styles.LeftArrow.backgroundColor)
 
   // hide both arrows
-  track.find(ScrollTrack).node.hideArrows()
+  track.find(ScrollTrack).getElement().hideArrows()
   buttons = track.find('button')
   leftButton = buttons.first()
   rightButton = buttons.last()
@@ -192,7 +192,7 @@ it('works with custom ScrollTrack buttons correctly', () => {
   expect(rightButtonStyle.display).toEqual('none')
 
   // show right arrow
-  track.find(ScrollTrack).node.showRightArrow()
+  track.find(ScrollTrack).getElement().showRightArrow()
 
   // check arrow is showing and has correct styles
   buttons = track.find('button')
@@ -208,7 +208,7 @@ it('works with custom ScrollTrack buttons correctly', () => {
   expect(leftButtonStyle.display).toEqual('none')
 
   // show left arrow
-  track.find(ScrollTrack).node.showLeftArrow()
+  track.find(ScrollTrack).getElement().showLeftArrow()
   buttons = track.find('button')
   leftButton = buttons.first()
   rightButton = buttons.last()
@@ -221,7 +221,7 @@ it('works with custom ScrollTrack buttons correctly', () => {
   expect(leftButtonStyle.backgroundColor).toEqual(styles.LeftArrow.backgroundColor)
 
   // hide both arrows
-  track.find(ScrollTrack).node.hideArrows()
+  track.find(ScrollTrack).getElement().hideArrows()
   buttons = track.find('button')
   leftButton = buttons.first()
   rightButton = buttons.last()
@@ -292,14 +292,14 @@ it('onBefore promises & callbacks called correctly', async () => {
   )
 
   // show and click next
-  track.find(ScrollTrack).node.showRightArrow()
+  track.find(ScrollTrack).getElement().showRightArrow()
   track.find('button').last().simulate('click')
   await expect(onBeforeNext.calledOnce).resolves.toBeTruthy
   await expect(onBeforeNext.calledWith({})).resolves.toBeTruthy
 
   // show and click back
-  track.find(ScrollTrack).node.hideRightArrow()
-  track.find(ScrollTrack).node.showLeftArrow()
+  track.find(ScrollTrack).getElement().hideRightArrow()
+  track.find(ScrollTrack).getElement().showLeftArrow()
   track.find('button').first().simulate('click')
   await expect(onBeforeBack.calledOnce).resolves.toBeTruthy
   await expect(onBeforeBack.calledWith({})).resolves.toBeTruthy
@@ -346,15 +346,15 @@ it('onAfter promises & callbacks called correctly', async () => {
   )
 
   // show and click next
-  track.find(ScrollTrack).node.showRightArrow()
+  track.find(ScrollTrack).getElement().showRightArrow()
   track.find('button').last().simulate('click')
   expect(onAfterNext.calledOnce).toBeTruthy
   expect(onAfterNext.calledWith({})).toBeTruthy
   await expect(onAfterBack.calledAfter(onBeforeNext)).resolves.toBeTruthy
 
   // show and click back
-  track.find(ScrollTrack).node.hideRightArrow()
-  track.find(ScrollTrack).node.showLeftArrow()
+  track.find(ScrollTrack).getElement().hideRightArrow()
+  track.find(ScrollTrack).getElement().showLeftArrow()
   track.find('button').first().simulate('click')
   expect(onAfterBack.calledOnce).toBeTruthy
   expect(onAfterBack.calledWith({})).toBeTruthy
@@ -379,11 +379,11 @@ it('works without any callbacks passed in', async () => {
   )
 
   // show and click next
-  track.find(ScrollTrack).node.showRightArrow()
+  track.find(ScrollTrack).getElement().showRightArrow()
   track.find('button').last().simulate('click')
 
   // show and click back
-  track.find(ScrollTrack).node.hideRightArrow()
-  track.find(ScrollTrack).node.showLeftArrow()
+  track.find(ScrollTrack).getElement().hideRightArrow()
+  track.find(ScrollTrack).getElement().showLeftArrow()
   track.find('button').first().simulate('click')
 })
