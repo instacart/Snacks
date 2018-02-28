@@ -353,12 +353,12 @@ exports[`renders NavigationPills correctly 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
-      overflow-x: scroll !important;
-      display: block !important;
-      -ms-overflow-style: none !important;
-      overflow: -moz-scrollbars-none !important;
-      webkit-overflow-scrolling: touch !important;}}
-      @media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
+overflow-x: scroll !important;
+display: block !important;
+-ms-overflow-style: none !important;
+overflow: -moz-scrollbars-none !important;
+webkit-overflow-scrolling: touch !important;}}
+@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
       }
     }
   />
@@ -708,12 +708,12 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
-      overflow-x: scroll !important;
-      display: block !important;
-      -ms-overflow-style: none !important;
-      overflow: -moz-scrollbars-none !important;
-      webkit-overflow-scrolling: touch !important;}}
-      @media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
+overflow-x: scroll !important;
+display: block !important;
+-ms-overflow-style: none !important;
+overflow: -moz-scrollbars-none !important;
+webkit-overflow-scrolling: touch !important;}}
+@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
       }
     }
   />
@@ -1085,12 +1085,12 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
     dangerouslySetInnerHTML={
       Object {
         "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
-      overflow-x: scroll !important;
-      display: block !important;
-      -ms-overflow-style: none !important;
-      overflow: -moz-scrollbars-none !important;
-      webkit-overflow-scrolling: touch !important;}}
-      @media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
+overflow-x: scroll !important;
+display: block !important;
+-ms-overflow-style: none !important;
+overflow: -moz-scrollbars-none !important;
+webkit-overflow-scrolling: touch !important;}}
+@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
       }
     }
   />
@@ -1452,12 +1452,12 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
-      overflow-x: scroll !important;
-      display: block !important;
-      -ms-overflow-style: none !important;
-      overflow: -moz-scrollbars-none !important;
-      webkit-overflow-scrolling: touch !important;}}
-      @media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
+overflow-x: scroll !important;
+display: block !important;
+-ms-overflow-style: none !important;
+overflow: -moz-scrollbars-none !important;
+webkit-overflow-scrolling: touch !important;}}
+@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
       }
     }
   />
