@@ -19,11 +19,11 @@ exports[`renders Grid correctly 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
-      @media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
-      @media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
-      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
-      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
-      @media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}",
+@media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
+@media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
+@media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
+@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
+@media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}",
       }
     }
   />
@@ -55,26 +55,26 @@ exports[`renders Grid with Row correctly 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
-      @media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
-      @media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
-      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
-      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
-      @media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}
-      @media (max-width: 767px){ .rmq-e9fd10a8{display: block !important;}}
-      @media (min-width: 768px) and (max-width: 831px){ .rmq-94de0125{display: grid !important;
-      grid-template-columns: repeat(6, 104px) !important;}}
-      @media (min-width: 832px) and (max-width: 1039px){ .rmq-eeb4761a{display: grid !important;
-      grid-template-columns: repeat(8, 104px) !important;}}
-      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-3e10bf34{display: grid !important;
-      grid-template-columns: repeat(10, 104px) !important;}}
-      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-2295bbb9{display: grid !important;
-      grid-template-columns: repeat(12, 104px) !important;}}
-      @media (min-width: 1456px){ .rmq-108b114{display: grid !important;
-      grid-template-columns: repeat(14, 104px) !important;}}
-      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-820d5078{grid-template-columns: repeat(10, 104px) !important;
-      justify-content: center !important;}}
-      @media (min-width: 1456px) { .rmq-98718fd3{grid-template-columns: repeat(10, 104px) !important;
-      justify-content: center !important;}}",
+@media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
+@media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
+@media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
+@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
+@media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}
+@media (max-width: 767px){ .rmq-e9fd10a8{display: block !important;}}
+@media (min-width: 768px) and (max-width: 831px){ .rmq-94de0125{display: grid !important;
+grid-template-columns: repeat(6, 104px) !important;}}
+@media (min-width: 832px) and (max-width: 1039px){ .rmq-eeb4761a{display: grid !important;
+grid-template-columns: repeat(8, 104px) !important;}}
+@media (min-width: 1040px) and (max-width: 1247px){ .rmq-3e10bf34{display: grid !important;
+grid-template-columns: repeat(10, 104px) !important;}}
+@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2295bbb9{display: grid !important;
+grid-template-columns: repeat(12, 104px) !important;}}
+@media (min-width: 1456px){ .rmq-108b114{display: grid !important;
+grid-template-columns: repeat(14, 104px) !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-820d5078{grid-template-columns: repeat(10, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-98718fd3{grid-template-columns: repeat(10, 104px) !important;
+justify-content: center !important;}}",
       }
     }
   />
@@ -122,31 +122,31 @@ exports[`renders Grid with Row with Columns correctly 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
-      @media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
-      @media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
-      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
-      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
-      @media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}
-      @media (max-width: 767px){ .rmq-e9fd10a8{display: block !important;}}
-      @media (min-width: 768px) and (max-width: 831px){ .rmq-94de0125{display: grid !important;
-      grid-template-columns: repeat(6, 104px) !important;}}
-      @media (min-width: 832px) and (max-width: 1039px){ .rmq-eeb4761a{display: grid !important;
-      grid-template-columns: repeat(8, 104px) !important;}}
-      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-3e10bf34{display: grid !important;
-      grid-template-columns: repeat(10, 104px) !important;}}
-      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-2295bbb9{display: grid !important;
-      grid-template-columns: repeat(12, 104px) !important;}}
-      @media (min-width: 1456px){ .rmq-108b114{display: grid !important;
-      grid-template-columns: repeat(14, 104px) !important;}}
-      @media (min-width: 1248px) and (max-width: 1455px) { .rmq-820d5078{grid-template-columns: repeat(10, 104px) !important;
-      justify-content: center !important;}}
-      @media (min-width: 1456px) { .rmq-98718fd3{grid-template-columns: repeat(10, 104px) !important;
-      justify-content: center !important;}}
-      @media (min-width: 768px) and (max-width: 831px){ .rmq-8f6274a{grid-column: span 2 !important;}}
-      @media (min-width: 832px) and (max-width: 1039px){ .rmq-9b0e1a5b{grid-column: span 2 !important;}}
-      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-a542a9ac{grid-column: span 2 !important;}}
-      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-f1cb9e65{grid-column: span 4 !important;}}
-      @media (min-width: 1456px){ .rmq-dd3ac64f{grid-column: span 5 !important;}}",
+@media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
+@media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
+@media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
+@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
+@media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}
+@media (max-width: 767px){ .rmq-e9fd10a8{display: block !important;}}
+@media (min-width: 768px) and (max-width: 831px){ .rmq-94de0125{display: grid !important;
+grid-template-columns: repeat(6, 104px) !important;}}
+@media (min-width: 832px) and (max-width: 1039px){ .rmq-eeb4761a{display: grid !important;
+grid-template-columns: repeat(8, 104px) !important;}}
+@media (min-width: 1040px) and (max-width: 1247px){ .rmq-3e10bf34{display: grid !important;
+grid-template-columns: repeat(10, 104px) !important;}}
+@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2295bbb9{display: grid !important;
+grid-template-columns: repeat(12, 104px) !important;}}
+@media (min-width: 1456px){ .rmq-108b114{display: grid !important;
+grid-template-columns: repeat(14, 104px) !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-820d5078{grid-template-columns: repeat(10, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-98718fd3{grid-template-columns: repeat(10, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 768px) and (max-width: 831px){ .rmq-8f6274a{grid-column: span 2 !important;}}
+@media (min-width: 832px) and (max-width: 1039px){ .rmq-9b0e1a5b{grid-column: span 2 !important;}}
+@media (min-width: 1040px) and (max-width: 1247px){ .rmq-a542a9ac{grid-column: span 2 !important;}}
+@media (min-width: 1248px) and (max-width: 1455px){ .rmq-f1cb9e65{grid-column: span 4 !important;}}
+@media (min-width: 1456px){ .rmq-dd3ac64f{grid-column: span 5 !important;}}",
       }
     }
   />
@@ -174,11 +174,11 @@ exports[`renders Grid with styles correctly 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
-      @media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
-      @media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
-      @media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
-      @media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
-      @media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}",
+@media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
+@media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
+@media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
+@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
+@media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}",
       }
     }
   />

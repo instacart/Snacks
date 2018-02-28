@@ -21,11 +21,11 @@ exports[`renders the LoadingBox with a combination of props 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@keyframes darkLoading-radium-animation-f5235588 {
-      0%{background-color: #E0E0E0;}
-      50%{background-color: #BDBDBD;}
-      100%{background-color: #E0E0E0;}
-      }
-      ",
+0%{background-color: #E0E0E0;}
+50%{background-color: #BDBDBD;}
+100%{background-color: #E0E0E0;}
+}
+",
       }
     }
   />
@@ -52,11 +52,11 @@ exports[`renders the LoadingBox with a size 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@keyframes loading-radium-animation-2dabe53b {
-      0%{background-color: #EEEEEE;}
-      50%{background-color: #E0E0E0;}
-      100%{background-color: #EEEEEE;}
-      }
-      ",
+0%{background-color: #EEEEEE;}
+50%{background-color: #E0E0E0;}
+100%{background-color: #EEEEEE;}
+}
+",
       }
     }
   />
@@ -84,11 +84,11 @@ exports[`renders the circle LoadingBox 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@keyframes loading-radium-animation-2dabe53b {
-      0%{background-color: #EEEEEE;}
-      50%{background-color: #E0E0E0;}
-      100%{background-color: #EEEEEE;}
-      }
-      ",
+0%{background-color: #EEEEEE;}
+50%{background-color: #E0E0E0;}
+100%{background-color: #EEEEEE;}
+}
+",
       }
     }
   />
@@ -115,11 +115,11 @@ exports[`renders the dark LoadingBox 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@keyframes darkLoading-radium-animation-f5235588 {
-      0%{background-color: #E0E0E0;}
-      50%{background-color: #BDBDBD;}
-      100%{background-color: #E0E0E0;}
-      }
-      ",
+0%{background-color: #E0E0E0;}
+50%{background-color: #BDBDBD;}
+100%{background-color: #E0E0E0;}
+}
+",
       }
     }
   />
@@ -146,11 +146,11 @@ exports[`renders the light LoadingBox 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@keyframes lightLoading-radium-animation-438c49ee {
-      0%{background-color: #F7F7F7;}
-      50%{background-color: #EEEEEE;}
-      100%{background-color: #F7F7F7;}
-      }
-      ",
+0%{background-color: #F7F7F7;}
+50%{background-color: #EEEEEE;}
+100%{background-color: #F7F7F7;}
+}
+",
       }
     }
   />
@@ -179,11 +179,11 @@ exports[`renders the line LoadingBox 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@keyframes loading-radium-animation-2dabe53b {
-      0%{background-color: #EEEEEE;}
-      50%{background-color: #E0E0E0;}
-      100%{background-color: #EEEEEE;}
-      }
-      ",
+0%{background-color: #EEEEEE;}
+50%{background-color: #E0E0E0;}
+100%{background-color: #EEEEEE;}
+}
+",
       }
     }
   />
@@ -210,11 +210,11 @@ exports[`renders the square LoadingBox 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@keyframes loading-radium-animation-2dabe53b {
-      0%{background-color: #EEEEEE;}
-      50%{background-color: #E0E0E0;}
-      100%{background-color: #EEEEEE;}
-      }
-      ",
+0%{background-color: #EEEEEE;}
+50%{background-color: #E0E0E0;}
+100%{background-color: #EEEEEE;}
+}
+",
       }
     }
   />
@@ -241,11 +241,11 @@ exports[`renders the standard LoadingBox correctly 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@keyframes loading-radium-animation-2dabe53b {
-      0%{background-color: #EEEEEE;}
-      50%{background-color: #E0E0E0;}
-      100%{background-color: #EEEEEE;}
-      }
-      ",
+0%{background-color: #EEEEEE;}
+50%{background-color: #E0E0E0;}
+100%{background-color: #EEEEEE;}
+}
+",
       }
     }
   />

@@ -79,6 +79,7 @@ describe('Link', () => {
         primaryForeground: '#000'
       }
     }
+    wrapper.update()
 
     expect(wrapper.find('a').props().style.color).toEqual('#fff')
   })
