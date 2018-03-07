@@ -66,10 +66,10 @@
     "validator": "^9.1.1"
   },
   "peerDependencies": {
-    "prop-types": ">=15",
+    "prop-types": "^15.0.0 || ^16.0.0",
     "radium": "^0.22.0",
-    "react": ">=16",
-    "react-dom": ">=16",
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0",
     "react-transition-group": "^2.2.1"
   },
   "jest": {
