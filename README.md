@@ -4,6 +4,8 @@
 
 JavaScript Component Library by Instacart
 
+Please note: We're still in pre-release stage. If you opt to use Snacks, please be prepared for breaking changes in the future.
+
 ## Installation
 
 ### via yarn
