@@ -28,7 +28,7 @@ yarn styleguide
 ```
 or
 ```
-npm styleguide
+npm run styleguide
 ```
 
 Go to http://0.0.0.0:6060 to see all components. This environment has hot reloading and components can be added on the fly though the various doc files. Look for any file in a component's folder with `.md` for examples of component code that the styeguide will run automatically.
@@ -48,11 +48,11 @@ npm run build
 
 Running the `styleguide:build` command will generate a static style guide site under the `styleguide` directory
 ```
-yarn stlyeguide:build
+yarn styleguide:build
 ```
 or
 ```
-npm run stlyeguide:build
+npm run styleguide:build
 ```
 
 ### Testing
@@ -63,7 +63,7 @@ yarn test
 ```
 or
 ```
-npm run test
+npm test
 ```
 
 To continuously watch and run tests, run the following:
@@ -94,16 +94,16 @@ New components must:
 * be reviewed and approved
 
 ## Code Conventions
-* Do not use semicolons ;
+* Do not use semicolons `;`
 * 2 spaces for indentation (no tabs)
-* Prefer ' over "
+* Prefer `'` over `"`
 * 120 character line length (except documentation)
 * Readability over trickiness or performance
-* Use the decorator pattern when applicable - ie @Radium
+* Use the decorator pattern when applicable - ie `@Radium`
 * Create stateless components when possible
 * Create React `PureComponent`s if not stateless
 * Create es6 classes inheriting from React's `Component` class if not pure or stateless
-* Always include propTypes with as much specificity as possible - ie propTypes.shape is better than propTypes.object
+* Always include `propTypes` with as much specificity as possible - ie `propTypes.shape` is better than `propTypes.object`
 
 Linting will run when you run tests, and most of the above rules will be caught.
 
