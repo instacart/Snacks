@@ -174,6 +174,7 @@ exports[`renders Select correctly 1`] = `
             style={
               Object {
                 "display": "block",
+                "pointerEvents": "none",
                 "position": "absolute",
                 "width": "100%",
                 "zIndex": -9000,
@@ -516,6 +517,7 @@ exports[`renders Select w/ server error correctly 1`] = `
             style={
               Object {
                 "display": "block",
+                "pointerEvents": "none",
                 "position": "absolute",
                 "width": "100%",
                 "zIndex": -9000,
@@ -860,6 +862,7 @@ exports[`renders disabled Select correctly 1`] = `
             style={
               Object {
                 "display": "block",
+                "pointerEvents": "none",
                 "position": "absolute",
                 "width": "100%",
                 "zIndex": -9000,
@@ -1202,6 +1205,7 @@ exports[`renders invalid Select correctly 1`] = `
             style={
               Object {
                 "display": "block",
+                "pointerEvents": "none",
                 "position": "absolute",
                 "width": "100%",
                 "zIndex": -9000,
