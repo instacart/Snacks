@@ -4,6 +4,8 @@
 
 JavaScript Component Library by Instacart
 
+Please note: We're still in pre-release stage. If you opt to use Snacks, please be prepared for breaking changes in the future.
+
 ## Installation
 
 ### via yarn
@@ -20,11 +22,11 @@ npm install ic-snacks
 
 Using a component:
 ```js
-import { CircleButton } from `ic-snacks`
+import { CircleButton } from 'ic-snacks'
 
 const MyComponent = props => {
-  const doYes = e => { alert("Snacks are the best!") }
-  const doNo = e => { alert("Wrong choice, choose again.") }
+  const doYes = e => { alert('Snacks are the best!') }
+  const doNo = e => { alert('Wrong choice, choose again.') }
 
   return (
     <div>
@@ -68,7 +70,7 @@ class Navigation extends Component {
             setState({ activePill: choice.text })
             console.log('Choice clicked!', choice)
           }}
-          label={'Favorite healthy snack:'}
+          label='Favorite healthy snack:'
           activePill={state.activePill}
         />
       </div>
