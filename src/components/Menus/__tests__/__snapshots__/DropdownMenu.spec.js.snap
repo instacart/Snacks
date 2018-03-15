@@ -62,6 +62,7 @@ exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
         style={
           Object {
             "display": "block",
+            "pointerEvents": "none",
             "position": "absolute",
             "width": "100%",
             "zIndex": -9000,
