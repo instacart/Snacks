@@ -21,7 +21,7 @@ Class with decorator style
 
 Functional style
 ```js static
-import { withTheme } from 'ic-snacks'
+import { withTheme, themePropTypes } from 'ic-snacks'
 
 const MyComponent = props => {
   return (
@@ -31,5 +31,11 @@ const MyComponent = props => {
   )
 }
 
+MyComponent.propTypes = {
+  snacksTheme: themePropTypes
+}
+
 export default withTheme(MyComponent)
 ```
+
+`themePropTypes` is available to make propTypes definitions easier, as well.
