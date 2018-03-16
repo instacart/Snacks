@@ -33,23 +33,30 @@ import withTheme from './styles/themer/withTheme'
 import Slide from './components/Transitions/Slide'
 import Grow from './components/Transitions/Grow'
 import Fade from './components/Transitions/Fade'
+import { themePropTypes } from './styles/themer/utils'
 
 export {
-  // base
+  // styles
   colors,
   zIndex,
-  // styles
+  
+  // style overriding ()
   GlobalTheme,
   Normalize,
   SetStyles,
+
+  // theming
   themer,
   withTheme,
+  themePropTypes,
+
   // grid system
   responsive,
   spacing,
   Grid,
   Column,
   Row,
+  
   //forms
   Form,
   FormComponent,
