@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import withTheme from '../withTheme'
 import { themePropTypes } from '../utils'
 
-const TestComponent = props => {
+const TestComponent = withTheme(props => {
   return (
     <div 
       style={{
@@ -13,14 +13,14 @@ const TestComponent = props => {
       Hello
     </div>
   )
-}
+})
 
 TestComponent.propTypes = { snacksTheme: themePropTypes }
 
 it('renders without error with default theme', () => {
   const tree = renderer
     .create(
-      withTheme(<TestComponent />)
+      <TestComponent />
     )
     .toJSON()
   expect(tree).toMatchSnapshot()
