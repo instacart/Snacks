@@ -6,7 +6,7 @@ import { themePropTypes } from './utils'
 
 function withTheme(InnerComponent) {
   class Wrapped extends Component {
-    static displayName = `withTheme(${InnerComponent.displayName})`
+    static displayName = `withTheme(${InnerComponent.name || InnerComponent.displayName || 'Component'})`
 
     static propTypes = {
       snacksTheme: themePropTypes
