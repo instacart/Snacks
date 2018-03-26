@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import PropTypes            from 'prop-types'
 import Radium               from 'radium'
 import { colors }           from '../../styles'
+import withTheme            from '../../styles/themer/withTheme'
+import { themePropTypes }   from '../../styles/themer/utils'
 
 const styles = {
   label: {
@@ -22,9 +24,6 @@ const styles = {
     transform: 'scale(0.85) translate(8px, 6px)',
     pointerEvents: 'none',
   },
-  active: {
-    color : colors.GREEN_500
-  },
   error: {
     color: colors.RED_700
   },
@@ -33,7 +32,17 @@ const styles = {
     color: colors.GRAY_74
   }
 }
+const getSnackStyles = snacksTheme => {
+  const { action } = snacksTheme.colors
 
+  return {
+    active: {
+      color : action
+    }
+  }
+}
+
+@withTheme
 @Radium
 class FloatingLabel extends Component {
   static propTypes = {
@@ -51,6 +60,8 @@ class FloatingLabel extends Component {
     style    : PropTypes.object,
     /** Label text */
     text     : PropTypes.string,
+    /** Snacks theme attributes provided by `Themer` */
+    snacksTheme: themePropTypes
   }
 
   static defaultProps = {
@@ -65,14 +76,17 @@ class FloatingLabel extends Component {
       htmlFor,
       isActive,
       style,
-      text
+      text,
+      snacksTheme
     } = this.props
+
+    const snacksStyles = getSnackStyles(snacksTheme)
 
     const inputStyles = [
       styles.label,
       float && styles.float,
       disabled && styles.disabled,
-      isActive && styles.active,
+      isActive && snacksStyles.active,
       hasError && styles.error,
       style
     ]
