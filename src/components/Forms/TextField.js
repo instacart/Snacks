@@ -1,13 +1,15 @@
-import React             from 'react'
-import PropTypes         from 'prop-types'
-import Radium            from 'radium'
-import { colors }        from '../../styles'
-import FormComponent     from './FormComponent'
-import ValidationError   from './ValidationError'
-import FloatingLabel     from './FloatingLabel'
-import TextFieldHint     from './TextFieldHint'
-import ServerError       from './ServerError'
-import HelperText        from './HelperText'
+import React              from 'react'
+import PropTypes          from 'prop-types'
+import Radium             from 'radium'
+import { colors }         from '../../styles'
+import FormComponent      from './FormComponent'
+import ValidationError    from './ValidationError'
+import FloatingLabel      from './FloatingLabel'
+import TextFieldHint      from './TextFieldHint'
+import ServerError        from './ServerError'
+import HelperText         from './HelperText'
+import withTheme          from '../../styles/themer/withTheme'
+import { themePropTypes } from '../../styles/themer/utils'
 
 const styles = {
   wrapper: {
@@ -36,9 +38,6 @@ const styles = {
     WebkitOpacity: 1,
     WebkitTapHighlightColor: 'rgba(0,0,0,0)'
   },
-  highlight: {
-    border: `1px solid ${colors.GREEN_500}`
-  },
   inputDisabled: {
     border: `1px dashed ${colors.GRAY_74}`,
     backgroundColor: colors.GRAY_93,
@@ -57,6 +56,16 @@ const styles = {
   }
 }
 
+const getSnackStyles = snacksTheme => {
+  const { action } = snacksTheme.colors
+  return {
+    highlight: {
+      border: `1px solid ${action}`
+    }
+  }
+}
+
+@withTheme
 @FormComponent
 @Radium
 class TextField extends React.Component {
@@ -107,6 +116,8 @@ class TextField extends React.Component {
     validationErrorText: PropTypes.string,
     /** Value will make TextField a controlled component  */
     value              : PropTypes.string,
+    /** Snacks theme attributes provided by `Themer` */
+    snacksTheme        : themePropTypes
   }
 
   static defaultProps = {
@@ -187,13 +198,16 @@ class TextField extends React.Component {
       style,
       value,
       helperText,
-      autoComplete
+      autoComplete,
+      snacksTheme
     } = this.props
 
     const {
       hasValue,
       isFocused
     } = this.state
+
+    const snacksStyles = getSnackStyles(snacksTheme)
 
     const inputId = id
     const showHintText = hintText && !hasValue && isFocused
@@ -248,7 +262,7 @@ class TextField extends React.Component {
               inputStyle,
               disabled && styles.inputDisabled,
               !disabled && hasError && styles.inputError,
-              isFocused && !hasError && styles.highlight
+              isFocused && !hasError && snacksStyles.highlight
             ]}
             onBlur={this.handleInputBlur}
             onChange={this.handleInputChange}

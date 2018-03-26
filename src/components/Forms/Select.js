@@ -1,14 +1,16 @@
-import React           from 'react'
-import PropTypes       from 'prop-types'
-import Radium          from 'radium'
-import { colors }      from '../../styles'
-import FormComponent   from '../Forms/FormComponent'
-import DropdownMenu    from '../Menus/DropdownMenu'
-import ValidationError from '../Forms/ValidationError'
-import ServerError     from '../Forms/ServerError'
-import TextFieldHint   from '../Forms/TextFieldHint'
-import FloatingLabel   from '../Forms/FloatingLabel'
-import Icon            from '../Icon/Icon'
+import React              from 'react'
+import PropTypes          from 'prop-types'
+import Radium             from 'radium'
+import { colors }         from '../../styles'
+import FormComponent      from '../Forms/FormComponent'
+import DropdownMenu       from '../Menus/DropdownMenu'
+import ValidationError    from '../Forms/ValidationError'
+import ServerError        from '../Forms/ServerError'
+import TextFieldHint      from '../Forms/TextFieldHint'
+import FloatingLabel      from '../Forms/FloatingLabel'
+import Icon               from '../Icon/Icon'
+import withTheme          from '../../styles/themer/withTheme'
+import { themePropTypes } from '../../styles/themer/utils'
 
 /* eslint jsx-a11y/no-noninteractive-tabindex: 0 */
 
@@ -48,9 +50,6 @@ const styles = {
       cursor: 'not-allowed'
     }
   },
-  highlight: {
-    border: `1px solid ${colors.GREEN_500}`
-  },
   menu: {
     width: '100%'
   },
@@ -63,7 +62,6 @@ const styles = {
     top: '22px'
   },
   icon: {
-    color: colors.GREEN_500,
     transition: 'transform 100ms',
     userSelect: 'none'
   },
@@ -105,6 +103,19 @@ const styles = {
 
 const noOp = () => {} // eslint-disable-line no-empty-function
 
+const getSnackStyles = snacksTheme => {
+  const { action } = snacksTheme.colors
+  return {
+    highlight: {
+      border: `1px solid ${action}`
+    },
+    icon: {
+      color: action
+    }
+  }
+}
+
+@withTheme
 @FormComponent
 @Radium
 class Select extends React.PureComponent {
@@ -165,7 +176,8 @@ class Select extends React.PureComponent {
     style              : PropTypes.object,
     /** Text to show for validation error  */
     validationErrorText: PropTypes.string,
-    /** Value will make TextField a controlled component  */
+    /** Snacks theme attributes provided by `Themer` */
+    snacksTheme        : themePropTypes
   }
 
   static defaultProps = {
@@ -236,8 +248,11 @@ class Select extends React.PureComponent {
       required,
       hasError,
       hintText,
-      floatingLabelText
+      floatingLabelText,
+      snacksTheme
     } = this.props
+
+    const snacksStyles = getSnackStyles(snacksTheme)
 
     const { isOpen, selectedOption, isFocused } = this.state
     const hasValue = selectedOption ? true : false
@@ -252,7 +267,7 @@ class Select extends React.PureComponent {
           style={[
             styles.trigger,
             disabled && styles.triggerDisabled,
-            (isOpen || isFocused) && !hasError && styles.highlight,
+            (isOpen || isFocused) && !hasError && snacksStyles.highlight,
             !disabled && hasError && styles.error
           ]}
           aria-required={required}
@@ -287,6 +302,7 @@ class Select extends React.PureComponent {
               name="arrowDownSmallBold"
               style={[
                 styles.icon,
+                snacksStyles.icon,
                 isOpen && styles.iconOpen,
                 disabled && styles.iconDisabled,
                 !disabled && hasError && styles.iconError
