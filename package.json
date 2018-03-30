@@ -61,6 +61,7 @@
     "webpack": "^3.8.1"
   },
   "dependencies": {
+    "svgr": "^1.9.0",
     "tinycolor2": "^1.4.1",
     "underscore": "^1.8.3",
     "validator": "^9.1.1"
