@@ -1,4 +1,5 @@
 import colors from './styles/colors/index'
+import Tooltip from './components/Tooltip/Tooltip'
 import Button from './components/Buttons/Button'
 import CircleButton from './components/Buttons/CircleButton'
 import Radio from './components/Buttons/Radio'
@@ -39,7 +40,7 @@ export {
   // styles
   colors,
   zIndex,
-  
+
   // style overriding ()
   GlobalTheme,
   Normalize,
@@ -56,7 +57,7 @@ export {
   Grid,
   Column,
   Row,
-  
+
   //forms
   Form,
   FormComponent,
@@ -72,6 +73,7 @@ export {
   Slide,
 
   // components
+  Tooltip,
   Button,
   CircleButton,
   Radio,

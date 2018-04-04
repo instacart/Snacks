@@ -88,6 +88,10 @@ module.exports = {
           components: 'src/components/ScrollTrack/[A-Z]*.js'
         },
         {
+          name: 'Tooltip',
+          components: 'src/components/Tooltip/Tooltip.js'
+        },
+        {
           name: 'Transitions',
           components: 'src/components/Transitions/[A-Z]*.js'
         }
