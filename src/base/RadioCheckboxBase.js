@@ -17,6 +17,7 @@ const STYLE = {
     MsAppearance: 'none',
     MozAppearance: 'none',
     WebkitAppearance: 'none',
+    backgroundImage: 'none',
     position: 'absolute',
     top: 0,
     left: 0,
