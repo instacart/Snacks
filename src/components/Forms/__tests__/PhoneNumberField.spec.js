@@ -39,6 +39,25 @@ it('renders correctly', () => {
   expect(toJson(wrapper)).toMatchSnapshot()
 })
 
+it('renders correctly with focus state', () => {
+  const wrapper = mount(
+    <StyleRoot>
+      <div>
+        <PhoneNumberField
+          id="test_id"
+          name="test"
+          floatingLabelText="Phone Number"
+          hintText="(555) 555-555"
+        />
+      </div>
+    </StyleRoot>
+  )
+
+  wrapper.find('input').simulate('focus')
+  
+  expect(toJson(wrapper)).toMatchSnapshot()
+})
+
 it('fires the onFocus prop', () => {
   const onFocus = spy()
   const wrapper = mount(
