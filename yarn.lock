@@ -6421,6 +6421,14 @@ prop-types@^15.5.10:
     fbjs "^0.8.9"
     loose-envify "^1.3.1"
 
+prop-types@^15.5.6:
+  version "15.6.1"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
+
 prop-types@^15.5.8, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
@@ -6747,6 +6755,12 @@ react-test-renderer@^16.0.0-0, react-test-renderer@^16.2.0:
     fbjs "^0.8.16"
     object-assign "^4.1.1"
     prop-types "^15.6.0"
+
+react-text-mask@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/react-text-mask/-/react-text-mask-5.3.0.tgz#cf1e144f3b96b87edab54a6811fe43934d4f5014"
+  dependencies:
+    prop-types "^15.5.6"
 
 react-transition-group@^2.2.1:
   version "2.2.1"
