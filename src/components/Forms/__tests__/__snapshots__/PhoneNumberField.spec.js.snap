@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<StyleRoot>
+  <div
+    data-radium={true}
+  >
+    <div
+      key=".0"
+    >
+      <withTheme(FormComponent)
+        floatingLabelText="Phone Number"
+        hintText="(555) 555-555"
+        id="test_id"
+        name="test"
+      >
+        <FormComponent
+          floatingLabelText="Phone Number"
+          hintText="(555) 555-555"
+          id="test_id"
+          name="test"
+          snacksTheme={
+            Object {
+              "colors": Object {
+                "action": "#43B02A",
+                "actionHover": "#177D05",
+                "primaryBackground": "#FFFFFF",
+                "primaryForeground": "#43B02A",
+                "secondaryBackground": "#43B02A",
+                "secondaryForeground": "#FFFFFF",
+                "secondaryForegroundFocus": "#757575",
+              },
+            }
+          }
+        >
+          <PhoneNumberField
+            autoComplete="on"
+            defaultValue={null}
+            disabled={false}
+            floatingLabelText="Phone Number"
+            hasError={false}
+            hintText="(555) 555-555"
+            id="test_id"
+            isValid={true}
+            name="test"
+            onKeyDown={[Function]}
+            serverError={null}
+            snacksTheme={
+              Object {
+                "colors": Object {
+                  "action": "#43B02A",
+                  "actionHover": "#177D05",
+                  "primaryBackground": "#FFFFFF",
+                  "primaryForeground": "#43B02A",
+                  "secondaryBackground": "#43B02A",
+                  "secondaryForeground": "#FFFFFF",
+                  "secondaryForegroundFocus": "#757575",
+                },
+              }
+            }
+          >
+            <div
+              data-radium={true}
+              style={
+                Object {
+                  "cursor": "auto",
+                  "display": "inline-block",
+                  "position": "relative",
+                  "width": "343px",
+                }
+              }
+            >
+              <div
+                data-radium={true}
+                key=".1"
+                style={
+                  Object {
+                    "borderRadius": "4px",
+                    "position": "relative",
+                  }
+                }
+              >
+                <withTheme(RadiumEnhancer)
+                  disabled={false}
+                  float={false}
+                  hasError={false}
+                  htmlFor="test_id"
+                  key=".0"
+                  style={
+                    Object {
+                      "pointerEvents": "none",
+                    }
+                  }
+                  text="Phone Number"
+                >
+                  <FloatingLabel
+                    disabled={false}
+                    float={false}
+                    hasError={false}
+                    htmlFor="test_id"
+                    snacksTheme={
+                      Object {
+                        "colors": Object {
+                          "action": "#43B02A",
+                          "actionHover": "#177D05",
+                          "primaryBackground": "#FFFFFF",
+                          "primaryForeground": "#43B02A",
+                          "secondaryBackground": "#43B02A",
+                          "secondaryForeground": "#FFFFFF",
+                          "secondaryForegroundFocus": "#757575",
+                        },
+                      }
+                    }
+                    style={
+                      Object {
+                        "pointerEvents": "none",
+                      }
+                    }
+                    text="Phone Number"
+                  >
+                    <label
+                      data-radium={true}
+                      htmlFor="test_id"
+                      style={
+                        Object {
+                          "color": "#757575",
+                          "cursor": "text",
+                          "fontSize": "16px",
+                          "margin": "0",
+                          "pointerEvents": "none",
+                          "position": "absolute",
+                          "transform": "scale(1) translate(8px, 17px)",
+                          "transformOrigin": "left top",
+                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                          "userSelect": "none",
+                          "zIndex": 1,
+                        }
+                      }
+                    >
+                      Phone Number
+                    </label>
+                  </FloatingLabel>
+                </withTheme(RadiumEnhancer)>
+                <TextFieldHint
+                  disabled={false}
+                  key=".1"
+                  text="(555) 555-555"
+                >
+                  <div
+                    data-radium={true}
+                    style={
+                      Object {
+                        "color": "#BDBDBD",
+                        "cursor": "inherit",
+                        "fontSize": "16px",
+                        "opacity": 0,
+                        "pointerEvents": "none",
+                        "position": "absolute",
+                        "transform": "scale(1) translate(9px, 23px)",
+                        "transformOrigin": "left top",
+                        "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "zIndex": 1,
+                      }
+                    }
+                  >
+                    (555) 555-555
+                  </div>
+                </TextFieldHint>
+                <t
+                  aria-invalid={false}
+                  autoComplete="on"
+                  defaultValue={null}
+                  disabled={false}
+                  guide={false}
+                  keepCharPositions={true}
+                  key=".2"
+                  mask={
+                    Array [
+                      "(",
+                      /\\[1-9\\]/,
+                      /\\\\d/,
+                      /\\\\d/,
+                      ")",
+                      " ",
+                      /\\\\d/,
+                      /\\\\d/,
+                      /\\\\d/,
+                      "-",
+                      /\\\\d/,
+                      /\\\\d/,
+                      /\\\\d/,
+                      /\\\\d/,
+                    ]
+                  }
+                  name="test"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder=""
+                  render={[Function]}
+                >
+                  <input
+                    aria-invalid={false}
+                    autoComplete="on"
+                    defaultValue={null}
+                    disabled={false}
+                    name="test"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder=""
+                    style={
+                      Object {
+                        "WebkitOpacity": 1,
+                        "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+                        "backgroundColor": "#FFF",
+                        "border": "solid 1px #BDBDBD",
+                        "borderRadius": "4px",
+                        "boxSizing": "border-box",
+                        "color": "#424242",
+                        "fontSize": "16px",
+                        "height": "56px",
+                        "margin": "0",
+                        "outline": "none",
+                        "padding": "25px 8px 8px 8px",
+                        "position": "relative",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </t>
+              </div>
+              <ValidationError
+                inputId="test_id"
+                key=".2"
+                show={false}
+              >
+                <div
+                  aria-atomic={true}
+                  aria-live="assertive"
+                  data-radium={true}
+                  id="error_test_id"
+                  style={
+                    Object {
+                      "color": "#B30029",
+                      "display": "none",
+                      "fontSize": "12px",
+                      "marginLeft": "1px",
+                      "marginTop": "2px",
+                      "opacity": "0",
+                      "pointerEvents": "none",
+                      "textAlign": "left",
+                      "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                    }
+                  }
+                />
+              </ValidationError>
+              <HelperText
+                key=".3"
+              />
+            </div>
+          </PhoneNumberField>
+        </FormComponent>
+      </withTheme(FormComponent)>
+    </div>
+    <StyleSheet
+      key=".1"
+    >
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "",
+          }
+        }
+      />
+    </StyleSheet>
+  </div>
+</StyleRoot>
+`;
