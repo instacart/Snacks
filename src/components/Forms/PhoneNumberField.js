@@ -66,9 +66,9 @@ const getSnackStyles = snacksTheme => {
   }
 }
 
-const getInputSyles = (props, snacksTheme) => {
-  const snacksStyles = getSnackStyles(snacksTheme)
-  const { disabled, hasError, inputStyle, isFocused } = props
+const getInputSyles = ({props, theme, isFocused}) => {
+  const snacksStyles = getSnackStyles(theme)
+  const { disabled, hasError, inputStyle } = props
   const disabledStlyes = disabled ? styles.inputDisabled : {}
   const errorStyles = !disabled && hasError ? styles.inputError : {}
   const focusedStyles = isFocused && !hasError ? snacksStyles.highlight : {}
@@ -253,6 +253,7 @@ class PhoneNumberField extends React.Component {
 
           <MaskedTextInput
             mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
+            id={inputId}
             guide={false}
             name={name}
             aria-required={required}
@@ -269,7 +270,11 @@ class PhoneNumberField extends React.Component {
             render={(ref, props) => (
               <input
                 ref={(input) => ref(input)}
-                style={getInputSyles(props, snacksTheme)}
+                style={getInputSyles({
+                  props: this.props,
+                  theme: snacksTheme,
+                  isFocused
+                })}
                 {...props}
               />
             )}
