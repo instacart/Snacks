@@ -159,7 +159,7 @@ class PhoneNumberField extends React.Component {
       return null
     }
 
-    return this.input.value
+    return this.input.value.replace(/\(|\)|-| /g, '')
   }
 
   handleInputChange = (e) => {
@@ -173,7 +173,7 @@ class PhoneNumberField extends React.Component {
       this.setState({hasValue: false})
     }
 
-    onChange && onChange(e, value)
+    onChange && onChange(e, value.replace(/\(|\)|-| /g, ''), value)
   }
 
   handleInputFocus = (e) => {
@@ -269,7 +269,10 @@ class PhoneNumberField extends React.Component {
             keepCharPositions={true}
             render={(ref, props) => (
               <input
-                ref={(input) => ref(input)}
+                ref={(input) => {
+                  this.input = input
+                  ref(input)}
+                }
                 style={getInputSyles({
                   props: this.props,
                   theme: snacksTheme,
