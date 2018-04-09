@@ -47,7 +47,7 @@ const styles = {
     margin: '0',
     padding: '25px 8px 8px 8px',
     outline: 'none',
-    position: 'relative', 
+    position: 'relative',
     width: '100%',
     WebkitOpacity: 1,
     WebkitTapHighlightColor: 'rgba(0,0,0,0)'
@@ -168,7 +168,7 @@ class PhoneNumberField extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.disabled && !this.props.disabled) {
-      this.setState({ isFocused: false })
+      this.setState({isFocused: false})
     }
 
     if (!this.state.hasValue && nextProps.value) {

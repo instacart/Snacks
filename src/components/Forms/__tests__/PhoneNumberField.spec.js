@@ -117,8 +117,17 @@ it('fires the onChange prop', () => {
     </StyleRoot>
   )
 
+  // update input to 555-555-5555
   wrapper.find('input').simulate('change', {target: {value: '(555) 555-555'}})
 
+  // ensure the callback passes both raw and edited versions
   expect(onChange).toBeCalledWith(expect.anything(), '555555555', '(555) 555-555')
   expect(onChange.mock.calls.length).toBe(1)
+
+  // update input to 123-456-7890
+  wrapper.find('input').simulate('change', {target: {value: '(123) 456-7890'}})
+
+  // ensure the callback passes correct, updated phone value
+  expect(onChange.mock.calls[1]).toEqual([expect.anything(), '1234567890', '(123) 456-7890'])
+  expect(onChange.mock.calls.length).toBe(2)
 })
