@@ -30,20 +30,20 @@ const styles = {
     cursor: 'auto',
     display: 'inline-block',
     position: 'relative',
-    width: '343px',
+    width: 343,
   },
   inputContainer: {
-    borderRadius: '4px',
+    borderRadius: 4,
     position: 'relative'
   },
   input: {
-    backgroundColor: '#FFF',
+    backgroundColor: colors.WHITE,
     border: `solid 1px ${colors.GRAY_74}`,
-    borderRadius: '4px',
+    borderRadius: 4,
     boxSizing: 'border-box',
     color: colors.GRAY_20,
-    fontSize: '16px',
-    height: '56px',
+    fontSize: 16,
+    height: 56,
     margin: '0',
     padding: '25px 8px 8px 8px',
     outline: 'none',
@@ -66,7 +66,7 @@ const styles = {
     width: '100%'
   },
   halfWidth: {
-    width: '162px'
+    width: 162
   }
 }
 
