@@ -1,7 +1,6 @@
 import React         from 'react'
 import { StyleRoot } from 'radium'
-import { mount, shallow } from 'enzyme'
-import { spy }       from 'sinon'
+import { mount } from 'enzyme'
 import toJson        from 'enzyme-to-json'
 import PhoneNumberField  from '../PhoneNumberField'
 
@@ -59,7 +58,7 @@ it('renders correctly with focus state', () => {
 })
 
 it('fires the onFocus prop', () => {
-  const onFocus = spy()
+  const onFocus = jest.fn()
   const wrapper = mount(
     <StyleRoot>
       <div>
@@ -76,11 +75,12 @@ it('fires the onFocus prop', () => {
 
   wrapper.find('input').simulate('focus')
 
-  expect(onFocus.calledOnce).toBe(true)
+  expect(onFocus).toBeCalled()
+  expect(onFocus.mock.calls.length).toBe(1)
 })
 
 it('fires the onBlur prop', () => {
-  const onBlur = spy()
+  const onBlur = jest.fn()
   const wrapper = mount(
     <StyleRoot>
       <div>
@@ -97,11 +97,12 @@ it('fires the onBlur prop', () => {
 
   wrapper.find('input').simulate('blur')
 
-  expect(onBlur.calledOnce).toBe(true)
+  expect(onBlur).toBeCalled()
+  expect(onBlur.mock.calls.length).toBe(1)
 })
 
 it('fires the onChange prop', () => {
-  const onChange = spy()
+  const onChange = jest.fn()
   const wrapper = mount(
     <StyleRoot>
       <div>
@@ -116,7 +117,8 @@ it('fires the onChange prop', () => {
     </StyleRoot>
   )
 
-  wrapper.find('input').simulate('change', {target: {value: 'My new value'}})
+  wrapper.find('input').simulate('change', {target: {value: '(555) 555-555'}})
 
-  expect(onChange.calledOnce).toBe(true)
+  expect(onChange).toBeCalledWith(expect.anything(), '555555555', '(555) 555-555')
+  expect(onChange.mock.calls.length).toBe(1)
 })

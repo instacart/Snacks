@@ -1,16 +1,29 @@
-import React              from 'react'
-import PropTypes          from 'prop-types'
-import Radium             from 'radium'
 import { colors }         from '../../styles'
+import withTheme          from '../../styles/themer/withTheme'
+import { themePropTypes } from '../../styles/themer/utils'
 import FormComponent      from './FormComponent'
 import ValidationError    from './ValidationError'
 import FloatingLabel      from './FloatingLabel'
 import TextFieldHint      from './TextFieldHint'
 import ServerError        from './ServerError'
 import HelperText         from './HelperText'
-import withTheme          from '../../styles/themer/withTheme'
+import React              from 'react'
+import PropTypes          from 'prop-types'
+import Radium             from 'radium'
 import MaskedTextInput    from 'react-text-mask'
-import { themePropTypes } from '../../styles/themer/utils'
+
+const NoOp = () => {} // eslint-disable-line no-empty-function
+
+const phoneRegex = /\(|\)|-| /g
+
+// input masks by alpha-2 code - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+// NOTE: this currently only supports US, but will someday include other regions and countries
+const inputMasks = {
+  'US': {
+    mask: ['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/],
+    hint: '(555) 555-555'
+  }
+}
 
 const styles = {
   wrapper: {
@@ -34,7 +47,7 @@ const styles = {
     margin: '0',
     padding: '25px 8px 8px 8px',
     outline: 'none',
-    position: 'relative',
+    position: 'relative', 
     width: '100%',
     WebkitOpacity: 1,
     WebkitTapHighlightColor: 'rgba(0,0,0,0)'
@@ -113,7 +126,13 @@ class PhoneNumberField extends React.Component {
     isValid            : PropTypes.bool,
     /** onFocus callback */
     onFocus            : PropTypes.func,
-    /** onChange callback */
+    /** onChange callback 
+     * 
+     * @param {SyntheticEvent} event The react `SyntheticEvent`
+     * @param {String} value The value from the input with `(`, `)`, space, and `-` characters removed
+     * @param {String} rawValue The raw value from the input
+    */
+    
     onChange           : PropTypes.func,
     /** onBlur callback */
     onBlur             : PropTypes.func,
@@ -137,7 +156,10 @@ class PhoneNumberField extends React.Component {
     autoComplete: 'on',
     disabled    : false,
     defaultValue: null,
-    onKeyDown: () => {} // eslint-disable-line no-empty-function
+    onChange: NoOp,
+    onKeyDown: NoOp,
+    onFocus: NoOp,
+    onBlur: NoOp,
   }
 
   state = {
@@ -159,7 +181,7 @@ class PhoneNumberField extends React.Component {
       return null
     }
 
-    return this.input.value.replace(/\(|\)|-| /g, '')
+    return this.input.value.replace(phoneRegex, '')
   }
 
   handleInputChange = (e) => {
@@ -173,17 +195,17 @@ class PhoneNumberField extends React.Component {
       this.setState({hasValue: false})
     }
 
-    onChange && onChange(e, value.replace(/\(|\)|-| /g, ''), value)
+    onChange(e, value.replace(phoneRegex, ''), value)
   }
 
   handleInputFocus = (e) => {
     this.setState({isFocused: true})
-    this.props.onFocus && this.props.onFocus(e)
+    this.props.onFocus(e)
   }
 
   handleInputBlur = (e) => {
     this.setState({isFocused: false})
-    this.props.onBlur && this.props.onBlur(e)
+    this.props.onBlur(e)
   }
 
   handleKeyDown = (e) => {
@@ -198,7 +220,7 @@ class PhoneNumberField extends React.Component {
       fullWidth,
       halfWidth,
       hasError,
-      id,
+      id: inputId,
       isValid,
       name,
       required,
@@ -215,8 +237,6 @@ class PhoneNumberField extends React.Component {
       hasValue,
       isFocused
     } = this.state
-
-    const inputId = id
 
     return (
       <div
@@ -246,13 +266,13 @@ class PhoneNumberField extends React.Component {
           />
 
           <TextFieldHint
-            text={'(555) 555-555'}
+            text={inputMasks.US.hint}
             show={!hasValue && isFocused}
             disabled={disabled}
           />
 
           <MaskedTextInput
-            mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
+            mask={inputMasks.US.mask}
             id={inputId}
             guide={false}
             name={name}
