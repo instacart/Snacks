@@ -287,6 +287,7 @@ class PhoneNumberField extends React.Component {
             defaultValue={value !== undefined ? undefined : defaultValue}
             disabled={disabled}
             keepCharPositions={true}
+            type='tel'
             render={(ref, props) => (
               <input
                 ref={(input) => {

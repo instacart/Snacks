@@ -203,6 +203,7 @@ exports[`renders correctly 1`] = `
                   onKeyDown={[Function]}
                   placeholder=""
                   render={[Function]}
+                  type="tel"
                 >
                   <input
                     aria-invalid={false}
@@ -234,6 +235,7 @@ exports[`renders correctly 1`] = `
                         "width": "100%",
                       }
                     }
+                    type="tel"
                   />
                 </t>
               </div>
@@ -491,6 +493,7 @@ exports[`renders correctly with focus state 1`] = `
                   onKeyDown={[Function]}
                   placeholder=""
                   render={[Function]}
+                  type="tel"
                 >
                   <input
                     aria-invalid={false}
@@ -522,6 +525,7 @@ exports[`renders correctly with focus state 1`] = `
                         "width": "100%",
                       }
                     }
+                    type="tel"
                   />
                 </t>
               </div>
