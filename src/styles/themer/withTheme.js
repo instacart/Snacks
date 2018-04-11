@@ -27,6 +27,7 @@ function withTheme(InnerComponent) {
     render() {
       return (
         <InnerComponent
+          ref={node => this.wrapped = node}
           {...this.props}
           snacksTheme={themer.themeConfig}
         />
