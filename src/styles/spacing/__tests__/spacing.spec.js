@@ -1,5 +1,4 @@
-import spacing from '../'
-import { spacings } from '../'
+import spacing, { spacings } from '../'
 
 const {
   SM,
@@ -9,6 +8,12 @@ const {
 } = spacings
 
 describe('spacing', () => {
+  it('exports spacings', () => {
+    Object.keys(spacings).forEach(value => {
+      expect(spacing[value]).toEqual(spacings[value])
+    })
+  })
+
   it('exports margin and padding for all directions', () => {
     expect(spacing.MARGIN_SM).toEqual({margin: SM})
     expect(spacing.PADDING_SM).toEqual({padding: SM})

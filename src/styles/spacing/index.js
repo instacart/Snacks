@@ -49,4 +49,4 @@ function capitalize(s) {
   return str.toLowerCase()[0].toUpperCase() + str.slice(1)
 }
 
-export default { ...finalSpacings }
+export default { ...finalSpacings, ...spacings }
