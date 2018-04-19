@@ -65,8 +65,8 @@ class MenuItem extends React.Component {
     ]),
     /** Override styles for leftIcon */
     leftIconStyles  : PropTypes.shape({}),
-    /** Callback function fired when the menu item is selected. Sends option object as {value:, label:} and index */
-    onClick         : PropTypes.func,
+    /** Callback function fired when the menu item is click. Overriden by parent Menu or DropdownMenu */
+    _onClick        : PropTypes.func,
     /** Callback function fired when the menu item is focused. */
     onFocus         : PropTypes.func,
     /** Used by menu to keep track of current focus index. */
@@ -81,7 +81,7 @@ class MenuItem extends React.Component {
     tabIndex        : PropTypes.number,
     /** Whether or not to use use the tabIndex HTML attribute */
     useTabIndex     : PropTypes.bool,
-    /** Underlying value. Also, passed into onClick function */
+    /** Underlying value. Also, passed into _onClick function */
     value           : PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
@@ -110,7 +110,7 @@ class MenuItem extends React.Component {
     const {
       disabled,
       index,
-      onClick,
+      _onClick,
       value,
       label,
       preventDefault
@@ -118,7 +118,7 @@ class MenuItem extends React.Component {
     preventDefault && e.preventDefault()
 
     const option = {value: value, label: label}
-    !disabled && onClick && onClick(e, option, index)
+    !disabled && _onClick && _onClick(e, option, index)
   }
 
   handleKeyDown = (event) => {
@@ -195,7 +195,7 @@ class MenuItem extends React.Component {
         ]}
         onClick={this.handleClick}
         onFocus={this.handleFocus}
-        tabIndex={useTabIndex && !disabled && (tabIndex || 0)}
+        tabIndex={useTabIndex && !disabled ? (tabIndex || 0) : undefined}
         onKeyDown={this.handleKeyDown}
       >
         { this.renderMenuItem() }
