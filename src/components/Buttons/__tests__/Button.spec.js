@@ -31,6 +31,7 @@ describe('Button', () => {
     const testCases = [
       { snacksStyle: 'primary', size: 'standard' },
       { snacksStyle: 'secondary', size: 'standard' },
+      { snacksStyle: 'flat', size: 'standard' },
       { snacksStyle: 'coupon', size: 'standard' }
     ]
 

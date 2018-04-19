@@ -440,6 +440,58 @@ exports[`Button renders all snacks button variants correctly 3`] = `
         "MozOsxFontSmoothing": "grayscale",
         "WebkitFontSmoothing": "antialiased",
         "alignItems": "center",
+        "backgroundColor": "transparent",
+        "backgroundImage": "none",
+        "border": "1px solid transparent",
+        "borderRadius": "4px",
+        "color": "#43B02A",
+        "cursor": "pointer",
+        "display": "inline-flex",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "height": "40px",
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    tabIndex={undefined}
+    type="button"
+  >
+    Hi
+  </button>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button renders all snacks button variants correctly 4`] = `
+<div
+  data-radium={true}
+>
+  <button
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "alignItems": "center",
         "backgroundColor": "#FFFFFF",
         "backgroundImage": "none",
         "border": "1px dashed #E0E0E0",
