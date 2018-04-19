@@ -135,6 +135,20 @@ const getSnacksStyles = props => {
       }
     },
 
+    flat: {
+      base: {
+        backgroundColor: 'transparent',
+        color: action,
+
+        ':hover': {
+          color: actionHover,
+        },
+        ':active': {
+          color: actionActive,
+        }
+      }
+    },
+
     coupon: {
       base: {
         backgroundColor: colors.WHITE,
@@ -234,7 +248,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(['tiny', 'small', 'standard', 'large']),
 
   /** Snacks button variants. */
-  snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'coupon']),
+  snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'flat', 'coupon']),
 
   /** Optional style overrides. */
   style: PropTypes.object,

@@ -71,6 +71,41 @@ A good use is as a cancel button when asking the user a question.
 </div>
 ```
 
+### Flat
+The flat style can be used when you want a button that looks like a link.
+A typical solution is to use an anchor tag to do this, however this approach
+has issues such as not having consistent padding to a button and there are
+accessibility concerns (links should navigate, buttons should cause actions).
+
+```js
+<div style={{display: 'flex'}}>
+  <div style={{marginRight: '24px'}}>
+    <div style={{marginBottom: '8px'}}>Tiny</div>
+    <Button snacksStyle="flat" size="tiny">
+      Flat Button
+    </Button>
+  </div>
+  <div style={{marginRight: '24px'}}>
+    <div style={{marginBottom: '8px'}}>Small</div>
+    <Button snacksStyle="flat" size="small">
+      Flat Button
+    </Button>
+  </div>
+  <div style={{marginRight: '24px'}}>
+    <div style={{marginBottom: '8px'}}>Standard</div>
+    <Button snacksStyle="flat" size="standard">
+      Flat Button
+    </Button>
+  </div>
+  <div>
+    <div style={{marginBottom: '8px'}}>Large</div>
+    <Button snacksStyle="flat" size="large">
+      Flat Button
+    </Button>
+  </div>
+</div>
+```
+
 ### Coupon
 
 Note that coupon buttons aren't affected by a Snacks theme.
