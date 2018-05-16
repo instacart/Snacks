@@ -155,7 +155,7 @@ class Menu extends React.Component {
         const component = React.cloneElement(child, {
           index: index,
           focus: currentTabIndex === index,
-          onClick: onSelect,
+          _onClick: onSelect,
           onMenuItemFocus: this.handleMenuItemFocus
         })
         index += 1
