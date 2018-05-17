@@ -6,23 +6,25 @@ exports[`renders Row correctly 1`] = `
 >
   <div>
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
   </div>
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
-@media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}",
+        "__html": "@media (max-width: 767px){ .rmq-e9fd10a8{display: block !important;}}
+@media (min-width: 768px) and (max-width: 831px){ .rmq-94de0125{display: grid !important;
+grid-template-columns: repeat(6, 104px) !important;}}
+@media (min-width: 832px) and (max-width: 1039px){ .rmq-eeb4761a{display: grid !important;
+grid-template-columns: repeat(8, 104px) !important;}}
+@media (min-width: 1040px) and (max-width: 1247px){ .rmq-3e10bf34{display: grid !important;
+grid-template-columns: repeat(10, 104px) !important;}}
+@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2295bbb9{display: grid !important;
+grid-template-columns: repeat(12, 104px) !important;}}
+@media (min-width: 1456px){ .rmq-108b114{display: grid !important;
+grid-template-columns: repeat(14, 104px) !important;}}",
       }
     }
   />
@@ -37,212 +39,162 @@ exports[`renders Row with maxColumns correctly 1`] = `
     data-radium={true}
   >
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-c267bcb0 rmq-b48441e7 rmq-d5a064a8 rmq-34523c83"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-797f2370 rmq-4560f2a7 rmq-6d474e68 rmq-d80279c3"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-619c6b1f rmq-5eb2cae8 rmq-ff086e27 rmq-ed9f7dcc"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-d1a52bb3 rmq-164f544 rmq-8beb698b rmq-57e78aa0"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-d8c2f4b5 rmq-10dadc02 rmq-bcb6a2cd rmq-e13cf8e6"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-45d5972 rmq-15fad365 rmq-363873aa rmq-d1024a01"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-1d72a456 rmq-b5cf281 rmq-1fe90cce rmq-401bf6a5"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-454212b5 rmq-d3dba02 rmq-b91980cd rmq-da5d6e6"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-fe442532 rmq-5f85e825 rmq-e0b3cd6a rmq-60029241"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-77fa4074 rmq-21d39823 rmq-63668aec rmq-86c09647"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-de89f215 rmq-724c3422 rmq-c4ec9eed rmq-719c7e86"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-d02048b7 rmq-ddd79ac0 rmq-820aa60f rmq-6a5a724"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-29d2992f rmq-169eeae0 rmq-8d2d9a4b"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-f26d78e1 rmq-2c57b02e rmq-7fc06685"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-d56a9d4b rmq-df42e904 rmq-e3706aef"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-abeb198e rmq-3003f41 rmq-c89db96a"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-712dba81 rmq-bd40842a"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-ad4d4960 rmq-41b878cb"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-bb094df8 rmq-93bd0d53"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-820d5078 rmq-98718fd3"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-65d59bb6"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-692dd1d2"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-62f5bd19"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-7ff1dad1"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114"
       data-radium={true}
-      style={
-        Object {
-          "display": "block",
-        }
-      }
+      style={Object {}}
     />
   </div>
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
-@media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}
-@media (min-width: 832px) and (max-width: 1039px) { .rmq-c267bcb0{width: 104px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1040px) and (max-width: 1247px) { .rmq-b48441e7{width: 104px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-d5a064a8{width: 104px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-34523c83{width: 104px !important;
-margin: 0 auto !important;}}
-@media (min-width: 832px) and (max-width: 1039px) { .rmq-619c6b1f{width: 208px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1040px) and (max-width: 1247px) { .rmq-5eb2cae8{width: 208px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-ff086e27{width: 208px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-ed9f7dcc{width: 208px !important;
-margin: 0 auto !important;}}
-@media (min-width: 832px) and (max-width: 1039px) { .rmq-d8c2f4b5{width: 312px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1040px) and (max-width: 1247px) { .rmq-10dadc02{width: 312px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-bcb6a2cd{width: 312px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-e13cf8e6{width: 312px !important;
-margin: 0 auto !important;}}
-@media (min-width: 832px) and (max-width: 1039px) { .rmq-1d72a456{width: 416px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1040px) and (max-width: 1247px) { .rmq-b5cf281{width: 416px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-1fe90cce{width: 416px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-401bf6a5{width: 416px !important;
-margin: 0 auto !important;}}
-@media (min-width: 832px) and (max-width: 1039px) { .rmq-fe442532{width: 520px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1040px) and (max-width: 1247px) { .rmq-5f85e825{width: 520px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-e0b3cd6a{width: 520px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-60029241{width: 520px !important;
-margin: 0 auto !important;}}
-@media (min-width: 832px) and (max-width: 1039px) { .rmq-de89f215{width: 624px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1040px) and (max-width: 1247px) { .rmq-724c3422{width: 624px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-c4ec9eed{width: 624px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-719c7e86{width: 624px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1040px) and (max-width: 1247px) { .rmq-29d2992f{width: 728px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-169eeae0{width: 728px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-8d2d9a4b{width: 728px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1040px) and (max-width: 1247px) { .rmq-d56a9d4b{width: 832px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-df42e904{width: 832px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-e3706aef{width: 832px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-712dba81{width: 936px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-bd40842a{width: 936px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-bb094df8{width: 1040px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-93bd0d53{width: 1040px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-65d59bb6{width: 1144px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-62f5bd19{width: 1248px !important;
-margin: 0 auto !important;}}",
+        "__html": "@media (max-width: 767px){ .rmq-e9fd10a8{display: block !important;}}
+@media (min-width: 768px) and (max-width: 831px){ .rmq-94de0125{display: grid !important;
+grid-template-columns: repeat(6, 104px) !important;}}
+@media (min-width: 832px) and (max-width: 1039px){ .rmq-eeb4761a{display: grid !important;
+grid-template-columns: repeat(8, 104px) !important;}}
+@media (min-width: 1040px) and (max-width: 1247px){ .rmq-3e10bf34{display: grid !important;
+grid-template-columns: repeat(10, 104px) !important;}}
+@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2295bbb9{display: grid !important;
+grid-template-columns: repeat(12, 104px) !important;}}
+@media (min-width: 1456px){ .rmq-108b114{display: grid !important;
+grid-template-columns: repeat(14, 104px) !important;}}
+@media (min-width: 832px) and (max-width: 1039px) { .rmq-797f2370{grid-template-columns: repeat(1, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1040px) and (max-width: 1247px) { .rmq-4560f2a7{grid-template-columns: repeat(1, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-6d474e68{grid-template-columns: repeat(1, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-d80279c3{grid-template-columns: repeat(1, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 832px) and (max-width: 1039px) { .rmq-d1a52bb3{grid-template-columns: repeat(2, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1040px) and (max-width: 1247px) { .rmq-164f544{grid-template-columns: repeat(2, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-8beb698b{grid-template-columns: repeat(2, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-57e78aa0{grid-template-columns: repeat(2, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 832px) and (max-width: 1039px) { .rmq-45d5972{grid-template-columns: repeat(3, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1040px) and (max-width: 1247px) { .rmq-15fad365{grid-template-columns: repeat(3, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-363873aa{grid-template-columns: repeat(3, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-d1024a01{grid-template-columns: repeat(3, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 832px) and (max-width: 1039px) { .rmq-454212b5{grid-template-columns: repeat(4, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1040px) and (max-width: 1247px) { .rmq-d3dba02{grid-template-columns: repeat(4, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-b91980cd{grid-template-columns: repeat(4, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-da5d6e6{grid-template-columns: repeat(4, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 832px) and (max-width: 1039px) { .rmq-77fa4074{grid-template-columns: repeat(5, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1040px) and (max-width: 1247px) { .rmq-21d39823{grid-template-columns: repeat(5, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-63668aec{grid-template-columns: repeat(5, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-86c09647{grid-template-columns: repeat(5, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 832px) and (max-width: 1039px) { .rmq-d02048b7{grid-template-columns: repeat(6, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1040px) and (max-width: 1247px) { .rmq-ddd79ac0{grid-template-columns: repeat(6, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-820aa60f{grid-template-columns: repeat(6, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-6a5a724{grid-template-columns: repeat(6, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1040px) and (max-width: 1247px) { .rmq-f26d78e1{grid-template-columns: repeat(7, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-2c57b02e{grid-template-columns: repeat(7, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-7fc06685{grid-template-columns: repeat(7, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1040px) and (max-width: 1247px) { .rmq-abeb198e{grid-template-columns: repeat(8, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-3003f41{grid-template-columns: repeat(8, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-c89db96a{grid-template-columns: repeat(8, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-ad4d4960{grid-template-columns: repeat(9, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-41b878cb{grid-template-columns: repeat(9, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-820d5078{grid-template-columns: repeat(10, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-98718fd3{grid-template-columns: repeat(10, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-692dd1d2{grid-template-columns: repeat(11, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-7ff1dad1{grid-template-columns: repeat(12, 104px) !important;
+justify-content: center !important;}}",
       }
     }
   />
@@ -257,34 +209,31 @@ exports[`renders Row with styles and maxColumns passed in correctly 1`] = `
     data-radium={true}
   >
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-c267bcb0 rmq-b48441e7 rmq-d5a064a8 rmq-34523c83"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-797f2370 rmq-4560f2a7 rmq-6d474e68 rmq-d80279c3"
       data-radium={true}
       style={
         Object {
           "color": "#ccc",
-          "display": "block",
           "width": "100%",
         }
       }
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-de89f215 rmq-724c3422 rmq-c4ec9eed rmq-719c7e86"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-d02048b7 rmq-ddd79ac0 rmq-820aa60f rmq-6a5a724"
       data-radium={true}
       style={
         Object {
           "color": "#ccc",
-          "display": "block",
           "width": "100%",
         }
       }
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-bb094df8 rmq-93bd0d53"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-820d5078 rmq-98718fd3"
       data-radium={true}
       style={
         Object {
           "color": "#ccc",
-          "display": "block",
           "width": "100%",
         }
       }
@@ -293,31 +242,37 @@ exports[`renders Row with styles and maxColumns passed in correctly 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
-@media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}
-@media (min-width: 832px) and (max-width: 1039px) { .rmq-c267bcb0{width: 104px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1040px) and (max-width: 1247px) { .rmq-b48441e7{width: 104px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-d5a064a8{width: 104px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-34523c83{width: 104px !important;
-margin: 0 auto !important;}}
-@media (min-width: 832px) and (max-width: 1039px) { .rmq-de89f215{width: 624px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1040px) and (max-width: 1247px) { .rmq-724c3422{width: 624px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-c4ec9eed{width: 624px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-719c7e86{width: 624px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-bb094df8{width: 1040px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-93bd0d53{width: 1040px !important;
-margin: 0 auto !important;}}",
+        "__html": "@media (max-width: 767px){ .rmq-e9fd10a8{display: block !important;}}
+@media (min-width: 768px) and (max-width: 831px){ .rmq-94de0125{display: grid !important;
+grid-template-columns: repeat(6, 104px) !important;}}
+@media (min-width: 832px) and (max-width: 1039px){ .rmq-eeb4761a{display: grid !important;
+grid-template-columns: repeat(8, 104px) !important;}}
+@media (min-width: 1040px) and (max-width: 1247px){ .rmq-3e10bf34{display: grid !important;
+grid-template-columns: repeat(10, 104px) !important;}}
+@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2295bbb9{display: grid !important;
+grid-template-columns: repeat(12, 104px) !important;}}
+@media (min-width: 1456px){ .rmq-108b114{display: grid !important;
+grid-template-columns: repeat(14, 104px) !important;}}
+@media (min-width: 832px) and (max-width: 1039px) { .rmq-797f2370{grid-template-columns: repeat(1, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1040px) and (max-width: 1247px) { .rmq-4560f2a7{grid-template-columns: repeat(1, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-6d474e68{grid-template-columns: repeat(1, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-d80279c3{grid-template-columns: repeat(1, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 832px) and (max-width: 1039px) { .rmq-d02048b7{grid-template-columns: repeat(6, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1040px) and (max-width: 1247px) { .rmq-ddd79ac0{grid-template-columns: repeat(6, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-820aa60f{grid-template-columns: repeat(6, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-6a5a724{grid-template-columns: repeat(6, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-820d5078{grid-template-columns: repeat(10, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-98718fd3{grid-template-columns: repeat(10, 104px) !important;
+justify-content: center !important;}}",
       }
     }
   />
@@ -330,12 +285,11 @@ exports[`renders Row with styles passed in correctly 1`] = `
 >
   <div>
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114"
       data-radium={true}
       style={
         Object {
           "color": "#ccc",
-          "display": "block",
           "width": "100%",
         }
       }
@@ -344,11 +298,17 @@ exports[`renders Row with styles passed in correctly 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
-@media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}",
+        "__html": "@media (max-width: 767px){ .rmq-e9fd10a8{display: block !important;}}
+@media (min-width: 768px) and (max-width: 831px){ .rmq-94de0125{display: grid !important;
+grid-template-columns: repeat(6, 104px) !important;}}
+@media (min-width: 832px) and (max-width: 1039px){ .rmq-eeb4761a{display: grid !important;
+grid-template-columns: repeat(8, 104px) !important;}}
+@media (min-width: 1040px) and (max-width: 1247px){ .rmq-3e10bf34{display: grid !important;
+grid-template-columns: repeat(10, 104px) !important;}}
+@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2295bbb9{display: grid !important;
+grid-template-columns: repeat(12, 104px) !important;}}
+@media (min-width: 1456px){ .rmq-108b114{display: grid !important;
+grid-template-columns: repeat(14, 104px) !important;}}",
       }
     }
   />
@@ -363,35 +323,32 @@ exports[`renders Row with styles, maxColumns and forceFullPage passed in correct
     data-radium={true}
   >
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-d56a9d4b rmq-df42e904 rmq-e3706aef rmq-e3940d63 rmq-3eba0fa5 rmq-4794023d rmq-3cc881d6 rmq-902176d3 rmq-9a0c63b1"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-abeb198e rmq-3003f41 rmq-c89db96a rmq-da8cd0e3 rmq-3eba0fa5 rmq-4794023d rmq-3cc881d6 rmq-902176d3 rmq-9a0c63b1"
       data-radium={true}
       style={
         Object {
-          "display": "block",
           "justifyContent": "center",
           "width": "100vw",
         }
       }
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-e3940d63 rmq-3eba0fa5 rmq-4794023d rmq-90efeef6 rmq-7d240233 rmq-49dba7f1"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-da8cd0e3 rmq-3eba0fa5 rmq-4794023d rmq-90efeef6 rmq-7d240233 rmq-49dba7f1"
       data-radium={true}
       style={
         Object {
           "color": "#ccc",
-          "display": "block",
           "justifyContent": "center",
           "width": "100%",
         }
       }
     />
     <div
-      className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-bb094df8 rmq-93bd0d53 rmq-e3940d63 rmq-3eba0fa5 rmq-4794023d rmq-90efeef6 rmq-902176d3 rmq-9a0c63b1"
+      className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-820d5078 rmq-98718fd3 rmq-da8cd0e3 rmq-3eba0fa5 rmq-4794023d rmq-90efeef6 rmq-902176d3 rmq-9a0c63b1"
       data-radium={true}
       style={
         Object {
           "color": "#ccc",
-          "display": "block",
           "justifyContent": "center",
           "width": "100%",
         }
@@ -401,18 +358,24 @@ exports[`renders Row with styles, maxColumns and forceFullPage passed in correct
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
-@media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}
-@media (min-width: 1040px) and (max-width: 1247px) { .rmq-d56a9d4b{width: 832px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-df42e904{width: 832px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-e3706aef{width: 832px !important;
-margin: 0 auto !important;}}
-@media (max-width: 767px){ .rmq-e3940d63{display: block !important;
+        "__html": "@media (max-width: 767px){ .rmq-e9fd10a8{display: block !important;}}
+@media (min-width: 768px) and (max-width: 831px){ .rmq-94de0125{display: grid !important;
+grid-template-columns: repeat(6, 104px) !important;}}
+@media (min-width: 832px) and (max-width: 1039px){ .rmq-eeb4761a{display: grid !important;
+grid-template-columns: repeat(8, 104px) !important;}}
+@media (min-width: 1040px) and (max-width: 1247px){ .rmq-3e10bf34{display: grid !important;
+grid-template-columns: repeat(10, 104px) !important;}}
+@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2295bbb9{display: grid !important;
+grid-template-columns: repeat(12, 104px) !important;}}
+@media (min-width: 1456px){ .rmq-108b114{display: grid !important;
+grid-template-columns: repeat(14, 104px) !important;}}
+@media (min-width: 1040px) and (max-width: 1247px) { .rmq-abeb198e{grid-template-columns: repeat(8, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-3003f41{grid-template-columns: repeat(8, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-c89db96a{grid-template-columns: repeat(8, 104px) !important;
+justify-content: center !important;}}
+@media (max-width: 767px) { .rmq-da8cd0e3{display: block !important;
 margin: 0 calc(-1 * (100vw - undefinedpx) / 2) !important;}}
 @media (min-width: 768px) and (max-width: 831px) { .rmq-3eba0fa5{display: block !important;
 margin: 0 calc(-1 * (100vw - 624px) / 2) !important;}}
@@ -430,10 +393,10 @@ margin: 0 calc(-1 * (100vw - 1040px) / 2) !important;}}
 margin: 0 calc(-1 * (100vw - 1248px) / 2) !important;}}
 @media (min-width: 1456px) { .rmq-49dba7f1{display: block !important;
 margin: 0 calc(-1 * (100vw - 1456px) / 2) !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-bb094df8{width: 1040px !important;
-margin: 0 auto !important;}}
-@media (min-width: 1456px) { .rmq-93bd0d53{width: 1040px !important;
-margin: 0 auto !important;}}",
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-820d5078{grid-template-columns: repeat(10, 104px) !important;
+justify-content: center !important;}}
+@media (min-width: 1456px) { .rmq-98718fd3{grid-template-columns: repeat(10, 104px) !important;
+justify-content: center !important;}}",
       }
     }
   />
