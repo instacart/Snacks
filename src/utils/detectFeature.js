@@ -1,9 +1,9 @@
 import _ from 'underscore'
 
 export const supportsCSSGrid = _.memoize(() => {
-  const userAgent = (navigator && navigator.userAgent) || ''
-  const isTestEnv = userAgent.match(/(Node.js|jsdom)/)
   const isNodeEnv = typeof window === 'undefined'
+  const userAgent = (isNodeEnv && navigator && navigator.userAgent) || ''
+  const isTestEnv = userAgent.match(/(Node.js|jsdom)/)
 
   if (isTestEnv || isNodeEnv) { return true }
 

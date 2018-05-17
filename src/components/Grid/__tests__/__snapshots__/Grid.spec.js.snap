@@ -45,9 +45,13 @@ exports[`renders Grid with Row correctly 1`] = `
       }
     >
       <div
-        className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-820d5078 rmq-98718fd3"
+        className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-bb094df8 rmq-93bd0d53"
         data-radium={true}
-        style={Object {}}
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       />
     </div>
   </div>
@@ -60,21 +64,10 @@ exports[`renders Grid with Row correctly 1`] = `
 @media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
 @media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
 @media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}
-@media (max-width: 767px){ .rmq-e9fd10a8{display: block !important;}}
-@media (min-width: 768px) and (max-width: 831px){ .rmq-94de0125{display: grid !important;
-grid-template-columns: repeat(6, 104px) !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-eeb4761a{display: grid !important;
-grid-template-columns: repeat(8, 104px) !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-3e10bf34{display: grid !important;
-grid-template-columns: repeat(10, 104px) !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2295bbb9{display: grid !important;
-grid-template-columns: repeat(12, 104px) !important;}}
-@media (min-width: 1456px){ .rmq-108b114{display: grid !important;
-grid-template-columns: repeat(14, 104px) !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-820d5078{grid-template-columns: repeat(10, 104px) !important;
-justify-content: center !important;}}
-@media (min-width: 1456px) { .rmq-98718fd3{grid-template-columns: repeat(10, 104px) !important;
-justify-content: center !important;}}",
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-bb094df8{width: 1040px !important;
+margin: 0 auto !important;}}
+@media (min-width: 1456px) { .rmq-93bd0d53{width: 1040px !important;
+margin: 0 auto !important;}}",
       }
     }
   />
@@ -96,24 +89,40 @@ exports[`renders Grid with Row with Columns correctly 1`] = `
       }
     >
       <div
-        className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2295bbb9 rmq-108b114 rmq-820d5078 rmq-98718fd3"
+        className="rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d rmq-bb094df8 rmq-93bd0d53"
         data-radium={true}
-        style={Object {}}
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          className="rmq-8f6274a rmq-9b0e1a5b rmq-a542a9ac rmq-f1cb9e65 rmq-dd3ac64f"
+          className="rmq-5cd7f856 rmq-3f38d303 rmq-a537bb32 rmq-e4ec3e25 rmq-357c0e23 rmq-b506d16c"
           data-radium={true}
-          style={Object {}}
+          style={
+            Object {
+              "display": "inline-block",
+            }
+          }
         />
         <div
-          className="rmq-8f6274a rmq-9b0e1a5b rmq-a542a9ac rmq-f1cb9e65 rmq-dd3ac64f"
+          className="rmq-5cd7f856 rmq-3f38d303 rmq-a537bb32 rmq-e4ec3e25 rmq-357c0e23 rmq-b506d16c"
           data-radium={true}
-          style={Object {}}
+          style={
+            Object {
+              "display": "inline-block",
+            }
+          }
         />
         <div
-          className="rmq-8f6274a rmq-9b0e1a5b rmq-a542a9ac rmq-f1cb9e65 rmq-dd3ac64f"
+          className="rmq-5cd7f856 rmq-3f38d303 rmq-a537bb32 rmq-e4ec3e25 rmq-357c0e23 rmq-b506d16c"
           data-radium={true}
-          style={Object {}}
+          style={
+            Object {
+              "display": "inline-block",
+            }
+          }
         />
       </div>
     </div>
@@ -127,26 +136,17 @@ exports[`renders Grid with Row with Columns correctly 1`] = `
 @media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
 @media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
 @media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}
-@media (max-width: 767px){ .rmq-e9fd10a8{display: block !important;}}
-@media (min-width: 768px) and (max-width: 831px){ .rmq-94de0125{display: grid !important;
-grid-template-columns: repeat(6, 104px) !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-eeb4761a{display: grid !important;
-grid-template-columns: repeat(8, 104px) !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-3e10bf34{display: grid !important;
-grid-template-columns: repeat(10, 104px) !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2295bbb9{display: grid !important;
-grid-template-columns: repeat(12, 104px) !important;}}
-@media (min-width: 1456px){ .rmq-108b114{display: grid !important;
-grid-template-columns: repeat(14, 104px) !important;}}
-@media (min-width: 1248px) and (max-width: 1455px) { .rmq-820d5078{grid-template-columns: repeat(10, 104px) !important;
-justify-content: center !important;}}
-@media (min-width: 1456px) { .rmq-98718fd3{grid-template-columns: repeat(10, 104px) !important;
-justify-content: center !important;}}
-@media (min-width: 768px) and (max-width: 831px){ .rmq-8f6274a{grid-column: span 2 !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-9b0e1a5b{grid-column: span 2 !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-a542a9ac{grid-column: span 2 !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-f1cb9e65{grid-column: span 4 !important;}}
-@media (min-width: 1456px){ .rmq-dd3ac64f{grid-column: span 5 !important;}}",
+@media (min-width: 1248px) and (max-width: 1455px) { .rmq-bb094df8{width: 1040px !important;
+margin: 0 auto !important;}}
+@media (min-width: 1456px) { .rmq-93bd0d53{width: 1040px !important;
+margin: 0 auto !important;}}
+@media (max-width: 767px){ .rmq-5cd7f856{display: block !important;
+width: 100% !important;}}
+@media (min-width: 768px) and (max-width: 831px){ .rmq-3f38d303{width: 208px !important;}}
+@media (min-width: 832px) and (max-width: 1039px){ .rmq-a537bb32{width: 208px !important;}}
+@media (min-width: 1040px) and (max-width: 1247px){ .rmq-e4ec3e25{width: 208px !important;}}
+@media (min-width: 1248px) and (max-width: 1455px){ .rmq-357c0e23{width: 416px !important;}}
+@media (min-width: 1456px){ .rmq-b506d16c{width: 520px !important;}}",
       }
     }
   />
