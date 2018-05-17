@@ -1,7 +1,6 @@
 import responsive, { sizes } from '../responsive'
-const { __v2__ } = responsive
 
-const { up, down } = __v2__
+const { up, down, only, between } = responsive
 
 describe('up', () => {
   it('ignores xs as an argument because it has no lower bound')
@@ -15,7 +14,6 @@ describe('up', () => {
     })
 
     // TODO: should maybe do one sanity check in case i messed up attaching the constsnts in sizes?
-    // should i import constants or hardcode
     expect(up('sm')).toEqual(`@media (min-width: ${768}px)`)
   })
 })
@@ -40,12 +38,12 @@ describe('only', () => {
   it('works for xl')
 
   it('works for every other size that has both a lower/upper bound', () => {
-    expect(1).toEqual(1)
+    expect(only('xs')).toEqual('hi')
   })
 })
 
 describe('between', () => {
   it("returns a media query that matches screens between each given size's min value", () => {
-    expect(1).toEqual(1)
+    expect(between('sm', 'lg')).toEqual('hi')
   })
 })

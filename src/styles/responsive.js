@@ -12,8 +12,10 @@ const SCREEN_MD_MAX = SCREEN_MDLG_MIN - 1 // 1039
 const SCREEN_MDLG_MAX = SCREEN_LG_MIN - 1 // 1247
 const SCREEN_LG_MAX = SCREEN_XL_MIN - 1 // 1455
 
+// TODO: exporting just for test (so far at least), smell?
 export const sizes = {
   xs: {
+    // TODO: no min, hmmm
     max: SCREEN_XS_MAX
   },
   sm: {
@@ -38,31 +40,41 @@ export const sizes = {
   }
 }
 
-const v2Api = { up, down, only, between }
-
-// sizes: xs, sm, md, mdLg, lg, xl
-function up(size) {
+// all sizes: xs, sm, md, mdLg, lg, xl
+// TODO: better error messages
+const up = (size) => {
   if (size === 'xs') {
-    // TODO: throw here? is there a way to have nothing be considered a non-media query for radium?
-    return ''
+    throw new Error('size "xs" not supported')
   }
 
-  if (!sizes[size].min) console.log('FUCK', size)
   return `@media (min-width: ${sizes[size].min}px)`
 }
 
-function down(size) {
+const down = (size) => {
+  if (size === 'xl') {
+    throw new Error('size "xl" not supported')
+  }
+
   return `@media (max-width: ${sizes[size].max}px)`
 }
 
-function only(size) {
+const only = (size) => {
   const { min, max } = sizes[size]
+
+  if (!min) {
+    return `@media (max-width: ${max}px)`
+  }
+
+  if (!max) {
+    return `@media (min-width: ${min}px)`
+  }
+
   return `@media (min-width: ${min}px) and (max-width: ${max}px)`
 }
 
-function between(lower, upper) {
+const between = (lower, upper) => {
   const min = sizes[lower].min
-  const max = sizes[upper].min
+  const max = sizes[upper].max
   return `@media (min-width: ${min}px) and (max-width: ${max}px)`
 }
 
@@ -81,5 +93,10 @@ export default {
     lg: SCREEN_LG_MIN,
     xl: SCREEN_XL_MIN
   },
-  __v2__: v2Api
+
+  // Helpers
+  up,
+  down,
+  only,
+  between
 }
