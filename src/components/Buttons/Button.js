@@ -72,6 +72,36 @@ const getSnacksStyles = props => {
   const { action, actionHover, primaryBackground } = props.snacksTheme.colors
   const actionActive = darken(actionHover, 3)
 
+  const activeAndFocus = {
+    primary: {
+      base: {
+        backgroundColor: actionActive
+      },
+      inverted: {
+        backgroundColor: primaryBackground,
+        opacity: '0.8'
+      }
+    },
+    secondary: {
+      base: {
+        color: actionActive,
+        border: `1px solid ${actionActive}`
+      },
+      inverted: {
+        color: primaryBackground,
+        border: `1px solid ${primaryBackground}`,
+        opacity: '0.8'
+      }
+    },
+    flat: {
+      color: actionActive,
+    },
+    coupon: {
+      border: `1px dashed ${colors.RED_700}`,
+      color: colors.RED_700
+    }
+  }
+
   return {
     primary: {
       base: {
@@ -81,9 +111,8 @@ const getSnacksStyles = props => {
         ':hover': {
           backgroundColor: actionHover
         },
-        ':active': {
-          backgroundColor: actionActive
-        }
+        ':active': activeAndFocus.primary.base,
+        ':focus': activeAndFocus.primary.base
       },
 
       inverted: {
@@ -95,10 +124,8 @@ const getSnacksStyles = props => {
           backgroundColor: primaryBackground,
           opacity: '0.9'
         },
-        ':active': {
-          backgroundColor: primaryBackground,
-          opacity: '0.8'
-        }
+        ':active': activeAndFocus.primary.inverted,
+        ':focus': activeAndFocus.primary.inverted
       }
     },
 
@@ -112,10 +139,8 @@ const getSnacksStyles = props => {
           color: actionHover,
           border: `1px solid ${actionHover}`
         },
-        ':active': {
-          color: actionActive,
-          border: `1px solid ${actionActive}`
-        }
+        ':active': activeAndFocus.secondary.base,
+        ':focus': activeAndFocus.secondary.base
       },
 
       inverted: {
@@ -127,11 +152,8 @@ const getSnacksStyles = props => {
           border: `1px solid ${primaryBackground}`,
           opacity: '0.9'
         },
-        ':active': {
-          color: primaryBackground,
-          border: `1px solid ${primaryBackground}`,
-          opacity: '0.8'
-        }
+        ':active': activeAndFocus.secondary.inverted,
+        ':focus': activeAndFocus.secondary.inverted
       }
     },
 
@@ -143,9 +165,8 @@ const getSnacksStyles = props => {
         ':hover': {
           color: actionHover,
         },
-        ':active': {
-          color: actionActive,
-        }
+        ':active': activeAndFocus.flat,
+        ':focus': activeAndFocus.flat
       }
     },
 
@@ -159,10 +180,8 @@ const getSnacksStyles = props => {
           border: `1px dashed ${colors.RED_600}`,
           color: colors.RED_600
         },
-        ':active': {
-          border: `1px dashed ${colors.RED_700}`,
-          color: colors.RED_700
-        }
+        ':active': activeAndFocus.coupon,
+        ':focus': activeAndFocus.coupon
       }
     },
 
