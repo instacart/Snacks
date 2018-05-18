@@ -8,7 +8,7 @@ unless name
   puts <<-HELP
 INSTRUCTIONS
 ./icon_export_helper.rb ICON_NAME
-When asked to copy the svg, open the Design System Sketch file, right-click on the icon you want to export, and select "Copy SVG Code" and the script will take care of the rest.
+When asked to copy the svg, open the Design System Sketch file, open the Symbols page (not the Icons page), right-click on the icon you want to export, and select "Copy SVG Code" and the script will take care of the rest.
   HELP
   exit
 end
