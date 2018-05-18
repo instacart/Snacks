@@ -162,11 +162,12 @@ const wrapperStyles = {
   flexDirection: 'row',
   flexWrap: 'wrap',
   margin: 0,
-  padding: 0
+  padding: 0,
 }
 const iconWrapStyles = {
   flex: 0,
-  padding: '8px',
+  padding: '0 16px 0 8px',
+  marginBottom: 8,
   listStyle: 'none',
   borderLeft: `1px solid ${colors.GRAY_88}`,
 }
