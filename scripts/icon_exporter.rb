@@ -13,7 +13,7 @@ When asked to copy the svg, open the Design System Sketch file, open the Symbols
   exit
 end
 
-root = Pathname.new(__FILE__).dirname.expand_path
+root = Pathname.new(__FILE__).dirname.join('..').expand_path
 path = root.join('src', 'components', 'Icon', 'icons', "#{name}.svg")
 initial_copy = `pbpaste`
 source = nil
