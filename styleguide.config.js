@@ -9,7 +9,6 @@ module.exports = {
   ignore: [
     '**/*/*Styles.js',
     '**/*.spec.js',
-    '**/*/*hexValues.js'
   ],
   sections: [
     {

@@ -1,77 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders cart icon correctly 1`] = `
-<i
+exports[`renders accessibility icon correctly 1`] = `
+<test-file-stub
   aria-hidden={true}
-  data-radium={true}
-  onClick={undefined}
-  style={
-    Object {
-      "fontFamily": "ic-icons",
-      "fontSize": "16px",
-      "fontSmoothing": "antialiased",
-      "fontStyle": "normal",
-      "fontVariant": "normal",
-      "fontWeight": "normal",
-      "lineHeight": "1",
-      "osxFontSmoothing": "grayscale",
-      "position": "relative",
-      "speak": "none",
-      "textTransform": "none",
-    }
-  }
->
-  
-</i>
+/>
 `;
 
-exports[`renders cart icon with hex code correctly 1`] = `
-<i
+exports[`renders accessibility icon with styles 1`] = `
+<test-file-stub
   aria-hidden={true}
-  data-radium={true}
-  onClick={undefined}
   style={
     Object {
-      "fontFamily": "ic-icons",
-      "fontSize": "16px",
-      "fontSmoothing": "antialiased",
-      "fontStyle": "normal",
-      "fontVariant": "normal",
-      "fontWeight": "normal",
-      "lineHeight": "1",
-      "osxFontSmoothing": "grayscale",
-      "position": "relative",
-      "speak": "none",
-      "textTransform": "none",
+      "fill": "#fff",
     }
   }
->
-  
-</i>
-`;
-
-exports[`renders cart icon with styles 1`] = `
-<i
-  aria-hidden={true}
-  data-radium={true}
-  onClick={undefined}
-  style={
-    Object {
-      "color": "#fff",
-      "fontFamily": "ic-icons",
-      "fontSize": "16px",
-      "fontSmoothing": "antialiased",
-      "fontStyle": "normal",
-      "fontVariant": "normal",
-      "fontWeight": "normal",
-      "lineHeight": "1",
-      "osxFontSmoothing": "grayscale",
-      "position": "relative",
-      "speak": "none",
-      "textTransform": "none",
-    }
-  }
->
-  
-</i>
+/>
 `;
