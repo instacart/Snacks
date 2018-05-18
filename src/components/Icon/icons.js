@@ -1,2 +1,6 @@
 export {default as accessibility} from './icons/accessibility.svg'
 export {default as accessibilityFilled} from './icons/accessibilityFilled.svg'
+export {default as account} from './icons/account.svg'
+export {default as accountFilled} from './icons/accountFilled.svg'
+export {default as addToOrder} from './icons/addToOrder.svg'
+export {default as addToOrderFilled} from './icons/addToOrderFilled.svg'
