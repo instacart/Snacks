@@ -327,7 +327,7 @@ class ScrollTrack extends Component {
       >
         { nextButtonContent ||
           <Icon
-            name='arrowRightSmallBold'
+            name='arrowRightSmall'
             style={{ fontSize: '20px' }}
           />
         }
@@ -353,7 +353,7 @@ class ScrollTrack extends Component {
       >
         { backButtonContent ||
           <Icon
-            name='arrowLeftSmallBold'
+            name='arrowLeftSmall'
             style={{ fontSize: '20px' }}
           />
         }

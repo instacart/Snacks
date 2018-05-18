@@ -299,7 +299,7 @@ class Select extends React.PureComponent {
 
           <div style={styles.iconContainer}>
             <Icon
-              name="arrowDownSmallBold"
+              name="arrowDownSmall"
               style={[
                 styles.icon,
                 snacksStyles.icon,

@@ -24,7 +24,7 @@ it('renders CircleButton with Icon correctly', () => {
     <StyleRoot>
       <div>
         <CircleButton>
-          <Icon name='arrowLeftSmallBold' />
+          <Icon name='arrowLeft' />
         </CircleButton>
       </div>
     </StyleRoot>

@@ -197,7 +197,7 @@ Buttons can be rendered with an icon to the left or right of the primary content
 ```js
 <div style={{padding: '24px'}}>
   <span style={{marginRight: '24px'}}>
-    <Button iconPosition="right" icon={<Icon name="arrowRightSmallBold" />} snacksStyle="secondary" size="standard">
+    <Button iconPosition="right" icon={<Icon name="arrowRightSmall" />} snacksStyle="secondary" size="standard">
       View 24 more
     </Button>
   </span>
@@ -207,7 +207,7 @@ Buttons can be rendered with an icon to the left or right of the primary content
     </Button>
   </span>
   <span style={{marginRight: '24px'}}>
-    <Button icon={<Icon name="deals" />} snacksStyle="coupon" size="small">
+    <Button icon={<Icon name="coupons" />} snacksStyle="coupon" size="small">
       Save $5.00
     </Button>
   </span>

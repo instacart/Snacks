@@ -20,9 +20,9 @@ function onSelect(e, foo) {
 
   <div>
     <Menu>
-      <MenuItem label="Share via Email" value="email" leftIcon="emailFilled" labelStyles={{color: 'green'}}/>
-      <MenuItem label="Share via Facebook" value="facebook" leftIcon={<Icon name="facebookFilled" style={{color: '#3c5a99', fontSize: '22px'}} />} />
-      <MenuItem label="Share via Twitter" value="twitter" leftIcon="twitterFilled" leftIconStyles={{color: '#1da1f2'}}/>
+      <MenuItem label="Share via Email" value="email" leftIcon="emailFilled" labelStyles={{fill: 'green'}}/>
+      <MenuItem label="Share via Facebook" value="facebook" leftIcon={<Icon name="facebook" style={{fill: '#3c5a99', fontSize: '22px'}} />} />
+      <MenuItem label="Share via Twitter" value="twitter" leftIcon="twitter" leftIconStyles={{fill: '#1da1f2'}}/>
     </Menu>
   </div>
 </div>

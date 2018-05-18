@@ -13,8 +13,8 @@ it('renders DropdownMenu with icons and trigger correctly', () => {
       <div>
         <DropdownMenu triggerElement={<Button> Share </Button>}>
           <MenuItem label="Share via Email" value="email" leftIcon="emailFilled" />
-          <MenuItem label="Share via Facebook" value="facebook" leftIcon="facebookFilled" leftIconStyles={{color: '#3c5a99'}} />
-          <MenuItem label="Share via Twitter" value="twitter" leftIcon="twitterFilled" leftIconStyles={{color: '#1da1f2'}}/>
+          <MenuItem label="Share via Facebook" value="facebook" leftIcon="facebook" leftIconStyles={{color: '#3c5a99'}} />
+          <MenuItem label="Share via Twitter" value="twitter" leftIcon="twitter" leftIconStyles={{color: '#1da1f2'}}/>
         </DropdownMenu>
       </div>
     </StyleRoot>
@@ -35,8 +35,8 @@ it('should call callbacks correctly', () => {
       triggerElement={<Button> Share </Button>}
     >
       <MenuItem label="Share via Email" value="email" leftIcon="emailFilled" />
-      <MenuItem label="Share via Facebook" value="facebook" leftIcon="facebookFilled" leftIconStyles={{color: '#3c5a99'}} />
-      <MenuItem label="Share via Twitter" value="twitter" leftIcon="twitterFilled" leftIconStyles={{color: '#1da1f2'}}/>
+      <MenuItem label="Share via Facebook" value="facebook" leftIcon="facebook" leftIconStyles={{color: '#3c5a99'}} />
+      <MenuItem label="Share via Twitter" value="twitter" leftIcon="twitter" leftIconStyles={{color: '#1da1f2'}}/>
     </DropdownMenu>
   )
 

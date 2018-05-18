@@ -612,28 +612,9 @@ exports[`Button renders icons correctly 1`] = `
     tabIndex={undefined}
     type="button"
   >
-    <i
+    <test-file-stub
       aria-hidden={true}
-      data-radium={true}
-      onClick={undefined}
-      style={
-        Object {
-          "fontFamily": "ic-icons",
-          "fontSize": "16px",
-          "fontSmoothing": "antialiased",
-          "fontStyle": "normal",
-          "fontVariant": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "1",
-          "osxFontSmoothing": "grayscale",
-          "position": "relative",
-          "speak": "none",
-          "textTransform": "none",
-        }
-      }
-    >
-      
-    </i>
+    />
     <span
       data-radium={true}
       style={
@@ -703,28 +684,9 @@ exports[`Button renders icons correctly 2`] = `
         }
       }
     />
-    <i
+    <test-file-stub
       aria-hidden={true}
-      data-radium={true}
-      onClick={undefined}
-      style={
-        Object {
-          "fontFamily": "ic-icons",
-          "fontSize": "16px",
-          "fontSmoothing": "antialiased",
-          "fontStyle": "normal",
-          "fontVariant": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "1",
-          "osxFontSmoothing": "grayscale",
-          "position": "relative",
-          "speak": "none",
-          "textTransform": "none",
-        }
-      }
-    >
-      
-    </i>
+    />
   </button>
   <style
     dangerouslySetInnerHTML={
@@ -776,28 +738,9 @@ exports[`Button renders icons correctly 3`] = `
     tabIndex={undefined}
     type="button"
   >
-    <i
+    <test-file-stub
       aria-hidden={true}
-      data-radium={true}
-      onClick={undefined}
-      style={
-        Object {
-          "fontFamily": "ic-icons",
-          "fontSize": "16px",
-          "fontSmoothing": "antialiased",
-          "fontStyle": "normal",
-          "fontVariant": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "1",
-          "osxFontSmoothing": "grayscale",
-          "position": "relative",
-          "speak": "none",
-          "textTransform": "none",
-        }
-      }
-    >
-      
-    </i>
+    />
     <span
       data-radium={true}
       style={
@@ -867,28 +810,9 @@ exports[`Button renders icons correctly 4`] = `
         }
       }
     />
-    <i
+    <test-file-stub
       aria-hidden={true}
-      data-radium={true}
-      onClick={undefined}
-      style={
-        Object {
-          "fontFamily": "ic-icons",
-          "fontSize": "16px",
-          "fontSmoothing": "antialiased",
-          "fontStyle": "normal",
-          "fontVariant": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "1",
-          "osxFontSmoothing": "grayscale",
-          "position": "relative",
-          "speak": "none",
-          "textTransform": "none",
-        }
-      }
-    >
-      
-    </i>
+    />
   </button>
   <style
     dangerouslySetInnerHTML={

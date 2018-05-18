@@ -140,31 +140,23 @@ exports[`renders Select correctly 1`] = `
                     }
                   }
                 >
-                  <i
+                  <test-file-stub
                     aria-hidden={true}
-                    data-radium={true}
-                    onClick={undefined}
                     style={
-                      Object {
-                        "color": "#43B02A",
-                        "fontFamily": "ic-icons",
-                        "fontSize": "16px",
-                        "fontSmoothing": "antialiased",
-                        "fontStyle": "normal",
-                        "fontVariant": "normal",
-                        "fontWeight": "normal",
-                        "lineHeight": "1",
-                        "osxFontSmoothing": "grayscale",
-                        "position": "relative",
-                        "speak": "none",
-                        "textTransform": "none",
-                        "transition": "transform 100ms",
-                        "userSelect": "none",
-                      }
+                      Array [
+                        Object {
+                          "transition": "transform 100ms",
+                          "userSelect": "none",
+                        },
+                        Object {
+                          "color": "#43B02A",
+                        },
+                        false,
+                        false,
+                        false,
+                      ]
                     }
-                  >
-                    
-                  </i>
+                  />
                 </div>
               </div>
             </div>
@@ -483,31 +475,25 @@ exports[`renders Select w/ server error correctly 1`] = `
                     }
                   }
                 >
-                  <i
+                  <test-file-stub
                     aria-hidden={true}
-                    data-radium={true}
-                    onClick={undefined}
                     style={
-                      Object {
-                        "color": "#757575",
-                        "fontFamily": "ic-icons",
-                        "fontSize": "16px",
-                        "fontSmoothing": "antialiased",
-                        "fontStyle": "normal",
-                        "fontVariant": "normal",
-                        "fontWeight": "normal",
-                        "lineHeight": "1",
-                        "osxFontSmoothing": "grayscale",
-                        "position": "relative",
-                        "speak": "none",
-                        "textTransform": "none",
-                        "transition": "transform 100ms",
-                        "userSelect": "none",
-                      }
+                      Array [
+                        Object {
+                          "transition": "transform 100ms",
+                          "userSelect": "none",
+                        },
+                        Object {
+                          "color": "#43B02A",
+                        },
+                        false,
+                        Object {
+                          "color": "#757575",
+                        },
+                        false,
+                      ]
                     }
-                  >
-                    
-                  </i>
+                  />
                 </div>
               </div>
             </div>
@@ -828,31 +814,25 @@ exports[`renders disabled Select correctly 1`] = `
                     }
                   }
                 >
-                  <i
+                  <test-file-stub
                     aria-hidden={true}
-                    data-radium={true}
-                    onClick={undefined}
                     style={
-                      Object {
-                        "color": "#757575",
-                        "fontFamily": "ic-icons",
-                        "fontSize": "16px",
-                        "fontSmoothing": "antialiased",
-                        "fontStyle": "normal",
-                        "fontVariant": "normal",
-                        "fontWeight": "normal",
-                        "lineHeight": "1",
-                        "osxFontSmoothing": "grayscale",
-                        "position": "relative",
-                        "speak": "none",
-                        "textTransform": "none",
-                        "transition": "transform 100ms",
-                        "userSelect": "none",
-                      }
+                      Array [
+                        Object {
+                          "transition": "transform 100ms",
+                          "userSelect": "none",
+                        },
+                        Object {
+                          "color": "#43B02A",
+                        },
+                        false,
+                        Object {
+                          "color": "#757575",
+                        },
+                        false,
+                      ]
                     }
-                  >
-                    
-                  </i>
+                  />
                 </div>
               </div>
             </div>
@@ -1171,31 +1151,25 @@ exports[`renders invalid Select correctly 1`] = `
                     }
                   }
                 >
-                  <i
+                  <test-file-stub
                     aria-hidden={true}
-                    data-radium={true}
-                    onClick={undefined}
                     style={
-                      Object {
-                        "color": "#757575",
-                        "fontFamily": "ic-icons",
-                        "fontSize": "16px",
-                        "fontSmoothing": "antialiased",
-                        "fontStyle": "normal",
-                        "fontVariant": "normal",
-                        "fontWeight": "normal",
-                        "lineHeight": "1",
-                        "osxFontSmoothing": "grayscale",
-                        "position": "relative",
-                        "speak": "none",
-                        "textTransform": "none",
-                        "transition": "transform 100ms",
-                        "userSelect": "none",
-                      }
+                      Array [
+                        Object {
+                          "transition": "transform 100ms",
+                          "userSelect": "none",
+                        },
+                        Object {
+                          "color": "#43B02A",
+                        },
+                        false,
+                        Object {
+                          "color": "#757575",
+                        },
+                        false,
+                      ]
                     }
-                  >
-                    
-                  </i>
+                  />
                 </div>
               </div>
             </div>
