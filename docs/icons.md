@@ -176,7 +176,6 @@ const rowStyles = {
 }
 const iconStyles = {
   marginRight: 5,
-  fill: colors.GREEN_500,
 };
   <div style={containerStyles}>
     {
@@ -189,10 +188,18 @@ const iconStyles = {
                 !name.endsWith('Filled') &&
                 <li style={iconWrapStyles}>
                   <div style={rowStyles}>
-                    <Icon name={name} style={iconStyles} />
+                    <Icon
+                      name={name}
+                      color={colors.GREEN_500}
+                      style={iconStyles}
+                    />
                     {
                       icons.includes(`${name}Filled`) &&
-                      <Icon name={`${name}Filled`} style={iconStyles} />
+                      <Icon
+                        name={`${name}Filled`}
+                        color={colors.GREEN_500}
+                        style={iconStyles}
+                      />
                     }
                   </div>
                   <div style={rowStyles}>{name}</div>
