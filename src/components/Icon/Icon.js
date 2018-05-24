@@ -2,6 +2,7 @@ import React     from 'react'
 import Radium    from 'radium'
 import hexValues from './hexValues'
 import PropTypes from 'prop-types'
+import deprecationWarning from 'deprecationWarning'
 
 const baseStyles = {
   fontSize: '16px',
@@ -24,6 +25,7 @@ const getIcon = ({ name, code }) => {
 }
 
 const Icon = props => {
+  deprecationWarning(props)
   const { style, onClick } = props
   const icon = getIcon(props)
   return (
