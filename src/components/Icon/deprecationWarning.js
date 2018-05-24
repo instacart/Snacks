@@ -1,4 +1,4 @@
-import svgIcons from '../SVGIcon/icons'
+import * as svgIcons from '../SVGIcon/icons'
 import hexValues from './hexValues'
 
 const hexLookup = Object.keys(hexValues).reduce((lookup, value) => (
