@@ -2,7 +2,7 @@ import React     from 'react'
 import Radium    from 'radium'
 import hexValues from './hexValues'
 import PropTypes from 'prop-types'
-import deprecationWarning from 'deprecationWarning'
+import deprecationWarning from './deprecationWarning'
 
 const baseStyles = {
   fontSize: '16px',

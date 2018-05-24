@@ -3,12 +3,14 @@
 exports[`renders accessibility icon correctly 1`] = `
 <test-file-stub
   aria-hidden={true}
+  fill={undefined}
 />
 `;
 
 exports[`renders accessibility icon with styles 1`] = `
 <test-file-stub
   aria-hidden={true}
+  fill={undefined}
   style={
     Object {
       "fill": "#fff",

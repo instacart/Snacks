@@ -48,14 +48,28 @@ exports[`renders NavigationPills correctly 1`] = `
           }
         }
       >
-        <test-file-stub
+        <i
           aria-hidden={true}
+          data-radium={true}
+          onClick={undefined}
           style={
             Object {
+              "fontFamily": "ic-icons",
               "fontSize": "20px",
+              "fontSmoothing": "antialiased",
+              "fontStyle": "normal",
+              "fontVariant": "normal",
+              "fontWeight": "normal",
+              "lineHeight": "1",
+              "osxFontSmoothing": "grayscale",
+              "position": "relative",
+              "speak": "none",
+              "textTransform": "none",
             }
           }
-        />
+        >
+          
+        </i>
       </button>
       <div
         className="rmq-16b35912"
@@ -310,14 +324,28 @@ exports[`renders NavigationPills correctly 1`] = `
           }
         }
       >
-        <test-file-stub
+        <i
           aria-hidden={true}
+          data-radium={true}
+          onClick={undefined}
           style={
             Object {
+              "fontFamily": "ic-icons",
               "fontSize": "20px",
+              "fontSmoothing": "antialiased",
+              "fontStyle": "normal",
+              "fontVariant": "normal",
+              "fontWeight": "normal",
+              "lineHeight": "1",
+              "osxFontSmoothing": "grayscale",
+              "position": "relative",
+              "speak": "none",
+              "textTransform": "none",
             }
           }
-        />
+        >
+          
+        </i>
       </button>
     </div>
   </div>
@@ -385,14 +413,28 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
           }
         }
       >
-        <test-file-stub
+        <i
           aria-hidden={true}
+          data-radium={true}
+          onClick={undefined}
           style={
             Object {
+              "fontFamily": "ic-icons",
               "fontSize": "20px",
+              "fontSmoothing": "antialiased",
+              "fontStyle": "normal",
+              "fontVariant": "normal",
+              "fontWeight": "normal",
+              "lineHeight": "1",
+              "osxFontSmoothing": "grayscale",
+              "position": "relative",
+              "speak": "none",
+              "textTransform": "none",
             }
           }
-        />
+        >
+          
+        </i>
       </button>
       <div
         className="rmq-16b35912"
@@ -637,14 +679,28 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
           }
         }
       >
-        <test-file-stub
+        <i
           aria-hidden={true}
+          data-radium={true}
+          onClick={undefined}
           style={
             Object {
+              "fontFamily": "ic-icons",
               "fontSize": "20px",
+              "fontSmoothing": "antialiased",
+              "fontStyle": "normal",
+              "fontVariant": "normal",
+              "fontWeight": "normal",
+              "lineHeight": "1",
+              "osxFontSmoothing": "grayscale",
+              "position": "relative",
+              "speak": "none",
+              "textTransform": "none",
             }
           }
-        />
+        >
+          
+        </i>
       </button>
     </div>
   </div>
@@ -712,14 +768,28 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
           }
         }
       >
-        <test-file-stub
+        <i
           aria-hidden={true}
+          data-radium={true}
+          onClick={undefined}
           style={
             Object {
+              "fontFamily": "ic-icons",
               "fontSize": "20px",
+              "fontSmoothing": "antialiased",
+              "fontStyle": "normal",
+              "fontVariant": "normal",
+              "fontWeight": "normal",
+              "lineHeight": "1",
+              "osxFontSmoothing": "grayscale",
+              "position": "relative",
+              "speak": "none",
+              "textTransform": "none",
             }
           }
-        />
+        >
+          
+        </i>
       </button>
       <div
         className="rmq-16b35912"
@@ -986,14 +1056,28 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
           }
         }
       >
-        <test-file-stub
+        <i
           aria-hidden={true}
+          data-radium={true}
+          onClick={undefined}
           style={
             Object {
+              "fontFamily": "ic-icons",
               "fontSize": "20px",
+              "fontSmoothing": "antialiased",
+              "fontStyle": "normal",
+              "fontVariant": "normal",
+              "fontWeight": "normal",
+              "lineHeight": "1",
+              "osxFontSmoothing": "grayscale",
+              "position": "relative",
+              "speak": "none",
+              "textTransform": "none",
             }
           }
-        />
+        >
+          
+        </i>
       </button>
     </div>
   </div>
@@ -1061,14 +1145,28 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
           }
         }
       >
-        <test-file-stub
+        <i
           aria-hidden={true}
+          data-radium={true}
+          onClick={undefined}
           style={
             Object {
+              "fontFamily": "ic-icons",
               "fontSize": "20px",
+              "fontSmoothing": "antialiased",
+              "fontStyle": "normal",
+              "fontVariant": "normal",
+              "fontWeight": "normal",
+              "lineHeight": "1",
+              "osxFontSmoothing": "grayscale",
+              "position": "relative",
+              "speak": "none",
+              "textTransform": "none",
             }
           }
-        />
+        >
+          
+        </i>
       </button>
       <div
         className="rmq-16b35912"
@@ -1325,14 +1423,28 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
           }
         }
       >
-        <test-file-stub
+        <i
           aria-hidden={true}
+          data-radium={true}
+          onClick={undefined}
           style={
             Object {
+              "fontFamily": "ic-icons",
               "fontSize": "20px",
+              "fontSmoothing": "antialiased",
+              "fontStyle": "normal",
+              "fontVariant": "normal",
+              "fontWeight": "normal",
+              "lineHeight": "1",
+              "osxFontSmoothing": "grayscale",
+              "position": "relative",
+              "speak": "none",
+              "textTransform": "none",
             }
           }
-        />
+        >
+          
+        </i>
       </button>
     </div>
   </div>

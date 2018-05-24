@@ -34,9 +34,28 @@ exports[`renders CircleButton with Icon correctly 1`] = `
         }
       }
     >
-      <test-file-stub
+      <i
         aria-hidden={true}
-      />
+        data-radium={true}
+        onClick={undefined}
+        style={
+          Object {
+            "fontFamily": "ic-icons",
+            "fontSize": "16px",
+            "fontSmoothing": "antialiased",
+            "fontStyle": "normal",
+            "fontVariant": "normal",
+            "fontWeight": "normal",
+            "lineHeight": "1",
+            "osxFontSmoothing": "grayscale",
+            "position": "relative",
+            "speak": "none",
+            "textTransform": "none",
+          }
+        }
+      >
+        
+      </i>
     </button>
   </div>
   <style
