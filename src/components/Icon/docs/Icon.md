@@ -1,12 +1,13 @@
 Icon example:
 ```jsx
 <div>
-  <Icon name='cart' />
+  <Icon name={'cart'} />
+  <Icon code={'e08e'} />
   <Icon
-    name='likeFilled'
+    name={'likeFilled'}
     style={{
       backgroundColor: '#43B02A',
-      fill: '#fff',
+      color: '#fff',
       borderRadius: '50%',
       padding: '5px'
     }}

@@ -32,6 +32,10 @@ module.exports = {
       content: 'docs/icons.md'
     },
     {
+      name: 'SVGIcons',
+      content: 'docs/svgIcons.md'
+    },
+    {
       name: 'Themes',
       content: 'docs/themes.md',
       sections: [
@@ -65,6 +69,10 @@ module.exports = {
         {
           name: 'Icon',
           components: 'src/components/Icon/Icon.js'
+        },
+        {
+          name: 'SVGIcon',
+          components: 'src/components/SVGIcon/SVGIcon.js'
         },
         {
           name: 'Link',
