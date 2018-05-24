@@ -7,6 +7,7 @@ import Column from './components/Grid/Column'
 import GlobalTheme from './styles/GlobalTheme'
 import Grid from './components/Grid/Grid'
 import Icon from './components/Icon/Icon'
+import SVGIcon from './components/SVGIcon/Icon'
 import Link from './components/Link/Link'
 import LoadingBox from './components/Loading/LoadingBox'
 import NavigationPills from './components/NavigationPills/NavigationPills'
@@ -79,6 +80,7 @@ export {
   Radio,
   Checkbox,
   Icon,
+  SVGIcon,
   Link,
   LoadingBox,
   NavigationPills,
