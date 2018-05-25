@@ -50,18 +50,22 @@ const iconStyles = {
                 !name.endsWith('Filled') &&
                 <li style={iconWrapStyles} key={name}>
                   <div style={rowStyles}>
-                    <SVGIcon
-                      name={name}
-                      color={colors.GREEN_500}
-                      style={iconStyles}
-                    />
-                    {
-                      icons.includes(`${name}Filled`) &&
+                    <span title={name}>
                       <SVGIcon
-                        name={`${name}Filled`}
+                        name={name}
                         color={colors.GREEN_500}
                         style={iconStyles}
                       />
+                    </span>
+                    {
+                      icons.includes(`${name}Filled`) &&
+                      <span title={`${name}Filled`}>
+                        <SVGIcon
+                          name={`${name}Filled`}
+                          color={colors.GREEN_500}
+                          style={iconStyles}
+                        />
+                      </span>
                     }
                   </div>
                   <div style={rowStyles}>{name}</div>

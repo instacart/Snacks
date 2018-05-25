@@ -15,3 +15,10 @@ it('renders accessibility icon with styles', () => {
   ).toJSON();
   expect(tree).toMatchSnapshot()
 })
+
+it('renders accessibility icon with size', () => {
+  const tree = renderer.create(
+    <SVGIcon name='accessibility' size='small' />
+  ).toJSON();
+  expect(tree).toMatchSnapshot()
+})

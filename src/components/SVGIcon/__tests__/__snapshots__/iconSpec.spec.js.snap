@@ -4,6 +4,17 @@ exports[`renders accessibility icon correctly 1`] = `
 <test-file-stub
   aria-hidden={true}
   fill={undefined}
+  height="24px"
+  width="24px"
+/>
+`;
+
+exports[`renders accessibility icon with size 1`] = `
+<test-file-stub
+  aria-hidden={true}
+  fill={undefined}
+  height="18px"
+  width="18px"
 />
 `;
 
@@ -11,10 +22,12 @@ exports[`renders accessibility icon with styles 1`] = `
 <test-file-stub
   aria-hidden={true}
   fill={undefined}
+  height="24px"
   style={
     Object {
       "fill": "#fff",
     }
   }
+  width="24px"
 />
 `;

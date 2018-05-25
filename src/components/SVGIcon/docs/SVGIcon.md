@@ -1,12 +1,14 @@
 SVGIcon example:
 ```jsx
 <div>
+  <SVGIcon name='cart' size='large' />
   <SVGIcon name='cart' />
+  <SVGIcon name='cart' size='small' />
   <SVGIcon
     name='likeFilled'
+    color='#fff'
     style={{
       backgroundColor: '#43B02A',
-      fill: '#fff',
       borderRadius: '50%',
       padding: '5px'
     }}
