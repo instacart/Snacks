@@ -12,7 +12,7 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build && node scripts/moveBuildAssets.js",
     "test:watch": "npm test -- --watch --bail",
-    "test": "jest --coverage --silent && npm run test:lint"
+    "test": "jest --runInBand --coverage --silent && npm run test:lint"
   },
   "repository": {
     "type": "git",
