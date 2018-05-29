@@ -6,7 +6,8 @@ module.exports = {
   module: {
    loaders: [
      { test: /\.js$/, loaders: ['babel-loader'], exclude: /node_modules/ },
-     { test: /\.svg$/, loader: 'svg-sprite-loader', exclude: /node_modules/, options: { extract: true } },
+     { test: /assets\/\w+\.svg$/, loader: 'svg-sprite-loader', exclude: /node_modules/, options: { extract: true } },
+     { test: /SVGIcon\/icons\/\w+\.svg$/, loader: 'svgr/webpack', exclude: /node_modules/, options: { extract: true } },
    ]
   },
   entry: {

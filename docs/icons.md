@@ -1,5 +1,9 @@
 To use an icon, see the `Icon` component in the Components section.
 
+NOTE: This component is deprecated. Please use `SVGIcon` component instead. To
+upgrade please follow the instructions
+[here](https://github.com/instacart/Snacks/pull/155).
+
 Available Icons:
 ```jsx
 const hexValues = require('../src/components/Icon/hexValues');

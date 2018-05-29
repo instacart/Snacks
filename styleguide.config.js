@@ -9,7 +9,6 @@ module.exports = {
   ignore: [
     '**/*/*Styles.js',
     '**/*.spec.js',
-    '**/*/*hexValues.js'
   ],
   sections: [
     {
@@ -31,6 +30,10 @@ module.exports = {
     {
       name: 'Icons',
       content: 'docs/icons.md'
+    },
+    {
+      name: 'SVGIcons',
+      content: 'docs/svgIcons.md'
     },
     {
       name: 'Themes',
@@ -66,6 +69,10 @@ module.exports = {
         {
           name: 'Icon',
           components: 'src/components/Icon/Icon.js'
+        },
+        {
+          name: 'SVGIcon',
+          components: 'src/components/SVGIcon/SVGIcon.js'
         },
         {
           name: 'Link',
