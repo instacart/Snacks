@@ -5,7 +5,7 @@ import PropTypes                              from 'prop-types'
 const styles = {
   root: {
     position: 'absolute',
-    zIndex: 9999999,
+    zIndex: 99999,
   },
 }
 
@@ -91,7 +91,7 @@ class TooltipPosition extends PureComponent {
 
       if (placement === 'top') {
         overlayRect.top = targetRect.top - overlayRect.height - (SPACING * 2)
-        arrowPosition.top = overlayRect.height - ARROW_SPACING - ARROW_BORDER_SPACING
+        arrowPosition.top = Math.ceil(overlayRect.height) - ARROW_SPACING - (ARROW_BORDER_SPACING /2)
       } else {
         overlayRect.top = targetRect.top + targetRect.height + (SPACING * 2)
         arrowPosition.top = -ARROW_SPACING
@@ -109,7 +109,7 @@ class TooltipPosition extends PureComponent {
         overlayRect.left = overlayRect.left - overRightAmount - Math.min(SPACING, targetDistanceFromRight)
       }
 
-      arrowPosition.left = targetRect.left - overlayRect.left + ARROW_BORDER_SPACING
+      arrowPosition.left = targetRect.left - overlayRect.left + targetCenterX - ARROW_SPACING - (ARROW_BORDER_SPACING / 2)
     } else {
       const targetCenterY = targetRect.height / 2
       const overlayCenterY = overlayRect.height / 2

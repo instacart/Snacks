@@ -17,7 +17,6 @@ class Tooltip extends PureComponent {
       'bottom',
     ]),
     target: PropTypes.node.isRequired,
-    innerTooltipStyle: PropTypes.shape({}),
     snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark'])
   }
 
@@ -58,7 +57,6 @@ class Tooltip extends PureComponent {
   render() {
     const {
       children,
-      innerTooltipStyle,
       placement,
       size,
       snacksStyle
@@ -76,7 +74,6 @@ class Tooltip extends PureComponent {
           <InnerToolTip
             size={size}
             snacksStyle={snacksStyle}
-            style={innerTooltipStyle}
           >
             {children}
           </InnerToolTip>

@@ -1,125 +1,76 @@
-Example:
+Examples:
+
 ```js
+
+initialState = {
+  size: 'medium',
+  placement: 'bottom',
+  style: 'primary',
+  trigger: 'button'
+}
+
+const handlePlacementChange = (placement) => {
+  setState({placement: placement})
+}
+
+const handleStyleChange = (style) => {
+  setState({style: style})
+}
+
+const handleSizeChange = (size) => {
+  setState({size: size})
+}
+
+const handleTriggerChange = (trigger) => {
+  setState({trigger: trigger})
+}
+
 <div>
-  <Tooltip
-    target={<Icon name='info' />}
-    placement='right'
-    size='small'
-    snacksStyle="secondary"
-  >
-    Right Secondary small
-  </Tooltip>
+  <div style={{display: 'flex', justifyContent: 'space-between'}}>
+    <div>
+      <h3>Size</h3>
+      <RadioGroup name="size" onChange={handleSizeChange}>
+        <Radio id="size1" value="small">Small</Radio>
+        <Radio id="size2" value="medium">Medium</Radio>
+        <Radio id="size3" value="large">Large</Radio>
+      </RadioGroup>
+    </div>
+    <div>
+      <h3>Style</h3>
+      <RadioGroup name="style" onChange={handleStyleChange}>
+        <Radio id="style1" value="primary">Primary</Radio>
+        <Radio id="style2" value="secondary">Secondary</Radio>
+        <Radio id="style3" value="dark">Dark</Radio>
+      </RadioGroup>
+    </div>
+    <div>
+      <h3>Placement</h3>
+      <RadioGroup name="placement" onChange={handlePlacementChange}>
+        <Radio id="placement1" value="left">Left</Radio>
+        <Radio id="placement2" value="right">Right</Radio>
+        <Radio id="placement3" value="top">Top</Radio>
+        <Radio id="placement4" value="bottom">Bottom</Radio>
+      </RadioGroup>
+    </div>
 
-  <Tooltip
-    target={<Icon name='info' />}
-    placement='right'
-    size='medium'
-    snacksStyle="dark"
-  >
-    Right dark medium
-  </Tooltip>
+    <div>
+      <h3>Trigger</h3>
+      <RadioGroup name="trigger" onChange={handleTriggerChange}>
+        <Radio id="trigger1" value="icon">Icon</Radio>
+        <Radio id="trigger2" value="button">Button</Radio>
+      </RadioGroup>
+    </div>
+  </div>
 
-  <Tooltip
-    target={<Icon name='info' />}
-    placement='right'
-    size='large'
-    snacksStyle="primary"
-  >
-    Right primary Large
-  </Tooltip>
-
-  <Tooltip
-    target={<Icon name='info' />}
-    placement='bottom'
-    size='medium'
-    snacksStyle="secondary"
-  >
-    Bottom Secondary Medium
-  </Tooltip>
-
-  <Tooltip
-    target={<Icon name='info' />}
-    placement='bottom'
-    size='large'
-    snacksStyle="secondary"
-  >
-    Bottom Secondary LARGE
-  </Tooltip>
-
-  <Tooltip
-    target={<Icon name='info' />}
-    placement='bottom'
-    size='small'
-    snacksStyle="primary"
-  >
-    Bottom Primary small
-  </Tooltip>
-
-  <Tooltip
-    target={<Icon name='info' />}
-    placement='bottom'
-    size='medium'
-    snacksStyle="primary"
-  >
-    Bottom Primary Medium
-  </Tooltip>
-
-  <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+  <div style={{padding: '30px', textAlign: 'center'}}>
     <Tooltip
-      target={<Icon name='info' />}
-      placement='left'
-      size='medium'
-      snacksStyle="primary"
+      target={state.trigger === 'icon' ? <Icon name='info' /> : <Button> Toggle </Button>}
+      placement={state.placement}
+      size={state.size}
+      snacksStyle={state.style}
     >
-      PRIMARY LEFT MED
-    </Tooltip>
-
-    <Tooltip
-      target={<Icon name='info' />}
-      placement='left'
-      size='small'
-      snacksStyle="secondary"
-    >
-
-      Left secondary sssssmall
-    </Tooltip>
-    <Tooltip
-      target={<Icon name='info' />}
-      placement='left'
-      size='medium'
-      snacksStyle="secondary"
-    >
-      Left secondary medium
-    </Tooltip>
-
-    <Tooltip
-      target={<Icon name='info' />}
-      placement='left'
-      size='large'
-      snacksStyle="secondary"
-    >
-      Left secondary large
-    </Tooltip>
-
-    <Tooltip
-      target={<Icon name='info' />}
-      placement='top'
-      size='medium'
-      snacksStyle="primary"
-    >
-      Top medium primary
-    </Tooltip>
-
-    <Tooltip
-      target={<Icon name='info' />}
-      placement='top'
-      size='large'
-      snacksStyle="dark"
-    >
-      Top dark large
+      {state.size} {state.style} {state.placement}
     </Tooltip>
   </div>
 </div>
-
 ```
-
