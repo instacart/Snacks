@@ -1,4 +1,4 @@
-import React, { PureComponent }      from 'react'
+import { PureComponent }             from 'react'
 import { createPortal, findDOMNode } from 'react-dom'
 import PropTypes                     from 'prop-types'
 
@@ -15,14 +15,14 @@ class Portal extends PureComponent {
     this.setContainer(this.props.container)
   }
 
-  componentWillUnmount() {
-    this.portalContainer = null
-  }
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.container !== this.props.container) {
       this.setContainer(nextProps.container)
     }
+  }
+
+  componentWillUnmount() {
+    this.portalContainer = null
   }
 
   getContainer(container) {

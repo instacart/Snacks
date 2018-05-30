@@ -1,9 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes                from 'prop-types'
-import Slide                    from '../../components/Transitions/Slide'
 import Fade                     from '../../components/Transitions/Fade'
 import colors                   from '../../styles/colors'
-import calculateOffset          from './calculateOffset'
 import TooltipArrow             from './TooltipArrow'
 
 const styles = {
@@ -60,18 +58,17 @@ const RESOLVED_SIZE = {
 class InnerToolTip extends PureComponent {
   static propTypes = {
     style: PropTypes.shape({}),
-    placement: PropTypes.oneOf([
-      'top',
-      'left',
-      'right',
-      'bottom',
-    ]).isRequired,
-    snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark'])
+    snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark']),
+    size: PropTypes.oneOf([
+      'small',
+      'medium',
+      'large',
+    ]),
+    arrowPosition: PropTypes.shape({})
   }
 
   static defaultProps = {
     size: 'medium',
-    placement: 'bottom',
     snacksStyle: 'dark'
   }
 
@@ -93,8 +90,6 @@ class InnerToolTip extends PureComponent {
   }
 
   render() {
-    const { placement } = this.props
-
     return (
       <Fade>
         {this.renderArrow()}

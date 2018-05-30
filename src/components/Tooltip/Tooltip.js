@@ -21,14 +21,14 @@ class Tooltip extends PureComponent {
     snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark'])
   }
 
-  state = {
-    show: false
-  }
-
   static defaultProps = {
     snacksStyle: 'dark',
     placement: 'bottom',
     size: 'small'
+  }
+
+  state = {
+    show: false
   }
 
   handleToggle = () => {
@@ -47,9 +47,6 @@ class Tooltip extends PureComponent {
       return React.cloneElement(target, {
         ref: (node) => {
           this.trigger = node
-          if (typeof ref === 'function') {
-            ref(node)
-          }
         },
         onClick: this.handleToggle.bind(this),
         'aria-haspopup': true,
@@ -61,7 +58,6 @@ class Tooltip extends PureComponent {
   render() {
     const {
       children,
-      style,
       innerTooltipStyle,
       placement,
       size,
@@ -69,7 +65,7 @@ class Tooltip extends PureComponent {
     } = this.props
 
     return (
-      <div style={style} >
+      <div>
         {this.renderTriggerElement()}
         <TooltipOverlay
           placement={placement}

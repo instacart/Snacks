@@ -39,26 +39,26 @@ const RESOLVE_BORDER_COLOR = {
 const resolveStylePlacementBorders = (style, placement) => {
   const color = RESOLVE_BORDER_COLOR[style]
   switch (placement) {
-  case 'top':
-    return {
-      borderRight: `1px solid ${color}`,
-      borderBottom: `1px solid ${color}`
-    }
-  case 'bottom':
-    return {
-      borderLeft: `1px solid ${color}`,
-      borderTop: `1px solid ${color}`
-    }
-  case 'right':
-    return {
-      borderLeft: `1px solid ${color}`,
-      borderTop: `1px solid ${color}`
-    }
-  case 'left':
-    return {
-      borderRight: `1px solid ${color}`,
-      borderBottom: `1px solid ${color}`
-    }
+    case 'top':
+      return {
+        borderRight: `1px solid ${color}`,
+        borderBottom: `1px solid ${color}`
+      }
+    case 'bottom':
+      return {
+        borderLeft: `1px solid ${color}`,
+        borderTop: `1px solid ${color}`
+      }
+    case 'right':
+      return {
+        borderLeft: `1px solid ${color}`,
+        borderTop: `1px solid ${color}`
+      }
+    case 'left':
+      return {
+        borderRight: `1px solid ${color}`,
+        borderBottom: `1px solid ${color}`
+      }
   }
 }
 

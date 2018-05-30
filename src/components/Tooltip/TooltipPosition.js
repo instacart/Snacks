@@ -1,7 +1,6 @@
 import React, { PureComponent, cloneElement } from 'react'
 import { findDOMNode }                        from 'react-dom'
 import PropTypes                              from 'prop-types'
-import TooltipRootClose                       from './TooltipRootClose'
 
 const styles = {
   root: {
@@ -71,14 +70,14 @@ class TooltipPosition extends PureComponent {
     const targetRect    = this.getRect(target)
     const documentWidth = document.documentElement.scrollWidth
 
-    let overlayRect = {
+    const overlayRect = {
       top: targetRect.top,
       left: targetRect.left,
       width: overlay.offsetWidth,
       height: overlay.offsetHeight
     }
 
-    let arrowPosition = {
+    const arrowPosition = {
       top: 0,
       left: 0,
       placement: placement
@@ -99,7 +98,8 @@ class TooltipPosition extends PureComponent {
       }
 
       if (overlayRect.left < 0) {
-        // if over left edge of screen shift right to 8px of edge or inline with target (if target is less than 8px from edge)
+        // if over left edge of screen shift right to 8px of edge
+        // or inline with target (if target is less than 8px from edge)
         overlayRect.left = Math.min(SPACING, targetRect.left)
       } else if (overlayDistanceFromRightEdge > documentWidth) {
         // If over right edge of screen shift left to 8px of edge or inline with target

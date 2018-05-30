@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react'
-import { findDOMNode }          from 'react-dom'
-import PropTypes                from 'prop-types'
+import { PureComponent } from 'react'
+import { findDOMNode }   from 'react-dom'
+import PropTypes         from 'prop-types'
 
 class TooltipRootClose extends PureComponent {
   static propTypes = {
@@ -69,6 +69,7 @@ class TooltipRootClose extends PureComponent {
   }
 
   handleResize = () => {
+    const { onRootClose } = this.props
     onRootClose && onRootClose()
   }
 

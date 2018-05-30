@@ -23,8 +23,7 @@ class TooltipOverlay extends PureComponent {
   }
 
   static defaultProps = {
-    rootCloseEnabled: true,
-    onRootClose: () => {}
+    rootCloseEnabled: true
   }
 
   render() {
