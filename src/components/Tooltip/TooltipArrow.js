@@ -1,84 +1,88 @@
 import React, { PureComponent } from 'react'
-import baseProps from './baseProps'
-import colors from '../../styles/colors'
+import PropTypes                from 'prop-types'
+import colors                   from '../../styles/colors'
 
-const STYLES = {
+const styles = {
   arrow: {
-    alignSelf: 'flex-end',
-    top: 0,
-    marginBottom: -1,
-    borderWidth: 8,
-    width: 0,
-    height: 0,
-    borderColor: 'transparent',
-    borderStyle: 'solid',
-    marginRight: 24
+    position: 'absolute',
+    display: 'block',
+    height: '12px',
+    width: '12px'
   }
 }
 
-const RESOLVED_MARGIN_CENTER = {
-  small: 68,
-  medium: 118,
-  large: 158
-}
-
-const RESOLVED_MARGIN_RIGHT = {
-  small: 5,
-  medium: 20,
-  large: 50
-}
-
-const RESOLVED_MARGIN_LEFT = {
-  small: 98,
-  medium: 188,
-  large: 218
-}
-
-const RESOLVED_MARGIN = {
-  top: RESOLVED_MARGIN_CENTER,
-  bottom: RESOLVED_MARGIN_CENTER,
-  topLeft: RESOLVED_MARGIN_LEFT,
-  topRight: RESOLVED_MARGIN_RIGHT,
-  bottomLeft: RESOLVED_MARGIN_LEFT,
-  bottomRight: RESOLVED_MARGIN_RIGHT,
-}
-
-const RESOLVED_BORDER = {
-  top: {
-    borderBottomWidth: 0,
-    borderTopColor: 'black'
+const RESOLVED_STYLE = {
+  primary: {
+    backgroundColor: colors.GREEN_500
   },
-  right: {},
-  left: {},
-  bottom: {
-    borderTopWidth: 0,
-    borderBottomColor: 'rgb(0, 0, 0)'
+  secondary: {
+    backgroundColor: '#FFF'
+  },
+  dark: {
+    backgroundColor: colors.GRAY_20
   }
 }
 
+const RESOLVED_PLACEMENT = {
+  top   : {transform: 'rotate(45deg)'},
+  bottom: {transform: 'rotate(45deg)'},
+  right : {transform: 'rotate(-45deg)'},
+  left  : {transform: 'rotate(-45deg)'}
+}
+
+const RESOLVE_BORDER_COLOR = {
+  primary: colors.GREEN_500,
+  secondary: colors.GRAY_74,
+  dark: colors.GRAY_20
+}
+
+const resolveStylePlacementBorders = (style, placement) => {
+  const color = RESOLVE_BORDER_COLOR[style]
+  switch (placement) {
+  case 'top':
+    return {
+      borderRight: `1px solid ${color}`,
+      borderBottom: `1px solid ${color}`
+    }
+  case 'bottom':
+    return {
+      borderLeft: `1px solid ${color}`,
+      borderTop: `1px solid ${color}`
+    }
+  case 'right':
+    return {
+      borderLeft: `1px solid ${color}`,
+      borderTop: `1px solid ${color}`
+    }
+  case 'left':
+    return {
+      borderRight: `1px solid ${color}`,
+      borderBottom: `1px solid ${color}`
+    }
+  }
+}
 
 class TooltipArrow extends PureComponent {
-  static propTypes = baseProps
-
-  get marginSyles() {
-    const { overlayPosition, position, size } = this.props
-    if (['top', 'bottom'].includes(overlayPosition)) {
-      return {
-        marginRight: RESOLVED_MARGIN[position][size]
-      }
-    }
-
-    return {
-
-    }
+  static propTypes = {
+    position: PropTypes.shape({
+      left: PropTypes.number,
+      top: PropTypes.number,
+      placement: PropTypes.string
+    }).isRequired,
+    snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark'])
   }
 
   get calculatedStyles() {
-    const { overlayPosition, size } = this.props
+    const { position, snacksStyle } = this.props
+    const borderStyle = resolveStylePlacementBorders(snacksStyle, position.placement)
+
     return {
-      ...STYLES.arrow,
-      ...this.marginSyles,
-      ...RESOLVED_BORDER[overlayPosition]
+      ...styles.arrow,
+      ...RESOLVED_STYLE[snacksStyle],
+      ...RESOLVED_PLACEMENT[position.placement],
+      ...borderStyle,
+      left: position.left,
+      top: position.top
     }
   }
 

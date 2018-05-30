@@ -1,55 +1,59 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { Overlay } from 'react-overlays'
-import InnerToolTip from './InnerToolTip'
-import baseProps from './baseProps'
-
-const OVERLAY_RESOLVED_POSITION = {
-  topLeft: 'top',
-  top: 'top',
-  topRight: 'top',
-  left: 'left',
-  right: 'right',
-  bottomLeft: 'bottom',
-  bottom: 'bottom',
-  bottomRight: 'bottom',
-}
+import PropTypes                from 'prop-types'
+import InnerToolTip             from './InnerToolTip'
+import TooltipOverlay           from './TooltipOverlay'
 
 class Tooltip extends PureComponent {
   static propTypes = {
-    ...baseProps,
-    target: PropTypes.node,
-    targetContainerStyle: PropTypes.object,
-    innerTooltipStyle: PropTypes.object,
+    size: PropTypes.oneOf([
+      'small',
+      'medium',
+      'large',
+    ]),
+    placement: PropTypes.oneOf([
+      'top',
+      'left',
+      'right',
+      'bottom',
+    ]),
+    target: PropTypes.node.isRequired,
+    innerTooltipStyle: PropTypes.shape({}),
+    snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark'])
   }
 
   state = {
     show: false
   }
 
-  get resolvedOverlayPosition() {
-    const { position } = this.props
-    return OVERLAY_RESOLVED_POSITION[position]
+  static defaultProps = {
+    snacksStyle: 'dark',
+    placement: 'bottom',
+    size: 'small'
   }
 
-  toggle = () => this.setState(({ show }) => ({ show: !show }))
+  handleToggle = () => {
+    this.setState(({ show }) => ({ show: !show }))
+  }
 
-  handleHideToolTip = () => this.setState({ show: false })
+  handleHideToolTip = () => {
+    this.setState({ show: false })
+  }
 
   renderTriggerElement() {
     const { target } = this.props
-    const { open } = this.state
+    const { show } = this.state
+
     if (target) {
       return React.cloneElement(target, {
         ref: (node) => {
-          this.anchor = node
+          this.trigger = node
           if (typeof ref === 'function') {
             ref(node)
           }
         },
-        onClick: this.toggle,
+        onClick: this.handleToggle.bind(this),
         'aria-haspopup': true,
-        'aria-expanded': open,
+        'aria-expanded': show
       })
     }
   }
@@ -59,29 +63,28 @@ class Tooltip extends PureComponent {
       children,
       style,
       innerTooltipStyle,
-      position,
-      size
+      placement,
+      size,
+      snacksStyle
     } = this.props
 
     return (
       <div style={style} >
         {this.renderTriggerElement()}
-        <Overlay
-          rootClose
+        <TooltipOverlay
+          placement={placement}
+          target={() => this.trigger}
           show={this.state.show}
-          onHide={this.handleHideToolTip}
-          placement={this.resolvedOverlayPosition}
-          target={() => this.anchor}
+          onRootClose={this.handleHideToolTip}
         >
           <InnerToolTip
             size={size}
-            position={position}
-            overlayPosition={this.resolvedOverlayPosition}
-            tooltipStyle={innerTooltipStyle}
+            snacksStyle={snacksStyle}
+            style={innerTooltipStyle}
           >
             {children}
           </InnerToolTip>
-        </Overlay>
+        </TooltipOverlay>
       </div>
     )
   }

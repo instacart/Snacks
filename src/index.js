@@ -36,6 +36,7 @@ import withTheme from './styles/themer/withTheme'
 import Slide from './components/Transitions/Slide'
 import Grow from './components/Transitions/Grow'
 import Fade from './components/Transitions/Fade'
+import Portal from './components/Portal/Portal'
 import { themePropTypes } from './styles/themer/utils'
 
 export {
@@ -90,5 +91,6 @@ export {
   Menu,
   MenuItem,
   MenuDivider,
-  DropdownMenu
+  DropdownMenu,
+  Portal
 }

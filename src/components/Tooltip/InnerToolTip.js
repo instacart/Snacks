@@ -1,100 +1,107 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import Slide from '../../components/Transitions/Slide'
-import Fade from '../../components/Transitions/Fade'
-import colors from '../../styles/colors'
-import calculateOffset from './calculateOffset'
-import TooltipArrow from './TooltipArrow'
-import baseProps from './baseProps'
+import PropTypes                from 'prop-types'
+import Slide                    from '../../components/Transitions/Slide'
+import Fade                     from '../../components/Transitions/Fade'
+import colors                   from '../../styles/colors'
+import calculateOffset          from './calculateOffset'
+import TooltipArrow             from './TooltipArrow'
 
-const STYLE = {
-  innerToolTip: {
-    position: 'absolute',
-    zIndex: 9999999,
+const styles = {
+  root: {
+    position: 'relative'
   },
-  fade: {
-    display: 'flex',
-    flexDirection: 'column',
+  arrowPadding: {
+    top   : {paddingBottom: '9px'},
+    bottom: {paddingTop   : '9px'},
+    left  : {paddingRight : '9px'},
+    right : {paddingLeft  : '9px'},
   },
   innerContent: {
-    background: colors.GRAY_20,
-    padding: '9px 16px',
-    color: colors.WHITE,
+    textAlign: 'center',
     borderRadius: 4,
-    fontSize: 14
+    whiteSpace: 'nowrap',
+    fontWeight: 600
   },
 }
 
-const RESOLVED_WIDTH = {
-  small: 120,
-  medium: 220,
-  large: 300
+const RESOLVED_COLOR = {
+  primary: {
+    background: colors.GREEN_500,
+    color: '#FFF',
+    border: `1px solid ${colors.GREEN_500}`
+  },
+  secondary: {
+    background: '#FFF',
+    color: colors.GRAY_46,
+    border: `1px solid ${colors.GRAY_74}`
+  },
+  dark: {
+    background: colors.GRAY_20,
+    color: '#FFF',
+    border: `1px solid ${colors.GRAY_20}`
+  }
 }
 
-const RESOLVED_OFFSET = {
-  bottom: 3,
-  top: -3
+const RESOLVED_SIZE = {
+  small: {
+    fontSize: '14px',
+    padding: '9px 8px'
+  },
+  medium: {
+    fontSize: '16px',
+    padding: '9px 16px'
+  },
+  large: {
+    fontSize: '18px',
+    padding: '12px 24px'
+  }
 }
 
 class InnerToolTip extends PureComponent {
   static propTypes = {
-    ...baseProps,
-    size: PropTypes.number,
-    style: PropTypes.object
+    style: PropTypes.shape({}),
+    placement: PropTypes.oneOf([
+      'top',
+      'left',
+      'right',
+      'bottom',
+    ]).isRequired,
+    snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark'])
   }
 
   static defaultProps = {
     size: 'medium',
-    // position: 'bottom'
-  }
-
-  get containerStyle() {
-    const { style, positionTop, positionLeft, overlayPosition } = this.props
-
-    return {
-      ...STYLE.innerToolTip,
-      ...style,
-      top: positionTop + RESOLVED_OFFSET[overlayPosition],
-      left: positionLeft,
-    }
+    placement: 'bottom',
+    snacksStyle: 'dark'
   }
 
   get contentStyles() {
-    const { size, tooltipStyle } = this.props
+    const { size, style, snacksStyle } = this.props
     return {
-      ...STYLE.innerContent,
-      width: RESOLVED_WIDTH[size],
-      tooltipStyle
+      ...styles.innerContent,
+      ...RESOLVED_SIZE[size],
+      ...RESOLVED_COLOR[snacksStyle],
+      ...style
     }
   }
 
-  renderTopArrow() {
-    const { position, size } = this.props
-    if (!position.match('bottom')) { return }
+  renderArrow() {
+    const { arrowPosition, snacksStyle } = this.props
     return (
-      <TooltipArrow position={position} size={size} />
-    )
-  }
-
-  renderBottomArrow() {
-    const { position, size, overlayPosition } = this.props
-    if (!['top'].includes(position)) { return }
-    return (
-      <TooltipArrow position={position} size={size} overlayPosition={overlayPosition} />
+      <TooltipArrow position={arrowPosition} snacksStyle={snacksStyle} />
     )
   }
 
   render() {
+    const { placement } = this.props
+
     return (
-      <Slide axis='y' style={this.containerStyle}>
-        <Fade style={STYLE.fade}>
-          { this.renderTopArrow() }
-          <div style={this.contentStyles}>
-            {this.props.children}
-          </div>
-          { this.renderBottomArrow() }
-        </Fade>
-      </Slide>
+      <Fade>
+        {this.renderArrow()}
+        <div style={this.contentStyles}>
+          {this.props.children}
+        </div>
+      </Fade>
     )
   }
 }
