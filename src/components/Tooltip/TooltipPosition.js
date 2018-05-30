@@ -1,7 +1,6 @@
 import React, { PureComponent, cloneElement } from 'react'
 import { findDOMNode }                        from 'react-dom'
 import PropTypes                              from 'prop-types'
-// import Portal                                 from '../Portal/Portal'
 import TooltipRootClose                       from './TooltipRootClose'
 
 const styles = {
