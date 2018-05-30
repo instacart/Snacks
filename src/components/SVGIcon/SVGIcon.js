@@ -11,6 +11,7 @@ SVGIcon.propTypes = {
 }
 
 SVGIcon.defaultProps = {
+  color: 'currentColor',
   size: 'standard',
 }
 
