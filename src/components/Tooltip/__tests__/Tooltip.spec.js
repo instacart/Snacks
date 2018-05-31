@@ -42,4 +42,27 @@ describe('Tooltip', () => {
     const tree = renderer.create(tooltip).toJSON()
     expect(tree).toMatchSnapshot()
   })
+
+  it('should call callbacks', () => {
+    const onDismiss = spy()
+    const onShow = spy()
+    const tooltip = mount(
+      <Tooltip
+        target={(<button>TRIGGER</button>)}
+        placement='right'
+        size='small'
+        snacksStyle="secondary"
+        onShow={onShow}
+        onDismiss={onDismiss}
+      >
+        Callback tooltip
+      </Tooltip>
+    )
+
+    const trigger = tooltip.find('button').last()
+    trigger.last().simulate('click')
+    expect(onShow.calledOnce).toBe(true)
+    trigger.last().simulate('click')
+    expect(onDismiss.calledOnce).toBe(true)
+  })
 })

@@ -17,7 +17,9 @@ class Tooltip extends PureComponent {
       'bottom',
     ]),
     target: PropTypes.node.isRequired,
-    snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark'])
+    snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark']),
+    onDismiss: PropTypes.func,
+    onShow: PropTypes.func
   }
 
   static defaultProps = {
@@ -31,11 +33,20 @@ class Tooltip extends PureComponent {
   }
 
   handleToggle = () => {
-    this.setState(({ show }) => ({ show: !show }))
+    const {onDismiss, onShow} = this.props
+    this.setState({show: !this.state.show}, () => {
+      if (this.state.show) {
+        onShow && onShow()
+      }  else {
+        onDismiss && onDismiss()
+      }
+    })
   }
 
   handleHideToolTip = () => {
+    const {onDismiss} = this.props
     this.setState({ show: false })
+    onDismiss && onDismiss()
   }
 
   renderTriggerElement() {
