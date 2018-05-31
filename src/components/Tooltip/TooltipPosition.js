@@ -109,7 +109,7 @@ class TooltipPosition extends PureComponent {
         overlayRect.left = overlayRect.left - overRightAmount - Math.min(SPACING, targetDistanceFromRight)
       }
 
-      arrowPosition.left = targetRect.left - overlayRect.left + targetCenterX - ARROW_SPACING - (ARROW_BORDER_SPACING / 2)
+      arrowPosition.left = targetRect.left - overlayRect.left + targetCenterX - ARROW_SPACING - (ARROW_BORDER_SPACING / 2) // eslint-disable-line max-len
     } else {
       const targetCenterY = targetRect.height / 2
       const overlayCenterY = overlayRect.height / 2
