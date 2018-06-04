@@ -3,6 +3,8 @@ import PropTypes                from 'prop-types'
 import InnerToolTip             from './InnerToolTip'
 import TooltipOverlay           from './TooltipOverlay'
 
+const noop = () => {} // eslint-disable-line no-empty-function
+
 class Tooltip extends PureComponent {
   static propTypes = {
     size: PropTypes.oneOf([
@@ -26,8 +28,8 @@ class Tooltip extends PureComponent {
     snacksStyle: 'dark',
     placement: 'bottom',
     size: 'small',
-    onShow: () => {},
-    onDismiss: () => {}
+    onShow: noop,
+    onDismiss: noop
   }
 
   state = {
