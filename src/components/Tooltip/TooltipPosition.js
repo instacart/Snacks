@@ -66,7 +66,7 @@ class TooltipPosition extends PureComponent {
   calculatePosition() {
     const { placement } = this.props
     const target        = this.getTarget()
-    const overlay       = findDOMNode(this)
+    const overlay       = this.overlay
     const targetRect    = this.getRect(target)
     const documentWidth = document.documentElement.scrollWidth
 
@@ -126,7 +126,7 @@ class TooltipPosition extends PureComponent {
       }
     }
 
-    this.setState({overlayRect: overlayRect, arrowPosition: arrowPosition})
+    this.setState({overlayRect, arrowPosition})
   }
 
   render() {
@@ -153,7 +153,7 @@ class TooltipPosition extends PureComponent {
     )
 
     return (
-      <div style={computedStyles}>
+      <div style={computedStyles} ref={(node) => this.overlay = node}>
         { child }
       </div>
     )

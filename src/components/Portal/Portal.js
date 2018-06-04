@@ -11,7 +11,8 @@ class Portal extends PureComponent {
     ])
   }
 
-  componentWillMount() {
+  constructor(props) {
+    super(props)
     this.setContainer(this.props.container)
   }
 

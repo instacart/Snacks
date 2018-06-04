@@ -25,7 +25,9 @@ class Tooltip extends PureComponent {
   static defaultProps = {
     snacksStyle: 'dark',
     placement: 'bottom',
-    size: 'small'
+    size: 'small',
+    onShow: () => {},
+    onDismiss: () => {}
   }
 
   state = {
@@ -36,9 +38,9 @@ class Tooltip extends PureComponent {
     const {onDismiss, onShow} = this.props
     this.setState({show: !this.state.show}, () => {
       if (this.state.show) {
-        onShow && onShow()
+        onShow()
       }  else {
-        onDismiss && onDismiss()
+        onDismiss()
       }
     })
   }
@@ -46,23 +48,23 @@ class Tooltip extends PureComponent {
   handleHideToolTip = () => {
     const {onDismiss} = this.props
     this.setState({ show: false })
-    onDismiss && onDismiss()
+    onDismiss()
   }
 
   renderTriggerElement() {
     const { target } = this.props
     const { show } = this.state
 
-    if (target) {
-      return React.cloneElement(target, {
-        ref: (node) => {
-          this.trigger = node
-        },
-        onClick: this.handleToggle.bind(this),
-        'aria-haspopup': true,
-        'aria-expanded': show
-      })
-    }
+    if (!target) { return }
+
+    return React.cloneElement(target, {
+      ref: (node) => {
+        this.trigger = node
+      },
+      onClick: this.handleToggle.bind(this),
+      'aria-haspopup': true,
+      'aria-expanded': show
+    })
   }
 
   render() {
