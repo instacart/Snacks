@@ -1,4 +1,5 @@
 import colors from './styles/colors/index'
+import Tooltip from './components/Tooltip/Tooltip'
 import Button from './components/Buttons/Button'
 import CircleButton from './components/Buttons/CircleButton'
 import Radio from './components/Buttons/Radio'
@@ -35,13 +36,14 @@ import withTheme from './styles/themer/withTheme'
 import Slide from './components/Transitions/Slide'
 import Grow from './components/Transitions/Grow'
 import Fade from './components/Transitions/Fade'
+import Portal from './components/Portal/Portal'
 import { themePropTypes } from './styles/themer/utils'
 
 export {
   // styles
   colors,
   zIndex,
-  
+
   // style overriding ()
   GlobalTheme,
   Normalize,
@@ -58,7 +60,7 @@ export {
   Grid,
   Column,
   Row,
-  
+
   //forms
   Form,
   FormComponent,
@@ -75,6 +77,7 @@ export {
   Slide,
 
   // components
+  Tooltip,
   Button,
   CircleButton,
   Radio,
@@ -88,5 +91,6 @@ export {
   Menu,
   MenuItem,
   MenuDivider,
-  DropdownMenu
+  DropdownMenu,
+  Portal
 }

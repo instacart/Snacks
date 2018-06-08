@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip expect overlay to appear correctly when shown 1`] = `
+<div>
+  <button
+    aria-expanded={false}
+    aria-haspopup={true}
+    onClick={[Function]}
+  >
+    TRIGGER
+  </button>
+</div>
+`;
+
+exports[`Tooltip renders Tooltip properly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <div
+      aria-expanded={false}
+      aria-haspopup={true}
+      onClick={[Function]}
+    >
+      TRIGGER
+    </div>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
