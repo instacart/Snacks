@@ -15,7 +15,7 @@ yarn add ic-snacks
 
 ### via npm
 ```js
-npm install ic-snacks
+npm install ic-snacks --save
 ```
 
 ## Usage
