@@ -4,11 +4,11 @@
   "description": "The Instacart Component Library for Web",
   "main": "dist/snacks.js",
   "scripts": {
-    "build": "npm test && webpack --progress --config webpack.release.config.js src/index.js dist/snacks.js",
+    "build": "npm test && webpack --progress --config webpack.release.config.js",
     "prepublish": "npm run build",
     "lint": "eslint src --ext .js,.jsx --ignore-pattern '*.spec.js'",
     "test:lint": "npm run lint -- --quiet",
-    "start": "webpack --progress --watch --config webpack.config.js src/index.js dist/snacks.js",
+    "start": "webpack --progress --watch --config webpack.config.js",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build && node scripts/moveBuildAssets.js",
     "test:watch": "npm test -- --watch --bail",

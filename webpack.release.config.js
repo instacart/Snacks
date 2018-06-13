@@ -12,11 +12,12 @@ module.exports = {
     ]
   },
   entry: {
-    snacks: './src/index.js'
+    main: './src/index.js'
   },
   output: {
     library: 'Snacks',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    filename: 'snacks.js'
   },
   resolve: {
     alias: {
