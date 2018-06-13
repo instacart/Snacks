@@ -1,7 +1,7 @@
 import { execSync } from 'child_process'
 import prompt from 'prompt'
 import semver from 'semver'
-import { version as packageVersion } from './package.json'
+import { version as packageVersion } from '../../package.json'
 
 import {
   checkError,
@@ -32,17 +32,17 @@ const upVersion = ({ versioningType, packageVersion }) => {
   }
 }
 
-const confirmRelease = {
-  name: 'This will build, git commit and up the package version. Are you sure you want to build a new release of Snacks?',
+const confirmBuild = {
+  name: 'This will create a git branch, build the package, up the package version and commit/push the results to the Snacks repo. Are you sure you want to build a new release of Snacks?',
   type: 'string',
   pattern: confirmResponsePattern,
   required : true,
   default: 'yes'
 }
 
-const confirmReleaseCheck = (userResponse) => {
+const confirmBuildCheck = (userResponse) => {
   if (!isPositiveResponse(userResponse)) {
-    console.log('Release confirmation failed. Exiting build...')
+    console.log('Build confirmation failed. Exiting build...')
     return false
   }
 
@@ -57,7 +57,7 @@ const confirmVersion = {
   default: 'patch'
 }
 
-const createBranch = version => execSync(`npm checkout -b ${version}`)
+const createBranch = version => execSync(`git checkout master && git pull origin master && git checkout -b ${version}`)
 const runTests = () => execSync('npm test')
 const buildProject = () => execSync('npm run build')
 const buildStyleGuide = () => execSync('npm run styleguide:build')
@@ -69,12 +69,13 @@ console.log('Beginning build for Snacks 🥕 🍿 🍪 🥜 🍎 🥨 ')
 console.log('Press ctrl+c at any point to abort release')
 
 prompt.start()
-prompt.get([confirmVersion], (err, result) => {
+prompt.get([confirmBuild, confirmVersion], (err, result) => {
   const versioningType = result[confirmVersion.name]
   const newVersion = upVersion({ versioningType, packageVersion })
-  console.log(`old version: ${packageVersion}, new version: ${newVersion}`)
+  console.log(`package version updating ${packageVersion} -> ${newVersion}`)
+  console.log('If the above version looks incorrect, abort now. (ctrl+c)')
   if(checkError(err)) { return prompt.stop() }
-  if(!confirmReleaseCheck(result[confirmRelease.name])) { return prompt.stop() }
+  if(!confirmBuildCheck(result[confirmBuild.name])) { return prompt.stop() }
   createBranch(newVersion)
   runTests()
   buildProject()

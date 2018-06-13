@@ -1,9 +1,9 @@
-const confirmResponsePattern = /yes|no|Yes|No|True|true|t|False|false|f/
+export const confirmResponsePattern = /yes|no|Yes|No|True|true|t|False|false|f/
 
-const isPositiveResponse = userResponse => positiveResponses.includes(userResponse)
+export const isPositiveResponse = userResponse => positiveResponses.includes(userResponse)
 
-const positiveResponses = ['yes', 'Yes', 'y', 'true', 'True', 't']
+export const positiveResponses = ['yes', 'Yes', 'y', 'true', 'True', 't']
 
-const checkError = err => err && console.log(err)
+export const checkError = err => err && console.log(err)
 
 export default { checkError, confirmResponsePattern, isPositiveResponse, positiveResponses }
