@@ -4,8 +4,7 @@
   "description": "The Instacart Component Library for Web",
   "main": "dist/snacks.js",
   "scripts": {
-    "build": "npm test && webpack --progress --config webpack.release.config.js",
-    "prepublish": "npm run build",
+    "build": "webpack --progress --config webpack.release.config.js",
     "lint": "eslint src --ext .js,.jsx --ignore-pattern '*.spec.js'",
     "test:lint": "npm run lint -- --quiet",
     "start": "webpack --progress --watch --config webpack.config.js",
@@ -50,6 +49,7 @@
     "eslint-plugin-react": "^7.7.0",
     "fs-extra": "^5.0.0",
     "jest": "^22.4.2",
+    "prompt": "^1.0.0",
     "radium": "^0.22.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -65,6 +65,7 @@
   },
   "dependencies": {
     "react-text-mask": "^5.3.0",
+    "semver": "^5.5.0",
     "svgr": "^1.9.2",
     "tinycolor2": "^1.4.1",
     "underscore": "^1.8.3",
