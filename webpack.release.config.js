@@ -1,8 +1,9 @@
 const path = require('path')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       { test: /\.js$/, loaders: ['babel-loader'], exclude: /node_modules/ },
@@ -15,7 +16,8 @@ module.exports = {
   },
   output: {
     library: 'Snacks',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    filename: 'snacks.js'
   },
   resolve: {
     alias: {
@@ -24,13 +26,18 @@ module.exports = {
     }
   },
   plugins: [
-    new SpriteLoaderPlugin()
+    new SpriteLoaderPlugin(),
+
+    // minification and uglification
+    new UglifyJSPlugin({
+      cache: true,
+      parallel: true,
+    })
   ],
   externals: {
     'react': 'react',
     'react-dom': 'react-dom',
     'radium': 'radium',
     'prop-types': 'prop-types'
-  },
-  devtool: 'cheap-module-eval-source-map'
+  }
 }
