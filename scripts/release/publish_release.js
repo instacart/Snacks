@@ -1,3 +1,4 @@
+import { execSync } from 'child_process'
 import prompt from 'prompt'
 import {
   checkError,
@@ -41,10 +42,7 @@ const confirmBuildCheck = (userResponse) => {
   return true
 }
 
-const publishRelease = () => {
-  // execSync('npm publish')
-  console.log('place holder -- npm publishing!')
-}
+const publishRelease = () => execSync('npm publish')
 
 console.log('Beginning npm publish for Snacks 🥕 🍿 🍪 🥜 🍎 🥨 ')
 console.log('Press ctrl+c at any point to abort release')
