@@ -141,3 +141,10 @@ or
 ```
 npm run styleguide:build
 ```
+
+## Releasing a new version of Snacks
+1. `npm run release:build`
+2. Got to the branch created on Github and update the description of the release branch to include a list of new components, enhancements, fixes or other important changes.
+3. Merge the branch into master on Github
+4. Draft a new release with the same discription as the release branch: https://github.com/instacart/Snacks/releases
+5. `npm run release:publish`
