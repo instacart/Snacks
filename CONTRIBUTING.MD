@@ -143,6 +143,8 @@ npm run styleguide:build
 ```
 
 ## Releasing a new version of Snacks
+> [Two factor authenticaion](https://docs.npmjs.com/getting-started/using-two-factor-authentication) is required on your npm account. You'll need your authenticator code during the release step.
+
 1. `npm run release:build`
 2. Got to the branch created on Github and update the description of the release branch to include a list of new components, enhancements, fixes or other important changes.
 3. Merge the branch into master on Github

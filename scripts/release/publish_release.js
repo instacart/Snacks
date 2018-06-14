@@ -42,16 +42,23 @@ const confirmBuildCheck = (userResponse) => {
   return true
 }
 
-const publishRelease = () => execSync('npm publish')
+const confirmTwoAuthCode = {
+  name: 'Two factor authenticator code',
+  type: 'string',
+  required: true
+}
+
+const checkoutAndPullMaster = () => execSync('git checkout master && git pull origin master')
+const publishRelease = authCode => execSync(`npm publish --otp ${authCode}`)
 
 console.log('Beginning npm publish for Snacks 🥕 🍿 🍪 🥜 🍎 🥨 ')
 console.log('Press ctrl+c at any point to abort release')
-
+checkoutAndPullMaster()
 prompt.start()
-prompt.get([confirmRelease, confirmBuildPassing], (err, result) => {
+prompt.get([confirmRelease, confirmBuildPassing, confirmTwoAuthCode], (err, result) => {
   if(checkError(err)) { return prompt.stop() }
   if(!confirmReleaseCheck(result[confirmRelease.name])) { return prompt.stop() }
   if(!confirmBuildCheck(result[confirmBuildPassing.name])) { return prompt.stop() }
-  publishRelease()
+  publishRelease(result[confirmTwoAuthCode.name])
   prompt.stop()
 })
