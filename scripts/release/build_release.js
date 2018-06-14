@@ -80,7 +80,7 @@ prompt.get([confirmBuild, confirmVersion], (err, result) => {
   runTests()
   buildProject()
   buildStyleGuide()
-  commitChanges()
+  commitChanges(newVersion)
   updatePackageVersion(versioningType)
   pushChanges(newVersion)
   console.log(`Build branch (${newVersion}) created and pushed to Snacks repository. To complete release, merge ${newVersion} branch to master and then run the publish_release script`)

@@ -5,6 +5,8 @@
   "main": "dist/snacks.js",
   "scripts": {
     "build": "webpack --progress --config webpack.release.config.js",
+    "build_release": "babel-node scripts/release/build_release.js",
+    "publish_release": "babel-node scripts/release/publish_release.js",
     "lint": "eslint src --ext .js,.jsx --ignore-pattern '*.spec.js'",
     "test:lint": "npm run lint -- --quiet",
     "start": "webpack --progress --watch --config webpack.config.js",
