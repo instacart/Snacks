@@ -61,7 +61,7 @@ const createBranch = version => execSync(`git checkout master && git pull origin
 const runTests = () => execSync('npm test')
 const buildProject = () => execSync('npm run build')
 const buildStyleGuide = () => execSync('npm run styleguide:build')
-const commitChanges = newVersion => execSync(`git add -A dist && git add -A docs && commit -m creating new dist for ${newVersion} release`)
+const commitChanges = newVersion => execSync(`git add -A dist && git add -A docs && commit -m 'creating new dist for ${newVersion} release'`)
 const updatePackageVersion = versionType => execSync(`npm version ${versionType}`)
 const pushChanges = version => execSync(`git push origin ${version}`)
 
