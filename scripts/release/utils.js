@@ -1,4 +1,4 @@
-export const confirmResponsePattern = /yes|no|Yes|No|True|true|t|False|false|f/
+export const confirmResponsePattern = /^\s*(?:true|false|t|f|no|yes)\s*$/i
 
 export const isPositiveResponse = userResponse => positiveResponses.includes(userResponse)
 

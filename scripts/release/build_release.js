@@ -52,7 +52,7 @@ const confirmBuildCheck = (userResponse) => {
 const confirmVersion = {
   name: 'Is this a patch, minor or major version?',
   type: 'string',
-  pattern: /patch|Patch|minor|Minor|Major|major|/,
+  pattern: /^\s*(?:major|minor|patch)\s*$/i,
   required: true,
   default: 'patch'
 }
