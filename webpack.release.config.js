@@ -14,6 +14,18 @@ module.exports = {
   entry: {
     main: './src/index.js'
   },
+  optimization: {
+    minimizer: [
+      new UglifyJSPlugin({
+        cache: true,
+        parallel: true,
+        uglifyOptions: {
+          keep_classnames: true,
+          keep_fnames: true
+        },
+      })
+    ]
+  },
   output: {
     library: 'Snacks',
     libraryTarget: 'umd',
@@ -27,12 +39,6 @@ module.exports = {
   },
   plugins: [
     new SpriteLoaderPlugin(),
-
-    // minification and uglification
-    new UglifyJSPlugin({
-      cache: true,
-      parallel: true,
-    })
   ],
   externals: {
     'react': 'react',
