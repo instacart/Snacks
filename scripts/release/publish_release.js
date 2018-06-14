@@ -4,11 +4,12 @@ import {
   confirmResponsePattern,
   isPositiveResponse,
 } from './utils'
+import { version as packageVersion } from '../../package.json'
 
 prompt.message = 'Confirm'
 
 const confirmRelease = {
-  name: 'Are you sure you want to publish a new release of Snacks?',
+  name: `This will publish version ${packageVersion} of the Snacks package to the public npm registry. Are you sure you want to publish a new release of Snacks?`,
   type: 'string',
   pattern: confirmResponsePattern,
   required : true,
@@ -25,7 +26,7 @@ const confirmReleaseCheck = (userResponse) => {
 }
 
 const confirmBuildPassing = {
-  name: 'Is the circleCi build passing?',
+  name: 'Is the circleCi build passing? (https://circleci.com/gh/instacart/Snacks/tree/master)',
   type: 'string',
   pattern: confirmResponsePattern,
   default: 'yes'
@@ -33,19 +34,11 @@ const confirmBuildPassing = {
 
 const confirmBuildCheck = (userResponse) => {
   if (!isPositiveResponse(userResponse)) {
-    console.log('Tests confirmed not passing, exiting build...')
+    console.log('CircleCi test passing confirmation failed. Exiting build...')
     return false
   }
 
   return true
-}
-
-const confirmVersion = {
-  name: 'Is this a patch, minor or major version?',
-  type: 'string',
-  pattern: /patch|Patch|minor|Minor|Major|major|/,
-  required: true,
-  default: 'minor'
 }
 
 const publishRelease = () => {
@@ -57,7 +50,7 @@ console.log('Beginning npm publish for Snacks 🥕 🍿 🍪 🥜 🍎 🥨 ')
 console.log('Press ctrl+c at any point to abort release')
 
 prompt.start()
-prompt.get([confirmRelease, confirmBuildPassing, confirmVersion], (err, result) => {
+prompt.get([confirmRelease, confirmBuildPassing], (err, result) => {
   if(checkError(err)) { return prompt.stop() }
   if(!confirmReleaseCheck(result[confirmRelease.name])) { return prompt.stop() }
   if(!confirmBuildCheck(result[confirmBuildPassing.name])) { return prompt.stop() }

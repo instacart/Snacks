@@ -83,6 +83,6 @@ prompt.get([confirmBuild, confirmVersion], (err, result) => {
   commitChanges()
   updatePackageVersion(versioningType)
   pushChanges(newVersion)
-  console.log('Build branch created and pushed to Snacks repository. To complete release merge that branch to master and then run the publish_release script')
+  console.log(`Build branch (${newVersion}) created and pushed to Snacks repository. To complete release, merge ${newVersion} branch to master and then run the publish_release script`)
   prompt.stop()
 })
