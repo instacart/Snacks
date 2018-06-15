@@ -1,5 +1,6 @@
 import React             from 'react'
 import PropTypes         from 'prop-types'
+import MenuItem          from './MenuItem'
 
 const styles = {
   borderRadius: '4px',
@@ -135,7 +136,7 @@ class Menu extends React.Component {
     const menuItemChildren = []
 
     React.Children.map(children, (child) => {
-      if (child.type && child.type.displayName === 'MenuItem') {
+      if (child.type && child.type === MenuItem) {
         menuItemChildren.push(child)
       }
     })
@@ -151,7 +152,7 @@ class Menu extends React.Component {
     return React.Children.map(children, (child) => {
       if (!React.isValidElement(child)) {
         throw 'Passing invalid element to Menu'
-      } else if (child.type && child.type.displayName === 'MenuItem') {
+      } else if (child.type && child.type === MenuItem) {
         const component = React.cloneElement(child, {
           index: index,
           focus: currentTabIndex === index,
