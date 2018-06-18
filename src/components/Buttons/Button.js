@@ -72,6 +72,12 @@ const getSnacksStyles = props => {
   const { action, actionHover, primaryBackground } = props.snacksTheme.colors
   const actionActive = darken(actionHover, 3)
 
+  const disabled = {
+    backgroundColor: colors.GRAY_74,
+    color: colors.WHITE,
+    cursor: 'not-allowed'
+  }
+
   const activeAndFocus = {
     primary: {
       base: {
@@ -126,7 +132,9 @@ const getSnacksStyles = props => {
         },
         ':active': activeAndFocus.primary.inverted,
         ':focus': activeAndFocus.primary.inverted
-      }
+      },
+
+      disabled
     },
 
     secondary: {
@@ -154,7 +162,9 @@ const getSnacksStyles = props => {
         },
         ':active': activeAndFocus.secondary.inverted,
         ':focus': activeAndFocus.secondary.inverted
-      }
+      },
+
+      disabled
     },
 
     flat: {
@@ -167,6 +177,12 @@ const getSnacksStyles = props => {
         },
         ':active': activeAndFocus.flat,
         ':focus': activeAndFocus.flat
+      },
+
+      disabled: {
+        backgroundColor: 'transparent',
+        color: colors.GRAY_74,
+        cursor: 'not-allowed'
       }
     },
 
@@ -182,22 +198,14 @@ const getSnacksStyles = props => {
         },
         ':active': activeAndFocus.coupon,
         ':focus': activeAndFocus.coupon
-      }
-    },
+      },
 
-    disabled: {
-      base: {
-        backgroundColor: colors.GRAY_74,
-        color: colors.WHITE,
-        cursor: 'not-allowed'
-      }
+      disabled
     }
   }
 }
 
 const Button = props => {
-  // Disabled styles override all other snacks-specific button styles
-  const snacksStyle = props.disabled ? 'disabled' : props.snacksStyle
   const snacksStyles = getSnacksStyles(props)
 
   const ElementType = props.href ? 'a' : 'button'
@@ -209,8 +217,8 @@ const Button = props => {
     style: [
       baseStyles,
       sizeStyles[props.size],
-      snacksStyles[snacksStyle].base,
-      props.inverted && snacksStyles[snacksStyle].inverted,
+      snacksStyles[props.snacksStyle][props.disabled ? 'disabled' : 'base'],
+      props.inverted && snacksStyles[props.snacksStyle].inverted,
       ElementType === 'a' && linkStyles,
       props.style
     ],

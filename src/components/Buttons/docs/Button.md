@@ -97,9 +97,15 @@ accessibility concerns (links should navigate, buttons should cause actions).
       Flat Button
     </Button>
   </div>
-  <div>
+  <div style={{marginRight: '24px'}}>
     <div style={{marginBottom: '8px'}}>Large</div>
     <Button snacksStyle="flat" size="large">
+      Flat Button
+    </Button>
+  </div>
+  <div>
+    <div style={{marginBottom: '8px'}}>Disabled</div>
+    <Button snacksStyle="flat" size="standard" disabled>
       Flat Button
     </Button>
   </div>
