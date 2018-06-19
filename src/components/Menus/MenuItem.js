@@ -100,7 +100,9 @@ class MenuItem extends React.Component {
   componentDidUpdate(prevProps) {
     if (!prevProps.focus && this.props.focus) {
       setTimeout(() => {
-        this.menuItem.focus()
+        // Checking the ref exists in case this component
+        // unmounts before the callback runs.
+        this.menuItem && this.menuItem.focus()
       }, 0)
     }
   }
