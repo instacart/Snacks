@@ -97,10 +97,9 @@ class MenuItem extends React.Component {
     preventDefault: true
   }
 
-  componentWillReceiveProps(nextProps) {
-    const { focus } = this.props
-    if (!focus && nextProps.focus) {
-      setTimeout( () => {
+  componentDidUpdate(prevProps) {
+    if (!prevProps.focus && this.props.focus) {
+      setTimeout(() => {
         this.menuItem.focus()
       }, 0)
     }
