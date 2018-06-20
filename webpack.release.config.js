@@ -7,10 +7,7 @@ module.exports = {
     rules: [
       { test: /\.js$/, loaders: ['babel-loader'], exclude: /node_modules/ },
       {
-        test: [
-          /SVGIcon\/icons\/\w+\.svg$/, // Icons
-          /assets\/\w+\.svg$/          // Radio/Checkbox
-        ],
+        test: /\.svg/,
         loader: 'svgr/webpack',
         exclude: /node_modules/,
         options: { extract: true }
