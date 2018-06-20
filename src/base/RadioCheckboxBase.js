@@ -45,14 +45,9 @@ function imgValidator (props, propName) {
   }
 }
 
-function renderSvg(svgSprite) {
-  return (
-    <div style={STYLE.image}>
-      <svg viewBox={svgSprite.viewBox}>
-        <use xlinkHref={`sprite.svg#${svgSprite.id}`} />
-      </svg>
-    </div>
-  )
+function renderSvg(SvgSprite) {
+  const { width, height } = STYLE.image
+  return <SvgSprite width={width} height={height} />
 }
 
 class RadioCheckboxBase extends React.PureComponent {
