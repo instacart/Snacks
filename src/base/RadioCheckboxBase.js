@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
 import colors from '../styles/colors'
+import withTheme from '../styles/themer/withTheme'
+import { themePropTypes } from '../styles/themer/utils'
 
 const NoOp = () => {} // eslint-disable-line no-empty-function
 const INPUT_BTN_SIZE = 22
@@ -19,12 +21,9 @@ const STYLE = {
     WebkitAppearance: 'none',
     backgroundImage: 'none',
     position: 'absolute',
+    opacity: 0, // Required for IE!
     top: 0,
     left: 0,
-  },
-  image: {
-    width: INPUT_BTN_SIZE,
-    height: INPUT_BTN_SIZE,
   },
   label: {
     marginLeft: 10,
@@ -37,22 +36,18 @@ const STYLE = {
   },
 }
 
+const getInputStyles = (props) => ({
+  width: INPUT_BTN_SIZE,
+  height: INPUT_BTN_SIZE,
+  fill: props.snacksTheme.colors.action
+})
+
 function imgValidator (props, propName) {
   const asset = props[propName]
 
   if (!asset) {
     return new Error(`The background image "${propName}" is required.`)
   }
-}
-
-function renderSvg(svgSprite) {
-  return (
-    <div style={STYLE.image}>
-      <svg viewBox={svgSprite.viewBox}>
-        <use xlinkHref={`sprite.svg#${svgSprite.id}`} />
-      </svg>
-    </div>
-  )
 }
 
 class RadioCheckboxBase extends React.PureComponent {
@@ -76,6 +71,7 @@ class RadioCheckboxBase extends React.PureComponent {
       label         : PropTypes.object,
       wrapEl        : PropTypes.object,
     }),
+    snacksTheme   : themePropTypes,
     value         : PropTypes.string,
     wrapEl        : PropTypes.string,
   }
@@ -111,16 +107,16 @@ class RadioCheckboxBase extends React.PureComponent {
   }
 
   renderInputBtn() {
-    let svgSprite
+    let SvgComponent
     const { aria, bkgSvgSprites, btnType, isDisabled, id, style, value } = this.props
     const { isSelected } = this.state
 
-    if (isDisabled) { svgSprite = bkgSvgSprites.disabled }
-    else { svgSprite = isSelected ? bkgSvgSprites.selected : bkgSvgSprites.base }
+    if (isDisabled) { SvgComponent = bkgSvgSprites.disabled }
+    else { SvgComponent = isSelected ? bkgSvgSprites.selected : bkgSvgSprites.base }
 
     return (
       <div style={{...STYLE.button, ...style.button}}>
-        {renderSvg(svgSprite)}
+        <SvgComponent style={getInputStyles(this.props)} />
         <input
           id={id}
           type={btnType}
@@ -157,4 +153,4 @@ class RadioCheckboxBase extends React.PureComponent {
   }
 }
 
-export default Radium(RadioCheckboxBase)
+export default withTheme(Radium(RadioCheckboxBase))
