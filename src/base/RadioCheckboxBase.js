@@ -35,7 +35,7 @@ const STYLE = {
   },
 }
 
-const getInputStyles = (props) => (console.log(props) || {
+const getInputStyles = (props) => ({
   width: INPUT_BTN_SIZE,
   height: INPUT_BTN_SIZE,
   fill: props.snacksTheme.colors.action
