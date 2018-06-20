@@ -21,6 +21,7 @@ const STYLE = {
     WebkitAppearance: 'none',
     backgroundImage: 'none',
     position: 'absolute',
+    opacity: 0, // Required for IE!
     top: 0,
     left: 0,
   },
