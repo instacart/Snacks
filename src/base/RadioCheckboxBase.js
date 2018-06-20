@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
 import colors from '../styles/colors'
-import withTheme from 'styles/themer/withTheme'
-import { themePropTypes } from 'styles/themer/utils'
+import withTheme from '../styles/themer/withTheme'
+import { themePropTypes } from '../styles/themer/utils'
 
 const NoOp = () => {} // eslint-disable-line no-empty-function
 const INPUT_BTN_SIZE = 22

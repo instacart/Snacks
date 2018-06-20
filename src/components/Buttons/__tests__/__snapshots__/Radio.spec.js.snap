@@ -17,23 +17,16 @@ exports[`Radio generates a label if a child prop of text is supplied 1`] = `
       }
     }
   >
-    <div
+    <test-file-stub
       data-radium={true}
       style={
         Object {
+          "fill": "#43B02A",
           "height": 22,
           "width": 22,
         }
       }
-    >
-      <svg
-        viewBox={undefined}
-      >
-        <use
-          xlinkHref="sprite.svg#undefined"
-        />
-      </svg>
-    </div>
+    />
     <input
       aria-label={undefined}
       checked={false}
@@ -92,23 +85,16 @@ exports[`Radio incorporates user styles if passed 1`] = `
       }
     }
   >
-    <div
+    <test-file-stub
       data-radium={true}
       style={
         Object {
+          "fill": "#43B02A",
           "height": 22,
           "width": 22,
         }
       }
-    >
-      <svg
-        viewBox={undefined}
-      >
-        <use
-          xlinkHref="sprite.svg#undefined"
-        />
-      </svg>
-    </div>
+    />
     <input
       aria-label={undefined}
       checked={false}
@@ -166,23 +152,16 @@ exports[`Radio incorporates user styles if passed 2`] = `
       }
     }
   >
-    <div
+    <test-file-stub
       data-radium={true}
       style={
         Object {
+          "fill": "#43B02A",
           "height": 22,
           "width": 22,
         }
       }
-    >
-      <svg
-        viewBox={undefined}
-      >
-        <use
-          xlinkHref="sprite.svg#undefined"
-        />
-      </svg>
-    </div>
+    />
     <input
       aria-label={undefined}
       checked={false}
@@ -231,23 +210,16 @@ exports[`Radio renders the correct button type 1`] = `
     }
   }
 >
-  <div
+  <test-file-stub
     data-radium={true}
     style={
       Object {
+        "fill": "#43B02A",
         "height": 22,
         "width": 22,
       }
     }
-  >
-    <svg
-      viewBox={undefined}
-    >
-      <use
-        xlinkHref="sprite.svg#undefined"
-      />
-    </svg>
-  </div>
+  />
   <input
     aria-label={undefined}
     checked={false}
@@ -284,23 +256,16 @@ exports[`Radio renders the correct selected state 1`] = `
     }
   }
 >
-  <div
+  <test-file-stub
     data-radium={true}
     style={
       Object {
+        "fill": "#43B02A",
         "height": 22,
         "width": 22,
       }
     }
-  >
-    <svg
-      viewBox={undefined}
-    >
-      <use
-        xlinkHref="sprite.svg#undefined"
-      />
-    </svg>
-  </div>
+  />
   <input
     aria-label={undefined}
     checked={false}
@@ -337,23 +302,16 @@ exports[`Radio renders the correct selected state 2`] = `
     }
   }
 >
-  <div
+  <test-file-stub
     data-radium={true}
     style={
       Object {
+        "fill": "#43B02A",
         "height": 22,
         "width": 22,
       }
     }
-  >
-    <svg
-      viewBox={undefined}
-    >
-      <use
-        xlinkHref="sprite.svg#undefined"
-      />
-    </svg>
-  </div>
+  />
   <input
     aria-label={undefined}
     checked={true}
@@ -390,23 +348,16 @@ exports[`Radio renders the correct selected state 3`] = `
     }
   }
 >
-  <div
+  <test-file-stub
     data-radium={true}
     style={
       Object {
+        "fill": "#43B02A",
         "height": 22,
         "width": 22,
       }
     }
-  >
-    <svg
-      viewBox={undefined}
-    >
-      <use
-        xlinkHref="sprite.svg#undefined"
-      />
-    </svg>
-  </div>
+  />
   <input
     aria-label={undefined}
     checked={false}
