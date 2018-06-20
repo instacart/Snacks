@@ -4,9 +4,9 @@
     <title>CheckboxSelected</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
         <g id="CheckboxSelected">
-            <rect id="Rectangle-3" fill="#43B02A" x="2" y="2" width="20" height="20" rx="4"></rect>
+            <rect id="Rectangle-3" x="2" y="2" width="20" height="20" rx="4"></rect>
             <path d="M5.27129383,13.1171494 L10.0991238,16.9794134 C10.4003804,17.2198393 10.8368163,17.1831478 11.0926913,16.8954091 L18.8172193,8.20531512 C19.0827499,7.90598966 19.0557141,7.44831137 18.7573542,7.18278072 C18.4580287,6.91725007 18.0003504,6.94428592 17.7348198,7.24264581 L10.4670045,15.4190587 L6.17602917,11.9864716 C5.86415136,11.73639 5.4084042,11.787565 5.15832261,12.0994428 C4.90920658,12.4113206 4.95941601,12.8670678 5.27129383,13.1171494 L5.27129383,13.1171494 L5.27129383,13.1171494 Z" id="Shape" fill="#FFFFFF"></path>
         </g>
     </g>
