@@ -20,6 +20,10 @@ module.exports = {
       content: 'docs/installation.md'
     },
     {
+      name: 'Basic usage',
+      content: 'docs/basic_usage.md'
+    },
+    {
       name: 'Utilities',
       sections: [
         {
