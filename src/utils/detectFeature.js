@@ -1,6 +1,6 @@
-import _ from 'underscore'
+import memoize from 'lodash/memoize'
 
-export const supportsCSSGrid = _.memoize(() => {
+export const supportsCSSGrid = memoize(() => {
   if (isNodeEnv() || isTestEnv()) { return true }
 
   const elm = document.createElement('div')
