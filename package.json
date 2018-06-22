@@ -61,7 +61,6 @@
     "sinon": "^2.3.8",
     "svg-sprite-loader": "^3.8.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
-    "underscore": "^1.8.3",
     "webpack": "^4.12.0",
     "webpack-cli": "^3.0.4"
   },
@@ -71,7 +70,6 @@
     "semver": "^5.5.0",
     "svgr": "^1.9.2",
     "tinycolor2": "^1.4.1",
-    "underscore": "^1.8.3",
     "validator": "^9.1.1"
   },
   "peerDependencies": {
