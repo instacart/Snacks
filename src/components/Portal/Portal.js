@@ -1,44 +1,13 @@
-import { PureComponent }             from 'react'
-import { createPortal, findDOMNode } from 'react-dom'
-import PropTypes                     from 'prop-types'
+import ReactDOM         from 'react-dom'
+import React16Portal    from './React16Portal'
+import LegacyPortal     from './LegacyPortal'
 
-class Portal extends PureComponent {
-  static propTypes = {
-    children: PropTypes.node.isRequired,
-    container: PropTypes.oneOfType([
-      PropTypes.node,
-      PropTypes.func
-    ])
-  }
+let Portal
 
-  constructor(props) {
-    super(props)
-    this.setContainer(this.props.container)
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.container !== this.props.container) {
-      this.setContainer(nextProps.container)
-    }
-  }
-
-  componentWillUnmount() {
-    this.portalContainer = null
-  }
-
-  getContainer(container) {
-    container = typeof container === 'function' ? container() : container
-    return findDOMNode(container) || document.body
-  }
-
-  setContainer(container) {
-    this.portalContainer = this.getContainer(container)
-  }
-
-  render() {
-    const { children } = this.props
-    return createPortal(children, this.portalContainer)
-  }
+if (ReactDOM.createPortal) {
+  Portal = React16Portal
+} else {
+  Portal = LegacyPortal
 }
 
 export default Portal
