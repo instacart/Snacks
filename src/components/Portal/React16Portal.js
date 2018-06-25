@@ -2,18 +2,26 @@ import { PureComponent }             from 'react'
 import { createPortal, findDOMNode } from 'react-dom'
 import PropTypes                     from 'prop-types'
 
+const DEFAULT_CONTAINER = document.body
+
 class Portal extends PureComponent {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    container: PropTypes.oneOfType([
-      PropTypes.node,
-      PropTypes.func
-    ])
+    container: PropTypes.element
   }
 
-  constructor(props) {
-    super(props)
+  constructor () {
+    super()
     this.setContainer(this.props.container)
+  }
+
+  setContainer (nextContainer) {
+    if (!nextContainer) {
+      this.containerEl = document.createElement('div')
+      DEFAULT_CONTAINER.appendChild(this.containerEl)
+    } else {
+      this.containerEl = nextContainer
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -23,21 +31,13 @@ class Portal extends PureComponent {
   }
 
   componentWillUnmount() {
-    this.portalContainer = null
-  }
-
-  getContainer(container) {
-    container = typeof container === 'function' ? container() : container
-    return findDOMNode(container) || document.body
-  }
-
-  setContainer(container) {
-    this.portalContainer = this.getContainer(container)
+    this.containerEl.parent.removeChild(this.containerEl)
+    this.containerEl = null
   }
 
   render() {
     const { children } = this.props
-    return createPortal(children, this.portalContainer)
+    return createPortal(children, this.containerEl)
   }
 }
 

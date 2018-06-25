@@ -5,7 +5,21 @@ import PropTypes              from 'prop-types'
 class Portal extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    node: PropTypes.any
+    container: PropTypes.element
+  }
+
+  constructor () {
+    super()
+    this.setContainer(this.props.container)
+  }
+
+  setContainer (nextContainer) {
+    if (!nextContainer) {
+      this.containerEl = document.createElement('div')
+      DEFAULT_CONTAINER.appendChild(this.containerEl)
+    } else {
+      this.containerEl = nextContainer
+    }
   }
 
   componentDidMount() {
@@ -17,29 +31,21 @@ class Portal extends Component {
   }
 
   componentWillUnmount() {
-    ReactDOM.unmountComponentAtNode(this.defaultNode || this.props.node)
-    if (this.defaultNode) {
-      document.body.removeChild(this.defaultNode)
-    }
-    this.defaultNode = null
-    this.portal = null
+    ReactDOM.unmountComponentAtNode(this.containerEl)
+    this.containerEl.parent.removeChild(this.containerEl)
+    this.containerEl = null
   }
 
   renderPortal() {
-    if (!this.props.node && !this.defaultNode) {
-      this.defaultNode = document.createElement('div')
-      document.body.appendChild(this.defaultNode)
-    }
-
     let children = this.props.children
     if (typeof this.props.children.type === 'function') {
       children = React.cloneElement(this.props.children)
     }
 
-    this.portal = ReactDOM.unstable_renderSubtreeIntoContainer(
+    ReactDOM.unstable_renderSubtreeIntoContainer(
       this,
       children,
-      this.props.node || this.defaultNode
+      this.containerEl
     )
   }
 
