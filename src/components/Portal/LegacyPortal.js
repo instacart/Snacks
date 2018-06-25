@@ -2,6 +2,8 @@ import React, { Component }   from 'react'
 import ReactDOM               from 'react-dom'
 import PropTypes              from 'prop-types'
 
+const DEFAULT_CONTAINER = document.body
+
 class Portal extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
@@ -11,15 +13,6 @@ class Portal extends Component {
   constructor () {
     super()
     this.setContainer(this.props.container)
-  }
-
-  setContainer (nextContainer) {
-    if (!nextContainer) {
-      this.containerEl = document.createElement('div')
-      DEFAULT_CONTAINER.appendChild(this.containerEl)
-    } else {
-      this.containerEl = nextContainer
-    }
   }
 
   componentDidMount() {
@@ -34,6 +27,15 @@ class Portal extends Component {
     ReactDOM.unmountComponentAtNode(this.containerEl)
     this.containerEl.parent.removeChild(this.containerEl)
     this.containerEl = null
+  }
+
+  setContainer (nextContainer) {
+    if (!nextContainer) {
+      this.containerEl = document.createElement('div')
+      DEFAULT_CONTAINER.appendChild(this.containerEl)
+    } else {
+      this.containerEl = nextContainer
+    }
   }
 
   renderPortal() {

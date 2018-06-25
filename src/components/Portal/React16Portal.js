@@ -1,5 +1,5 @@
 import { PureComponent }             from 'react'
-import { createPortal, findDOMNode } from 'react-dom'
+import { createPortal } from 'react-dom'
 import PropTypes                     from 'prop-types'
 
 const DEFAULT_CONTAINER = document.body
@@ -10,18 +10,9 @@ class Portal extends PureComponent {
     container: PropTypes.element
   }
 
-  constructor () {
-    super()
-    this.setContainer(this.props.container)
-  }
-
-  setContainer (nextContainer) {
-    if (!nextContainer) {
-      this.containerEl = document.createElement('div')
-      DEFAULT_CONTAINER.appendChild(this.containerEl)
-    } else {
-      this.containerEl = nextContainer
-    }
+  constructor (props) {
+    super(props)
+    this.setContainer(props.container)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -31,8 +22,17 @@ class Portal extends PureComponent {
   }
 
   componentWillUnmount() {
-    this.containerEl.parent.removeChild(this.containerEl)
+    this.containerEl.parentNode.removeChild(this.containerEl)
     this.containerEl = null
+  }
+
+  setContainer (nextContainer) {
+    if (!nextContainer) {
+      this.containerEl = document.createElement('div')
+      DEFAULT_CONTAINER.appendChild(this.containerEl)
+    } else {
+      this.containerEl = nextContainer
+    }
   }
 
   render() {
