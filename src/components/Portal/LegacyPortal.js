@@ -10,9 +10,9 @@ class Portal extends Component {
     container: PropTypes.element
   }
 
-  constructor () {
-    super()
-    this.setContainer(this.props.container)
+  constructor (props) {
+    super(props)
+    this.setContainer(props.container)
   }
 
   componentDidMount() {
@@ -25,7 +25,7 @@ class Portal extends Component {
 
   componentWillUnmount() {
     ReactDOM.unmountComponentAtNode(this.containerEl)
-    this.containerEl.parent.removeChild(this.containerEl)
+    this.containerEl.parentNode.removeChild(this.containerEl)
     this.containerEl = null
   }
 
