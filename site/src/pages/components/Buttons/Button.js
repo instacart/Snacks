@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../../components/Layout'
+import Playground from '../../../components/Playground'
 import Button from '../../../../../src/components/Buttons/Button'
 import Icon from '../../../../../src/components/Icon/Icon'
 
@@ -16,32 +17,36 @@ export default () => (
     Don't use these lightly.
     Overuse on a single screen could hinder your main objective rather than help it.
 
-    <div style={{display: 'flex'}}>
-      <div style={{marginRight: '24px'}}>
-        <div style={{marginBottom: '8px'}}>Tiny</div>
-        <Button snacksStyle="primary" size="tiny">
-          Primary Button
-        </Button>
-      </div>
-      <div style={{marginRight: '24px'}}>
-        <div style={{marginBottom: '8px'}}>Small</div>
-        <Button snacksStyle="primary" size="small">
-          Primary Button
-        </Button>
-      </div>
-      <div style={{marginRight: '24px'}}>
-        <div style={{marginBottom: '8px'}}>Standard</div>
-        <Button snacksStyle="primary" size="standard">
-          Primary Button
-        </Button>
-      </div>
-      <div>
-        <div style={{marginBottom: '8px'}}>Large</div>
-        <Button snacksStyle="primary" size="large">
-          Primary Button
-        </Button>
-      </div>
-    </div>
+    <Playground>
+      {`
+        <div style={{display: 'flex'}}>
+          <div style={{marginRight: '24px'}}>
+            <div style={{marginBottom: '8px'}}>Tiny</div>
+            <Button snacksStyle="primary" size="tiny">
+              Primary Button
+            </Button>
+          </div>
+          <div style={{marginRight: '24px'}}>
+            <div style={{marginBottom: '8px'}}>Small</div>
+            <Button snacksStyle="primary" size="small">
+              Primary Button
+            </Button>
+          </div>
+          <div style={{marginRight: '24px'}}>
+            <div style={{marginBottom: '8px'}}>Standard</div>
+            <Button snacksStyle="primary" size="standard">
+              Primary Button
+            </Button>
+          </div>
+          <div>
+            <div style={{marginBottom: '8px'}}>Large</div>
+            <Button snacksStyle="primary" size="large">
+              Primary Button
+            </Button>
+          </div>
+        </div>
+      `}
+    </Playground>
 
     ### Secondary
     Secondary buttons are for your second most important action.
