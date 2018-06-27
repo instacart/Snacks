@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import {Style} from 'radium'
-import { StaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 
 import Header from '../Header'
 import './styles.css'
