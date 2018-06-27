@@ -16,11 +16,4 @@ export default {
     minHeight: '100vh',
     width: '100%',
   },
-  navigation: {
-    minHeight: '100vh',
-    width: '15vw',
-    ...spacing.PADDING_X_SM,
-    ...spacing.PADDING_Y_LG,
-    border: '1px solid rgba(0,0,0,0.26)',
-  }
 }

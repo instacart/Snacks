@@ -1,7 +1,9 @@
 import React from 'react'
+import styles from './styles'
+import NavGroup from './NavGroup'
 
-export default ({ children }) =>
-  <div style={{ margin: '0 auto', maxWidth: 650, padding: '0 1rem' }}>
-    <h3>MySweetSite</h3>
-    {children()}
+export default ({ children, style }) =>
+  <div style={styles.container}>
+    <NavGroup title='Foundations' />
+    {children}
   </div>

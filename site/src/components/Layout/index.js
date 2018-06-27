@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { graphql, StaticQuery } from "gatsby"
 
 import Header from '../Header'
-// import Navigation from '../Navigation'
+import Navigation from '../Navigation'
 import './styles.css'
 import styles from './styles.js'
 
@@ -31,8 +31,7 @@ const Layout = ({ children, data }) => (
         <div style={styles.container} >
           <Header siteTitle={data.site.siteMetadata.title} />
           <div style={styles.body}>
-            {/* <Navigation /> */}
-            <div style={styles.navigation}> Navigation </div>
+            <Navigation></Navigation>
             <div style={styles.content} >
               {children}
             </div>
