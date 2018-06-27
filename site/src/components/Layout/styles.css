@@ -1,4 +1,15 @@
 @font-face {
+  font-family: 'ic-icons';
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/ic-icons.eot');
+  src: url('fonts/ic-icons.eot?#iefix') format('embedded-opentype'),
+       url('fonts/ic-icons.woff') format('woff'),
+       url('fonts/ic-icons.ttf') format('truetype'),
+       url('fonts/ic-icons.svg#ic-icons') format('svg');
+}
+
+@font-face {
   font-family: 'Open Sans';
   font-weight: 300;
   font-style: normal;
