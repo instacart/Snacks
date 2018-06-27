@@ -8,9 +8,14 @@
     "gatsby-plugin-react-helmet": "next",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-react-docgen": "^1.0.17",
+    "ic-snacks": "^0.0.85",
+    "prop-types": "^15.6.2",
+    "radium": "^0.24.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-live": "^1.10.1",
+    "react-transition-group": "^2.3.1"
   },
   "keywords": [
     "gatsby"
