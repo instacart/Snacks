@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-style: normal;
+  src: font-url('fonts/OpenSans-Light/OpenSans-Light.eot');
+  src: font-url('fonts/OpenSans-Light/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+       local('Open Sans Light'),
+       local('OpenSans-Light'),
+       url('fonts/OpenSans-Light/OpenSans-Light.woff') format('woff'),
+       url('fonts/OpenSans-Light/OpenSans-Light.ttf') format('truetype'),
+       url('fonts/OpenSans-Light/OpenSans-Light.svg#OpenSans') format('svg');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: normal;
+  src: url('fonts/OpenSans/OpenSans.eot');
+  src: url('fonts/OpenSans/OpenSans.eot?#iefix') format('embedded-opentype'),
+       local('Open Sans'),
+       local('OpenSans'),
+       url('fonts/OpenSans/OpenSans.woff') format('woff'),
+       url('fonts/OpenSans/OpenSans.ttf') format('truetype'),
+       url('fonts/OpenSans/OpenSans.svg#OpenSans') format('svg');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-style: normal;
+  src: url('fonts/OpenSans-Semibold/OpenSans-Semibold.eot');
+  src: url('fonts/OpenSans-Semibold/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),
+       local('Open Sans Semibold'),
+       local('OpenSans-Semibold'),
+       url('fonts/OpenSans-Semibold/OpenSans-Semibold.woff') format('woff'),
+       url('fonts/OpenSans-Semibold/OpenSans-Semibold.ttf') format('truetype'),
+       url('fonts/OpenSans-Semibold/OpenSans-Semibold.svg#OpenSans') format('svg');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-style: normal;
+  src: url('fonts/OpenSans-Bold/OpenSans-Bold.eot');
+  src: url('fonts/OpenSans-Bold/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+       local('Open Sans Bold'),
+       local('OpenSans-Bold'),
+       url('fonts/OpenSans-Bold/OpenSans-Bold.woff') format('woff'),
+       url('fonts/OpenSans-Bold/OpenSans-Bold.ttf') format('truetype'),
+       url('fonts/OpenSans-Bold/OpenSans-Bold.svg#OpenSans') format('svg');
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}

@@ -8,7 +8,7 @@ import {
 } from 'react-live'
 import {Button} from 'ic-snacks'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 const IndexPage = () => (
   <Layout>
