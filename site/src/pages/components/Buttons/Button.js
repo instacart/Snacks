@@ -1,5 +1,10 @@
+import React from 'react'
+import Layout from '../../../components/Layout'
+import Button from '../../../../../src/components/Buttons/Button'
+import Icon from '../../../../../src/components/Icon/Icon'
+
 export default () => (
-  <div>
+  <Layout>
     This is our Button.
     There are many like it, but this one is ours.
 
@@ -207,5 +212,5 @@ export default () => (
         </Button>
       </span>
     </div>
-  </div>
+  </Layout>
 )
