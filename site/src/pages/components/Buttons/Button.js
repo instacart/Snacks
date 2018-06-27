@@ -1,18 +1,18 @@
 import React from 'react'
 import Layout from '../../../components/Layout'
 import Playground from '../../../components/Playground'
-import {Title1, Title2} from '../../../components/Typography'
+import {Title2, Title3} from '../../../components/Typography'
 
 export default () => (
   <Layout>
-    <Title1>Button</Title1>
+    <Title2>Button</Title2>
     This is our Button.
     There are many like it, but this one is ours.
 
     Buttons guide our users to take a certain action, like 'Add to Cart' or 'Checkout'.
     The call to action should start with an active verb, and the style choice of the button should reflect the hierarchy and importance of the action.
 
-    <Title2>Primary</Title2>
+    <Title3>Primary</Title3>
     Primary buttons are for, you guessed it, the primary action.
     Don't use these lightly.
     Overuse on a single screen could hinder your main objective rather than help it.
@@ -48,7 +48,7 @@ export default () => (
       `}
     </Playground>
 
-    <Title2>Secondary</Title2>
+    <Title3>Secondary</Title3>
     Secondary buttons are for your second most important action.
     A good use is as a cancel button when asking the user a question.
 
@@ -83,7 +83,7 @@ export default () => (
       `}
     </Playground>
 
-    <Title2>Flat</Title2>
+    <Title3>Flat</Title3>
     The flat style can be used when you want a button that looks like a link.
     A typical solution is to use an anchor tag to do this, however this approach
     has issues such as not having consistent padding to a button and there are
@@ -126,7 +126,7 @@ export default () => (
       `}
     </Playground>
 
-    <Title2>Coupon</Title2>
+    <Title3>Coupon</Title3>
 
     Note that coupon buttons aren't affected by a Snacks theme.
 
@@ -161,7 +161,7 @@ export default () => (
       `}
     </Playground>
 
-    <Title2>Disabled</Title2>
+    <Title3>Disabled</Title3>
 
     Disabled buttons are to show the user there is a future action they can take, but they must first accomplish another task.
 
@@ -192,7 +192,7 @@ export default () => (
       `}
     </Playground>
 
-    <Title2>Inverted colors</Title2>
+    <Title3>Inverted colors</Title3>
     Button colors can be inverted for darker backgrounds.
 
     <Playground>
@@ -217,7 +217,7 @@ export default () => (
       `}
     </Playground>
 
-    <Title2>With icons</Title2>
+    <Title3>With icons</Title3>
     Buttons can be rendered with an icon to the left or right of the primary content.
 
     <Playground>
