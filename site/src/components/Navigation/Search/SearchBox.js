@@ -3,9 +3,11 @@ import Radium from 'radium'
 import styles from './style'
 import {SVGIcon, TextField} from 'ic-snacks'
 
-function SearchBox({searchTerm, onChange}) {
-  const icon = searchTerm ?
-    <SVGIcon name='x' style={styles.xIcon} size='small' />
+function SearchBox({searchTerm, onChange, onClear}) {
+  const icon = searchTerm ? (
+    <span onClick={onClear} style={styles.xIconWrapper}>
+      <SVGIcon name='x' style={styles.xIcon} />
+    </span>)
     : <SVGIcon name='search' style={styles.searchIcon} />
 
   return (

@@ -15,6 +15,10 @@ class NavigationHandler extends React.PureComponent {
     this.setState({searchTerm: e.target.value})
   }
 
+  handleClearSearch = () => {
+    this.setState({searchTerm: ''})
+  }
+
   includesSearchTerm = (string) => {
     const { searchTerm } = this.state
     if (!searchTerm) { return false}
@@ -54,6 +58,7 @@ class NavigationHandler extends React.PureComponent {
         <CarrotIcon />
         <Search
           onChange={this.handleSearchChange}
+          onClear={this.handleClearSearch}
           searchTerm={this.state.searchTerm}
         />
         {this.renderLinks()}
