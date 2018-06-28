@@ -11,7 +11,7 @@ function Navigation() {
         key={navGroup.id}
         heading={navGroup.heading}
         links={navGroup.links}
-        type={navGroup.type}
+        role={navGroup.role}
       />
     )
   })

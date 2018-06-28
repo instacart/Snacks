@@ -11,7 +11,6 @@ function NavLink({title, path}) {
         {title}
       </Link>
     </div>
-
   )
 }
 

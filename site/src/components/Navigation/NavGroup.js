@@ -23,6 +23,16 @@ class NavGroup extends React.PureComponent {
     })
   }
 
+  renderIcon = () => {
+    if(this.props.role === 'link') { return }
+    return (
+      <SVGIcon
+        name={this.state.isOpen ? 'arrowUp' : 'arrowDown'}
+        style={styles.navGroupIcon}
+      />
+    )
+  }
+
   render() {
     return (
       <div style={styles.navGroupContainer}>
@@ -31,10 +41,7 @@ class NavGroup extends React.PureComponent {
           onClick={this.handleClick}
         >
           <div style={styles.navGroupTitle}>{this.props.heading}</div>
-          <SVGIcon
-            name={this.state.isOpen ? 'arrowUp' : 'arrowDown'}
-            style={styles.navGroupIcon}
-          />
+          {this.renderIcon()}
         </div>
         <div style={styles.navGroupLinks}>
           {this.renderLinks()}
@@ -47,7 +54,7 @@ class NavGroup extends React.PureComponent {
 NavGroup.propTypes = {
   heading: PropTypes.string.isRequired,
   links: PropTypes.array.isRequired,
-  role: PropTypes.array.isRequired,
+  role: PropTypes.string.isRequired,
 }
 
 export default NavGroup

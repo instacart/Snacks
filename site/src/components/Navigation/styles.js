@@ -13,7 +13,8 @@ export default {
     minWidth: '20vw',
     ...spacing.PADDING_X_SM,
     ...spacing.PADDING_Y_LG,
-    borderRight: '1px solid rgba(0,0,0,0.26)',
+    zIndex: 2,
+    boxShadow: '0 2px 4px 0 rgba(0,0,0,0.26)',
   },
 
   navGroupContainer: {
