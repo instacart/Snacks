@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
 import {
   LiveProvider,
@@ -6,7 +6,13 @@ import {
   LiveError,
   LivePreview,
 } from 'react-live'
-import * as Snacks from 'ic-snacks'
+import * as Snacks from '../../../../src'
+
+class State extends PureComponent {
+  state = this.props.initial || {}
+  setter = state => this.setState(state)
+  render = () => this.props.children(this.state, this.setter)
+}
 
 Playground.propTypes = {
   children: PropTypes.string.isRequired,
@@ -22,7 +28,7 @@ export default function Playground({children}) {
     .split('\n').map(line => line.slice(indentLevel)).join('\n')
     .trim()
   return (
-    <LiveProvider code={stripped} scope={Snacks}>
+    <LiveProvider code={stripped} scope={{...Snacks, State}}>
       <LiveEditor/>
       <LiveError/>
       <LivePreview/>
