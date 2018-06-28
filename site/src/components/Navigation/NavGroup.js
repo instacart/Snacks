@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
-import {SVGIcon} from 'ic-snacks'
+import {SVGIcon, Grow, Fade, Slide} from 'ic-snacks'
 import styles from './styles'
 import NavLink from './NavLink'
 
@@ -16,7 +16,7 @@ class NavGroup extends React.PureComponent {
 
   renderLinks = () => {
     const {links} = this.props
-    if(links.length === 0 || !this.state.isOpen) { return }
+    if(links.length === 0) { return }
     return links.map((link) => {
       return (
         <NavLink key={link.id} title={link.title} path={link.path} />
@@ -45,7 +45,13 @@ class NavGroup extends React.PureComponent {
           {this.renderIcon()}
         </div>
         <div style={styles.navGroupLinks}>
-          {this.renderLinks()}
+          <Grow in={this.state.isOpen} transition={75}>
+            <Fade in={this.state.isOpen} transition={75}>
+              <Slide in={this.state.isOpen} transition={75}>
+                {this.renderLinks()}
+              </Slide>
+            </Fade>
+          </Grow>
         </div>
       </div>
     )
