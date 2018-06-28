@@ -26,6 +26,14 @@ export const title3 = {
   lineHeight: '65px',
 }
 
+export const sectionTitle = {
+  ...gray20,
+  fontSize: 24,
+  fontWeight: 700,
+  characterSpacing: '0.5em',
+  lineHeight: '65px',
+}
+
 export const subtitle = {
   ...gray20,
   ...spaced,
@@ -36,9 +44,16 @@ export const subtitle = {
 
 export const bodyTitle2 = {
   ...spaced,
-  fontSize: 14,
+  fontSize: 16,
   fontWeight: 700,
   lineHeight: '20px',
   color: colors.GRAY_46,
   textTransform: 'uppercase',
+}
+
+export const body = {
+  ...spaced,
+  ...spacing.MARGIN_BOTTOM_SM,
+  fontSize: 16,
+  lineHeight: '20px',
 }

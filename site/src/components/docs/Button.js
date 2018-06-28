@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react'
 import Playground from '../Playground'
-import {Title2, Title3, Subtitle} from '../Typography'
+import {Title2, Title3, SectionTitle, Subtitle, Body} from '../Typography'
 import PropsDocs from '../PropsDocs'
 import ButtonDocs from '!!react-docgen-loader!../../../../src/components/Buttons/Button'
 
@@ -18,213 +18,102 @@ export default () => (
     </Subtitle>
     <PropsDocs docs={ButtonDocs} />
 
-    <Title3>Primary</Title3>
-    Primary buttons are for, you guessed it, the primary action.
-    Don't use these lightly.
-    Overuse on a single screen could hinder your main objective rather than help it.
+    <Title3>Styles</Title3>
+    <SectionTitle>Primary</SectionTitle>
+    <Body>
+      Primary buttons are for, you guessed it, the primary action. Don't use
+      these lightly. Overuse on a single screen could hinder your main objective
+      rather than help it.
+    </Body>
 
     <Playground>
       {`
-        <div>
-          <div style={{marginBottom: 12}}>
-            <div style={{marginBottom: 4}}>Tiny</div>
-            <Button snacksStyle="primary" size="tiny">
-              Primary Button
-            </Button>
-          </div>
-          <div style={{marginBottom: 12}}>
-            <div style={{marginBottom: 4}}>Small</div>
-            <Button snacksStyle="primary" size="small">
-              Primary Button
-            </Button>
-          </div>
-          <div style={{marginBottom: 12}}>
-            <div style={{marginBottom: 4}}>Standard</div>
-            <Button snacksStyle="primary" size="standard">
-              Primary Button
-            </Button>
-          </div>
-          <div>
-            <div style={{marginBottom: 4}}>Large</div>
-            <Button snacksStyle="primary" size="large">
-              Primary Button
-            </Button>
-          </div>
-        </div>
+        <Button snacksStyle="primary">
+          Primary Button
+        </Button>
       `}
     </Playground>
 
-    <Title3>Secondary</Title3>
-    Secondary buttons are for your second most important action.
-    A good use is as a cancel button when asking the user a question.
+    <SectionTitle>Secondary</SectionTitle>
+    <Body>
+      Secondary buttons are for your second most important action.
+      A good use is as a cancel button when asking the user a question.
+    </Body>
 
     <Playground>
       {`
-        <div style={{display: 'flex'}}>
-          <div style={{marginBottom: 12}}>
-            <div style={{marginBottom: 4}}>Tiny</div>
-            <Button snacksStyle="secondary" size="tiny">
-              Secondary Button
-            </Button>
-          </div>
-          <div style={{marginBottom: 12}}>
-            <div style={{marginBottom: 4}}>Small</div>
-            <Button snacksStyle="secondary" size="small">
-              Secondary Button
-            </Button>
-          </div>
-          <div style={{marginBottom: 12}}>
-            <div style={{marginBottom: 4}}>Standard</div>
-            <Button snacksStyle="secondary" size="standard">
-              Secondary Button
-            </Button>
-          </div>
-          <div>
-            <div style={{marginBottom: 4}}>Large</div>
-            <Button snacksStyle="secondary" size="large">
-              Secondary Button
-            </Button>
-          </div>
-        </div>
+        <Button snacksStyle="secondary">
+          Secondary Button
+        </Button>
       `}
     </Playground>
 
-    <Title3>Flat</Title3>
-    The flat style can be used when you want a button that looks like a link.
-    A typical solution is to use an anchor tag to do this, however this approach
-    has issues such as not having consistent padding to a button and there are
-    accessibility concerns (links should navigate, buttons should cause actions).
+    <SectionTitle>Flat</SectionTitle>
+    <Body>
+      The flat style can be used when you want a button that looks like a link.
+      A typical solution is to use an anchor tag to do this, however this approach
+      has issues such as not having consistent padding to a button and there are
+      accessibility concerns (links should navigate, buttons should cause actions).
+    </Body>
 
     <Playground>
       {`
-        <div style={{display: 'flex'}}>
-          <div style={{marginBottom: 12}}>
-            <div style={{marginBottom: 4}}>Tiny</div>
-            <Button snacksStyle="flat" size="tiny">
-              Flat Button
-            </Button>
-          </div>
-          <div style={{marginBottom: 12}}>
-            <div style={{marginBottom: 4}}>Small</div>
-            <Button snacksStyle="flat" size="small">
-              Flat Button
-            </Button>
-          </div>
-          <div style={{marginBottom: 12}}>
-            <div style={{marginBottom: 4}}>Standard</div>
-            <Button snacksStyle="flat" size="standard">
-              Flat Button
-            </Button>
-          </div>
-          <div style={{marginBottom: 12}}>
-            <div style={{marginBottom: 4}}>Large</div>
-            <Button snacksStyle="flat" size="large">
-              Flat Button
-            </Button>
-          </div>
-          <div>
-            <div style={{marginBottom: 4}}>Disabled</div>
-            <Button snacksStyle="flat" size="standard" disabled>
-              Flat Button
-            </Button>
-          </div>
-        </div>
+        <Button snacksStyle="flat">
+          Flat Button
+        </Button>
       `}
     </Playground>
 
-    <Title3>Coupon</Title3>
-
-    Note that coupon buttons aren't affected by a Snacks theme.
+    <SectionTitle>Coupon</SectionTitle>
+    <Body>
+      Note that coupon buttons aren't affected by a Snacks theme.
+    </Body>
 
     <Playground>
       {`
-        <div style={{display: 'flex'}}>
-          <div style={{marginBottom: 12}}>
-            <div style={{marginBottom: 4}}>Tiny</div>
-            <Button snacksStyle="coupon" size="tiny">
-              Coupon Button
-            </Button>
-          </div>
-          <div style={{marginBottom: 12}}>
-            <div style={{marginBottom: 4}}>Small</div>
-            <Button snacksStyle="coupon" size="small">
-              Coupon Button
-            </Button>
-          </div>
-          <div style={{marginBottom: 12}}>
-            <div style={{marginBottom: 4}}>Standard</div>
-            <Button snacksStyle="coupon" size="standard">
-              Coupon Button
-            </Button>
-          </div>
-          <div>
-            <div style={{marginBottom: 4}}>Large</div>
-            <Button snacksStyle="coupon" size="large">
-              Coupon Button
-            </Button>
-          </div>
-        </div>
-      `}
+        <Button snacksStyle="coupon">
+        Coupon Button
+        </Button>
+        `}
     </Playground>
 
-    <Title3>Disabled</Title3>
-
-    Disabled buttons are to show the user there is a future action they can take, but they must first accomplish another task.
+    <SectionTitle>Disabled</SectionTitle>
+    <Body>
+      Disabled buttons are to show the user there is a future action they can
+      take, but they must first accomplish another task.
+    </Body>
 
     <Playground>
       {`
-        <div>
-          <span style={{marginBottom: 12}}>
-            <Button disabled snacksStyle="primary" size="tiny">
-              Disabled Button
-            </Button>
-          </span>
-          <span style={{marginBottom: 12}}>
-            <Button disabled snacksStyle="primary" size="small">
-              Disabled Button
-            </Button>
-          </span>
-          <span style={{marginBottom: 12}}>
-            <Button disabled snacksStyle="primary" size="standard">
-              Disabled Button
-            </Button>
-          </span>
-          <span>
-            <Button disabled snacksStyle="primary" size="large">
-              Disabled Button
-            </Button>
-          </span>
-        </div>
-      `}
+        <Button disabled snacksStyle="primary">
+        Disabled Button
+        </Button>
+        `}
     </Playground>
 
-    <Title3>Inverted colors</Title3>
-    Button colors can be inverted for darker backgrounds.
+    <SectionTitle>Inverted colors</SectionTitle>
+    <Body>
+      Button colors can be inverted for darker backgrounds.
+    </Body>
 
     <Playground>
       {`
-        <div style={{padding: '24px', backgroundColor: '#43B02A'}}>
-          <span style={{marginBottom: 12}}>
-            <Button inverted snacksStyle="primary" size="standard">
-              Primary Button
-            </Button>
-          </span>
-          <span style={{marginBottom: 12}}>
-            <Button inverted snacksStyle="secondary" size="standard">
-              Secondary Button
-            </Button>
-          </span>
-          <span>
-            <Button disabled snacksStyle="primary" size="standard">
-              Disabled Button
-            </Button>
-          </span>
+        <div style={{padding: spacing.MD, backgroundColor: colors.GREEN_500}}>
+          <Button inverted snacksStyle="primary" style={{marginRight: spacing.SM}}>
+            Primary Button
+          </Button>
+          <Button inverted snacksStyle="secondary" style={{marginRight: spacing.SM}}>
+            Secondary Button
+          </Button>
         </div>
       `}
     </Playground>
 
     <Title3>With icons</Title3>
-    Buttons can be rendered with an icon to the left or right of the primary content.
+    <Body>
+      Buttons can be rendered with an icon to the left or right of the primary
+      content.
+    </Body>
 
     <Playground>
       {`
