@@ -1,27 +1,27 @@
 import React from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styles from './styles'
 
-function NavLink({title, path, style}) {
+function NavigationLink({title, path, style}) {
   if (!path) { return <div />}
   return (
     <div style={styles.navLinkRow}>
-      <Link to={path}
+      <NavLink to={path}
         style={{...style, ...styles.navLinkInactive}}
-        activestyle={{color: '#FF8200'}}
+        activeStyle={{color: '#FF8200'}}
       >
         <span style={styles.navLinkText} >{title}</span>
-      </Link>
+      </NavLink>
     </div>
   )
 }
 
-NavLink.propTypes = {
+NavigationLink.propTypes = {
   title: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
   style: PropTypes.object,
 }
 
-export default Radium(NavLink)
+export default Radium(NavigationLink)

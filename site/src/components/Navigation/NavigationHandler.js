@@ -3,12 +3,12 @@ import Radium from 'radium'
 import {Link} from 'react-router-dom'
 import styles from './styles'
 import NavGroup from './NavGroup'
-import NavLink from './NavLink'
+import NavigationLink from './NavigationLink'
 import data from './data'
 import CarrotIcon from './CarrotIcon'
 import Search from './Search'
 
-class NavigationHandler extends React.PureComponent {
+class NavigationHandler extends React.Component {
   state = {
     searchTerm: ''
   }
@@ -44,7 +44,7 @@ class NavigationHandler extends React.PureComponent {
       if(navGroup.role === 'link') {
         if(searchTerm && !this.includesSearchTerm(navGroup.heading)) { return }
         return (
-          <NavLink
+          <NavigationLink
             key={navGroup.id}
             title={navGroup.heading}
             path={navGroup.path}

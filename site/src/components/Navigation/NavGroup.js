@@ -6,9 +6,9 @@ import Grow from '../../../../src/components/Transitions/Grow'
 import Fade from '../../../../src/components/Transitions/Fade'
 import Slide from '../../../../src/components/Transitions/Slide'
 import styles from './styles'
-import NavLink from './NavLink'
+import NavigationLink from './NavigationLink'
 
-class NavGroup extends React.PureComponent {
+class NavGroup extends React.Component {
   state = {
     isOpen: false
   }
@@ -34,7 +34,7 @@ class NavGroup extends React.PureComponent {
     return links.map((link) => {
       if(searchTerm && !this.includesSearchTerm(link.title)) { return }
       return (
-        <NavLink key={link.id} title={link.title} path={link.path} />
+        <NavigationLink key={link.id} title={link.title} path={link.path} />
       )
     })
   }
