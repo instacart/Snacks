@@ -2,22 +2,51 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {SVGIcon} from 'ic-snacks'
 import styles from './styles'
+import NavLink from './NavLink'
 
-function NavGroup({title, isActive}) {
-  return (
-    <div style={styles.navGroup}>
-      <div style={styles.navGroupTitle}>{title}</div>
-      <SVGIcon
-        name={isActive ? 'arrowUp' : 'arrowDown'}
-        style={styles.navGroupIcon}
-      />
-    </div>
-  )
+class NavGroup extends React.PureComponent {
+  state = {
+    isOpen: false
+  }
+
+  handleClick = () => {
+    this.setState({isOpen: !this.state.isOpen})
+  }
+
+  renderLinks = () => {
+    const {links} = this.props
+    if(links.length === 0) { return }
+    return links.map(link => {
+      return (
+        <NavLink key={link.title} title={link.title} path={link.path} />
+      )
+    })
+  }
+
+  render() {
+    return (
+      <div style={styles.navGroupContainer}>
+        <div
+          style={styles.navGroupTitleContainer}
+          onClick={this.handleClick}
+        >
+          <div style={styles.navGroupTitle}>{this.props.heading}</div>
+          <SVGIcon
+            name={this.state.isOpen ? 'arrowUp' : 'arrowDown'}
+            style={styles.navGroupIcon}
+          />
+        </div>
+        <div style={styles.navGroupLinks}>
+          {this.renderLinks()}
+        </div>
+      </div>
+    )
+  }
 }
 
 NavGroup.propTypes = {
-  title: PropTypes.string.isRequired,
-  isActive: PropTypes.bool.isRequired,
+  heading: PropTypes.string.isRequired,
+  links: PropTypes.array.isRequired,
 }
 
 export default NavGroup

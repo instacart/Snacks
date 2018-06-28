@@ -12,7 +12,7 @@ export default {
   },
   content: {
     ...spacing.PADDING_LG,
-    backgroundColor: colors.GRAY_97,
+    backgroundColor: colors.WHITE,
     minHeight: '100vh',
     width: '100%',
   },
