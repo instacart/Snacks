@@ -13,7 +13,7 @@ export default {
     minWidth: '20vw',
     ...spacing.PADDING_X_SM,
     ...spacing.PADDING_Y_LG,
-    border: '1px solid rgba(0,0,0,0.26)',
+    borderRight: '1px solid rgba(0,0,0,0.26)',
   },
 
   navGroupContainer: {
@@ -42,8 +42,13 @@ export default {
     ...spacing.PADDING_LEFT_XS,
     ...spacing.MARGIN_Y_XS,
   },
+  navLinkRow: {
+    height: 32,
+  },
   navLink: {
     fontSize: 12,
+    color: '#424242',
+    textDecoration: 'none'
   },
   navLinkActive: {
     fontSize: 12,

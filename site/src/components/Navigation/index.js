@@ -8,9 +8,10 @@ function Navigation() {
   const navigationlinks = data.map((navGroup) => {
     return (
       <NavGroup
-        key={navGroup.heading}
+        key={navGroup.id}
         heading={navGroup.heading}
         links={navGroup.links}
+        type={navGroup.type}
       />
     )
   })
