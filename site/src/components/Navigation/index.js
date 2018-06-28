@@ -3,7 +3,7 @@ import styles from './styles'
 import NavGroup from './NavGroup'
 import NavLink from './NavLink'
 import data from './data'
-import CarrotIcon from './CarrotIcon'
+import CarrotIcon from './CarrotIcon.svg'
 import Search from './Search'
 
 function Navigation() {
