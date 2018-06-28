@@ -1,246 +1,315 @@
 export default [
   {
+    id: 1,
     heading: 'INTRODUCTION',
+    role: 'link',
     path: '/introduction',
     links: []
   },
   {
+    id: 2,
     heading: 'INSTALLATION',
+    role: 'link',
     path: '/installation',
     links: []
   },
   {
+    id: 3,
     heading: 'BASIC USAGE',
+    role: 'link',
     path: '/basic_usage',
     links: []
   },
   {
+    id: 4,
     heading: 'UTILITIES',
+    role: 'linkGroup',
     links: [
       {
+        id: 5,
         title: 'Colors',
         path: '/colors'
       },
       {
+        id: 6,
         title: 'Spacing',
         path: '/spacing'
       },
       {
+        id: 7,
         title: 'Responsives',
         path: '/responsives'
       },
     ]
   },
   {
+    id: 8,
     heading: 'ICONS',
+    role: 'link',
     path: '/icons',
     links: []
   },
   {
+    id: 9,
     heading: 'SVGICONS',
+    role: 'link',
     path: '/SVG_Icons',
     links: []
   },
   {
+    id: 10,
     heading: 'THEMES',
+    role: 'linkGroup',
     links: [
       {
+        id: 11,
         title: 'Themer',
         path: '/themer'
       },
       {
+        id: 12,
         title: 'withTheme HOC',
         path: '/withtheme_HOC'
       },
     ]
   },
   {
-    heading: 'COMPONENTS',
+    id: 13,
+    heading: 'BUTTONS',
+    role: 'sub-group',
     links: [
       {
-        heading: 'BUTTONS',
-        links: [
-          {
-            title: 'Button',
-            path: '/button'
-          },
-          {
-            title: 'Checkbox',
-            path: '/checkbox'
-          },
-          {
-            title: 'Button',
-            path: '/button'
-          },
-          {
-            title: 'CircleButton',
-            path: '/circlebutton'
-          },
-          {
-            title: 'Radio',
-            path: '/radio'
-          },
-          {
-            title: 'RadioGroup',
-            path: '/radiogroup'
-          },
-        ]
+        id: 14,
+        title: 'Button',
+        path: '/button'
       },
       {
-        heading: 'FORMS',
-        links: [
-          {
-            title: 'FloatingLabel',
-            path: '/floatinglabel'
-          },
-          {
-            title: 'Form',
-            path: '/form'
-          },
-          {
-            title: 'FormComponent',
-            path: '/formcomponent'
-          },
-          {
-            title: 'HelperText',
-            path: '/helpertext'
-          },
-          {
-            title: 'phonenumberfield',
-            path: '/radio'
-          },
-          {
-            title: 'Select',
-            path: '/select'
-          },
-          {
-            title: 'ServerError',
-            path: '/servererror'
-          },
-          {
-            title: 'TextField',
-            path: '/textfield'
-          },
-          {
-            title: 'TextFieldHint',
-            path: '/textfieldhint'
-          },
-          {
-            title: 'ValidationError',
-            path: '/validationerror'
-          },
-        ]
+        id: 15,
+        title: 'Checkbox',
+        path: '/checkbox'
       },
       {
-        heading: 'GRID',
-        links: [
-          {
-            title: 'Column',
-            path: '/column'
-          },
-          {
-            title: 'Grid',
-            path: '/grid'
-          },
-          {
-            title: 'Row',
-            path: '/row'
-          },
-        ]
+        id: 16,
+        title: 'Button',
+        path: '/button'
       },
       {
-        heading: 'ICONS',
-        path: '/icon',
-        links: []
+        id: 17,
+        title: 'CircleButton',
+        path: '/circlebutton'
       },
       {
-        heading: 'SVGICONS',
-        path: '/SVGicon',
-        links: []
+        id: 18,
+        title: 'Radio',
+        path: '/radio'
       },
       {
-        heading: 'LINK',
-        path: '/link',
-        links: []
+        id: 19,
+        title: 'RadioGroup',
+        path: '/radiogroup'
+      },
+    ]
+  },
+  {
+    id: 20,
+    heading: 'FORMS',
+    role: 'linkGroup',
+    links: [
+      {
+        id: 21,
+        title: 'FloatingLabel',
+        path: '/floatinglabel'
       },
       {
-        heading: 'LOADING',
-        path: '/loading',
-        links: [
-          {
-            title: 'LoadingBox',
-            path: '/loadingbox'
-          },
-        ]
+        id: 22,
+        title: 'Form',
+        path: '/form'
       },
       {
-        heading: 'MENUS',
-        links: [
-          {
-            title: 'DropdownMenu',
-            path: '/dropdownmenu'
-          },
-          {
-            title: 'Menu',
-            path: '/menu'
-          },
-          {
-            title: 'MenuDivider',
-            path: '/menudivider'
-          },
-          {
-            title: 'MenuItem',
-            path: '/menuitem'
-          },
-        ]
+        id: 23,
+        title: 'FormComponent',
+        path: '/formcomponent'
       },
       {
-        heading: 'NAVIGATION PILLS',
-        links: [
-          {
-            title: 'NavigationPill',
-            path: '/navigationpill'
-          },
-          {
-            title: 'NavigationPills',
-            path: '/navigationpills'
-          },
-        ]
+        id: 24,
+        title: 'HelperText',
+        path: '/helpertext'
       },
       {
-        heading: 'SCROLL TRACK',
-        links: [
-          {
-            title: 'ScrollTrack',
-            path: '/scrolltrack'
-          },
-          {
-            title: 'ScrollTrackPropTypes',
-            path: '/scrolltrackproptypes'
-          },
-        ]
+        id: 25,
+        title: 'phonenumberfield',
+        path: '/radio'
       },
       {
-        heading: 'TOOLTIP',
-        path: '/Tooltip',
-        links: []
+        id: 26,
+        title: 'Select',
+        path: '/select'
       },
       {
-        heading: 'TRANSITIONS',
-        links: [
-          {
-            title: 'Fade',
-            path: '/fade'
-          },
-          {
-            title: 'Grow',
-            path: '/grow'
-          },
-          {
-            title: 'Slide',
-            path: '/slide'
-          },
-        ]
+        id: 27,
+        title: 'ServerError',
+        path: '/servererror'
+      },
+      {
+        id: 28,
+        title: 'TextField',
+        path: '/textfield'
+      },
+      {
+        id: 29,
+        title: 'TextFieldHint',
+        path: '/textfieldhint'
+      },
+      {
+        id: 30,
+        title: 'ValidationError',
+        path: '/validationerror'
+      },
+    ]
+  },
+  {
+    id: 31,
+    heading: 'GRID',
+    role: 'linkGroup',
+    links: [
+      {
+        id: 32,
+        title: 'Column',
+        path: '/column'
+      },
+      {
+        id: 33,
+        title: 'Grid',
+        path: '/grid'
+      },
+      {
+        id: 34,
+        title: 'Row',
+        path: '/row'
+      },
+    ]
+  },
+  {
+    id: 35,
+    heading: 'ICONS',
+    role: 'link',
+    path: '/icon',
+    links: []
+  },
+  {
+    id: 36,
+    heading: 'SVGICONS',
+    role: 'link',
+    path: '/SVGicon',
+    links: []
+  },
+  {
+    id: 37,
+    heading: 'LINK',
+    role: 'link',
+    path: '/link',
+    links: []
+  },
+  {
+    id: 38,
+    heading: 'LOADING',
+    role: 'linkGroup',
+    path: '/loading',
+    links: [
+      {
+        id: 39,
+        title: 'LoadingBox',
+        path: '/loadingbox'
+      },
+    ]
+  },
+  {
+    id: 40,
+    heading: 'MENUS',
+    role: 'linkGroup',
+    links: [
+      {
+        id: 41,
+        title: 'DropdownMenu',
+        path: '/dropdownmenu'
+      },
+      {
+        id: 42,
+        title: 'Menu',
+        path: '/menu'
+      },
+      {
+        id: 43,
+        title: 'MenuDivider',
+        path: '/menudivider'
+      },
+      {
+        id: 44,
+        title: 'MenuItem',
+        path: '/menuitem'
+      },
+    ]
+  },
+  {
+    id: 45,
+    heading: 'NAVIGATION PILLS',
+    role: 'linkGroup',
+    links: [
+      {
+        id: 46,
+        title: 'NavigationPill',
+        path: '/navigationpill'
+      },
+      {
+        id: 47,
+        title: 'NavigationPills',
+        path: '/navigationpills'
+      },
+    ]
+  },
+  {
+    id: 48,
+    heading: 'SCROLL TRACK',
+    role: 'linkGroup',
+    links: [
+      {
+        id: 49,
+        title: 'ScrollTrack',
+        path: '/scrolltrack'
+      },
+      {
+        id: 50,
+        title: 'ScrollTrackProproles',
+        path: '/scrolltrackproproles'
+      },
+    ]
+  },
+  {
+    id: 51,
+    heading: 'TOOLTIP',
+    role: 'link',
+    path: '/Tooltip',
+    links: []
+  },
+  {
+    id: 52,
+    heading: 'TRANSITIONS',
+    role: 'linkGroup',
+    links: [
+      {
+        id: 53,
+        title: 'Fade',
+        path: '/fade'
+      },
+      {
+        id: 54,
+        title: 'Grow',
+        path: '/grow'
+      },
+      {
+        id: 55,
+        title: 'Slide',
+        path: '/slide'
       },
     ]
   },

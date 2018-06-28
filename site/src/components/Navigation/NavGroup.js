@@ -15,10 +15,10 @@ class NavGroup extends React.PureComponent {
 
   renderLinks = () => {
     const {links} = this.props
-    if(links.length === 0) { return }
-    return links.map(link => {
+    if(links.length === 0 || !this.state.isOpen) { return }
+    return links.map((link) => {
       return (
-        <NavLink key={link.title} title={link.title} path={link.path} />
+        <NavLink key={link.id} title={link.title} path={link.path} />
       )
     })
   }
@@ -47,6 +47,7 @@ class NavGroup extends React.PureComponent {
 NavGroup.propTypes = {
   heading: PropTypes.string.isRequired,
   links: PropTypes.array.isRequired,
+  role: PropTypes.array.isRequired,
 }
 
 export default NavGroup
