@@ -193,7 +193,7 @@ export default [
     id: 36,
     heading: 'SVGICONS',
     role: 'link',
-    path: '/components/SVGicon',
+    path: '/components/svgicons',
     links: []
   },
   {

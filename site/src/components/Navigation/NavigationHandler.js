@@ -1,5 +1,6 @@
 import React from 'react'
 import Radium from 'radium'
+import {Link} from 'react-router-dom'
 import styles from './styles'
 import NavGroup from './NavGroup'
 import NavLink from './NavLink'
@@ -56,10 +57,10 @@ class NavigationHandler extends React.PureComponent {
   render() {
     return (
       <div style={styles.container}>
-        <div style={styles.logo}>
+        <Link to='/' style={styles.logo}>
           <CarrotIcon style={styles.carrotIcon} />
           <div style={styles.title}>Snacks</div>
-        </div>
+        </Link>
         <Search
           onChange={this.handleSearchChange}
           onClear={this.handleClearSearch}

@@ -26,6 +26,7 @@ export default {
     display: 'flex',
     fontSize: 24,
     fontWeight: 600,
+    textDecoration: 'none',
   },
   title: {
     position: 'relative',
