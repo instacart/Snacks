@@ -1,11 +1,9 @@
-import React from 'react'
-import Layout from '../Layout'
+import React, {Fragment} from 'react'
 import Playground from '../Playground'
 import {Title3} from '../Typography'
 
 export default () => (
-  <Layout>
-
+  <Fragment>
     This component outputs a radio button with an optional label.
 
     You can define whether the button starts in the pressed on unpressed state through the `isSelected` prop. In addition, you can change the selected/unselected state at any moment after the mount state by redifining the prop `isSelected`.
@@ -76,6 +74,5 @@ export default () => (
         <Radio id="radio5" onChange={onChange} isDisabled>I am disabled</Radio>
       `}
     </Playground>
-
-  </Layout>
+  </Fragment>
 )

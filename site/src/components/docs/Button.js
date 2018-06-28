@@ -1,10 +1,9 @@
-import React from 'react'
-import Layout from '../Layout'
+import React, {Fragment} from 'react'
 import Playground from '../Playground'
 import {Title2, Title3} from '../Typography'
 
 export default () => (
-  <Layout>
+  <Fragment>
     <Title2>Button</Title2>
     This is our Button.
     There are many like it, but this one is ours.
@@ -241,5 +240,5 @@ export default () => (
         </div>
       `}
     </Playground>
-  </Layout>
+  </Fragment>
 )

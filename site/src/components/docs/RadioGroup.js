@@ -1,11 +1,9 @@
-import React from 'react'
-import Layout from '../Layout'
+import React, {Fragment} from 'react'
 import Playground from '../Playground'
 import {Title3} from '../Typography'
 
 export default () => (
-  <Layout>
-
+  <Fragment>
     <Title3>Groups</Title3>
     Create a radio button group where only one radio button can be selected at a time.
 
@@ -64,6 +62,5 @@ export default () => (
         </RadioGroup>
       `}
     </Playground>
-
-  </Layout>
+  </Fragment>
 )

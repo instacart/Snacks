@@ -1,12 +1,9 @@
-import React from 'react'
-import Layout from '../Layout'
+import React, {Fragment} from 'react'
 import Playground from '../Playground'
 
 export default () => (
-  <Layout>
-
+  <Fragment>
     CircleButton example:
-
     <Playground>
       {`
         <div>
@@ -14,6 +11,5 @@ export default () => (
         </div>
       `}
     </Playground>
-
-  </Layout>
+  </Fragment>
 )

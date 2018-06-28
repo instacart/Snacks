@@ -1,34 +1,34 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Layout from './components/Layout'
-import Button from './components/Buttons/Button'
-import Checkbox from './components/Buttons/Checkbox'
-import CircleButton from './components/Buttons/CircleButton'
-import Radio from './components/Buttons/Radio'
-import RadioGroup from './components/Buttons/RadioGroup'
+import Button from './components/docs/Button'
+import Checkbox from './components/docs/Checkbox'
+import CircleButton from './components/docs/CircleButton'
+import Radio from './components/docs/Radio'
+import RadioGroup from './components/docs/RadioGroup'
 
 export default function App() {
   return (
     <BrowserRouter>
       <Layout>
         <Route
-          path='/components/buttons/button'
+          path='/components/button'
           component={Button}
         />
         <Route
-          path='/components/buttons/checkbox'
+          path='/components/checkbox'
           component={Checkbox}
         />
         <Route
-          path='/components/buttons/circlebutton'
+          path='/components/circlebutton'
           component={CircleButton}
         />
         <Route
-          path='/components/buttons/radio'
+          path='/components/radio'
           component={Radio}
         />
         <Route
-          path='/components/buttons/radiogroup'
+          path='/components/radiogroup'
           component={RadioGroup}
         />
       </Layout>
