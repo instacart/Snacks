@@ -3,6 +3,7 @@ import Tooltip from './components/Tooltip/Tooltip'
 import Button from './components/Buttons/Button'
 import CircleButton from './components/Buttons/CircleButton'
 import Radio from './components/Buttons/Radio'
+import RadioGroup from './components/Buttons/RadioGroup'
 import Checkbox from './components/Buttons/Checkbox'
 import Column from './components/Grid/Column'
 import GlobalTheme from './styles/GlobalTheme'
@@ -81,6 +82,7 @@ export {
   Button,
   CircleButton,
   Radio,
+  RadioGroup,
   Checkbox,
   Icon,
   SVGIcon,
