@@ -65,3 +65,23 @@ html {
 body {
   margin: 0;
 }
+
+.prism-code .token {
+  color: #212121;
+}
+
+.prism-code .token.tag {
+  color: #2A9715;
+}
+
+.prism-code .token.attr-name {
+  color: #43B02A;
+}
+
+.prism-code .token.punctuation {
+  color: #BDBDBD;
+}
+
+.prism-code .token.language-javascript {
+  color: #177D05;
+}
