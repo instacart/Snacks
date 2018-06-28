@@ -10,8 +10,6 @@ const groupIcon = {
 const navLink = {
   fontSize: 14,
   textDecoration: 'none',
-  display: 'inline-block',
-  width: '100%',
 }
 
 export default {
@@ -45,6 +43,8 @@ export default {
     fontSize: 14,
     fontWeight: 600,
     color: colors.GRAY_20,
+    width: '100%',
+    display: 'inline-block',
     ':hover': {
       color: colors.GREEN_500,
     }
@@ -68,12 +68,12 @@ export default {
   navLinkInactive: {
     ...navLink,
     color: '#424242',
+  },
+  navLinkText: {
+    display: 'inline-block',
+    width: '100%',
     ':hover': {
       color: colors.GREEN_500,
-    }
-  },
-  navLinkActive: {
-    ...navLink,
-    color: '#FF8200',
+    },
   }
 }

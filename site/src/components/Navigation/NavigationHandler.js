@@ -9,7 +9,7 @@ import Search from './Search'
 
 class NavigationHandler extends React.PureComponent {
   state = {
-    searchTerm: null
+    searchTerm: ''
   }
 
   handleSearchChange = (e) => {
