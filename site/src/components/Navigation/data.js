@@ -87,11 +87,6 @@ export default [
         path: '/components/checkbox'
       },
       {
-        id: 16,
-        title: 'Button',
-        path: '/components/button'
-      },
-      {
         id: 17,
         title: 'CircleButton',
         path: '/components/circlebutton'

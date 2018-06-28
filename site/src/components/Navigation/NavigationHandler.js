@@ -3,7 +3,7 @@ import styles from './styles'
 import NavGroup from './NavGroup'
 import NavLink from './NavLink'
 import data from './data'
-import CarrotIcon from './carrotIcon.svg'
+import * as CarrotIcon from './carrotIcon.svg'
 import Search from './Search'
 
 class NavigationHandler extends React.PureComponent {
@@ -55,7 +55,7 @@ class NavigationHandler extends React.PureComponent {
   render() {
     return (
       <div style={styles.container}>
-        <img src='CarrotIcon' alt='carrot icon'/>
+        <img src='CarrotIcon' alt='carrot icon' style={styles.carrotIcon}/>
         <Search
           onChange={this.handleSearchChange}
           onClear={this.handleClearSearch}
