@@ -14,10 +14,22 @@ class NavGroup extends React.PureComponent {
     this.setState({isOpen: !this.state.isOpen})
   }
 
+  includesSearchTerm = (string) => {
+    const { searchTerm } = this.props
+    if (!searchTerm) { return false}
+    const included = string.toLowerCase().includes(searchTerm.toLowerCase())
+    if (included) {
+      this.setState({isOpen: true})
+    }
+    return included
+  }
+
   renderLinks = () => {
-    const {links} = this.props
+    const {links, searchTerm} = this.props
     if(links.length === 0) { return }
+
     return links.map((link) => {
+      if(searchTerm && !this.includesSearchTerm(link.title)) { return }
       return (
         <NavLink key={link.id} title={link.title} path={link.path} />
       )

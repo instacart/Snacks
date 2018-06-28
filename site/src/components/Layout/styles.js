@@ -14,6 +14,7 @@ export default {
     ...spacing.PADDING_XL,
     backgroundColor: colors.WHITE,
     minHeight: '100vh',
-    width: '100%',
+    maxWidth: '70vw',
+    marginLeft: '25vw',
   },
 }
