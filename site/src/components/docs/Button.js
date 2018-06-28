@@ -1,15 +1,22 @@
 import React, {Fragment} from 'react'
 import Playground from '../Playground'
-import {Title2, Title3} from '../Typography'
+import {Title2, Title3, Subtitle} from '../Typography'
+import PropsDocs from '../PropsDocs'
+import ButtonDocs from '!!react-docgen-loader!../../../../src/components/Buttons/Button'
 
 export default () => (
   <Fragment>
     <Title2>Button</Title2>
-    This is our Button.
-    There are many like it, but this one is ours.
+    <Subtitle>
+      This is our Button.
+      There are many like it, but this one is ours.
 
-    Buttons guide our users to take a certain action, like 'Add to Cart' or 'Checkout'.
-    The call to action should start with an active verb, and the style choice of the button should reflect the hierarchy and importance of the action.
+      Buttons guide our users to take a certain action, like 'Add to Cart' or
+      'Checkout'. The call to action should start with an active verb, and the
+      style choice of the button should reflect the hierarchy and importance of
+      the action.
+    </Subtitle>
+    <PropsDocs docs={ButtonDocs} />
 
     <Title3>Primary</Title3>
     Primary buttons are for, you guessed it, the primary action.

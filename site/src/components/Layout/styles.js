@@ -11,7 +11,7 @@ export default {
     flex: 1,
   },
   content: {
-    ...spacing.PADDING_LG,
+    ...spacing.PADDING_XL,
     backgroundColor: colors.WHITE,
     minHeight: '100vh',
     width: '100%',

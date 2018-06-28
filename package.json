@@ -55,6 +55,7 @@
     "prompt": "^1.0.0",
     "radium": "^0.22.0",
     "react": "^16.2.0",
+    "react-docgen-loader": "^2.9.1",
     "react-dom": "^16.2.0",
     "react-styleguidist": "^7.0.17",
     "react-test-renderer": "^16.2.0",
