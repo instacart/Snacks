@@ -1,5 +1,4 @@
-import spacing from '../../../../src/styles/spacing'
-import colors from '../../../../src/styles/colors'
+import {spacing, colors} from 'ic-snacks'
 
 const groupIcon = {
   marginTop: 4,
@@ -22,8 +21,18 @@ export default {
     ...spacing.PADDING_X_LG,
     borderRight: `1px solid ${colors.GRAY_88}`,
   },
-  carrotIcon: {
+  logo: {
     ...spacing.MARGIN_TOP_LG,
+    display: 'flex',
+    fontSize: 24,
+    fontWeight: 600,
+  },
+  title: {
+    position: 'relative',
+    top: -2,
+    color: colors.GRAY_20,
+  },
+  carrotIcon: {
   },
   navGroupContainer: {
     display: 'flex',

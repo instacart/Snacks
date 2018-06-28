@@ -56,7 +56,10 @@ class NavigationHandler extends React.PureComponent {
   render() {
     return (
       <div style={styles.container}>
-        <CarrotIcon style={styles.carrotIcon} />
+        <div style={styles.logo}>
+          <CarrotIcon style={styles.carrotIcon} />
+          <div style={styles.title}>Snacks</div>
+        </div>
         <Search
           onChange={this.handleSearchChange}
           onClear={this.handleClearSearch}
