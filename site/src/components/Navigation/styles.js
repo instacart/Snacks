@@ -7,7 +7,7 @@ const groupIcon = {
 }
 
 const navLink = {
-  fontSize: 12,
+  fontSize: 14,
   textDecoration: 'none'
 }
 
@@ -16,7 +16,7 @@ export default {
     backgroundColor: colors.GRAY_97,
     minHeight: '100vh',
     minWidth: '20vw',
-    ...spacing.PADDING_X_SM,
+    ...spacing.PADDING_X_LG,
     ...spacing.PADDING_Y_LG,
     zIndex: 2,
     boxShadow: '0 2px 4px 0 rgba(0,0,0,0.26)',
@@ -48,7 +48,7 @@ export default {
     color: colors.GRAY_74,
   },
   navGroupLinks: {
-    ...spacing.PADDING_LEFT_XS,
+    ...spacing.PADDING_LEFT_SM,
     ...spacing.MARGIN_Y_XS,
   },
   navLinkRow: {

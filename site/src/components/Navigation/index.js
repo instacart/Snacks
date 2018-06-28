@@ -3,9 +3,9 @@ import styles from './styles'
 import NavGroup from './NavGroup'
 import NavLink from './NavLink'
 import data from './data'
+import CarrotIcon from './CarrotIcon'
 
 function Navigation() {
-
   const navigationlinks = data.map((navGroup) => {
     if(navGroup.role === 'link') {
       return (
@@ -29,6 +29,7 @@ function Navigation() {
 
   return (
     <div style={styles.container}>
+      <CarrotIcon />
       {navigationlinks}
     </div>
   )
