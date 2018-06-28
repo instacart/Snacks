@@ -6,7 +6,7 @@ import {
   LiveError,
   LivePreview,
 } from 'react-live'
-import * as Snacks from '../../../../dist/snacks'
+import * as Snacks from '../../../../src'
 import State from './State'
 import format from './format'
 import * as styles from './styles'

@@ -1,48 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { graphql, StaticQuery } from 'gatsby'
 import { StyleRoot } from 'radium'
 
-import Header from '../Header'
+import Navigation from '../Navigation'
 import './styles.css'
+import styles from './styles'
 
-const Layout = ({ children, data }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        />
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <StyleRoot>
-          <div
-            style={{
-              margin: '0 auto',
-              maxWidth: 960,
-              padding: '0px 1.0875rem 1.45rem',
-              paddingTop: 0,
-            }}
-          >
-            {children}
-          </div>
-        </StyleRoot>
-      </>
-    )}
-  />
+const Layout = ({children}) => (
+  <StyleRoot>
+    <div style={styles.container} >
+      <div style={styles.body}>
+        <Navigation />
+        <div style={styles.content} >
+          {children}
+        </div>
+      </div>
+    </div>
+  </StyleRoot>
 )
 
 Layout.propTypes = {
