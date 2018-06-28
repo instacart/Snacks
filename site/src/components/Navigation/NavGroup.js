@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Radium from 'radium'
 import {SVGIcon} from 'ic-snacks'
 import styles from './styles'
 import NavLink from './NavLink'
@@ -57,4 +58,4 @@ NavGroup.propTypes = {
   role: PropTypes.string.isRequired,
 }
 
-export default NavGroup
+export default Radium(NavGroup)

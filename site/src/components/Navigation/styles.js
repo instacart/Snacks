@@ -6,6 +6,11 @@ const groupIcon = {
   height: 14,
 }
 
+const navLink = {
+  fontSize: 12,
+  textDecoration: 'none'
+}
+
 export default {
   container: {
     backgroundColor: colors.GRAY_97,
@@ -30,6 +35,9 @@ export default {
     fontSize: 14,
     fontWeight: 600,
     color: colors.GRAY_20,
+    ':hover': {
+      cursor: 'pointer'
+    }
   },
   navGroupIcon: {
     ...groupIcon,
@@ -44,15 +52,14 @@ export default {
     ...spacing.MARGIN_Y_XS,
   },
   navLinkRow: {
-    height: 32,
+    height: 40,
   },
-  navLink: {
-    fontSize: 12,
+  navLinkInactive: {
+    ...navLink,
     color: '#424242',
-    textDecoration: 'none'
   },
   navLinkActive: {
-    fontSize: 12,
+    ...navLink,
     color: '#FF8200',
   }
 

@@ -1,24 +1,26 @@
 export default [
   {
     id: 1,
-    heading: 'INTRODUCTION',
-    role: 'link',
-    path: '/introduction',
-    links: []
-  },
-  {
-    id: 2,
-    heading: 'INSTALLATION',
-    role: 'link',
-    path: '/installation',
-    links: []
-  },
-  {
-    id: 3,
-    heading: 'BASIC USAGE',
-    role: 'link',
-    path: '/basic_usage',
-    links: []
+    heading: 'FOUNDATIONS',
+    role: 'linkGroup',
+    links: [
+      {
+        id: 2,
+        title: 'Introduction',
+        path: '/components/introduction',
+      },
+      {
+        id: 3,
+        title: 'Installation',
+        role: 'link',
+        path: '/components/installation',
+      },
+      {
+        id: 56,
+        title: 'Basic Usage',
+        path: '/components/basic_usage',
+      },
+    ]
   },
   {
     id: 4,
@@ -28,33 +30,29 @@ export default [
       {
         id: 5,
         title: 'Colors',
-        path: '/colors'
+        path: '/components/colors'
       },
       {
         id: 6,
         title: 'Spacing',
-        path: '/spacing'
+        path: '/components/spacing'
       },
       {
         id: 7,
         title: 'Responsives',
-        path: '/responsives'
+        path: '/components/responsives'
+      },
+      {
+        id: 8,
+        title: 'Icons',
+        path: '/components/icons',
+      },
+      {
+        id: 9,
+        title: 'SVGIcons',
+        path: '/components/SVG_Icons',
       },
     ]
-  },
-  {
-    id: 8,
-    heading: 'ICONS',
-    role: 'link',
-    path: '/icons',
-    links: []
-  },
-  {
-    id: 9,
-    heading: 'SVGICONS',
-    role: 'link',
-    path: '/SVG_Icons',
-    links: []
   },
   {
     id: 10,
@@ -64,12 +62,12 @@ export default [
       {
         id: 11,
         title: 'Themer',
-        path: '/themer'
+        path: '/components/themer'
       },
       {
         id: 12,
         title: 'withTheme HOC',
-        path: '/withtheme_HOC'
+        path: '/components/withtheme_HOC'
       },
     ]
   },
@@ -81,32 +79,32 @@ export default [
       {
         id: 14,
         title: 'Button',
-        path: '/button'
+        path: '/components/button'
       },
       {
         id: 15,
         title: 'Checkbox',
-        path: '/checkbox'
+        path: '/components/checkbox'
       },
       {
         id: 16,
         title: 'Button',
-        path: '/button'
+        path: '/components/button'
       },
       {
         id: 17,
         title: 'CircleButton',
-        path: '/circlebutton'
+        path: '/components/circlebutton'
       },
       {
         id: 18,
         title: 'Radio',
-        path: '/radio'
+        path: '/components/radio'
       },
       {
         id: 19,
         title: 'RadioGroup',
-        path: '/radiogroup'
+        path: '/components/radiogroup'
       },
     ]
   },
@@ -118,52 +116,52 @@ export default [
       {
         id: 21,
         title: 'FloatingLabel',
-        path: '/floatinglabel'
+        path: '/components/floatinglabel'
       },
       {
         id: 22,
         title: 'Form',
-        path: '/form'
+        path: '/components/form'
       },
       {
         id: 23,
         title: 'FormComponent',
-        path: '/formcomponent'
+        path: '/components/formcomponent'
       },
       {
         id: 24,
         title: 'HelperText',
-        path: '/helpertext'
+        path: '/components/helpertext'
       },
       {
         id: 25,
         title: 'phonenumberfield',
-        path: '/radio'
+        path: '/components/radio'
       },
       {
         id: 26,
         title: 'Select',
-        path: '/select'
+        path: '/components/select'
       },
       {
         id: 27,
         title: 'ServerError',
-        path: '/servererror'
+        path: '/components/servererror'
       },
       {
         id: 28,
         title: 'TextField',
-        path: '/textfield'
+        path: '/components/textfield'
       },
       {
         id: 29,
         title: 'TextFieldHint',
-        path: '/textfieldhint'
+        path: '/components/textfieldhint'
       },
       {
         id: 30,
         title: 'ValidationError',
-        path: '/validationerror'
+        path: '/components/validationerror'
       },
     ]
   },
@@ -175,17 +173,17 @@ export default [
       {
         id: 32,
         title: 'Column',
-        path: '/column'
+        path: '/components/column'
       },
       {
         id: 33,
         title: 'Grid',
-        path: '/grid'
+        path: '/components/grid'
       },
       {
         id: 34,
         title: 'Row',
-        path: '/row'
+        path: '/components/row'
       },
     ]
   },
@@ -193,33 +191,33 @@ export default [
     id: 35,
     heading: 'ICONS',
     role: 'link',
-    path: '/icon',
+    path: '/components/icon',
     links: []
   },
   {
     id: 36,
     heading: 'SVGICONS',
     role: 'link',
-    path: '/SVGicon',
+    path: '/components/SVGicon',
     links: []
   },
   {
     id: 37,
     heading: 'LINK',
     role: 'link',
-    path: '/link',
+    path: '/components/link',
     links: []
   },
   {
     id: 38,
     heading: 'LOADING',
     role: 'linkGroup',
-    path: '/loading',
+    path: '/components/loading',
     links: [
       {
         id: 39,
         title: 'LoadingBox',
-        path: '/loadingbox'
+        path: '/components/loadingbox'
       },
     ]
   },
@@ -231,22 +229,22 @@ export default [
       {
         id: 41,
         title: 'DropdownMenu',
-        path: '/dropdownmenu'
+        path: '/components/dropdownmenu'
       },
       {
         id: 42,
         title: 'Menu',
-        path: '/menu'
+        path: '/components/menu'
       },
       {
         id: 43,
         title: 'MenuDivider',
-        path: '/menudivider'
+        path: '/components/menudivider'
       },
       {
         id: 44,
         title: 'MenuItem',
-        path: '/menuitem'
+        path: '/components/menuitem'
       },
     ]
   },
@@ -258,12 +256,12 @@ export default [
       {
         id: 46,
         title: 'NavigationPill',
-        path: '/navigationpill'
+        path: '/components/navigationpill'
       },
       {
         id: 47,
         title: 'NavigationPills',
-        path: '/navigationpills'
+        path: '/components/navigationpills'
       },
     ]
   },
@@ -275,12 +273,12 @@ export default [
       {
         id: 49,
         title: 'ScrollTrack',
-        path: '/scrolltrack'
+        path: '/components/scrolltrack'
       },
       {
         id: 50,
         title: 'ScrollTrackProproles',
-        path: '/scrolltrackproproles'
+        path: '/components/scrolltrackproproles'
       },
     ]
   },
@@ -288,7 +286,7 @@ export default [
     id: 51,
     heading: 'TOOLTIP',
     role: 'link',
-    path: '/Tooltip',
+    path: '/components/Tooltip',
     links: []
   },
   {
@@ -299,17 +297,17 @@ export default [
       {
         id: 53,
         title: 'Fade',
-        path: '/fade'
+        path: '/components/fade'
       },
       {
         id: 54,
         title: 'Grow',
-        path: '/grow'
+        path: '/components/grow'
       },
       {
         id: 55,
         title: 'Slide',
-        path: '/slide'
+        path: '/components/slide'
       },
     ]
   },
