@@ -4,7 +4,16 @@ module.exports = {
   mode: 'development',
   module: {
     rules: [
-      { test: /\.js$/, loaders: ['babel-loader'], exclude: /node_modules/ },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            plugins: ['react-docgen']
+          }
+        }
+      },
       {
         test: /\.svg/,
         loader: 'svgr/webpack',
