@@ -26,10 +26,22 @@ class NavigationHandler extends React.PureComponent {
     return string.toLowerCase().includes(searchTerm.toLowerCase())
   }
 
+  searchTermInGroup = (navGroup) => {
+    const { searchTerm } = this.state
+    let found = false
+    navGroup.links.forEach((link) => {
+      if(this.includesSearchTerm(link.title)) {
+        found = true
+      }
+    })
+    return found
+  }
+
   renderLinks = () => {
     const { searchTerm } = this.state
     return data.map((navGroup) => {
       if(navGroup.role === 'link') {
+        if(searchTerm && !this.includesSearchTerm(navGroup.heading)) { return }
         return (
           <NavLink
             key={navGroup.id}
@@ -39,14 +51,14 @@ class NavigationHandler extends React.PureComponent {
           />
         )
       }
-      if(searchTerm && !this.includesSearchTerm(navGroup.heading)) { return }
+      if(searchTerm && !this.searchTermInGroup(navGroup)) { return }
       return (
         <NavGroup
           key={navGroup.id}
           heading={navGroup.heading}
           links={navGroup.links}
           role={navGroup.role}
-          searchTerm={this.state.searchTerm}
+          searchTerm={searchTerm}
         />
       )
     })

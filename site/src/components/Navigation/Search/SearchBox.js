@@ -21,6 +21,7 @@ function SearchBox({searchTerm, onChange, onClear}) {
         value={searchTerm}
         onChange={onChange}
         inputStyle={styles.textField}
+        autoComplete='off'
         fullWidth
       />
     </div>
