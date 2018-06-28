@@ -34,8 +34,10 @@ export default {
     height: 24,
     width: 24,
   },
-  xIcon: {
+  xIconWrapper: {
     ...icon,
+  },
+  xIcon: {
     height: 18,
     width: 18,
     color: '#424242',
