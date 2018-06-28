@@ -1,9 +1,10 @@
 import React from 'react'
+import Radium from 'Radium'
 import styles from './styles'
 import NavGroup from './NavGroup'
 import NavLink from './NavLink'
 import data from './data'
-import * as CarrotIcon from './carrotIcon.svg'
+import CarrotIcon from './CarrotIcon'
 import Search from './Search'
 
 class NavigationHandler extends React.PureComponent {
@@ -55,7 +56,7 @@ class NavigationHandler extends React.PureComponent {
   render() {
     return (
       <div style={styles.container}>
-        <img src='CarrotIcon' alt='carrot icon' style={styles.carrotIcon}/>
+        <CarrotIcon style={styles.carrotIcon} />
         <Search
           onChange={this.handleSearchChange}
           onClear={this.handleClearSearch}
@@ -66,4 +67,4 @@ class NavigationHandler extends React.PureComponent {
     )
   }
 }
-export default NavigationHandler
+export default Radium(NavigationHandler)

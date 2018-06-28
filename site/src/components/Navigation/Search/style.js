@@ -1,4 +1,4 @@
-import { spacing } from 'ic-snacks'
+import spacing from '../../../../../src/styles/spacing'
 
 const icon = {
   alignSelf: 'center',

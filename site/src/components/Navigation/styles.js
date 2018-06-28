@@ -1,4 +1,5 @@
-import {spacing, colors} from 'ic-snacks'
+import spacing from '../../../../src/styles/spacing'
+import colors from '../../../../src/styles/colors'
 
 const groupIcon = {
   marginTop: 4,
@@ -8,7 +9,9 @@ const groupIcon = {
 
 const navLink = {
   fontSize: 14,
-  textDecoration: 'none'
+  textDecoration: 'none',
+  display: 'inline-block',
+  width: '100%',
 }
 
 export default {
@@ -33,13 +36,17 @@ export default {
     display: 'flex',
     justifyContent: 'space-between',
     height: 24,
+    width: '100%',
+    ':hover': {
+      cursor: 'default',
+    }
   },
   navGroupTitle: {
     fontSize: 14,
     fontWeight: 600,
     color: colors.GRAY_20,
     ':hover': {
-      cursor: 'pointer'
+      color: colors.GREEN_500,
     }
   },
   navGroupIcon: {
@@ -56,6 +63,7 @@ export default {
   },
   navLinkRow: {
     height: 40,
+    width: '100%',
   },
   navLinkInactive: {
     ...navLink,
@@ -65,6 +73,4 @@ export default {
     ...navLink,
     color: '#FF8200',
   }
-
 }
-

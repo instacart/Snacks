@@ -9,7 +9,7 @@ function NavLink({title, path, style}) {
     <div style={styles.navLinkRow}>
       <Link to={path}
         style={{...styles.navLinkInactive, ...style}}
-        activeStyle={styles.navLinkActive}
+        activeStyle={{color: '#FF8200'}}
       >
         {title}
       </Link>

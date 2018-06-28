@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
-import {SVGIcon, Grow, Fade, Slide} from 'ic-snacks'
+import SVGIcon from '../../../../src/components/SVGIcon/SVGIcon'
+import Grow from '../../../../src/components/Transitions/Grow'
+import Fade from '../../../../src/components/Transitions/Fade'
+import Slide from '../../../../src/components/Transitions/Slide'
 import styles from './styles'
 import NavLink from './NavLink'
 
@@ -52,6 +55,7 @@ class NavGroup extends React.PureComponent {
         <div
           style={styles.navGroupTitleContainer}
           onClick={this.handleClick}
+          key={`${this.props.id}-navGroup`}
         >
           <div style={styles.navGroupTitle}>{this.props.heading}</div>
           {this.renderIcon()}
@@ -74,6 +78,7 @@ NavGroup.propTypes = {
   heading: PropTypes.string.isRequired,
   links: PropTypes.array.isRequired,
   role: PropTypes.string.isRequired,
+  searchTerm: PropTypes.string
 }
 
 export default Radium(NavGroup)

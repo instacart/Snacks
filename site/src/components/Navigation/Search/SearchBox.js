@@ -1,7 +1,8 @@
 import React from 'react'
 import Radium from 'radium'
 import styles from './style'
-import {SVGIcon, TextField} from 'ic-snacks'
+import SVGIcon from '../../../../../src/components/SVGIcon/SVGIcon'
+import TextField from '../../../../../src/components/Forms/TextField'
 
 function SearchBox({searchTerm, onChange, onClear}) {
   const icon = searchTerm ? (
