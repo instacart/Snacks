@@ -1,15 +1,27 @@
 import React from 'react'
+import Radium from 'radium'
 import styles from './style'
-import {SVGIcon} from 'ic-snacks'
+import {SVGIcon, TextField} from 'ic-snacks'
 
-function SearchBox() {
+function SearchBox({searchTerm, onChange}) {
+  const icon = searchTerm ?
+    <SVGIcon name='x' style={styles.xIcon} size='small' />
+    : <SVGIcon name='search' style={styles.searchIcon} />
 
   return (
     <div style={styles.container}>
-      <SVGIcon name='search' style={styles.icon} />
-      <span style={styles.placeHolder}>Search</span>
+      {icon}
+      <TextField
+        name="search"
+        type="text"
+        floatingLabelText="Search"
+        value={searchTerm}
+        onChange={onChange}
+        inputStyle={styles.textField}
+        fullWidth
+      />
     </div>
   )
 }
 
-export default SearchBox
+export default Radium(SearchBox)
