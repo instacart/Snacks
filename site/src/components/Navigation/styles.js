@@ -68,6 +68,9 @@ export default {
   navLinkInactive: {
     ...navLink,
     color: '#424242',
+    ':hover': {
+      color: colors.GREEN_500,
+    }
   },
   navLinkActive: {
     ...navLink,

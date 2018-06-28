@@ -1,4 +1,5 @@
 import React from 'react'
+import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import styles from './styles'
@@ -23,4 +24,4 @@ NavLink.propTypes = {
   style: PropTypes.object,
 }
 
-export default NavLink
+export default Radium(NavLink)

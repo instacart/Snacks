@@ -1,5 +1,5 @@
 import React from 'react'
-import Radium from 'Radium'
+import Radium from 'radium'
 import styles from './styles'
 import NavGroup from './NavGroup'
 import NavLink from './NavLink'
