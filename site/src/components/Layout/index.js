@@ -4,16 +4,16 @@ import { StyleRoot } from 'radium'
 
 import Navigation from '../Navigation'
 import './styles.css'
-import styles from './styles'
+import * as styles from './styles'
 
 const Layout = ({children}) => (
   <StyleRoot>
     <div style={styles.container} >
-      <div style={styles.body}>
+      <div style={styles.navigation} >
         <Navigation />
-        <div style={styles.content} >
-          {children}
-        </div>
+      </div>
+      <div style={styles.content} >
+        {children}
       </div>
     </div>
   </StyleRoot>

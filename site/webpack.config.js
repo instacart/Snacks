@@ -1,4 +1,5 @@
 const path = require('path')
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -32,6 +33,13 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(png)$/,
+        use: [
+          'file-loader',
+          'image-webpack-loader',
+        ],
+      },
     ]
   },
   entry: {
@@ -52,4 +60,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'public'),
     historyApiFallback: true
   },
+  plugins: [
+    new HardSourceWebpackPlugin(),
+  ]
 }

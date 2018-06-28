@@ -1,7 +1,9 @@
 import React from 'react'
 import * as styles from './styles'
 
-const styled = style => ({children}) => <div style={style}>{children}</div>
+const styled = typography => ({children, style}) => (
+  <div style={{...typography, ...style}}>{children}</div>
+)
 
 export const Title1 = styled(styles.title1)
 export const Title2 = styled(styles.title2)

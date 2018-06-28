@@ -72,7 +72,7 @@ export default () => (
     <Playground>
       {`
         <Button snacksStyle="coupon">
-        Coupon Button
+          Coupon Button
         </Button>
         `}
     </Playground>
@@ -86,7 +86,7 @@ export default () => (
     <Playground>
       {`
         <Button disabled snacksStyle="primary">
-        Disabled Button
+          Disabled Button
         </Button>
         `}
     </Playground>
@@ -109,6 +109,29 @@ export default () => (
       `}
     </Playground>
 
+    <Title3>Sizes</Title3>
+    <Body>
+      Buttons can also be set to a variety of sizes.
+    </Body>
+    <Playground>
+      {`
+        <div>
+          <Button size="large" style={{marginBottom: spacing.SM, display: 'block'}}>
+            Large Button
+          </Button>
+          <Button size="standard" style={{marginBottom: spacing.SM, display: 'block'}}>
+            Standard Button
+          </Button>
+          <Button size="small" style={{marginBottom: spacing.SM, display: 'block'}}>
+            Small Button
+          </Button>
+          <Button size="tiny" style={{marginBottom: spacing.SM, display: 'block'}}>
+            Tiny Button
+          </Button>
+        </div>
+      `}
+    </Playground>
+
     <Title3>With icons</Title3>
     <Body>
       Buttons can be rendered with an icon to the left or right of the primary
@@ -117,22 +140,16 @@ export default () => (
 
     <Playground>
       {`
-        <div style={{padding: '24px'}}>
-          <span style={{marginBottom: 12}}>
-            <Button iconPosition="right" icon={<Icon name="arrowRightSmallBold" />} snacksStyle="secondary" size="standard">
-              View 24 more
-            </Button>
-          </span>
-          <span style={{marginBottom: 12}}>
-            <Button icon="cart" snacksStyle="primary" size="standard">
-              Cart
-            </Button>
-          </span>
-          <span style={{marginBottom: 12}}>
-            <Button icon={<Icon name="deals" />} snacksStyle="coupon" size="small">
-              Save $5.00
-            </Button>
-          </span>
+        <div>
+          <Button iconPosition="right" icon={<Icon name="arrowRightSmallBold" />} snacksStyle="secondary" style={{marginBottom: spacing.SM, display: 'block'}}>
+            View 24 more
+          </Button>
+          <Button icon="cart" style={{marginBottom: spacing.SM, display: 'block'}}>
+            Cart
+          </Button>
+          <Button icon={<Icon name="deals" />} snacksStyle="coupon" size="small" style={{marginBottom: spacing.SM, display: 'block'}}>
+            Save $5.00
+          </Button>
         </div>
       `}
     </Playground>

@@ -14,14 +14,13 @@ const navLink = {
 
 export default {
   container: {
+    width: '100%',
+    height: '100%',
+    boxSizing: 'border-box',
     backgroundColor: colors.GRAY_97,
-    position: 'fixed',
-    height: '100vh',
-    overflowY: 'scroll',
-    minWidth: '20vw',
+    overflow: 'scroll',
     ...spacing.PADDING_X_LG,
-    zIndex: 2,
-    boxShadow: '0 2px 4px 0 rgba(0,0,0,0.26)',
+    borderRight: `1px solid ${colors.GRAY_88}`,
   },
   carrotIcon: {
     ...spacing.MARGIN_TOP_LG,

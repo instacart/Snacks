@@ -1,20 +1,18 @@
 import {spacing, colors} from 'ic-snacks'
 
-export default {
-  container: {
-    display: 'flex',
-    minHeight: '100vh',
-    flexDirection: 'column',
-  },
-  body: {
-    display: 'flex',
-    flex: 1,
-  },
-  content: {
-    ...spacing.PADDING_XL,
-    backgroundColor: colors.WHITE,
-    minHeight: '100vh',
-    maxWidth: '70vw',
-    marginLeft: '25vw',
-  },
+const sidebar = '25vw'
+
+export const container = {
+}
+
+export const navigation = {
+  width: sidebar,
+  height: '100vh',
+  position: 'fixed',
+}
+
+export const content = {
+  marginLeft: sidebar,
+  padding: '7vw',
+  overflow: 'scroll',
 }

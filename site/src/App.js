@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Layout from './components/Layout'
+import Splash from './components/Splash'
 import Button from './components/docs/Button'
 import Checkbox from './components/docs/Checkbox'
 import CircleButton from './components/docs/CircleButton'
@@ -11,6 +12,11 @@ export default function App() {
   return (
     <BrowserRouter>
       <Layout>
+        <Route
+          path='/'
+          exact
+          component={Splash}
+        />
         <Route
           path='/components/button'
           component={Button}
