@@ -61,11 +61,11 @@ class NavGroup extends React.PureComponent {
           {this.renderIcon()}
         </div>
         <div style={styles.navGroupLinks}>
-          <Grow in={this.state.isOpen} transition={75}>
-            <Fade in={this.state.isOpen} transition={75}>
-              <Slide in={this.state.isOpen} transition={75}>
-                {this.renderLinks()}
-              </Slide>
+          <Grow in={this.state.isOpen} transitionTime={300} timeout={100}>
+           <Fade in={this.state.isOpen} transitionTime={200}>
+            <Slide in={this.state.isOpen} transitionTime={350}>
+              {this.renderLinks()}
+            </Slide>
             </Fade>
           </Grow>
         </div>
