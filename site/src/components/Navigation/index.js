@@ -4,6 +4,7 @@ import NavGroup from './NavGroup'
 import NavLink from './NavLink'
 import data from './data'
 import CarrotIcon from './CarrotIcon'
+import Search from './Search'
 
 function Navigation() {
   const navigationlinks = data.map((navGroup) => {
@@ -30,6 +31,7 @@ function Navigation() {
   return (
     <div style={styles.container}>
       <CarrotIcon />
+      <Search />
       {navigationlinks}
     </div>
   )
