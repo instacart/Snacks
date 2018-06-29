@@ -22,7 +22,7 @@ export default function Splash() {
           href="https://github.com/instacart/Snacks"
           style={{textDecoration: 'none'}}
           elementAttributes={{target: '_blank'}}
-          >
+        >
           GitHub
         </Button>
         <Button
