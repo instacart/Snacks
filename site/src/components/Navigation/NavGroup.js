@@ -20,11 +20,7 @@ class NavGroup extends React.Component {
   includesSearchTerm = (string) => {
     const { searchTerm } = this.props
     if (!searchTerm) { return false}
-    const included = string.toLowerCase().includes(searchTerm.toLowerCase())
-    if (included) {
-      this.setState({isOpen: true})
-    }
-    return included
+    return string.toLowerCase().includes(searchTerm.toLowerCase())
   }
 
   renderLinks = () => {
@@ -34,7 +30,11 @@ class NavGroup extends React.Component {
     return links.map((link) => {
       if(searchTerm && !this.includesSearchTerm(link.title)) { return }
       return (
-        <NavigationLink key={link.id} title={link.title} path={link.path} />
+        <NavigationLink
+          key={link.id}
+          title={link.title}
+          path={link.path}
+        />
       )
     })
   }
@@ -50,6 +50,7 @@ class NavGroup extends React.Component {
   }
 
   render() {
+    const {id, heading, resultInGroup} = this.props
     return (
       <div style={styles.navGroupContainer}>
         <div
@@ -61,9 +62,9 @@ class NavGroup extends React.Component {
           {this.renderIcon()}
         </div>
         <div style={styles.navGroupLinks}>
-          <Grow in={this.state.isOpen} transitionTime={300} timeout={100}>
-           <Fade in={this.state.isOpen} transitionTime={200}>
-            <Slide in={this.state.isOpen} transitionTime={350}>
+          <Grow in={this.state.isOpen || resultInGroup} transitionTime={300} timeout={100}>
+           <Fade in={this.state.isOpen || resultInGroup} transitionTime={200}>
+            <Slide in={this.state.isOpen || resultInGroup} transitionTime={350}>
               {this.renderLinks()}
             </Slide>
             </Fade>
@@ -78,7 +79,8 @@ NavGroup.propTypes = {
   heading: PropTypes.string.isRequired,
   links: PropTypes.array.isRequired,
   role: PropTypes.string.isRequired,
-  searchTerm: PropTypes.string
+  searchTerm: PropTypes.string,
+  resultInGroup: PropTypes.bool,
 }
 
 export default Radium(NavGroup)

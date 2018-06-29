@@ -52,7 +52,9 @@ class NavigationHandler extends React.Component {
           />
         )
       }
-      if(searchTerm && !this.searchTermInGroup(navGroup)) { return }
+      const resultInGroup = this.searchTermInGroup(navGroup)
+
+      if(searchTerm && !resultInGroup) { return }
       return (
         <NavGroup
           key={navGroup.id}
@@ -60,6 +62,7 @@ class NavigationHandler extends React.Component {
           links={navGroup.links}
           role={navGroup.role}
           searchTerm={searchTerm}
+          resultInGroup={resultInGroup}
         />
       )
     })
