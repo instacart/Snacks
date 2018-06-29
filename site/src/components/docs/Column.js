@@ -15,3 +15,5 @@ Column Example without a parent Grid or Row:
     </div>
   `}
 </Playground>
+
+)
