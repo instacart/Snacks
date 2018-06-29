@@ -8,8 +8,7 @@ const icon = {
 
 export default {
   container: {
-    ...spacing.MARGIN_BOTTOM_LG,
-    ...spacing.MARGIN_TOP_XS,
+    ...spacing.MARGIN_Y_MD,
     borderRadius: 4,
     border: '1px solid #E0E0E0',
     backgroundColor: '#FFFFFF',

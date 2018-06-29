@@ -1,7 +1,6 @@
 import React, {Fragment} from 'react'
 import {Button, spacing} from 'ic-snacks'
 import {Title1, Subtitle} from '../Typography'
-import splash from './splash.png'
 import * as styles from './styles'
 
 export default function Splash() {
@@ -19,23 +18,24 @@ export default function Splash() {
       <div style={{display: 'flex', marginTop: spacing.XL}}>
         <Button
           size="large"
+          snacksStyle="secondary"
           href="https://github.com/instacart/Snacks"
-          style={{textDecoration: 'none'}}
+          style={styles.link}
           elementAttributes={{target: '_blank'}}
         >
           GitHub
         </Button>
         <Button
           size="large"
+          snacksStyle="secondary"
           href="https://www.npmjs.com/package/ic-snacks"
-          style={{textDecoration: 'none'}}
-          snacksStyle="flat"
+          style={styles.link}
           elementAttributes={{target: '_blank'}}
         >
           npm
         </Button>
       </div>
-      <img src={splash} style={styles.splash} alt="teamwork carrot" />
+      <div style={styles.splash} />
       <div style={styles.background} />
     </Fragment>
   )

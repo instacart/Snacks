@@ -1,6 +1,6 @@
 import {spacing, colors} from 'ic-snacks'
 
-const sidebar = '25vw'
+const sidebar = 'calc(13vw + 120px)'
 
 export const container = {
 }

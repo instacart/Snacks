@@ -12,7 +12,7 @@ export const container = {
 }
 
 export const icon = {
-  color: colors.GRAY_74,
+  color: colors.GRAY_46,
   padding: 4,
   borderRadius: 3,
   transition: 'transform 150ms',

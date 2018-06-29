@@ -2,7 +2,7 @@ import React from 'react'
 import Radium from 'radium'
 import {Link} from 'react-router-dom'
 import FlipMove from 'react-flip-move'
-import styles from './styles'
+import * as styles from './styles'
 import NavGroup from './NavGroup'
 import NavigationLink from './NavigationLink'
 import data from './data'
@@ -12,7 +12,7 @@ import Search from './Search'
 class NavigationHandler extends React.Component {
   state = {
     searchTerm: '',
-    openSections: {},
+    openSection: null,
   }
 
   handleSearchChange = (e) => {
@@ -24,13 +24,11 @@ class NavigationHandler extends React.Component {
   }
 
   handleToggle(header) {
-    const {openSections: {...openSections}} = this.state
     if(this.isOpen(header)) {
-      delete openSections[header]
+      this.setState({openSection: null})
     } else {
-      openSections[header] = true
+      this.setState({openSection: header})
     }
-    this.setState({openSections})
   }
 
   matches = (input) => {
@@ -42,7 +40,7 @@ class NavigationHandler extends React.Component {
 
   isOpen(header) {
     if(this.state.searchTerm) return true
-    return this.state.openSections[header]
+    return this.state.openSection === header
   }
 
   searchTermInGroup = (header) => {
@@ -88,7 +86,7 @@ class NavigationHandler extends React.Component {
     return (
       <div style={styles.container}>
         <Link to='/' style={styles.logo}>
-          <CarrotIcon style={styles.carrotIcon} />
+          <CarrotIcon />
           <div style={styles.title}>Snacks</div>
         </Link>
         <Search
