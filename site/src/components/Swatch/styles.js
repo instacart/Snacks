@@ -1,38 +1,43 @@
-import {colors} from 'ic-snacks'
+import {colors, spacing} from 'ic-snacks'
 
-const container = {
+export const container = backgroundColor => ({
   width: 200,
   height: 200,
-  margin: '0 15px 15px 0',
+  position: 'relative',
   display: 'flex',
   flexDirection: 'column',
-  borderRadius: 4,
-  overflow: 'hidden',
-  boxSizing: 'border-box',
+  justifyContent: 'flex-end',
+  color: 'white',
+  backgroundColor,
+  transition: 'transform 150ms',
+
+  ':hover': {
+    transform: 'scale(1.1, 1.1)',
+    zIndex: 1,
+  }
+})
+
+const info = {
+  ...spacing.MARGIN_LEFT_SM,
 }
 
-export const unselected = {
-  ...container,
-  boxShadow: 'rgba(0, 0, 0, 0.16) 1px 1px 5px',
+export const name = {
+  ...info,
+  marginBottom: 4,
 }
 
-export const selected = {
-  ...container,
-  borderWidth: 2,
-  borderStyle: 'solid',
-}
-
-export const swatch = {
-  flexBasis: 125,
-}
-
-export const info = {
-  fontSize: 16,
+export const value = {
+  ...info,
+  ...spacing.MARGIN_BOTTOM_SM,
   fontWeight: 600,
-  color: colors.GRAY_46,
-  textAlign: 'center',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  flex: 1,
+}
+
+export const star = {
+  position: 'absolute',
+  top: spacing.SM,
+  left: spacing.SM,
+}
+
+export const inverted = {
+  color: colors.GRAY_13,
 }

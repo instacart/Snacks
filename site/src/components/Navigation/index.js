@@ -5,7 +5,7 @@ import FlipMove from 'react-flip-move'
 import * as styles from './styles'
 import NavGroup from './NavGroup'
 import NavigationLink from './NavigationLink'
-import data from './data'
+import pages from '../../pages'
 import CarrotIcon from './CarrotIcon'
 import Search from './Search'
 
@@ -53,19 +53,19 @@ class NavigationHandler extends React.Component {
     return (
       <FlipMove enterAnimation='fade' leaveAnimation='fade' duration={150}>
         {
-          Object.keys(data).reduce((rows, header) => {
-            const pages = Object.keys(data[header])
+          Object.keys(pages).reduce((rows, header) => {
+            const filtered = Object.keys(pages[header])
               .filter(page => this.matches(page))
               .map(page => (
                 <NavigationLink
                   key={`link-${page}`}
                   title={page}
-                  path={data[header][page]}
+                  path={pages[header][page].path}
                 />
               ))
             return [
               ...rows,
-              pages.length > 0 && (
+              filtered.length > 0 && (
                 <NavGroup
                   key={`group-${header}`}
                   heading={header}
@@ -73,7 +73,7 @@ class NavigationHandler extends React.Component {
                   onClick={() => this.handleToggle(header)}
                 />
               ),
-              ...(this.isOpen(header) ? pages : []),
+              ...(this.isOpen(header) ? filtered : []),
             ]
           }, [])
         }

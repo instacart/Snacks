@@ -2,13 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Splash from './components/Splash'
-import Colors from './components/docs/Colors'
-import Button from './components/docs/Button'
-import Checkbox from './components/docs/Checkbox'
-import CircleButton from './components/docs/CircleButton'
-import Radio from './components/docs/Radio'
-import RadioGroup from './components/docs/RadioGroup'
-import SVGIcons from './components/docs/SVGIcons'
+import pages from './pages'
 
 export default function App() {
   return (
@@ -19,34 +13,16 @@ export default function App() {
           exact
           component={Splash}
         />
-        <Route
-          path='/utilities/colors'
-          component={Colors}
-        />
-        <Route
-          path='/components/button'
-          component={Button}
-        />
-        <Route
-          path='/components/checkbox'
-          component={Checkbox}
-        />
-        <Route
-          path='/components/circlebutton'
-          component={CircleButton}
-        />
-        <Route
-          path='/components/radio'
-          component={Radio}
-        />
-        <Route
-          path='/components/radiogroup'
-          component={RadioGroup}
-        />
-        <Route
-          path='/components/svgicons'
-          component={SVGIcons}
-        />
+        {
+          Object.keys(pages).map(header => (
+            Object.keys(pages[header]).map(page => (
+              <Route
+                path={pages[header][page].path}
+                component={pages[header][page].component}
+              />
+            ))
+          ))
+        }
       </Layout>
     </BrowserRouter>
   )

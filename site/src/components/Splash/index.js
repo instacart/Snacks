@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react'
-import {Button, spacing} from 'ic-snacks'
+import {Button, spacing, SVGIcon} from 'ic-snacks'
 import {Title1, Subtitle} from '../Typography'
 import * as styles from './styles'
 
@@ -17,7 +17,6 @@ export default function Splash() {
       </Subtitle>
       <div style={{display: 'flex', marginTop: spacing.XL}}>
         <Button
-          size="large"
           snacksStyle="secondary"
           href="https://github.com/instacart/Snacks"
           style={styles.link}
@@ -26,7 +25,6 @@ export default function Splash() {
           GitHub
         </Button>
         <Button
-          size="large"
           snacksStyle="secondary"
           href="https://www.npmjs.com/package/ic-snacks"
           style={styles.link}
@@ -35,6 +33,15 @@ export default function Splash() {
           npm
         </Button>
       </div>
+      <Button
+        size='large'
+        href='/foundations/introduction'
+        icon={<SVGIcon name='arrowRight' size='small' />}
+        iconPosition='right'
+        style={styles.introduction}
+      >
+        Introduction
+      </Button>
       <div style={styles.splash} />
       <div style={styles.background} />
     </Fragment>

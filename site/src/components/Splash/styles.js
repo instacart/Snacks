@@ -29,3 +29,11 @@ export const link = {
   marginRight: spacing.SM,
   textDecoration: 'none',
 }
+
+export const introduction = {
+  textDecoration: 'none',
+  justifyContent: 'center',
+  position: 'absolute',
+  bottom: '5vw',
+  zIndex: 1,
+}

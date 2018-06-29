@@ -1,17 +1,30 @@
 import React from 'react'
+import {SVGIcon} from 'ic-snacks'
+import Radium from 'radium'
 import * as styles from './styles'
 
-export default function Swatch({name, selected, value}) {
+function Swatch({name, inverted, selected, value}) {
   return (
-    <div style={{
-      ...(selected ? styles.selected : styles.unselected),
-      borderColor: value,
-    }}>
-      <div style={{...styles.swatch, backgroundColor: value}} />
-      <div style={styles.info}>
-        <div>{name}</div>
-        <div>{value}</div>
+    <div style={styles.container(value)}>
+      <div
+        style={{
+          ...styles.name,
+          ...(inverted && styles.inverted)
+        }}
+      >
+        {name}
       </div>
+      <div
+        style={{
+          ...styles.value,
+          ...(inverted && styles.inverted)
+        }}
+      >
+        {value}
+      </div>
+      {selected && <SVGIcon name='starFilled' style={styles.star} />}
     </div>
   )
 }
+
+export default Radium(Swatch)
