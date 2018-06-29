@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom'
 import styles from './styles'
 
 function NavigationLink({title, path, style}) {
-  if (!path) { return <div />}
   return (
     <div style={styles.navLinkRow}>
       <NavLink to={path}
