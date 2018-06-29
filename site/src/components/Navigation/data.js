@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    heading: 'FOUNDATIONS',
+    heading: 'Foundations',
     role: 'linkGroup',
     links: [
       {
@@ -24,7 +24,7 @@ export default [
   },
   {
     id: 4,
-    heading: 'UTILITIES',
+    heading: 'Utilities',
     role: 'linkGroup',
     links: [
       {
@@ -47,16 +47,11 @@ export default [
         title: 'Icons',
         path: '/components/icons',
       },
-      {
-        id: 9,
-        title: 'SVGIcons',
-        path: '/components/SVG_Icons',
-      },
     ]
   },
   {
     id: 10,
-    heading: 'THEMES',
+    heading: 'Themes',
     role: 'linkGroup',
     links: [
       {
@@ -73,7 +68,7 @@ export default [
   },
   {
     id: 13,
-    heading: 'BUTTONS',
+    heading: 'Buttons',
     role: 'sub-group',
     links: [
       {
@@ -105,7 +100,7 @@ export default [
   },
   {
     id: 20,
-    heading: 'FORMS',
+    heading: 'Forms',
     role: 'linkGroup',
     links: [
       {
@@ -162,7 +157,7 @@ export default [
   },
   {
     id: 31,
-    heading: 'GRID',
+    heading: 'Grid',
     role: 'linkGroup',
     links: [
       {
@@ -184,28 +179,28 @@ export default [
   },
   {
     id: 35,
-    heading: 'ICONS',
+    heading: 'Icons',
     role: 'link',
     path: '/components/icon',
     links: []
   },
   {
     id: 36,
-    heading: 'SVGICONS',
+    heading: 'Svgicons',
     role: 'link',
     path: '/components/svgicons',
     links: []
   },
   {
     id: 37,
-    heading: 'LINK',
+    heading: 'Link',
     role: 'link',
     path: '/components/link',
     links: []
   },
   {
     id: 38,
-    heading: 'LOADING',
+    heading: 'Loading',
     role: 'linkGroup',
     path: '/components/loading',
     links: [
@@ -218,7 +213,7 @@ export default [
   },
   {
     id: 40,
-    heading: 'MENUS',
+    heading: 'Menus',
     role: 'linkGroup',
     links: [
       {
@@ -245,7 +240,7 @@ export default [
   },
   {
     id: 45,
-    heading: 'NAVIGATION PILLS',
+    heading: 'Navigation PILLS',
     role: 'linkGroup',
     links: [
       {
@@ -262,7 +257,7 @@ export default [
   },
   {
     id: 48,
-    heading: 'SCROLL TRACK',
+    heading: 'Scroll TRACK',
     role: 'linkGroup',
     links: [
       {
@@ -279,14 +274,14 @@ export default [
   },
   {
     id: 51,
-    heading: 'TOOLTIP',
+    heading: 'Tooltip',
     role: 'link',
     path: '/components/Tooltip',
     links: []
   },
   {
     id: 52,
-    heading: 'TRANSITIONS',
+    heading: 'Transitions',
     role: 'linkGroup',
     links: [
       {

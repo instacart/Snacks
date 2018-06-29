@@ -36,6 +36,7 @@ export default function Splash() {
         </Button>
       </div>
       <img src={splash} style={styles.splash} alt="teamwork carrot" />
+      <div style={styles.background} />
     </Fragment>
   )
 }

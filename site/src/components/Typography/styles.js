@@ -39,7 +39,7 @@ export const subtitle = {
   ...spaced,
   ...spacing.MARGIN_BOTTOM_LG,
   fontSize: 20,
-  lineHeight: '28px',
+  lineHeight: '34px',
 }
 
 export const bodyTitle2 = {

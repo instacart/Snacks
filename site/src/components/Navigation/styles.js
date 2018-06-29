@@ -1,11 +1,5 @@
 import {spacing, colors} from 'ic-snacks'
 
-const groupIcon = {
-  marginTop: 4,
-  width: 14,
-  height: 14,
-}
-
 const navLink = {
   fontSize: 14,
   textDecoration: 'none',
@@ -42,11 +36,12 @@ export default {
   navGroupTitleContainer: {
     display: 'flex',
     justifyContent: 'space-between',
-    height: 24,
+    alignItems: 'center',
+    height: 40,
     width: '100%',
-    ':hover': {
-      cursor: 'default',
-    }
+    cursor: 'pointer',
+
+    ':hover': {}
   },
   navGroupTitle: {
     fontSize: 14,
@@ -54,24 +49,30 @@ export default {
     color: colors.GRAY_20,
     width: '100%',
     display: 'inline-block',
-    ':hover': {
-      color: colors.GREEN_500,
-    }
+    textTransform: 'uppercase',
+
+  },
+  navGroupTitleHover: {
+    color: colors.GREEN_500,
   },
   navGroupIcon: {
-    ...groupIcon,
-    color: colors.GRAY_46,
-  },
-  activeGroupIcon: {
-    ...groupIcon,
     color: colors.GRAY_74,
+    padding: 4,
+    borderRadius: 3,
+    transition: 'transform 150ms',
+  },
+  navGroupIconOpen: {
+    transform: 'rotate(-180deg)',
+  },
+  navGroupIconHover: {
+    background: colors.GRAY_93,
   },
   navGroupLinks: {
     ...spacing.PADDING_LEFT_SM,
-    ...spacing.MARGIN_Y_XS,
   },
   navLinkRow: {
     height: 40,
+    lineHeight: '40px',
     width: '100%',
   },
   navLinkInactive: {
