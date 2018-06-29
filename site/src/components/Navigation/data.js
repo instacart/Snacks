@@ -30,7 +30,7 @@ export default [
       {
         id: 5,
         title: 'Colors',
-        path: '/components/colors'
+        path: '/utilities/colors'
       },
       {
         id: 6,

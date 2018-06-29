@@ -23,7 +23,7 @@ export const selected = {
 }
 
 export const swatch = {
-  flexBasis: '125px',
+  flexBasis: 125,
 }
 
 export const info = {
