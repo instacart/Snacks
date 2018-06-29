@@ -23,8 +23,10 @@ export default function Playground({children}) {
       mountStylesheet={false}
       style={styles.container}
     >
-      <LivePreview style={styles.preview} />
-      <LiveError style={styles.error} />
+      <div style={styles.preview}>
+        <LivePreview />
+        <LiveError />
+      </div>
       <LiveEditor style={styles.editor} />
     </LiveProvider>
   )
