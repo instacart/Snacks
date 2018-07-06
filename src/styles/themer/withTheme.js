@@ -5,7 +5,7 @@ import themer from './index'
 import { themePropTypes } from './utils'
 
 const isStateless = (Component) => {
-  return Component.prototype && !Component.prototype.render
+  return !Component.prototype.render
 }
 
 function withTheme(InnerComponent) {
