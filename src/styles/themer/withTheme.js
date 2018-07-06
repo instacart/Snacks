@@ -4,6 +4,10 @@ import React, { Component } from 'react'
 import themer from './index'
 import { themePropTypes } from './utils'
 
+const isStateless = (Component) => {
+  return Component.prototype && !Component.prototype.render
+}
+
 function withTheme(InnerComponent) {
   class Wrapped extends Component {
     static displayName = `withTheme(${InnerComponent.name || InnerComponent.displayName || 'Component'})`
@@ -25,9 +29,11 @@ function withTheme(InnerComponent) {
     }
 
     render() {
+      const getRef = (node) => this.wrapped = node
+
       return (
         <InnerComponent
-          ref={node => this.wrapped = node}
+          ref={isStateless(InnerComponent) ? undefined : getRef}
           {...this.props}
           snacksTheme={themer.themeConfig}
         />
