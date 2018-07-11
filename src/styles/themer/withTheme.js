@@ -34,8 +34,8 @@ function withTheme(InnerComponent) {
       return (
         <InnerComponent
           ref={isStateless(InnerComponent) ? undefined : getRef}
-          {...this.props}
           snacksTheme={themer.themeConfig}
+          {...this.props}
         />
       )
     }
