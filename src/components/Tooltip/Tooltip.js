@@ -37,6 +37,7 @@ class Tooltip extends PureComponent {
   }
 
   handleToggle = () => {
+    console.log('handle toggle')
     const {onDismiss, onShow} = this.props
     this.setState({show: !this.state.show}, () => {
       if (this.state.show) {
@@ -70,11 +71,14 @@ class Tooltip extends PureComponent {
   }
 
   render() {
+
+    console.log('render called', this.props)
     const {
       children,
       placement,
       size,
-      snacksStyle
+      snacksStyle,
+      isVisible,
     } = this.props
 
     return (
@@ -83,7 +87,7 @@ class Tooltip extends PureComponent {
         <TooltipOverlay
           placement={placement}
           target={() => this.trigger}
-          show={this.state.show}
+          show={isVisible || this.state.show}
           onRootClose={this.handleHideToolTip}
         >
           <InnerToolTip

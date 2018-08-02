@@ -6,7 +6,8 @@ initialState = {
   size: 'medium',
   placement: 'bottom',
   style: 'primary',
-  trigger: 'button'
+  trigger: 'button',
+  isVisible: false,
 }
 
 const handlePlacementChange = (placement) => {
@@ -23,6 +24,32 @@ const handleSizeChange = (size) => {
 
 const handleTriggerChange = (trigger) => {
   setState({trigger: trigger})
+}
+
+handleTargetClick = () => {
+  setState({isVisible: !state.isVisible})
+}
+
+showOnClickContainer = () => {
+  return {
+    position: 'relative',
+    width: '200px',
+    height: '200px',
+    backgroundColor: 'rgb(20, 110, 4)',
+  }
+}
+
+const targetDivStyles = {
+  position: 'absolute',
+  width: '100%',
+  height: '100%',
+  backgroundColor: 'transparent',
+  top: 0,
+  left: 0,
+}
+
+const targetDiv = () => {
+  return <div style={targetDivStyles}/>
 }
 
 <div>
@@ -72,5 +99,36 @@ const handleTriggerChange = (trigger) => {
       {state.size} {state.style} {state.placement}
     </Tooltip>
   </div>
+  
+  <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between'}}>
+    <h3>Show Tooltip When Clicking Target</h3>
+    <div onClick={handleTargetClick} style={showOnClickContainer()}>
+      <Tooltip 
+        target={targetDiv()}
+        placement={'right'}
+        snacksStyle={state.style}
+      >
+        Tooltip When Clicking Target
+      </Tooltip>
+    </div>
+  </div>
+  
+  <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between'}}>
+    <h3>Show Tooltip Onload</h3>
+    <div onClick={handleTargetClick} style={showOnClickContainer()}>
+      <Tooltip 
+        target={targetDiv()}
+        placement={'right'}
+        snacksStyle={state.style}
+        isVisible={true}
+      >
+        <div style={{width: '100%', height: '100%'}}>
+          Tooltip Onload
+        </div>
+      </Tooltip>
+    </div>
+  </div>
+
 </div>
 ```
+
