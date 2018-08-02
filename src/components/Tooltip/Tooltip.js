@@ -72,7 +72,6 @@ class Tooltip extends PureComponent {
 
   render() {
 
-    console.log('render called', this.props)
     const {
       children,
       placement,
