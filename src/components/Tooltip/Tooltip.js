@@ -37,7 +37,6 @@ class Tooltip extends PureComponent {
   }
 
   handleToggle = () => {
-    console.log('handle toggle')
     const {onDismiss, onShow} = this.props
     this.setState({show: !this.state.show}, () => {
       if (this.state.show) {
