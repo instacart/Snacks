@@ -115,7 +115,7 @@ const targetDiv = () => {
   
   <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between'}}>
     <h3>Show Tooltip Onload</h3>
-    <div onClick={handleTargetClick} style={showOnClickContainer()}>
+    <div style={showOnClickContainer()}>
       <Tooltip 
         target={targetDiv()}
         placement={'right'}
