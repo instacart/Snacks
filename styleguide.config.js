@@ -76,6 +76,10 @@ module.exports = {
           components: 'src/components/Forms/[A-Z]*.js'
         },
         {
+          name: 'Typography',
+          components: 'src/components/Typography/[A-Z]*.js'
+        },
+        {
           name: 'Grid',
           components: 'src/components/Grid/[A-Z]*.js'
         },

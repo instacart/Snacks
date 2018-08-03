@@ -1,0 +1,541 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text applies custom inline styles 1`] = `
+<div
+  data-radium={true}
+>
+  <p
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "letterSpacing": "0.03em",
+        "lineHeight": "21px",
+        "marginBottom": "10px",
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </p>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Text renders all typography variants correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <h1
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "92px",
+        "fontWeight": 400,
+        "letterSpacing": "0",
+        "lineHeight": "138px",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </h1>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Text renders all typography variants correctly 2`] = `
+<div
+  data-radium={true}
+>
+  <h1
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "82px",
+        "fontWeight": 400,
+        "letterSpacing": "0",
+        "lineHeight": "123px",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </h1>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Text renders all typography variants correctly 3`] = `
+<div
+  data-radium={true}
+>
+  <h1
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "72px",
+        "fontWeight": 400,
+        "letterSpacing": "0",
+        "lineHeight": "108px",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </h1>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Text renders all typography variants correctly 4`] = `
+<div
+  data-radium={true}
+>
+  <h1
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "64px",
+        "fontWeight": 400,
+        "letterSpacing": "0",
+        "lineHeight": "96px",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </h1>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Text renders all typography variants correctly 5`] = `
+<div
+  data-radium={true}
+>
+  <h1
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "58px",
+        "fontWeight": 400,
+        "letterSpacing": "0",
+        "lineHeight": "87px",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </h1>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Text renders all typography variants correctly 6`] = `
+<div
+  data-radium={true}
+>
+  <h1
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "46px",
+        "fontWeight": 400,
+        "letterSpacing": "0",
+        "lineHeight": "69px",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </h1>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Text renders all typography variants correctly 7`] = `
+<div
+  data-radium={true}
+>
+  <h2
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "36px",
+        "fontWeight": 400,
+        "letterSpacing": "0.03em",
+        "lineHeight": "54px",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </h2>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Text renders all typography variants correctly 8`] = `
+<div
+  data-radium={true}
+>
+  <h2
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "28px",
+        "fontWeight": 700,
+        "letterSpacing": "0.05em",
+        "lineHeight": "42px",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </h2>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Text renders all typography variants correctly 9`] = `
+<div
+  data-radium={true}
+>
+  <h2
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "22px",
+        "fontWeight": 400,
+        "letterSpacing": "0.03em",
+        "lineHeight": "32px",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </h2>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Text renders all typography variants correctly 10`] = `
+<div
+  data-radium={true}
+>
+  <p
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "letterSpacing": "0.03em",
+        "lineHeight": "32px",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </p>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Text renders all typography variants correctly 11`] = `
+<div
+  data-radium={true}
+>
+  <p
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "letterSpacing": "0.03em",
+        "lineHeight": "24px",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </p>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Text renders all typography variants correctly 12`] = `
+<div
+  data-radium={true}
+>
+  <p
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "letterSpacing": "0.03em",
+        "lineHeight": "21px",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </p>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Text renders all typography variants correctly 13`] = `
+<div
+  data-radium={true}
+>
+  <p
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "12px",
+        "fontWeight": 400,
+        "letterSpacing": "0.05em",
+        "lineHeight": "18px",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </p>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Text renders all typography variants correctly 14`] = `
+<div
+  data-radium={true}
+>
+  <p
+    data-radium={true}
+    style={
+      Object {
+        "color": "#212121",
+        "fontSize": "11px",
+        "fontWeight": 400,
+        "letterSpacing": "0.05em",
+        "lineHeight": "16px",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    Don't talk about snacks
+  </p>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
