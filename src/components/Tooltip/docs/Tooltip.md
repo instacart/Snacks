@@ -6,7 +6,8 @@ initialState = {
   size: 'medium',
   placement: 'bottom',
   style: 'primary',
-  trigger: 'button'
+  trigger: 'button',
+  isVisible: false,
 }
 
 const handlePlacementChange = (placement) => {
@@ -23,6 +24,10 @@ const handleSizeChange = (size) => {
 
 const handleTriggerChange = (trigger) => {
   setState({trigger: trigger})
+}
+
+toggleVisibility = () => {
+  setState({isVisible: !state.isVisible})
 }
 
 <div>
@@ -64,10 +69,12 @@ const handleTriggerChange = (trigger) => {
 
   <div style={{padding: '30px', textAlign: 'center'}}>
     <Tooltip
-      target={state.trigger === 'icon' ? <Icon name='info' /> : <Button> Toggle </Button>}
+      target={state.trigger === 'icon' ? <Icon name='info' /> : 
+        <Button onClick={toggleVisibility}> Toggle </Button>}
       placement={state.placement}
       size={state.size}
       snacksStyle={state.style}
+      isVisible={state.isVisible}
     >
       {state.size} {state.style} {state.placement}
     </Tooltip>
