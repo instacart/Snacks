@@ -66,8 +66,8 @@ describe('Tooltip', () => {
     expect(onDismiss.calledOnce).toBe(true)
   })
 
-    it('should have false show state and false isVisible prop when passed in' + 
-      'isVisible as false and both should be true on next click', () => {
+    it('should have true show state isVisible prop when passing in true' + 
+      'for isVisible and they should be false when passing in false', () => {
       
       let isVisible = true
       const tooltip = mount(
