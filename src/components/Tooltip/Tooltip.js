@@ -72,7 +72,6 @@ class Tooltip extends PureComponent {
   }
 
   render() {
-
     const {
       children,
       placement,
