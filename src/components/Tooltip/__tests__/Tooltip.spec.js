@@ -57,12 +57,41 @@ describe('Tooltip', () => {
       >
         Callback tooltip
       </Tooltip>
-    )
+    ) 
 
     const trigger = tooltip.find('button').last()
     trigger.last().simulate('click')
     expect(onShow.calledOnce).toBe(true)
     trigger.last().simulate('click')
     expect(onDismiss.calledOnce).toBe(true)
+  })
+
+    it('should have false show state and false isVisible prop when passed in' + 
+      'isVisible as false and both should be true on next click', () => {
+      
+      let isVisible = true
+      const tooltip = mount(
+        <Tooltip
+          target={(<button>TRIGGER</button>)}
+          placement='right'
+          size='small'
+          snacksStyle="secondary"
+          isVisible={isVisible}
+        >
+          Right Secondary small
+        </Tooltip>
+      )
+
+      const trigger = tooltip.find('button').last()
+      trigger.last().simulate('click')
+      
+      expect(tooltip.props().isVisible).toEqual(true)
+      expect(tooltip.state().show).toEqual(true)
+
+      trigger.last().simulate('click')
+      tooltip.props().isVisible = false
+      
+      expect(tooltip.props().isVisible).toEqual(false)
+      expect(tooltip.state().show).toEqual(false)
   })
 })
