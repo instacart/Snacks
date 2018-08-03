@@ -30,28 +30,6 @@ handleTargetClick = () => {
   setState({isVisible: !state.isVisible})
 }
 
-showOnClickContainer = () => {
-  return {
-    position: 'relative',
-    width: '200px',
-    height: '200px',
-    backgroundColor: 'rgb(20, 110, 4)',
-  }
-}
-
-const targetDivStyles = {
-  position: 'absolute',
-  width: '100%',
-  height: '100%',
-  backgroundColor: 'transparent',
-  top: 0,
-  left: 0,
-}
-
-const targetDiv = () => {
-  return <div style={targetDivStyles}/>
-}
-
 <div>
   <div style={{display: 'flex', justifyContent: 'space-between'}}>
     <div>
