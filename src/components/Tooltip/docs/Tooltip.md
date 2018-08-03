@@ -87,48 +87,28 @@ const targetDiv = () => {
         <Radio id="trigger2" value="button">Button</Radio>
       </RadioGroup>
     </div>
+
+    <div>
+      <h3>Target Click</h3>
+      <RadioGroup name="trigger">
+        <Radio id="trigger1" value="icon">Icon</Radio>
+        <Radio id="trigger2" value="button">Button</Radio>
+      </RadioGroup>
+    </div>
   </div>
 
   <div style={{padding: '30px', textAlign: 'center'}}>
     <Tooltip
-      target={state.trigger === 'icon' ? <Icon name='info' /> : <Button> Toggle </Button>}
+      target={state.trigger === 'icon' ? <Icon name='info' /> : 
+      <Button onClick={handleTargetClick}> Toggle </Button>}
       placement={state.placement}
       size={state.size}
       snacksStyle={state.style}
+      isVisible={state.visible}
     >
       {state.size} {state.style} {state.placement}
     </Tooltip>
   </div>
-  
-  <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between'}}>
-    <h3>Show Tooltip When Clicking Target</h3>
-    <div onClick={handleTargetClick} style={showOnClickContainer()}>
-      <Tooltip 
-        target={targetDiv()}
-        placement={'right'}
-        snacksStyle={state.style}
-      >
-        Tooltip When Clicking Target
-      </Tooltip>
-    </div>
-  </div>
-  
-  <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between'}}>
-    <h3>Show Tooltip Onload</h3>
-    <div style={showOnClickContainer()}>
-      <Tooltip 
-        target={targetDiv()}
-        placement={'right'}
-        snacksStyle={state.style}
-        isVisible={true}
-      >
-        <div style={{width: '100%', height: '100%'}}>
-          Tooltip Onload
-        </div>
-      </Tooltip>
-    </div>
-  </div>
-
 </div>
 ```
 
