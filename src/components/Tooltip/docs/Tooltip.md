@@ -74,11 +74,10 @@ toggleVisibility = () => {
       placement={state.placement}
       size={state.size}
       snacksStyle={state.style}
-      isVisible={state.visible}
+      isVisible={state.isVisible}
     >
       {state.size} {state.style} {state.placement}
     </Tooltip>
   </div>
 </div>
 ```
-

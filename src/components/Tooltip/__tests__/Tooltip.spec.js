@@ -57,7 +57,7 @@ describe('Tooltip', () => {
       >
         Callback tooltip
       </Tooltip>
-    ) 
+    )
 
     const trigger = tooltip.find('button').last()
     trigger.last().simulate('click')
