@@ -21,7 +21,8 @@ class Tooltip extends PureComponent {
     target: PropTypes.node.isRequired,
     snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark']),
     onDismiss: PropTypes.func,
-    onShow: PropTypes.func
+    onShow: PropTypes.func,
+    isVisible: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -29,7 +30,8 @@ class Tooltip extends PureComponent {
     placement: 'bottom',
     size: 'small',
     onShow: noop,
-    onDismiss: noop
+    onDismiss: noop,
+    isVisible: false,
   }
 
   state = {
