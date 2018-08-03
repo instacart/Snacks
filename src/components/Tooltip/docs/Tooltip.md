@@ -26,7 +26,7 @@ const handleTriggerChange = (trigger) => {
   setState({trigger: trigger})
 }
 
-handleTargetClick = () => {
+toggleVisibility = () => {
   setState({isVisible: !state.isVisible})
 }
 
@@ -70,7 +70,7 @@ handleTargetClick = () => {
   <div style={{padding: '30px', textAlign: 'center'}}>
     <Tooltip
       target={state.trigger === 'icon' ? <Icon name='info' /> : 
-      <Button onClick={handleTargetClick}> Toggle </Button>}
+        <Button onClick={toggleVisibility}> Toggle </Button>}
       placement={state.placement}
       size={state.size}
       snacksStyle={state.style}
