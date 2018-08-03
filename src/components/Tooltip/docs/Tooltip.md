@@ -65,14 +65,6 @@ handleTargetClick = () => {
         <Radio id="trigger2" value="button">Button</Radio>
       </RadioGroup>
     </div>
-
-    <div>
-      <h3>Target Click</h3>
-      <RadioGroup name="trigger">
-        <Radio id="trigger1" value="icon">Icon</Radio>
-        <Radio id="trigger2" value="button">Button</Radio>
-      </RadioGroup>
-    </div>
   </div>
 
   <div style={{padding: '30px', textAlign: 'center'}}>
