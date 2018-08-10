@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   mode: 'development',
@@ -20,6 +21,11 @@ module.exports = {
     library: 'Snacks',
     libraryTarget: 'umd'
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      __DEV__: JSON.stringify(true)
+    })
+  ],
   resolve: {
     alias: {
       utils: path.resolve(__dirname, 'src/utils'),

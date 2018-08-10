@@ -4,6 +4,9 @@ module.exports = {
     "es6": true,
     "jest": true
   },
+  "globals": {
+    "__DEV__": true
+  },
   "extends": [
     "eslint:recommended",
     "plugin:jsx-a11y/recommended"
@@ -18,15 +21,15 @@ module.exports = {
   },
   "plugins": [
     "react",
-     "jsx-a11y"
+    "jsx-a11y"
   ],
   "rules": {
     "strict": 0,
     "camelcase": "error",
-    "indent": [ "error", 2, { "SwitchCase": 1 }],
-    "linebreak-style": [ "error", "unix" ],
-    "quotes": [ "error", "single" ],
-    "semi": [ "error", "never" ],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
     "max-len": ["error", {
       "code": 120,
       "ignoreStrings": true,

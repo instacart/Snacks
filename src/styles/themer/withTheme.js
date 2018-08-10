@@ -18,10 +18,27 @@ function withTheme(InnerComponent) {
 
     componentDidMount() {
       this.unsubscribe = themer.subscribe(this.onThemeChange)
+      this.validateSnacksTheme()
     }
 
     componentWillUnmount() {
       this.unsubscribe()
+    }
+
+    themeIsValid() {
+      const { snacksTheme } = this.props
+      return Boolean(snacksTheme) && typeof snacksTheme === 'object'
+    }
+
+    validateSnacksTheme() {
+      if (__DEV__) { // eslint-disable-line no-undef
+        const { snacksTheme } = this.props
+        const snackType = typeof snacksTheme
+        const themeIsBad = Boolean(snacksTheme) && snackType !== 'object'
+        if (themeIsBad) {
+          throw new Error(`Recieved an invalid snacksTheme Prop. Expected undefined or an object and instead got ${snackType}`)
+        }
+      }
     }
 
     onThemeChange = () => {
@@ -30,12 +47,14 @@ function withTheme(InnerComponent) {
 
     render() {
       const getRef = (node) => this.wrapped = node
+      const { snacksTheme, ...rest } = this.props
+      const theme = this.themeIsValid() ? snacksTheme : themer.themeConfig
 
       return (
         <InnerComponent
           ref={isStateless(InnerComponent) ? undefined : getRef}
-          snacksTheme={themer.themeConfig}
-          {...this.props}
+          snacksTheme={theme}
+          {...rest}
         />
       )
     }
