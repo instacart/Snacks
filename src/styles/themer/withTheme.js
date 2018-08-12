@@ -11,6 +11,7 @@ const isStateless = (Component) => {
 function withTheme(InnerComponent) {
   class Wrapped extends Component {
     static displayName = `withTheme(${InnerComponent.name || InnerComponent.displayName || 'Component'})`
+    static WrappedComponent = InnerComponent
 
     static propTypes = {
       snacksTheme: themePropTypes
