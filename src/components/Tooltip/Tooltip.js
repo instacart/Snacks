@@ -31,7 +31,6 @@ class Tooltip extends PureComponent {
     size: 'small',
     onShow: noop,
     onDismiss: noop,
-    isVisible: false,
   }
 
   state = {
@@ -56,18 +55,19 @@ class Tooltip extends PureComponent {
   }
 
   renderTriggerElement() {
-    const { target } = this.props
+    const { target, isVisible } = this.props
     const { show } = this.state
 
     if (!target) { return }
+    const extraProps = isVisible == null ? { onClick: this.handleToggle.bind(this) } : {}
 
     return React.cloneElement(target, {
       ref: (node) => {
         this.trigger = node
       },
-      onClick: this.handleToggle.bind(this),
       'aria-haspopup': true,
-      'aria-expanded': show
+      'aria-expanded': isVisible || show,
+      ...extraProps
     })
   }
 
