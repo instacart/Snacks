@@ -81,6 +81,21 @@ describe('Tooltip', () => {
     expect(tooltip.state().show).toEqual(false)
   })
 
+  it('should change its internal state when element is uncontrolled', () => {
+    const tooltip = mount(
+      <Tooltip
+        target={(<button>TRIGGER</button>)}
+      />
+    )
+
+    expect(tooltip.state().show).toEqual(false)
+
+    const trigger = tooltip.find('button').last()
+    trigger.last().simulate('click')
+
+    expect(tooltip.state().show).toEqual(true)
+  })
+
   it('should not change its internal state when passing in false for isVisible', () => {
     const tooltip = mount(
       <Tooltip
