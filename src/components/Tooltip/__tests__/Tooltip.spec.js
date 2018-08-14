@@ -66,73 +66,64 @@ describe('Tooltip', () => {
     expect(onDismiss.calledOnce).toBe(true)
   })
 
-    it('should have true show state and true isVisible prop when simulating click', () => {
+  it('should not change its internal state if the component is controlled through isVisible', () => {
       
-      const tooltip = mount(
-        <Tooltip
-          target={(<button>TRIGGER</button>)}
-          placement='right'
-          size='small'
-          snacksStyle="secondary"
-          isVisible={true}
-        >
-          Right Secondary small
-        </Tooltip>
-      )
-      
-      const trigger = tooltip.find('button').last()
-      trigger.last().simulate('click')
-      expect(tooltip.props().isVisible).toEqual(true)
-      expect(tooltip.state().show).toEqual(true)
+    const tooltip = mount(
+      <Tooltip
+        target={(<button>TRIGGER</button>)}
+        isVisible={true}
+      />
+    )
+
+    const trigger = tooltip.find('button').last()
+    trigger.last().simulate('click')
+    expect(tooltip.props().isVisible).toEqual(true)
+    expect(tooltip.state().show).toEqual(false)
   })
 
-    it('should have false show state and true isVisible prop when not simulating click', () => {
+  it('should change its internal state when element is uncontrolled', () => {
+    const tooltip = mount(
+      <Tooltip
+        target={(<button>TRIGGER</button>)}
+      />
+    )
 
-      const tooltip = mount(
-        <Tooltip
-          target={(<button>TRIGGER</button>)}
-          placement='right'
-          size='small'
-          snacksStyle="secondary"
-          isVisible={true}
-        >
-          Right Secondary small
-        </Tooltip>
-      )
+    expect(tooltip.state().show).toEqual(false)
 
-      expect(tooltip.props().isVisible).toEqual(true)
-      expect(tooltip.state().show).toEqual(false)
-  })
-    
+    const trigger = tooltip.find('button').last()
+    trigger.last().simulate('click')
 
-    it('should have true show state and isVisible prop when passing in true' + 
-      'for isVisible and they should both be false when passing in false', () => {
-      
-      let isVisible = true
-      const tooltip = mount(
-        <Tooltip
-          target={(<button>TRIGGER</button>)}
-          placement='right'
-          size='small'
-          snacksStyle="secondary"
-          isVisible={isVisible}
-        >
-          Right Secondary small
-        </Tooltip>
-      )
-
-      const trigger = tooltip.find('button').last()
-      trigger.last().simulate('click')
-      
-      expect(tooltip.props().isVisible).toEqual(true)
-      expect(tooltip.state().show).toEqual(true)
-
-      trigger.last().simulate('click')
-      tooltip.props().isVisible = false
-      
-      expect(tooltip.props().isVisible).toEqual(false)
-      expect(tooltip.state().show).toEqual(false)
+    expect(tooltip.state().show).toEqual(true)
   })
 
+  it('should not change its internal state when passing in false for isVisible', () => {
+    const tooltip = mount(
+      <Tooltip
+        target={(<button>TRIGGER</button>)}
+        isVisible={false}
+      />
+    )
+
+    const trigger = tooltip.find('button').last()
+    trigger.last().simulate('click')
+
+    expect(tooltip.props().isVisible).toEqual(false)
+    expect(tooltip.state().show).toEqual(false)
+  })
+
+
+  it('should have false show state and true isVisible prop when not simulating click', () => {
+
+    const tooltip = mount(
+      <Tooltip
+        target={(<button>TRIGGER</button>)}
+        isVisible={true}
+      >
+      </Tooltip>
+    )
+
+    expect(tooltip.props().isVisible).toEqual(true)
+    expect(tooltip.state().show).toEqual(false)
+  })
 
 })
