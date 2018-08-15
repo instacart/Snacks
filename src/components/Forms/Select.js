@@ -282,6 +282,7 @@ class Select extends React.PureComponent {
             isActive={isOpen || isFocused}
             hasError={hasError}
             style={styles.floatingLabel}
+            snacksTheme={snacksTheme}
           />
 
           <div style={styles.labelContainer}>

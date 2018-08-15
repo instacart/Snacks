@@ -2,6 +2,7 @@ import React         from 'react'
 import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
 import toJson        from 'enzyme-to-json'
+import renderer from 'react-test-renderer'
 import PhoneNumberField  from '../PhoneNumberField'
 
 it('renders without error', () => {
@@ -130,4 +131,35 @@ it('fires the onChange prop', () => {
   // ensure the callback passes correct, updated phone value
   expect(onChange.mock.calls[1]).toEqual([expect.anything(), '1234567890', '(123) 456-7890'])
   expect(onChange.mock.calls.length).toBe(2)
+})
+
+it('uses a custom theme for all child components if one is provided', () => {
+  const customTheme = {
+    colors: {
+      action: 'green',
+      actionHover: 'darkgreen',
+      primaryBackground: 'white',
+      primaryForeground: 'green',
+      secondaryBackground: 'green',
+      secondaryForeground: 'white',
+      secondaryForegroundFocus: 'gray'
+    }
+  }
+
+  const wrapper = mount(
+    <StyleRoot>
+      <div>
+        <PhoneNumberField
+          id="test_id"
+          name="test"
+          floatingLabelText="Phone Number"
+          hintText="(555) 555-555"
+          onChange={() => {}}
+          snacksTheme={customTheme}
+        />
+      </div>
+    </StyleRoot>
+  )
+
+  expect(toJson(wrapper)).toMatchSnapshot()
 })
