@@ -121,3 +121,38 @@ it('should fire callbacks', () => {
   expect(onSelect.calledOnce).toBe(true)
   expect(onClose.calledOnce).toBe(true)
 })
+
+it('uses a custom theme for all child components if one is provided', () => {
+  const customTheme = {
+    colors: {
+      action: 'green',
+      actionHover: 'darkgreen',
+      primaryBackground: 'white',
+      primaryForeground: 'green',
+      secondaryBackground: 'green',
+      secondaryForeground: 'white',
+      secondaryForegroundFocus: 'gray'
+    }
+  }
+
+  const tree = renderer
+    .create(
+      <StyleRoot>
+        <Select
+          id="test_id"
+          name="country"
+          floatingLabelText="Country"
+          hintText="Select a country"
+          onOpen={() => {}}
+          onClose={() => {}}
+          onSelect={() => {}}
+          snacksTheme={customTheme}
+        >
+          <MenuItem label="United States" value="US" />
+        </Select>
+      </StyleRoot>
+    )
+    .toJSON()
+
+  expect(tree).toMatchSnapshot()
+})

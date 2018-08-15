@@ -87,3 +87,37 @@ it('fires the onChange prop', () => {
 
   expect(onChange.calledOnce).toBe(true)
 })
+
+it('uses a custom theme for all child components if one is provided', () => {
+  const customTheme = {
+    colors: {
+      action: 'green',
+      actionHover: 'darkgreen',
+      primaryBackground: 'white',
+      primaryForeground: 'green',
+      secondaryBackground: 'green',
+      secondaryForeground: 'white',
+      secondaryForegroundFocus: 'gray'
+    }
+  }
+
+  const tree = renderer
+    .create(
+      <StyleRoot>
+        <div>
+          <TextField
+            id="test_id"
+            name="test"
+            type="email"
+            floatingLabelText="Email"
+            hintText="Enter your email address"
+            onChange={() => {}}
+            snacksTheme={customTheme}
+          />
+        </div>
+      </StyleRoot>
+    )
+    .toJSON()
+
+  expect(tree).toMatchSnapshot()
+})

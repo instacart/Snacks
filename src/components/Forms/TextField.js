@@ -237,6 +237,7 @@ class TextField extends React.Component {
             isActive={isFocused}
             hasError={hasError}
             htmlFor={inputId}
+            snacksTheme={snacksTheme}
           />
 
           { hintText &&
