@@ -230,6 +230,7 @@ class TextField extends React.Component {
 
         <div style={styles.inputContainer}>
           <FloatingLabel
+            snacksTheme={snacksTheme}
             text={floatingLabelText}
             float={isFocused || hasValue}
             disabled={disabled}
