@@ -2,7 +2,7 @@
 // and passes down theme through props
 import React, { Component } from 'react'
 import themer from './index'
-import { themePropTypes } from './utils'
+import { cleanConfig, themePropTypes } from './utils'
 
 const isStateless = (Component) => {
   return !Component.prototype.render
@@ -33,10 +33,9 @@ function withTheme(InnerComponent) {
     validateSnacksTheme() {
       if (__DEV__) { // eslint-disable-line no-undef
         const { snacksTheme } = this.props
-        const snackType = typeof snacksTheme
-        const themeIsBad = Boolean(snacksTheme) && snackType !== 'object'
+        const themeIsBad = snacksTheme && !Object.keys(cleanConfig(snacksTheme)).length
         if (themeIsBad) {
-          throw new Error(`Recieved an invalid snacksTheme Prop. Expected undefined or an object and instead got ${snackType}`)
+          throw new Error(`Recieved an invalid snacksTheme Prop. Expected undefined or an object and instead got ${typeof snacksTheme}`)
         }
       }
     }
