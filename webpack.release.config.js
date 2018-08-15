@@ -1,5 +1,6 @@
 const path = require('path')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
   mode: 'production',
@@ -29,6 +30,11 @@ module.exports = {
       })
     ]
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      __DEV__: JSON.stringify(false)
+    })
+  ],
   output: {
     library: 'Snacks',
     libraryTarget: 'umd',
