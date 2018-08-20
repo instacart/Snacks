@@ -26,7 +26,7 @@ Radio.propTypes = {
     label         :PropTypes.string,
   }),
   children      : PropTypes.string,
-  id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   isDisabled    : PropTypes.bool,
   isSelected    : PropTypes.bool,
   name          : PropTypes.string,
