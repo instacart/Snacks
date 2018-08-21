@@ -3,7 +3,9 @@
   "version": "0.0.92",
   "description": "The Instacart Component Library for Web",
   "main": "dist/snacks.js",
+  "module": "src/index.js",
   "scripts": {
+    "analyze-webpack-bundles": "analyze=true npm run start",
     "build": "webpack --progress --config webpack.release.config.js",
     "release:build": "babel-node scripts/release/build_release.js",
     "release:publish": "babel-node scripts/release/publish_release.js",
@@ -62,6 +64,7 @@
     "uglifyjs-webpack-plugin": "^1.2.5",
     "underscore": "^1.8.3",
     "webpack": "^4.12.0",
+    "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.0.4"
   },
   "dependencies": {

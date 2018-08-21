@@ -15,9 +15,7 @@ module.exports = {
       }
     ]
   },
-  entry: {
-    main: './src/index.js'
-  },
+  entry: './src/index.js',
   optimization: {
     minimizer: [
       new UglifyJSPlugin({
