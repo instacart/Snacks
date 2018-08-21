@@ -110,6 +110,7 @@ exports[`Radio incorporates user styles if passed 1`] = `
           "WebkitAppearance": "none",
           "appearance": "none",
           "backgroundImage": "none",
+          "cursor": "pointer",
           "height": 22,
           "left": 0,
           "opacity": 0,

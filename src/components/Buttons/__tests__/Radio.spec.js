@@ -56,7 +56,8 @@ describe('Radio', () => {
         style: {
           wrapEl: {background: 'pink'},
           button: {border: '2px solid purple' },
-          label: {color: 'green'}
+          label: {color: 'green'},
+          inputBtn: {cursor: 'pointer'}
         },
       },
       {

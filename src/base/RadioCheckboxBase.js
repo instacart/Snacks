@@ -63,13 +63,14 @@ class RadioCheckboxBase extends React.PureComponent {
     btnType       : PropTypes.oneOf(['radio', 'checkbox']).isRequired,
     isDisabled    : PropTypes.bool,
     children      : PropTypes.string,
-    id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     isSelected    : PropTypes.bool,
     onChange      : PropTypes.func,
     style         : PropTypes.shape({
       button        : PropTypes.object,
       label         : PropTypes.object,
       wrapEl        : PropTypes.object,
+      inputBtn      : PropTypes.object,
     }),
     snacksTheme   : themePropTypes,
     value         : PropTypes.string,
@@ -121,7 +122,7 @@ class RadioCheckboxBase extends React.PureComponent {
           id={id}
           type={btnType}
           onChange={this.handleChange}
-          style={STYLE.inputBtn}
+          style={{...STYLE.inputBtn, ...style.inputBtn}}
           value={value}
           checked={isSelected}
           disabled={isDisabled}
