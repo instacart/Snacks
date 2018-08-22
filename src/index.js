@@ -11,6 +11,7 @@ import Icon from './components/Icon/Icon'
 import SVGIcon from './components/SVGIcon/SVGIcon'
 import Link from './components/Link/Link'
 import LoadingBox from './components/Loading/LoadingBox'
+import NavigationPill from './components/NavigationPills/NavigationPill'
 import NavigationPills from './components/NavigationPills/NavigationPills'
 import Normalize from './styles/Normalize'
 import responsive from './styles/responsive'
@@ -86,6 +87,7 @@ export {
   SVGIcon,
   Link,
   LoadingBox,
+  NavigationPill,
   NavigationPills,
   ScrollTrack,
   Menu,
