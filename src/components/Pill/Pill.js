@@ -1,17 +1,15 @@
 import React from 'react'
-import { colors } from '../../styles'
 import { spacings } from '../../styles/spacing'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
 import withTheme from '../../styles/themer/withTheme'
 
 const getStyles = props => {
-  const { color, hovorColor } = props
-  const restingColor = colors[color]
-  const onHoverColor = colors[hovorColor] || color
+  const { color: colorProp, snacksTheme } = props
+  const color = snacksTheme.colors[colorProp] || colorProp
 
   return {
-    backgroundColor: restingColor,
+    backgroundColor: color,
     color: 'white',
     borderRadius: spacings.SM,
     padding: `0 ${spacings.XS}px`,
@@ -19,10 +17,6 @@ const getStyles = props => {
     textAlign: 'center',
     display: 'inline-block',
     width: 'auto',
-
-    ':hover': {
-      color: onHoverColor,
-    }
   }
 }
 
@@ -40,7 +34,7 @@ const Pill = props => {
 }
 
 Pill.propTypes = {
-  /** Color of the pill. */
+  /** Color of the pill. can be hex value or themer color key as string */
   color: PropTypes.string,
 
   /** The pill's text content. */

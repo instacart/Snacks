@@ -6,7 +6,7 @@ describe('Pill', () => {
   it('renders without throwing', () => {
     const tree = renderer
       .create(
-          <Pill>HI</Pill>
+        <Pill>HI</Pill>
       )
       .toJSON()
     expect(tree).toMatchSnapshot()
@@ -15,7 +15,7 @@ describe('Pill', () => {
   it('renders correctly when style overrides are provided', () => {
     const tree = renderer
       .create(
-          <Pill style={{ textDecoration: 'underline' }}>HI</Pill>
+        <Pill style={{ textDecoration: 'underline' }}>HI</Pill>
       )
       .toJSON()
     expect(tree).toMatchSnapshot()
@@ -24,7 +24,7 @@ describe('Pill', () => {
   it('applies the elementAttributes prop correctly', () => {
     const tree = renderer
       .create(
-          <Pill elementAttributes={{ 'aria-label': 'foo' }}>HI</Pill>
+        <Pill elementAttributes={{ 'aria-label': 'foo' }}>HI</Pill>
       )
       .toJSON()
 

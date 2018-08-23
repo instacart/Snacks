@@ -4,11 +4,9 @@ exports[`Pill applies the elementAttributes prop correctly 1`] = `
 <div
   aria-label="foo"
   data-radium={true}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
   style={
     Object {
-      "backgroundColor": undefined,
+      "backgroundColor": "#CC0033",
       "borderRadius": 16,
       "color": "white",
       "display": "inline-block",
@@ -26,11 +24,9 @@ exports[`Pill applies the elementAttributes prop correctly 1`] = `
 exports[`Pill renders correctly when style overrides are provided 1`] = `
 <div
   data-radium={true}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
   style={
     Object {
-      "backgroundColor": undefined,
+      "backgroundColor": "#CC0033",
       "borderRadius": 16,
       "color": "white",
       "display": "inline-block",
@@ -49,11 +45,9 @@ exports[`Pill renders correctly when style overrides are provided 1`] = `
 exports[`Pill renders without throwing 1`] = `
 <div
   data-radium={true}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
   style={
     Object {
-      "backgroundColor": undefined,
+      "backgroundColor": "#CC0033",
       "borderRadius": 16,
       "color": "white",
       "display": "inline-block",
