@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pill applies the elementAttributes prop correctly 1`] = `
+<div
+  aria-label="foo"
+  data-radium={true}
+  style={
+    Object {
+      "backgroundColor": "#CC0033",
+      "borderRadius": 16,
+      "color": "white",
+      "display": "inline-block",
+      "margin": "8px",
+      "padding": "0 8px",
+      "textAlign": "center",
+      "width": "auto",
+    }
+  }
+>
+  HI
+</div>
+`;
+
+exports[`Pill renders correctly when style overrides are provided 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "backgroundColor": "#CC0033",
+      "borderRadius": 16,
+      "color": "white",
+      "display": "inline-block",
+      "margin": "8px",
+      "padding": "0 8px",
+      "textAlign": "center",
+      "textDecoration": "underline",
+      "width": "auto",
+    }
+  }
+>
+  HI
+</div>
+`;
+
+exports[`Pill renders without throwing 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "backgroundColor": "#CC0033",
+      "borderRadius": 16,
+      "color": "white",
+      "display": "inline-block",
+      "margin": "8px",
+      "padding": "0 8px",
+      "textAlign": "center",
+      "width": "auto",
+    }
+  }
+>
+  HI
+</div>
+`;
