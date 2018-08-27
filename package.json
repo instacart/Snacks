@@ -3,7 +3,6 @@
   "version": "0.0.94",
   "description": "The Instacart Component Library for Web",
   "main": "dist/snacks.js",
-  "module": "src/index.js",
   "scripts": {
     "analyze-webpack-bundles": "analyze=true npm run start",
     "build": "webpack --progress --config webpack.release.config.js",
