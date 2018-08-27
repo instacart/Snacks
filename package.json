@@ -91,6 +91,6 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/scripts/test/fileMock.js",
       "\\.(css|less)$": "<rootDir>/scripts/test/styleMock.js"
     },
-    "setupTestFrameworkScriptFile": "<rootDir>/scripts/test/enzymeSetup.js"
+    "setupTestFrameworkScriptFile": "<rootDir>/scripts/test/testSetup.js"
   }
 }

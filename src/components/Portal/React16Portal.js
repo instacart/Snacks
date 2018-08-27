@@ -1,8 +1,11 @@
-import { PureComponent }             from 'react'
+import { PureComponent } from 'react'
 import { createPortal } from 'react-dom'
-import PropTypes                     from 'prop-types'
+import PropTypes from 'prop-types'
+import { isNodeEnv } from '../../utils/detectFeature'
 
-const DEFAULT_CONTAINER = document.body
+const DEFAULT_CONTAINER = !isNodeEnv() ? document.body : { 
+  appendChild: () => {} /* eslint-disable-line no-empty-function */
+}
 
 class Portal extends PureComponent {
   static propTypes = {
