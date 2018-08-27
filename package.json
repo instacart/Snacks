@@ -71,7 +71,6 @@
     "react-text-mask": "^5.3.0",
     "semver": "^5.5.0",
     "svgr": "^1.9.2",
-    "tinycolor2": "^1.4.1",
     "underscore": "^1.8.3",
     "validator": "^9.1.1"
   },
