@@ -11,11 +11,12 @@ Associating a label to every radio button is very important for accessibility pu
 <div style={{display: 'flex', flexDirection: 'column'}}>
   <div style={{display: 'flex', marginBottom: 20}}>
     <Radio id="radio1" isSelected />
-    <label htmlFor="radio1" style={{marginLeft: 10}}>Label associated manually</label>
+    <label htmlFor="radio1" style={{marginLeft: 10, lineHeight: '22px'}}>Label associated manually</label>
   </div>
   <Radio id="radio2">Label auto-generated</Radio>
 </div>
 ```
+**Important!** If you attach a label to a checkbox manually, make sure you set the line-height and margin-left properties as per the example above.
 
 ### Groups
 To create a radio group where only one button can be selected [see here](#radiogroup).
