@@ -23,6 +23,7 @@ class Tooltip extends PureComponent {
     onDismiss: PropTypes.func,
     onShow: PropTypes.func,
     isVisible: PropTypes.bool,
+    noPadding: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -78,6 +79,7 @@ class Tooltip extends PureComponent {
       size,
       snacksStyle,
       isVisible,
+      noPadding,
     } = this.props
 
     return (
@@ -92,6 +94,7 @@ class Tooltip extends PureComponent {
           <InnerToolTip
             size={size}
             snacksStyle={snacksStyle}
+            noPadding={noPadding}
           >
             {children}
           </InnerToolTip>
