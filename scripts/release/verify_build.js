@@ -15,6 +15,7 @@ Object.keys(Snacks.colors).forEach((color) => {
   }
 })
 
+// verify zIndex from dist equal src
 Object.keys(Snacks.zIndex).forEach((zValue) => {
   const sourceObj = zIndex[zValue]
   const builtObj = Snacks.zIndex[zValue]
