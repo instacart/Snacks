@@ -1,6 +1,7 @@
 import { PureComponent } from 'react'
 import { findDOMNode }   from 'react-dom'
 import PropTypes         from 'prop-types'
+import { isNodeEnv } from '../../utils/detectFeature'
 
 class TooltipRootClose extends PureComponent {
   static propTypes = {
@@ -40,12 +41,14 @@ class TooltipRootClose extends PureComponent {
   }
 
   addEventListeners() {
+    if (isNodeEnv()) { return }
     document.addEventListener('click', this.handleMouseClick)
     document.addEventListener('keyup', this.handleKeyUp)
     window.addEventListener('resize', this.handleResize)
   }
 
   removeEventListeners() {
+    if (isNodeEnv()) { return }
     document.removeEventListener('click', this.handleMouseClick)
     document.removeEventListener('keyup', this.handleKeyUp)
     window.removeEventListener('resize', this.handleResize)
