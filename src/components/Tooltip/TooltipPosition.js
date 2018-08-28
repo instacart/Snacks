@@ -46,18 +46,10 @@ class TooltipPosition extends PureComponent {
   getRect(node) {
     const container = node.getBoundingClientRect()
     const offset = {
-      top: 0,
-      left: 0,
+      top: container.top + window.pageYOffset,
+      left: container.left + window.pageXOffset,
       width: container.width || node.offsetWidth,
       height: container.height || node.offsetHeight
-    }
-    let offsetEl = node
-    // Calculate offset relative to document.
-    // Need to traverse offset for all parents
-    while (offsetEl) {
-      offset.top += offsetEl.offsetTop
-      offset.left += offsetEl.offsetLeft
-      offsetEl = offsetEl.offsetParent
     }
 
     return offset
