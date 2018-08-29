@@ -40,7 +40,7 @@ const resolveStylePlacementBorders = (style, arrowStyle, placement) => {
   
   const borderColor = RESOLVE_BORDER_COLOR[style]
   const borderStyle = arrowStyle && arrowStyle.border ?
-    arrowStyle.boder : `1px solid ${borderColor}`
+    arrowStyle.border : `1px solid ${borderColor}`
   
   const boxShadowRight = arrowStyle && arrowStyle.boxShadowRight
   const boxShadowBottom = arrowStyle && arrowStyle.boxShadowBottom
