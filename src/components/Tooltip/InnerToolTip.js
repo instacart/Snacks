@@ -75,7 +75,7 @@ class InnerToolTip extends PureComponent {
     size: 'medium',
     snacksStyle: 'dark'
   }
-  
+
   get contentStyles() {
     const { size, style, snacksStyle } = this.props
     return {
