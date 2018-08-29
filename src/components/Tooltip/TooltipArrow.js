@@ -42,10 +42,10 @@ const resolveStylePlacementBorders = (style, arrowStyle, placement) => {
   const borderStyle = arrowStyle && arrowStyle.border ?
     arrowStyle.boder : `1px solid ${borderColor}`
   
-  const boxShadowRight = arrowStyle.boxShadowRight
-  const boxShadowBottom = arrowStyle.boxShadowBottom
-  const boxShadowLeft = arrowStyle.boxShadowLeft
-  const boxShadowTop = arrowStyle.boxShadowTop
+  const boxShadowRight = arrowStyle && arrowStyle.boxShadowRight
+  const boxShadowBottom = arrowStyle && arrowStyle.boxShadowBottom
+  const boxShadowLeft = arrowStyle && arrowStyle.boxShadowLeft
+  const boxShadowTop = arrowStyle && arrowStyle.boxShadowTop
 
   switch (placement) {
     case 'top':
