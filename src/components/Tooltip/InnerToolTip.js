@@ -57,13 +57,17 @@ const RESOLVED_SIZE = {
 
 class InnerToolTip extends PureComponent {
   static propTypes = {
-    style: PropTypes.shape({}),
     snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark']),
     size: PropTypes.oneOf([
       'small',
       'medium',
       'large',
     ]),
+    style: PropTypes.shape({
+      border: PropTypes.string,
+      padding: PropTypes.string,
+      boxShadow: PropTypes.srting,
+    }),
     arrowPosition: PropTypes.shape({})
   }
 
@@ -71,7 +75,7 @@ class InnerToolTip extends PureComponent {
     size: 'medium',
     snacksStyle: 'dark'
   }
-
+  
   get contentStyles() {
     const { size, style, snacksStyle } = this.props
     return {
