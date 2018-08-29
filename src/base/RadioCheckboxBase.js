@@ -27,6 +27,7 @@ const STYLE = {
   },
   label: {
     marginLeft: 10,
+    lineHeight: `${INPUT_BTN_SIZE}px`,
   },
   wrapEl: {
     display: 'flex',
