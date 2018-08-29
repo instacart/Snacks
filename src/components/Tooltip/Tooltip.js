@@ -23,6 +23,13 @@ class Tooltip extends PureComponent {
       padding: PropTypes.string,
       boxShadow: PropTypes.srting,
     }),
+    arrowStyle: PropTypes.shape({
+      border: PropTypes.srting, 
+      boxShadowRight: PropTypes.string,
+      boxShadowBottom: PropTypes.string,
+      boxShadowLeft: PropTypes.string,
+      boxShadowTop: PropTypes.string,
+    }),
     target: PropTypes.node.isRequired,
     snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark']),
     onDismiss: PropTypes.func,
@@ -82,6 +89,7 @@ class Tooltip extends PureComponent {
       placement,
       size,
       style,
+      arrowStyle,
       snacksStyle,
       isVisible,
     } = this.props
@@ -98,6 +106,7 @@ class Tooltip extends PureComponent {
           <InnerToolTip
             size={size}
             style={style}
+            arrowStyle={arrowStyle}
             snacksStyle={snacksStyle}
           >
             {children}

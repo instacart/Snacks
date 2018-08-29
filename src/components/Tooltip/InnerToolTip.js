@@ -68,6 +68,13 @@ class InnerToolTip extends PureComponent {
       padding: PropTypes.string,
       boxShadow: PropTypes.srting,
     }),
+    arrowStyle: PropTypes.shape({
+      border: PropTypes.srting, 
+      boxShadowRight: PropTypes.string,
+      boxShadowBottom: PropTypes.string,
+      boxShadowLeft: PropTypes.string,
+      boxShadowTop: PropTypes.string,
+    }),
     arrowPosition: PropTypes.shape({})
   }
 
@@ -87,9 +94,12 @@ class InnerToolTip extends PureComponent {
   }
 
   renderArrow() {
-    const { arrowPosition, snacksStyle } = this.props
+    const { arrowPosition, style, arrowStyle, snacksStyle } = this.props
     return (
-      <TooltipArrow position={arrowPosition} snacksStyle={snacksStyle} />
+      <TooltipArrow
+        arrowStyle={arrowStyle}
+        position={arrowPosition}
+        snacksStyle={snacksStyle} />
     )
   }
 
