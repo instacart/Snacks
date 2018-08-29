@@ -22,6 +22,7 @@ class Tooltip extends PureComponent {
     snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark']),
     onDismiss: PropTypes.func,
     onShow: PropTypes.func,
+    shadow: PropTypes.bool,
     isVisible: PropTypes.bool,
   }
 
@@ -77,6 +78,7 @@ class Tooltip extends PureComponent {
       placement,
       size,
       snacksStyle,
+      shadow,
       isVisible,
     } = this.props
 
@@ -91,6 +93,7 @@ class Tooltip extends PureComponent {
         >
           <InnerToolTip
             size={size}
+            shadow={shadow}
             snacksStyle={snacksStyle}
           >
             {children}
