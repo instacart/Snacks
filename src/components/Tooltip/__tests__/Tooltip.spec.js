@@ -6,10 +6,6 @@ import { mount }        from 'enzyme'
 import { spy, stub }    from 'sinon'
 import Tooltip          from '../Tooltip'
 
-console.log = s => {
-  process.stdout.write(s + "\n")
-}
-
 describe('Tooltip', () => {
 
   it('renders Tooltip properly', () => {
