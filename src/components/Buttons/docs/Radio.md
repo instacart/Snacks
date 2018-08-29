@@ -16,7 +16,7 @@ Associating a label to every radio button is very important for accessibility pu
   <Radio id="radio2">Label auto-generated</Radio>
 </div>
 ```
-**Important!** If you attach a label to a checkbox manually, make sure you set the line-height and margin-left properties as per the example above.
+**Important!** If you attach a label to a radio button manually, make sure you set the line-height and margin-left properties as per the example above.
 
 ### Groups
 To create a radio group where only one button can be selected [see here](#radiogroup).
