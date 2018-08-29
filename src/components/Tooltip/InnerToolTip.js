@@ -94,12 +94,13 @@ class InnerToolTip extends PureComponent {
   }
 
   renderArrow() {
-    const { arrowPosition, style, arrowStyle, snacksStyle } = this.props
+    const { arrowPosition, arrowStyle, snacksStyle } = this.props
     return (
       <TooltipArrow
         arrowStyle={arrowStyle}
         position={arrowPosition}
-        snacksStyle={snacksStyle} />
+        snacksStyle={snacksStyle}
+      />
     )
   }
 
