@@ -77,7 +77,7 @@ class InnerToolTip extends PureComponent {
     const { size, style, shadow, snacksStyle } = this.props
     const resolvedStyle = shadow ?
       {...style, ...{boxShadow: 'rgba(0, 0, 0, 0.25) 0px 3px 10px'}} :
-      style
+      {...style}
     return {
       ...styles.innerContent,
       ...RESOLVED_SIZE[size],
