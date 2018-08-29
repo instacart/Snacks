@@ -74,10 +74,10 @@ class InnerToolTip extends PureComponent {
   }
 
   get contentStyles() {
-    const { size, style, snacksStyle } = this.props
-    const resolvedSize = this.props.noPadding ?
+    const { size, style, noPadding, snacksStyle } = this.props
+    const resolvedSize = noPadding ?
       {...RESOLVED_SIZE[size], ...{padding: 0}} :
-      RESOLVED_SIZE[size]
+      {...RESOLVED_SIZE[size]}
     return {
       ...styles.innerContent,
       ...resolvedSize,
