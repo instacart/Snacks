@@ -64,7 +64,8 @@ class InnerToolTip extends PureComponent {
       'medium',
       'large',
     ]),
-    arrowPosition: PropTypes.shape({})
+    arrowPosition: PropTypes.shape({}),
+    noPadding: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -73,10 +74,13 @@ class InnerToolTip extends PureComponent {
   }
 
   get contentStyles() {
-    const { size, style, snacksStyle } = this.props
+    const { size, style, noPadding, snacksStyle } = this.props
+    const resolvedSize = noPadding ?
+      {...RESOLVED_SIZE[size], ...{padding: 0}} :
+      {...RESOLVED_SIZE[size]}
     return {
       ...styles.innerContent,
-      ...RESOLVED_SIZE[size],
+      ...resolvedSize,
       ...RESOLVED_COLOR[snacksStyle],
       ...style
     }
