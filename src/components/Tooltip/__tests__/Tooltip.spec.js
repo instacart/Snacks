@@ -6,6 +6,10 @@ import { mount }        from 'enzyme'
 import { spy, stub }    from 'sinon'
 import Tooltip          from '../Tooltip'
 
+console.log = s => {
+  process.stdout.write(s + "\n")
+}
+
 describe('Tooltip', () => {
 
   it('renders Tooltip properly', () => {
@@ -126,4 +130,16 @@ describe('Tooltip', () => {
     expect(tooltip.state().show).toEqual(false)
   })
 
+  it('should have truth prop for noPadding when noPadding is passed in as true', () => {
+
+    const tooltip = mount(
+      <Tooltip
+        target={(<button>TRIGGER</button>)}
+        noPadding={true}
+      >
+      </Tooltip>
+    )
+
+    expect(tooltip.props().noPadding).toEqual(true) 
+  })
 })
