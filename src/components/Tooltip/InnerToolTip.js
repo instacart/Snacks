@@ -65,6 +65,7 @@ class InnerToolTip extends PureComponent {
       'large',
     ]),
     arrowPosition: PropTypes.shape({}),
+    shadow: PropTypes.bool,
     noPadding: PropTypes.bool,
   }
 
