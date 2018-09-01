@@ -4,6 +4,7 @@ import ScrollTrackPropTypes from './ScrollTrackPropTypes'
 
 import React, { Component } from 'react'
 import { isNodeEnv } from '../../utils/detectFeature'
+import debounce from '../../utils/debounce'
 import CircleButton  from '../Buttons/CircleButton'
 import Icon          from '../Icon/Icon'
 import Radium        from 'radium'
@@ -99,7 +100,7 @@ class ScrollTrack extends Component {
   }
 
   componentDidMount() {
-    this.debouncdComputeSlideAttributes = _.debounce(this.computeSlideAttributes, 200)
+    this.debouncdComputeSlideAttributes = debounce(this.computeSlideAttributes, 200)
     this.computeSlideAttributes()
 
     if (!isNodeEnv()) {
