@@ -1,9 +1,7 @@
 import memoize from '../utils/memoize'
 
 const doCallbackFiveTimes = (callback) => {
-  [1,2,3,4,5].forEach(function(i) {
-    callback()
-  })
+  [1,2,3,4,5].forEach(() => callback())
 }
 describe('memoize', () => {
   describe('returns the correct value', () => {
@@ -20,30 +18,35 @@ describe('memoize', () => {
   })
 
   describe('memoizes arguments to prevent extra calls', () => {
-    let callCount = 0
+    let subjectFunctionCalls = 0
     const subjectFunc = (a, b) => {
-      callCount += 1
+      subjectFunctionCalls += 1
       return a + b
     }
 
     afterEach(() => {
-      callCount = 0
+      subjectFunctionCalls = 0
+    })
+
+    it('counting mechanism works', () => {
+      doCallbackFiveTimes(() => subjectFunc(5, 100))
+      expect(subjectFunctionCalls).toBe(5)
     })
 
     it('when implemented once', () => {
       const memoizedFunc = memoize(subjectFunc)
       doCallbackFiveTimes(() => memoizedFunc(5, 100))
       expect(memoizedFunc(5, 100)).toBe(105)
-      expect(callCount).toBe(1)
+      expect(subjectFunctionCalls).toBe(1)
     })
 
     it('when implemented multiple times', () => {
       const secondFunc = (a, b) => {
-        callCount += 1
+        subjectFunctionCalls += 1
         return a + b
       }
       const thirdFunc = (a, b) => {
-        callCount += 1
+        subjectFunctionCalls += 1
         return a + b
       }
       const memoizedFunc = memoize(subjectFunc)
@@ -55,7 +58,7 @@ describe('memoize', () => {
         thirdMemoizedFunc(5, 5)
       })
       expect(thirdMemoizedFunc(5, 5)).toBe(10)
-      expect(callCount).toBe(3)
+      expect(subjectFunctionCalls).toBe(3)
     })
   })
 })
