@@ -1,7 +1,7 @@
 export default (func) => {
   const memoizedFunc = function () {
     let result
-    const key = arguments[0]
+    const key = JSON.stringify(arguments)
     if (memoizedFunc.cache[key] !== undefined) {
       result = memoizedFunc.cache[key]
     } else {
