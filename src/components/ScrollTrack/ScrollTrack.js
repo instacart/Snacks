@@ -5,11 +5,11 @@ import ScrollTrackPropTypes from './ScrollTrackPropTypes'
 import React, { Component } from 'react'
 import { isNodeEnv } from '../../utils/detectFeature'
 import debounce from '../../utils/debounce'
+import isEqual from '../../utils/isEqual'
 import CircleButton  from '../Buttons/CircleButton'
 import Icon          from '../Icon/Icon'
 import Radium        from 'radium'
 import PropTypes     from 'prop-types'
-import _             from 'underscore'
 
 
 const noOp = () => {} // eslint-disable-line no-empty-function
@@ -120,7 +120,7 @@ class ScrollTrack extends Component {
     const prevChildren = prevProps.children || []
     const newChildren = this.props.children || []
 
-    if (!_.isEqual(prevChildren, newChildren)) {
+    if (!isEqual(prevChildren, newChildren)) {
       this.computeSlideAttributes()
     }
   }
