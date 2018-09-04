@@ -1,6 +1,6 @@
 import React     from 'react'
 import PropTypes from 'prop-types'
-import isEqual from '../../utils/isEqual'
+import _         from 'underscore'
 
 class Form extends React.Component {
   static propTypes = {
@@ -39,7 +39,7 @@ class Form extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.serverErrors && !isEqual(this.state.serverErrors, nextProps.serverErrors)) {
+    if (nextProps.serverErrors && !_.isEqual(this.state.serverErrors, nextProps.serverErrors)) {
       this.setState({serverErrors: nextProps.serverErrors}, () => {
         this.setErrorsOnFormComponents(this.state.serverErrors)
       })

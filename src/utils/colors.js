@@ -1,6 +1,6 @@
 import tinycolor from 'tinycolor2'
-import memoize from './memoize'
+import _ from 'underscore'
 
-export const darken = memoize((baseColor, amount) => {
+export const darken = _.memoize((baseColor, amount) => {
   return tinycolor(baseColor).darken(amount).toHexString()
 })

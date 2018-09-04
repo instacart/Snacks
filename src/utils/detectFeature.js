@@ -1,6 +1,6 @@
-import memoize from './memoize'
+import _ from 'underscore'
 
-export const supportsCSSGrid = memoize(() => {
+export const supportsCSSGrid = _.memoize(() => {
   if (isNodeEnv() || isTestEnv()) { return true }
 
   const elm = document.createElement('div')
