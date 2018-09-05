@@ -91,4 +91,17 @@ describe('isEqual', () => {
       expect(isEqual(first, second)).toBe(false)
     })
   })
+  describe('with circular references', () => {
+    class Circular {
+      constructor() {
+        this.self = this
+      }
+    }
+
+    it('does not blow up', () => {
+      const first = new Circular()
+      const second = new Circular()
+      expect(() => isEqual(first, second)).not.toThrow()
+    })
+  })
 })
