@@ -4,7 +4,7 @@
  * 
  * More info: https://github.com/instacart/Snacks/issues/235 
  */
-import * as React from 'react'
+import React from 'react'
 import _ from 'underscore'
 
 const getRuntimeType = _.memoize((Component) => (<Component/>).type)
