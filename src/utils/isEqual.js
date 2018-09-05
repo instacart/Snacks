@@ -1,55 +1,75 @@
-const isArray = Array.isArray
-const keyList = Object.keys
-const hasProp = Object.prototype.hasOwnProperty
+const SymbolProto = typeof Symbol !== 'undefined' ? Symbol.prototype : null
 
-const equal = (a, b) => {
-  if (a === b) return true
+const has = (obj, path) => obj != null && hasOwnProperty.call(obj, path)
 
-  if (a && b && typeof a == 'object' && typeof b == 'object') {
-    const arrA = isArray(a)
-    const arrB = isArray(b)
-    let i
-    let length
-    let key
-
-    if (arrA && arrB) {
-      length = a.length
-      if (length != b.length) return false
-      for (i = length; i-- !== 0;)
-        if (!equal(a[i], b[i])) return false
-      return true
-    }
-
-    if (arrA != arrB) return false
-
-    const dateA = a instanceof Date
-    const dateB = b instanceof Date
-    if (dateA != dateB) return false
-    if (dateA && dateB) return a.getTime() == b.getTime()
-
-    const regexpA = a instanceof RegExp
-    const regexpB = b instanceof RegExp
-    if (regexpA != regexpB) return false
-    if (regexpA && regexpB) return a.toString() == b.toString()
-
-    const keys = keyList(a)
-    length = keys.length
-
-    if (length !== keyList(b).length)
-      return false
-
-    for (i = length; i-- !== 0;)
-      if (!hasProp.call(b, keys[i])) return false
-
-    for (i = length; i-- !== 0;) {
-      key = keys[i]
-      if (!equal(a[key], b[key])) return false
-    }
-
-    return true
+const deepEq = (a, b, aStack, bStack) => { // eslint-disable-line max-params
+  if (a._wrapped) a = a._wrapped
+  if (b._wrapped) b = b._wrapped
+  const className = toString.call(a)
+  if (className !== toString.call(b)) return false
+  switch (className) {
+    case '[object RegExp]':
+    case '[object String]':
+      return ` ${a}` === ` ${b}`
+    case '[object Number]':
+      if (+a !== +a) return +b !== +b
+      return +a === 0 ? 1 / +a === 1 / b : +a === +b
+    case '[object Date]':
+    case '[object Boolean]':
+      return +a === +b
+    case '[object Symbol]':
+      return SymbolProto.valueOf.call(a) === SymbolProto.valueOf.call(b)
   }
 
-  return a!==a && b!==b
+  const areArrays = className === '[object Array]'
+  if (!areArrays) {
+    if (typeof a != 'object' || typeof b != 'object') return false
+    const aCtor = a.constructor
+    const bCtor = b.constructor
+    if (aCtor !== bCtor && !(typeof aCtor === 'function' && aCtor instanceof aCtor &&
+                             typeof bCtor === 'function' && bCtor instanceof bCtor)
+                        && ('constructor' in a && 'constructor' in b)) {
+      return false
+    }
+  }
+
+  aStack = aStack || []
+  bStack = bStack || []
+  let length = aStack.length
+  while (length--) {
+    if (aStack[length] === a) return bStack[length] === b
+  }
+
+  aStack.push(a)
+  bStack.push(b)
+
+  if (areArrays) {
+    length = a.length
+    if (length !== b.length) return false
+    while (length--) {
+      if (!eq(a[length], b[length], aStack, bStack)) return false
+    }
+  } else {
+    let key
+    const keys = Object.keys(a)
+    length = keys.length
+    if (Object.keys(b).length !== length) return false
+    while (length--) {
+      key = keys[length]
+      if (!(has(b, key) && eq(a[key], b[key], aStack, bStack))) return false
+    }
+  }
+  aStack.pop()
+  bStack.pop()
+  return true
 }
 
-export default equal
+
+export default function eq(a, b, aStack, bStack) { // eslint-disable-line max-params
+  if (a === b) return a !== 0 || 1 / a === 1 / b
+  if (a == null || b == null) return false
+  if (a !== a) return b !== b
+  const type = typeof a
+  if (type !== 'function' && type !== 'object' && typeof b != 'object') return false
+  return deepEq(a, b, aStack, bStack)
+}
