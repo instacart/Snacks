@@ -30,4 +30,4 @@ jobs:
       
       - run: 
           name: Upload code coverage report
-          command: codecov
+          command: ./node_modules/.bin/codecov
