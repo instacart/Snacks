@@ -2,7 +2,7 @@ const SymbolProto = typeof Symbol !== 'undefined' ? Symbol.prototype : null
 
 const has = (obj, path) => obj != null && hasOwnProperty.call(obj, path)
 
-const functionAndFromConstructor = (val) => {
+const isFunctionAndFromConstructor = (val) => {
   typeof val === 'function' && val instanceof val
 }
 
@@ -26,65 +26,81 @@ const fromClassName = (className, a, b) => {
   }
 }
 
+const haveDifferentConstructorProps = (a, b) => {
+  const aCtor = a.constructor
+  const bCtor = b.constructor
+  const objectsMatch = aCtor !== bCtor
+  const notMatchingFunctions = !(isFunctionAndFromConstructor(aCtor) && isFunctionAndFromConstructor(bCtor))
+  const bothConstructors = ('constructor' in a && 'constructor' in b)
+  return objectsMatch && notMatchingFunctions && bothConstructors
+}
+
 const nonArray = (areArrays, a, b) => {
-  if (!areArrays) {
-    if (notObject(a) || notObject(b)) return false
-    const aCtor = a.constructor
-    const bCtor = b.constructor
-    if (aCtor !== bCtor && !(functionAndFromConstructor(aCtor) &&
-    functionAndFromConstructor(bCtor))
-                        && ('constructor' in a && 'constructor' in b)) {
-      return false
-    }
+  const notObjects = (notObject(a) || notObject(b))
+  const nonObjectsWithConstructorDifferences = notObjects || haveDifferentConstructorProps(a, b)
+  if (!areArrays && nonObjectsWithConstructorDifferences) {
+    return false
+  }
+}
+
+const objectKeysMismatch = (a, b, aStack, bStack) => { // eslint-disable-line max-params
+  let key
+  const keys = Object.keys(a)
+  let length = keys.length
+  if (Object.keys(b).length !== length) return false
+  while (length--) {
+    key = keys[length]
+    if (!(has(b, key) && eq(a[key], b[key], aStack, bStack))) return false
+  }
+}
+
+const arraysUnequal = (a, b, aStack, bStack) => { // eslint-disable-line max-params
+  let length = a.length
+  if (length !== b.length) return false
+  while (length--) {
+    if (!eq(a[length], b[length], aStack, bStack)) return false
   }
 }
 
 const deepEq = (a, b, aStack, bStack) => { // eslint-disable-line max-params
+  let earlyReturn
   if (a._wrapped) a = a._wrapped
   if (b._wrapped) b = b._wrapped
   const className = toString.call(a)
-  if (className !== toString.call(b)) return false
-
-  const classNameDerivedBoolean = fromClassName(className, a, b)
-
-  if(isBool(classNameDerivedBoolean)) {
-    return classNameDerivedBoolean
+  if (className !== toString.call(b)) {
+    earlyReturn = false
   }
-
-
+  const classNameDerivedBoolean = fromClassName(className, a, b)
+  if (isBool(classNameDerivedBoolean)) {
+    earlyReturn = classNameDerivedBoolean
+  }
   const areArrays = className === '[object Array]'
-  if(nonArray(areArrays, a, b) === false) return false
-
-
+  if(nonArray(areArrays, a, b) === false) {
+    earlyReturn = false
+  }
+  if(isBool(earlyReturn)) return earlyReturn
   aStack = aStack || []
   bStack = bStack || []
   let length = aStack.length
   while (length--) {
     if (aStack[length] === a) return bStack[length] === b
   }
-
   aStack.push(a)
   bStack.push(b)
 
-  if (areArrays) {
-    length = a.length
-    if (length !== b.length) return false
-    while (length--) {
-      if (!eq(a[length], b[length], aStack, bStack)) return false
-    }
+  const unequalArrays = areArrays && arraysUnequal(a, b, aStack, bStack) === false
+  const unequalNonArrays = !areArrays && objectKeysMismatch(a, b, aStack, bStack) === false
+  let returnVal
+
+  if (unequalArrays || unequalNonArrays) {
+    returnVal = false
   } else {
-    let key
-    const keys = Object.keys(a)
-    length = keys.length
-    if (Object.keys(b).length !== length) return false
-    while (length--) {
-      key = keys[length]
-      if (!(has(b, key) && eq(a[key], b[key], aStack, bStack))) return false
-    }
+    returnVal = true
   }
+
   aStack.pop()
   bStack.pop()
-  return true
+  return returnVal
 }
 
 
