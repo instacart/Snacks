@@ -2,11 +2,15 @@ const SymbolProto = typeof Symbol !== 'undefined' ? Symbol.prototype : null
 
 const has = (obj, path) => obj != null && hasOwnProperty.call(obj, path)
 
-const deepEq = (a, b, aStack, bStack) => { // eslint-disable-line max-params
-  if (a._wrapped) a = a._wrapped
-  if (b._wrapped) b = b._wrapped
-  const className = toString.call(a)
-  if (className !== toString.call(b)) return false
+const functionAndFromConstructor = (val) => {
+  typeof val === 'function' && val instanceof val
+}
+
+const notObject= (val) => typeof val !== 'object'
+
+const isBool = arg => arg === false || arg === true
+
+const fromClassName = (className, a, b) => {
   switch (className) {
     case '[object RegExp]':
     case '[object String]':
@@ -20,18 +24,37 @@ const deepEq = (a, b, aStack, bStack) => { // eslint-disable-line max-params
     case '[object Symbol]':
       return SymbolProto.valueOf.call(a) === SymbolProto.valueOf.call(b)
   }
+}
 
-  const areArrays = className === '[object Array]'
+const nonArray = (areArrays, a, b) => {
   if (!areArrays) {
-    if (typeof a != 'object' || typeof b != 'object') return false
+    if (notObject(a) || notObject(b)) return false
     const aCtor = a.constructor
     const bCtor = b.constructor
-    if (aCtor !== bCtor && !(typeof aCtor === 'function' && aCtor instanceof aCtor &&
-                             typeof bCtor === 'function' && bCtor instanceof bCtor)
+    if (aCtor !== bCtor && !(functionAndFromConstructor(aCtor) &&
+    functionAndFromConstructor(bCtor))
                         && ('constructor' in a && 'constructor' in b)) {
       return false
     }
   }
+}
+
+const deepEq = (a, b, aStack, bStack) => { // eslint-disable-line max-params
+  if (a._wrapped) a = a._wrapped
+  if (b._wrapped) b = b._wrapped
+  const className = toString.call(a)
+  if (className !== toString.call(b)) return false
+
+  const classNameDerivedBoolean = fromClassName(className, a, b)
+
+  if(isBool(classNameDerivedBoolean)) {
+    return classNameDerivedBoolean
+  }
+
+
+  const areArrays = className === '[object Array]'
+  if(nonArray(areArrays, a, b) === false) return false
+
 
   aStack = aStack || []
   bStack = bStack || []
