@@ -10,32 +10,28 @@ describe('isEqual', () => {
     })
   })
   describe('with arrays', () => {
+    const first = [1,'s', {s: 'f'}]
     it('returns true when equal', () => {
-      const first = [1,'s', {s: 'f'}]
       const second = [1,'s', {s: 'f'}]
       expect(isEqual(first, second)).toBe(true)
     })
     it('returns false when not equal', () => {
-      const first = [1,'s', {s: 'f'}]
       const second = [1,'s', {s: 'r'}]
       expect(isEqual(first, second)).toBe(false)
     })
   })
   describe('with objects', () => {
     describe('that are simple', () => {
+      const first = {
+        first: 'key'
+      }
       it('returns true when equal', () => {
-        const first = {
-          first: 'key'
-        }
         const second = {
           first: 'key'
         }
         expect(isEqual(first, second)).toBe(true)
       })
       it('returns false when not equal', () => {
-        const first = {
-          first: 'key'
-        }
         const second = {
           first: 'keys'
         }
@@ -43,11 +39,11 @@ describe('isEqual', () => {
       })
     })
     describe('that are complex', () => {
+      const first = {
+        first: 'key',
+        second: [1,'s', {s: 'f'}]
+      }
       it('returns true when equal', () => {
-        const first = {
-          first: 'key',
-          second: [1,'s', {s: 'f'}]
-        }
         const second = {
           first: 'key',
           second: [1,'s', {s: 'f'}]
@@ -55,10 +51,6 @@ describe('isEqual', () => {
         expect(isEqual(first, second)).toBe(true)
       })
       it('returns false when not equal', () => {
-        const first = {
-          first: 'key',
-          second: [1,'s', {s: 'f'}]
-        }
         const second = {
           first: 'key',
           second: [1,'s', {s: 's'}]
@@ -68,25 +60,23 @@ describe('isEqual', () => {
     })
   })
   describe('with regExp', () => {
+    const first = /start/
     it('returns true when equal', () => {
-      const first = /start/
       const second = /start/
       expect(isEqual(first, second)).toBe(true)
     })
     it('returns false when not equal', () => {
-      const first = /start/
       const second = /starts/
       expect(isEqual(first, second)).toBe(false)
     })
   })
   describe('with Date objects', () => {
+    const first = new Date('December 17, 1995 03:24:00')
     it('returns true when equal', () => {
-      const first = new Date('December 17, 1995 03:24:00')
       const second = new Date('December 17, 1995 03:24:00')
       expect(isEqual(first, second)).toBe(true)
     })
     it('returns false when not equal', () => {
-      const first = new Date('December 17, 1995 03:24:00')
       const second = new Date('December 17, 1995 03:24:01')
       expect(isEqual(first, second)).toBe(false)
     })
