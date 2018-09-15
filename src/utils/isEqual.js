@@ -8,7 +8,7 @@ const isFunctionAndFromConstructor = (val) => {
 
 const notObject= (val) => typeof val !== 'object'
 
-const isBool = arg => arg === false || arg === true
+const isBool = arg => typeof arg === 'boolean'
 
 const fromClassName = (className, a, b) => {
   switch (className) {
@@ -63,44 +63,41 @@ const arraysUnequal = (a, b, aStack, bStack) => { // eslint-disable-line max-par
 }
 
 const deepEq = (a, b, aStack, bStack) => { // eslint-disable-line max-params
-  let earlyReturn
   if (a._wrapped) a = a._wrapped
   if (b._wrapped) b = b._wrapped
   const className = toString.call(a)
-  if (className !== toString.call(b)) {
-    earlyReturn = false
-  }
+  if (className !== toString.call(b)) return false
+
   const classNameDerivedBoolean = fromClassName(className, a, b)
-  if (isBool(classNameDerivedBoolean)) {
-    earlyReturn = classNameDerivedBoolean
-  }
+
+  if (isBool(classNameDerivedBoolean)) return classNameDerivedBoolean
+
   const areArrays = className === '[object Array]'
-  if(nonArray(areArrays, a, b) === false) {
-    earlyReturn = false
-  }
-  if(isBool(earlyReturn)) return earlyReturn
+
+  if(nonArray(areArrays, a, b) === false) return false
+
   aStack = aStack || []
   bStack = bStack || []
+
   let length = aStack.length
+
   while (length--) {
     if (aStack[length] === a) return bStack[length] === b
   }
+
   aStack.push(a)
   bStack.push(b)
 
   const unequalArrays = areArrays && arraysUnequal(a, b, aStack, bStack) === false
   const unequalNonArrays = !areArrays && objectKeysMismatch(a, b, aStack, bStack) === false
-  let returnVal
 
   if (unequalArrays || unequalNonArrays) {
-    returnVal = false
-  } else {
-    returnVal = true
+    return false
   }
 
   aStack.pop()
   bStack.pop()
-  return returnVal
+  return true
 }
 
 
