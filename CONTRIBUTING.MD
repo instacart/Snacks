@@ -90,6 +90,7 @@ If you're creating a new component, that component must be snapshot tested and f
 New components must:
 * have comprehensive tests
 * have comprehensive documentation
+* add component to `styleguide.config.js`
 * follow our code conventions
 * be reviewed and approved
 
