@@ -28,13 +28,16 @@ const styles = {
   },
 
   cellClickable: {
-    cursor: 'pointer'
+    cursor: 'pointer',
+
+    ':hover': {
+      background: '#feffe8'
+    }
   }
 }
 
 const Table = props => {
   const { withHeader = true, definition, onRowClick, data } = props
-  const haveRowClick = !!onRowClick
 
   return (
     <table style={styles.table}>
@@ -52,23 +55,26 @@ const Table = props => {
 
       <tbody>
         {data.map((row, index) => (
-          <tr
-            key={index}
-            onClick={!onRowClick ? null : () => {
-              onRowClick(row)
-            }}
-          >
+          <tr key={index}>
             {definition.map((def, cellIndex) => {
               const cellStyles = [{}, styles.cell]
               if (index % 2 === 0) {
                 cellStyles.push(styles.cellAlt)
               }
-              if (haveRowClick) {
+
+              const clickHandler = def.onClick || onRowClick
+              if (clickHandler) {
                 cellStyles.push(styles.cellClickable)
               }
               
               return (
-                <td key={cellIndex} style={Object.assign.apply(null, cellStyles)}>
+                <td
+                  key={cellIndex}
+                  style={Object.assign.apply(null, cellStyles)}
+                  onClick={!clickHandler ? null : () => {
+                    clickHandler(row)
+                  }}
+                >
                   {def.cellRender ? def.cellRender(row[def.attribute], index, row) : row[def.attribute]}
                 </td>
               )
