@@ -28,7 +28,6 @@ const styles = {
   },
 
   cellClickable: {
-    background: '#feffe8',
     cursor: 'pointer'
   }
 }
