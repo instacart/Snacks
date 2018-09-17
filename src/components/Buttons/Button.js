@@ -190,7 +190,7 @@ const getSnacksStyles = props => {
       base: {
         backgroundColor: colors.WHITE,
         color: colors.RED_500,
-        border: `1px dashed ${colors.GRAY_88}`,
+        border: `1px dashed ${colors.RED_500}`,
 
         ':hover': {
           border: `1px dashed ${colors.RED_600}`,
