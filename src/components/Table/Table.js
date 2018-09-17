@@ -25,7 +25,7 @@ const styles = {
 
   cellAlt: {
     background: '#f7f7f7'
-  }
+  },
 
   cellClickable: {
     background: '#feffe8',
@@ -34,7 +34,7 @@ const styles = {
 }
 
 const Table = props => {
-  const { withHeader = true, definition, onRowClick, data } = this.props
+  const { withHeader = true, definition, onRowClick, data } = props
   const haveRowClick = !!onRowClick
 
   return (
@@ -60,7 +60,7 @@ const Table = props => {
             }}
           >
             {definition.map((def, cellIndex) => {
-              const cellStyles = [styles.cell]
+              const cellStyles = [{}, styles.cell]
               if (index % 2 === 0) {
                 cellStyles.push(styles.cellAlt)
               }
@@ -69,7 +69,7 @@ const Table = props => {
               }
               
               return (
-                <td key={cellIndex} style={Object.assign.apply(null, [{}, ...cellStyles])}>
+                <td key={cellIndex} style={Object.assign.apply(null, cellStyles)}>
                   {def.cellRender ? def.cellRender(row[def.attribute], index, row) : row[def.attribute]}
                 </td>
               )
@@ -77,8 +77,6 @@ const Table = props => {
           </tr>
         ))}
       </tbody>
-
-      <style jsx>{styles}</style>
     </table>
   )
 }

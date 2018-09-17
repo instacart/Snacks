@@ -112,6 +112,10 @@ module.exports = {
           components: 'src/components/ScrollTrack/[A-Z]*.js'
         },
         {
+          name: 'Table',
+          components: 'src/components/Table/Table.js'
+        },
+        {
           name: 'Tooltip',
           components: 'src/components/Tooltip/Tooltip.js'
         },
