@@ -1,0 +1,1161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Table with cellRender methods correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <table
+      data-radium={true}
+      style={
+        Object {
+          "borderCollapse": "collapse",
+          "borderRadius": "4px",
+          "borderSpacing": 0,
+          "boxShadow": "0 1px 2px #AAA",
+          "overflow": "hidden",
+          "width": "100%",
+        }
+      }
+    >
+      <thead
+        data-radium={true}
+      >
+        <tr
+          data-radium={true}
+        >
+          <th
+            data-radium={true}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Name
+          </th>
+          <th
+            data-radium={true}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Type
+          </th>
+          <th
+            data-radium={true}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Quantity
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        data-radium={true}
+      >
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            apple
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            f
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            [0]: 3 Apples left
+          </td>
+        </tr>
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            carrot
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            v
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            [1]: 99 Carrots left
+          </td>
+        </tr>
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            lemon
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            f
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            [2]: 12 Lemons left
+          </td>
+        </tr>
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            avocado
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            v
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            [3]: 0 Avocados left
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders Table with definition headers correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <table
+      data-radium={true}
+      style={
+        Object {
+          "borderCollapse": "collapse",
+          "borderRadius": "4px",
+          "borderSpacing": 0,
+          "boxShadow": "0 1px 2px #AAA",
+          "overflow": "hidden",
+          "width": "100%",
+        }
+      }
+    >
+      <thead
+        data-radium={true}
+      >
+        <tr
+          data-radium={true}
+        >
+          <th
+            data-radium={true}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Type
+          </th>
+          <th
+            data-radium={true}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Name
+          </th>
+          <th
+            data-radium={true}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Quantity
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        data-radium={true}
+      >
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            fruit
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Apple
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            3
+          </td>
+        </tr>
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            vegetable
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Carrot
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            99
+          </td>
+        </tr>
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            fruit
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Lemon
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            12
+          </td>
+        </tr>
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            vegetable
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Avocado
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            0
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders Table with minimal definition correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <table
+      data-radium={true}
+      style={
+        Object {
+          "borderCollapse": "collapse",
+          "borderRadius": "4px",
+          "borderSpacing": 0,
+          "boxShadow": "0 1px 2px #AAA",
+          "overflow": "hidden",
+          "width": "100%",
+        }
+      }
+    >
+      <thead
+        data-radium={true}
+      >
+        <tr
+          data-radium={true}
+        >
+          <th
+            data-radium={true}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            name
+          </th>
+          <th
+            data-radium={true}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            type
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        data-radium={true}
+      >
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Apple
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            fruit
+          </td>
+        </tr>
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Carrot
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            vegetable
+          </td>
+        </tr>
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Lemon
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            fruit
+          </td>
+        </tr>
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Avocado
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            vegetable
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`renders Table without header if specified 1`] = `
+<div
+  data-radium={true}
+>
+  <div>
+    <table
+      data-radium={true}
+      style={
+        Object {
+          "borderCollapse": "collapse",
+          "borderRadius": "4px",
+          "borderSpacing": 0,
+          "boxShadow": "0 1px 2px #AAA",
+          "overflow": "hidden",
+          "width": "100%",
+        }
+      }
+    >
+      <tbody
+        data-radium={true}
+      >
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Apple
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            fruit
+          </td>
+        </tr>
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Carrot
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            vegetable
+          </td>
+        </tr>
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Lemon
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#F7F7F7",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            fruit
+          </td>
+        </tr>
+        <tr
+          data-radium={true}
+        >
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            Avocado
+          </td>
+          <td
+            attribute={null}
+            cellRender={null}
+            data-radium={true}
+            header={null}
+            style={
+              Object {
+                "background": "#FFFFFF",
+                "fontSize": "14px",
+                "fontWeight": 400,
+                "height": 48,
+                "lineHeight": "48px",
+                "padding": "0 16px",
+                "textAlign": "left",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            vegetable
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
