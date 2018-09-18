@@ -68,27 +68,24 @@ const Table = props => {
   )
 }
 
-function definitionType(props, propName) {
-  const definition = props[propName]
-
-  if (!Array.isArray(definition)) {
-    return new Error('Table required definition prop must be an Array')
-  }
-
-  for (const cell of definition) {
-    if (cell.attribute === undefined) {
-      return new Error('All Table definition object must have an .attribute')
-    }
-  }
-}
-definitionType.isRequired = true
-
 Table.propTypes = {
   data: PropTypes
     .arrayOf(PropTypes.object)
     .isRequired,
 
-  definition: definitionType,
+  definition: (props, propName) => {
+    const definition = props[propName]
+
+    if (!Array.isArray(definition)) {
+      throw new Error('Table required definition prop must be an Array')
+    }
+
+    for (const cell of definition) {
+      if (cell.attribute === undefined) {
+        throw new Error('All Table definition object must have an .attribute')
+      }
+    }
+  },
 
   withHeader: PropTypes.bool,
 }
