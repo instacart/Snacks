@@ -12,7 +12,7 @@ Tables consist of displayed `data` and a `definition` used to lay out the rows.
         definition={[
           { header: 'Name', attribute: 'name' },
           { header: 'Type', attribute: 'type' },
-          { header: '👇', attribute: 'emoji' }
+          { header: '🛒', attribute: 'emoji' }
         ]}
       />
     </div>
