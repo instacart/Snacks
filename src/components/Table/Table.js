@@ -98,7 +98,7 @@ class Table extends React.PureComponent {
                 return (
                   <td
                     key={cellIndex}
-                    style={[...cellStyles]}
+                    style={cellStyles}
                     onClick={!clickHandler ? null : () => {
                       clickHandler(row)
                     }}
