@@ -26,18 +26,11 @@ const styles = {
 
   cellAlt: {
     background: colors.GRAY_97,
-  },
-
-  clickable: {
-    cursor: 'pointer',
-    // ':hover': {
-    //   background: '#FEFFE8',
-    // }
   }
 }
 
 const Table = props => {
-  const { withHeader, definition, onRowClick, data } = props
+  const { withHeader, definition, data } = props
 
   return (
     <table style={styles.table}>
@@ -56,34 +49,18 @@ const Table = props => {
       <tbody>
         {data.map((row, index) => (
           <tr key={index}>
-            {definition.map((def, cellIndex) => {
-              const cellStyles = [styles.cell]
-              if (index % 2 === 0) {
-                cellStyles.push(styles.cellAlt)
-              }
-
-              const clickHandler = def.onClick || onRowClick
-              if (clickHandler) {
-                cellStyles.push(styles.clickable)
-              }
-
-              return (
-                <td
-                  key={cellIndex}
-                  style={cellStyles}
-                  onClick={!clickHandler ? null : () => {
-                    clickHandler(row)
-                  }}
-                  onKeyPress={event => {
-                    if (event.code === 13 && clickHandler) {
-                      clickHandler(row)
-                    }
-                  }}
-                >
-                  {def.cellRender ? def.cellRender(row[def.attribute], index, row) : row[def.attribute]}
-                </td>
-              )
-            })}
+            {definition.map((def, cellIndex) => (
+              <td
+                key={cellIndex}
+                style={[
+                  styles.cell,
+                  index % 2 === 0 && styles.cellAlt
+                ]}
+                {...Object.assign({}, def, { header: null, attribute: null, cellRender: null })}
+              >
+                {def.cellRender ? def.cellRender(row[def.attribute], index, row) : row[def.attribute]}
+              </td>
+            ))}
           </tr>
         ))}
       </tbody>
@@ -111,8 +88,6 @@ Table.propTypes = {
   },
 
   withHeader: PropTypes.bool,
-
-  onRowClick: PropTypes.func
 }
 
 Table.defaultProps = {
