@@ -1,4 +1,4 @@
-Table example:
+Tables consist of displayed `data` and a `definition` used to lay out the rows.
 
 ```jsx
     <div>
@@ -32,8 +32,8 @@ Individual cells can have their own click handler as well, using `onClick` withi
           { name: 'Avocado', title: 'VEGETABLE', emoji: '🥑' }
         ]}
         definition={[
-          { header: 'Name', attribute: 'name', onClick: rowData => alert(`Cell click for "${rowData.name}"`) },
-          { header: 'Title', attribute: 'title', cellRender: (name, rowIndex, rowData) => (<span>{name.toLowerCase()}</span>) }
+          { attribute: 'name', onClick: rowData => { alert(`Clicked on cell "${rowData.name}"`) } },
+          { attribute: 'title', cellRender: (name, rowIndex, rowData) => (<span>{name.toLowerCase()}</span>) }
         ]}
         onRowClick={rowData => {
           alert(rowData.emoji.repeat(3))

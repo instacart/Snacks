@@ -24,88 +24,95 @@ const styles = {
   },
 
   cellAlt: {
-    background: '#f7f7f7'
+    background: '#f7f7f7',
   },
 
-  cellClickable: {
+  clickable: {
     cursor: 'pointer',
-
-    ':hover': {
-      background: '#feffe8'
-    }
+    // ':hover': {
+    //   background: '#feffe8',
+    // }
   }
 }
 
-const Table = props => {
-  const { withHeader = true, definition, onRowClick, data } = props
+@Radium
+class Table extends React.PureComponent {
+  static propTypes = {
+    data: PropTypes
+      .arrayOf(PropTypes.object)
+      .isRequired,
 
-  return (
-    <table style={styles.table}>
-      {!withHeader ? null : (
-        <thead>
-          <tr>
-            {definition.map((def, index) => (
-              <th key={index} style={styles.cell}>
-                {def.header !== undefined ? def.header : def.attribute}
-              </th>
-            ))}
-          </tr>
-        </thead>
-      )}
+    definition: (props, propName) => {
+      const definition = props[propName]
 
-      <tbody>
-        {data.map((row, index) => (
-          <tr key={index}>
-            {definition.map((def, cellIndex) => {
-              const cellStyles = [{}, styles.cell]
-              if (index % 2 === 0) {
-                cellStyles.push(styles.cellAlt)
-              }
-
-              const clickHandler = def.onClick || onRowClick
-              if (clickHandler) {
-                cellStyles.push(styles.cellClickable)
-              }
-              
-              return (
-                <td
-                  key={cellIndex}
-                  style={Object.assign.apply(null, cellStyles)}
-                  onClick={!clickHandler ? null : () => {
-                    clickHandler(row)
-                  }}
-                >
-                  {def.cellRender ? def.cellRender(row[def.attribute], index, row) : row[def.attribute]}
-                </td>
-              )
-            })}
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  )
-}
-
-Table.propTypes = {
-  data: PropTypes
-    .arrayOf(PropTypes.object)
-    .isRequired,
-
-  definition: (props, propName) => {
-    const definition = props[propName]
-
-    if (!Array.isArray(definition)) {
-      return new Error('Table required definition prop must be an Array')
-    }
-
-    for (const cell of definition) {
-      if (cell.attribute === undefined) {
-        return new Error('All Table definition object must have an .attribute')
+      if (!Array.isArray(definition)) {
+        return new Error('Table required definition prop must be an Array')
       }
-    }
-  },
 
-  withHeader: PropTypes.bool,
+      for (const cell of definition) {
+        if (cell.attribute === undefined) {
+          return new Error('All Table definition object must have an .attribute')
+        }
+      }
+    },
+
+    withHeader: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    withHeader: true,
+  }
+
+  render() {
+
+    const { withHeader, definition, onRowClick, data } = this.props
+
+    return (
+      <table style={styles.table}>
+        {!withHeader ? null : (
+          <thead>
+            <tr>
+              {definition.map((def, index) => (
+                <th key={index} style={styles.cell}>
+                  {def.header !== undefined ? def.header : def.attribute}
+                </th>
+              ))}
+            </tr>
+          </thead>
+        )}
+
+        <tbody>
+          {data.map((row, index) => (
+            <tr key={index}>
+              {definition.map((def, cellIndex) => {
+                const cellStyles = [styles.cell]
+                if (index % 2 === 0) {
+                  cellStyles.push(styles.cellAlt)
+                }
+
+                const clickHandler = def.onClick || onRowClick
+                if (clickHandler) {
+                  cellStyles.push(styles.clickable)
+                }
+
+                return (
+                  <td
+                    key={cellIndex}
+                    style={[...cellStyles]}
+                    onClick={!clickHandler ? null : () => {
+                      clickHandler(row)
+                    }}
+                  >
+                    {def.cellRender ? def.cellRender(row[def.attribute], index, row) : row[def.attribute]}
+                  </td>
+                )
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    )
+  }
 }
 
-export default Radium(Table)
+export default Table
