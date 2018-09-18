@@ -74,6 +74,11 @@ const Table = props => {
                   onClick={!clickHandler ? null : () => {
                     clickHandler(row)
                   }}
+                  onKeyPress={event => {
+                    if (event.code === 13 && clickHandler) {
+                      clickHandler(row)
+                    }
+                  }}
                 >
                   {def.cellRender ? def.cellRender(row[def.attribute], index, row) : row[def.attribute]}
                 </td>
@@ -106,6 +111,8 @@ Table.propTypes = {
   },
 
   withHeader: PropTypes.bool,
+
+  onRowClick: PropTypes.func
 }
 
 Table.defaultProps = {
