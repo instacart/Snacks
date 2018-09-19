@@ -2,6 +2,7 @@ import React               from 'react'
 import PropTypes           from 'prop-types'
 import Radium              from 'radium'
 import { spacing, colors } from '../../styles'
+import responsive          from '../../styles/responsive'
 
 const styles = {
   table: {
@@ -22,12 +23,25 @@ const styles = {
     padding: `0 ${spacing.SM}px`,
     textAlign: 'left',
     whiteSpace: 'nowrap',
+
+    [responsive.md]: {
+      height: spacing.LG,
+      lineHeight: `${spacing.LG}px`,
+      padding: `0 ${spacing.XS}px`,
+    },
+
+    [responsive.sm]: {
+      fontSize: '12px',
+      height: spacing.MD,
+      lineHeight: `${spacing.MD}px`,
+    }
   },
 
   cellAlt: {
     background: colors.GRAY_97,
   }
 }
+styles.cell[responsive.xs] = styles.cell[responsive.sm]
 
 const Table = props => {
   const { withHeader, definition, data } = props
