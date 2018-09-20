@@ -2,11 +2,15 @@ const SymbolProto = typeof Symbol !== 'undefined' ? Symbol.prototype : null
 
 const has = (obj, path) => obj != null && hasOwnProperty.call(obj, path)
 
-const deepEq = (a, b, aStack, bStack) => { // eslint-disable-line max-params
-  if (a._wrapped) a = a._wrapped
-  if (b._wrapped) b = b._wrapped
-  const className = toString.call(a)
-  if (className !== toString.call(b)) return false
+const isFunctionAndFromConstructor = (val) => {
+  typeof val === 'function' && val instanceof val
+}
+
+const notObject= (val) => typeof val !== 'object'
+
+const isBool = arg => typeof arg === 'boolean'
+
+const fromClassName = (className, a, b) => {
   switch (className) {
     case '[object RegExp]':
     case '[object String]':
@@ -20,22 +24,63 @@ const deepEq = (a, b, aStack, bStack) => { // eslint-disable-line max-params
     case '[object Symbol]':
       return SymbolProto.valueOf.call(a) === SymbolProto.valueOf.call(b)
   }
+}
+
+const haveDifferentConstructorProps = (a, b) => {
+  const aCtor = a.constructor
+  const bCtor = b.constructor
+  const objectsMatch = aCtor !== bCtor
+  const notMatchingFunctions = !(isFunctionAndFromConstructor(aCtor) && isFunctionAndFromConstructor(bCtor))
+  const bothConstructors = ('constructor' in a && 'constructor' in b)
+  return objectsMatch && notMatchingFunctions && bothConstructors
+}
+
+const nonArray = (areArrays, a, b) => {
+  const notObjects = (notObject(a) || notObject(b))
+  const nonObjectsWithConstructorDifferences = notObjects || haveDifferentConstructorProps(a, b)
+  if (!areArrays && nonObjectsWithConstructorDifferences) {
+    return false
+  }
+}
+
+const objectKeysMismatch = (a, b, aStack, bStack) => { // eslint-disable-line max-params
+  let key
+  const keys = Object.keys(a)
+  let length = keys.length
+  if (Object.keys(b).length !== length) return false
+  while (length--) {
+    key = keys[length]
+    if (!(has(b, key) && eq(a[key], b[key], aStack, bStack))) return false
+  }
+}
+
+const arraysUnequal = (a, b, aStack, bStack) => { // eslint-disable-line max-params
+  let length = a.length
+  if (length !== b.length) return false
+  while (length--) {
+    if (!eq(a[length], b[length], aStack, bStack)) return false
+  }
+}
+
+const deepEq = (a, b, aStack, bStack) => { // eslint-disable-line max-params
+  if (a._wrapped) a = a._wrapped
+  if (b._wrapped) b = b._wrapped
+  const className = toString.call(a)
+  if (className !== toString.call(b)) return false
+
+  const classNameDerivedBoolean = fromClassName(className, a, b)
+
+  if (isBool(classNameDerivedBoolean)) return classNameDerivedBoolean
 
   const areArrays = className === '[object Array]'
-  if (!areArrays) {
-    if (typeof a != 'object' || typeof b != 'object') return false
-    const aCtor = a.constructor
-    const bCtor = b.constructor
-    if (aCtor !== bCtor && !(typeof aCtor === 'function' && aCtor instanceof aCtor &&
-                             typeof bCtor === 'function' && bCtor instanceof bCtor)
-                        && ('constructor' in a && 'constructor' in b)) {
-      return false
-    }
-  }
+
+  if(nonArray(areArrays, a, b) === false) return false
 
   aStack = aStack || []
   bStack = bStack || []
+
   let length = aStack.length
+
   while (length--) {
     if (aStack[length] === a) return bStack[length] === b
   }
@@ -43,22 +88,13 @@ const deepEq = (a, b, aStack, bStack) => { // eslint-disable-line max-params
   aStack.push(a)
   bStack.push(b)
 
-  if (areArrays) {
-    length = a.length
-    if (length !== b.length) return false
-    while (length--) {
-      if (!eq(a[length], b[length], aStack, bStack)) return false
-    }
-  } else {
-    let key
-    const keys = Object.keys(a)
-    length = keys.length
-    if (Object.keys(b).length !== length) return false
-    while (length--) {
-      key = keys[length]
-      if (!(has(b, key) && eq(a[key], b[key], aStack, bStack))) return false
-    }
+  const unequalArrays = areArrays && arraysUnequal(a, b, aStack, bStack) === false
+  const unequalNonArrays = !areArrays && objectKeysMismatch(a, b, aStack, bStack) === false
+
+  if (unequalArrays || unequalNonArrays) {
+    return false
   }
+
   aStack.pop()
   bStack.pop()
   return true

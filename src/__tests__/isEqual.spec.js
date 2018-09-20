@@ -10,85 +10,58 @@ describe('isEqual', () => {
     })
   })
   describe('with arrays', () => {
+    const genArray = (val) => [1,'s', {val}]
+    const first = genArray('f')
     it('returns true when equal', () => {
-      const first = [1,'s', {s: 'f'}]
-      const second = [1,'s', {s: 'f'}]
-      expect(isEqual(first, second)).toBe(true)
+      expect(isEqual(genArray('f'), genArray('f'))).toBe(true)
     })
     it('returns false when not equal', () => {
-      const first = [1,'s', {s: 'f'}]
-      const second = [1,'s', {s: 'r'}]
-      expect(isEqual(first, second)).toBe(false)
+      expect(isEqual(first, genArray('s'))).toBe(false)
     })
   })
   describe('with objects', () => {
+    const genObj = (first) => ({
+      first
+    })
     describe('that are simple', () => {
+      const first = genObj('key')
       it('returns true when equal', () => {
-        const first = {
-          first: 'key'
-        }
-        const second = {
-          first: 'key'
-        }
-        expect(isEqual(first, second)).toBe(true)
+        expect(isEqual(first, genObj('key'))).toBe(true)
       })
       it('returns false when not equal', () => {
-        const first = {
-          first: 'key'
-        }
-        const second = {
-          first: 'keys'
-        }
-        expect(isEqual(first, second)).toBe(false)
+        expect(isEqual(first, genObj('keys'))).toBe(false)
       })
     })
     describe('that are complex', () => {
+      const genObj = (val) => ({
+        first: 'key',
+        second: [1,'s', {val}]
+      })
+      const first = genObj('values')
       it('returns true when equal', () => {
-        const first = {
-          first: 'key',
-          second: [1,'s', {s: 'f'}]
-        }
-        const second = {
-          first: 'key',
-          second: [1,'s', {s: 'f'}]
-        }
-        expect(isEqual(first, second)).toBe(true)
+        expect(isEqual(first, genObj('values'))).toBe(true)
       })
       it('returns false when not equal', () => {
-        const first = {
-          first: 'key',
-          second: [1,'s', {s: 'f'}]
-        }
-        const second = {
-          first: 'key',
-          second: [1,'s', {s: 's'}]
-        }
-        expect(isEqual(first, second)).toBe(false)
+        expect(isEqual(first, genObj('stuffs'))).toBe(false)
       })
     })
   })
   describe('with regExp', () => {
+    const first = /start/
     it('returns true when equal', () => {
-      const first = /start/
-      const second = /start/
-      expect(isEqual(first, second)).toBe(true)
+      expect(isEqual(first, /start/)).toBe(true)
     })
     it('returns false when not equal', () => {
-      const first = /start/
-      const second = /starts/
-      expect(isEqual(first, second)).toBe(false)
+      expect(isEqual(first, /starts/)).toBe(false)
     })
   })
   describe('with Date objects', () => {
+    const first = new Date('December 17, 1995 03:24:00')
     it('returns true when equal', () => {
-      const first = new Date('December 17, 1995 03:24:00')
-      const second = new Date('December 17, 1995 03:24:00')
-      expect(isEqual(first, second)).toBe(true)
+      expect(isEqual(first, new Date('December 17, 1995 03:24:00'))).toBe(true)
     })
     it('returns false when not equal', () => {
-      const first = new Date('December 17, 1995 03:24:00')
-      const second = new Date('December 17, 1995 03:24:01')
-      expect(isEqual(first, second)).toBe(false)
+      expect(isEqual(first, new Date('December 17, 1995 03:24:01'))).toBe(false)
     })
   })
   describe('with circular references', () => {
