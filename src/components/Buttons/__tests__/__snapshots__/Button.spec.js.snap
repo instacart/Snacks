@@ -494,7 +494,7 @@ exports[`Button renders all snacks button variants correctly 4`] = `
         "alignItems": "center",
         "backgroundColor": "#FFFFFF",
         "backgroundImage": "none",
-        "border": "1px dashed #E0E0E0",
+        "border": "1px dashed #E6003D",
         "borderRadius": "4px",
         "color": "#E6003D",
         "cursor": "pointer",

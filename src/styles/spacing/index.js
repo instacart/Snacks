@@ -19,17 +19,33 @@ export const spacings = {
   HUGE: 64
 }
 
+const createXRules = (type, value) => ({
+  [`${type}Left`]: value,
+  [`${type}Right`]: value
+})
+
+const createYRules = (type, value) => ({
+  [`${type}Top`]: value,
+  [`${type}Bottom`]: value
+})
+
 const finalSpacings = {}
 Object.keys(spacings).forEach(spacing => {
   const pxValue = spacings[spacing]
 
-  finalSpacings[`MARGIN_${spacing}`] = { margin: pxValue }
-  finalSpacings[`PADDING_${spacing}`] = { padding: pxValue }
+  finalSpacings[`MARGIN_${spacing}`] = {
+    ...createXRules('margin', pxValue),
+    ...createYRules('margin', pxValue)
+  }
+  finalSpacings[`PADDING_${spacing}`] = {
+    ...createXRules('padding', pxValue),
+    ...createYRules('padding', pxValue)
+  }
 
-  finalSpacings[`PADDING_X_${spacing}`] = { paddingLeft: pxValue, paddingRight: pxValue }
-  finalSpacings[`PADDING_Y_${spacing}`] = { paddingTop: pxValue, paddingBottom: pxValue }
-  finalSpacings[`MARGIN_X_${spacing}`] = { marginLeft: pxValue, marginRight: pxValue }
-  finalSpacings[`MARGIN_Y_${spacing}`] = { marginTop: pxValue, marginBottom: pxValue }
+  finalSpacings[`PADDING_X_${spacing}`] = createXRules('padding', pxValue)
+  finalSpacings[`PADDING_Y_${spacing}`] = createYRules('padding', pxValue)
+  finalSpacings[`MARGIN_X_${spacing}`] = createXRules('margin', pxValue)
+  finalSpacings[`MARGIN_Y_${spacing}`] = createYRules('margin', pxValue)
 
   DIRECTIONS.forEach(direction => {
     finalSpacings[`MARGIN_${direction}_${spacing}`] = {
