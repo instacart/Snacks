@@ -65,8 +65,8 @@ const arraysUnequal = (a, b, aStack, bStack) => { // eslint-disable-line max-par
 const deepEq = (a, b, aStack, bStack) => { // eslint-disable-line max-params
   if (a._wrapped) a = a._wrapped
   if (b._wrapped) b = b._wrapped
-  const className = toString.call(a)
-  if (className !== toString.call(b)) return false
+  const className = Object.prototype.toString.call(a)
+  if (className !== Object.prototype.toString.call(b)) return false
 
   const classNameDerivedBoolean = fromClassName(className, a, b)
 
