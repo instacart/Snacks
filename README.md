@@ -32,6 +32,27 @@ For the main component library:
 
 If you'd like to use animations: react-transition-group v2.2
 
+### Local Development as a dependancy
+Sometimes it may be helpful to work on this project locally and view the changes in another app. This can be accomplished using npm link
+
+```sh
+# From this directory
+npm link
+# go to the app you are working on
+cd ../workspace/my_working_app
+# symlink this app
+npm link ic-snacks
+```
+
+To reverse the process, you can do the following
+
+```sh
+# go to the app you are working on
+cd ../workspace/my_working_app
+# remove symlink
+npm unlink ic-snacks
+```
+
 
 #### with yarn
 ```sh
