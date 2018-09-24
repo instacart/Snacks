@@ -1,6 +1,8 @@
 [Snacks](https://instacart.github.io/Snacks/)
 =========================
-[![npm](https://img.shields.io/npm/v/ic-snacks.svg?style=flat-square)](https://www.npmjs.com/package/ic-snacks) [![license](https://img.shields.io/npm/l/ic-snacks.svg?style=flat-square)](https://github.com/instacart/Snacks/blob/master/LICENSE) [![CircleCI](https://circleci.com/gh/instacart/Snacks.svg?style=shield)](https://circleci.com/gh/instacart/Snacks)
+[![npm](https://img.shields.io/npm/v/ic-snacks.svg?style=flat-square)](https://www.npmjs.com/package/ic-snacks) [![license](https://img.shields.io/npm/l/ic-snacks.svg?style=flat-square)](https://github.com/instacart/Snacks/blob/master/LICENSE) [![CircleCI](https://circleci.com/gh/instacart/Snacks.svg?style=shield)](https://circleci.com/gh/instacart/Snacks) 
+[![Maintainability](https://api.codeclimate.com/v1/badges/2d104053b9eea615a68b/maintainability)](https://codeclimate.com/github/instacart/Snacks/maintainability) [![Code Coverage](https://codecov.io/gh/instacart/Snacks/branch/master/graph/badge.svg)](https://codecov.io/gh/instacart/Snacks)
+
 
 JavaScript Component Library by Instacart
 

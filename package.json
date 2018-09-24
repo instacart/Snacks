@@ -1,11 +1,13 @@
 {
   "name": "ic-snacks",
-  "version": "0.0.88",
+  "version": "0.0.102",
   "description": "The Instacart Component Library for Web",
   "main": "dist/snacks.js",
   "scripts": {
+    "analyze-webpack-bundles": "analyze=true npm run start",
     "build": "webpack --progress --config webpack.release.config.js",
     "release:build": "babel-node scripts/release/build_release.js",
+    "release:verifyBuild": "babel-node scripts/release/verify_build.js",
     "release:publish": "babel-node scripts/release/publish_release.js",
     "lint": "eslint src --ext .js,.jsx --ignore-pattern '*.spec.js'",
     "test:lint": "npm run lint -- --quiet",
@@ -13,7 +15,8 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build && node scripts/moveBuildAssets.js",
     "test:watch": "npm test -- --watch --bail",
-    "test": "jest --runInBand --coverage --silent && npm run test:lint"
+    "test": "jest --silent && npm run test:lint",
+    "test:generate-coverage-report": "codecov"
   },
   "repository": {
     "type": "git",
@@ -43,6 +46,7 @@
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.22.0",
+    "codecov": "^3.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.3",
@@ -55,13 +59,13 @@
     "radium": "^0.22.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-styleguidist": "^7.0.17",
+    "react-styleguidist": "^7.2.3",
     "react-test-renderer": "^16.2.0",
     "react-transition-group": "^2.2.1",
     "sinon": "^2.3.8",
     "uglifyjs-webpack-plugin": "^1.2.5",
-    "underscore": "^1.8.3",
     "webpack": "^4.12.0",
+    "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.0.4"
   },
   "dependencies": {
@@ -80,6 +84,8 @@
     "react-transition-group": "^2.2.1"
   },
   "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
     "globals": {
       "__DEV__": true
     },
@@ -89,6 +95,6 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/scripts/test/fileMock.js",
       "\\.(css|less)$": "<rootDir>/scripts/test/styleMock.js"
     },
-    "setupTestFrameworkScriptFile": "<rootDir>/scripts/test/enzymeSetup.js"
+    "setupTestFrameworkScriptFile": "<rootDir>/scripts/test/testSetup.js"
   }
 }

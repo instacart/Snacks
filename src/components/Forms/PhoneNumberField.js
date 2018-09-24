@@ -263,6 +263,7 @@ class PhoneNumberField extends React.Component {
             hasError={hasError}
             htmlFor={inputId}
             style={{pointerEvents: 'none'}}
+            snacksTheme={snacksTheme}
           />
 
           <TextFieldHint

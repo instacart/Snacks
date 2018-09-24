@@ -9,11 +9,12 @@ Associating a label to every radio button is very important for accessibility pu
 <div style={{display: 'flex', flexDirection: 'column'}}>
   <div style={{display: 'flex', marginBottom: 20}}>
     <Checkbox id="checkbox1" isSelected />
-    <label htmlFor="checkbox1" style={{marginLeft: 10}}>Label associated manually</label>
+    <label htmlFor="checkbox1" style={{marginLeft: 10, lineHeight: '22px'}}>Label associated manually</label>
   </div>
   <Checkbox id="checkbox2">Label auto-generated</Checkbox>
 </div>
 ```
+**Important!** If you attach a label to a checkbox manually, make sure you set the line-height and margin-left properties as per the example above.
 
 ### Styling
 You can pass an object to the `style` prop for styling the label, radio button and wrap element using Radium's structure:

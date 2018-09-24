@@ -27,7 +27,7 @@ it('fires the onSubmit prop when valid', () => {
   const onSubmit = spy()
   const wrapper = mount(
     <Form
-     onSubmit={onSubmit}
+      onSubmit={onSubmit}
     >
       <div style={{width: '335px'}}>
         <div style={{marginBottom: '10px'}}>
@@ -60,7 +60,7 @@ it('wont fire the onSubmit prop when not valid', () => {
   const onSubmit = spy()
   const wrapper = mount(
     <Form
-     onSubmit={onSubmit}
+      onSubmit={onSubmit}
     >
       <div style={{width: '335px'}}>
         <div style={{marginBottom: '10px'}}>
@@ -93,7 +93,7 @@ it('wont fire the onSubmit prop when not valid', () => {
   const onSubmit = spy()
   const wrapper = mount(
     <Form
-     onSubmit={onSubmit}
+      onSubmit={onSubmit}
     >
       <div style={{width: '335px'}}>
         <div style={{marginBottom: '10px'}}>

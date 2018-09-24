@@ -57,13 +57,24 @@ const RESOLVED_SIZE = {
 
 class InnerToolTip extends PureComponent {
   static propTypes = {
-    style: PropTypes.shape({}),
     snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark']),
     size: PropTypes.oneOf([
       'small',
       'medium',
       'large',
     ]),
+    style: PropTypes.shape({
+      border: PropTypes.string,
+      padding: PropTypes.string,
+      boxShadow: PropTypes.string,
+    }),
+    arrowStyle: PropTypes.shape({
+      border: PropTypes.string, 
+      boxShadowRight: PropTypes.string,
+      boxShadowBottom: PropTypes.string,
+      boxShadowLeft: PropTypes.string,
+      boxShadowTop: PropTypes.string,
+    }),
     arrowPosition: PropTypes.shape({})
   }
 
@@ -83,9 +94,13 @@ class InnerToolTip extends PureComponent {
   }
 
   renderArrow() {
-    const { arrowPosition, snacksStyle } = this.props
+    const { arrowPosition, arrowStyle, snacksStyle } = this.props
     return (
-      <TooltipArrow position={arrowPosition} snacksStyle={snacksStyle} />
+      <TooltipArrow
+        arrowStyle={arrowStyle}
+        position={arrowPosition}
+        snacksStyle={snacksStyle}
+      />
     )
   }
 

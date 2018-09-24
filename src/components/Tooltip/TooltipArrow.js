@@ -36,28 +36,41 @@ const RESOLVE_BORDER_COLOR = {
   dark: colors.GRAY_20
 }
 
-const resolveStylePlacementBorders = (style, placement) => {
-  const color = RESOLVE_BORDER_COLOR[style]
+const resolveStylePlacementBorders = (style, arrowStyle, placement) => {
+  
+  const borderColor = RESOLVE_BORDER_COLOR[style]
+  const borderStyle = arrowStyle && arrowStyle.border ?
+    arrowStyle.border : `1px solid ${borderColor}`
+  
+  const boxShadowRight = arrowStyle && arrowStyle.boxShadowRight
+  const boxShadowBottom = arrowStyle && arrowStyle.boxShadowBottom
+  const boxShadowLeft = arrowStyle && arrowStyle.boxShadowLeft
+  const boxShadowTop = arrowStyle && arrowStyle.boxShadowTop
+
   switch (placement) {
     case 'top':
       return {
-        borderRight: `1px solid ${color}`,
-        borderBottom: `1px solid ${color}`
+        borderRight: borderStyle,
+        borderBottom: borderStyle,
+        boxShadow: boxShadowTop,
       }
     case 'bottom':
       return {
-        borderLeft: `1px solid ${color}`,
-        borderTop: `1px solid ${color}`
+        borderLeft: borderStyle,
+        borderTop: borderStyle,
+        boxShadow: boxShadowBottom,
       }
     case 'right':
       return {
-        borderLeft: `1px solid ${color}`,
-        borderTop: `1px solid ${color}`
+        borderLeft: borderStyle,
+        borderTop: borderStyle,
+        boxShadow: boxShadowRight,
       }
     case 'left':
       return {
-        borderRight: `1px solid ${color}`,
-        borderBottom: `1px solid ${color}`
+        borderRight: borderStyle,
+        borderBottom: borderStyle,
+        boxShadow: boxShadowLeft,
       }
   }
 }
@@ -69,12 +82,19 @@ class TooltipArrow extends PureComponent {
       top: PropTypes.number,
       placement: PropTypes.string
     }).isRequired,
+    arrowStyle: PropTypes.shape({
+      border: PropTypes.srting, 
+      boxShadowRight: PropTypes.string,
+      boxShadowBottom: PropTypes.string,
+      boxShadowLeft: PropTypes.string,
+      boxShadowTop: PropTypes.string,
+    }),
     snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark'])
   }
 
   get calculatedStyles() {
-    const { position, snacksStyle } = this.props
-    const borderStyle = resolveStylePlacementBorders(snacksStyle, position.placement)
+    const { position, arrowStyle, snacksStyle } = this.props
+    const borderStyle = resolveStylePlacementBorders(snacksStyle, arrowStyle, position.placement)
 
     return {
       ...styles.arrow,

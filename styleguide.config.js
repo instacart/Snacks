@@ -104,6 +104,10 @@ module.exports = {
           components: 'src/components/NavigationPills/[A-Z]*.js'
         },
         {
+          name: 'Pill',
+          components: 'src/components/Pill/Pill.js'
+        },
+        {
           name: 'ScrollTrack',
           components: 'src/components/ScrollTrack/[A-Z]*.js'
         },

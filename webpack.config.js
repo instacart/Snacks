@@ -1,5 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+
+const anaylzerEnabled = process.env.analyze || false
 
 module.exports = {
   mode: 'development',
@@ -14,18 +17,19 @@ module.exports = {
       },
     ]
   },
-  entry: {
-    main: './src/index.js'
-  },
+  entry: './src/index.js',
   output: {
     library: 'Snacks',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    filename: 'snacks.js',
+    path: path.resolve(__dirname, 'tmp')
   },
   plugins: [
     new webpack.DefinePlugin({
       __DEV__: JSON.stringify(true)
-    })
-  ],
+    }),
+    anaylzerEnabled && new BundleAnalyzerPlugin() // optionally anaylze if flag passed in
+  ].filter(i => !!i), // filter out false items
   resolve: {
     alias: {
       utils: path.resolve(__dirname, 'src/utils'),

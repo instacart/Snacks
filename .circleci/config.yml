@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.2.1
+      - image: circleci/node:8.11.4
 
     working_directory: ~/repo
 
@@ -24,4 +24,10 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test
+      - run:
+          name: Run tests
+          command: yarn test
+      
+      - run: 
+          name: Upload code coverage report
+          command: ./node_modules/.bin/codecov

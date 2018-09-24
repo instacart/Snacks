@@ -11,6 +11,8 @@ import Icon from './components/Icon/Icon'
 import SVGIcon from './components/SVGIcon/SVGIcon'
 import Link from './components/Link/Link'
 import LoadingBox from './components/Loading/LoadingBox'
+import Pill from './components/Pill/Pill'
+import NavigationPill from './components/NavigationPills/NavigationPill'
 import NavigationPills from './components/NavigationPills/NavigationPills'
 import Normalize from './styles/Normalize'
 import responsive from './styles/responsive'
@@ -77,6 +79,7 @@ export {
   Slide,
 
   // components
+  Pill,
   Tooltip,
   Button,
   CircleButton,
@@ -86,6 +89,7 @@ export {
   SVGIcon,
   Link,
   LoadingBox,
+  NavigationPill,
   NavigationPills,
   ScrollTrack,
   Menu,

@@ -15,9 +15,7 @@ module.exports = {
       }
     ]
   },
-  entry: {
-    main: './src/index.js'
-  },
+  entry: './src/index.js',
   optimization: {
     minimizer: [
       new UglifyJSPlugin({
@@ -38,7 +36,8 @@ module.exports = {
   output: {
     library: 'Snacks',
     libraryTarget: 'umd',
-    filename: 'snacks.js'
+    filename: 'snacks.js',
+    globalObject: 'typeof self !== \'undefined\' ? self : this',
   },
   resolve: {
     alias: {

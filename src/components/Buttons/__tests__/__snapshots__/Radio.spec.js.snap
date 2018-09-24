@@ -58,6 +58,7 @@ exports[`Radio generates a label if a child prop of text is supplied 1`] = `
     htmlFor={1}
     style={
       Object {
+        "lineHeight": "22px",
         "marginLeft": 10,
       }
     }
@@ -110,6 +111,7 @@ exports[`Radio incorporates user styles if passed 1`] = `
           "WebkitAppearance": "none",
           "appearance": "none",
           "backgroundImage": "none",
+          "cursor": "pointer",
           "height": 22,
           "left": 0,
           "opacity": 0,
@@ -128,6 +130,7 @@ exports[`Radio incorporates user styles if passed 1`] = `
     style={
       Object {
         "color": "green",
+        "lineHeight": "22px",
         "marginLeft": 10,
       }
     }
@@ -195,6 +198,7 @@ exports[`Radio incorporates user styles if passed 2`] = `
     htmlFor={2}
     style={
       Object {
+        "lineHeight": "22px",
         "marginLeft": 10,
       }
     }
