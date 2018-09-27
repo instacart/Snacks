@@ -40,7 +40,7 @@ const STYLE = {
 const getInputStyles = (props) => ({
   width: INPUT_BTN_SIZE,
   height: INPUT_BTN_SIZE,
-  fill: props.snacksTheme.colors.action
+  fill: props.isDisabled ? colors.GRAY_74 : props.snacksTheme.colors.action
 })
 
 function imgValidator (props, propName) {
@@ -87,14 +87,14 @@ class RadioCheckboxBase extends React.PureComponent {
   }
 
   state = {
-    isSelected  : this.props.isDisabled ? false : this.props.isSelected,
+    isSelected  : this.props.isSelected,
   }
 
   componentWillReceiveProps(nextProps) {
-    const { isDisabled, isSelected } = nextProps
+    const { isSelected } = nextProps
 
-    if (this.props.isSelected !== isSelected || this.props.isDisabled !== isDisabled) {
-      this.setState({isSelected: isDisabled ? false : isSelected})
+    if (this.props.isSelected !== isSelected ) {
+      this.setState({isSelected: isSelected})
     }
   }
 
@@ -113,8 +113,7 @@ class RadioCheckboxBase extends React.PureComponent {
     const { aria, bkgSvgSprites, btnType, isDisabled, id, style, value } = this.props
     const { isSelected } = this.state
 
-    if (isDisabled) { SvgComponent = bkgSvgSprites.disabled }
-    else { SvgComponent = isSelected ? bkgSvgSprites.selected : bkgSvgSprites.base }
+    { SvgComponent = isSelected ? bkgSvgSprites.selected : bkgSvgSprites.base }
 
     return (
       <div style={{...STYLE.button, ...style.button}}>
