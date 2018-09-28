@@ -59,7 +59,6 @@ class RadioCheckboxBase extends React.PureComponent {
     bkgSvgSprites : PropTypes.shape({
       base          : imgValidator,
       selected      : imgValidator,
-      disabled      : imgValidator,
     }),
     btnType       : PropTypes.oneOf(['radio', 'checkbox']).isRequired,
     isDisabled    : PropTypes.bool,

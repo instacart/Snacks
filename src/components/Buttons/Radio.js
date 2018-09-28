@@ -8,7 +8,6 @@ import bkgSvgDisabled from '../../assets/radioDisabled.svg'
 const BKG_SVG_SPRITES = {
   base:       bkgSvgBase,
   selected:   bkgSvgSelected,
-  disabled:   bkgSvgDisabled,
 }
 
 const Radio = (props) => {

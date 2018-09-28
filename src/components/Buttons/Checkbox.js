@@ -8,7 +8,6 @@ import bkgSvgDisabled from '../../assets/checkboxDisabled.svg'
 const BKG_SVG_SPRITES = {
   base:       bkgSvgBase,
   selected:   bkgSvgSelected,
-  disabled:   bkgSvgDisabled,
 }
 
 const Checkbox = (props) => {
