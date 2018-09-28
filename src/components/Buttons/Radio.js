@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import RadioCheckboxBase from '../../base/RadioCheckboxBase'
 import bkgSvgBase from '../../assets/radioBase.svg'
 import bkgSvgSelected from '../../assets/radioSelected.svg'
-import bkgSvgDisabled from '../../assets/radioDisabled.svg'
 
 const BKG_SVG_SPRITES = {
   base:       bkgSvgBase,

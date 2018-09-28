@@ -27,7 +27,7 @@ describe('Radio', () => {
     })
   })
 
-  it('sets isSelected to false if isDisabled is set to true', () => {
+  it('disables the input when it is disabled', () => {
     const wrapper = mount(<Radio id="A" value="test" isSelected>Testing disabled</Radio>)
     const htmlBtn = wrapper.find('#A').hostNodes().instance()
 
@@ -36,7 +36,7 @@ describe('Radio', () => {
 
     wrapper.setProps({isDisabled: true})
 
-    expect(htmlBtn.checked).toBe(false)
+    expect(htmlBtn.checked).toBe(true)
     expect(htmlBtn.disabled).toBe(true)
   })
 
