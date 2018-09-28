@@ -108,11 +108,9 @@ class RadioCheckboxBase extends React.PureComponent {
   }
 
   renderInputBtn() {
-    let SvgComponent
     const { aria, bkgSvgSprites, btnType, isDisabled, id, style, value } = this.props
     const { isSelected } = this.state
-
-    { SvgComponent = isSelected ? bkgSvgSprites.selected : bkgSvgSprites.base }
+    const SvgComponent = isSelected ? bkgSvgSprites.selected : bkgSvgSprites.base
 
     return (
       <div style={{...STYLE.button, ...style.button}}>
