@@ -37,10 +37,14 @@ const STYLE = {
   },
 }
 
+const getEnabledColor = (props) => {
+  return props.isSelected ? props.snacksTheme.colors.action : colors.GRAY_46
+}
+
 const getInputStyles = (props) => ({
   width: INPUT_BTN_SIZE,
   height: INPUT_BTN_SIZE,
-  fill: props.isDisabled ? colors.GRAY_74 : props.snacksTheme.colors.action
+  fill: props.isDisabled ? colors.GRAY_74 : getEnabledColor(props)
 })
 
 function imgValidator (props, propName) {
