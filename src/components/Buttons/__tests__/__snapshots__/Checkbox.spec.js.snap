@@ -21,7 +21,7 @@ exports[`Checkbox generates a label if a child prop of text is supplied 1`] = `
       data-radium={true}
       style={
         Object {
-          "fill": "#43B02A",
+          "fill": "#757575",
           "height": 22,
           "width": 22,
         }
@@ -91,7 +91,7 @@ exports[`Checkbox incorporates user style if passed 1`] = `
       data-radium={true}
       style={
         Object {
-          "fill": "#43B02A",
+          "fill": "#757575",
           "height": 22,
           "width": 22,
         }
@@ -160,7 +160,7 @@ exports[`Checkbox incorporates user style if passed 2`] = `
       data-radium={true}
       style={
         Object {
-          "fill": "#43B02A",
+          "fill": "#757575",
           "height": 22,
           "width": 22,
         }
@@ -220,7 +220,7 @@ exports[`Checkbox renders the correct button type 1`] = `
     data-radium={true}
     style={
       Object {
-        "fill": "#43B02A",
+        "fill": "#757575",
         "height": 22,
         "width": 22,
       }
@@ -267,7 +267,7 @@ exports[`Checkbox renders the correct selected state 1`] = `
     data-radium={true}
     style={
       Object {
-        "fill": "#43B02A",
+        "fill": "#757575",
         "height": 22,
         "width": 22,
       }
@@ -361,7 +361,7 @@ exports[`Checkbox renders the correct selected state 3`] = `
     data-radium={true}
     style={
       Object {
-        "fill": "#43B02A",
+        "fill": "#BDBDBD",
         "height": 22,
         "width": 22,
       }
@@ -369,7 +369,7 @@ exports[`Checkbox renders the correct selected state 3`] = `
   />
   <input
     aria-label={undefined}
-    checked={false}
+    checked={true}
     data-radium={true}
     disabled={true}
     id={2}

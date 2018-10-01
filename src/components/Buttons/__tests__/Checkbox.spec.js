@@ -27,7 +27,7 @@ describe('Checkbox', () => {
     })
   })
 
-  it('sets isSelected to false if isDisabled is set to true', () => {
+  it('disables the input when it is disabled', () => {
     const wrapper = mount(<Checkbox id="A" value="test" isSelected>Testing disabled</Checkbox>)
     const htmlBtn = wrapper.find('input').instance()
 
@@ -36,7 +36,7 @@ describe('Checkbox', () => {
     
     wrapper.setProps({isDisabled: true})
 
-    expect(htmlBtn.checked).toBe(false)
+    expect(htmlBtn.checked).toBe(true)
     expect(htmlBtn.disabled).toBe(true)
   })
 
