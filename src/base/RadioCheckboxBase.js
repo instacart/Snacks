@@ -96,7 +96,7 @@ class RadioCheckboxBase extends React.PureComponent {
   componentWillReceiveProps(nextProps) {
     const { isSelected } = nextProps
 
-    if (this.props.isSelected !== isSelected ) {
+    if (this.props.isSelected !== isSelected) {
       this.setState({isSelected: isSelected})
     }
   }
