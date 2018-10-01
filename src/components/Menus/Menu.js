@@ -2,13 +2,16 @@ import React             from 'react'
 import PropTypes         from 'prop-types'
 import MenuItem          from './MenuItem'
 import getRuntimeType    from '../../utils/getRuntimeType'
+import spacing           from '../../styles/spacing'
 
 const styles = {
   borderRadius: '4px',
   backgroundColor: '#ffffff',
   boxShadow: '0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)',
   display: 'inline-block',
-  padding: '8px 0',
+  ...spacing.PADDING_Y_XS,
+  paddingRight: 0,
+  paddingLeft: 0,
   overflowY: 'auto',
   userSelect: 'none',
   maxHeight: '500px',

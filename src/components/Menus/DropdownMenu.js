@@ -22,7 +22,10 @@ const styles = {
     pointerEvents: 'inherit'
   },
   transitionContainer: {
-    padding: '2px 5px 5px',
+    paddingTop: '2px',
+    paddingRight: '5px',
+    paddingBottom: '5px',
+    paddingLeft: '5px',
     width: '100%',
     transform: 'translateX(-5px)'
   }

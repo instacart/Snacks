@@ -68,7 +68,10 @@ const getMaxColumnsStyles = props => {
     justifyContent: 'center'
   } : {
     width: `${maxColumns * responsive.columnWidth}px`,
-    margin: '0 auto'
+    marginTop: 0,
+    marginRight: 'auto',
+    marginBottom: 0,
+    marginLeft: 'auto',
   }
 
   if (maxColumns <= 6) {
@@ -107,32 +110,50 @@ const getFullWidthStyles = props => {
     justifyContent: 'center',
     [responsive.xs]: {
       display: 'block',
-      margin: `0 calc(-1 * (100vw - ${screenWidths.xs}px) / 2)`
+      marginTop: `0 calc(-1 * (100vw - ${screenWidths.xs}px) / 2)`,
+      marginRight: `0 calc(-1 * (100vw - ${screenWidths.xs}px) / 2)`,
+      marginBottom: `0 calc(-1 * (100vw - ${screenWidths.xs}px) / 2)`,
+      marginLeft: `0 calc(-1 * (100vw - ${screenWidths.xs}px) / 2)`,
     },
 
     [responsive.sm]: {
       display: 'block',
-      margin: `0 calc(-1 * (100vw - ${screenWidths.sm}px) / 2)`
+      marginTop: `0 calc(-1 * (100vw - ${screenWidths.sm}px) / 2)`,
+      marginRight: `0 calc(-1 * (100vw - ${screenWidths.sm}px) / 2)`,
+      marginBottom: `0 calc(-1 * (100vw - ${screenWidths.sm}px) / 2)`,
+      marginLeft: `0 calc(-1 * (100vw - ${screenWidths.sm}px) / 2)`,
     },
 
     [responsive.md]: {
       display: 'block',
-      margin: `0 calc(-1 * (100vw - ${screenWidths.md}px) / 2)`
+      marginTop: `0 calc(-1 * (100vw - ${screenWidths.md}px) / 2)`,
+      marginRight: `0 calc(-1 * (100vw - ${screenWidths.md}px) / 2)`,
+      marginBottom: `0 calc(-1 * (100vw - ${screenWidths.md}px) / 2)`,
+      marginLeft: `0 calc(-1 * (100vw - ${screenWidths.md}px) / 2)`,
     },
 
     [responsive.mdLg]: {
       display: 'block',
-      margin: `0 calc(-1 * (100vw - ${screenWidths.mdLg}px) / 2)`
+      marginTop: `0 calc(-1 * (100vw - ${screenWidths.mdLg}px) / 2)`,
+      marginRight: `0 calc(-1 * (100vw - ${screenWidths.mdLg}px) / 2)`,
+      marginBottom: `0 calc(-1 * (100vw - ${screenWidths.mdLg}px) / 2)`,
+      marginLeft: `0 calc(-1 * (100vw - ${screenWidths.mdLg}px) / 2)`,
     },
 
     [responsive.lg]: {
       display: 'block',
-      margin: `0 calc(-1 * (100vw - ${screenWidths.lg}px) / 2)`
+      marginTop: `0 calc(-1 * (100vw - ${screenWidths.lg}px) / 2)`,
+      marginRight: `0 calc(-1 * (100vw - ${screenWidths.lg}px) / 2)`,
+      marginBottom: `0 calc(-1 * (100vw - ${screenWidths.lg}px) / 2)`,
+      marginLeft: `0 calc(-1 * (100vw - ${screenWidths.lg}px) / 2)`,
     },
 
     [responsive.xl]: {
       display: 'block',
-      margin: `0 calc(-1 * (100vw - ${screenWidths.xl}px) / 2)`
+      marginTop: `0 calc(-1 * (100vw - ${screenWidths.xl}px) / 2)`,
+      marginRight: `0 calc(-1 * (100vw - ${screenWidths.xl}px) / 2)`,
+      marginBottom: `0 calc(-1 * (100vw - ${screenWidths.xl}px) / 2)`,
+      marginLeft: `0 calc(-1 * (100vw - ${screenWidths.xl}px) / 2)`,
     }
   }
 }

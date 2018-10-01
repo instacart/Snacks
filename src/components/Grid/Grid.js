@@ -4,7 +4,13 @@ import Radium from 'radium'
 import responsive from '../../styles/responsive'
 
 const styles = {
-  margin: '0 auto',
+  marginTop: 0,
+
+  marginRight: 'auto',
+
+  marginBottom: 0,
+
+  marginLeft: 'auto',
 
   [responsive.xs]: {
     width: '100%'

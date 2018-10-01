@@ -10,7 +10,10 @@ const styles = {
     color: colors.RED_500,
     fontSize: '15px',
     marginBottom: '12px',
-    padding: '15px'
+    paddingTop: '15px',
+    paddingRight: '15px',
+    paddingBottom: '15px',
+    paddingLeft: '15px'
   }
 }
 

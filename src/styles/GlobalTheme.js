@@ -11,7 +11,10 @@ export default {
     background: '#f7f7f7',
     fontFamily: '"Open Sans", "Helvetica Neue", Helvetica, sans-serif',
     color: '#393939',
-    padding: '0px',
+    paddingTop: 0,
+    paddingBottom: 0,
+    paddingLeft: 0,
+    paddingRight: 0,
     fontSize: '14px'
   },
   'a': {
