@@ -1,11 +1,14 @@
 import React      from 'react'
 import PropTypes  from 'prop-types'
 import { colors } from '../../styles'
+import spacing    from '../../styles/spacing'
 
 const styles = {
   backgroundColor: colors.GRAY_88,
   width: '100%',
-  margin: '8px 0',
+  ...spacing.MARGIN_Y_XS,
+  marginLeft: 0,
+  marginRight: 0,
   height: 1,
   border: 'none'
 }

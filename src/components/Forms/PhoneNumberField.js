@@ -11,6 +11,7 @@ import React              from 'react'
 import PropTypes          from 'prop-types'
 import Radium             from 'radium'
 import MaskedTextInput    from 'react-text-mask'
+import spacing            from '../../styles/spacing'
 
 const NoOp = () => {} // eslint-disable-line no-empty-function
 
@@ -44,8 +45,14 @@ const styles = {
     color: colors.GRAY_20,
     fontSize: 16,
     height: 56,
-    margin: '0',
-    padding: '25px 8px 8px 8px',
+    marginTop: 0,
+    marginRight: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    paddingTop: '25px',
+    paddingRight: spacing.XS,
+    paddingBottom: spacing.XS,
+    paddingLeft: spacing.XS,
     outline: 'none',
     position: 'relative',
     width: '100%',

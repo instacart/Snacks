@@ -68,7 +68,10 @@ const getMaxColumnsStyles = props => {
     justifyContent: 'center'
   } : {
     width: `${maxColumns * responsive.columnWidth}px`,
-    margin: '0 auto'
+    marginTop: 0,
+    marginRight: 'auto',
+    marginBottom: 0,
+    marginLeft: 'auto',
   }
 
   if (maxColumns <= 6) {
@@ -98,44 +101,21 @@ const getMaxColumnsStyles = props => {
   return {}
 }
 
-const getFullWidthStyles = props => {
-  const { screenWidths } = responsive
-  if (!props.forceFullPage) { return {} }
-
-  return {
-    width: '100vw',
-    justifyContent: 'center',
-    [responsive.xs]: {
+const fullWidthStyles = ['xs', 'sm', 'md', 'mdLg', 'lg', 'xl'].reduce(
+  (styles, size) => ({
+    ...styles,
+    [responsive[size]]: {
       display: 'block',
-      margin: `0 calc(-1 * (100vw - ${screenWidths.xs}px) / 2)`
-    },
-
-    [responsive.sm]: {
-      display: 'block',
-      margin: `0 calc(-1 * (100vw - ${screenWidths.sm}px) / 2)`
-    },
-
-    [responsive.md]: {
-      display: 'block',
-      margin: `0 calc(-1 * (100vw - ${screenWidths.md}px) / 2)`
-    },
-
-    [responsive.mdLg]: {
-      display: 'block',
-      margin: `0 calc(-1 * (100vw - ${screenWidths.mdLg}px) / 2)`
-    },
-
-    [responsive.lg]: {
-      display: 'block',
-      margin: `0 calc(-1 * (100vw - ${screenWidths.lg}px) / 2)`
-    },
-
-    [responsive.xl]: {
-      display: 'block',
-      margin: `0 calc(-1 * (100vw - ${screenWidths.xl}px) / 2)`
+      marginTop: `0 calc(-1 * (100vw - ${responsive.screenWidths[size]}px) / 2)`,
+      marginRight: `0 calc(-1 * (100vw - ${responsive.screenWidths[size]}px) / 2)`,
+      marginBottom: `0 calc(-1 * (100vw - ${responsive.screenWidths[size]}px) / 2)`,
+      marginLeft: `0 calc(-1 * (100vw - ${responsive.screenWidths[size]}px) / 2)`
     }
-  }
-}
+  }),
+  { width: '100vw', justifyContent: 'center' }
+)
+
+const getFullWidthStyles = props => props.forceFullPage ? fullWidthStyles : {}
 
 const Row = props => {
   const componentStyles = supportsCSSGrid() ? styles : legacyStyles

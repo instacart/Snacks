@@ -74,7 +74,10 @@ exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
             Object {
               "overflowX": "visible",
               "overflowY": "hidden",
-              "padding": "2px 5px 5px",
+              "paddingBottom": "5px",
+              "paddingLeft": "5px",
+              "paddingRight": "5px",
+              "paddingTop": "2px",
               "transform": "translateX(-5px)",
               "width": "100%",
             }
@@ -110,7 +113,10 @@ exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
                     "maxHeight": "500px",
                     "outline": "none",
                     "overflowY": "auto",
-                    "padding": "8px 0",
+                    "paddingBottom": 8,
+                    "paddingLeft": 0,
+                    "paddingRight": 0,
+                    "paddingTop": 8,
                     "userSelect": "none",
                   }
                 }
@@ -128,7 +134,10 @@ exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
                   style={
                     Object {
                       "backgroundColor": "#ffffff",
-                      "padding": "16px 0",
+                      "paddingBottom": 16,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 16,
                     }
                   }
                   tabIndex={0}
@@ -187,7 +196,10 @@ exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
                       data-radium={true}
                       style={
                         Object {
-                          "padding": "0 16px",
+                          "paddingBottom": 0,
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "paddingTop": 0,
                           "whiteSpace": "nowrap",
                         }
                       }
@@ -208,7 +220,10 @@ exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
                   style={
                     Object {
                       "backgroundColor": "#ffffff",
-                      "padding": "16px 0",
+                      "paddingBottom": 16,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 16,
                     }
                   }
                   tabIndex={0}
@@ -268,7 +283,10 @@ exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
                       data-radium={true}
                       style={
                         Object {
-                          "padding": "0 16px",
+                          "paddingBottom": 0,
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "paddingTop": 0,
                           "whiteSpace": "nowrap",
                         }
                       }
@@ -289,7 +307,10 @@ exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
                   style={
                     Object {
                       "backgroundColor": "#ffffff",
-                      "padding": "16px 0",
+                      "paddingBottom": 16,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 16,
                     }
                   }
                   tabIndex={0}
@@ -349,7 +370,10 @@ exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
                       data-radium={true}
                       style={
                         Object {
-                          "padding": "0 16px",
+                          "paddingBottom": 0,
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "paddingTop": 0,
                           "whiteSpace": "nowrap",
                         }
                       }

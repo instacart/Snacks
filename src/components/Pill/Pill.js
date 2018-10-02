@@ -1,5 +1,5 @@
 import React from 'react'
-import { spacings } from '../../styles/spacing'
+import spacing from '../../styles/spacing'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
 import withTheme from '../../styles/themer/withTheme'
@@ -11,9 +11,11 @@ const getStyles = props => {
   return {
     backgroundColor: color,
     color: 'white',
-    borderRadius: spacings.SM,
-    padding: `0 ${spacings.XS}px`,
-    margin: `${spacings.XS}px`,
+    borderRadius: spacing.SM,
+    paddingTop: 0,
+    paddingBottom: 0,
+    ...spacing.PADDING_X_XS,
+    ...spacing.MARGIN_XS,
     textAlign: 'center',
     display: 'inline-block',
     width: 'auto',

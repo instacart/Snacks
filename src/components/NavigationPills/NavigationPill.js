@@ -4,6 +4,7 @@ import Radium             from 'radium'
 import colors             from '../../styles/colors'
 import withTheme          from '../../styles/themer/withTheme'
 import { themePropTypes } from '../../styles/themer/utils'
+import spacing            from '../../styles/spacing'
 
 const styles = {
   container: {
@@ -11,12 +12,18 @@ const styles = {
   },
   main: {
     default: {
-      padding: '12px 16px',
+      paddingTop: '12px',
+      paddingRight: spacing.SM,
+      paddingBottom: '12px',
+      paddingLeft: spacing.SM,
       display: 'block',
       fontSize: '14px',
       backgroundColor: colors.GRAY_97,
       borderRadius: '24px',
-      margin: '0 4px',
+      marginTop: 0,
+      marginBottom: 0,
+      marginLeft: '4px',
+      marginRight: '4px',
       lineHeight: '1.2',
       transition: 'background-color 150ms ease-in-out',
 

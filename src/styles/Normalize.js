@@ -5,7 +5,10 @@ export default {
     webkitTextSizeAdjust: '100%'
   },
   'body' : {
-    margin: 0,
+    marginTop: 0,
+    marginRight: 0,
+    marginBottom: 0,
+    marginLeft: 0,
     boxSizing: 'border-box'
   },
   'article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary': {
@@ -39,7 +42,10 @@ export default {
   },
   'h1' : {
     fontSize: '2em',
-    margin: '0.67em 0'
+    marginTop: '0.67em',
+    marginRight: 0,
+    marginBottom: '0.67em',
+    marginLeft: 0,
   },
   'mark' : {
     background: '#ff0',
@@ -67,7 +73,10 @@ export default {
     overflow: 'hidden'
   },
   'figure' : {
-    margin: '1em 40px'
+    marginTop: '1em',
+    marginRight: '40px',
+    marginBottom: '1em',
+    marginLeft: '40px',
   },
   'hr' : {
     boxSizing: 'content-box',
@@ -83,7 +92,10 @@ export default {
   'button, input, optgroup, select, textarea': {
     color: 'inherit',
     font: 'inherit',
-    margin: 0
+    marginTop: 0,
+    marginRight: 0,
+    marginBottom: 0,
+    marginLeft: 0
   },
   'button' : {
     overflow: 'visible'
@@ -100,14 +112,20 @@ export default {
   },
   'button::-moz-focus-inner, input::-moz-focus-inner': {
     border: 0,
-    padding: 0
+    paddingTop: 0,
+    paddingRight: 0,
+    paddingBottom: 0,
+    paddingLeft: 0
   },
   'input' : {
     lineHeight: 'normal'
   },
   'input[type="checkbox"], input[type="radio"]': {
     boxSizing: 'border-box',
-    padding: 0
+    paddingTop: 0,
+    paddingRight: 0,
+    paddingBottom: 0,
+    paddingLeft: 0
   },
   'input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button': {
     height: 'auto'
@@ -121,12 +139,21 @@ export default {
   },
   'fieldset' : {
     border: '1px solid #c0c0c0',
-    margin: '0 2px',
-    padding: '0.35em 0.625em 0.75em'
+    marginTop: 0,
+    marginRight: '2px',
+    marginBottom: 0,
+    marginLeft: '2px',
+    paddingTop: '0.35em',
+    paddingRight: '0.625em',
+    paddingLeft: '0.625em',
+    paddingBottom: '0.75em',
   },
   'legend' : {
     border: 0,
-    padding: 0
+    paddingTop: 0,
+    paddingRight: 0,
+    paddingBottom: 0,
+    paddingLeft: 0
   },
   'textarea' : {
     overflow: 'auto'
@@ -139,6 +166,9 @@ export default {
     borderSpacing: 0
   },
   'td, th': {
-    padding: 0
+    paddingTop: 0,
+    paddingRight: 0,
+    paddingBottom: 0,
+    paddingLeft: 0
   }
 }

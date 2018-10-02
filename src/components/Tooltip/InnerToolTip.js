@@ -3,6 +3,7 @@ import PropTypes                from 'prop-types'
 import Fade                     from '../../components/Transitions/Fade'
 import colors                   from '../../styles/colors'
 import TooltipArrow             from './TooltipArrow'
+import spacing                  from '../../styles/spacing'
 
 const styles = {
   root: {
@@ -43,15 +44,21 @@ const RESOLVED_COLOR = {
 const RESOLVED_SIZE = {
   small: {
     fontSize: '14px',
-    padding: '9px 8px'
+    ...spacing.PADDDING_X_XS,
+    paddingTop: '9px',
+    paddingBottom: '9px',
   },
   medium: {
     fontSize: '16px',
-    padding: '9px 16px'
+    paddingTop: '9px',
+    paddingBottom: '9px',
+    ...spacing.PADDING_X_SM,
   },
   large: {
     fontSize: '18px',
-    padding: '12px 24px'
+    paddingTop: '12px',
+    paddingBottom: '12px',
+    ...spacing.PADDING_X_MD,
   }
 }
 

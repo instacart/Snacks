@@ -10,7 +10,10 @@ exports[`renders Grid correctly 1`] = `
       data-radium={true}
       style={
         Object {
-          "margin": "0 auto",
+          "marginBottom": 0,
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "marginTop": 0,
         }
       }
     />
@@ -40,7 +43,10 @@ exports[`renders Grid with Row correctly 1`] = `
       data-radium={true}
       style={
         Object {
-          "margin": "0 auto",
+          "marginBottom": 0,
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "marginTop": 0,
         }
       }
     >
@@ -91,7 +97,10 @@ exports[`renders Grid with Row with Columns correctly 1`] = `
       data-radium={true}
       style={
         Object {
-          "margin": "0 auto",
+          "marginBottom": 0,
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "marginTop": 0,
         }
       }
     >
@@ -164,7 +173,10 @@ exports[`renders Grid with styles correctly 1`] = `
       style={
         Object {
           "color": "#ccc",
-          "margin": "0 auto",
+          "marginBottom": 0,
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "marginTop": 0,
           "width": "100%",
         }
       }

@@ -96,7 +96,10 @@ exports[`renders NavigationPills correctly 1`] = `
                 "display": "inline-block",
                 "height": "56px",
                 "minWidth": "100%",
-                "padding": "8px 8px 8px 24px",
+                "paddingBottom": 8,
+                "paddingLeft": 24,
+                "paddingRight": 8,
+                "paddingTop": 8,
               }
             }
           >
@@ -115,7 +118,10 @@ exports[`renders NavigationPills correctly 1`] = `
               style={
                 Object {
                   "display": "inline-block",
-                  "margin": "0",
+                  "marginBottom": "0",
+                  "marginLeft": "0",
+                  "marginRight": "0",
+                  "marginTop": "0",
                 }
               }
             >
@@ -144,8 +150,14 @@ exports[`renders NavigationPills correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -178,8 +190,14 @@ exports[`renders NavigationPills correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -212,8 +230,14 @@ exports[`renders NavigationPills correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -246,8 +270,14 @@ exports[`renders NavigationPills correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -280,8 +310,14 @@ exports[`renders NavigationPills correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -461,7 +497,10 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
                 "display": "inline-block",
                 "height": "56px",
                 "minWidth": "100%",
-                "padding": "8px 8px 8px 24px",
+                "paddingBottom": 8,
+                "paddingLeft": 24,
+                "paddingRight": 8,
+                "paddingTop": 8,
               }
             }
           >
@@ -470,7 +509,10 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
               style={
                 Object {
                   "display": "inline-block",
-                  "margin": "0",
+                  "marginBottom": "0",
+                  "marginLeft": "0",
+                  "marginRight": "0",
+                  "marginTop": "0",
                 }
               }
             >
@@ -499,8 +541,14 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -533,8 +581,14 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -567,8 +621,14 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -601,8 +661,14 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -635,8 +701,14 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -818,7 +890,10 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
                 "display": "inline-block",
                 "height": "56px",
                 "minWidth": "100%",
-                "padding": "8px 8px 8px 24px",
+                "paddingBottom": 8,
+                "paddingLeft": 24,
+                "paddingRight": 8,
+                "paddingTop": 8,
               }
             }
           >
@@ -837,7 +912,10 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
               style={
                 Object {
                   "display": "inline-block",
-                  "margin": "0",
+                  "marginBottom": "0",
+                  "marginLeft": "0",
+                  "marginRight": "0",
+                  "marginTop": "0",
                 }
               }
             >
@@ -868,8 +946,14 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -904,8 +988,14 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -940,8 +1030,14 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -976,8 +1072,14 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -1012,8 +1114,14 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -1195,7 +1303,10 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
                 "display": "inline-block",
                 "height": "56px",
                 "minWidth": "100%",
-                "padding": "8px 8px 8px 24px",
+                "paddingBottom": 8,
+                "paddingLeft": 24,
+                "paddingRight": 8,
+                "paddingTop": 8,
               }
             }
           >
@@ -1214,7 +1325,10 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
               style={
                 Object {
                   "display": "inline-block",
-                  "margin": "0",
+                  "marginBottom": "0",
+                  "marginLeft": "0",
+                  "marginRight": "0",
+                  "marginTop": "0",
                 }
               }
             >
@@ -1243,8 +1357,14 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -1277,8 +1397,14 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -1311,8 +1437,14 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -1345,8 +1477,14 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }
@@ -1379,8 +1517,14 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
                       "display": "block",
                       "fontSize": "14px",
                       "lineHeight": "1.2",
-                      "margin": "0 4px",
-                      "padding": "12px 16px",
+                      "marginBottom": 0,
+                      "marginLeft": "4px",
+                      "marginRight": "4px",
+                      "marginTop": 0,
+                      "paddingBottom": "12px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": "12px",
                       "transition": "background-color 150ms ease-in-out",
                     }
                   }

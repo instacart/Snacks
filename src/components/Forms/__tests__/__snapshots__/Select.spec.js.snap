@@ -58,9 +58,15 @@ exports[`renders Select correctly 1`] = `
                     "color": "#424242",
                     "fontSize": "16px",
                     "height": "56px",
-                    "margin": "0",
+                    "marginBottom": 0,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 0,
                     "outline": "none",
-                    "padding": "25px 25px 8px 8px",
+                    "paddingBottom": 8,
+                    "paddingLeft": 8,
+                    "paddingRight": "25px",
+                    "paddingTop": "25px",
                     "position": "relative",
                   }
                 }
@@ -77,7 +83,10 @@ exports[`renders Select correctly 1`] = `
                       "cursor": "text",
                       "fontSize": "16px",
                       "left": 0,
-                      "margin": "0",
+                      "marginBottom": 0,
+                      "marginLeft": 0,
+                      "marginRight": 0,
+                      "marginTop": 0,
                       "pointerEvents": "auto",
                       "position": "absolute",
                       "top": 0,
@@ -186,7 +195,10 @@ exports[`renders Select correctly 1`] = `
                 Object {
                   "overflowX": "visible",
                   "overflowY": "hidden",
-                  "padding": "2px 5px 5px",
+                  "paddingBottom": "5px",
+                  "paddingLeft": "5px",
+                  "paddingRight": "5px",
+                  "paddingTop": "2px",
                   "transform": "translateX(-5px)",
                   "width": "100%",
                 }
@@ -222,7 +234,10 @@ exports[`renders Select correctly 1`] = `
                         "maxHeight": "500px",
                         "outline": "none",
                         "overflowY": "auto",
-                        "padding": "8px 0",
+                        "paddingBottom": 8,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 8,
                         "userSelect": "none",
                         "width": "100%",
                       }
@@ -241,7 +256,10 @@ exports[`renders Select correctly 1`] = `
                       style={
                         Object {
                           "backgroundColor": "#ffffff",
-                          "padding": "16px 0",
+                          "paddingBottom": 16,
+                          "paddingLeft": 0,
+                          "paddingRight": 0,
+                          "paddingTop": 16,
                         }
                       }
                       tabIndex={0}
@@ -258,7 +276,10 @@ exports[`renders Select correctly 1`] = `
                           data-radium={true}
                           style={
                             Object {
-                              "padding": "0 16px",
+                              "paddingBottom": 0,
+                              "paddingLeft": 16,
+                              "paddingRight": 16,
+                              "paddingTop": 0,
                               "whiteSpace": "nowrap",
                             }
                           }
@@ -279,7 +300,10 @@ exports[`renders Select correctly 1`] = `
                       style={
                         Object {
                           "backgroundColor": "#ffffff",
-                          "padding": "16px 0",
+                          "paddingBottom": 16,
+                          "paddingLeft": 0,
+                          "paddingRight": 0,
+                          "paddingTop": 16,
                         }
                       }
                       tabIndex={0}
@@ -296,7 +320,10 @@ exports[`renders Select correctly 1`] = `
                           data-radium={true}
                           style={
                             Object {
-                              "padding": "0 16px",
+                              "paddingBottom": 0,
+                              "paddingLeft": 16,
+                              "paddingRight": 16,
+                              "paddingTop": 0,
                               "whiteSpace": "nowrap",
                             }
                           }
@@ -401,9 +428,15 @@ exports[`renders Select w/ server error correctly 1`] = `
                     "color": "#757575",
                     "fontSize": "16px",
                     "height": "56px",
-                    "margin": "0",
+                    "marginBottom": 0,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 0,
                     "outline": "none",
-                    "padding": "25px 25px 8px 8px",
+                    "paddingBottom": 8,
+                    "paddingLeft": 8,
+                    "paddingRight": "25px",
+                    "paddingTop": "25px",
                     "position": "relative",
                   }
                 }
@@ -420,7 +453,10 @@ exports[`renders Select w/ server error correctly 1`] = `
                       "cursor": "not-allowed",
                       "fontSize": "16px",
                       "left": 0,
-                      "margin": "0",
+                      "marginBottom": 0,
+                      "marginLeft": 0,
+                      "marginRight": 0,
+                      "marginTop": 0,
                       "pointerEvents": "auto",
                       "position": "absolute",
                       "top": 0,
@@ -529,7 +565,10 @@ exports[`renders Select w/ server error correctly 1`] = `
                 Object {
                   "overflowX": "visible",
                   "overflowY": "hidden",
-                  "padding": "2px 5px 5px",
+                  "paddingBottom": "5px",
+                  "paddingLeft": "5px",
+                  "paddingRight": "5px",
+                  "paddingTop": "2px",
                   "transform": "translateX(-5px)",
                   "width": "100%",
                 }
@@ -565,7 +604,10 @@ exports[`renders Select w/ server error correctly 1`] = `
                         "maxHeight": "500px",
                         "outline": "none",
                         "overflowY": "auto",
-                        "padding": "8px 0",
+                        "paddingBottom": 8,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 8,
                         "userSelect": "none",
                         "width": "100%",
                       }
@@ -584,7 +626,10 @@ exports[`renders Select w/ server error correctly 1`] = `
                       style={
                         Object {
                           "backgroundColor": "#ffffff",
-                          "padding": "16px 0",
+                          "paddingBottom": 16,
+                          "paddingLeft": 0,
+                          "paddingRight": 0,
+                          "paddingTop": 16,
                         }
                       }
                       tabIndex={0}
@@ -601,7 +646,10 @@ exports[`renders Select w/ server error correctly 1`] = `
                           data-radium={true}
                           style={
                             Object {
-                              "padding": "0 16px",
+                              "paddingBottom": 0,
+                              "paddingLeft": 16,
+                              "paddingRight": 16,
+                              "paddingTop": 0,
                               "whiteSpace": "nowrap",
                             }
                           }
@@ -622,7 +670,10 @@ exports[`renders Select w/ server error correctly 1`] = `
                       style={
                         Object {
                           "backgroundColor": "#ffffff",
-                          "padding": "16px 0",
+                          "paddingBottom": 16,
+                          "paddingLeft": 0,
+                          "paddingRight": 0,
+                          "paddingTop": 16,
                         }
                       }
                       tabIndex={0}
@@ -639,7 +690,10 @@ exports[`renders Select w/ server error correctly 1`] = `
                           data-radium={true}
                           style={
                             Object {
-                              "padding": "0 16px",
+                              "paddingBottom": 0,
+                              "paddingLeft": 16,
+                              "paddingRight": 16,
+                              "paddingTop": 0,
                               "whiteSpace": "nowrap",
                             }
                           }
@@ -746,9 +800,15 @@ exports[`renders disabled Select correctly 1`] = `
                     "color": "#757575",
                     "fontSize": "16px",
                     "height": "56px",
-                    "margin": "0",
+                    "marginBottom": 0,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 0,
                     "outline": "none",
-                    "padding": "25px 25px 8px 8px",
+                    "paddingBottom": 8,
+                    "paddingLeft": 8,
+                    "paddingRight": "25px",
+                    "paddingTop": "25px",
                     "position": "relative",
                   }
                 }
@@ -765,7 +825,10 @@ exports[`renders disabled Select correctly 1`] = `
                       "cursor": "not-allowed",
                       "fontSize": "16px",
                       "left": 0,
-                      "margin": "0",
+                      "marginBottom": 0,
+                      "marginLeft": 0,
+                      "marginRight": 0,
+                      "marginTop": 0,
                       "pointerEvents": "auto",
                       "position": "absolute",
                       "top": 0,
@@ -874,7 +937,10 @@ exports[`renders disabled Select correctly 1`] = `
                 Object {
                   "overflowX": "visible",
                   "overflowY": "hidden",
-                  "padding": "2px 5px 5px",
+                  "paddingBottom": "5px",
+                  "paddingLeft": "5px",
+                  "paddingRight": "5px",
+                  "paddingTop": "2px",
                   "transform": "translateX(-5px)",
                   "width": "100%",
                 }
@@ -910,7 +976,10 @@ exports[`renders disabled Select correctly 1`] = `
                         "maxHeight": "500px",
                         "outline": "none",
                         "overflowY": "auto",
-                        "padding": "8px 0",
+                        "paddingBottom": 8,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 8,
                         "userSelect": "none",
                         "width": "100%",
                       }
@@ -929,7 +998,10 @@ exports[`renders disabled Select correctly 1`] = `
                       style={
                         Object {
                           "backgroundColor": "#ffffff",
-                          "padding": "16px 0",
+                          "paddingBottom": 16,
+                          "paddingLeft": 0,
+                          "paddingRight": 0,
+                          "paddingTop": 16,
                         }
                       }
                       tabIndex={0}
@@ -946,7 +1018,10 @@ exports[`renders disabled Select correctly 1`] = `
                           data-radium={true}
                           style={
                             Object {
-                              "padding": "0 16px",
+                              "paddingBottom": 0,
+                              "paddingLeft": 16,
+                              "paddingRight": 16,
+                              "paddingTop": 0,
                               "whiteSpace": "nowrap",
                             }
                           }
@@ -967,7 +1042,10 @@ exports[`renders disabled Select correctly 1`] = `
                       style={
                         Object {
                           "backgroundColor": "#ffffff",
-                          "padding": "16px 0",
+                          "paddingBottom": 16,
+                          "paddingLeft": 0,
+                          "paddingRight": 0,
+                          "paddingTop": 16,
                         }
                       }
                       tabIndex={0}
@@ -984,7 +1062,10 @@ exports[`renders disabled Select correctly 1`] = `
                           data-radium={true}
                           style={
                             Object {
-                              "padding": "0 16px",
+                              "paddingBottom": 0,
+                              "paddingLeft": 16,
+                              "paddingRight": 16,
+                              "paddingTop": 0,
                               "whiteSpace": "nowrap",
                             }
                           }
@@ -1089,9 +1170,15 @@ exports[`renders invalid Select correctly 1`] = `
                     "color": "#757575",
                     "fontSize": "16px",
                     "height": "56px",
-                    "margin": "0",
+                    "marginBottom": 0,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 0,
                     "outline": "none",
-                    "padding": "25px 25px 8px 8px",
+                    "paddingBottom": 8,
+                    "paddingLeft": 8,
+                    "paddingRight": "25px",
+                    "paddingTop": "25px",
                     "position": "relative",
                   }
                 }
@@ -1108,7 +1195,10 @@ exports[`renders invalid Select correctly 1`] = `
                       "cursor": "not-allowed",
                       "fontSize": "16px",
                       "left": 0,
-                      "margin": "0",
+                      "marginBottom": 0,
+                      "marginLeft": 0,
+                      "marginRight": 0,
+                      "marginTop": 0,
                       "pointerEvents": "auto",
                       "position": "absolute",
                       "top": 0,
@@ -1217,7 +1307,10 @@ exports[`renders invalid Select correctly 1`] = `
                 Object {
                   "overflowX": "visible",
                   "overflowY": "hidden",
-                  "padding": "2px 5px 5px",
+                  "paddingBottom": "5px",
+                  "paddingLeft": "5px",
+                  "paddingRight": "5px",
+                  "paddingTop": "2px",
                   "transform": "translateX(-5px)",
                   "width": "100%",
                 }
@@ -1253,7 +1346,10 @@ exports[`renders invalid Select correctly 1`] = `
                         "maxHeight": "500px",
                         "outline": "none",
                         "overflowY": "auto",
-                        "padding": "8px 0",
+                        "paddingBottom": 8,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 8,
                         "userSelect": "none",
                         "width": "100%",
                       }
@@ -1272,7 +1368,10 @@ exports[`renders invalid Select correctly 1`] = `
                       style={
                         Object {
                           "backgroundColor": "#ffffff",
-                          "padding": "16px 0",
+                          "paddingBottom": 16,
+                          "paddingLeft": 0,
+                          "paddingRight": 0,
+                          "paddingTop": 16,
                         }
                       }
                       tabIndex={0}
@@ -1289,7 +1388,10 @@ exports[`renders invalid Select correctly 1`] = `
                           data-radium={true}
                           style={
                             Object {
-                              "padding": "0 16px",
+                              "paddingBottom": 0,
+                              "paddingLeft": 16,
+                              "paddingRight": 16,
+                              "paddingTop": 0,
                               "whiteSpace": "nowrap",
                             }
                           }
@@ -1310,7 +1412,10 @@ exports[`renders invalid Select correctly 1`] = `
                       style={
                         Object {
                           "backgroundColor": "#ffffff",
-                          "padding": "16px 0",
+                          "paddingBottom": 16,
+                          "paddingLeft": 0,
+                          "paddingRight": 0,
+                          "paddingTop": 16,
                         }
                       }
                       tabIndex={0}
@@ -1327,7 +1432,10 @@ exports[`renders invalid Select correctly 1`] = `
                           data-radium={true}
                           style={
                             Object {
-                              "padding": "0 16px",
+                              "paddingBottom": 0,
+                              "paddingLeft": 16,
+                              "paddingRight": 16,
+                              "paddingTop": 0,
                               "whiteSpace": "nowrap",
                             }
                           }
@@ -1431,9 +1539,15 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                   "color": "#424242",
                   "fontSize": "16px",
                   "height": "56px",
-                  "margin": "0",
+                  "marginBottom": 0,
+                  "marginLeft": 0,
+                  "marginRight": 0,
+                  "marginTop": 0,
                   "outline": "none",
-                  "padding": "25px 25px 8px 8px",
+                  "paddingBottom": 8,
+                  "paddingLeft": 8,
+                  "paddingRight": "25px",
+                  "paddingTop": "25px",
                   "position": "relative",
                 }
               }
@@ -1450,7 +1564,10 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                     "cursor": "text",
                     "fontSize": "16px",
                     "left": 0,
-                    "margin": "0",
+                    "marginBottom": 0,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 0,
                     "pointerEvents": "auto",
                     "position": "absolute",
                     "top": 0,
@@ -1559,7 +1676,10 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
               Object {
                 "overflowX": "visible",
                 "overflowY": "hidden",
-                "padding": "2px 5px 5px",
+                "paddingBottom": "5px",
+                "paddingLeft": "5px",
+                "paddingRight": "5px",
+                "paddingTop": "2px",
                 "transform": "translateX(-5px)",
                 "width": "100%",
               }
@@ -1595,7 +1715,10 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                       "maxHeight": "500px",
                       "outline": "none",
                       "overflowY": "auto",
-                      "padding": "8px 0",
+                      "paddingBottom": 8,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 8,
                       "userSelect": "none",
                       "width": "100%",
                     }
@@ -1614,7 +1737,10 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                     style={
                       Object {
                         "backgroundColor": "#ffffff",
-                        "padding": "16px 0",
+                        "paddingBottom": 16,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 16,
                       }
                     }
                     tabIndex={0}
@@ -1631,7 +1757,10 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                         data-radium={true}
                         style={
                           Object {
-                            "padding": "0 16px",
+                            "paddingBottom": 0,
+                            "paddingLeft": 16,
+                            "paddingRight": 16,
+                            "paddingTop": 0,
                             "whiteSpace": "nowrap",
                           }
                         }
