@@ -21,6 +21,7 @@ exports[`renders accessibility icon with size 1`] = `
 exports[`renders accessibility icon with styles 1`] = `
 <test-file-stub
   aria-hidden={true}
+  data-radium={true}
   fill="currentColor"
   height="24px"
   style={
