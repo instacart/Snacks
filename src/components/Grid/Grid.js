@@ -5,11 +5,8 @@ import responsive from '../../styles/responsive'
 
 const styles = {
   marginTop: 0,
-
   marginRight: 'auto',
-
   marginBottom: 0,
-
   marginLeft: 'auto',
 
   [responsive.xs]: {
