@@ -4,7 +4,7 @@ import Radium          from 'radium'
 import NavigationPill  from './NavigationPill'
 import ScrollTrack     from '../ScrollTrack/ScrollTrack'
 import colors          from '../../styles/colors'
-import { spacings }    from '../../styles/spacing'
+import spacing         from '../../styles/spacing'
 
 const styles = {
   labelStyles: {
@@ -14,13 +14,19 @@ const styles = {
     display: 'inline-block',
     height: '56px',
     minWidth: '100%',
-    padding: `${spacings.XS}px ${spacings.XS}px ${spacings.XS}px ${spacings.MD}px`,
+    ...spacing.PADDING_TOP_XS,
+    ...spacing.PADDING_RIGHT_XS,
+    ...spacing.PADDING_BOTTOM_XS,
+    ...spacing.PADDING_LEFT_MD,
     backgroundColor: colors.WHITE,
     boxSizing: 'border-box'
   },
   pillsContainerStyles: {
     display: 'inline-block',
-    margin: '0'
+    marginTop: '0',
+    marginRight: '0',
+    marginBottom: '0',
+    marginLeft: '0',
   }
 }
 

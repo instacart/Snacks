@@ -3,13 +3,16 @@ import PropTypes         from 'prop-types'
 import Radium            from 'radium'
 import { colors }        from '../../styles'
 import Icon              from '../Icon/Icon'
+import spacing           from '../../styles/spacing'
 
 /* eslint jsx-a11y/no-noninteractive-tabindex: 0 */
 
 const styles = {
   root: {
     backgroundColor: '#ffffff',
-    padding: '16px 0',
+    ...spacing.PADDING_Y_SM,
+    paddingRight: 0,
+    paddingLeft: 0,
     ':hover': {
       cursor: 'pointer',
       backgroundColor: colors.GRAY_97
@@ -35,7 +38,9 @@ const styles = {
     paddingLeft: '16px'
   },
   label: {
-    padding: '0 16px',
+    ...spacing.PADDING_X_SM,
+    paddingTop: 0,
+    paddingBottom: 0,
     whiteSpace: 'nowrap'
   },
   leftIconStyles: {

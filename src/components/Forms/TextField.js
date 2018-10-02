@@ -10,6 +10,7 @@ import ServerError        from './ServerError'
 import HelperText         from './HelperText'
 import withTheme          from '../../styles/themer/withTheme'
 import { themePropTypes } from '../../styles/themer/utils'
+import spacing            from '../../styles/spacing'
 
 const styles = {
   wrapper: {
@@ -30,8 +31,13 @@ const styles = {
     color: colors.GRAY_20,
     fontSize: '16px',
     height: '56px',
-    margin: '0',
-    padding: '25px 8px 8px 8px',
+    marginTop: 0,
+    marginRight: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    paddingTop: '25px',
+    ...spacing.PADDING_X_XS,
+    paddingBottom: spacing.XS,
     outline: 'none',
     position: 'relative',
     width: '100%',

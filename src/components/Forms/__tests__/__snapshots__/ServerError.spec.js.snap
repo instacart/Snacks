@@ -16,7 +16,10 @@ exports[`renders ServerError correctly 1`] = `
           "color": "#E6003D",
           "fontSize": "15px",
           "marginBottom": "12px",
-          "padding": "15px",
+          "paddingBottom": "15px",
+          "paddingLeft": "15px",
+          "paddingRight": "15px",
+          "paddingTop": "15px",
         }
       }
     >
