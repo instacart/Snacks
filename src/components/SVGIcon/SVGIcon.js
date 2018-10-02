@@ -1,4 +1,5 @@
 import React from 'react'
+import Radium from 'radium'
 import PropTypes from 'prop-types'
 import * as icons from './icons'
 
@@ -28,4 +29,4 @@ function SVGIcon({color, name, size, ...props}) {
   )
 }
 
-export default SVGIcon
+export default Radium(SVGIcon)
