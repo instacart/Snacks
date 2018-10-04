@@ -106,10 +106,10 @@ const fullWidthStyles = ['xs', 'sm', 'md', 'mdLg', 'lg', 'xl'].reduce(
     ...styles,
     [responsive[size]]: {
       display: 'block',
-      marginTop: `0 calc(-1 * (100vw - ${responsive.screenWidths[size]}px) / 2)`,
-      marginRight: `0 calc(-1 * (100vw - ${responsive.screenWidths[size]}px) / 2)`,
-      marginBottom: `0 calc(-1 * (100vw - ${responsive.screenWidths[size]}px) / 2)`,
-      marginLeft: `0 calc(-1 * (100vw - ${responsive.screenWidths[size]}px) / 2)`
+      marginTop: 0,
+      marginRight: `calc(-1 * (100vw - ${responsive.screenWidths[size]}px) / 2)`,
+      marginBottom: 0,
+      marginLeft: `calc(-1 * (100vw - ${responsive.screenWidths[size]}px) / 2)`
     }
   }),
   { width: '100vw', justifyContent: 'center' }
