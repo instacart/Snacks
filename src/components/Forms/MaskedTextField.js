@@ -108,6 +108,8 @@ class MaskedTextField extends React.Component {
     getValue           : PropTypes.func.isRequired,
     /** The mask */
     mask               : PropTypes.array.isRequired,
+    /** The pipe mask */
+    pipe               : PropTypes.func,
     /** The mask hint */
     maskHint           : PropTypes.string.isRequired,
     /** The type of the input */
@@ -227,6 +229,7 @@ class MaskedTextField extends React.Component {
   render() {
     const {
       mask,
+      pipe,
       maskHint,
       floatingLabelText,
       defaultValue,
@@ -288,6 +291,7 @@ class MaskedTextField extends React.Component {
 
           <MaskedTextInput
             mask={mask}
+            pipe={pipe}
             id={inputId}
             guide={false}
             name={name}
