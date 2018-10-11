@@ -21,6 +21,7 @@ import ScrollTrack from './components/ScrollTrack/ScrollTrack'
 import SetStyles from './styles/SetStyles'
 import spacing from './styles/spacing'
 import PhoneNumberField from './components/Forms/PhoneNumberField'
+import DateField from './components/Forms/DateField'
 import TextField from './components/Forms/TextField'
 import Select from './components/Forms/Select'
 import ServerError from './components/Forms/ServerError'
@@ -68,6 +69,7 @@ export {
   FormComponent,
   FloatingLabel,
   PhoneNumberField,
+  DateField,
   ServerError,
   TextField,
   Select,
