@@ -238,6 +238,8 @@ const Button = props => {
 
       props.onMouseDown(e, props)
     },
+    'aria-haspopup': props['aria-haspopup'],
+    'aria-expanded': props['aria-expanded'],
     ...props.elementAttributes
   }
   if (props.href) {
@@ -320,7 +322,13 @@ Button.propTypes = {
   elementAttributes: PropTypes.object,
 
   /** Snacks theme attributes provided by `Themer` */
-  snacksTheme: themePropTypes
+  snacksTheme: themePropTypes,
+
+  /** Indicates to screen readers that the button has a popup context menu  */
+  'aria-haspopup': PropTypes.bool,
+
+  /** Indicates to screen readers whether the button is currently opened  */
+  'aria-expanded': PropTypes.bool,
 }
 
 Button.defaultProps = {
@@ -332,7 +340,9 @@ Button.defaultProps = {
   onClick: noop,
   onMouseDown: noop,
   inverted: false,
-  elementAttributes: {}
+  elementAttributes: {},
+  'aria-haspopup': false,
+  'aria-expanded': null,
 }
 
 export default withTheme(Radium(Button))
