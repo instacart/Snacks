@@ -5,6 +5,8 @@ exports[`Button applies the elementAttributes prop correctly 1`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     aria-label="foo"
     data-radium={true}
     disabled={false}
@@ -58,6 +60,8 @@ exports[`Button can render as a link if an href is provided 1`] = `
   data-radium={true}
 >
   <a
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={false}
     href="/carrot"
@@ -112,6 +116,8 @@ exports[`Button renders all sizes correctly 1`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={false}
     onBlur={[Function]}
@@ -165,6 +171,8 @@ exports[`Button renders all sizes correctly 2`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={false}
     onBlur={[Function]}
@@ -217,6 +225,8 @@ exports[`Button renders all sizes correctly 3`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={false}
     onBlur={[Function]}
@@ -269,6 +279,8 @@ exports[`Button renders all sizes correctly 4`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={false}
     onBlur={[Function]}
@@ -321,6 +333,8 @@ exports[`Button renders all snacks button variants correctly 1`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={false}
     onBlur={[Function]}
@@ -373,6 +387,8 @@ exports[`Button renders all snacks button variants correctly 2`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={false}
     onBlur={[Function]}
@@ -425,6 +441,8 @@ exports[`Button renders all snacks button variants correctly 3`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={false}
     onBlur={[Function]}
@@ -477,6 +495,8 @@ exports[`Button renders all snacks button variants correctly 4`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={false}
     onBlur={[Function]}
@@ -529,6 +549,8 @@ exports[`Button renders correctly when disabled 1`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={true}
     onBlur={[Function]}
@@ -577,6 +599,8 @@ exports[`Button renders icons correctly 1`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={false}
     onBlur={[Function]}
@@ -659,6 +683,8 @@ exports[`Button renders icons correctly 2`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={false}
     onBlur={[Function]}
@@ -741,6 +767,8 @@ exports[`Button renders icons correctly 3`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={false}
     onBlur={[Function]}
@@ -823,6 +851,8 @@ exports[`Button renders icons correctly 4`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={false}
     onBlur={[Function]}
@@ -905,6 +935,8 @@ exports[`Button renders with inverted colors 1`] = `
   data-radium={true}
 >
   <button
+    aria-expanded={null}
+    aria-haspopup={false}
     data-radium={true}
     disabled={false}
     onBlur={[Function]}
