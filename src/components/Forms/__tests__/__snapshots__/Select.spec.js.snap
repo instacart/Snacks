@@ -37,6 +37,12 @@ exports[`renders Select correctly 1`] = `
               aria-expanded={false}
               aria-haspopup={true}
               data-radium={true}
+              elementAttributes={
+                Object {
+                  "aria-expanded": false,
+                  "aria-haspopup": true,
+                }
+              }
               onBlur={[Function]}
               onFocus={[Function]}
               onMouseDown={[Function]}
@@ -407,6 +413,12 @@ exports[`renders Select w/ server error correctly 1`] = `
               aria-expanded={false}
               aria-haspopup={true}
               data-radium={true}
+              elementAttributes={
+                Object {
+                  "aria-expanded": false,
+                  "aria-haspopup": true,
+                }
+              }
               onBlur={[Function]}
               onFocus={[Function]}
               onMouseDown={[Function]}
@@ -779,6 +791,12 @@ exports[`renders disabled Select correctly 1`] = `
               aria-expanded={false}
               aria-haspopup={true}
               data-radium={true}
+              elementAttributes={
+                Object {
+                  "aria-expanded": false,
+                  "aria-haspopup": true,
+                }
+              }
               onBlur={[Function]}
               onFocus={[Function]}
               onMouseDown={[Function]}
@@ -1149,6 +1167,12 @@ exports[`renders invalid Select correctly 1`] = `
               aria-expanded={false}
               aria-haspopup={true}
               data-radium={true}
+              elementAttributes={
+                Object {
+                  "aria-expanded": false,
+                  "aria-haspopup": true,
+                }
+              }
               onBlur={[Function]}
               onFocus={[Function]}
               onMouseDown={[Function]}
@@ -1518,6 +1542,12 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
             aria-expanded={false}
             aria-haspopup={true}
             data-radium={true}
+            elementAttributes={
+              Object {
+                "aria-expanded": false,
+                "aria-haspopup": true,
+              }
+            }
             onBlur={[Function]}
             onFocus={[Function]}
             onMouseDown={[Function]}
