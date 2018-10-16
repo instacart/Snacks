@@ -118,7 +118,7 @@ class RadioCheckboxBase extends React.PureComponent {
 
     return (
       <div style={{...STYLE.button, ...style.button}}>
-        <SvgComponent style={getInputStyles(this.props)} />
+        <SvgComponent aria-hidden="true" style={getInputStyles(this.props)} />
         <input
           id={id}
           type={btnType}

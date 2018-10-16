@@ -18,6 +18,7 @@ exports[`Checkbox generates a label if a child prop of text is supplied 1`] = `
     }
   >
     <test-file-stub
+      aria-hidden="true"
       data-radium={true}
       style={
         Object {
@@ -88,6 +89,7 @@ exports[`Checkbox incorporates user style if passed 1`] = `
     }
   >
     <test-file-stub
+      aria-hidden="true"
       data-radium={true}
       style={
         Object {
@@ -157,6 +159,7 @@ exports[`Checkbox incorporates user style if passed 2`] = `
     }
   >
     <test-file-stub
+      aria-hidden="true"
       data-radium={true}
       style={
         Object {
@@ -217,6 +220,7 @@ exports[`Checkbox renders the correct button type 1`] = `
   }
 >
   <test-file-stub
+    aria-hidden="true"
     data-radium={true}
     style={
       Object {
@@ -264,6 +268,7 @@ exports[`Checkbox renders the correct selected state 1`] = `
   }
 >
   <test-file-stub
+    aria-hidden="true"
     data-radium={true}
     style={
       Object {
@@ -311,6 +316,7 @@ exports[`Checkbox renders the correct selected state 2`] = `
   }
 >
   <test-file-stub
+    aria-hidden="true"
     data-radium={true}
     style={
       Object {
@@ -358,6 +364,7 @@ exports[`Checkbox renders the correct selected state 3`] = `
   }
 >
   <test-file-stub
+    aria-hidden="true"
     data-radium={true}
     style={
       Object {
