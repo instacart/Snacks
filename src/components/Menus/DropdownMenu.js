@@ -180,6 +180,10 @@ class DropdownMenu extends React.Component {
           }
         },
         onMouseDown: this.handleClick,
+        elementAttributes: {
+          'aria-haspopup': true,
+          'aria-expanded': open,
+        },
         'aria-haspopup': true,
         'aria-expanded': open,
       })
