@@ -40,12 +40,6 @@ const formComponent = (WrappedComponent) => {
       this.context.ICFormable && this.context.ICFormable.unregisterComponent(this)
     }
 
-    triggerFocus = () => {
-      if (typeof this.FormComponent.triggerFocus === 'function') {
-        return this.FormComponent.triggerFocus()
-      }
-    }
-
     getValue = () => {
       if (typeof this.FormComponent.getValue === 'function') {
         // If component getValue function defined on component

@@ -191,10 +191,6 @@ class PhoneNumberField extends React.Component {
     return this.input.value.replace(phoneRegex, '')
   }
 
-  triggerFocus = () => {
-    this.input.focus()
-  }
-
   handleInputChange = (e) => {
     const { onChange } = this.props
     const { hasValue } = this.state
@@ -222,6 +218,8 @@ class PhoneNumberField extends React.Component {
   handleKeyDown = (e) => {
     this.props.onKeyDown(e)
   }
+
+  triggerFocus = () => this.input.focus()
 
   render() {
     const {

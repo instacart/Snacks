@@ -148,10 +148,6 @@ class TextField extends React.Component {
     }
   }
 
-  triggerFocus = () => {
-    this.input.focus()
-  }
-
   getValue = () => {
     if (!this.input) {
       return null
@@ -187,6 +183,8 @@ class TextField extends React.Component {
   handleKeyDown = (e) => {
     this.props.onKeyDown(e)
   }
+
+  triggerFocus = () => this.input.focus()
 
   render() {
     const {
