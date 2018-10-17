@@ -1,6 +1,6 @@
 {
   "name": "ic-snacks",
-  "version": "0.0.105",
+  "version": "0.0.106",
   "description": "The Instacart Component Library for Web",
   "main": "dist/snacks.js",
   "scripts": {
