@@ -5,13 +5,15 @@ import isEqual from '../../utils/isEqual'
 class Form extends React.Component {
   static propTypes = {
     /** Form html chilren */
-    children    : PropTypes.node,
+    children         : PropTypes.node,
     /** HTML form attributes */
-    formProps   : PropTypes.shape({}),
+    formProps        : PropTypes.shape({}),
     /** onSubmit callback will pass in model as parameter */
-    onSubmit    : PropTypes.func,
+    onSubmit         : PropTypes.func,
+    /** onValidationError callback will pass in invalid FormComponents as parameter*/
+    onValidationError: PropTypes.func,
     /** errors from server mapped to model names. Will attach serverErrors styling to FormComppnents */
-    serverErrors: PropTypes.shape({})
+    serverErrors     : PropTypes.shape({})
   }
 
   static childContextTypes = {
@@ -20,9 +22,10 @@ class Form extends React.Component {
 
   constructor() {
     super()
-    this.state          = { serverErrors: null }
-    this.model          = {}
-    this.formComponents = {}
+    this.state             = { serverErrors: null }
+    this.model             = {}
+    this.formComponents    = {}
+    this.invalidComponents = []
   }
 
   getChildContext() {
@@ -67,7 +70,8 @@ class Form extends React.Component {
 
   formIsValid() {
     const components = Object.values(this.formComponents)
-    return components.every( component => component.validate() )
+    this.invalidComponents = components.filter(component => !component.validate())
+    return this.invalidComponents.length === 0
   }
 
   updateModel() {
@@ -89,6 +93,8 @@ class Form extends React.Component {
       this.setState({serverErrors: null}, () => {
         this.props.onSubmit && this.props.onSubmit(this.model)
       })
+    } else {
+      this.props.onValidationError && this.props.onValidationError(this.invalidComponents)
     }
   }
 
