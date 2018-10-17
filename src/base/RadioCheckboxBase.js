@@ -128,6 +128,7 @@ class RadioCheckboxBase extends React.PureComponent {
           checked={isSelected}
           disabled={isDisabled}
           aria-label={aria.label}
+          ref={this.forwardedRef}
         />
       </div>
     )

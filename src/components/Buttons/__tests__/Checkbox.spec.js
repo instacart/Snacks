@@ -12,7 +12,7 @@ describe('Checkbox', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it("renders the correct selected state", () => {
+  it('renders the correct selected state', () => {
     const testCases = [
       { id: 1, isSelected: false },
       { id: 2, isSelected: true },
@@ -46,7 +46,7 @@ describe('Checkbox', () => {
       .create(<Checkbox id={1}>Test label</Checkbox>)
       .toJSON()
     expect(tree).toMatchSnapshot()
-  });
+  })
   
 
   it('incorporates user style if passed', () => {
@@ -79,5 +79,13 @@ describe('Checkbox', () => {
 
     wrapper.find('input').simulate('change')
     expect(onChange.calledOnce).toBe(true)
+  })
+
+  it('correct forwards refs', () => {
+    const ref = React.createRef()
+    mount(<Checkbox id={1} isSelected={true} ref={ref} />)
+    
+    expect(ref.current.toBeInstanceOf(HTMLInputElement))
+    expect(ref.props.selected === true)
   })
 })

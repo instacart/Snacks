@@ -9,15 +9,16 @@ const BKG_SVG_SPRITES = {
   selected:   bkgSvgSelected,
 }
 
-const Checkbox = (props) => {
+const Checkbox = React.forwardRef((props, ref) => {
   return (
     <RadioCheckboxBase
       btnType='checkbox'
       bkgSvgSprites={BKG_SVG_SPRITES}
+      forwardedRef={ref}
       {...props}
     />
   )
-}
+})
 
 Checkbox.propTypes = {
   aria          : PropTypes.shape({
