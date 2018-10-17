@@ -10,7 +10,7 @@ const formComponent = (WrappedComponent) => {
       /** Disable the input; Will be removed from model in Form onSubmit callback */
       disabled       : PropTypes.bool,
       /** Uniq id for input */
-      id                 : PropTypes.string,
+      id             : PropTypes.string,
       /** Mark input as required */
       required       : PropTypes.bool,
       /** Regex Validation pattern */
@@ -38,6 +38,12 @@ const formComponent = (WrappedComponent) => {
 
     componentWillUnmount() {
       this.context.ICFormable && this.context.ICFormable.unregisterComponent(this)
+    }
+
+    triggerFocus = () => {
+      if (typeof this.FormComponent.triggerFocus === 'function') {
+        return this.FormComponent.triggerFocus()
+      }
     }
 
     getValue = () => {
@@ -124,5 +130,3 @@ const formComponent = (WrappedComponent) => {
 }
 
 export default formComponent
-
-

@@ -148,6 +148,10 @@ class TextField extends React.Component {
     }
   }
 
+  triggerFocus = () => {
+    this.input.focus()
+  }
+
   getValue = () => {
     if (!this.input) {
       return null
