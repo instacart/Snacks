@@ -35,7 +35,7 @@ it('renders correctly', () => {
       </div>
     </StyleRoot>
   )
-  
+
   expect(toJson(wrapper)).toMatchSnapshot()
 })
 
@@ -54,7 +54,7 @@ it('renders correctly with focus state', () => {
   )
 
   wrapper.find('input').simulate('focus')
-  
+
   expect(toJson(wrapper)).toMatchSnapshot()
 })
 
@@ -78,6 +78,26 @@ it('fires the onFocus prop', () => {
 
   expect(onFocus).toBeCalled()
   expect(onFocus.mock.calls.length).toBe(1)
+})
+
+it('fires the triggerFocus method', () => {
+  const wrapper = mount(
+    <StyleRoot>
+      <div>
+        <PhoneNumberField
+          id="test_id"
+          name="test"
+          floatingLabelText="Phone Number"
+          hintText="(555) 555-555"
+        />
+      </div>
+    </StyleRoot>
+  )
+
+  wrapper.find('PhoneNumberField').first().instance().triggerFocus()
+  setTimeout(() => {
+    expect(wrapper.children().matchesElement(document.activeElement)).toEqual(true, 'The input was not focused')
+  }, 10)
 })
 
 it('fires the onBlur prop', () => {

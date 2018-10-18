@@ -133,13 +133,13 @@ class PhoneNumberField extends React.Component {
     isValid            : PropTypes.bool,
     /** onFocus callback */
     onFocus            : PropTypes.func,
-    /** onChange callback 
-     * 
+    /** onChange callback
+     *
      * @param {SyntheticEvent} event The react `SyntheticEvent`
      * @param {String} value The value from the input with `(`, `)`, space, and `-` characters removed
      * @param {String} rawValue The raw value from the input
     */
-    
+
     onChange           : PropTypes.func,
     /** onBlur callback */
     onBlur             : PropTypes.func,
@@ -218,6 +218,8 @@ class PhoneNumberField extends React.Component {
   handleKeyDown = (e) => {
     this.props.onKeyDown(e)
   }
+
+  triggerFocus = () => this.input.focus()
 
   render() {
     const {
@@ -326,4 +328,3 @@ class PhoneNumberField extends React.Component {
 }
 
 export default PhoneNumberField
-

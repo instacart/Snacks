@@ -184,6 +184,8 @@ class TextField extends React.Component {
     this.props.onKeyDown(e)
   }
 
+  triggerFocus = () => this.input.focus()
+
   render() {
     const {
       floatingLabelText,
