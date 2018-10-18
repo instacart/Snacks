@@ -21,6 +21,8 @@ class DateField extends React.Component {
     return this.input.getValue()
   }
 
+  triggerFocus = () => this.input.wrapped.FormComponent.triggerFocus()
+
   render() {
     return (
       <MaskedTextField
