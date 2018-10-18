@@ -89,11 +89,13 @@ it('wont fire the onSubmit prop when not valid', () => {
   expect(onSubmit.calledOnce).toBe(false)
 })
 
-it('wont fire the onSubmit prop when not valid', () => {
+it('fire the onValidationError prop when not valid', () => {
   const onSubmit = spy()
+  const onValidationError = spy()
   const wrapper = mount(
     <Form
       onSubmit={onSubmit}
+      onValidationError={onValidationError}
     >
       <div style={{width: '335px'}}>
         <div style={{marginBottom: '10px'}}>
@@ -119,5 +121,5 @@ it('wont fire the onSubmit prop when not valid', () => {
   stub(wrapper.instance(), 'updateModel').callsFake(() => {})
 
   wrapper.find(Button).simulate('submit')
-  expect(onSubmit.calledOnce).toBe(false)
+  expect(onValidationError.calledOnce).toBe(true)
 })
