@@ -22,6 +22,7 @@ import SetStyles from './styles/SetStyles'
 import spacing from './styles/spacing'
 import PhoneNumberField from './components/Forms/PhoneNumberField'
 import DateField from './components/Forms/DateField'
+import MaskedTextField from './components/Forms/MaskedTextField'
 import TextField from './components/Forms/TextField'
 import Select from './components/Forms/Select'
 import ServerError from './components/Forms/ServerError'
@@ -70,6 +71,7 @@ export {
   FloatingLabel,
   PhoneNumberField,
   DateField,
+  MaskedTextField,
   ServerError,
   TextField,
   Select,

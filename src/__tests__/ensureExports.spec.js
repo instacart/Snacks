@@ -21,6 +21,8 @@ const expectedExports = [
   'FormComponent',
   'FloatingLabel',
   'PhoneNumberField',
+  'DateField',
+  'MaskedTextField',
   'ServerError',
   'TextField',
   'Select',
