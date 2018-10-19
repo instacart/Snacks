@@ -81,4 +81,12 @@ describe('Radio', () => {
     wrapper.find('input').simulate('change')
     expect(onChange.calledOnce).toBe(true)
   })
+
+  it('correctly forwards refs', () => {
+    const ref = React.createRef()
+
+    renderer.create(<Radio id={1} ref={ref} />, { createNodeMock: element => element })
+
+    expect(ref.current.type).toBe('input')
+  })
 })

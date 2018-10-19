@@ -9,6 +9,8 @@ const BKG_SVG_SPRITES = {
   selected:   bkgSvgSelected,
 }
 
+console.log('snacks @ 5:15')
+
 const Checkbox = React.forwardRef((props, ref) => {
   return (
     <RadioCheckboxBase

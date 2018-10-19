@@ -81,11 +81,13 @@ describe('Checkbox', () => {
     expect(onChange.calledOnce).toBe(true)
   })
 
-  it('correct forwards refs', () => {
+  it('correctly forwards refs', () => {
     const ref = React.createRef()
-    mount(<Checkbox id={1} isSelected={true} ref={ref} />)
-    
-    expect(ref.current.toBeInstanceOf(HTMLInputElement))
-    expect(ref.props.selected === true)
+
+    // Enzyme does not currently support forwarded refs. react-test-renderer does, but you must specify createNodeMock.
+    // https://github.com/airbnb/enzyme/issues/1852
+    renderer.create(<Checkbox id={1} ref={ref} />, { createNodeMock: element => element })
+
+    expect(ref.current.type).toBe('input')
   })
 })
