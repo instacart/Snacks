@@ -1,8 +1,5 @@
 version: "2" # required to adjust maintainability checks
 checks:
-  argument-count:
-    config:
-      threshold: 3
   file-lines:
     config:
       threshold: 500
@@ -23,4 +20,3 @@ exclude_patterns:
   - "*.spec.js"
   - "**/*.spec.js"
   - "**/tmp/**"
-  
