@@ -9,3 +9,17 @@ checks:
   method-lines:
     config:
       threshold: 75
+  exclude_patterns:
+    - "dist/"
+    - "**/node_modules/"
+    - "**/spec/"
+    - "**/test/"
+    - "**/__spec__/"
+    - "**/__spec__/**"
+    - "**/__tests__/"
+    - "**/__tests__/**"
+    - "**/tests/"
+    - "Tests/"
+    - "*.spec.js"
+    - "**/*.spec.js"
+    - "**/tmp/**"
