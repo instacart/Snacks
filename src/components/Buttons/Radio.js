@@ -14,7 +14,7 @@ const Radio = React.forwardRef((props, ref) => {
     <RadioCheckboxBase
       btnType='radio'
       bkgSvgSprites={BKG_SVG_SPRITES}
-      forwardRef={ref}
+      forwardedRef={ref}
       {...props}
     />
   )

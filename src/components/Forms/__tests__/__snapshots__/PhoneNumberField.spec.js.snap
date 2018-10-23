@@ -8,7 +8,7 @@ exports[`renders correctly 1`] = `
     <div
       key=".0"
     >
-      <PhoneNumberField
+      <ForwardRef
         floatingLabelText="Phone Number"
         hintText="(555) 555-555"
         id="test_id"
@@ -43,7 +43,7 @@ exports[`renders correctly 1`] = `
         >
           <withTheme(FormComponent)
             floatingLabelText="Phone Number"
-            forwardRef={null}
+            forwardedRef={null}
             getValue={[Function]}
             hintText="(555) 555-555"
             id="test_id"
@@ -71,7 +71,7 @@ exports[`renders correctly 1`] = `
           >
             <FormComponent
               floatingLabelText="Phone Number"
-              forwardRef={null}
+              forwardedRef={null}
               getValue={[Function]}
               hintText="(555) 555-555"
               id="test_id"
@@ -115,7 +115,7 @@ exports[`renders correctly 1`] = `
                 defaultValue={null}
                 disabled={false}
                 floatingLabelText="Phone Number"
-                forwardRef={null}
+                forwardedRef={null}
                 getValue={[Function]}
                 hasError={false}
                 hintText="(555) 555-555"
@@ -393,7 +393,7 @@ exports[`renders correctly 1`] = `
             </FormComponent>
           </withTheme(FormComponent)>
         </ForwardRef>
-      </PhoneNumberField>
+      </ForwardRef>
     </div>
     <StyleSheet
       key=".1"
@@ -418,7 +418,7 @@ exports[`renders correctly with focus state 1`] = `
     <div
       key=".0"
     >
-      <PhoneNumberField
+      <ForwardRef
         floatingLabelText="Phone Number"
         hintText="(555) 555-555"
         id="test_id"
@@ -453,7 +453,7 @@ exports[`renders correctly with focus state 1`] = `
         >
           <withTheme(FormComponent)
             floatingLabelText="Phone Number"
-            forwardRef={null}
+            forwardedRef={null}
             getValue={[Function]}
             hintText="(555) 555-555"
             id="test_id"
@@ -481,7 +481,7 @@ exports[`renders correctly with focus state 1`] = `
           >
             <FormComponent
               floatingLabelText="Phone Number"
-              forwardRef={null}
+              forwardedRef={null}
               getValue={[Function]}
               hintText="(555) 555-555"
               id="test_id"
@@ -525,7 +525,7 @@ exports[`renders correctly with focus state 1`] = `
                 defaultValue={null}
                 disabled={false}
                 floatingLabelText="Phone Number"
-                forwardRef={null}
+                forwardedRef={null}
                 getValue={[Function]}
                 hasError={false}
                 hintText="(555) 555-555"
@@ -806,7 +806,7 @@ exports[`renders correctly with focus state 1`] = `
             </FormComponent>
           </withTheme(FormComponent)>
         </ForwardRef>
-      </PhoneNumberField>
+      </ForwardRef>
     </div>
     <StyleSheet
       key=".1"
@@ -831,7 +831,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
     <div
       key=".0"
     >
-      <PhoneNumberField
+      <ForwardRef
         floatingLabelText="Phone Number"
         hintText="(555) 555-555"
         id="test_id"
@@ -894,7 +894,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
         >
           <withTheme(FormComponent)
             floatingLabelText="Phone Number"
-            forwardRef={null}
+            forwardedRef={null}
             getValue={[Function]}
             hintText="(555) 555-555"
             id="test_id"
@@ -936,7 +936,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
           >
             <FormComponent
               floatingLabelText="Phone Number"
-              forwardRef={null}
+              forwardedRef={null}
               getValue={[Function]}
               hintText="(555) 555-555"
               id="test_id"
@@ -981,7 +981,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                 defaultValue={null}
                 disabled={false}
                 floatingLabelText="Phone Number"
-                forwardRef={null}
+                forwardedRef={null}
                 getValue={[Function]}
                 hasError={false}
                 hintText="(555) 555-555"
@@ -1259,7 +1259,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
             </FormComponent>
           </withTheme(FormComponent)>
         </ForwardRef>
-      </PhoneNumberField>
+      </ForwardRef>
     </div>
     <StyleSheet
       key=".1"

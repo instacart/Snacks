@@ -92,7 +92,7 @@ class MenuItem extends React.Component {
       PropTypes.number,
       PropTypes.bool
     ]).isRequired,
-    forwardRef      : PropTypes.funcion,
+    forwardedRef      : PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   }
 
   static defaultProps = {
@@ -189,10 +189,10 @@ class MenuItem extends React.Component {
       style,
       tabIndex,
       useTabIndex,
-      forwardRef
+      forwardedRef
     } = this.props
 
-    this.menuItem = forwardRef || React.createRef()
+    this.menuItem = forwardedRef || React.createRef()
 
     return (
       <div
@@ -214,4 +214,4 @@ class MenuItem extends React.Component {
   }
 }
 
-export default React.forwardRef((props, ref) => <MenuItem {...props} forwardRef={ref} />)
+export default React.forwardRef((props, ref) => <MenuItem {...props} forwardedRef={ref} />)

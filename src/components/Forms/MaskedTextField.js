@@ -162,7 +162,7 @@ class MaskedTextField extends React.Component {
     value              : PropTypes.string,
     /** Snacks theme attributes provided by `Themer` */
     snacksTheme        : themePropTypes,
-    forwardRef         : PropTypes.func,
+    forwardedRef         : PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   }
 
   static defaultProps = {
@@ -247,7 +247,7 @@ class MaskedTextField extends React.Component {
       helperText,
       autoComplete,
       snacksTheme,
-      forwardRef
+      forwardedRef
     } = this.props
 
     const {
@@ -255,7 +255,7 @@ class MaskedTextField extends React.Component {
       isFocused
     } = this.state
 
-    this.input = forwardRef || React.createRef()
+    this.input = forwardedRef || React.createRef()
 
     return (
       <div
@@ -337,5 +337,4 @@ class MaskedTextField extends React.Component {
   }
 }
 
-export default React.forwardRef((props, ref) => <MaskedTextField {...props} forwardRef={ref} />)
-
+export default React.forwardRef((props, ref) => <MaskedTextField {...props} forwardedRef={ref} />)

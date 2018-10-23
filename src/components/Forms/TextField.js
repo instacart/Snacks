@@ -124,7 +124,7 @@ class TextField extends React.Component {
     value              : PropTypes.string,
     /** Snacks theme attributes provided by `Themer` */
     snacksTheme        : themePropTypes,
-    forwardRef         : PropTypes.func,
+    forwardedRef         : PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   }
 
   static defaultProps = {
@@ -207,7 +207,7 @@ class TextField extends React.Component {
       helperText,
       autoComplete,
       snacksTheme,
-      forwardRef
+      forwardedRef
     } = this.props
 
     const {
@@ -220,7 +220,7 @@ class TextField extends React.Component {
     const inputId = id
     const showHintText = hintText && !hasValue && isFocused
 
-    this.input = forwardRef || React.createRef()
+    this.input = forwardedRef || React.createRef()
 
     return (
       <div
@@ -296,4 +296,4 @@ class TextField extends React.Component {
   }
 }
 
-export default React.forwardRef((props, ref) => <TextField {...props} forwardRef={ref} />)
+export default React.forwardRef((props, ref) => <TextField {...props} forwardedRef={ref} />)

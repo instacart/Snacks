@@ -32,7 +32,7 @@ exports[`renders correctly 1`] = `
       >
         <withTheme(FormComponent)
           floatingLabelText="SSN"
-          forwardRef={null}
+          forwardedRef={null}
           getValue={[Function]}
           id="test_id"
           mask={
@@ -55,7 +55,7 @@ exports[`renders correctly 1`] = `
         >
           <FormComponent
             floatingLabelText="SSN"
-            forwardRef={null}
+            forwardedRef={null}
             getValue={[Function]}
             id="test_id"
             mask={
@@ -94,7 +94,7 @@ exports[`renders correctly 1`] = `
               defaultValue={null}
               disabled={false}
               floatingLabelText="SSN"
-              forwardRef={null}
+              forwardedRef={null}
               getValue={[Function]}
               hasError={false}
               id="test_id"
@@ -410,7 +410,7 @@ exports[`renders correctly with focus state 1`] = `
       >
         <withTheme(FormComponent)
           floatingLabelText="SSN"
-          forwardRef={null}
+          forwardedRef={null}
           getValue={[Function]}
           id="test_id"
           mask={
@@ -433,7 +433,7 @@ exports[`renders correctly with focus state 1`] = `
         >
           <FormComponent
             floatingLabelText="SSN"
-            forwardRef={null}
+            forwardedRef={null}
             getValue={[Function]}
             id="test_id"
             mask={
@@ -472,7 +472,7 @@ exports[`renders correctly with focus state 1`] = `
               defaultValue={null}
               disabled={false}
               floatingLabelText="SSN"
-              forwardRef={null}
+              forwardedRef={null}
               getValue={[Function]}
               hasError={false}
               id="test_id"
@@ -805,7 +805,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
       >
         <withTheme(FormComponent)
           floatingLabelText="SSN"
-          forwardRef={null}
+          forwardedRef={null}
           getValue={[Function]}
           id="test_id"
           mask={
@@ -842,7 +842,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
         >
           <FormComponent
             floatingLabelText="SSN"
-            forwardRef={null}
+            forwardedRef={null}
             getValue={[Function]}
             id="test_id"
             mask={
@@ -882,7 +882,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
               defaultValue={null}
               disabled={false}
               floatingLabelText="SSN"
-              forwardRef={null}
+              forwardedRef={null}
               getValue={[Function]}
               hasError={false}
               id="test_id"

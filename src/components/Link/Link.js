@@ -31,7 +31,7 @@ const Link = props => {
       onClick={e => {
         props.onClick(e, props)
       }}
-      ref={props.forwardRef}
+      ref={props.forwardedRef}
       {...props.elementAttributes}
     >
       {props.children}
@@ -58,7 +58,7 @@ Link.propTypes = {
   /** Snacks theme attributes provided by `Themer` */
   snacksTheme: themePropTypes,
 
-  forwardRef: PropTypes.func,
+  forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
 }
 
 Link.defaultProps = {
@@ -68,4 +68,4 @@ Link.defaultProps = {
 
 const LinkWithHocs = withTheme(Radium(Link))
 
-export default React.forwardRef((props, ref) => <LinkWithHocs {...props} forwardRef={ref} />)
+export default React.forwardRef((props, ref) => <LinkWithHocs {...props} forwardedRef={ref} />)

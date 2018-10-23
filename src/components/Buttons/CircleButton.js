@@ -35,7 +35,7 @@ const CircleButton = props => {
 
   return (
     <button
-      ref={props.forwardRef}
+      ref={props.forwardedRef}
       onClick={e => {
         if (props.onClick) {
           e.preventDefault()
@@ -83,9 +83,9 @@ CircleButton.propTypes = {
     PropTypes.array
   ]),
 
-  forwardRef: PropTypes.func
+  forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
 }
 
 const CircleButtonWithHocs = withTheme(Radium(CircleButton))
 
-export default React.forwardRef((props, ref) => <CircleButtonWithHocs {...props} forwardRef={ref} />)
+export default React.forwardRef((props, ref) => <CircleButtonWithHocs {...props} forwardedRef={ref} />)

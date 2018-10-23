@@ -79,7 +79,7 @@ class RadioCheckboxBase extends React.PureComponent {
     snacksTheme   : themePropTypes,
     value         : PropTypes.string,
     wrapEl        : PropTypes.string,
-    forwardRef  : PropTypes.func,
+    forwardedRef    : PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   }
 
   static defaultProps = {
@@ -129,7 +129,7 @@ class RadioCheckboxBase extends React.PureComponent {
           checked={isSelected}
           disabled={isDisabled}
           aria-label={aria.label}
-          ref={this.props.forwardRef}
+          ref={this.props.forwardedRef}
         />
       </div>
     )

@@ -26,6 +26,4 @@ const PhoneNumberField = React.forwardRef((props, ref) =>
   />
 )
 
-PhoneNumberField.displayName = 'PhoneNumberField'
-
 export default PhoneNumberField
