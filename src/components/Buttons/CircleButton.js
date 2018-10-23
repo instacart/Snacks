@@ -83,7 +83,7 @@ CircleButton.propTypes = {
     PropTypes.array
   ]),
 
-  forwardRef: PropTypes.object
+  forwardRef: PropTypes.func
 }
 
 const CircleButtonWithHocs = withTheme(Radium(CircleButton))

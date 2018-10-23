@@ -124,7 +124,7 @@ class TextField extends React.Component {
     value              : PropTypes.string,
     /** Snacks theme attributes provided by `Themer` */
     snacksTheme        : themePropTypes,
-    forwardRef         : PropTypes.object,
+    forwardRef         : PropTypes.func,
   }
 
   static defaultProps = {
@@ -184,8 +184,6 @@ class TextField extends React.Component {
   handleKeyDown = (e) => {
     this.props.onKeyDown(e)
   }
-
-  triggerFocus = () => this.input.current.focus()
 
   render() {
     const {

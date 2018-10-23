@@ -92,7 +92,7 @@ class MenuItem extends React.Component {
       PropTypes.number,
       PropTypes.bool
     ]).isRequired,
-    forwardRef      : PropTypes.object,
+    forwardRef      : PropTypes.funcion,
   }
 
   static defaultProps = {

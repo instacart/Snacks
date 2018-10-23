@@ -58,7 +58,7 @@ Link.propTypes = {
   /** Snacks theme attributes provided by `Themer` */
   snacksTheme: themePropTypes,
 
-  forwardRef: PropTypes.object,
+  forwardRef: PropTypes.func,
 }
 
 Link.defaultProps = {

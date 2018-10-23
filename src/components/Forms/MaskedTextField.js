@@ -162,7 +162,7 @@ class MaskedTextField extends React.Component {
     value              : PropTypes.string,
     /** Snacks theme attributes provided by `Themer` */
     snacksTheme        : themePropTypes,
-    forwardRef         : PropTypes.object,
+    forwardRef         : PropTypes.func,
   }
 
   static defaultProps = {
@@ -196,8 +196,6 @@ class MaskedTextField extends React.Component {
 
     return this.props.getValue(this.input.current.value)
   }
-
-  triggerFocus = () => this.input.current.focus()
 
   handleInputChange = (e) => {
     const { onChange } = this.props

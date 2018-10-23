@@ -95,28 +95,6 @@ it('fires the onFocus prop', () => {
   expect(onFocus.mock.calls.length).toBe(1)
 })
 
-it('fires the triggerFocus method', () => {
-  const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <MaskedTextField
-          id="test_id"
-          name="test"
-          mask={mask}
-          maskHint={maskHint}
-          getValue={getValue}
-          floatingLabelText="SSN"
-        />
-      </div>
-    </StyleRoot>
-  )
-
-  wrapper.find('MaskedTextField').first().instance().triggerFocus()
-  setTimeout(() => {
-    expect(wrapper.children().matchesElement(document.activeElement)).toEqual(true, 'The input was not focused')
-  }, 10)
-})
-
 it('fires the onBlur prop', () => {
   const onBlur = jest.fn()
   const wrapper = mount(

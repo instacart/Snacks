@@ -46,15 +46,6 @@ it('fires the onFocus prop', () => {
   expect(onFocus.calledOnce).toBe(true)
 })
 
-it('fires the triggerFocus method', () => {
-  const wrapper = mount(defaultTextField)
-
-  wrapper.find('TextField').first().instance().triggerFocus()
-  setTimeout(() => {
-    expect(wrapper.children().matchesElement(document.activeElement)).toEqual(true, 'The input was not focused')
-  }, 10)
-})
-
 it('fires the onBlur prop', () => {
   const onBlur = spy()
   const wrapper = mount(
