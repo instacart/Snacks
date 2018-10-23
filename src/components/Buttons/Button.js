@@ -214,6 +214,7 @@ const Button = props => {
   const ElementType = props.href ? 'a' : 'button'
 
   const finalProps = {
+    ref: props.forwardRef,
     disabled: props.disabled,
     tabIndex: props.tabIndex,
     type: props.type,
@@ -323,7 +324,9 @@ Button.propTypes = {
   elementAttributes: PropTypes.object,
 
   /** Snacks theme attributes provided by `Themer` */
-  snacksTheme: themePropTypes
+  snacksTheme: themePropTypes,
+
+  forwardRef: PropTypes.object,
 }
 
 Button.defaultProps = {
@@ -338,4 +341,6 @@ Button.defaultProps = {
   elementAttributes: {}
 }
 
-export default withTheme(Radium(Button))
+const ButtonWithHocs = withTheme(Radium(Button))
+
+export default React.forwardRef((props, ref) => <ButtonWithHocs {...props} forwardRef={ref} />)

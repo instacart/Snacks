@@ -119,3 +119,11 @@ it('does not call onClick when disabled prop is true', () => {
   button.simulate('click')
   expect(onClick.calledOnce).toBeFalsy()
 })
+
+it('correctly forwards refs', () => {
+  const ref = React.createRef()
+
+  renderer.create(<StyleRoot><CircleButton ref={ref} /></StyleRoot>, { createNodeMock: element => element })
+
+  expect(ref.current.type).toBe('button')
+})

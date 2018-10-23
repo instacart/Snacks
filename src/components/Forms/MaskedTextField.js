@@ -161,7 +161,8 @@ class MaskedTextField extends React.Component {
     /** Value will make TextField a controlled component  */
     value              : PropTypes.string,
     /** Snacks theme attributes provided by `Themer` */
-    snacksTheme        : themePropTypes
+    snacksTheme        : themePropTypes,
+    forwardRef         : PropTypes.object,
   }
 
   static defaultProps = {
@@ -189,14 +190,14 @@ class MaskedTextField extends React.Component {
   }
 
   getValue = () => {
-    if (!this.input) {
+    if (!this.input.current) {
       return null
     }
 
-    return this.props.getValue(this.input.value)
+    return this.props.getValue(this.input.current.value)
   }
 
-  triggerFocus = () => this.input.focus()
+  triggerFocus = () => this.input.current.focus()
 
   handleInputChange = (e) => {
     const { onChange } = this.props
@@ -247,13 +248,16 @@ class MaskedTextField extends React.Component {
       value,
       helperText,
       autoComplete,
-      snacksTheme
+      snacksTheme,
+      forwardRef
     } = this.props
 
     const {
       hasValue,
       isFocused
     } = this.state
+
+    this.input = forwardRef || React.createRef()
 
     return (
       <div
@@ -307,20 +311,19 @@ class MaskedTextField extends React.Component {
             disabled={disabled}
             keepCharPositions={true}
             type={this.props.type}
-            render={(ref, props) => (
-              <input
-                ref={(input) => {
-                  this.input = input
-                  ref(input)}
-                }
-                style={getInputSyles({
-                  props: this.props,
-                  theme: snacksTheme,
-                  isFocused
-                })}
-                {...props}
-              />
-            )}
+            render={(ref, props) => {
+              ref(this.input)
+              return(
+                <input
+                  ref={this.input}
+                  style={getInputSyles({
+                    props: this.props,
+                    theme: snacksTheme,
+                    isFocused
+                  })}
+                  {...props}
+                />
+              )}}
           />
         </div>
 
@@ -336,5 +339,5 @@ class MaskedTextField extends React.Component {
   }
 }
 
-export default MaskedTextField
+export default React.forwardRef((props, ref) => <MaskedTextField {...props} forwardRef={ref} />)
 

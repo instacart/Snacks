@@ -80,26 +80,6 @@ it('fires the onFocus prop', () => {
   expect(onFocus.mock.calls.length).toBe(1)
 })
 
-it('fires the triggerFocus method', () => {
-  const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <PhoneNumberField
-          id="test_id"
-          name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
-        />
-      </div>
-    </StyleRoot>
-  )
-
-  wrapper.find('PhoneNumberField').first().instance().triggerFocus()
-  setTimeout(() => {
-    expect(wrapper.children().matchesElement(document.activeElement)).toEqual(true, 'The input was not focused')
-  }, 10)
-})
-
 it('fires the onBlur prop', () => {
   const onBlur = jest.fn()
   const wrapper = mount(
@@ -182,4 +162,23 @@ it('uses a custom theme for all child components if one is provided', () => {
   )
 
   expect(toJson(wrapper)).toMatchSnapshot()
+})
+
+it('correctly forwards refs', () => {
+  const ref = React.createRef()
+
+  renderer.create(
+    <StyleRoot>
+      <div>
+        <PhoneNumberField
+          ref={ref}
+          id="test_id"
+          name="test"
+          floatingLabelText="Phone Number"
+          hintText="(555) 555-555"
+        />
+      </div>
+    </StyleRoot>, { createNodeMock: element => element })
+
+  expect(ref.current.type).toBe('input')
 })

@@ -149,4 +149,12 @@ describe('Button', () => {
     )
     expect(tree).toMatchSnapshot()
   })
+
+  it('correctly forwards refs', () => {
+    const ref = React.createRef()
+
+    renderer.create(<StyleRoot><Button ref={ref} /></StyleRoot>, { createNodeMock: element => element })
+
+    expect(ref.current.type).toBe('button')
+  })
 })

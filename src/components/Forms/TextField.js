@@ -123,7 +123,8 @@ class TextField extends React.Component {
     /** Value will make TextField a controlled component  */
     value              : PropTypes.string,
     /** Snacks theme attributes provided by `Themer` */
-    snacksTheme        : themePropTypes
+    snacksTheme        : themePropTypes,
+    forwardRef         : PropTypes.object,
   }
 
   static defaultProps = {
@@ -149,11 +150,11 @@ class TextField extends React.Component {
   }
 
   getValue = () => {
-    if (!this.input) {
+    if (!this.input.current) {
       return null
     }
 
-    return this.input.value
+    return this.input.current.value
   }
 
   handleInputChange = (e) => {
@@ -184,7 +185,7 @@ class TextField extends React.Component {
     this.props.onKeyDown(e)
   }
 
-  triggerFocus = () => this.input.focus()
+  triggerFocus = () => this.input.current.focus()
 
   render() {
     const {
@@ -207,7 +208,8 @@ class TextField extends React.Component {
       value,
       helperText,
       autoComplete,
-      snacksTheme
+      snacksTheme,
+      forwardRef
     } = this.props
 
     const {
@@ -219,6 +221,8 @@ class TextField extends React.Component {
 
     const inputId = id
     const showHintText = hintText && !hasValue && isFocused
+
+    this.input = forwardRef || React.createRef()
 
     return (
       <div
@@ -256,9 +260,9 @@ class TextField extends React.Component {
           }
 
           <input
+            ref={this.input}
             value={value}
             id={inputId}
-            ref={ (node) => {this.input = node} }
             defaultValue={value !== undefined ? undefined : defaultValue}
             disabled={disabled}
             name={name}
@@ -294,4 +298,4 @@ class TextField extends React.Component {
   }
 }
 
-export default TextField
+export default React.forwardRef((props, ref) => <TextField {...props} forwardRef={ref} />)

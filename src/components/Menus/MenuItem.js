@@ -92,6 +92,7 @@ class MenuItem extends React.Component {
       PropTypes.number,
       PropTypes.bool
     ]).isRequired,
+    forwardRef      : PropTypes.object,
   }
 
   static defaultProps = {
@@ -99,7 +100,7 @@ class MenuItem extends React.Component {
     role: 'menuitem',
     useTabIndex: true,
     focus: false,
-    preventDefault: true
+    preventDefault: true,
   }
 
   componentDidUpdate(prevProps) {
@@ -107,7 +108,7 @@ class MenuItem extends React.Component {
       setTimeout(() => {
         // Checking the ref exists in case this component
         // unmounts before the callback runs.
-        this.menuItem && this.menuItem.focus()
+        this.menuItem.current && this.menuItem.current.focus()
       }, 0)
     }
   }
@@ -187,12 +188,15 @@ class MenuItem extends React.Component {
       role,
       style,
       tabIndex,
-      useTabIndex
+      useTabIndex,
+      forwardRef
     } = this.props
+
+    this.menuItem = forwardRef || React.createRef()
 
     return (
       <div
-        ref={(node) => this.menuItem = node}
+        ref={this.menuItem}
         role={role}
         style={[
           styles.root,
@@ -210,4 +214,4 @@ class MenuItem extends React.Component {
   }
 }
 
-export default MenuItem
+export default React.forwardRef((props, ref) => <MenuItem {...props} forwardRef={ref} />)

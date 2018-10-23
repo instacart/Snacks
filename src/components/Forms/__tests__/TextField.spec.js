@@ -132,3 +132,23 @@ it('uses a custom theme for all child components if one is provided', () => {
 
   expect(tree).toMatchSnapshot()
 })
+
+it('correctly forwards refs', () => {
+  const ref = React.createRef()
+
+  renderer.create(
+    <StyleRoot>
+      <div>
+        <TextField
+          ref={ref}
+          id="test_id"
+          name="test"
+          type="email"
+          floatingLabelText="Email"
+          hintText="Enter your email address"
+        />
+      </div>
+    </StyleRoot>, { createNodeMock: element => element })
+
+  expect(ref.current.type).toBe('input')
+})

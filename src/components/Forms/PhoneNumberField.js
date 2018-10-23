@@ -15,34 +15,17 @@ const inputMasks = {
 
 const getValue = (value) => value.replace(phoneRegex, '')
 
-class PhoneNumberField extends React.Component {
+const PhoneNumberField = React.forwardRef((props, ref) =>
+  <MaskedTextField
+    type='tel'
+    mask={inputMasks.US.mask}
+    maskHint={inputMasks.US.hint}
+    getValue={getValue}
+    ref={ref}
+    {...props}
+  />
+)
 
-  static propTypes = {}
-
-  static defaultProps = {}
-
-  getValue = () => {
-    if (!this.input) {
-      return null
-    }
-
-    return getValue(this.input.getValue())
-  }
-
-  triggerFocus = () => this.input.wrapped.FormComponent.triggerFocus()
-
-  render() {
-    return (
-      <MaskedTextField
-        type='tel'
-        mask={inputMasks.US.mask}
-        maskHint={inputMasks.US.hint}
-        getValue={getValue}
-        ref={(ref) => this.input = ref}
-        {...this.props}
-      />
-    )
-  }
-}
+PhoneNumberField.displayName = 'PhoneNumberField'
 
 export default PhoneNumberField

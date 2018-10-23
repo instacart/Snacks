@@ -62,7 +62,7 @@ describe('Link', () => {
   })
 
   it('re-renders when the active theme changes', () => {
-    const wrapper = mount(
+    const wrapper = mount( 
       <StyleRoot>
         <Link elementAttributes={{ 'aria-label': 'foo' }}>HI</Link>
       </StyleRoot>
@@ -82,5 +82,13 @@ describe('Link', () => {
     wrapper.update()
 
     expect(wrapper.find('a').props().style.color).toEqual('#fff')
+  })
+
+  it('correctly forwards refs', () => {
+    const ref = React.createRef()
+
+    renderer.create(<StyleRoot><Link id={1} ref={ref} /></StyleRoot>, { createNodeMock: element => element })
+
+    expect(ref.current.type).toBe('a')
   })
 })
