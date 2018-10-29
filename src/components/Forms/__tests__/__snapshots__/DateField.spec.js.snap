@@ -8,64 +8,58 @@ exports[`renders correctly 1`] = `
     <div
       key=".0"
     >
-      <PhoneNumberField
-        floatingLabelText="Phone Number"
-        hintText="(555) 555-555"
+      <DateField
+        floatingLabelText="Date of Birth"
+        hintText="MM/DD/YYYY"
         id="test_id"
         name="test"
       >
         <withTheme(FormComponent)
-          floatingLabelText="Phone Number"
+          floatingLabelText="Date of Birth"
           getValue={[Function]}
-          hintText="(555) 555-555"
+          hintText="MM/DD/YYYY"
           id="test_id"
           mask={
             Array [
-              "(",
-              /\\[1-9\\]/,
               /\\\\d/,
               /\\\\d/,
-              ")",
-              " ",
+              "/",
               /\\\\d/,
               /\\\\d/,
-              /\\\\d/,
-              "-",
+              "/",
               /\\\\d/,
               /\\\\d/,
               /\\\\d/,
               /\\\\d/,
             ]
           }
-          maskHint="(555) 555-555"
+          maskHint="MM/DD/YYYY"
           name="test"
+          pipe={[Function]}
           type="tel"
         >
           <FormComponent
-            floatingLabelText="Phone Number"
+            floatingLabelText="Date of Birth"
             getValue={[Function]}
-            hintText="(555) 555-555"
+            hintText="MM/DD/YYYY"
             id="test_id"
             mask={
               Array [
-                "(",
-                /\\[1-9\\]/,
                 /\\\\d/,
                 /\\\\d/,
-                ")",
-                " ",
+                "/",
                 /\\\\d/,
                 /\\\\d/,
-                /\\\\d/,
-                "-",
+                "/",
                 /\\\\d/,
                 /\\\\d/,
                 /\\\\d/,
                 /\\\\d/,
               ]
             }
-            maskHint="(555) 555-555"
+            maskHint="MM/DD/YYYY"
             name="test"
+            pipe={[Function]}
             snacksTheme={
               Object {
                 "colors": Object {
@@ -85,36 +79,33 @@ exports[`renders correctly 1`] = `
               autoComplete="on"
               defaultValue={null}
               disabled={false}
-              floatingLabelText="Phone Number"
+              floatingLabelText="Date of Birth"
               getValue={[Function]}
               hasError={false}
-              hintText="(555) 555-555"
+              hintText="MM/DD/YYYY"
               id="test_id"
               isValid={true}
               mask={
                 Array [
-                  "(",
-                  /\\[1-9\\]/,
                   /\\\\d/,
                   /\\\\d/,
-                  ")",
-                  " ",
+                  "/",
                   /\\\\d/,
                   /\\\\d/,
-                  /\\\\d/,
-                  "-",
+                  "/",
                   /\\\\d/,
                   /\\\\d/,
                   /\\\\d/,
                   /\\\\d/,
                 ]
               }
-              maskHint="(555) 555-555"
+              maskHint="MM/DD/YYYY"
               name="test"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
               onKeyDown={[Function]}
+              pipe={[Function]}
               serverError={null}
               snacksTheme={
                 Object {
@@ -176,7 +167,7 @@ exports[`renders correctly 1`] = `
                         "pointerEvents": "none",
                       }
                     }
-                    text="Phone Number"
+                    text="Date of Birth"
                   >
                     <FloatingLabel
                       disabled={false}
@@ -201,7 +192,7 @@ exports[`renders correctly 1`] = `
                           "pointerEvents": "none",
                         }
                       }
-                      text="Phone Number"
+                      text="Date of Birth"
                     >
                       <label
                         data-radium={true}
@@ -225,14 +216,14 @@ exports[`renders correctly 1`] = `
                           }
                         }
                       >
-                        Phone Number
+                        Date of Birth
                       </label>
                     </FloatingLabel>
                   </withTheme(RadiumEnhancer)>
                   <TextFieldHint
                     disabled={false}
                     key=".1"
-                    text="(555) 555-555"
+                    text="MM/DD/YYYY"
                   >
                     <div
                       data-radium={true}
@@ -251,7 +242,7 @@ exports[`renders correctly 1`] = `
                         }
                       }
                     >
-                      (555) 555-555
+                      MM/DD/YYYY
                     </div>
                   </TextFieldHint>
                   <t
@@ -265,16 +256,12 @@ exports[`renders correctly 1`] = `
                     key=".2"
                     mask={
                       Array [
-                        "(",
-                        /\\[1-9\\]/,
                         /\\\\d/,
                         /\\\\d/,
-                        ")",
-                        " ",
+                        "/",
                         /\\\\d/,
                         /\\\\d/,
-                        /\\\\d/,
-                        "-",
+                        "/",
                         /\\\\d/,
                         /\\\\d/,
                         /\\\\d/,
@@ -286,6 +273,7 @@ exports[`renders correctly 1`] = `
                     onChange={[Function]}
                     onFocus={[Function]}
                     onKeyDown={[Function]}
+                    pipe={[Function]}
                     placeholder=""
                     render={[Function]}
                     type="tel"
@@ -362,7 +350,7 @@ exports[`renders correctly 1`] = `
             </MaskedTextField>
           </FormComponent>
         </withTheme(FormComponent)>
-      </PhoneNumberField>
+      </DateField>
     </div>
     <StyleSheet
       key=".1"
@@ -387,64 +375,58 @@ exports[`renders correctly with focus state 1`] = `
     <div
       key=".0"
     >
-      <PhoneNumberField
-        floatingLabelText="Phone Number"
-        hintText="(555) 555-555"
+      <DateField
+        floatingLabelText="Date of Birth"
+        hintText="MM/DD/YYYY"
         id="test_id"
         name="test"
       >
         <withTheme(FormComponent)
-          floatingLabelText="Phone Number"
+          floatingLabelText="Date of Birth"
           getValue={[Function]}
-          hintText="(555) 555-555"
+          hintText="MM/DD/YYYY"
           id="test_id"
           mask={
             Array [
-              "(",
-              /\\[1-9\\]/,
               /\\\\d/,
               /\\\\d/,
-              ")",
-              " ",
+              "/",
               /\\\\d/,
               /\\\\d/,
-              /\\\\d/,
-              "-",
+              "/",
               /\\\\d/,
               /\\\\d/,
               /\\\\d/,
               /\\\\d/,
             ]
           }
-          maskHint="(555) 555-555"
+          maskHint="MM/DD/YYYY"
           name="test"
+          pipe={[Function]}
           type="tel"
         >
           <FormComponent
-            floatingLabelText="Phone Number"
+            floatingLabelText="Date of Birth"
             getValue={[Function]}
-            hintText="(555) 555-555"
+            hintText="MM/DD/YYYY"
             id="test_id"
             mask={
               Array [
-                "(",
-                /\\[1-9\\]/,
                 /\\\\d/,
                 /\\\\d/,
-                ")",
-                " ",
+                "/",
                 /\\\\d/,
                 /\\\\d/,
-                /\\\\d/,
-                "-",
+                "/",
                 /\\\\d/,
                 /\\\\d/,
                 /\\\\d/,
                 /\\\\d/,
               ]
             }
-            maskHint="(555) 555-555"
+            maskHint="MM/DD/YYYY"
             name="test"
+            pipe={[Function]}
             snacksTheme={
               Object {
                 "colors": Object {
@@ -464,36 +446,33 @@ exports[`renders correctly with focus state 1`] = `
               autoComplete="on"
               defaultValue={null}
               disabled={false}
-              floatingLabelText="Phone Number"
+              floatingLabelText="Date of Birth"
               getValue={[Function]}
               hasError={false}
-              hintText="(555) 555-555"
+              hintText="MM/DD/YYYY"
               id="test_id"
               isValid={true}
               mask={
                 Array [
-                  "(",
-                  /\\[1-9\\]/,
                   /\\\\d/,
                   /\\\\d/,
-                  ")",
-                  " ",
+                  "/",
                   /\\\\d/,
                   /\\\\d/,
-                  /\\\\d/,
-                  "-",
+                  "/",
                   /\\\\d/,
                   /\\\\d/,
                   /\\\\d/,
                   /\\\\d/,
                 ]
               }
-              maskHint="(555) 555-555"
+              maskHint="MM/DD/YYYY"
               name="test"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
               onKeyDown={[Function]}
+              pipe={[Function]}
               serverError={null}
               snacksTheme={
                 Object {
@@ -556,7 +535,7 @@ exports[`renders correctly with focus state 1`] = `
                         "pointerEvents": "none",
                       }
                     }
-                    text="Phone Number"
+                    text="Date of Birth"
                   >
                     <FloatingLabel
                       disabled={false}
@@ -582,7 +561,7 @@ exports[`renders correctly with focus state 1`] = `
                           "pointerEvents": "none",
                         }
                       }
-                      text="Phone Number"
+                      text="Date of Birth"
                     >
                       <label
                         data-radium={true}
@@ -606,7 +585,7 @@ exports[`renders correctly with focus state 1`] = `
                           }
                         }
                       >
-                        Phone Number
+                        Date of Birth
                       </label>
                     </FloatingLabel>
                   </withTheme(RadiumEnhancer)>
@@ -614,7 +593,7 @@ exports[`renders correctly with focus state 1`] = `
                     disabled={false}
                     key=".1"
                     show={true}
-                    text="(555) 555-555"
+                    text="MM/DD/YYYY"
                   >
                     <div
                       data-radium={true}
@@ -633,7 +612,7 @@ exports[`renders correctly with focus state 1`] = `
                         }
                       }
                     >
-                      (555) 555-555
+                      MM/DD/YYYY
                     </div>
                   </TextFieldHint>
                   <t
@@ -647,16 +626,12 @@ exports[`renders correctly with focus state 1`] = `
                     key=".2"
                     mask={
                       Array [
-                        "(",
-                        /\\[1-9\\]/,
                         /\\\\d/,
                         /\\\\d/,
-                        ")",
-                        " ",
+                        "/",
                         /\\\\d/,
                         /\\\\d/,
-                        /\\\\d/,
-                        "-",
+                        "/",
                         /\\\\d/,
                         /\\\\d/,
                         /\\\\d/,
@@ -668,6 +643,7 @@ exports[`renders correctly with focus state 1`] = `
                     onChange={[Function]}
                     onFocus={[Function]}
                     onKeyDown={[Function]}
+                    pipe={[Function]}
                     placeholder=""
                     render={[Function]}
                     type="tel"
@@ -744,7 +720,7 @@ exports[`renders correctly with focus state 1`] = `
             </MaskedTextField>
           </FormComponent>
         </withTheme(FormComponent)>
-      </PhoneNumberField>
+      </DateField>
     </div>
     <StyleSheet
       key=".1"
@@ -769,9 +745,9 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
     <div
       key=".0"
     >
-      <PhoneNumberField
-        floatingLabelText="Phone Number"
-        hintText="(555) 555-555"
+      <DateField
+        floatingLabelText="Date of Birth"
+        hintText="MM/DD/YYYY"
         id="test_id"
         name="test"
         onChange={[Function]}
@@ -790,31 +766,28 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
         }
       >
         <withTheme(FormComponent)
-          floatingLabelText="Phone Number"
+          floatingLabelText="Date of Birth"
           getValue={[Function]}
-          hintText="(555) 555-555"
+          hintText="MM/DD/YYYY"
           id="test_id"
           mask={
             Array [
-              "(",
-              /\\[1-9\\]/,
               /\\\\d/,
               /\\\\d/,
-              ")",
-              " ",
+              "/",
               /\\\\d/,
               /\\\\d/,
-              /\\\\d/,
-              "-",
+              "/",
               /\\\\d/,
               /\\\\d/,
               /\\\\d/,
               /\\\\d/,
             ]
           }
-          maskHint="(555) 555-555"
+          maskHint="MM/DD/YYYY"
           name="test"
           onChange={[Function]}
+          pipe={[Function]}
           snacksTheme={
             Object {
               "colors": Object {
@@ -831,31 +804,28 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
           type="tel"
         >
           <FormComponent
-            floatingLabelText="Phone Number"
+            floatingLabelText="Date of Birth"
             getValue={[Function]}
-            hintText="(555) 555-555"
+            hintText="MM/DD/YYYY"
             id="test_id"
             mask={
               Array [
-                "(",
-                /\\[1-9\\]/,
                 /\\\\d/,
                 /\\\\d/,
-                ")",
-                " ",
+                "/",
                 /\\\\d/,
                 /\\\\d/,
-                /\\\\d/,
-                "-",
+                "/",
                 /\\\\d/,
                 /\\\\d/,
                 /\\\\d/,
                 /\\\\d/,
               ]
             }
-            maskHint="(555) 555-555"
+            maskHint="MM/DD/YYYY"
             name="test"
             onChange={[Function]}
+            pipe={[Function]}
             snacksTheme={
               Object {
                 "colors": Object {
@@ -875,36 +845,33 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
               autoComplete="on"
               defaultValue={null}
               disabled={false}
-              floatingLabelText="Phone Number"
+              floatingLabelText="Date of Birth"
               getValue={[Function]}
               hasError={false}
-              hintText="(555) 555-555"
+              hintText="MM/DD/YYYY"
               id="test_id"
               isValid={true}
               mask={
                 Array [
-                  "(",
-                  /\\[1-9\\]/,
                   /\\\\d/,
                   /\\\\d/,
-                  ")",
-                  " ",
+                  "/",
                   /\\\\d/,
                   /\\\\d/,
-                  /\\\\d/,
-                  "-",
+                  "/",
                   /\\\\d/,
                   /\\\\d/,
                   /\\\\d/,
                   /\\\\d/,
                 ]
               }
-              maskHint="(555) 555-555"
+              maskHint="MM/DD/YYYY"
               name="test"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
               onKeyDown={[Function]}
+              pipe={[Function]}
               serverError={null}
               snacksTheme={
                 Object {
@@ -966,7 +933,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                         "pointerEvents": "none",
                       }
                     }
-                    text="Phone Number"
+                    text="Date of Birth"
                   >
                     <FloatingLabel
                       disabled={false}
@@ -991,7 +958,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                           "pointerEvents": "none",
                         }
                       }
-                      text="Phone Number"
+                      text="Date of Birth"
                     >
                       <label
                         data-radium={true}
@@ -1015,14 +982,14 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                           }
                         }
                       >
-                        Phone Number
+                        Date of Birth
                       </label>
                     </FloatingLabel>
                   </withTheme(RadiumEnhancer)>
                   <TextFieldHint
                     disabled={false}
                     key=".1"
-                    text="(555) 555-555"
+                    text="MM/DD/YYYY"
                   >
                     <div
                       data-radium={true}
@@ -1041,7 +1008,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                         }
                       }
                     >
-                      (555) 555-555
+                      MM/DD/YYYY
                     </div>
                   </TextFieldHint>
                   <t
@@ -1055,16 +1022,12 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                     key=".2"
                     mask={
                       Array [
-                        "(",
-                        /\\[1-9\\]/,
                         /\\\\d/,
                         /\\\\d/,
-                        ")",
-                        " ",
+                        "/",
                         /\\\\d/,
                         /\\\\d/,
-                        /\\\\d/,
-                        "-",
+                        "/",
                         /\\\\d/,
                         /\\\\d/,
                         /\\\\d/,
@@ -1076,6 +1039,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                     onChange={[Function]}
                     onFocus={[Function]}
                     onKeyDown={[Function]}
+                    pipe={[Function]}
                     placeholder=""
                     render={[Function]}
                     type="tel"
@@ -1152,7 +1116,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
             </MaskedTextField>
           </FormComponent>
         </withTheme(FormComponent)>
-      </PhoneNumberField>
+      </DateField>
     </div>
     <StyleSheet
       key=".1"

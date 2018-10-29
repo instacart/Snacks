@@ -3,17 +3,17 @@ import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
 import toJson        from 'enzyme-to-json'
 import renderer from 'react-test-renderer'
-import PhoneNumberField  from '../PhoneNumberField'
+import DateField  from '../DateField'
 
 it('renders without error', () => {
   const mounted = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <DateField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          floatingLabelText="Date of Birth"
+          hintText="MM/DD/YYYY"
         />
       </div>
     </StyleRoot>
@@ -26,11 +26,11 @@ it('renders correctly', () => {
   const wrapper = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <DateField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          floatingLabelText="Date of Birth"
+          hintText="MM/DD/YYYY"
         />
       </div>
     </StyleRoot>
@@ -43,11 +43,11 @@ it('renders correctly with focus state', () => {
   const wrapper = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <DateField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          floatingLabelText="Date of Birth"
+          hintText="MM/DD/YYYY"
         />
       </div>
     </StyleRoot>
@@ -63,11 +63,11 @@ it('fires the onFocus prop', () => {
   const wrapper = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <DateField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          floatingLabelText="Date of Birth"
+          hintText="MM/DD/YYYY"
           onFocus={onFocus}
         />
       </div>
@@ -84,17 +84,17 @@ it('fires the triggerFocus method', () => {
   const wrapper = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <DateField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          floatingLabelText="Date of Birth"
+          hintText="MM/DD/YYYY"
         />
       </div>
     </StyleRoot>
   )
 
-  wrapper.find('PhoneNumberField').first().instance().triggerFocus()
+  wrapper.find('DateField').first().instance().triggerFocus()
   setTimeout(() => {
     expect(wrapper.children().matchesElement(document.activeElement)).toEqual(true, 'The input was not focused')
   }, 10)
@@ -105,11 +105,11 @@ it('fires the onBlur prop', () => {
   const wrapper = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <DateField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          floatingLabelText="Date of Birth"
+          hintText="MM/DD/YYYY"
           onBlur={onBlur}
         />
       </div>
@@ -127,29 +127,29 @@ it('fires the onChange prop', () => {
   const wrapper = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <DateField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          floatingLabelText="Date of Birth"
+          hintText="MM/DD/YYYY"
           onChange={onChange}
         />
       </div>
     </StyleRoot>
   )
 
-  // update input to 555-555-5555
-  wrapper.find('input').simulate('change', {target: {value: '(555) 555-555'}})
+  // update input to 04/27/1993
+  wrapper.find('input').simulate('change', {target: {value: '04/27/1993'}})
 
   // ensure the callback passes both raw and edited versions
-  expect(onChange).toBeCalledWith(expect.anything(), '555555555', '(555) 555-555')
+  expect(onChange).toBeCalledWith(expect.anything(), '04/27/1993', '04/27/1993')
   expect(onChange.mock.calls.length).toBe(1)
 
-  // update input to 123-456-7890
-  wrapper.find('input').simulate('change', {target: {value: '(123) 456-7890'}})
+  // update input to 12/12/2012
+  wrapper.find('input').simulate('change', {target: {value: '12/12/2012'}})
 
   // ensure the callback passes correct, updated phone value
-  expect(onChange.mock.calls[1]).toEqual([expect.anything(), '1234567890', '(123) 456-7890'])
+  expect(onChange.mock.calls[1]).toEqual([expect.anything(), '12/12/2012', '12/12/2012'])
   expect(onChange.mock.calls.length).toBe(2)
 })
 
@@ -169,11 +169,11 @@ it('uses a custom theme for all child components if one is provided', () => {
   const wrapper = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <DateField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          floatingLabelText="Date of Birth"
+          hintText="MM/DD/YYYY"
           onChange={() => {}}
           snacksTheme={customTheme}
         />

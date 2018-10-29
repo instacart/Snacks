@@ -3,17 +3,26 @@ import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
 import toJson        from 'enzyme-to-json'
 import renderer from 'react-test-renderer'
-import PhoneNumberField  from '../PhoneNumberField'
+import MaskedTextField  from '../MaskedTextField'
+
+// input masks by alpha-2 code - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+// NOTE: this currently only supports US, but will someday include other regions and countries
+const mask = [/\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]
+const maskHint = '555-55-5555'
+
+const getValue = (value) => value.replace(/-/g, '')
 
 it('renders without error', () => {
   const mounted = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <MaskedTextField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          mask={mask}
+          maskHint={maskHint}
+          getValue={getValue}
+          floatingLabelText="SSN"
         />
       </div>
     </StyleRoot>
@@ -26,11 +35,13 @@ it('renders correctly', () => {
   const wrapper = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <MaskedTextField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          mask={mask}
+          maskHint={maskHint}
+          getValue={getValue}
+          floatingLabelText="SSN"
         />
       </div>
     </StyleRoot>
@@ -43,11 +54,13 @@ it('renders correctly with focus state', () => {
   const wrapper = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <MaskedTextField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          mask={mask}
+          maskHint={maskHint}
+          getValue={getValue}
+          floatingLabelText="SSN"
         />
       </div>
     </StyleRoot>
@@ -63,11 +76,13 @@ it('fires the onFocus prop', () => {
   const wrapper = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <MaskedTextField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          mask={mask}
+          maskHint={maskHint}
+          getValue={getValue}
+          floatingLabelText="SSN"
           onFocus={onFocus}
         />
       </div>
@@ -84,17 +99,19 @@ it('fires the triggerFocus method', () => {
   const wrapper = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <MaskedTextField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          mask={mask}
+          maskHint={maskHint}
+          getValue={getValue}
+          floatingLabelText="SSN"
         />
       </div>
     </StyleRoot>
   )
 
-  wrapper.find('PhoneNumberField').first().instance().triggerFocus()
+  wrapper.find('MaskedTextField').first().instance().triggerFocus()
   setTimeout(() => {
     expect(wrapper.children().matchesElement(document.activeElement)).toEqual(true, 'The input was not focused')
   }, 10)
@@ -105,11 +122,13 @@ it('fires the onBlur prop', () => {
   const wrapper = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <MaskedTextField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          mask={mask}
+          maskHint={maskHint}
+          getValue={getValue}
+          floatingLabelText="SSN"
           onBlur={onBlur}
         />
       </div>
@@ -127,29 +146,31 @@ it('fires the onChange prop', () => {
   const wrapper = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <MaskedTextField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          mask={mask}
+          maskHint={maskHint}
+          getValue={getValue}
+          floatingLabelText="SSN"
           onChange={onChange}
         />
       </div>
     </StyleRoot>
   )
 
-  // update input to 555-555-5555
-  wrapper.find('input').simulate('change', {target: {value: '(555) 555-555'}})
+  // update input to 123-45-6789
+  wrapper.find('input').simulate('change', {target: {value: '123-45-6789'}})
 
   // ensure the callback passes both raw and edited versions
-  expect(onChange).toBeCalledWith(expect.anything(), '555555555', '(555) 555-555')
+  expect(onChange).toBeCalledWith(expect.anything(), '123456789', '123-45-6789')
   expect(onChange.mock.calls.length).toBe(1)
 
-  // update input to 123-456-7890
-  wrapper.find('input').simulate('change', {target: {value: '(123) 456-7890'}})
+  // update input to 999-99-9999
+  wrapper.find('input').simulate('change', {target: {value: '999-99-9999'}})
 
   // ensure the callback passes correct, updated phone value
-  expect(onChange.mock.calls[1]).toEqual([expect.anything(), '1234567890', '(123) 456-7890'])
+  expect(onChange.mock.calls[1]).toEqual([expect.anything(), '999999999', '999-99-9999'])
   expect(onChange.mock.calls.length).toBe(2)
 })
 
@@ -169,11 +190,13 @@ it('uses a custom theme for all child components if one is provided', () => {
   const wrapper = mount(
     <StyleRoot>
       <div>
-        <PhoneNumberField
+        <MaskedTextField
           id="test_id"
           name="test"
-          floatingLabelText="Phone Number"
-          hintText="(555) 555-555"
+          mask={mask}
+          maskHint={maskHint}
+          getValue={getValue}
+          floatingLabelText="SSN"
           onChange={() => {}}
           snacksTheme={customTheme}
         />

@@ -5,20 +5,22 @@ import { mount }     from 'enzyme'
 import { spy }       from 'sinon'
 import TextField     from '../TextField'
 
+const defaultTextField = (
+  <StyleRoot>
+    <div>
+      <TextField
+        id="test_id"
+        name="test"
+        type="email"
+        floatingLabelText="Email"
+        hintText="Enter your email address"
+      />
+    </div>
+  </StyleRoot>
+)
+
 it('renders TextField correctly', () => {
-  const tree = renderer.create(
-    <StyleRoot>
-      <div>
-        <TextField
-          id="test_id"
-          name="test"
-          type="email"
-          floatingLabelText="Email"
-          hintText="Enter your email address"
-        />
-      </div>
-    </StyleRoot>
-  ).toJSON()
+  const tree = renderer.create(defaultTextField).toJSON()
   expect(tree).toMatchSnapshot()
 })
 
@@ -42,6 +44,15 @@ it('fires the onFocus prop', () => {
   wrapper.find('input').simulate('focus')
 
   expect(onFocus.calledOnce).toBe(true)
+})
+
+it('fires the triggerFocus method', () => {
+  const wrapper = mount(defaultTextField)
+
+  wrapper.find('TextField').first().instance().triggerFocus()
+  setTimeout(() => {
+    expect(wrapper.children().matchesElement(document.activeElement)).toEqual(true, 'The input was not focused')
+  }, 10)
 })
 
 it('fires the onBlur prop', () => {
