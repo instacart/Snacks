@@ -44,7 +44,7 @@ const styles = {
 const NavigationPill = props => {
   const { isActive, snacksTheme, text } = props
   const { primaryForeground } = snacksTheme.colors
-
+  const { inner, ...outer } = props.elementAttributes
   const activeStyles = {
     backgroundColor: primaryForeground,
     color: colors.WHITE,
@@ -53,14 +53,14 @@ const NavigationPill = props => {
       backgroundColor: primaryForeground
     },
     ':focus': {
-      backgroundColor: primaryForeground,
+      backgroundColor: primaryForeground
     }
   }
 
   return (
     <li
       style={styles.container}
-      { ...props.elementAttributes }
+      {...outer}
     >
       <a
         href={props.path || '#'}
@@ -71,6 +71,7 @@ const NavigationPill = props => {
           { color: primaryForeground },
           isActive && activeStyles
         ]}
+        {...inner}
         key={`pill-anchor-${text}`}
       >
         {text}

@@ -42,3 +42,13 @@ it('renders element attributes on pill correctly', () => {
   ).toJSON()
   expect(tree).toMatchSnapshot()
 })
+
+it('renders inner element attributes on pill correctly', () => {
+  const tree = renderer.create(
+    <NavigationPill
+      text={'pill with attributes'}
+      elementAttributes={{ inner: {ariaLabel:'this is an aria label'}, role:'tab'}}
+    />
+  ).toJSON()
+  expect(tree).toMatchSnapshot()
+})
