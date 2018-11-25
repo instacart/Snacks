@@ -9,8 +9,6 @@ import { darken } from '../../utils'
 
 const noop = () => {} // eslint-disable-line no-empty-function
 
-const WEBKIT_FOCUS_RING_COLOR = 'rgb(59, 153, 252)'
-
 const baseStyles = {
   touchAction: 'manipulation',
   cursor: 'pointer',
@@ -33,11 +31,7 @@ const baseStyles = {
 
   // Ensures any icons stay vertically centered
   display: 'inline-flex',
-  alignItems: 'center',
-
-  ':focus': {
-    outline: `${WEBKIT_FOCUS_RING_COLOR} auto 5px`
-  }
+  alignItems: 'center'
 }
 
 const sizeStyles = {
