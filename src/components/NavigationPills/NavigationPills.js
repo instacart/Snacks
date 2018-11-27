@@ -31,11 +31,13 @@ const styles = {
 }
 
 const NavigationPills = props => {
+  const { inner, ...outer } = props.elementAttributes
   const renderLabel = () => {
     if (!props.label) { return }
 
     return <label style={styles.labelStyles}>{props.label}</label>
   }
+
 
   const renderPill = (pill, idx) => {
     return (
@@ -58,10 +60,10 @@ const NavigationPills = props => {
       <div
         style={wrapperStyles}
         ref='pillsTrack'
-        { ...props.elementAttributes }
+        { ...outer }
       >
         {renderLabel()}
-        <ul style={pillsContainerStyles}>
+        <ul style={pillsContainerStyles} {...inner}>
           {props.pills.map(renderPill)}
         </ul>
       </div>

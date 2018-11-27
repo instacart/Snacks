@@ -76,6 +76,23 @@ it('renders NavigationPills with elementAttributes correctly', () => {
   expect(tree).toMatchSnapshot()
 })
 
+it('renders NavigationPills with inner elementAttributes correctly', () => {
+  const tree = renderer.create(
+    <StyleRoot>
+      <div>
+        <NavigationPills
+            pills={ testPills }
+            onPillClick={(e, pill) => { console.log(pill) }}
+            label={'Filter by'}
+            activePill={'dom2'}
+            elementAttributes={{inner: {ariaLabel:'this is an aria label'}, role:'tabs'}}
+          />
+      </div>
+    </StyleRoot>
+  ).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
 it('renders NavigationPills with each pill\'s elementAttributes correctly', () => {
   const testPillsElmAttrs = [
     { path: '/store/doms-pizza-store',  text: 'doms', elementAttributes: { 'aria-label': 'doms', role: 'tab' }},
