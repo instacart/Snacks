@@ -44,7 +44,6 @@ const styles = {
 const NavigationPill = props => {
   const { isActive, snacksTheme, text } = props
   const { primaryForeground } = snacksTheme.colors
-
   const activeStyles = {
     backgroundColor: primaryForeground,
     color: colors.WHITE,
@@ -71,6 +70,7 @@ const NavigationPill = props => {
           { color: primaryForeground },
           isActive && activeStyles
         ]}
+        {...props.anchorItemAttributes}
         key={`pill-anchor-${text}`}
       >
         {text}
@@ -82,6 +82,9 @@ const NavigationPill = props => {
 NavigationPill.propTypes = {
   /** Any additonal props to add to the element (e.g. data attributes). */
   elementAttributes: PropTypes.object,
+
+  /** Any additonal props to add to the inner a element (e.g. data attributes). */
+  anchorItemAttributes: PropTypes.object,
 
   /** determines wether or not active styles are applied */
   isActive: PropTypes.bool,
