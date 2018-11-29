@@ -31,7 +31,6 @@ const styles = {
 }
 
 const NavigationPills = props => {
-  const { inner, ...outer } = props.elementAttributes
   const renderLabel = () => {
     if (!props.label) { return }
 
@@ -60,10 +59,10 @@ const NavigationPills = props => {
       <div
         style={wrapperStyles}
         ref='pillsTrack'
-        { ...outer }
+        { ...props.elementAttributes }
       >
         {renderLabel()}
-        <ul style={pillsContainerStyles} {...inner}>
+        <ul style={pillsContainerStyles} { ...props.listItemAttributes} >
           {props.pills.map(renderPill)}
         </ul>
       </div>
@@ -74,6 +73,9 @@ const NavigationPills = props => {
 NavigationPills.propTypes = {
   /** Any additonal props to add to the element (e.g. data attributes). */
   elementAttributes: PropTypes.object,
+
+  /** Any additonal props to add to the inner ul element (e.g. data attributes). */
+  listItemAttributes: PropTypes.object,
 
   /** array of pill objects */
   pills: PropTypes.array,

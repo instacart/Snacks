@@ -85,7 +85,8 @@ it('renders NavigationPills with inner elementAttributes correctly', () => {
             onPillClick={(e, pill) => { console.log(pill) }}
             label={'Filter by'}
             activePill={'dom2'}
-            elementAttributes={{inner: {ariaLabel:'this is an aria label'}, role:'tabs'}}
+            elementAttributes={{role:'tabs'}}
+            listItemAttributes={{ariaLabel:'this is an aria label'}}
           />
       </div>
     </StyleRoot>
