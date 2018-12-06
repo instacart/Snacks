@@ -331,6 +331,7 @@ class ScrollTrack extends Component {
           showRightArrow && { display: 'block' },
           RightArrow
         ]}
+        ref='nextButton'
       >
         { nextButtonContent ||
           <Icon
@@ -357,6 +358,7 @@ class ScrollTrack extends Component {
           showLeftArrow && { display: 'block' },
           LeftArrow
         ]}
+        ref='backButton'
       >
         { backButtonContent ||
           <Icon
