@@ -46,6 +46,7 @@ const NavigationPills = props => {
         text={pill.text}
         key={`pill-${idx}`}
         elementAttributes={pill.elementAttributes}
+        anchorItemAttributes={pill.anchorItemAttributes}
       />
     )
   }
