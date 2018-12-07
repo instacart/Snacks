@@ -96,11 +96,11 @@ it('renders NavigationPills with inner elementAttributes correctly', () => {
 
 it('renders NavigationPills with each pill\'s elementAttributes correctly', () => {
   const testPillsElmAttrs = [
-    { path: '/store/doms-pizza-store',  text: 'doms', elementAttributes: { 'aria-label': 'doms', role: 'tab' }},
-    { text: 'doms1', elementAttributes: { 'aria-label': 'doms1', role: 'tab' }},
-    { path: '/store/doms-pizza-store-two',  text: 'doms2', elementAttributes: { 'aria-label': 'doms2', role: 'tab' }},
-    { path: '/store/doms-pizza-store-three',  text: 'doms3', elementAttributes: { 'aria-label': 'doms3', role: 'tab' }},
-    { path: '/store/doms-pizza-store-four', elementAttributes: { 'aria-label': 'four', role: 'tab' }},
+    { path: '/store/doms-pizza-store',  text: 'doms', elementAttributes: { 'aria-label': 'doms' }, anchorItemAttributes: { role: 'tab' }},
+    { text: 'doms1', elementAttributes: { 'aria-label': 'doms1', }, anchorItemAttributes: { role: 'tab' }},
+    { path: '/store/doms-pizza-store-two',  text: 'doms2', elementAttributes: { 'aria-label': 'doms2' }, anchorItemAttributes: { role: 'tab' }},
+    { path: '/store/doms-pizza-store-three',  text: 'doms3', elementAttributes: { 'aria-label': 'doms3', }, anchorItemAttributes: { role: 'tab' }},
+    { path: '/store/doms-pizza-store-four', elementAttributes: { 'aria-label': 'four', }, anchorItemAttributes: { role: 'tab' }},
   ]
 
   const tree = renderer.create(
