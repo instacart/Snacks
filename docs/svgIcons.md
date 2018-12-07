@@ -4,12 +4,12 @@ Available SVGIcons:
 ```jsx
 const icons = Object.keys(require('../src/components/SVGIcon/icons'));
 const groups = {
-  People: ['account', 'person', 'personAdd'],
+  People: ['account', 'person', 'personAdd', 'walking'],
   'Social Media': ['google', 'facebook', 'instagram', 'twitter', 'pinterest', 'appStore', 'playStore'],
   Orders: ['order', 'orders', 'addToOrder', 'orderIssue', 'orderReview', 'recurringOrder', 'reorder', 'replacement', 'adjustment', 'refund'],
   'Times of Day': ['sunset', 'moon', 'inSeason'],
   Shopping: ['cart', 'bag', 'store', 'money', 'creditCard', 'loyaltyCard', 'giftcard', 'coupons', 'categories', 'recipes', 'sale'],
-  Delivery: ['home', 'office', 'barcode', 'scan', 'car', 'clock', 'calendar', 'locationCurrent', 'locationMarker'],
+  Delivery: ['home', 'office', 'barcode', 'scan', 'car', 'clock', 'calendar', 'locationCurrent', 'locationMarker', 'parking'],
   Items: ['items', 'organic', 'cold', 'fire', 'alcohol', 'coffee', 'tobacco', 'weight'],
   Actions: ['reaction', 'reactionAdd', 'thumbsUp', 'thumbsDown', 'saveForLater', 'like', 'listsAdd', 'star', 'flag'],
   Communication: ['sendEmail', 'email', 'chat', 'phone', 'call', 'instructions', 'pencil'],
