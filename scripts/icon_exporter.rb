@@ -49,7 +49,9 @@ svg
   .set(:viewBox, '0 0 24 24')
 svg = svg.first
 element = document.css('path').first
-element.remove_attribute('id')
+element.attributes.each do |key, _|
+  element.remove_attribute(key) unless key == 'd'
+end
 svg.content = ''
 element.parent = svg
 path.write("#{svg}\n")
