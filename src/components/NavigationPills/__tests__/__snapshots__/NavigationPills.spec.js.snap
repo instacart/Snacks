@@ -922,7 +922,6 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
               <li
                 aria-label="doms"
                 data-radium={true}
-                role="tab"
                 style={
                   Object {
                     "display": "inline-block",
@@ -938,6 +937,7 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
                   onFocus={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
+                  role="tab"
                   style={
                     Object {
                       "backgroundColor": "#F7F7F7",
@@ -964,7 +964,6 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
               <li
                 aria-label="doms1"
                 data-radium={true}
-                role="tab"
                 style={
                   Object {
                     "display": "inline-block",
@@ -980,6 +979,7 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
                   onFocus={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
+                  role="tab"
                   style={
                     Object {
                       "backgroundColor": "#F7F7F7",
@@ -1006,7 +1006,6 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
               <li
                 aria-label="doms2"
                 data-radium={true}
-                role="tab"
                 style={
                   Object {
                     "display": "inline-block",
@@ -1022,6 +1021,7 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
                   onFocus={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
+                  role="tab"
                   style={
                     Object {
                       "backgroundColor": "#F7F7F7",
@@ -1048,7 +1048,6 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
               <li
                 aria-label="doms3"
                 data-radium={true}
-                role="tab"
                 style={
                   Object {
                     "display": "inline-block",
@@ -1064,6 +1063,7 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
                   onFocus={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
+                  role="tab"
                   style={
                     Object {
                       "backgroundColor": "#F7F7F7",
@@ -1090,7 +1090,6 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
               <li
                 aria-label="four"
                 data-radium={true}
-                role="tab"
                 style={
                   Object {
                     "display": "inline-block",
@@ -1106,6 +1105,7 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
                   onFocus={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
+                  role="tab"
                   style={
                     Object {
                       "backgroundColor": "#F7F7F7",
