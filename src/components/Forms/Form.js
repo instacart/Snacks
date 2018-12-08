@@ -1,6 +1,6 @@
 import React     from 'react'
 import PropTypes from 'prop-types'
-import isEqual from '../../utils/isEqual'
+import isEqual from 'lodash.isequal'
 
 class Form extends React.Component {
   static propTypes = {
