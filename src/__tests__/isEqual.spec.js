@@ -1,4 +1,4 @@
-import isEqual from '../utils/isEqual'
+import isEqual from 'lodash.isequal'
 
 describe('isEqual', () => {
   describe('with numbers', () => {
