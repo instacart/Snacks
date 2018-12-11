@@ -34,7 +34,9 @@ exports[`Radio generates a label if a child prop of text is supplied 1`] = `
       data-radium={true}
       disabled={undefined}
       id={1}
+      onBlur={undefined}
       onChange={[Function]}
+      onFocus={undefined}
       style={
         Object {
           "MozAppearance": "none",
@@ -105,7 +107,9 @@ exports[`Radio incorporates user styles if passed 1`] = `
       data-radium={true}
       disabled={undefined}
       id={1}
+      onBlur={undefined}
       onChange={[Function]}
+      onFocus={undefined}
       style={
         Object {
           "MozAppearance": "none",
@@ -176,7 +180,9 @@ exports[`Radio incorporates user styles if passed 2`] = `
       data-radium={true}
       disabled={undefined}
       id={2}
+      onBlur={undefined}
       onChange={[Function]}
+      onFocus={undefined}
       style={
         Object {
           "MozAppearance": "none",
@@ -237,7 +243,9 @@ exports[`Radio renders the correct button type 1`] = `
     data-radium={true}
     disabled={undefined}
     id={1}
+    onBlur={undefined}
     onChange={[Function]}
+    onFocus={undefined}
     style={
       Object {
         "MozAppearance": "none",
@@ -285,7 +293,9 @@ exports[`Radio renders the correct selected state 1`] = `
     data-radium={true}
     disabled={undefined}
     id={1}
+    onBlur={undefined}
     onChange={[Function]}
+    onFocus={undefined}
     style={
       Object {
         "MozAppearance": "none",
@@ -333,7 +343,9 @@ exports[`Radio renders the correct selected state 2`] = `
     data-radium={true}
     disabled={undefined}
     id={2}
+    onBlur={undefined}
     onChange={[Function]}
+    onFocus={undefined}
     style={
       Object {
         "MozAppearance": "none",
@@ -381,7 +393,9 @@ exports[`Radio renders the correct selected state 3`] = `
     data-radium={true}
     disabled={true}
     id={2}
+    onBlur={undefined}
     onChange={[Function]}
+    onFocus={undefined}
     style={
       Object {
         "MozAppearance": "none",

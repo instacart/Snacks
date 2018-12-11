@@ -70,6 +70,8 @@ class RadioCheckboxBase extends React.PureComponent {
     id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     isSelected    : PropTypes.bool,
     onChange      : PropTypes.func,
+    onBlur        : PropTypes.func,
+    onFocus       : PropTypes.func,
     style         : PropTypes.shape({
       button        : PropTypes.object,
       label         : PropTypes.object,
@@ -128,6 +130,8 @@ class RadioCheckboxBase extends React.PureComponent {
           checked={isSelected}
           disabled={isDisabled}
           aria-label={aria.label}
+          onBlur={this.props.onBlur}
+          onFocus={this.props.onFocus}
         />
       </div>
     )
