@@ -80,4 +80,20 @@ describe('Checkbox', () => {
     wrapper.find('input').simulate('change')
     expect(onChange.calledOnce).toBe(true)
   })
+
+  it('calls the user-supplied onFocus function', () => {
+    const onFocus = sinon.spy()
+    const wrapper = mount(<Checkbox id={1} onFocus={onFocus} />)
+
+    wrapper.find('input').simulate('focus')
+    expect(onFocus.calledOnce).toBe(true)
+  })
+
+  it('calls the user-supplied onBlur function', () => {
+    const onBlur = sinon.spy()
+    const wrapper = mount(<Checkbox id={1} onBlur={onBlur} />)
+
+    wrapper.find('input').simulate('blur')
+    expect(onBlur.calledOnce).toBe(true)
+  })
 })
