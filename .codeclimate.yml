@@ -1,5 +1,11 @@
 version: "2" # required to adjust maintainability checks
 checks:
+  duplication:
+    enabled: true
+    config:
+      languages:
+        javascript:
+          mass_threshold: 75
   file-lines:
     config:
       threshold: 500
