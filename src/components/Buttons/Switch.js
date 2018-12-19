@@ -41,7 +41,7 @@ const STYLES = {
   }
 }
 
-const renderInputButton = (isSelected, style, isAccessible) => {
+const renderInputButton = (isSelected, style, displayOnOffLabel) => {
   return (
     <div
       style={[
@@ -50,8 +50,8 @@ const renderInputButton = (isSelected, style, isAccessible) => {
         STYLES.background,
       ]}
     >
-      {isAccessible && isSelected && <OneSvg style={STYLES.one}/>}
-      {isAccessible && !isSelected && <ZeroSvg style={STYLES.zero}/>}
+      {displayOnOffLabel && isSelected && <OneSvg style={STYLES.one}/>}
+      {displayOnOffLabel && !isSelected && <ZeroSvg style={STYLES.zero}/>}
       <div
         style={[
           STYLES.toggle.default,
@@ -67,7 +67,7 @@ const Switch = (props) => {
     <RadioCheckboxBase
       btnType='checkbox'
       width={SWITCH_WIDTH}
-      renderInputButton={(isSelected, style) => renderInputButton(isSelected, style, props.isAccessible)}
+      renderInputButton={(isSelected, style) => renderInputButton(isSelected, style, props.displayOnOffLabel)}
       {...props}
     />
   )
@@ -90,7 +90,7 @@ Switch.propTypes = {
   }),
   value         : PropTypes.string,
   wrapEl        : PropTypes.string,
-  isAccessible    : PropTypes.bool
+  displayOnOffLabel    : PropTypes.bool
 }
 
 export default Switch
