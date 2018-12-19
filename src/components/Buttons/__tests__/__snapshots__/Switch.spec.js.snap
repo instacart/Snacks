@@ -17,17 +17,37 @@ exports[`Switch generates a label if a child prop of text is supplied 1`] = `
       }
     }
   >
-    <test-file-stub
-      aria-hidden="true"
+    <div
       data-radium={true}
       style={
         Object {
+          "backgroundColor": "#757575",
+          "borderRadius": "11px",
           "fill": "#757575",
           "height": 22,
+          "position": "relative",
+          "transition": "background-color 200ms ease-in-out",
           "width": 36,
         }
       }
-    />
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "50%",
+            "display": "block",
+            "height": "18px",
+            "left": "2px",
+            "position": "absolute",
+            "top": "2px",
+            "transition": "left 200ms ease-in-out",
+            "width": "18px",
+          }
+        }
+      />
+    </div>
     <input
       aria-label={undefined}
       checked={false}
@@ -88,17 +108,37 @@ exports[`Switch incorporates user style if passed 1`] = `
       }
     }
   >
-    <test-file-stub
-      aria-hidden="true"
+    <div
       data-radium={true}
       style={
         Object {
+          "backgroundColor": "#757575",
+          "borderRadius": "11px",
           "fill": "#757575",
           "height": 22,
+          "position": "relative",
+          "transition": "background-color 200ms ease-in-out",
           "width": 36,
         }
       }
-    />
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "50%",
+            "display": "block",
+            "height": "18px",
+            "left": "2px",
+            "position": "absolute",
+            "top": "2px",
+            "transition": "left 200ms ease-in-out",
+            "width": "18px",
+          }
+        }
+      />
+    </div>
     <input
       aria-label={undefined}
       checked={false}
@@ -158,17 +198,37 @@ exports[`Switch incorporates user style if passed 2`] = `
       }
     }
   >
-    <test-file-stub
-      aria-hidden="true"
+    <div
       data-radium={true}
       style={
         Object {
+          "backgroundColor": "#757575",
+          "borderRadius": "11px",
           "fill": "#757575",
           "height": 22,
+          "position": "relative",
+          "transition": "background-color 200ms ease-in-out",
           "width": 36,
         }
       }
-    />
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "50%",
+            "display": "block",
+            "height": "18px",
+            "left": "2px",
+            "position": "absolute",
+            "top": "2px",
+            "transition": "left 200ms ease-in-out",
+            "width": "18px",
+          }
+        }
+      />
+    </div>
     <input
       aria-label={undefined}
       checked={false}
@@ -219,17 +279,37 @@ exports[`Switch renders the correct button type 1`] = `
     }
   }
 >
-  <test-file-stub
-    aria-hidden="true"
+  <div
     data-radium={true}
     style={
       Object {
+        "backgroundColor": "#757575",
+        "borderRadius": "11px",
         "fill": "#757575",
         "height": 22,
+        "position": "relative",
+        "transition": "background-color 200ms ease-in-out",
         "width": 36,
       }
     }
-  />
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": "50%",
+          "display": "block",
+          "height": "18px",
+          "left": "2px",
+          "position": "absolute",
+          "top": "2px",
+          "transition": "left 200ms ease-in-out",
+          "width": "18px",
+        }
+      }
+    />
+  </div>
   <input
     aria-label={undefined}
     checked={false}
@@ -267,17 +347,37 @@ exports[`Switch renders the correct selected state 1`] = `
     }
   }
 >
-  <test-file-stub
-    aria-hidden="true"
+  <div
     data-radium={true}
     style={
       Object {
+        "backgroundColor": "#757575",
+        "borderRadius": "11px",
         "fill": "#757575",
         "height": 22,
+        "position": "relative",
+        "transition": "background-color 200ms ease-in-out",
         "width": 36,
       }
     }
-  />
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": "50%",
+          "display": "block",
+          "height": "18px",
+          "left": "2px",
+          "position": "absolute",
+          "top": "2px",
+          "transition": "left 200ms ease-in-out",
+          "width": "18px",
+        }
+      }
+    />
+  </div>
   <input
     aria-label={undefined}
     checked={false}
@@ -315,17 +415,37 @@ exports[`Switch renders the correct selected state 2`] = `
     }
   }
 >
-  <test-file-stub
-    aria-hidden="true"
+  <div
     data-radium={true}
     style={
       Object {
+        "backgroundColor": "#43B02A",
+        "borderRadius": "11px",
         "fill": "#43B02A",
         "height": 22,
+        "position": "relative",
+        "transition": "background-color 200ms ease-in-out",
         "width": 36,
       }
     }
-  />
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": "50%",
+          "display": "block",
+          "height": "18px",
+          "left": "16px",
+          "position": "absolute",
+          "top": "2px",
+          "transition": "left 200ms ease-in-out",
+          "width": "18px",
+        }
+      }
+    />
+  </div>
   <input
     aria-label={undefined}
     checked={true}
@@ -363,17 +483,37 @@ exports[`Switch renders the correct selected state 3`] = `
     }
   }
 >
-  <test-file-stub
-    aria-hidden="true"
+  <div
     data-radium={true}
     style={
       Object {
+        "backgroundColor": "#BDBDBD",
+        "borderRadius": "11px",
         "fill": "#BDBDBD",
         "height": 22,
+        "position": "relative",
+        "transition": "background-color 200ms ease-in-out",
         "width": 36,
       }
     }
-  />
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": "50%",
+          "display": "block",
+          "height": "18px",
+          "left": "16px",
+          "position": "absolute",
+          "top": "2px",
+          "transition": "left 200ms ease-in-out",
+          "width": "18px",
+        }
+      }
+    />
+  </div>
   <input
     aria-label={undefined}
     checked={true}
