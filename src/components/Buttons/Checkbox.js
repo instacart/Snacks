@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import RadioCheckboxBase from '../../base/RadioCheckboxBase'
-import bkgSvgBase from '../../assets/checkboxBase.svg'
-import bkgSvgSelected from '../../assets/checkboxSelected.svg'
+import checkboxBaseSvg from '../../assets/checkboxBase.svg'
+import checkboxSelectedSvg from '../../assets/checkboxSelected.svg'
 
 const renderInputButton = (isSelected, style) => {
-  const SvgComponent = isSelected ? bkgSvgSelected : bkgSvgBase
+  const SvgComponent = isSelected ? checkboxSelectedSvg : checkboxBaseSvg
   return <SvgComponent aria-hidden="true" style={style}/>
 }
 
