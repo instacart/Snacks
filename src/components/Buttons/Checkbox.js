@@ -4,16 +4,16 @@ import RadioCheckboxBase from '../../base/RadioCheckboxBase'
 import bkgSvgBase from '../../assets/checkboxBase.svg'
 import bkgSvgSelected from '../../assets/checkboxSelected.svg'
 
-const BKG_SVG_SPRITES = {
-  base:       bkgSvgBase,
-  selected:   bkgSvgSelected,
+const renderInputButton = (isSelected, style) => {
+  const SvgComponent = isSelected ? bkgSvgSelected : bkgSvgBase
+  return <SvgComponent aria-hidden="true" style={style}/>
 }
 
 const Checkbox = (props) => {
   return (
     <RadioCheckboxBase
       btnType='checkbox'
-      bkgSvgSprites={BKG_SVG_SPRITES}
+      renderInputButton={renderInputButton}
       {...props}
     />
   )

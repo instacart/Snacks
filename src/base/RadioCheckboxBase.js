@@ -8,12 +8,12 @@ import { themePropTypes } from '../styles/themer/utils'
 const NoOp = () => {} // eslint-disable-line no-empty-function
 const INPUT_BTN_SIZE = 22
 
-const STYLE = {
+const getStyles = (props) => ({
   button: {
     position: 'relative',
   },
   inputBtn: {
-    width: INPUT_BTN_SIZE,
+    width: props.width || INPUT_BTN_SIZE,
     height: INPUT_BTN_SIZE,
     appearance: 'none',
     MsAppearance: 'none',
@@ -35,35 +35,27 @@ const STYLE = {
   disabled: {
     color: colors.GRAY_74,
   },
-}
-
-const getEnabledColor = (props) => {
-  return props.isSelected ? props.snacksTheme.colors.action : colors.GRAY_46
-}
-
-const getInputStyles = (props) => ({
-  width: INPUT_BTN_SIZE,
-  height: INPUT_BTN_SIZE,
-  fill: props.isDisabled ? colors.GRAY_74 : getEnabledColor(props)
 })
 
-function imgValidator (props, propName) {
-  const asset = props[propName]
-
-  if (!asset) {
-    return new Error(`The background image "${propName}" is required.`)
-  }
+const getEnabledColor = (props, state) => {
+  return state.isSelected ? props.snacksTheme.colors.action : colors.GRAY_46
 }
+
+const getInputStyles = (props, state) => ({
+  width: props.width || INPUT_BTN_SIZE ,
+  height: INPUT_BTN_SIZE,
+  fill: props.isDisabled ? colors.GRAY_74 : getEnabledColor(props, state)
+})
+
+
 
 class RadioCheckboxBase extends React.PureComponent {
   static propTypes = {
     aria          : PropTypes.shape({
       label         :PropTypes.string,
     }),
-    bkgSvgSprites : PropTypes.shape({
-      base          : imgValidator,
-      selected      : imgValidator,
-    }),
+    renderInputButton : PropTypes.func.isRequired,
+    width           : PropTypes.number,
     btnType       : PropTypes.oneOf(['radio', 'checkbox']).isRequired,
     isDisabled    : PropTypes.bool,
     children      : PropTypes.string,
@@ -114,18 +106,19 @@ class RadioCheckboxBase extends React.PureComponent {
   }
 
   renderInputBtn() {
-    const { aria, bkgSvgSprites, btnType, isDisabled, id, style, value } = this.props
+    const { aria, btnType, isDisabled, id, style, value, renderInputButton } = this.props
     const { isSelected } = this.state
-    const SvgComponent = isSelected ? bkgSvgSprites.selected : bkgSvgSprites.base
+
+    const internalStyle = getStyles(this.props)
 
     return (
-      <div style={{...STYLE.button, ...style.button}}>
-        <SvgComponent aria-hidden="true" style={getInputStyles(this.props)} />
+      <div style={{...internalStyle.button, ...style.button}}>
+        {renderInputButton(isSelected, getInputStyles(this.props, this.state))}
         <input
           id={id}
           type={btnType}
           onChange={this.handleChange}
-          style={{...STYLE.inputBtn, ...style.inputBtn}}
+          style={{...internalStyle.inputBtn, ...style.inputBtn}}
           value={value}
           checked={isSelected}
           disabled={isDisabled}
@@ -141,14 +134,16 @@ class RadioCheckboxBase extends React.PureComponent {
     const { children: labelText, id, style,  wrapEl } = this.props
     const { isDisabled } = this.props
     const Element = wrapEl
-    const isDisabledStyle = isDisabled ? STYLE.disabled : {}
+    const internalStyle = getStyles(this.props)
+
+    const isDisabledStyle = isDisabled ? internalStyle.disabled : {}
 
     // ensure both text and id are supplied so the button and label are correctly associated
     if (labelText && id) {
       return (
-        <Element style={{...STYLE.wrapEl, ...style.wrapEl}}>
+        <Element style={{...internalStyle.wrapEl, ...style.wrapEl}}>
           {this.renderInputBtn()}
-          <label htmlFor={id} style={{...STYLE.label, ...style.label, ...isDisabledStyle}}>
+          <label htmlFor={id} style={{...internalStyle.label, ...style.label, ...isDisabledStyle}}>
             {labelText}
           </label>
         </Element>
