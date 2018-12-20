@@ -3,7 +3,7 @@ This component outputs a checkbox with an optional label.
 You can define whether the button starts in the pressed on unpressed state through the `isSelected` prop. In addition, you can change the selected/unselected state at any moment after the mount state by redifining the prop `isSelected`.
 
 ### Label
-Associating a label to every radio button is very important for accessibility purposes. There are two ways to do it. The easiest is to enclose the text with the component: `<Checkbox>My label</Checkbox>`. The other option is to associate a label yourself:
+Associating a label to every checkbox button is very important for accessibility purposes. There are two ways to do it. The easiest is to enclose the text with the component: `<Checkbox>My label</Checkbox>`. The other option is to associate a label yourself:
 
 ```js
 <div style={{display: 'flex', flexDirection: 'column'}}>

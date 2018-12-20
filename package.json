@@ -87,6 +87,7 @@
   },
   "jest": {
     "coverageDirectory": "./coverage/",
+    "testURL": "http://localhost",
     "collectCoverage": true,
     "globals": {
       "__DEV__": true

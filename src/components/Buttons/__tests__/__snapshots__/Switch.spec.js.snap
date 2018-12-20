@@ -1,0 +1,557 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch generates a label if a child prop of text is supplied 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "display": "flex",
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#757575",
+          "borderRadius": "11px",
+          "fill": "#757575",
+          "height": 22,
+          "position": "relative",
+          "transition": "background-color 200ms ease-in-out",
+          "width": 36,
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "50%",
+            "display": "block",
+            "height": "18px",
+            "left": "2px",
+            "position": "absolute",
+            "top": "2px",
+            "transition": "left 200ms ease-in-out",
+            "width": "18px",
+          }
+        }
+      />
+    </div>
+    <input
+      aria-label={undefined}
+      checked={false}
+      data-radium={true}
+      disabled={undefined}
+      id={1}
+      onBlur={undefined}
+      onChange={[Function]}
+      onFocus={undefined}
+      style={
+        Object {
+          "MozAppearance": "none",
+          "MsAppearance": "none",
+          "WebkitAppearance": "none",
+          "appearance": "none",
+          "backgroundImage": "none",
+          "height": 22,
+          "left": 0,
+          "opacity": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 36,
+        }
+      }
+      type="checkbox"
+      value={undefined}
+    />
+  </div>
+  <label
+    data-radium={true}
+    htmlFor={1}
+    style={
+      Object {
+        "lineHeight": "22px",
+        "marginLeft": 10,
+      }
+    }
+  >
+    Test label
+  </label>
+</div>
+`;
+
+exports[`Switch incorporates user style if passed 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "background": "pink",
+      "display": "flex",
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "border": "2px solid purple",
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#757575",
+          "borderRadius": "11px",
+          "fill": "#757575",
+          "height": 22,
+          "position": "relative",
+          "transition": "background-color 200ms ease-in-out",
+          "width": 36,
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "50%",
+            "display": "block",
+            "height": "18px",
+            "left": "2px",
+            "position": "absolute",
+            "top": "2px",
+            "transition": "left 200ms ease-in-out",
+            "width": "18px",
+          }
+        }
+      />
+    </div>
+    <input
+      aria-label={undefined}
+      checked={false}
+      data-radium={true}
+      disabled={undefined}
+      id={1}
+      onBlur={undefined}
+      onChange={[Function]}
+      onFocus={undefined}
+      style={
+        Object {
+          "MozAppearance": "none",
+          "MsAppearance": "none",
+          "WebkitAppearance": "none",
+          "appearance": "none",
+          "backgroundImage": "none",
+          "height": 22,
+          "left": 0,
+          "opacity": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 36,
+        }
+      }
+      type="checkbox"
+      value={undefined}
+    />
+  </div>
+  <label
+    data-radium={true}
+    htmlFor={1}
+    style={
+      Object {
+        "color": "green",
+        "lineHeight": "22px",
+        "marginLeft": 10,
+      }
+    }
+  >
+    Test label
+  </label>
+</div>
+`;
+
+exports[`Switch incorporates user style if passed 2`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "display": "flex",
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#757575",
+          "borderRadius": "11px",
+          "fill": "#757575",
+          "height": 22,
+          "position": "relative",
+          "transition": "background-color 200ms ease-in-out",
+          "width": 36,
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "50%",
+            "display": "block",
+            "height": "18px",
+            "left": "2px",
+            "position": "absolute",
+            "top": "2px",
+            "transition": "left 200ms ease-in-out",
+            "width": "18px",
+          }
+        }
+      />
+    </div>
+    <input
+      aria-label={undefined}
+      checked={false}
+      data-radium={true}
+      disabled={undefined}
+      id={2}
+      onBlur={undefined}
+      onChange={[Function]}
+      onFocus={undefined}
+      style={
+        Object {
+          "MozAppearance": "none",
+          "MsAppearance": "none",
+          "WebkitAppearance": "none",
+          "appearance": "none",
+          "backgroundImage": "none",
+          "height": 22,
+          "left": 0,
+          "opacity": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 36,
+        }
+      }
+      type="checkbox"
+      value={undefined}
+    />
+  </div>
+  <label
+    data-radium={true}
+    htmlFor={2}
+    style={
+      Object {
+        "lineHeight": "22px",
+        "marginLeft": 10,
+      }
+    }
+  >
+    Test label
+  </label>
+</div>
+`;
+
+exports[`Switch renders the correct button type 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "backgroundColor": "#757575",
+        "borderRadius": "11px",
+        "fill": "#757575",
+        "height": 22,
+        "position": "relative",
+        "transition": "background-color 200ms ease-in-out",
+        "width": 36,
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": "50%",
+          "display": "block",
+          "height": "18px",
+          "left": "2px",
+          "position": "absolute",
+          "top": "2px",
+          "transition": "left 200ms ease-in-out",
+          "width": "18px",
+        }
+      }
+    />
+  </div>
+  <input
+    aria-label={undefined}
+    checked={false}
+    data-radium={true}
+    disabled={undefined}
+    id={1}
+    onBlur={undefined}
+    onChange={[Function]}
+    onFocus={undefined}
+    style={
+      Object {
+        "MozAppearance": "none",
+        "MsAppearance": "none",
+        "WebkitAppearance": "none",
+        "appearance": "none",
+        "backgroundImage": "none",
+        "height": 22,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 36,
+      }
+    }
+    type="checkbox"
+    value={undefined}
+  />
+</div>
+`;
+
+exports[`Switch renders the correct selected state 1`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "backgroundColor": "#757575",
+        "borderRadius": "11px",
+        "fill": "#757575",
+        "height": 22,
+        "position": "relative",
+        "transition": "background-color 200ms ease-in-out",
+        "width": 36,
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": "50%",
+          "display": "block",
+          "height": "18px",
+          "left": "2px",
+          "position": "absolute",
+          "top": "2px",
+          "transition": "left 200ms ease-in-out",
+          "width": "18px",
+        }
+      }
+    />
+  </div>
+  <input
+    aria-label={undefined}
+    checked={false}
+    data-radium={true}
+    disabled={undefined}
+    id={1}
+    onBlur={undefined}
+    onChange={[Function]}
+    onFocus={undefined}
+    style={
+      Object {
+        "MozAppearance": "none",
+        "MsAppearance": "none",
+        "WebkitAppearance": "none",
+        "appearance": "none",
+        "backgroundImage": "none",
+        "height": 22,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 36,
+      }
+    }
+    type="checkbox"
+    value={undefined}
+  />
+</div>
+`;
+
+exports[`Switch renders the correct selected state 2`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "backgroundColor": "#43B02A",
+        "borderRadius": "11px",
+        "fill": "#43B02A",
+        "height": 22,
+        "position": "relative",
+        "transition": "background-color 200ms ease-in-out",
+        "width": 36,
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": "50%",
+          "display": "block",
+          "height": "18px",
+          "left": "16px",
+          "position": "absolute",
+          "top": "2px",
+          "transition": "left 200ms ease-in-out",
+          "width": "18px",
+        }
+      }
+    />
+  </div>
+  <input
+    aria-label={undefined}
+    checked={true}
+    data-radium={true}
+    disabled={undefined}
+    id={2}
+    onBlur={undefined}
+    onChange={[Function]}
+    onFocus={undefined}
+    style={
+      Object {
+        "MozAppearance": "none",
+        "MsAppearance": "none",
+        "WebkitAppearance": "none",
+        "appearance": "none",
+        "backgroundImage": "none",
+        "height": 22,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 36,
+      }
+    }
+    type="checkbox"
+    value={undefined}
+  />
+</div>
+`;
+
+exports[`Switch renders the correct selected state 3`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "backgroundColor": "#BDBDBD",
+        "borderRadius": "11px",
+        "fill": "#BDBDBD",
+        "height": 22,
+        "position": "relative",
+        "transition": "background-color 200ms ease-in-out",
+        "width": 36,
+      }
+    }
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": "50%",
+          "display": "block",
+          "height": "18px",
+          "left": "16px",
+          "position": "absolute",
+          "top": "2px",
+          "transition": "left 200ms ease-in-out",
+          "width": "18px",
+        }
+      }
+    />
+  </div>
+  <input
+    aria-label={undefined}
+    checked={true}
+    data-radium={true}
+    disabled={true}
+    id={2}
+    onBlur={undefined}
+    onChange={[Function]}
+    onFocus={undefined}
+    style={
+      Object {
+        "MozAppearance": "none",
+        "MsAppearance": "none",
+        "WebkitAppearance": "none",
+        "appearance": "none",
+        "backgroundImage": "none",
+        "height": 22,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 36,
+      }
+    }
+    type="checkbox"
+    value={undefined}
+  />
+</div>
+`;
