@@ -36,6 +36,7 @@ const expectedExports = [
   'CircleButton',
   'Radio',
   'Checkbox',
+  'Switch',
   'Icon',
   'SVGIcon',
   'Link',
