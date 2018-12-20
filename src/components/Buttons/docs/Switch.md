@@ -16,6 +16,15 @@ Associating a label to every switch button is very important for accessibility p
 ```
 **Important!** If you attach a label to a switch manually, make sure you set the line-height and margin-left properties as per the example above.
 
+### On/Off Label
+You can display an on off label to assist vision impaired users in determining whether the switch is on or off
+
+```js
+<div style={{display: 'flex', flexDirection: 'column'}}>
+  <Switch id="switch2" displayOnOffLabel>Switch with on/off label</Switch>
+</div>
+```
+
 ### Styling
 You can pass an object to the `style` prop for styling the label, radio button and wrap element using Radium's structure:
 ```js
