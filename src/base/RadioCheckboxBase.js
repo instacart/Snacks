@@ -24,6 +24,7 @@ const getStyles = (props) => ({
     opacity: 0, // Required for IE!
     top: 0,
     left: 0,
+    cursor: 'pointer',
   },
   label: {
     marginLeft: 10,
