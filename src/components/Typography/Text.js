@@ -73,7 +73,7 @@ const variantStyles = {
     fontSize: '28px',
     lineHeight: '42px',
     letterSpacing: '0.05em',
-    fontWeight: 700
+    fontWeight: fontWeights.bold
   },
   'T.22': {
     fontSize: '22px',
