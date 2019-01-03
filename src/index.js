@@ -42,6 +42,7 @@ import Slide from './components/Transitions/Slide'
 import Grow from './components/Transitions/Grow'
 import Fade from './components/Transitions/Fade'
 import Portal from './components/Portal/Portal'
+import Text from './components/typography/Text'
 import { themePropTypes } from './styles/themer/utils'
 
 export {
@@ -102,5 +103,6 @@ export {
   MenuItem,
   MenuDivider,
   DropdownMenu,
-  Portal
+  Portal,
+  Text
 }

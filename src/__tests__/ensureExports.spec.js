@@ -49,6 +49,7 @@ const expectedExports = [
   'MenuDivider',
   'DropdownMenu',
   'Portal',
+  'Text'
 ]
 const indexFile = readFileSync(indexPath).toString()
 
