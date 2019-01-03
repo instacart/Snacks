@@ -17,48 +17,57 @@ const baseStyles = {
   color: colors.GRAY_13
 }
 
+// Matches the Open Sans font weights
+// https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans
+const fontWeights = {
+  light: 300,
+  regular: 400,
+  semiBold: 600,
+  bold: 700
+}
+
 const variantStyles = {
   'T.92': {
     fontSize: '92px',
     lineHeight: '138px',
     letterSpacing: '0',
-    fontWeight: 400
+    fontWeight: fontWeights.regular
   },
   'T.82': {
     fontSize: '82px',
     lineHeight: '123px',
     letterSpacing: '0',
-    fontWeight: 400
+    fontWeight: fontWeights.regular
   },
   'T.72': {
     fontSize: '72px',
     lineHeight: '108px',
     letterSpacing: '0',
-    fontWeight: 400
+    fontWeight: fontWeights.regular
   },
   'T.64': {
     fontSize: '64px',
     lineHeight: '96px',
     letterSpacing: '0',
-    fontWeight: 400
+    fontWeight: fontWeights.regular
   },
   'T.58': {
     fontSize: '58px',
     lineHeight: '87px',
     letterSpacing: '0',
-    fontWeight: 400
+    fontWeight: fontWeights.regular
   },
   'T.46': {
     fontSize: '46px',
     lineHeight: '69px',
     letterSpacing: '0',
-    fontWeight: 400
+    fontWeight: fontWeights.regular
   },
   'T.36': {
     fontSize: '36px',
     lineHeight: '54px',
     letterSpacing: '0.03em',
-    fontWeight: 400
+    fontWeight: fontWeights.regular
   },
   'T.28': {
     fontSize: '28px',
@@ -70,37 +79,37 @@ const variantStyles = {
     fontSize: '22px',
     lineHeight: '32px',
     letterSpacing: '0.03em',
-    fontWeight: 400
+    fontWeight: fontWeights.regular
   },
   'T.18': {
     fontSize: '18px',
     lineHeight: '32px',
     letterSpacing: '0.03em',
-    fontWeight: 400
+    fontWeight: fontWeights.regular
   },
   'T.16': {
     fontSize: '16px',
     lineHeight: '24px',
     letterSpacing: '0.03em',
-    fontWeight: 400
+    fontWeight: fontWeights.regular
   },
   'T.14': {
     fontSize: '14px',
     lineHeight: '21px',
     letterSpacing: '0.03em',
-    fontWeight: 400
+    fontWeight: fontWeights.regular
   },
   'T.12': {
     fontSize: '12px',
     lineHeight: '18px',
     letterSpacing: '0.05em',
-    fontWeight: 400
+    fontWeight: fontWeights.regular
   },
   'T.11': {
     fontSize: '11px',
     lineHeight: '16px',
     letterSpacing: '0.05em',
-    fontWeight: 400
+    fontWeight: fontWeights.regular
   }
 }
 
@@ -119,15 +128,6 @@ const htmlTagMapping = {
   'T.14': 'p',
   'T.12': 'p',
   'T.11': 'p'
-}
-
-// Matches the Open Sans font weights
-// https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans
-const fontWeights = {
-  light: 300,
-  regular: 400,
-  semiBold: 600,
-  bold: 700
 }
 
 function Text({ variant, style, children, elementType, fontWeight, ...restProps }) {
