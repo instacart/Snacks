@@ -12,7 +12,7 @@ describe('Checkbox', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it("renders the correct selected state", () => {
+  it('renders the correct selected state', () => {
     const testCases = [
       { id: 1, isSelected: false },
       { id: 2, isSelected: true },
@@ -33,21 +33,29 @@ describe('Checkbox', () => {
 
     expect(htmlBtn.checked).toBe(true)
     expect(htmlBtn.disabled).toBe(false)
-    
+
     wrapper.setProps({isDisabled: true})
 
     expect(htmlBtn.checked).toBe(true)
     expect(htmlBtn.disabled).toBe(true)
   })
 
-  
+
   it('generates a label if a child prop of text is supplied', () => {
     const tree = renderer
       .create(<Checkbox id={1}>Test label</Checkbox>)
       .toJSON()
     expect(tree).toMatchSnapshot()
-  });
-  
+  })
+
+  it('generates a label if a child node is supplied', () => {
+    const TextComponent = ({ text }) => text
+
+    const tree = renderer
+      .create(<Checkbox id={1}><TextComponent text="Test label" /></Checkbox>)
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 
   it('incorporates user style if passed', () => {
     const testCases = [

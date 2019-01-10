@@ -23,7 +23,7 @@ Radio.propTypes = {
   aria          : PropTypes.shape({
     label         :PropTypes.string,
   }),
-  children      : PropTypes.string,
+  children      : PropTypes.node,
   id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   isDisabled    : PropTypes.bool,
   isSelected    : PropTypes.bool,
