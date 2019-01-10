@@ -59,7 +59,7 @@ class RadioCheckboxBase extends React.PureComponent {
     width           : PropTypes.number,
     btnType       : PropTypes.oneOf(['radio', 'checkbox']).isRequired,
     isDisabled    : PropTypes.bool,
-    children      : PropTypes.string,
+    children      : PropTypes.node,
     id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     isSelected    : PropTypes.bool,
     onChange      : PropTypes.func,
