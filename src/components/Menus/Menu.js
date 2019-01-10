@@ -1,7 +1,5 @@
 import React             from 'react'
 import PropTypes         from 'prop-types'
-import MenuItem          from './MenuItem'
-import getRuntimeType    from '../../utils/getRuntimeType'
 import spacing           from '../../styles/spacing'
 
 const styles = {
@@ -140,7 +138,7 @@ class Menu extends React.Component {
     const menuItemChildren = []
 
     React.Children.map(children, (child) => {
-      if (child.type && child.type === getRuntimeType(MenuItem)) {
+      if (child.type && child.type.isSnacksMenuItem) {
         menuItemChildren.push(child)
       }
     })
@@ -156,7 +154,7 @@ class Menu extends React.Component {
     return React.Children.map(children, (child) => {
       if (!React.isValidElement(child)) {
         throw 'Passing invalid element to Menu'
-      } else if (child.type && child.type === getRuntimeType(MenuItem)) {
+      } else if (child.type && child.type.isSnacksMenuItem) {
         const component = React.cloneElement(child, {
           index: index,
           focus: currentTabIndex === index,

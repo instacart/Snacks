@@ -102,6 +102,8 @@ class MenuItem extends React.Component {
     preventDefault: true
   }
 
+  static isSnacksMenuItem = true
+
   componentDidUpdate(prevProps) {
     if (!prevProps.focus && this.props.focus) {
       setTimeout(() => {
