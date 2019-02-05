@@ -269,6 +269,9 @@ class Select extends React.PureComponent {
       <div
         onFocus={this.handleFocus}
         onBlur={this.handleBlur}
+        tabIndex={0}
+        role="button"
+        ref={ (node) => this.trigger = node }
       >
         <div
           style={[
@@ -279,8 +282,6 @@ class Select extends React.PureComponent {
           ]}
           aria-required={required}
           aria-invalid={hasError}
-          tabIndex={0}
-          ref={ (node) => this.trigger = node }
         >
           <FloatingLabel
             text={floatingLabelText}
