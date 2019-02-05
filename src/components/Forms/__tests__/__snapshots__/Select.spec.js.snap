@@ -46,6 +46,8 @@ exports[`renders Select correctly 1`] = `
               onBlur={[Function]}
               onFocus={[Function]}
               onMouseDown={[Function]}
+              role="button"
+              tabIndex={0}
             >
               <div
                 aria-invalid={false}
@@ -76,7 +78,6 @@ exports[`renders Select correctly 1`] = `
                     "position": "relative",
                   }
                 }
-                tabIndex={0}
               >
                 <label
                   data-radium={true}
@@ -422,6 +423,8 @@ exports[`renders Select w/ server error correctly 1`] = `
               onBlur={[Function]}
               onFocus={[Function]}
               onMouseDown={[Function]}
+              role="button"
+              tabIndex={0}
             >
               <div
                 aria-invalid={false}
@@ -452,7 +455,6 @@ exports[`renders Select w/ server error correctly 1`] = `
                     "position": "relative",
                   }
                 }
-                tabIndex={0}
               >
                 <label
                   data-radium={true}
@@ -800,6 +802,8 @@ exports[`renders disabled Select correctly 1`] = `
               onBlur={[Function]}
               onFocus={[Function]}
               onMouseDown={[Function]}
+              role="button"
+              tabIndex={0}
             >
               <div
                 aria-invalid={false}
@@ -830,7 +834,6 @@ exports[`renders disabled Select correctly 1`] = `
                     "position": "relative",
                   }
                 }
-                tabIndex={0}
               >
                 <label
                   data-radium={true}
@@ -1176,6 +1179,8 @@ exports[`renders invalid Select correctly 1`] = `
               onBlur={[Function]}
               onFocus={[Function]}
               onMouseDown={[Function]}
+              role="button"
+              tabIndex={0}
             >
               <div
                 aria-invalid={false}
@@ -1206,7 +1211,6 @@ exports[`renders invalid Select correctly 1`] = `
                     "position": "relative",
                   }
                 }
-                tabIndex={0}
               >
                 <label
                   data-radium={true}
@@ -1551,6 +1555,8 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
             onBlur={[Function]}
             onFocus={[Function]}
             onMouseDown={[Function]}
+            role="button"
+            tabIndex={0}
           >
             <div
               aria-invalid={false}
@@ -1581,7 +1587,6 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                   "position": "relative",
                 }
               }
-              tabIndex={0}
             >
               <label
                 data-radium={true}
