@@ -12,7 +12,7 @@ const TestComponent = ({ isThing, isOtherThing }) => {
 
   return <div>isNothing!</div>
 }
-TestComponent.PropTypes = {
+TestComponent.propTypes = {
   isThing: PropTypes.boolean,
   isOtherThing: PropTypes.boolean,
 }
