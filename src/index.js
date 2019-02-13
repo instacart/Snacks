@@ -44,6 +44,7 @@ import Fade from './components/Transitions/Fade'
 import Portal from './components/Portal/Portal'
 import Text from './components/typography/Text'
 import { themePropTypes } from './styles/themer/utils'
+import TestComponent from './components/TestComponent/TestComponent'
 
 export {
   // styles
@@ -104,5 +105,7 @@ export {
   MenuDivider,
   DropdownMenu,
   Portal,
-  Text
+  Text,
+
+  TestComponent
 }
