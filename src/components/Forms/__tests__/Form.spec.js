@@ -23,103 +23,103 @@ it('renders Form with TextField correctly', () => {
   expect(tree).toMatchSnapshot()
 })
 
-// it('fires the onSubmit prop when valid', () => {
-//   const onSubmit = spy()
-//   const wrapper = mount(
-//     <Form
-//       onSubmit={onSubmit}
-//     >
-//       <div style={{width: '335px'}}>
-//         <div style={{marginBottom: '10px'}}>
-//           <TextField
-//             name="email"
-//             type="email"
-//             id="email_id"
-//             floatingLabelText="Email"
-//             value="test@test.com"
-//           />
-//         </div>
+it('fires the onSubmit prop when valid', () => {
+  const onSubmit = spy()
+  const wrapper = mount(
+    <Form
+      onSubmit={onSubmit}
+    >
+      <div style={{width: '335px'}}>
+        <div style={{marginBottom: '10px'}}>
+          <TextField
+            name="email"
+            type="email"
+            id="email_id"
+            floatingLabelText="Email"
+            value="test@test.com"
+          />
+        </div>
 
-//         <div style={{marginTop: '10px'}}>
-//           <Button type="submit">
-//            Submit
-//           </Button>
-//         </div>
-//       </div>
-//     </Form>
-//   )
+        <div style={{marginTop: '10px'}}>
+          <Button type="submit">
+           Submit
+          </Button>
+        </div>
+      </div>
+    </Form>
+  )
 
-//   stub(wrapper.instance(), 'formIsValid').callsFake(() => (true))
-//   stub(wrapper.instance(), 'updateModel').callsFake(() => {})
+  stub(wrapper.instance(), 'formIsValid').callsFake(() => (true))
+  stub(wrapper.instance(), 'updateModel').callsFake(() => {})
 
-//   wrapper.find(Button).simulate('submit')
-//   expect(onSubmit.calledOnce).toBe(true)
-// })
+  wrapper.find(Button).simulate('submit')
+  expect(onSubmit.calledOnce).toBe(true)
+})
 
-// it('wont fire the onSubmit prop when not valid', () => {
-//   const onSubmit = spy()
-//   const wrapper = mount(
-//     <Form
-//       onSubmit={onSubmit}
-//     >
-//       <div style={{width: '335px'}}>
-//         <div style={{marginBottom: '10px'}}>
-//           <TextField
-//             name="email"
-//             type="email"
-//             id="email_id"
-//             floatingLabelText="Email"
-//             value="test@test.com"
-//           />
-//         </div>
+it('wont fire the onSubmit prop when not valid', () => {
+  const onSubmit = spy()
+  const wrapper = mount(
+    <Form
+      onSubmit={onSubmit}
+    >
+      <div style={{width: '335px'}}>
+        <div style={{marginBottom: '10px'}}>
+          <TextField
+            name="email"
+            type="email"
+            id="email_id"
+            floatingLabelText="Email"
+            value="test@test.com"
+          />
+        </div>
 
-//         <div style={{marginTop: '10px'}}>
-//           <Button type="submit">
-//            Submit
-//           </Button>
-//         </div>
-//       </div>
-//     </Form>
-//   )
+        <div style={{marginTop: '10px'}}>
+          <Button type="submit">
+           Submit
+          </Button>
+        </div>
+      </div>
+    </Form>
+  )
 
-//   stub(wrapper.instance(), 'formIsValid').callsFake(() => (false))
-//   stub(wrapper.instance(), 'updateModel').callsFake(() => {})
+  stub(wrapper.instance(), 'formIsValid').callsFake(() => (false))
+  stub(wrapper.instance(), 'updateModel').callsFake(() => {})
 
-//   wrapper.find(Button).simulate('submit')
-//   expect(onSubmit.calledOnce).toBe(false)
-// })
+  wrapper.find(Button).simulate('submit')
+  expect(onSubmit.calledOnce).toBe(false)
+})
 
-// it('fire the onValidationError prop when not valid', () => {
-//   const onSubmit = spy()
-//   const onValidationError = spy()
-//   const wrapper = mount(
-//     <Form
-//       onSubmit={onSubmit}
-//       onValidationError={onValidationError}
-//     >
-//       <div style={{width: '335px'}}>
-//         <div style={{marginBottom: '10px'}}>
-//           <TextField
-//             name="email"
-//             type="email"
-//             id="email_id"
-//             floatingLabelText="Email"
-//             value="test@test.com"
-//           />
-//         </div>
+it('fire the onValidationError prop when not valid', () => {
+  const onSubmit = spy()
+  const onValidationError = spy()
+  const wrapper = mount(
+    <Form
+      onSubmit={onSubmit}
+      onValidationError={onValidationError}
+    >
+      <div style={{width: '335px'}}>
+        <div style={{marginBottom: '10px'}}>
+          <TextField
+            name="email"
+            type="email"
+            id="email_id"
+            floatingLabelText="Email"
+            value="test@test.com"
+          />
+        </div>
 
-//         <div style={{marginTop: '10px'}}>
-//           <Button type="submit">
-//            Submit
-//           </Button>
-//         </div>
-//       </div>
-//     </Form>
-//   )
+        <div style={{marginTop: '10px'}}>
+          <Button type="submit">
+           Submit
+          </Button>
+        </div>
+      </div>
+    </Form>
+  )
 
-//   stub(wrapper.instance(), 'formIsValid').callsFake(() => (false))
-//   stub(wrapper.instance(), 'updateModel').callsFake(() => {})
+  stub(wrapper.instance(), 'formIsValid').callsFake(() => (false))
+  stub(wrapper.instance(), 'updateModel').callsFake(() => {})
 
-//   wrapper.find(Button).simulate('submit')
-//   expect(onValidationError.calledOnce).toBe(true)
-// })
+  wrapper.find(Button).simulate('submit')
+  expect(onValidationError.calledOnce).toBe(true)
+})
