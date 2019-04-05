@@ -35,7 +35,6 @@ const styles = {
       ':focus': {
         textDecoration: 'none',
         backgroundColor: colors.GRAY_93,
-        outline: 'none'
       }
     }
   }

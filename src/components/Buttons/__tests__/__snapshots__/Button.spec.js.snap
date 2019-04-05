@@ -561,9 +561,7 @@ exports[`Button renders correctly when disabled 1`] = `
   <button
     data-radium={true}
     disabled={true}
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onMouseDown={[Function]}
     style={
       Object {

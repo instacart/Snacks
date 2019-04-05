@@ -38,7 +38,6 @@ const styles = {
     paddingTop: '25px',
     ...spacing.PADDING_X_XS,
     paddingBottom: spacing.XS,
-    outline: 'none',
     position: 'relative',
     width: '100%',
     WebkitOpacity: 1,
