@@ -81,7 +81,6 @@ exports[`renders Form with TextField correctly 1`] = `
               "marginLeft": 0,
               "marginRight": 0,
               "marginTop": 0,
-              "outline": "none",
               "paddingBottom": 8,
               "paddingLeft": 8,
               "paddingRight": 8,
