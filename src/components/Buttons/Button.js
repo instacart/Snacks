@@ -32,10 +32,6 @@ const baseStyles = {
   // Ensures any icons stay vertically centered
   display: 'inline-flex',
   alignItems: 'center',
-
-  ':focus': {
-    outline: 'none'
-  }
 }
 
 const sizeStyles = {

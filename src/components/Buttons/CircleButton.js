@@ -55,7 +55,6 @@ const CircleButton = props => {
           },
           ':focus': {
             backgroundColor: actionHover,
-            outline: 'none'
           },
         },
         props.style
