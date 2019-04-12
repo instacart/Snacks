@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import PropTypes            from 'prop-types'
-import Radium               from 'radium'
-import { colors }           from '../../styles'
-import withTheme            from '../../styles/themer/withTheme'
-import { themePropTypes }   from '../../styles/themer/utils'
+import PropTypes from 'prop-types'
+import Radium from 'radium'
+import { colors } from '../../styles'
+import withTheme from '../../styles/themer/withTheme'
+import { themePropTypes } from '../../styles/themer/utils'
 
 const styles = {
   label: {
@@ -28,20 +28,20 @@ const styles = {
     pointerEvents: 'none',
   },
   error: {
-    color: colors.RED_700
+    color: colors.RED_700,
   },
   disabled: {
     cursor: 'not-allowed',
-    color: colors.GRAY_74
-  }
+    color: colors.GRAY_74,
+  },
 }
 const getSnackStyles = snacksTheme => {
   const { action } = snacksTheme.colors
 
   return {
     active: {
-      color : action
-    }
+      color: action,
+    },
   }
 }
 
@@ -50,38 +50,29 @@ const getSnackStyles = snacksTheme => {
 class FloatingLabel extends Component {
   static propTypes = {
     /** Disabled styling for the label */
-    disabled : PropTypes.bool,
+    disabled: PropTypes.bool,
     /** Float the label */
-    float    : PropTypes.bool,
+    float: PropTypes.bool,
     /** Show error styling */
-    hasError : PropTypes.bool,
+    hasError: PropTypes.bool,
     /** HTML for attribute */
-    htmlFor  : PropTypes.string,
+    htmlFor: PropTypes.string,
     /** Is the input in an active state */
-    isActive : PropTypes.bool,
+    isActive: PropTypes.bool,
     /** Override styles */
-    style    : PropTypes.object,
+    style: PropTypes.object,
     /** Label text */
-    text     : PropTypes.string,
+    text: PropTypes.string,
     /** Snacks theme attributes provided by `Themer` */
-    snacksTheme: themePropTypes
+    snacksTheme: themePropTypes,
   }
 
   static defaultProps = {
-    disabled: false
+    disabled: false,
   }
 
   render() {
-    const {
-      float,
-      disabled,
-      hasError,
-      htmlFor,
-      isActive,
-      style,
-      text,
-      snacksTheme
-    } = this.props
+    const { float, disabled, hasError, htmlFor, isActive, style, text, snacksTheme } = this.props
 
     const snacksStyles = getSnackStyles(snacksTheme)
 
@@ -91,14 +82,11 @@ class FloatingLabel extends Component {
       disabled && styles.disabled,
       isActive && snacksStyles.active,
       hasError && styles.error,
-      style
+      style,
     ]
 
     return (
-      <label
-        htmlFor={htmlFor}
-        style={inputStyles}
-      >
+      <label htmlFor={htmlFor} style={inputStyles}>
         {text}
       </label>
     )

@@ -10,7 +10,7 @@ describe('isEqual', () => {
     })
   })
   describe('with arrays', () => {
-    const genArray = (val) => [1,'s', {val}]
+    const genArray = val => [1, 's', { val }]
     const first = genArray('f')
     it('returns true when equal', () => {
       expect(isEqual(genArray('f'), genArray('f'))).toBe(true)
@@ -20,8 +20,8 @@ describe('isEqual', () => {
     })
   })
   describe('with objects', () => {
-    const genObj = (first) => ({
-      first
+    const genObj = first => ({
+      first,
     })
     describe('that are simple', () => {
       const first = genObj('key')
@@ -33,9 +33,9 @@ describe('isEqual', () => {
       })
     })
     describe('that are complex', () => {
-      const genObj = (val) => ({
+      const genObj = val => ({
         first: 'key',
-        second: [1,'s', {val}]
+        second: [1, 's', { val }],
       })
       const first = genObj('values')
       it('returns true when equal', () => {

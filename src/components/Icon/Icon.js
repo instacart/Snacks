@@ -1,7 +1,7 @@
-import React     from 'react'
-import Radium    from 'radium'
-import hexValues from './hexValues'
+import React from 'react'
+import Radium from 'radium'
 import PropTypes from 'prop-types'
+import hexValues from './hexValues'
 
 const baseStyles = {
   fontSize: '16px',
@@ -27,11 +27,7 @@ const Icon = props => {
   const { style, onClick } = props
   const icon = getIcon(props)
   return (
-    <i
-      style={[baseStyles, style]}
-      aria-hidden={true}
-      onClick={onClick}
-    >
+    <i style={[baseStyles, style]} aria-hidden onClick={onClick}>
       {icon}
     </i>
   )
@@ -39,8 +35,8 @@ const Icon = props => {
 
 Icon.propTypes = {
   /**
-  * String name of icon - ex 'cart'
-  */
+   * String name of icon - ex 'cart'
+   */
   name: PropTypes.oneOf(Object.keys(hexValues)),
   /** Hexcode of desired icon from ic-icons */
   code: PropTypes.string,
@@ -48,8 +44,8 @@ Icon.propTypes = {
   style: PropTypes.object,
   /** Callback function called after button click
    * @param {SyntheticEvent} event The react `SyntheticEvent`
-  */
-  onClick: PropTypes.func
+   */
+  onClick: PropTypes.func,
 }
 
 export default Radium(Icon)

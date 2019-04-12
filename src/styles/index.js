@@ -1,11 +1,6 @@
 import responsive from './responsive'
-import spacing    from './spacing'
-import colors     from './colors'
-import type       from './type'
+import spacing from './spacing'
+import colors from './colors'
+import type from './type'
 
-export {
-  responsive,
-  spacing,
-  colors,
-  type
-}
+export { responsive, spacing, colors, type }

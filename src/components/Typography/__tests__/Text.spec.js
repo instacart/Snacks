@@ -1,7 +1,7 @@
-import Text from '../Text'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { StyleRoot } from 'radium'
+import Text from '../Text'
 
 const getComponent = props => (
   <StyleRoot>
@@ -25,7 +25,7 @@ describe('Text', () => {
       'T.16',
       'T.14',
       'T.12',
-      'T.11'
+      'T.11',
     ]
 
     variants.forEach(variantName => {
@@ -51,9 +51,7 @@ describe('Text', () => {
 
   it('applies a custom font weight', () => {
     const component = getComponent({ variant: 'T.28', fontWeight: 'semiBold' })
-    const tree = renderer
-      .create(component)
-      .toJSON()
+    const tree = renderer.create(component).toJSON()
 
     expect(tree.children[0].props.style.fontWeight).toEqual(600)
   })

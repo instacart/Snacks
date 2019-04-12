@@ -1,10 +1,10 @@
-import Button from '../Button'
-import Icon from '../../Icon/Icon'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
 import { spy } from 'sinon'
+import Icon from '../../Icon/Icon'
+import Button from '../Button'
 
 describe('Button', () => {
   it('renders all sizes correctly', () => {
@@ -12,7 +12,7 @@ describe('Button', () => {
       { snacksStyle: 'primary', size: 'tiny' },
       { snacksStyle: 'primary', size: 'small' },
       { snacksStyle: 'primary', size: 'standard' },
-      { snacksStyle: 'primary', size: 'large' }
+      { snacksStyle: 'primary', size: 'large' },
     ]
 
     testCases.forEach(props => {
@@ -32,7 +32,7 @@ describe('Button', () => {
       { snacksStyle: 'primary', size: 'standard' },
       { snacksStyle: 'secondary', size: 'standard' },
       { snacksStyle: 'flat', size: 'standard' },
-      { snacksStyle: 'coupon', size: 'standard' }
+      { snacksStyle: 'coupon', size: 'standard' },
     ]
 
     testCases.forEach(props => {
@@ -65,7 +65,7 @@ describe('Button', () => {
       { icon: 'cart' },
       { icon: 'cart', iconPosition: 'right' },
       { icon: <Icon name="cart" /> },
-      { icon: <Icon name="cart" />, iconPosition: 'right' }
+      { icon: <Icon name="cart" />, iconPosition: 'right' },
     ]
 
     testCases.forEach(props => {
@@ -84,7 +84,7 @@ describe('Button', () => {
     const tree = renderer
       .create(
         <StyleRoot>
-          <Button elementAttributes={{'aria-label': 'foo'}} nacksType="primary">
+          <Button elementAttributes={{ 'aria-label': 'foo' }} nacksType="primary">
             Hi
           </Button>
         </StyleRoot>
@@ -92,7 +92,6 @@ describe('Button', () => {
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
-
 
   it('fires the onClick prop', () => {
     const onClick = spy()

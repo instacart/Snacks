@@ -2,16 +2,15 @@
  * A simple circular button
  *
  * @author [Dominic Cocchiarella ](https://github.com/docchia)
-*/
-import responsive   from '../../styles/responsive'
-import zIndex       from '../../styles/zIndex'
-import { spacings } from '../../styles/spacing'
-import withTheme          from '../../styles/themer/withTheme'
-import { themePropTypes } from '../../styles/themer/utils'
-
-import Radium    from 'radium'
-import React     from 'react'
+ */
+import Radium from 'radium'
+import React from 'react'
 import PropTypes from 'prop-types'
+import responsive from '../../styles/responsive'
+import zIndex from '../../styles/zIndex'
+import { spacings } from '../../styles/spacing'
+import withTheme from '../../styles/themer/withTheme'
+import { themePropTypes } from '../../styles/themer/utils'
 
 const styles = {
   default: {
@@ -25,9 +24,9 @@ const styles = {
     textAlign: 'center',
     lineHeight: '1',
     [responsive.xs]: {
-      display: 'none'
-    }
-  }
+      display: 'none',
+    },
+  },
 }
 
 const CircleButton = props => {
@@ -48,20 +47,20 @@ const CircleButton = props => {
           backgroundColor: action,
           color: primaryBackground,
           ':hover': {
-            backgroundColor: actionHover
+            backgroundColor: actionHover,
           },
           ':active': {
-            backgroundColor: actionHover
+            backgroundColor: actionHover,
           },
           ':focus': {
             backgroundColor: actionHover,
           },
         },
-        props.style
+        props.style,
       ]}
       disabled={props.disabled}
     >
-      { props.children }
+      {props.children}
     </button>
   )
 }
@@ -69,6 +68,7 @@ const CircleButton = props => {
 CircleButton.propTypes = {
   /** Label to be used by screen readers */
   ariaLabel: PropTypes.string,
+  children: PropTypes.node,
   /** Bool to disable click/touch listeners */
   disabled: PropTypes.bool,
   /** Callback function called after button click */
@@ -76,10 +76,7 @@ CircleButton.propTypes = {
   /** snacks theme attributes */
   snacksTheme: themePropTypes,
   /** Optional style overrides */
-  style: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array
-  ]),
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 }
 
 export default withTheme(Radium(CircleButton))

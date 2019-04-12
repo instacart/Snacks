@@ -3,7 +3,7 @@ import Radium from 'radium'
 import PropTypes from 'prop-types'
 import * as icons from './icons'
 
-const sizes = {small: '18px', standard: '24px', large: '36px'}
+const sizes = { small: '18px', standard: '24px', large: '36px' }
 
 SVGIcon.propTypes = {
   color: PropTypes.string,
@@ -16,17 +16,9 @@ SVGIcon.defaultProps = {
   size: 'standard',
 }
 
-function SVGIcon({color, name, size, ...props}) {
+function SVGIcon({ color, name, size, ...props }) {
   const Component = icons[name]
-  return (
-    <Component
-      aria-hidden={true}
-      fill={color}
-      width={sizes[size]}
-      height={sizes[size]}
-      {...props}
-    />
-  )
+  return <Component aria-hidden fill={color} width={sizes[size]} height={sizes[size]} {...props} />
 }
 
 export default Radium(SVGIcon)

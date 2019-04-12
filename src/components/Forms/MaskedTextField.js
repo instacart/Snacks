@@ -1,17 +1,17 @@
-import { colors }         from '../../styles'
-import withTheme          from '../../styles/themer/withTheme'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Radium from 'radium'
+import MaskedTextInput from 'react-text-mask'
+import { colors } from '../../styles'
+import withTheme from '../../styles/themer/withTheme'
 import { themePropTypes } from '../../styles/themer/utils'
-import FormComponent      from './FormComponent'
-import ValidationError    from './ValidationError'
-import FloatingLabel      from './FloatingLabel'
-import TextFieldHint      from './TextFieldHint'
-import ServerError        from './ServerError'
-import HelperText         from './HelperText'
-import React              from 'react'
-import PropTypes          from 'prop-types'
-import Radium             from 'radium'
-import MaskedTextInput    from 'react-text-mask'
-import spacing            from '../../styles/spacing'
+import FormComponent from './FormComponent'
+import ValidationError from './ValidationError'
+import FloatingLabel from './FloatingLabel'
+import TextFieldHint from './TextFieldHint'
+import ServerError from './ServerError'
+import HelperText from './HelperText'
+import spacing from '../../styles/spacing'
 
 const NoOp = () => {} // eslint-disable-line no-empty-function
 
@@ -24,7 +24,7 @@ const styles = {
   },
   inputContainer: {
     borderRadius: 4,
-    position: 'relative'
+    position: 'relative',
   },
   input: {
     backgroundColor: colors.WHITE,
@@ -46,36 +46,36 @@ const styles = {
     position: 'relative',
     width: '100%',
     WebkitOpacity: 1,
-    WebkitTapHighlightColor: 'rgba(0,0,0,0)'
+    WebkitTapHighlightColor: 'rgba(0,0,0,0)',
   },
   inputDisabled: {
     border: `1px dashed ${colors.GRAY_74}`,
     backgroundColor: colors.GRAY_93,
     color: colors.GRAY_46,
-    cursor: 'not-allowed'
+    cursor: 'not-allowed',
   },
   inputError: {
     border: `1px solid ${colors.RED_700}`,
-    backgroundColor: '#FDE6EB'
+    backgroundColor: '#FDE6EB',
   },
   fullWidth: {
-    width: '100%'
+    width: '100%',
   },
   halfWidth: {
-    width: 162
-  }
+    width: 162,
+  },
 }
 
 const getSnackStyles = snacksTheme => {
   const { action } = snacksTheme.colors
   return {
     highlight: {
-      border: `1px solid ${action}`
-    }
+      border: `1px solid ${action}`,
+    },
   }
 }
 
-const getInputSyles = ({props, theme, isFocused}) => {
+const getInputSyles = ({ props, theme, isFocused }) => {
   const snacksStyles = getSnackStyles(theme)
   const { disabled, hasError, inputStyle } = props
   const disabledStlyes = disabled ? styles.inputDisabled : {}
@@ -87,7 +87,7 @@ const getInputSyles = ({props, theme, isFocused}) => {
     ...inputStyle,
     ...disabledStlyes,
     ...errorStyles,
-    ...focusedStyles
+    ...focusedStyles,
   }
 }
 
@@ -97,76 +97,76 @@ const getInputSyles = ({props, theme, isFocused}) => {
 class MaskedTextField extends React.Component {
   static propTypes = {
     /** Name of the field */
-    name               : PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     /** Transforms the raw value from the input
-     * 
+     *
      * @example strips slashes from a phone number
      *   (value) => value.replace(NON_DIGIT_REGEX, '')
      * @param {string} value
      * @returns {string}
      */
-    getValue           : PropTypes.func.isRequired,
+    getValue: PropTypes.func.isRequired,
     /** The mask */
-    mask               : PropTypes.array.isRequired,
+    mask: PropTypes.array.isRequired,
     /** The pipe mask */
-    pipe               : PropTypes.func,
+    pipe: PropTypes.func,
     /** The mask hint */
-    maskHint           : PropTypes.string.isRequired,
+    maskHint: PropTypes.string.isRequired,
     /** The type of the input */
-    type               : PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
     /** HTML autocomplete attribute */
-    autoComplete       : PropTypes.string,
+    autoComplete: PropTypes.string,
     /** DefaultValue for non controlled component */
-    defaultValue       : PropTypes.any,
+    defaultValue: PropTypes.any,
     /** Disable the text field */
-    disabled           : PropTypes.bool,
+    disabled: PropTypes.bool,
     /** Text of label that will animate when TextField is focused */
-    floatingLabelText  : PropTypes.string,
+    floatingLabelText: PropTypes.string,
     /** Sets width to 100% */
-    fullWidth          : PropTypes.bool,
+    fullWidth: PropTypes.bool,
     /** Sets width to 162px */
-    halfWidth          : PropTypes.bool,
+    halfWidth: PropTypes.bool,
     /** FormComponent error for validation */
-    hasError           : PropTypes.bool,
+    hasError: PropTypes.bool,
     /** Helper text will show up in bottom right corner below TextField */
-    helperText         : PropTypes.string,
+    helperText: PropTypes.string,
     /** Uniq id for input */
-    id                 : PropTypes.string,
+    id: PropTypes.string,
     /** Style for input */
-    inputStyle         : PropTypes.object,
+    inputStyle: PropTypes.object,
     /** Set by FormComponent by default.   */
-    isValid            : PropTypes.bool,
+    isValid: PropTypes.bool,
     /** onFocus callback */
-    onFocus            : PropTypes.func,
-    /** onChange callback 
-     * 
+    onFocus: PropTypes.func,
+    /** onChange callback
+     *
      * @param {SyntheticEvent} event The react `SyntheticEvent`
      * @param {String} value The value from the input with `(`, `)`, space, and `-` characters removed
      * @param {String} rawValue The raw value from the input
-    */
-    
-    onChange           : PropTypes.func,
+     */
+
+    onChange: PropTypes.func,
     /** onBlur callback */
-    onBlur             : PropTypes.func,
+    onBlur: PropTypes.func,
     /** onKeyDown callback */
-    onKeyDown          : PropTypes.func,
+    onKeyDown: PropTypes.func,
     /** Mark the field as required.  */
-    required           : PropTypes.bool,
+    required: PropTypes.bool,
     /** Error from server to show ServerError message */
-    serverError        : PropTypes.string,
+    serverError: PropTypes.string,
     /** Wrapper styles */
-    style              : PropTypes.object,
+    style: PropTypes.object,
     /** Text to show for validation error  */
     validationErrorText: PropTypes.string,
     /** Value will make TextField a controlled component  */
-    value              : PropTypes.string,
+    value: PropTypes.string,
     /** Snacks theme attributes provided by `Themer` */
-    snacksTheme        : themePropTypes
+    snacksTheme: themePropTypes,
   }
 
   static defaultProps = {
     autoComplete: 'on',
-    disabled    : false,
+    disabled: false,
     defaultValue: null,
     onChange: NoOp,
     onKeyDown: NoOp,
@@ -175,16 +175,16 @@ class MaskedTextField extends React.Component {
   }
 
   state = {
-    hasValue: this.props.defaultValue !== null || Boolean(this.props.value)
+    hasValue: this.props.defaultValue !== null || Boolean(this.props.value),
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.disabled && !this.props.disabled) {
-      this.setState({isFocused: false})
+      this.setState({ isFocused: false })
     }
 
     if (!this.state.hasValue && nextProps.value) {
-      this.setState({hasValue: true})
+      this.setState({ hasValue: true })
     }
   }
 
@@ -198,31 +198,31 @@ class MaskedTextField extends React.Component {
 
   triggerFocus = () => this.input.focus()
 
-  handleInputChange = (e) => {
+  handleInputChange = e => {
     const { onChange } = this.props
     const { hasValue } = this.state
-    const value        = e.target.value
+    const { value } = e.target
     // Limit setState call to only when hasValue changes
     if (value && !hasValue) {
-      this.setState({hasValue: true})
+      this.setState({ hasValue: true })
     } else if (!value && hasValue) {
-      this.setState({hasValue: false})
+      this.setState({ hasValue: false })
     }
 
     onChange(e, this.props.getValue(value), value)
   }
 
-  handleInputFocus = (e) => {
-    this.setState({isFocused: true})
+  handleInputFocus = e => {
+    this.setState({ isFocused: true })
     this.props.onFocus(e)
   }
 
-  handleInputBlur = (e) => {
-    this.setState({isFocused: false})
+  handleInputBlur = e => {
+    this.setState({ isFocused: false })
     this.props.onBlur(e)
   }
 
-  handleKeyDown = (e) => {
+  handleKeyDown = e => {
     this.props.onKeyDown(e)
   }
 
@@ -247,13 +247,10 @@ class MaskedTextField extends React.Component {
       value,
       helperText,
       autoComplete,
-      snacksTheme
+      snacksTheme,
     } = this.props
 
-    const {
-      hasValue,
-      isFocused
-    } = this.state
+    const { hasValue, isFocused } = this.state
 
     return (
       <div
@@ -261,15 +258,10 @@ class MaskedTextField extends React.Component {
           styles.wrapper,
           fullWidth && styles.fullWidth,
           halfWidth && styles.halfWidth,
-          style
+          style,
         ]}
       >
-
-        {serverError && !disabled && !isValid &&
-          <ServerError
-            text={serverError}
-          />
-        }
+        {serverError && !disabled && !isValid && <ServerError text={serverError} />}
 
         <div style={styles.inputContainer}>
           <FloatingLabel
@@ -279,15 +271,11 @@ class MaskedTextField extends React.Component {
             isActive={isFocused}
             hasError={hasError}
             htmlFor={inputId}
-            style={{pointerEvents: 'none'}}
+            style={{ pointerEvents: 'none' }}
             snacksTheme={snacksTheme}
           />
 
-          <TextFieldHint
-            text={maskHint}
-            show={!hasValue && isFocused}
-            disabled={disabled}
-          />
+          <TextFieldHint text={maskHint} show={!hasValue && isFocused} disabled={disabled} />
 
           <MaskedTextInput
             mask={mask}
@@ -305,18 +293,18 @@ class MaskedTextField extends React.Component {
             placeholder=""
             defaultValue={value !== undefined ? undefined : defaultValue}
             disabled={disabled}
-            keepCharPositions={true}
+            keepCharPositions
             type={this.props.type}
             render={(ref, props) => (
               <input
-                ref={(input) => {
+                ref={input => {
                   this.input = input
-                  ref(input)}
-                }
+                  ref(input)
+                }}
                 style={getInputSyles({
                   props: this.props,
                   theme: snacksTheme,
-                  isFocused
+                  isFocused,
                 })}
                 {...props}
               />
@@ -337,4 +325,3 @@ class MaskedTextField extends React.Component {
 }
 
 export default MaskedTextField
-

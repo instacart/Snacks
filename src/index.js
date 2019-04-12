@@ -42,32 +42,28 @@ import Slide from './components/Transitions/Slide'
 import Grow from './components/Transitions/Grow'
 import Fade from './components/Transitions/Fade'
 import Portal from './components/Portal/Portal'
-import Text from './components/typography/Text'
+import Text from './components/Typography/Text'
 import { themePropTypes } from './styles/themer/utils'
 
 export {
   // styles
   colors,
   zIndex,
-
   // style overriding ()
   GlobalTheme,
   Normalize,
   SetStyles,
-
   // theming
   themer,
   withTheme,
   themePropTypes,
-
   // grid system
   responsive,
   spacing,
   Grid,
   Column,
   Row,
-
-  //forms
+  // forms
   Form,
   FormComponent,
   FloatingLabel,
@@ -78,12 +74,10 @@ export {
   TextField,
   Select,
   ValidationError,
-
   // transitions
   Grow,
   Fade,
   Slide,
-
   // components
   Pill,
   Tooltip,
@@ -104,5 +98,5 @@ export {
   MenuDivider,
   DropdownMenu,
   Portal,
-  Text
+  Text,
 }

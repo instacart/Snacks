@@ -1,30 +1,22 @@
 import React, { PureComponent } from 'react'
-import PropTypes                from 'prop-types'
-import InnerToolTip             from './InnerToolTip'
-import TooltipOverlay           from './TooltipOverlay'
+import PropTypes from 'prop-types'
+import InnerToolTip from './InnerToolTip'
+import TooltipOverlay from './TooltipOverlay'
 
 const noop = () => {} // eslint-disable-line no-empty-function
 
 class Tooltip extends PureComponent {
   static propTypes = {
-    size: PropTypes.oneOf([
-      'small',
-      'medium',
-      'large',
-    ]),
-    placement: PropTypes.oneOf([
-      'top',
-      'left',
-      'right',
-      'bottom',
-    ]),
+    children: PropTypes.node,
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    placement: PropTypes.oneOf(['top', 'left', 'right', 'bottom']),
     style: PropTypes.shape({
       border: PropTypes.string,
       padding: PropTypes.string,
-      boxShadow: PropTypes.srting,
+      boxShadow: PropTypes.string,
     }),
     arrowStyle: PropTypes.shape({
-      border: PropTypes.srting, 
+      border: PropTypes.string,
       boxShadowRight: PropTypes.string,
       boxShadowBottom: PropTypes.string,
       boxShadowLeft: PropTypes.string,
@@ -46,22 +38,25 @@ class Tooltip extends PureComponent {
   }
 
   state = {
-    show: false
+    show: false,
   }
 
   handleToggle = () => {
-    const {onDismiss, onShow} = this.props
-    this.setState({show: !this.state.show}, () => {
-      if (this.state.show) {
-        onShow()
-      }  else {
-        onDismiss()
+    const { onDismiss, onShow } = this.props
+    this.setState(
+      prevState => ({ show: !prevState.show }),
+      () => {
+        if (this.state.show) {
+          onShow()
+        } else {
+          onDismiss()
+        }
       }
-    })
+    )
   }
 
   handleHideToolTip = () => {
-    const {onDismiss} = this.props
+    const { onDismiss } = this.props
     this.setState({ show: false })
     onDismiss()
   }
@@ -70,29 +65,23 @@ class Tooltip extends PureComponent {
     const { target, isVisible } = this.props
     const { show } = this.state
 
-    if (!target) { return }
+    if (!target) {
+      return
+    }
     const extraProps = isVisible == null ? { onClick: this.handleToggle.bind(this) } : {}
 
     return React.cloneElement(target, {
-      ref: (node) => {
+      ref: node => {
         this.trigger = node
       },
       'aria-haspopup': true,
       'aria-expanded': isVisible || show,
-      ...extraProps
+      ...extraProps,
     })
   }
 
   render() {
-    const {
-      children,
-      placement,
-      size,
-      style,
-      arrowStyle,
-      snacksStyle,
-      isVisible,
-    } = this.props
+    const { children, placement, size, style, arrowStyle, snacksStyle, isVisible } = this.props
 
     return (
       <div>
@@ -103,12 +92,7 @@ class Tooltip extends PureComponent {
           show={isVisible || this.state.show}
           onRootClose={this.handleHideToolTip}
         >
-          <InnerToolTip
-            size={size}
-            style={style}
-            arrowStyle={arrowStyle}
-            snacksStyle={snacksStyle}
-          >
+          <InnerToolTip size={size} style={style} arrowStyle={arrowStyle} snacksStyle={snacksStyle}>
             {children}
           </InnerToolTip>
         </TooltipOverlay>

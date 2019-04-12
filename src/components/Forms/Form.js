@@ -1,39 +1,39 @@
-import React     from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import isEqual from 'lodash.isequal'
 
 class Form extends React.Component {
   static propTypes = {
     /** Form html chilren */
-    children         : PropTypes.node,
+    children: PropTypes.node,
     /** HTML form attributes */
-    formProps        : PropTypes.shape({}),
+    formProps: PropTypes.shape({}),
     /** onSubmit callback will pass in model as parameter */
-    onSubmit         : PropTypes.func,
-    /** onValidationError callback will pass in invalid FormComponents as parameter*/
+    onSubmit: PropTypes.func,
+    /** onValidationError callback will pass in invalid FormComponents as parameter */
     onValidationError: PropTypes.func,
     /** errors from server mapped to model names. Will attach serverErrors styling to FormComppnents */
-    serverErrors     : PropTypes.shape({})
+    serverErrors: PropTypes.shape({}),
   }
 
   static childContextTypes = {
-    ICFormable: PropTypes.object
+    ICFormable: PropTypes.object,
   }
 
   constructor() {
     super()
-    this.state             = { serverErrors: null }
-    this.model             = {}
-    this.formComponents    = {}
+    this.state = { serverErrors: null }
+    this.model = {}
+    this.formComponents = {}
     this.invalidComponents = []
   }
 
   getChildContext() {
     return {
       ICFormable: {
-        registerComponent  : this.registerComponent,
-        unregisterComponent: this.unregisterComponent
-      }
+        registerComponent: this.registerComponent,
+        unregisterComponent: this.unregisterComponent,
+      },
     }
   }
 
@@ -43,29 +43,42 @@ class Form extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.serverErrors && !isEqual(this.state.serverErrors, nextProps.serverErrors)) {
-      this.setState({serverErrors: nextProps.serverErrors}, () => {
+      this.setState({ serverErrors: nextProps.serverErrors }, () => {
         this.setErrorsOnFormComponents(this.state.serverErrors)
       })
     }
   }
 
-  registerComponent = (component) => {
-    this.formComponents[component.props.name] = component
-  }
-
-  unregisterComponent = (component) => {
-    delete this.formComponents[component.props.name]
-    delete this.model[component.props.name]
-  }
-
   setErrorsOnFormComponents(serverErrors) {
-    Object.keys(serverErrors).forEach( (name) => {
+    Object.keys(serverErrors).forEach(name => {
       const component = this.formComponents[name]
       component.setState({
         isValid: false,
-        serverError: serverErrors[name]
+        serverError: serverErrors[name],
       })
     })
+  }
+
+  handleSubmit = e => {
+    e && e.preventDefault()
+    this.updateModel()
+
+    if (this.formIsValid()) {
+      this.setState({ serverErrors: null }, () => {
+        this.props.onSubmit && this.props.onSubmit(this.model)
+      })
+    } else {
+      this.props.onValidationError && this.props.onValidationError(this.invalidComponents)
+    }
+  }
+
+  registerComponent = component => {
+    this.formComponents[component.props.name] = component
+  }
+
+  unregisterComponent = component => {
+    delete this.formComponents[component.props.name]
+    delete this.model[component.props.name]
   }
 
   formIsValid() {
@@ -75,7 +88,7 @@ class Form extends React.Component {
   }
 
   updateModel() {
-    Object.keys(this.formComponents).forEach((name) => {
+    Object.keys(this.formComponents).forEach(name => {
       const component = this.formComponents[name]
       if (component.props.disabled) {
         delete this.model[name]
@@ -85,24 +98,8 @@ class Form extends React.Component {
     })
   }
 
-  handleSubmit = (e) => {
-    e && e.preventDefault()
-    this.updateModel()
-
-    if (this.formIsValid()) {
-      this.setState({serverErrors: null}, () => {
-        this.props.onSubmit && this.props.onSubmit(this.model)
-      })
-    } else {
-      this.props.onValidationError && this.props.onValidationError(this.invalidComponents)
-    }
-  }
-
   render() {
-    const {
-      children,
-      formProps
-    } = this.props
+    const { children, formProps } = this.props
 
     return (
       <form {...formProps} onSubmit={this.handleSubmit}>

@@ -8,7 +8,7 @@ import { themePropTypes } from '../styles/themer/utils'
 const NoOp = () => {} // eslint-disable-line no-empty-function
 const INPUT_BTN_SIZE = 22
 
-const getStyles = (props) => ({
+const getStyles = props => ({
   button: {
     position: 'relative',
   },
@@ -43,67 +43,67 @@ const getEnabledColor = (props, state) => {
 }
 
 const getInputStyles = (props, state) => ({
-  width: props.width || INPUT_BTN_SIZE ,
+  width: props.width || INPUT_BTN_SIZE,
   height: INPUT_BTN_SIZE,
-  fill: props.isDisabled ? colors.GRAY_74 : getEnabledColor(props, state)
+  fill: props.isDisabled ? colors.GRAY_74 : getEnabledColor(props, state),
 })
-
-
 
 class RadioCheckboxBase extends React.PureComponent {
   static propTypes = {
-    aria          : PropTypes.shape({
-      label         :PropTypes.string,
+    aria: PropTypes.shape({
+      label: PropTypes.string,
     }),
-    renderInputButton : PropTypes.func.isRequired,
-    width           : PropTypes.number,
-    btnType       : PropTypes.oneOf(['radio', 'checkbox']).isRequired,
-    isDisabled    : PropTypes.bool,
-    children      : PropTypes.node,
-    id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    isSelected    : PropTypes.bool,
-    onChange      : PropTypes.func,
-    onBlur        : PropTypes.func,
-    onFocus       : PropTypes.func,
-    style         : PropTypes.shape({
-      button        : PropTypes.object,
-      label         : PropTypes.object,
-      wrapEl        : PropTypes.object,
-      inputBtn      : PropTypes.object,
+    renderInputButton: PropTypes.func.isRequired,
+    width: PropTypes.number,
+    btnType: PropTypes.oneOf(['radio', 'checkbox']).isRequired,
+    isDisabled: PropTypes.bool,
+    children: PropTypes.node,
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    isSelected: PropTypes.bool,
+    onChange: PropTypes.func,
+    onBlur: PropTypes.func,
+    onFocus: PropTypes.func,
+    style: PropTypes.shape({
+      button: PropTypes.object,
+      label: PropTypes.object,
+      wrapEl: PropTypes.object,
+      inputBtn: PropTypes.object,
     }),
-    snacksTheme   : themePropTypes,
-    value         : PropTypes.string,
-    wrapEl        : PropTypes.string,
+    snacksTheme: themePropTypes,
+    value: PropTypes.string,
+    wrapEl: PropTypes.string,
   }
 
   static defaultProps = {
-    aria        : {},
-    isSelected  : false,
-    onChange    : NoOp,
-    style       : {},
-    wrapEl      : 'div',
+    aria: {},
+    isSelected: false,
+    onChange: NoOp,
+    style: {},
+    wrapEl: 'div',
   }
 
   state = {
-    isSelected  : this.props.isSelected,
+    isSelected: this.props.isSelected,
   }
 
   componentWillReceiveProps(nextProps) {
     const { isSelected } = nextProps
 
     if (this.props.isSelected !== isSelected) {
-      this.setState({isSelected: isSelected})
+      this.setState({ isSelected })
     }
   }
 
-  handleChange = (event) => {
+  handleChange = event => {
     const { btnType, onChange } = this.props
     const { isSelected } = this.state
 
-    if (btnType === 'radio' && isSelected) { return }
+    if (btnType === 'radio' && isSelected) {
+      return
+    }
 
-    this.setState({isSelected: !isSelected})
-    onChange(event, {...this.props, isSelected: !isSelected})
+    this.setState({ isSelected: !isSelected })
+    onChange(event, { ...this.props, isSelected: !isSelected })
   }
 
   renderInputBtn() {
@@ -113,13 +113,13 @@ class RadioCheckboxBase extends React.PureComponent {
     const internalStyle = getStyles(this.props)
 
     return (
-      <div style={{...internalStyle.button, ...style.button}}>
+      <div style={{ ...internalStyle.button, ...style.button }}>
         {renderInputButton(isSelected, getInputStyles(this.props, this.state))}
         <input
           id={id}
           type={btnType}
           onChange={this.handleChange}
-          style={{...internalStyle.inputBtn, ...style.inputBtn}}
+          style={{ ...internalStyle.inputBtn, ...style.inputBtn }}
           value={value}
           checked={isSelected}
           disabled={isDisabled}
@@ -132,7 +132,7 @@ class RadioCheckboxBase extends React.PureComponent {
   }
 
   render() {
-    const { children: labelText, id, style,  wrapEl } = this.props
+    const { children: labelText, id, style, wrapEl } = this.props
     const { isDisabled } = this.props
     const Element = wrapEl
     const internalStyle = getStyles(this.props)
@@ -142,9 +142,12 @@ class RadioCheckboxBase extends React.PureComponent {
     // ensure both text and id are supplied so the button and label are correctly associated
     if (labelText && id) {
       return (
-        <Element style={{...internalStyle.wrapEl, ...style.wrapEl}}>
+        <Element style={{ ...internalStyle.wrapEl, ...style.wrapEl }}>
           {this.renderInputBtn()}
-          <label htmlFor={id} style={{...internalStyle.label, ...style.label, ...isDisabledStyle}}>
+          <label
+            htmlFor={id}
+            style={{ ...internalStyle.label, ...style.label, ...isDisabledStyle }}
+          >
             {labelText}
           </label>
         </Element>

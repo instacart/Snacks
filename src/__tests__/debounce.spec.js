@@ -9,10 +9,10 @@ describe('debounce', () => {
   const mockObj = {
     func: () => {
       subject = 20
-    }
+    },
   }
   const debouncedFunc = jest.spyOn(mockObj, 'func')
-  const fastForwardTo = (wait) =>jest.runTimersToTime(wait)
+  const fastForwardTo = wait => jest.runTimersToTime(wait)
 
   beforeEach(() => {
     subject = 0

@@ -1,35 +1,36 @@
-import React            from 'react'
-import ReactTestUtils   from 'react-dom/test-utils'
-import renderer         from 'react-test-renderer'
-import { StyleRoot }    from 'radium'
-import { mount }        from 'enzyme'
-import { spy, stub }    from 'sinon'
-import Tooltip          from '../Tooltip'
+import React from 'react'
+import ReactTestUtils from 'react-dom/test-utils'
+import renderer from 'react-test-renderer'
+import { StyleRoot } from 'radium'
+import { mount } from 'enzyme'
+import { spy, stub } from 'sinon'
+import Tooltip from '../Tooltip'
 
 describe('Tooltip', () => {
-
   it('renders Tooltip properly', () => {
-    const tree = renderer.create(
-      <StyleRoot>
-        <Tooltip
-          target={(<div>TRIGGER</div>)}
-          placement='right'
-          size='small'
-          snacksStyle="secondary"
-        >
-          Right Secondary small
-        </Tooltip>
-      </StyleRoot>
-    ).toJSON()
+    const tree = renderer
+      .create(
+        <StyleRoot>
+          <Tooltip
+            target={<div>TRIGGER</div>}
+            placement="right"
+            size="small"
+            snacksStyle="secondary"
+          >
+            Right Secondary small
+          </Tooltip>
+        </StyleRoot>
+      )
+      .toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   it('expect overlay to appear correctly when shown', () => {
     const tooltip = mount(
       <Tooltip
-        target={(<button>TRIGGER</button>)}
-        placement='right'
-        size='small'
+        target={<button>TRIGGER</button>}
+        placement="right"
+        size="small"
         snacksStyle="secondary"
       >
         Right Secondary small
@@ -48,9 +49,9 @@ describe('Tooltip', () => {
     const onShow = spy()
     const tooltip = mount(
       <Tooltip
-        target={(<button>TRIGGER</button>)}
-        placement='right'
-        size='small'
+        target={<button>TRIGGER</button>}
+        placement="right"
+        size="small"
         snacksStyle="secondary"
         onShow={onShow}
         onDismiss={onDismiss}
@@ -67,13 +68,7 @@ describe('Tooltip', () => {
   })
 
   it('should not change its internal state if the component is controlled through isVisible', () => {
-      
-    const tooltip = mount(
-      <Tooltip
-        target={(<button>TRIGGER</button>)}
-        isVisible={true}
-      />
-    )
+    const tooltip = mount(<Tooltip target={<button>TRIGGER</button>} isVisible />)
 
     const trigger = tooltip.find('button').last()
     trigger.last().simulate('click')
@@ -82,11 +77,7 @@ describe('Tooltip', () => {
   })
 
   it('should change its internal state when element is uncontrolled', () => {
-    const tooltip = mount(
-      <Tooltip
-        target={(<button>TRIGGER</button>)}
-      />
-    )
+    const tooltip = mount(<Tooltip target={<button>TRIGGER</button>} />)
 
     expect(tooltip.state().show).toEqual(false)
 
@@ -97,12 +88,7 @@ describe('Tooltip', () => {
   })
 
   it('should not change its internal state when passing in false for isVisible', () => {
-    const tooltip = mount(
-      <Tooltip
-        target={(<button>TRIGGER</button>)}
-        isVisible={false}
-      />
-    )
+    const tooltip = mount(<Tooltip target={<button>TRIGGER</button>} isVisible={false} />)
 
     const trigger = tooltip.find('button').last()
     trigger.last().simulate('click')
@@ -111,19 +97,10 @@ describe('Tooltip', () => {
     expect(tooltip.state().show).toEqual(false)
   })
 
-
   it('should have false show state and true isVisible prop when not simulating click', () => {
-
-    const tooltip = mount(
-      <Tooltip
-        target={(<button>TRIGGER</button>)}
-        isVisible={true}
-      >
-      </Tooltip>
-    )
+    const tooltip = mount(<Tooltip target={<button>TRIGGER</button>} isVisible />)
 
     expect(tooltip.props().isVisible).toEqual(true)
     expect(tooltip.state().show).toEqual(false)
   })
-
 })

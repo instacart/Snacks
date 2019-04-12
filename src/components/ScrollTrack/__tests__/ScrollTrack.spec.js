@@ -1,49 +1,52 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import ScrollTrack from '../ScrollTrack'
-import Icon from '../../Icon/Icon'
 import { StyleRoot } from 'radium'
 import { ReactWrapper, mount } from 'enzyme'
 import { spy } from 'sinon'
+import Icon from '../../Icon/Icon'
+import ScrollTrack from '../ScrollTrack'
 
 it('renders ScrollTrack correctly', () => {
-  const tree = renderer.create(
-    <StyleRoot>
-      <div>
-        <ScrollTrack leftOverride={0} >
-          <p>one</p>
-          <p>two</p>
-          <p>three</p>
-          <p>four</p>
-          <p>five</p>
-          <p>six</p>
-          <p>seven</p>
-        </ScrollTrack>
-      </div>
-    </StyleRoot>
-  ).toJSON()
+  const tree = renderer
+    .create(
+      <StyleRoot>
+        <div>
+          <ScrollTrack leftOverride={0}>
+            <p>one</p>
+            <p>two</p>
+            <p>three</p>
+            <p>four</p>
+            <p>five</p>
+            <p>six</p>
+            <p>seven</p>
+          </ScrollTrack>
+        </div>
+      </StyleRoot>
+    )
+    .toJSON()
   expect(tree).toMatchSnapshot()
 })
 
 it('renders ScrollTrack without children correctly', () => {
-  const tree = renderer.create(
-    <StyleRoot>
-      <div>
-        <ScrollTrack leftOverride={0} >
-        </ScrollTrack>
-      </div>
-    </StyleRoot>
-  ).toJSON()
+  const tree = renderer
+    .create(
+      <StyleRoot>
+        <div>
+          <ScrollTrack leftOverride={0} />
+        </div>
+      </StyleRoot>
+    )
+    .toJSON()
   expect(tree).toMatchSnapshot()
 })
 
 it('renders ScrollTrack buttons correctly', () => {
   const styles = {
     RightArrow: {
-      backgroundColor: 'blue'
+      backgroundColor: 'blue',
     },
     LeftArrow: {
-      backgroundColor: 'red'
+      backgroundColor: 'red',
     },
   }
 
@@ -76,7 +79,10 @@ it('renders ScrollTrack buttons correctly', () => {
   expect(rightButtonStyle.display).toEqual('none')
 
   // show right arrow
-  track.find(ScrollTrack).instance().showRightArrow()
+  track
+    .find(ScrollTrack)
+    .instance()
+    .showRightArrow()
   track.update()
 
   // check arrow is showing and has correct styles
@@ -93,7 +99,10 @@ it('renders ScrollTrack buttons correctly', () => {
   expect(leftButtonStyle.display).toEqual('none')
 
   // show left arrow
-  track.find(ScrollTrack).instance().showLeftArrow()
+  track
+    .find(ScrollTrack)
+    .instance()
+    .showLeftArrow()
   track.update()
   buttons = track.find('button')
   leftButton = buttons.first()
@@ -107,7 +116,10 @@ it('renders ScrollTrack buttons correctly', () => {
   expect(leftButtonStyle.backgroundColor).toEqual(styles.LeftArrow.backgroundColor)
 
   // hide both arrows
-  track.find(ScrollTrack).instance().hideArrows()
+  track
+    .find(ScrollTrack)
+    .instance()
+    .hideArrows()
   track.update()
   buttons = track.find('button')
   leftButton = buttons.first()
@@ -123,42 +135,44 @@ it('renders ScrollTrack buttons correctly', () => {
 it('renders custom ScrollTrack buttons correctly', () => {
   const styles = {
     RightArrow: {
-      backgroundColor: 'blue'
+      backgroundColor: 'blue',
     },
     LeftArrow: {
-      backgroundColor: 'red'
+      backgroundColor: 'red',
     },
   }
 
-  const tree = renderer.create(
-    <StyleRoot>
-      <div>
-        <ScrollTrack
-          styles={styles}
-          backButtonContent={'HI'}
-          nextButtonElement={<Icon name='cart' />}
-        >
-          <p>one</p>
-          <p>two</p>
-          <p>three</p>
-          <p>four</p>
-          <p>five</p>
-          <p>six</p>
-          <p>seven</p>
-        </ScrollTrack>
-      </div>
-    </StyleRoot>
-  ).toJSON()
+  const tree = renderer
+    .create(
+      <StyleRoot>
+        <div>
+          <ScrollTrack
+            styles={styles}
+            backButtonContent={'HI'}
+            nextButtonElement={<Icon name="cart" />}
+          >
+            <p>one</p>
+            <p>two</p>
+            <p>three</p>
+            <p>four</p>
+            <p>five</p>
+            <p>six</p>
+            <p>seven</p>
+          </ScrollTrack>
+        </div>
+      </StyleRoot>
+    )
+    .toJSON()
   expect(tree).toMatchSnapshot()
 })
 
 it('works with custom ScrollTrack buttons correctly', () => {
   const styles = {
     RightArrow: {
-      backgroundColor: 'blue'
+      backgroundColor: 'blue',
     },
     LeftArrow: {
-      backgroundColor: 'red'
+      backgroundColor: 'red',
     },
   }
 
@@ -168,7 +182,7 @@ it('works with custom ScrollTrack buttons correctly', () => {
         <ScrollTrack
           styles={styles}
           backButtonContent={'HI'}
-          nextButtonElement={<Icon name='cart' />}
+          nextButtonElement={<Icon name="cart" />}
         >
           <p>one</p>
           <p>two</p>
@@ -195,7 +209,10 @@ it('works with custom ScrollTrack buttons correctly', () => {
   expect(rightButtonStyle.display).toEqual('none')
 
   // show right arrow
-  track.find(ScrollTrack).instance().showRightArrow()
+  track
+    .find(ScrollTrack)
+    .instance()
+    .showRightArrow()
   track.update()
 
   // check arrow is showing and has correct styles
@@ -212,7 +229,10 @@ it('works with custom ScrollTrack buttons correctly', () => {
   expect(leftButtonStyle.display).toEqual('none')
 
   // show left arrow
-  track.find(ScrollTrack).instance().showLeftArrow()
+  track
+    .find(ScrollTrack)
+    .instance()
+    .showLeftArrow()
   track.update()
   buttons = track.find('button')
   leftButton = buttons.first()
@@ -226,7 +246,10 @@ it('works with custom ScrollTrack buttons correctly', () => {
   expect(leftButtonStyle.backgroundColor).toEqual(styles.LeftArrow.backgroundColor)
 
   // hide both arrows
-  track.find(ScrollTrack).instance().hideArrows()
+  track
+    .find(ScrollTrack)
+    .instance()
+    .hideArrows()
   track.update()
   buttons = track.find('button')
   leftButton = buttons.first()
@@ -240,24 +263,23 @@ it('works with custom ScrollTrack buttons correctly', () => {
 })
 
 it('renders ScrollTrack with animation props correctly', () => {
-  const tree = renderer.create(
-    <StyleRoot>
-      <div>
-        <ScrollTrack
-          scrollTimingFunction={'ease-in'}
-          scrollSpeed={1000}
-        >
-          <p>one</p>
-          <p>two</p>
-          <p>three</p>
-          <p>four</p>
-          <p>five</p>
-          <p>six</p>
-          <p>seven</p>
-        </ScrollTrack>
-      </div>
-    </StyleRoot>
-  ).toJSON()
+  const tree = renderer
+    .create(
+      <StyleRoot>
+        <div>
+          <ScrollTrack scrollTimingFunction={'ease-in'} scrollSpeed={1000}>
+            <p>one</p>
+            <p>two</p>
+            <p>three</p>
+            <p>four</p>
+            <p>five</p>
+            <p>six</p>
+            <p>seven</p>
+          </ScrollTrack>
+        </div>
+      </StyleRoot>
+    )
+    .toJSON()
   expect(tree).toMatchSnapshot()
 })
 
@@ -270,18 +292,18 @@ it('onBefore promises & callbacks called correctly', async () => {
         <ScrollTrack
           onBeforeNext={() => {
             return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                  onBeforeNext()
-                  resolve()
-                }, 1)
+              setTimeout(() => {
+                onBeforeNext()
+                resolve()
+              }, 1)
             })
           }}
           onBeforeBack={() => {
             return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                  onBeforeBack()
-                  resolve()
-                }, 1)
+              setTimeout(() => {
+                onBeforeBack()
+                resolve()
+              }, 1)
             })
           }}
         >
@@ -298,15 +320,30 @@ it('onBefore promises & callbacks called correctly', async () => {
   )
 
   // show and click next
-  track.find(ScrollTrack).instance().showRightArrow()
-  track.find('button').last().simulate('click')
+  track
+    .find(ScrollTrack)
+    .instance()
+    .showRightArrow()
+  track
+    .find('button')
+    .last()
+    .simulate('click')
   await expect(onBeforeNext.calledOnce).resolves.toBeTruthy
   await expect(onBeforeNext.calledWith({})).resolves.toBeTruthy
 
   // show and click back
-  track.find(ScrollTrack).instance().hideRightArrow()
-  track.find(ScrollTrack).instance().showLeftArrow()
-  track.find('button').first().simulate('click')
+  track
+    .find(ScrollTrack)
+    .instance()
+    .hideRightArrow()
+  track
+    .find(ScrollTrack)
+    .instance()
+    .showLeftArrow()
+  track
+    .find('button')
+    .first()
+    .simulate('click')
   await expect(onBeforeBack.calledOnce).resolves.toBeTruthy
   await expect(onBeforeBack.calledWith({})).resolves.toBeTruthy
 })
@@ -322,20 +359,20 @@ it('onAfter promises & callbacks called correctly', async () => {
         <ScrollTrack
           onBeforeBack={() => {
             return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                  onBeforeBack()
-                  resolve()
-                }, 1)
+              setTimeout(() => {
+                onBeforeBack()
+                resolve()
+              }, 1)
             })
           }}
           onAfterBack={onAfterBack}
           onAfterNext={onAfterNext}
           onBeforeNext={() => {
             return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                  onBeforeNext()
-                  resolve()
-                }, 1)
+              setTimeout(() => {
+                onBeforeNext()
+                resolve()
+              }, 1)
             })
           }}
         >
@@ -352,16 +389,31 @@ it('onAfter promises & callbacks called correctly', async () => {
   )
 
   // show and click next
-  track.find(ScrollTrack).instance().showRightArrow()
-  track.find('button').last().simulate('click')
+  track
+    .find(ScrollTrack)
+    .instance()
+    .showRightArrow()
+  track
+    .find('button')
+    .last()
+    .simulate('click')
   expect(onAfterNext.calledOnce).toBeTruthy
   expect(onAfterNext.calledWith({})).toBeTruthy
   await expect(onAfterBack.calledAfter(onBeforeNext)).resolves.toBeTruthy
 
   // show and click back
-  track.find(ScrollTrack).instance().hideRightArrow()
-  track.find(ScrollTrack).instance().showLeftArrow()
-  track.find('button').first().simulate('click')
+  track
+    .find(ScrollTrack)
+    .instance()
+    .hideRightArrow()
+  track
+    .find(ScrollTrack)
+    .instance()
+    .showLeftArrow()
+  track
+    .find('button')
+    .first()
+    .simulate('click')
   expect(onAfterBack.calledOnce).toBeTruthy
   expect(onAfterBack.calledWith({})).toBeTruthy
   expect(onAfterBack.calledAfter(onBeforeBack)).toBeTruthy
@@ -385,11 +437,26 @@ it('works without any callbacks passed in', async () => {
   )
 
   // show and click next
-  track.find(ScrollTrack).instance().showRightArrow()
-  track.find('button').last().simulate('click')
+  track
+    .find(ScrollTrack)
+    .instance()
+    .showRightArrow()
+  track
+    .find('button')
+    .last()
+    .simulate('click')
 
   // show and click back
-  track.find(ScrollTrack).instance().hideRightArrow()
-  track.find(ScrollTrack).instance().showLeftArrow()
-  track.find('button').first().simulate('click')
+  track
+    .find(ScrollTrack)
+    .instance()
+    .hideRightArrow()
+  track
+    .find(ScrollTrack)
+    .instance()
+    .showLeftArrow()
+  track
+    .find('button')
+    .first()
+    .simulate('click')
 })

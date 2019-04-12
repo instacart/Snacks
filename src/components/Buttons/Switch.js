@@ -26,8 +26,8 @@ const STYLES = {
       transition: 'left 200ms ease-in-out',
     },
     selected: {
-      left: '16px'
-    }
+      left: '16px',
+    },
   },
   zero: {
     position: 'absolute',
@@ -38,60 +38,50 @@ const STYLES = {
     position: 'absolute',
     left: '8px',
     top: '7px',
-  }
+  },
 }
 
 const renderInputButton = (isSelected, style, displayOnOffLabel) => {
   return (
-    <div
-      style={[
-        style,
-        {backgroundColor: style.fill},
-        STYLES.background,
-      ]}
-    >
-      {displayOnOffLabel && isSelected && <OneSvg style={STYLES.one}/>}
-      {displayOnOffLabel && !isSelected && <ZeroSvg style={STYLES.zero}/>}
-      <div
-        style={[
-          STYLES.toggle.default,
-          isSelected && STYLES.toggle.selected
-        ]}
-      />
+    <div style={[style, { backgroundColor: style.fill }, STYLES.background]}>
+      {displayOnOffLabel && isSelected && <OneSvg style={STYLES.one} />}
+      {displayOnOffLabel && !isSelected && <ZeroSvg style={STYLES.zero} />}
+      <div style={[STYLES.toggle.default, isSelected && STYLES.toggle.selected]} />
     </div>
   )
 }
 
-const Switch = (props) => {
+const Switch = props => {
   return (
     <RadioCheckboxBase
-      btnType='checkbox'
+      btnType="checkbox"
       width={SWITCH_WIDTH}
-      renderInputButton={(isSelected, style) => renderInputButton(isSelected, style, props.displayOnOffLabel)}
+      renderInputButton={(isSelected, style) =>
+        renderInputButton(isSelected, style, props.displayOnOffLabel)
+      }
       {...props}
     />
   )
 }
 
 Switch.propTypes = {
-  aria          : PropTypes.shape({
-    label         :PropTypes.string,
+  aria: PropTypes.shape({
+    label: PropTypes.string,
   }),
-  children      : PropTypes.node,
-  id            : PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  isDisabled    : PropTypes.bool,
-  isSelected    : PropTypes.bool,
-  name          : PropTypes.string,
-  onChange      : PropTypes.func,
-  style         : PropTypes.shape({
-    button        : PropTypes.object,
-    label         : PropTypes.object,
-    wrapEl        : PropTypes.object,
+  children: PropTypes.node,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  isDisabled: PropTypes.bool,
+  isSelected: PropTypes.bool,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  style: PropTypes.shape({
+    button: PropTypes.object,
+    label: PropTypes.object,
+    wrapEl: PropTypes.object,
   }),
-  value         : PropTypes.string,
-  wrapEl        : PropTypes.string,
-  displayOnOffLabel    : PropTypes.bool
+  value: PropTypes.string,
+  wrapEl: PropTypes.string,
+  displayOnOffLabel: PropTypes.bool,
 }
 
 export default Switch
-

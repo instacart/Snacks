@@ -13,8 +13,6 @@ const OPACITY_DEFAULT = {
   end: 1,
 }
 
-const AXIS = 'y'
-
 class Fade extends PureComponent {
   static propTypes = {
     /**
@@ -24,8 +22,7 @@ class Fade extends PureComponent {
      */
     appear: PropTypes.bool,
 
-    /** Axis that is animated */
-    axis: PropTypes.oneOf(['x', 'y']),
+    children: PropTypes.node,
 
     /** Show the component; triggers the enter or exit states */
     in: PropTypes.bool,
@@ -35,7 +32,7 @@ class Fade extends PureComponent {
      *
      * Default start: 0
      * Default end: 1500 (If content's height is larger than 1500, pass the content's height here )
-    */
+     */
     opacity: PropTypes.shape({
       start: PropTypes.number,
       end: PropTypes.number,
@@ -59,7 +56,6 @@ class Fade extends PureComponent {
     transitionTime: TRASITION_TIME,
     timingFunction: TIMING_FUNCTION,
     opacity: OPACITY_DEFAULT,
-    axis: AXIS,
     style: {},
     in: true,
     appear: true,
@@ -69,7 +65,7 @@ class Fade extends PureComponent {
     const { start = START_OPACITY, end = END_OPACITY } = this.props.opacity
     return {
       start,
-      end
+      end,
     }
   }
 
@@ -78,10 +74,10 @@ class Fade extends PureComponent {
 
     return {
       entering: {
-        opacity: opacityStart
+        opacity: opacityStart,
       },
       entered: {
-        opacity: opacityEnd
+        opacity: opacityEnd,
       },
     }
   }
@@ -95,28 +91,20 @@ class Fade extends PureComponent {
     }
   }
 
-  renderChild = (state) => {
+  renderChild = state => {
     const { style, children } = this.props
     const styles = {
       ...style,
       ...this.initialStyles,
-      ...this.transitionStyles[state]
+      ...this.transitionStyles[state],
     }
-    return (
-      <div style={styles} >
-        {children}
-      </div>
-    )
+    return <div style={styles}>{children}</div>
   }
 
   render() {
     const { in: inProp, timeout, appear } = this.props
     return (
-      <Transition
-        in={inProp}
-        appear={appear}
-        timeout={timeout}
-      >
+      <Transition in={inProp} appear={appear} timeout={timeout}>
         {this.renderChild}
       </Transition>
     )

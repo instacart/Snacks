@@ -16,8 +16,8 @@ const getStyles = props => {
 
     ':hover': {
       color: actionHover,
-      textDecoration: 'underline'
-    }
+      textDecoration: 'underline',
+    },
   }
 }
 
@@ -55,12 +55,12 @@ Link.propTypes = {
   elementAttributes: PropTypes.object,
 
   /** Snacks theme attributes provided by `Themer` */
-  snacksTheme: themePropTypes
+  snacksTheme: themePropTypes,
 }
 
 Link.defaultProps = {
   href: '#',
-  onClick: noop
+  onClick: noop,
 }
 
 export default withTheme(Radium(Link))

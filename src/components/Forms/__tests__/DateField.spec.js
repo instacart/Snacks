@@ -1,9 +1,9 @@
-import React         from 'react'
+import React from 'react'
 import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
-import toJson        from 'enzyme-to-json'
+import toJson from 'enzyme-to-json'
 import renderer from 'react-test-renderer'
-import DateField  from '../DateField'
+import DateField from '../DateField'
 
 it('renders without error', () => {
   const mounted = mount(
@@ -94,9 +94,16 @@ it('fires the triggerFocus method', () => {
     </StyleRoot>
   )
 
-  wrapper.find('DateField').first().instance().triggerFocus()
+  wrapper
+    .find('DateField')
+    .first()
+    .instance()
+    .triggerFocus()
   setTimeout(() => {
-    expect(wrapper.children().matchesElement(document.activeElement)).toEqual(true, 'The input was not focused')
+    expect(wrapper.children().matchesElement(document.activeElement)).toEqual(
+      true,
+      'The input was not focused'
+    )
   }, 10)
 })
 
@@ -139,14 +146,14 @@ it('fires the onChange prop', () => {
   )
 
   // update input to 04/27/1993
-  wrapper.find('input').simulate('change', {target: {value: '04/27/1993'}})
+  wrapper.find('input').simulate('change', { target: { value: '04/27/1993' } })
 
   // ensure the callback passes both raw and edited versions
   expect(onChange).toBeCalledWith(expect.anything(), '04/27/1993', '04/27/1993')
   expect(onChange.mock.calls.length).toBe(1)
 
   // update input to 12/12/2012
-  wrapper.find('input').simulate('change', {target: {value: '12/12/2012'}})
+  wrapper.find('input').simulate('change', { target: { value: '12/12/2012' } })
 
   // ensure the callback passes correct, updated phone value
   expect(onChange.mock.calls[1]).toEqual([expect.anything(), '12/12/2012', '12/12/2012'])
@@ -162,8 +169,8 @@ it('uses a custom theme for all child components if one is provided', () => {
       primaryForeground: 'green',
       secondaryBackground: 'green',
       secondaryForeground: 'white',
-      secondaryForegroundFocus: 'gray'
-    }
+      secondaryForegroundFocus: 'gray',
+    },
   }
 
   const wrapper = mount(

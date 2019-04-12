@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import PropTypes            from 'prop-types'
-import Radium               from 'radium'
-import { colors }           from '../../styles'
+import PropTypes from 'prop-types'
+import Radium from 'radium'
+import { colors } from '../../styles'
 
 const styles = {
   root: {
@@ -13,8 +13,8 @@ const styles = {
     paddingTop: '15px',
     paddingRight: '15px',
     paddingBottom: '15px',
-    paddingLeft: '15px'
-  }
+    paddingLeft: '15px',
+  },
 }
 
 @Radium
@@ -23,21 +23,14 @@ class ServerError extends Component {
     /** Override styles */
     style: PropTypes.object,
     /** Error text */
-    text: PropTypes.string
+    text: PropTypes.string,
   }
 
   render() {
-    const {
-      style,
-      text
-    } = this.props
+    const { style, text } = this.props
 
     return (
-      <div
-        style={[styles.root, style]}
-        aria-live={'assertive'}
-        aria-atomic={true}
-      >
+      <div style={[styles.root, style]} aria-live={'assertive'} aria-atomic>
         {text}
       </div>
     )

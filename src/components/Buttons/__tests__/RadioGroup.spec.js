@@ -8,9 +8,15 @@ describe('RadioGroup', () => {
   it('on initialization none of the radio buttons are selected', () => {
     const wrapper = mount(
       <RadioGroup name="radioTest">
-        <Radio id="1" value="val1">Value 1</Radio>
-        <Radio id="2" value="val2">Value 2</Radio>
-        <Radio id="3" value="val3">Value 3</Radio>
+        <Radio id="1" value="val1">
+          Value 1
+        </Radio>
+        <Radio id="2" value="val2">
+          Value 2
+        </Radio>
+        <Radio id="3" value="val3">
+          Value 3
+        </Radio>
       </RadioGroup>
     )
 
@@ -22,25 +28,37 @@ describe('RadioGroup', () => {
   it('only one radio button can be selected at a time', () => {
     const wrapper = mount(
       <RadioGroup name="radioTest">
-        <Radio id="A" className="radio" value="val1">Value 1</Radio>
-        <Radio id="B" className="radio" value="val2">Value 2</Radio>
-        <Radio id="C" className="radio" value="val3">Value 3</Radio>
+        <Radio id="A" className="radio" value="val1">
+          Value 1
+        </Radio>
+        <Radio id="B" className="radio" value="val2">
+          Value 2
+        </Radio>
+        <Radio id="C" className="radio" value="val3">
+          Value 3
+        </Radio>
       </RadioGroup>
     )
-    
-    const radioIds = ['A', 'C', 'B']
-    
-    radioIds.forEach(radioId => {
-      wrapper.find(`#${radioId}`).hostNodes().simulate('click', { target: { checked: true } })
 
-      wrapper.find('.radio').hostNodes().forEach(input => {
-        // only the clicked button should have a state of checked=true
-        if (input.prop('id') === radioId) {
-          expect(input.prop('isSelected')).toBe(true)
-        } else {
-          expect(input.prop('isSelected')).toBe(false)
-        }
-      })
+    const radioIds = ['A', 'C', 'B']
+
+    radioIds.forEach(radioId => {
+      wrapper
+        .find(`#${radioId}`)
+        .hostNodes()
+        .simulate('click', { target: { checked: true } })
+
+      wrapper
+        .find('.radio')
+        .hostNodes()
+        .forEach(input => {
+          // only the clicked button should have a state of checked=true
+          if (input.prop('id') === radioId) {
+            expect(input.prop('isSelected')).toBe(true)
+          } else {
+            expect(input.prop('isSelected')).toBe(false)
+          }
+        })
     })
   })
 
@@ -48,8 +66,12 @@ describe('RadioGroup', () => {
     const onChange = sinon.spy()
     const wrapper = mount(
       <RadioGroup name="radioTest" onChange={onChange}>
-        <Radio id="A" value="val1">Value 1</Radio>
-        <Radio id="B" value="val2">Value 2</Radio>
+        <Radio id="A" value="val1">
+          Value 1
+        </Radio>
+        <Radio id="B" value="val2">
+          Value 2
+        </Radio>
       </RadioGroup>
     )
 
@@ -66,23 +88,33 @@ describe('RadioGroup', () => {
     const onChange = sinon.spy()
     const wrapper = mount(
       <RadioGroup name="radioTest" onChange={onChange}>
-        <Radio id="A" value="val1">Value 1</Radio>
-        <Radio id="B" value="val2">Value 2</Radio>
+        <Radio id="A" value="val1">
+          Value 1
+        </Radio>
+        <Radio id="B" value="val2">
+          Value 2
+        </Radio>
       </RadioGroup>
     )
 
     expect(onChange.callCount).toBe(0)
 
-    wrapper.find('#A').hostNodes().simulate('change', { target: { checked: true } })
+    wrapper
+      .find('#A')
+      .hostNodes()
+      .simulate('change', { target: { checked: true } })
     expect(onChange.callCount).toBe(1)
 
-    wrapper.find('#A').hostNodes().simulate('change', { target: { checked: true } })
+    wrapper
+      .find('#A')
+      .hostNodes()
+      .simulate('change', { target: { checked: true } })
     expect(onChange.callCount).toBe(1)
 
-    wrapper.find('#B').hostNodes().simulate('change', { target: { checked: true } })
+    wrapper
+      .find('#B')
+      .hostNodes()
+      .simulate('change', { target: { checked: true } })
     expect(onChange.callCount).toBe(2)
-
-    
   })
-  
 })

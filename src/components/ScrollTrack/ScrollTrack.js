@@ -1,27 +1,30 @@
+import React, { Component } from 'react'
+import isEqual from 'lodash.isequal'
+import Radium from 'radium'
+import PropTypes from 'prop-types'
 import componentStyles from './ScrollTrackStyles'
 import equalWidthTrack from './equalWidthTrack'
 import ScrollTrackPropTypes from './ScrollTrackPropTypes'
 
-import React, { Component } from 'react'
 import { isNodeEnv } from '../../utils/detectFeature'
 import debounce from '../../utils/debounce'
-import isEqual from 'lodash.isequal'
-import CircleButton  from '../Buttons/CircleButton'
-import Icon          from '../Icon/Icon'
-import Radium        from 'radium'
-import PropTypes     from 'prop-types'
-
+import CircleButton from '../Buttons/CircleButton'
+import Icon from '../Icon/Icon'
 
 const noOp = () => {} // eslint-disable-line no-empty-function
 
 @Radium
 class ScrollTrack extends Component {
   static equalWidthTrack = equalWidthTrack
+
   static ScrollTrackPropTypes = ScrollTrackPropTypes
 
   static propTypes = {
     /** Prop for passing in custom button content for back button */
     backButtonContent: PropTypes.node,
+
+    /** The elements to scroll */
+    children: PropTypes.node,
 
     /** Manually control left positioning of ScrollTrack */
     leftOverride: PropTypes.number,
@@ -30,19 +33,19 @@ class ScrollTrack extends Component {
     nextButtonContent: PropTypes.node,
 
     /**
-    * A callback called before sliding to next set.
-    * ** Passed function must return a promsie **
-    * -- will wait for promise resolution before continuing slide.
-    * Use for high levels of control
-    */
+     * A callback called before sliding to next set.
+     * ** Passed function must return a promsie **
+     * -- will wait for promise resolution before continuing slide.
+     * Use for high levels of control
+     */
     onBeforeNext: PropTypes.func,
 
     /**
-    * A callback called before sliding to previous set.
-    * ** Passed function must return a promsie **
-    * -- will wait for promise resolution before continuing slide.
-    * Use for high levels of control
-    */
+     * A callback called before sliding to previous set.
+     * ** Passed function must return a promsie **
+     * -- will wait for promise resolution before continuing slide.
+     * Use for high levels of control
+     */
     onBeforeBack: PropTypes.func,
 
     /**  function to be called after sliding to next set. */
@@ -79,13 +82,13 @@ class ScrollTrack extends Component {
     styles: {
       LeftArrow: {},
       RightArrow: {},
-      Track: {}
+      Track: {},
     },
     style: {},
     onBeforeBack: () => new Promise(resolve => resolve()),
     onAfterNext: noOp,
     onAfterBack: noOp,
-    onBeforeNext: () => new Promise(resolve => resolve())
+    onBeforeNext: () => new Promise(resolve => resolve()),
   }
 
   constructor(props) {
@@ -95,7 +98,7 @@ class ScrollTrack extends Component {
       isSliding: false,
       showLeftArrow: false,
       showRightArrow: false,
-      left: props.leftOverride
+      left: props.leftOverride,
     }
   }
 
@@ -135,11 +138,12 @@ class ScrollTrack extends Component {
     const nodeWidths = this.getNodeWidths()
     const trackProps = {
       ...this.state,
-      ...nodeWidths
+      ...nodeWidths,
     }
 
     return React.Children.map(this.props.children, child => {
-      const isHtmlTag = typeof child.type === 'string' && child.type[0] === child.type[0].toLowerCase()
+      const isHtmlTag =
+        typeof child.type === 'string' && child.type[0] === child.type[0].toLowerCase()
       const childProps = isHtmlTag ? {} : { trackProps }
 
       return React.cloneElement(child, childProps)
@@ -152,7 +156,7 @@ class ScrollTrack extends Component {
     const trackNode = this.refs.track
     const trackNodeBounds = trackNode && trackNode.getBoundingClientRect()
     const parentWidth = parentNodeBounds && parentNodeBounds.width
-    const trackWidth = trackNode && (trackNode.offsetLeft + trackNode.scrollWidth)
+    const trackWidth = trackNode && trackNode.offsetLeft + trackNode.scrollWidth
     const trackBounds = trackNodeBounds
 
     return { parentWidth, trackWidth, trackBounds }
@@ -160,17 +164,31 @@ class ScrollTrack extends Component {
 
   computeSlideAttributes = () => {
     const { parentWidth, trackWidth } = this.getNodeWidths()
-    const trackAtEnd = parentWidth < trackWidth && this.state.left <= (parentWidth - trackWidth)
+    const trackAtEnd = parentWidth < trackWidth && this.state.left <= parentWidth - trackWidth
     const trackAtBeginning = this.state.left >= 0
 
-    if (!parentWidth || !trackWidth) { return }
-    if (Math.ceil(parentWidth) >= trackWidth) { return this.hideArrows() }
-    if (!trackAtEnd) { this.showRightArrow() } else { this.hideRightArrow() }
-    if (!trackAtBeginning) { this.showLeftArrow() } else { this.hideLeftArrow() }
+    if (!parentWidth || !trackWidth) {
+      return
+    }
+    if (Math.ceil(parentWidth) >= trackWidth) {
+      return this.hideArrows()
+    }
+    if (!trackAtEnd) {
+      this.showRightArrow()
+    } else {
+      this.hideRightArrow()
+    }
+    if (!trackAtBeginning) {
+      this.showLeftArrow()
+    } else {
+      this.hideLeftArrow()
+    }
   }
 
-  onKeyDown = (e) => {
-    if (![39, 37].includes(e.keyCode)) { return }
+  onKeyDown = e => {
+    if (![39, 37].includes(e.keyCode)) {
+      return
+    }
 
     e.preventDefault()
 
@@ -186,7 +204,7 @@ class ScrollTrack extends Component {
   hideArrows = () => {
     this.setState({
       showLeftArrow: false,
-      showRightArrow: false
+      showRightArrow: false,
     })
   }
 
@@ -215,98 +233,116 @@ class ScrollTrack extends Component {
   }
 
   slideForward = () => {
-    if (this.state.isSliding) { return } //already sliding
+    if (this.state.isSliding) {
+      return
+    } // already sliding
 
     const { parentWidth, trackWidth } = this.getNodeWidths()
-    let nextForward = (this.state.left - parentWidth) + scrollOffset
+    let nextForward = this.state.left - parentWidth + scrollOffset
     const fullForward = parentWidth - trackWidth
-    const { onBeforeNext, onAfterNext, scrollOffset } = this.props
+    const { onBeforeNext, scrollOffset } = this.props
 
     // already is, or is going to be, full forward
-    if (nextForward <= fullForward) { nextForward = fullForward }
+    if (nextForward <= fullForward) {
+      nextForward = fullForward
+    }
 
     const callbackProps = {
       atStart: trackWidth <= parentWidth,
       atEnd: fullForward === nextForward,
       slideTo: nextForward,
       parentWidth,
-      trackWidth
+      trackWidth,
     }
 
     this.setSliding()
 
-    onBeforeNext(callbackProps).then((response = {}) => {
-      // calcuate track values once more, in case children have changed the track size
-      const { parentWidth, trackWidth } = this.getNodeWidths()
-      const offset = response.scrollOffset || this.props.scrollOffset
-      const fullForward = parentWidth - trackWidth
-      let nextForward = (this.state.left - parentWidth) + offset
+    onBeforeNext(callbackProps).then(response => this.afterBeforeNext(response, callbackProps))
+  }
 
-      // already is, or is going to be, full forward
-      if (nextForward <= fullForward) { nextForward = fullForward }
+  afterBeforeNext = (response = {}, callbackProps) => {
+    // calcuate track values once more, in case children have changed the track size
+    const { parentWidth, trackWidth } = this.getNodeWidths()
+    const { scrollOffset, onAfterNext } = this.props
+    const offset = response.scrollOffset || scrollOffset
+    const fullForward = parentWidth - trackWidth
+    let nextForward = this.state.left - parentWidth + offset
 
-      this.updateLeftValue({
-        left: nextForward,
-        callback: onAfterNext,
-        callbackProps: {
-          ...callbackProps,
-          ...{
-            atStart: trackWidth <= parentWidth,
-            atEnd: fullForward === nextForward,
-            slideTo: nextForward,
-            parentWidth,
-            trackWidth
-          }
-        }
-      })
+    // already is, or is going to be, full forward
+    if (nextForward <= fullForward) {
+      nextForward = fullForward
+    }
+
+    this.updateLeftValue({
+      left: nextForward,
+      callback: onAfterNext,
+      callbackProps: {
+        ...callbackProps,
+        ...{
+          atStart: trackWidth <= parentWidth,
+          atEnd: fullForward === nextForward,
+          slideTo: nextForward,
+          parentWidth,
+          trackWidth,
+        },
+      },
     })
   }
 
   slideBack = () => {
-    if (this.state.isSliding) { return } //already sliding
+    if (this.state.isSliding) {
+      return
+    } // already sliding
 
     const { parentWidth, trackWidth } = this.getNodeWidths()
-    const { onBeforeBack, onAfterBack, scrollOffset } = this.props
-    let nextBack = (this.state.left + parentWidth) - scrollOffset
+    const { onBeforeBack, scrollOffset } = this.props
+    let nextBack = this.state.left + parentWidth - scrollOffset
 
     // already is, or is going to be, full back
-    if (this.state.left >= 0 || nextBack >= 0) { nextBack = 0 }
+    if (this.state.left >= 0 || nextBack >= 0) {
+      nextBack = 0
+    }
 
     const callbackProps = {
       atStart: nextBack === 0,
       atEnd: false,
       slideTo: nextBack,
       parentWidth,
-      trackWidth
+      trackWidth,
     }
 
     this.setSliding()
 
-    onBeforeBack(callbackProps).then((response = {}) => {
-      // calcuate track values once more, in case children have changed the track size
-      const { parentWidth, trackWidth } = this.getNodeWidths()
-      const offset = response.scrollOffset || this.props.scrollOffset
-      let nextBack = (this.state.left + parentWidth) - offset
+    onBeforeBack(callbackProps).then(response => this.afterBeforeBack(response, callbackProps))
+  }
 
-      // already is, or is going to be, full back
-      if (this.state.left >= 0 || nextBack >= 0) { nextBack = 0 }
+  afterBeforeBack = (response = {}, callbackProps) => {
+    // calcuate track values once more, in case children have changed the track size
+    const { parentWidth, trackWidth } = this.getNodeWidths()
+    const { scrollOffset, onAfterBack } = this.props
+    const offset = response.scrollOffset || scrollOffset
+    let nextBack = this.state.left + parentWidth - offset
 
-      this.updateLeftValue({
-        left: nextBack,
-        callback: onAfterBack,
-        callbackProps: {
-          ...callbackProps,
-          ...{
-            slideTo: nextBack,
-            parentWidth,
-            trackWidth
-          }
-        }
-      })
+    // already is, or is going to be, full back
+    if (this.state.left >= 0 || nextBack >= 0) {
+      nextBack = 0
+    }
+
+    this.updateLeftValue({
+      left: nextBack,
+      callback: onAfterBack,
+      callbackProps: {
+        ...callbackProps,
+        ...{
+          slideTo: nextBack,
+          parentWidth,
+          trackWidth,
+        },
+      },
     })
   }
 
-  updateLeftValue({left, callback, callbackProps}) {
+  updateLeftValue({ left, callback, callbackProps }) {
     this.setState({ left }, () => {
       this.computeSlideAttributes()
       setTimeout(() => {
@@ -319,26 +355,24 @@ class ScrollTrack extends Component {
   renderRightArrow = () => {
     const { slideButtonStyles } = componentStyles
     const { showRightArrow } = this.state
-    const { styles: { RightArrow = {} }, nextButtonContent } = this.props
+    const {
+      styles: { RightArrow = {} },
+      nextButtonContent,
+    } = this.props
 
     return (
       <CircleButton
         onClick={this.slideForward}
-        ariaLabel='next'
+        ariaLabel="next"
         style={[
           slideButtonStyles.default,
           slideButtonStyles.right,
           showRightArrow && { display: 'block' },
-          RightArrow
+          RightArrow,
         ]}
-        ref={(node) => this.nextButton = node }
+        ref={node => (this.nextButton = node)}
       >
-        { nextButtonContent ||
-          <Icon
-            name='arrowRightSmallBold'
-            style={{ fontSize: '20px' }}
-          />
-        }
+        {nextButtonContent || <Icon name="arrowRightSmallBold" style={{ fontSize: '20px' }} />}
       </CircleButton>
     )
   }
@@ -346,53 +380,56 @@ class ScrollTrack extends Component {
   renderLeftArrow = () => {
     const { slideButtonStyles } = componentStyles
     const { showLeftArrow } = this.state
-    const { styles: { LeftArrow = {} }, backButtonContent } = this.props
+    const {
+      styles: { LeftArrow = {} },
+      backButtonContent,
+    } = this.props
 
     return (
       <CircleButton
         onClick={this.slideBack}
-        ariaLabel='back'
+        ariaLabel="back"
         style={[
           slideButtonStyles.default,
           slideButtonStyles.left,
           showLeftArrow && { display: 'block' },
-          LeftArrow
+          LeftArrow,
         ]}
-        ref={(node) => this.backButton = node }
+        ref={node => (this.backButton = node)}
       >
-        { backButtonContent ||
-          <Icon
-            name='arrowLeftSmallBold'
-            style={{ fontSize: '20px' }}
-          />
-        }
+        {backButtonContent || <Icon name="arrowLeftSmallBold" style={{ fontSize: '20px' }} />}
       </CircleButton>
     )
   }
 
   render() {
     const { containerStyles, innerContainerStyles } = componentStyles
-    const { children, scrollSpeed, scrollTimingFunction, style, styles: { Track = {} } } = this.props
+    const {
+      children,
+      scrollSpeed,
+      scrollTimingFunction,
+      style,
+      styles: { Track = {} },
+    } = this.props
 
-    if (!children) { return null }
+    if (!children) {
+      return null
+    }
 
     return (
-      <div
-        ref='container'
-        style={{ ...containerStyles, ...style }}
-        onKeyDown={this.onKeyDown}
-      >
+      // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+      <div ref="container" style={{ ...containerStyles, ...style }} onKeyDown={this.onKeyDown}>
         {this.renderLeftArrow()}
         <div
           style={[
             {
               transition: `transform ${scrollSpeed}ms ${scrollTimingFunction}`,
-              transform: `translate3d(${this.state.left}px, 0, 0)`
+              transform: `translate3d(${this.state.left}px, 0, 0)`,
             },
-            innerContainerStyles
+            innerContainerStyles,
           ]}
         >
-          <div ref='track' style={Track}>
+          <div ref="track" style={Track}>
             {this.childrenWithTrackProps}
           </div>
         </div>
@@ -401,6 +438,5 @@ class ScrollTrack extends Component {
     )
   }
 }
-
 
 export default ScrollTrack

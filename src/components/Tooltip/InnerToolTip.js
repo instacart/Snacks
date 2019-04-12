@@ -1,25 +1,25 @@
 import React, { PureComponent } from 'react'
-import PropTypes                from 'prop-types'
-import Fade                     from '../../components/Transitions/Fade'
-import colors                   from '../../styles/colors'
-import TooltipArrow             from './TooltipArrow'
-import spacing                  from '../../styles/spacing'
+import PropTypes from 'prop-types'
+import Fade from '../Transitions/Fade'
+import colors from '../../styles/colors'
+import TooltipArrow from './TooltipArrow'
+import spacing from '../../styles/spacing'
 
 const styles = {
   root: {
-    position: 'relative'
+    position: 'relative',
   },
   arrowPadding: {
-    top   : {paddingBottom: '9px'},
-    bottom: {paddingTop   : '9px'},
-    left  : {paddingRight : '9px'},
-    right : {paddingLeft  : '9px'},
+    top: { paddingBottom: '9px' },
+    bottom: { paddingTop: '9px' },
+    left: { paddingRight: '9px' },
+    right: { paddingLeft: '9px' },
   },
   innerContent: {
     textAlign: 'center',
     borderRadius: 4,
     whiteSpace: 'nowrap',
-    fontWeight: 600
+    fontWeight: 600,
   },
 }
 
@@ -27,18 +27,18 @@ const RESOLVED_COLOR = {
   primary: {
     background: colors.GREEN_500,
     color: '#FFF',
-    border: `1px solid ${colors.GREEN_500}`
+    border: `1px solid ${colors.GREEN_500}`,
   },
   secondary: {
     background: '#FFF',
     color: colors.GRAY_46,
-    border: `1px solid ${colors.GRAY_74}`
+    border: `1px solid ${colors.GRAY_74}`,
   },
   dark: {
     background: colors.GRAY_20,
     color: '#FFF',
-    border: `1px solid ${colors.GRAY_20}`
-  }
+    border: `1px solid ${colors.GRAY_20}`,
+  },
 }
 
 const RESOLVED_SIZE = {
@@ -59,35 +59,32 @@ const RESOLVED_SIZE = {
     paddingTop: '12px',
     paddingBottom: '12px',
     ...spacing.PADDING_X_MD,
-  }
+  },
 }
 
 class InnerToolTip extends PureComponent {
   static propTypes = {
+    children: PropTypes.node,
     snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark']),
-    size: PropTypes.oneOf([
-      'small',
-      'medium',
-      'large',
-    ]),
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
     style: PropTypes.shape({
       border: PropTypes.string,
       padding: PropTypes.string,
       boxShadow: PropTypes.string,
     }),
     arrowStyle: PropTypes.shape({
-      border: PropTypes.string, 
+      border: PropTypes.string,
       boxShadowRight: PropTypes.string,
       boxShadowBottom: PropTypes.string,
       boxShadowLeft: PropTypes.string,
       boxShadowTop: PropTypes.string,
     }),
-    arrowPosition: PropTypes.shape({})
+    arrowPosition: PropTypes.shape({}),
   }
 
   static defaultProps = {
     size: 'medium',
-    snacksStyle: 'dark'
+    snacksStyle: 'dark',
   }
 
   get contentStyles() {
@@ -96,18 +93,14 @@ class InnerToolTip extends PureComponent {
       ...styles.innerContent,
       ...RESOLVED_SIZE[size],
       ...RESOLVED_COLOR[snacksStyle],
-      ...style
+      ...style,
     }
   }
 
   renderArrow() {
     const { arrowPosition, arrowStyle, snacksStyle } = this.props
     return (
-      <TooltipArrow
-        arrowStyle={arrowStyle}
-        position={arrowPosition}
-        snacksStyle={snacksStyle}
-      />
+      <TooltipArrow arrowStyle={arrowStyle} position={arrowPosition} snacksStyle={snacksStyle} />
     )
   }
 
@@ -115,9 +108,7 @@ class InnerToolTip extends PureComponent {
     return (
       <Fade>
         {this.renderArrow()}
-        <div style={this.contentStyles}>
-          {this.props.children}
-        </div>
+        <div style={this.contentStyles}>{this.props.children}</div>
       </Fade>
     )
   }

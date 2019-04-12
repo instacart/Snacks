@@ -14,7 +14,7 @@ const baseStyles = {
   marginRight: 0,
   marginBottom: 0,
   marginLeft: 0,
-  color: colors.GRAY_13
+  color: colors.GRAY_13,
 }
 
 // Matches the Open Sans font weights
@@ -23,7 +23,7 @@ const fontWeights = {
   light: 300,
   regular: 400,
   semiBold: 600,
-  bold: 700
+  bold: 700,
 }
 
 const variantStyles = {
@@ -31,86 +31,86 @@ const variantStyles = {
     fontSize: '92px',
     lineHeight: '138px',
     letterSpacing: '0',
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.regular,
   },
   'T.82': {
     fontSize: '82px',
     lineHeight: '123px',
     letterSpacing: '0',
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.regular,
   },
   'T.72': {
     fontSize: '72px',
     lineHeight: '108px',
     letterSpacing: '0',
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.regular,
   },
   'T.64': {
     fontSize: '64px',
     lineHeight: '96px',
     letterSpacing: '0',
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.regular,
   },
   'T.58': {
     fontSize: '58px',
     lineHeight: '87px',
     letterSpacing: '0',
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.regular,
   },
   'T.46': {
     fontSize: '46px',
     lineHeight: '69px',
     letterSpacing: '0',
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.regular,
   },
   'T.36': {
     fontSize: '36px',
     lineHeight: '54px',
     letterSpacing: '0.03em',
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.regular,
   },
   'T.28': {
     fontSize: '28px',
     lineHeight: '42px',
     letterSpacing: '0.05em',
-    fontWeight: fontWeights.bold
+    fontWeight: fontWeights.bold,
   },
   'T.22': {
     fontSize: '22px',
     lineHeight: '32px',
     letterSpacing: '0.03em',
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.regular,
   },
   'T.18': {
     fontSize: '18px',
     lineHeight: '32px',
     letterSpacing: '0.03em',
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.regular,
   },
   'T.16': {
     fontSize: '16px',
     lineHeight: '24px',
     letterSpacing: '0.03em',
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.regular,
   },
   'T.14': {
     fontSize: '14px',
     lineHeight: '21px',
     letterSpacing: '0.03em',
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.regular,
   },
   'T.12': {
     fontSize: '12px',
     lineHeight: '18px',
     letterSpacing: '0.05em',
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.regular,
   },
   'T.11': {
     fontSize: '11px',
     lineHeight: '16px',
     letterSpacing: '0.05em',
-    fontWeight: fontWeights.regular
-  }
+    fontWeight: fontWeights.regular,
+  },
 }
 
 const htmlTagMapping = {
@@ -127,7 +127,7 @@ const htmlTagMapping = {
   'T.16': 'p',
   'T.14': 'p',
   'T.12': 'p',
-  'T.11': 'p'
+  'T.11': 'p',
 }
 
 function Text({ variant, style, children, elementType, fontWeight, ...restProps }) {
@@ -136,7 +136,7 @@ function Text({ variant, style, children, elementType, fontWeight, ...restProps 
     ...baseStyles,
     ...variantStyles[variant],
     ...(fontWeight && { fontWeight: fontWeights[fontWeight] }),
-    ...style
+    ...style,
   }
 
   return (
@@ -162,7 +162,7 @@ Text.propTypes = {
   fontWeight: PropTypes.oneOf(Object.keys(fontWeights)),
 
   /** Any custom inline styles. Useful for things like gutters and responsive styles. */
-  style: PropTypes.shape({})
+  style: PropTypes.shape({}),
 }
 
 export default Radium(Text)

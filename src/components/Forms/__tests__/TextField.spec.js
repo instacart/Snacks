@@ -1,9 +1,9 @@
-import React         from 'react'
-import renderer      from 'react-test-renderer'
+import React from 'react'
+import renderer from 'react-test-renderer'
 import { StyleRoot } from 'radium'
-import { mount }     from 'enzyme'
-import { spy }       from 'sinon'
-import TextField     from '../TextField'
+import { mount } from 'enzyme'
+import { spy } from 'sinon'
+import TextField from '../TextField'
 
 const defaultTextField = (
   <StyleRoot>
@@ -49,9 +49,16 @@ it('fires the onFocus prop', () => {
 it('fires the triggerFocus method', () => {
   const wrapper = mount(defaultTextField)
 
-  wrapper.find('TextField').first().instance().triggerFocus()
+  wrapper
+    .find('TextField')
+    .first()
+    .instance()
+    .triggerFocus()
   setTimeout(() => {
-    expect(wrapper.children().matchesElement(document.activeElement)).toEqual(true, 'The input was not focused')
+    expect(wrapper.children().matchesElement(document.activeElement)).toEqual(
+      true,
+      'The input was not focused'
+    )
   }, 10)
 })
 
@@ -94,7 +101,7 @@ it('fires the onChange prop', () => {
     </StyleRoot>
   )
 
-  wrapper.find('input').simulate('change', {target: {value: 'My new value'}})
+  wrapper.find('input').simulate('change', { target: { value: 'My new value' } })
 
   expect(onChange.calledOnce).toBe(true)
 })
@@ -108,8 +115,8 @@ it('uses a custom theme for all child components if one is provided', () => {
       primaryForeground: 'green',
       secondaryBackground: 'green',
       secondaryForeground: 'white',
-      secondaryForegroundFocus: 'gray'
-    }
+      secondaryForegroundFocus: 'gray',
+    },
   }
 
   const tree = renderer

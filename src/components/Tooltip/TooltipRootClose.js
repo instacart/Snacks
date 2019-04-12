@@ -1,17 +1,17 @@
 import { PureComponent } from 'react'
-import { findDOMNode }   from 'react-dom'
-import PropTypes         from 'prop-types'
+import { findDOMNode } from 'react-dom'
+import PropTypes from 'prop-types'
 import { isNodeEnv } from '../../utils/detectFeature'
 
 class TooltipRootClose extends PureComponent {
   static propTypes = {
     children: PropTypes.node.isRequired,
     onRootClose: PropTypes.func.isRequired,
-    rootCloseEnabled: PropTypes.bool
+    rootCloseEnabled: PropTypes.bool,
   }
 
   static defaultProps = {
-    rootCloseEnabled: true
+    rootCloseEnabled: true,
   }
 
   componentDidMount() {
@@ -40,23 +40,9 @@ class TooltipRootClose extends PureComponent {
     }
   }
 
-  addEventListeners() {
-    if (isNodeEnv()) { return }
-    document.addEventListener('click', this.handleMouseClick)
-    document.addEventListener('keyup', this.handleKeyUp)
-    window.addEventListener('resize', this.handleResize)
-  }
-
-  removeEventListeners() {
-    if (isNodeEnv()) { return }
-    document.removeEventListener('click', this.handleMouseClick)
-    document.removeEventListener('keyup', this.handleKeyUp)
-    window.removeEventListener('resize', this.handleResize)
-  }
-
-  handleMouseClick = (e) => {
+  handleMouseClick = e => {
     const { onRootClose } = this.props
-    const target = e.target
+    const { target } = e
     const tooltip = findDOMNode(this)
 
     if (!tooltip.contains(target)) {
@@ -64,7 +50,7 @@ class TooltipRootClose extends PureComponent {
     }
   }
 
-  handleKeyUp = (e) => {
+  handleKeyUp = e => {
     const { onRootClose } = this.props
     if (e.keyCode === 27 && onRootClose) {
       onRootClose && onRootClose()
@@ -74,6 +60,24 @@ class TooltipRootClose extends PureComponent {
   handleResize = () => {
     const { onRootClose } = this.props
     onRootClose && onRootClose()
+  }
+
+  addEventListeners() {
+    if (isNodeEnv()) {
+      return
+    }
+    document.addEventListener('click', this.handleMouseClick)
+    document.addEventListener('keyup', this.handleKeyUp)
+    window.addEventListener('resize', this.handleResize)
+  }
+
+  removeEventListeners() {
+    if (isNodeEnv()) {
+      return
+    }
+    document.removeEventListener('click', this.handleMouseClick)
+    document.removeEventListener('keyup', this.handleKeyUp)
+    window.removeEventListener('resize', this.handleResize)
   }
 
   render() {

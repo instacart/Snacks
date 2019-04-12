@@ -1,37 +1,38 @@
-import React     from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Validator from 'validator'
 
-const formComponent = (WrappedComponent) => {
+const formComponent = WrappedComponent => {
   return class FormComponent extends React.Component {
     static propTypes = {
       /** Model name for Form */
-      name           : PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
       /** Disable the input; Will be removed from model in Form onSubmit callback */
-      disabled       : PropTypes.bool,
+      disabled: PropTypes.bool,
       /** Uniq id for input */
-      id             : PropTypes.string,
+      id: PropTypes.string,
       /** Mark input as required */
-      required       : PropTypes.bool,
+      required: PropTypes.bool,
       /** Regex Validation pattern */
       regexValidation: PropTypes.string,
       /** Validations from validator.js */
-      validations    : PropTypes.object
+      validations: PropTypes.object,
     }
 
     static contextTypes = {
-      ICFormable: PropTypes.object
+      ICFormable: PropTypes.object,
     }
 
     state = {
       isValid: true,
-      serverError: null
+      serverError: null,
     }
 
     componentWillMount() {
       const { id, name } = this.props
       // uniqueId is needed label htmlFor properties etc.
-      this.uniqueId = id || `${name}-${Math.floor(Math.random() * 0xFFFF)}`.replace(/[^A-Za-z0-9-]/gi, '')
+      this.uniqueId =
+        id || `${name}-${Math.floor(Math.random() * 0xffff)}`.replace(/[^A-Za-z0-9-]/gi, '')
 
       this.context.ICFormable && this.context.ICFormable.registerComponent(this)
     }
@@ -44,7 +45,11 @@ const formComponent = (WrappedComponent) => {
       if (typeof this.FormComponent.getValue === 'function') {
         // If component getValue function defined on component
         return this.FormComponent.getValue()
-      } else if (this.FormComponent.state && Object.prototype.hasOwnProperty.call(this.FormComponent.state, 'value')) {
+      }
+      if (
+        this.FormComponent.state &&
+        Object.prototype.hasOwnProperty.call(this.FormComponent.state, 'value')
+      ) {
         // If component uses state to store value
         return this.FormComponent.state.value
       }
@@ -54,19 +59,20 @@ const formComponent = (WrappedComponent) => {
 
     hasValue = () => {
       const value = this.getValue()
-      return value !== '' && value !== undefined && value !== null && !(Array.isArray(value) && value.length === 0)
+      return (
+        value !== '' &&
+        value !== undefined &&
+        value !== null &&
+        !(Array.isArray(value) && value.length === 0)
+      )
     }
 
     validate() {
-      const {
-        regexValidation,
-        required,
-        validations
-      } = this.props
+      const { regexValidation, required, validations } = this.props
 
       const { serverError } = this.state
-      const value           = this.getValue()
-      let isValid           = true
+      const value = this.getValue()
+      let isValid = true
 
       // Check if has no validations
       if (!validations && !required && !serverError && !regexValidation) {
@@ -80,11 +86,11 @@ const formComponent = (WrappedComponent) => {
 
       // Check Validator.js validations
       if (isValid && value && validations) {
-        Object.keys(validations).forEach( (validateMethod) => {
+        Object.keys(validations).forEach(validateMethod => {
           const options = validations[validateMethod]
-          const args    = [value].concat(options).filter( v => v ) // Remove null options
+          const args = [value].concat(options).filter(v => v) // Remove null options
 
-          if (!Validator[validateMethod].apply(Validator, args)) {
+          if (!Validator[validateMethod](...args)) {
             isValid = false
           }
         })
@@ -93,29 +99,27 @@ const formComponent = (WrappedComponent) => {
       // Check regex validation
       if (isValid && value && regexValidation) {
         const re = new RegExp(regexValidation)
-        isValid  = re.test(value)
+        isValid = re.test(value)
       }
 
-      this.setState({isValid: isValid, serverError: null})
+      this.setState({ isValid, serverError: null })
       return isValid
     }
 
     render() {
-      const {
-        isValid,
-        serverError,
-        disabled
-      } = this.state
+      const { isValid, serverError, disabled } = this.state
 
       const hasError = (!disabled && (!isValid && isValid !== undefined)) || !!serverError
 
       const formComponentProps = {
-        isValid      : isValid,
-        ref          : (node) => {this.FormComponent = node},
-        serverError  : serverError,
-        hasError     : hasError,
-        id           : this.uniqueId,
-        ...this.props
+        isValid,
+        ref: node => {
+          this.FormComponent = node
+        },
+        serverError,
+        hasError,
+        id: this.uniqueId,
+        ...this.props,
       }
 
       return <WrappedComponent {...formComponentProps} />

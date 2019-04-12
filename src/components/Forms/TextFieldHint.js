@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import PropTypes            from 'prop-types'
-import Radium               from 'radium'
-import { colors }           from '../../styles'
+import PropTypes from 'prop-types'
+import Radium from 'radium'
+import { colors } from '../../styles'
 
 const styles = {
   root: {
@@ -14,51 +14,39 @@ const styles = {
     transformOrigin: 'left top',
     transition: 'opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms',
     pointerEvents: 'none',
-    zIndex: 1
+    zIndex: 1,
   },
   show: {
-    opacity: 1
+    opacity: 1,
   },
   disabled: {
-    cursor: 'not-allowed'
-  }
+    cursor: 'not-allowed',
+  },
 }
 
 @Radium
 class TextFieldHint extends Component {
   static propTypes = {
     /** Hint Text */
-    text    : PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
     /** Disabled styling */
     disabled: PropTypes.bool,
     /** Show the hint text */
-    show    : PropTypes.bool,
+    show: PropTypes.bool,
     /** Override styles */
-    style   : PropTypes.object
+    style: PropTypes.object,
   }
 
   static defaultProps = {
-    disabled: false
+    disabled: false,
   }
 
   render() {
-    const {
-      disabled,
-      show,
-      style,
-      text
-    } = this.props
+    const { disabled, show, style, text } = this.props
 
     return (
-      <div
-        style={[
-          styles.root,
-          style,
-          disabled && styles.disabled,
-          show && styles.show
-        ]}
-      >
-        { text }
+      <div style={[styles.root, style, disabled && styles.disabled, show && styles.show]}>
+        {text}
       </div>
     )
   }

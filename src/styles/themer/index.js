@@ -1,9 +1,5 @@
-import {
-  cleanConfig,
-  defaultTheme,
-  themeTemplate,
-  validConfigValue
-} from './utils'
+/* eslint-disable no-underscore-dangle */
+import { cleanConfig, defaultTheme, themeTemplate, validConfigValue } from './utils'
 
 class Themer {
   constructor() {
@@ -12,7 +8,9 @@ class Themer {
   }
 
   _callListeners() {
-    this._onChangeListeners.forEach(listener => { listener(this._themeConfig) })
+    this._onChangeListeners.forEach(listener => {
+      listener(this._themeConfig)
+    })
   }
 
   get themeConfig() {
@@ -26,7 +24,10 @@ class Themer {
 
   get(section, sectionKey) {
     if (!this._themeConfig) {
-      console.warn('Snacks theme error: No themeConfig defined. Please use Themer template: ', themeTemplate)
+      console.warn(
+        'Snacks theme error: No themeConfig defined. Please use Themer template: ',
+        themeTemplate
+      )
     } else if (validConfigValue(section, sectionKey)) {
       return this._themeConfig[section][sectionKey]
     }
@@ -44,7 +45,9 @@ class Themer {
 
     const unsubscribe = () => {
       const index = this._onChangeListeners.indexOf(listener)
-      if (index === -1) { return }
+      if (index === -1) {
+        return
+      }
       this._onChangeListeners.splice(index, 1)
     }
 

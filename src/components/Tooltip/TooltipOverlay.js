@@ -1,29 +1,21 @@
 import React, { PureComponent } from 'react'
-import PropTypes                from 'prop-types'
-import Portal                   from '../Portal/Portal'
-import TooltipPosition          from './TooltipPosition'
-import TooltipRootClose         from './TooltipRootClose'
+import PropTypes from 'prop-types'
+import Portal from '../Portal/Portal'
+import TooltipPosition from './TooltipPosition'
+import TooltipRootClose from './TooltipRootClose'
 
 class TooltipOverlay extends PureComponent {
   static propTypes = {
     children: PropTypes.node.isRequired,
     show: PropTypes.bool,
-    target: PropTypes.oneOfType([
-      PropTypes.node,
-      PropTypes.func
-    ]).isRequired,
-    placement: PropTypes.oneOf([
-      'top',
-      'left',
-      'right',
-      'bottom',
-    ]).isRequired,
+    target: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
+    placement: PropTypes.oneOf(['top', 'left', 'right', 'bottom']).isRequired,
     onRootClose: PropTypes.func,
-    rootCloseEnabled: PropTypes.bool
+    rootCloseEnabled: PropTypes.bool,
   }
 
   static defaultProps = {
-    rootCloseEnabled: true
+    rootCloseEnabled: true,
   }
 
   render() {
@@ -40,18 +32,10 @@ class TooltipOverlay extends PureComponent {
     )
 
     if (rootCloseEnabled) {
-      child = (
-        <TooltipRootClose onRootClose={onRootClose}>
-          {child}
-        </TooltipRootClose>
-      )
+      child = <TooltipRootClose onRootClose={onRootClose}>{child}</TooltipRootClose>
     }
 
-    return (
-      <Portal>
-        {child}
-      </Portal>
-    )
+    return <Portal>{child}</Portal>
   }
 }
 

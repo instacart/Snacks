@@ -11,7 +11,12 @@ it('should warn when no config is set', () => {
   console.warn = spy()
   themer._themeConfig = undefined // NOTE: never actually do this
   themer.get('colors', 'action')
-  expect(console.warn.calledWith(`Snacks theme error: No themeConfig defined. Please use Themer template: `, themeTemplate)).toBeTruthy()
+  expect(
+    console.warn.calledWith(
+      `Snacks theme error: No themeConfig defined. Please use Themer template: `,
+      themeTemplate
+    )
+  ).toBeTruthy()
 
   console.warn = oldWarn
 })
@@ -22,7 +27,7 @@ it('should set new, partial config', () => {
       action: '#4a4gsa',
       primaryBackground: '#4a4gsa',
       primaryForeground: '#fff',
-    }
+    },
   }
 
   expect(themer.themeConfig).toEqual({
@@ -30,7 +35,7 @@ it('should set new, partial config', () => {
       action: '#4a4gsa',
       primaryBackground: '#4a4gsa',
       primaryForeground: '#fff',
-    }
+    },
   })
 })
 
@@ -42,7 +47,7 @@ it('should set new, full config', () => {
       primaryForeground: '#eee',
       secondaryBackground: '#fff',
       secondaryForeground: '#000',
-    }
+    },
   }
 
   expect(themer.themeConfig).toEqual({
@@ -52,7 +57,7 @@ it('should set new, full config', () => {
       primaryForeground: '#eee',
       secondaryBackground: '#fff',
       secondaryForeground: '#000',
-    }
+    },
   })
 })
 
@@ -67,11 +72,11 @@ it('should warn and clean config on full config set', () => {
       primaryForeground: '#eee',
       secondaryBackground: '#fff',
       secondaryForeground: '#000',
-      madness: 'pure madness'
+      madness: 'pure madness',
     },
     stuff: {
-      whatever: 'chaos'
-    }
+      whatever: 'chaos',
+    },
   }
 
   expect(themer.themeConfig).toEqual({
@@ -81,12 +86,22 @@ it('should warn and clean config on full config set', () => {
       primaryForeground: '#eee',
       secondaryBackground: '#fff',
       secondaryForeground: '#000',
-    }
+    },
   })
 
   expect(console.warn.calledTwice).toBeTruthy()
-  expect(console.warn.calledWith('Snacks theme error: "madness" not a valid config key. This value will not be set. Please use Themer template: ', themeTemplate)).toBeTruthy()
-  expect(console.warn.calledWith('Snacks theme error: "stuff" not a valid config section. These values will not be set. Please use Themer template: ', themeTemplate)).toBeTruthy()
+  expect(
+    console.warn.calledWith(
+      'Snacks theme error: "madness" not a valid config key. This value will not be set. Please use Themer template: ',
+      themeTemplate
+    )
+  ).toBeTruthy()
+  expect(
+    console.warn.calledWith(
+      'Snacks theme error: "stuff" not a valid config section. These values will not be set. Please use Themer template: ',
+      themeTemplate
+    )
+  ).toBeTruthy()
 
   console.warn = oldWarn
 })
@@ -96,14 +111,14 @@ it('should set specifc value in config', () => {
     colors: {
       action: '#4a4gsa',
       primaryBackground: '#sg444h',
-    }
+    },
   }
 
   expect(themer.themeConfig).toEqual({
     colors: {
       action: '#4a4gsa',
       primaryBackground: '#sg444h',
-    }
+    },
   })
 
   themer.set('colors', 'action', '#fff')
@@ -112,7 +127,7 @@ it('should set specifc value in config', () => {
     colors: {
       action: '#fff',
       primaryBackground: '#sg444h',
-    }
+    },
   })
 
   themer.set('colors', 'primaryForeground', '#eee')
@@ -121,8 +136,8 @@ it('should set specifc value in config', () => {
     colors: {
       action: '#fff',
       primaryBackground: '#sg444h',
-      primaryForeground: '#eee'
-    }
+      primaryForeground: '#eee',
+    },
   })
 })
 
@@ -134,14 +149,14 @@ it('should not set bad value in config and warn', () => {
     colors: {
       action: '#4a4gsa',
       primaryBackground: '#sg444h',
-    }
+    },
   }
 
   expect(themer.themeConfig).toEqual({
     colors: {
       action: '#4a4gsa',
       primaryBackground: '#sg444h',
-    }
+    },
   })
 
   themer.set('colors', 'madness', 'pure madness')
@@ -150,10 +165,15 @@ it('should not set bad value in config and warn', () => {
     colors: {
       action: '#4a4gsa',
       primaryBackground: '#sg444h',
-    }
+    },
   })
 
-  expect(console.warn.calledWith('Snacks theme error: "madness" not a valid config key. This value will not be set. Please use Themer template: ', themeTemplate)).toBeTruthy()
+  expect(
+    console.warn.calledWith(
+      'Snacks theme error: "madness" not a valid config key. This value will not be set. Please use Themer template: ',
+      themeTemplate
+    )
+  ).toBeTruthy()
 
   themer.set('stuff', 'whatever', 'chaos')
 
@@ -161,10 +181,15 @@ it('should not set bad value in config and warn', () => {
     colors: {
       action: '#4a4gsa',
       primaryBackground: '#sg444h',
-    }
+    },
   })
 
-  expect(console.warn.calledWith('Snacks theme error: "stuff" not a valid config section. These values will not be set. Please use Themer template: ', themeTemplate)).toBeTruthy()
+  expect(
+    console.warn.calledWith(
+      'Snacks theme error: "stuff" not a valid config section. These values will not be set. Please use Themer template: ',
+      themeTemplate
+    )
+  ).toBeTruthy()
 
   console.warn = oldWarn
 })
@@ -174,11 +199,10 @@ it('should get specifc value in config', () => {
     colors: {
       action: '#4a4gsa',
       primaryBackground: '#sg444h',
-    }
+    },
   }
 
   expect(themer.get('colors', 'action')).toEqual('#4a4gsa')
-
 })
 
 it('should not get bad value in config', () => {
@@ -189,11 +213,16 @@ it('should not get bad value in config', () => {
     colors: {
       action: '#4a4gsa',
       primaryBackground: '#sg444h',
-    }
+    },
   }
 
   expect(themer.get('stuff', 'whatever')).toEqual(undefined)
-  expect(console.warn.calledWith('Snacks theme error: "stuff" not a valid config section. These values will not be set. Please use Themer template: ', themeTemplate)).toBeTruthy()
+  expect(
+    console.warn.calledWith(
+      'Snacks theme error: "stuff" not a valid config section. These values will not be set. Please use Themer template: ',
+      themeTemplate
+    )
+  ).toBeTruthy()
 
   console.warn = oldWarn
 })
@@ -231,14 +260,14 @@ it('should call listener callback on theme config change', () => {
     colors: {
       action: '#4a4gsa',
       primaryBackground: '#sg444h',
-    }
+    },
   }
 
   expect(themer.themeConfig).toEqual({
     colors: {
       action: '#4a4gsa',
       primaryBackground: '#sg444h',
-    }
+    },
   })
 
   expect(listener.calledWith(themer.themerConfig))

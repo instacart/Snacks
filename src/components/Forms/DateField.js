@@ -1,12 +1,12 @@
-import React              from 'react'
-import MaskedTextField    from './MaskedTextField'
+import React from 'react'
 import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe'
+import MaskedTextField from './MaskedTextField'
 
 const mask = [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
 const hint = 'MM/DD/YYYY'
 const pipe = createAutoCorrectedDatePipe('mm/dd/yyyy')
 
-const getValue = (value) => value
+const getValue = value => value
 
 class DateField extends React.Component {
   static propTypes = {}
@@ -26,12 +26,12 @@ class DateField extends React.Component {
   render() {
     return (
       <MaskedTextField
-        type='tel'
+        type="tel"
         mask={mask}
         maskHint={hint}
         pipe={pipe}
         getValue={getValue}
-        ref={(ref) => this.input = ref}
+        ref={ref => (this.input = ref)}
         {...this.props}
       />
     )
@@ -39,4 +39,3 @@ class DateField extends React.Component {
 }
 
 export default DateField
-
