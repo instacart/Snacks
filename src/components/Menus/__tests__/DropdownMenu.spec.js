@@ -47,3 +47,14 @@ it('should call callbacks correctly', () => {
   expect(onSelect.calledOnce).toBe(true)
   expect(onClose.calledOnce).toBe(true)
 })
+
+it('sets the zIndex correctly when a custom zIndex is specified', () => {
+  const EXPECTED_Z_INDEX = 105824
+  const wrapper = mount(
+    <DropdownMenu zIndex={EXPECTED_Z_INDEX} triggerElement={<Button> Share </Button>}>
+      <MenuItem label="Share via Email" value="email" leftIcon="emailFilled" />
+    </DropdownMenu>)
+
+  wrapper.setProps({open: true})
+  expect(wrapper.find('Slide').parent().props().style.zIndex).toBe(EXPECTED_Z_INDEX)
+})

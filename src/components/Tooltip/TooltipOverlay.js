@@ -19,7 +19,8 @@ class TooltipOverlay extends PureComponent {
       'bottom',
     ]).isRequired,
     onRootClose: PropTypes.func,
-    rootCloseEnabled: PropTypes.bool
+    rootCloseEnabled: PropTypes.bool,
+    zIndex: PropTypes.number,
   }
 
   static defaultProps = {
@@ -27,14 +28,14 @@ class TooltipOverlay extends PureComponent {
   }
 
   render() {
-    const { show, children, target, placement, onRootClose, rootCloseEnabled } = this.props
+    const { show, children, target, placement, onRootClose, rootCloseEnabled, zIndex } = this.props
 
     if (!show) {
       return false
     }
 
     let child = (
-      <TooltipPosition target={target} placement={placement}>
+      <TooltipPosition zIndex={zIndex} target={target} placement={placement}>
         {children}
       </TooltipPosition>
     )

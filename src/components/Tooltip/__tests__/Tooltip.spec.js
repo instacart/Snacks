@@ -126,4 +126,19 @@ describe('Tooltip', () => {
     expect(tooltip.state().show).toEqual(false)
   })
 
+  it('sets the zIndex correctly when a custom zIndex is specified', () => {
+    const EXPECTED_Z_INDEX = 235235
+    const tooltip = mount(
+      <Tooltip
+        target={(<button>TRIGGER</button>)}
+        zIndex={EXPECTED_Z_INDEX}
+      >
+      </Tooltip>
+    )
+
+    const trigger = tooltip.find('button').last()
+    trigger.last().simulate('click')
+
+    expect(tooltip.find('TooltipPosition > div').props().style.zIndex).toBe(EXPECTED_Z_INDEX)
+  })
 })

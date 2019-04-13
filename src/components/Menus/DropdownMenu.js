@@ -57,7 +57,9 @@ class DropdownMenu extends React.Component {
     /** Customize style of menu parent */
     menuContainerStyle: PropTypes.shape({}),
     /** Props passed to Menu component */
-    menuProps: PropTypes.shape({})
+    menuProps: PropTypes.shape({}),
+    /** Override the default z-index of the open DropdownMenu container */
+    zIndex: PropTypes.number,
   }
 
   static defaultProps = {
@@ -195,7 +197,8 @@ class DropdownMenu extends React.Component {
       style,
       children,
       menuProps,
-      menuContainerStyle
+      menuContainerStyle,
+      zIndex,
     } = this.props
 
     const isOpen = this.state.open
@@ -212,7 +215,7 @@ class DropdownMenu extends React.Component {
           style={[
             styles.menuContainer,
             menuContainerStyle,
-            isOpen && styles.menuContainerOpen,
+            isOpen && { ...styles.menuContainerOpen, ...zIndex ? { zIndex } : {} },
             !isOpen && styles.menuContainerClosed
           ]}
         >

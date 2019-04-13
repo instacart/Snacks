@@ -26,6 +26,7 @@ class TooltipPosition extends PureComponent {
       'right',
       'bottom',
     ]).isRequired,
+    zIndex: PropTypes.number,
   }
 
   state = {
@@ -122,13 +123,14 @@ class TooltipPosition extends PureComponent {
   }
 
   render() {
-    const { children, placement } = this.props
+    const { children, placement, zIndex } = this.props
     const { overlayRect } = this.state
     let computedStyles = styles.root
 
     if (overlayRect.top) {
       computedStyles = {
         ...computedStyles,
+        ...zIndex ? { zIndex } : {},
         top: overlayRect.top,
         left: overlayRect.left
       }

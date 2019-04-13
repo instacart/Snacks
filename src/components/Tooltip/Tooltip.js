@@ -35,6 +35,8 @@ class Tooltip extends PureComponent {
     onDismiss: PropTypes.func,
     onShow: PropTypes.func,
     isVisible: PropTypes.bool,
+    /** Override the default z-index of the Tooltip */
+    zIndex: PropTypes.number,
   }
 
   static defaultProps = {
@@ -92,6 +94,7 @@ class Tooltip extends PureComponent {
       arrowStyle,
       snacksStyle,
       isVisible,
+      zIndex,
     } = this.props
 
     return (
@@ -102,6 +105,7 @@ class Tooltip extends PureComponent {
           target={() => this.trigger}
           show={isVisible || this.state.show}
           onRootClose={this.handleHideToolTip}
+          zIndex={zIndex}
         >
           <InnerToolTip
             size={size}
