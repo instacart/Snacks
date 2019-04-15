@@ -50,6 +50,7 @@ jspm_packages
 
 # IDE
 .idea
+.vscode
 
 # dev build folder
 tmp

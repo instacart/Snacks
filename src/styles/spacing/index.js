@@ -16,17 +16,17 @@ export const spacings = {
   MD: 24,
   LG: 32,
   XL: 48,
-  HUGE: 64
+  HUGE: 64,
 }
 
 const createXRules = (type, value) => ({
   [`${type}Left`]: value,
-  [`${type}Right`]: value
+  [`${type}Right`]: value,
 })
 
 const createYRules = (type, value) => ({
   [`${type}Top`]: value,
-  [`${type}Bottom`]: value
+  [`${type}Bottom`]: value,
 })
 
 const finalSpacings = {}
@@ -35,11 +35,11 @@ Object.keys(spacings).forEach(spacing => {
 
   finalSpacings[`MARGIN_${spacing}`] = {
     ...createXRules('margin', pxValue),
-    ...createYRules('margin', pxValue)
+    ...createYRules('margin', pxValue),
   }
   finalSpacings[`PADDING_${spacing}`] = {
     ...createXRules('padding', pxValue),
-    ...createYRules('padding', pxValue)
+    ...createYRules('padding', pxValue),
   }
 
   finalSpacings[`PADDING_X_${spacing}`] = createXRules('padding', pxValue)
@@ -49,13 +49,13 @@ Object.keys(spacings).forEach(spacing => {
 
   DIRECTIONS.forEach(direction => {
     finalSpacings[`MARGIN_${direction}_${spacing}`] = {
-      [`margin${capitalize(direction)}`]: pxValue
+      [`margin${capitalize(direction)}`]: pxValue,
     }
     finalSpacings[`PADDING_${direction}_${spacing}`] = {
-      [`padding${capitalize(direction)}`]: pxValue
+      [`padding${capitalize(direction)}`]: pxValue,
     }
     finalSpacings[`${direction}_${spacing}`] = {
-      [`${direction.toLowerCase()}`]: pxValue
+      [`${direction.toLowerCase()}`]: pxValue,
     }
   })
 })

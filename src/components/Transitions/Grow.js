@@ -27,11 +27,13 @@ class Grow extends PureComponent {
      * A convenience prop that enables or disabled appear animations for
      * all children. Note that specifying this will override any defaults
      * set on individual children Transitions.
-    */
+     */
     appear: PropTypes.bool,
 
     /** Axis that is animated */
     axis: PropTypes.oneOf(['x', 'y']),
+
+    children: PropTypes.node,
 
     /** Show the component; triggers the enter or exit states */
     in: PropTypes.bool,
@@ -41,7 +43,7 @@ class Grow extends PureComponent {
      *
      * Default start: 0
      * Default end: 1500 (If content's height is larger than 1500, pass the content's height here )
-    */
+     */
     maxSize: PropTypes.shape({
       start: PropTypes.number,
       end: PropTypes.number,
@@ -52,7 +54,7 @@ class Grow extends PureComponent {
      *
      * Default start: 0
      * Default end: 1
-    */
+     */
     scale: PropTypes.shape({
       start: PropTypes.number,
       end: PropTypes.number,
@@ -87,7 +89,7 @@ class Grow extends PureComponent {
     const { start = START_SCALE, end = END_SCALE } = this.props.scale
     return {
       start,
-      end
+      end,
     }
   }
 
@@ -95,33 +97,33 @@ class Grow extends PureComponent {
     const { start = START_MAX_SIZE, end = END_MAX_SIZE } = this.props.maxSize
     return {
       start,
-      end
+      end,
     }
   }
 
-  get transformAxis () {
+  get transformAxis() {
     return this.props.axis === 'x' ? 'scaleX' : 'scaleY'
   }
 
-  get transitionStyles () {
-    const { start: startScale , end: endScale } = this.scale
+  get transitionStyles() {
+    const { start: startScale, end: endScale } = this.scale
     const { start: startMaxSize, end: endMaxSize } = this.maxSize
 
     return {
       entering: {
         maxWidth: startMaxSize,
         maxHeight: startMaxSize,
-        transform: `${this.transformAxis}(${startScale})`
+        transform: `${this.transformAxis}(${startScale})`,
       },
       entered: {
         maxWidth: endMaxSize,
         maxHeight: endMaxSize,
-        transform: `${this.transformAxis}(${endScale})`
+        transform: `${this.transformAxis}(${endScale})`,
       },
     }
   }
 
-  get initialStyles () {
+  get initialStyles() {
     const { start: startScale } = this.scale
     const { start: startMaxSize } = this.maxSize
     const { transitionTime, timingFunction } = this.props
@@ -134,7 +136,7 @@ class Grow extends PureComponent {
     }
   }
 
-  renderChild = (state) => {
+  renderChild = state => {
     const { style, children } = this.props
     const styles = {
       ...this.initialStyles,
@@ -142,22 +144,14 @@ class Grow extends PureComponent {
       ...style,
     }
 
-    return (
-      <div style={styles} >
-        {children}
-      </div>
-    )
+    return <div style={styles}>{children}</div>
   }
 
   render() {
     const { in: inProp, timeout, appear } = this.props
 
     return (
-      <Transition
-        in={inProp}
-        appear={appear}
-        timeout={timeout}
-      >
+      <Transition in={inProp} appear={appear} timeout={timeout}>
         {this.renderChild}
       </Transition>
     )

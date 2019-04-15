@@ -39,23 +39,22 @@ describe('only', () => {
     const breakpointNames = ['sm', 'md', 'mdLg', 'lg']
 
     breakpointNames.forEach(size => {
-      expect(only(size)).toEqual(`@media (min-width: ${breakpoints[size].min}px) and (max-width: ${breakpoints[size].max}px)`)
+      expect(only(size)).toEqual(
+        `@media (min-width: ${breakpoints[size].min}px) and (max-width: ${breakpoints[size].max}px)`
+      )
     })
   })
 })
 
 describe('between', () => {
-  it('returns a media query that matches screens between each given size\'s minimum value', () => {
-    const testCases = [
-      ['xs', 'md'],
-      ['sm', 'md'],
-      ['sm', 'xl'],
-      ['md', 'xl']
-    ]
+  it("returns a media query that matches screens between each given size's minimum value", () => {
+    const testCases = [['xs', 'md'], ['sm', 'md'], ['sm', 'xl'], ['md', 'xl']]
 
     testCases.forEach(t => {
-      const [ lower, upper ] = t
-      const expected = `@media (min-width: ${breakpoints[lower].min}px) and (max-width: ${breakpoints[upper].min}px)`
+      const [lower, upper] = t
+      const expected = `@media (min-width: ${breakpoints[lower].min}px) and (max-width: ${
+        breakpoints[upper].min
+      }px)`
 
       expect(between(lower, upper)).toEqual(expected)
     })

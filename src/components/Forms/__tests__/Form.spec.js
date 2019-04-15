@@ -1,36 +1,31 @@
-import React         from 'react'
-import renderer      from 'react-test-renderer'
+import React from 'react'
+import renderer from 'react-test-renderer'
 import { StyleRoot } from 'radium'
-import { mount }     from 'enzyme'
+import { mount } from 'enzyme'
 import { spy, stub } from 'sinon'
-import Form          from '../Form'
-import TextField     from '../TextField'
-import Button        from '../../Buttons/Button'
+import Form from '../Form'
+import TextField from '../TextField'
+import Button from '../../Buttons/Button'
 
 it('renders Form with TextField correctly', () => {
-  const tree = renderer.create(
-    <StyleRoot>
-      <Form>
-        <TextField
-          name="email"
-          type="email"
-          id="email_id"
-          floatingLabelText="Email"
-        />
-      </Form>
-    </StyleRoot>
-  ).toJSON()
+  const tree = renderer
+    .create(
+      <StyleRoot>
+        <Form>
+          <TextField name="email" type="email" id="email_id" floatingLabelText="Email" />
+        </Form>
+      </StyleRoot>
+    )
+    .toJSON()
   expect(tree).toMatchSnapshot()
 })
 
 it('fires the onSubmit prop when valid', () => {
   const onSubmit = spy()
   const wrapper = mount(
-    <Form
-      onSubmit={onSubmit}
-    >
-      <div style={{width: '335px'}}>
-        <div style={{marginBottom: '10px'}}>
+    <Form onSubmit={onSubmit}>
+      <div style={{ width: '335px' }}>
+        <div style={{ marginBottom: '10px' }}>
           <TextField
             name="email"
             type="email"
@@ -40,16 +35,14 @@ it('fires the onSubmit prop when valid', () => {
           />
         </div>
 
-        <div style={{marginTop: '10px'}}>
-          <Button type="submit">
-           Submit
-          </Button>
+        <div style={{ marginTop: '10px' }}>
+          <Button type="submit">Submit</Button>
         </div>
       </div>
     </Form>
   )
 
-  stub(wrapper.instance(), 'formIsValid').callsFake(() => (true))
+  stub(wrapper.instance(), 'formIsValid').callsFake(() => true)
   stub(wrapper.instance(), 'updateModel').callsFake(() => {})
 
   wrapper.find(Button).simulate('submit')
@@ -59,11 +52,9 @@ it('fires the onSubmit prop when valid', () => {
 it('wont fire the onSubmit prop when not valid', () => {
   const onSubmit = spy()
   const wrapper = mount(
-    <Form
-      onSubmit={onSubmit}
-    >
-      <div style={{width: '335px'}}>
-        <div style={{marginBottom: '10px'}}>
+    <Form onSubmit={onSubmit}>
+      <div style={{ width: '335px' }}>
+        <div style={{ marginBottom: '10px' }}>
           <TextField
             name="email"
             type="email"
@@ -73,16 +64,14 @@ it('wont fire the onSubmit prop when not valid', () => {
           />
         </div>
 
-        <div style={{marginTop: '10px'}}>
-          <Button type="submit">
-           Submit
-          </Button>
+        <div style={{ marginTop: '10px' }}>
+          <Button type="submit">Submit</Button>
         </div>
       </div>
     </Form>
   )
 
-  stub(wrapper.instance(), 'formIsValid').callsFake(() => (false))
+  stub(wrapper.instance(), 'formIsValid').callsFake(() => false)
   stub(wrapper.instance(), 'updateModel').callsFake(() => {})
 
   wrapper.find(Button).simulate('submit')
@@ -93,12 +82,9 @@ it('fire the onValidationError prop when not valid', () => {
   const onSubmit = spy()
   const onValidationError = spy()
   const wrapper = mount(
-    <Form
-      onSubmit={onSubmit}
-      onValidationError={onValidationError}
-    >
-      <div style={{width: '335px'}}>
-        <div style={{marginBottom: '10px'}}>
+    <Form onSubmit={onSubmit} onValidationError={onValidationError}>
+      <div style={{ width: '335px' }}>
+        <div style={{ marginBottom: '10px' }}>
           <TextField
             name="email"
             type="email"
@@ -108,16 +94,14 @@ it('fire the onValidationError prop when not valid', () => {
           />
         </div>
 
-        <div style={{marginTop: '10px'}}>
-          <Button type="submit">
-           Submit
-          </Button>
+        <div style={{ marginTop: '10px' }}>
+          <Button type="submit">Submit</Button>
         </div>
       </div>
     </Form>
   )
 
-  stub(wrapper.instance(), 'formIsValid').callsFake(() => (false))
+  stub(wrapper.instance(), 'formIsValid').callsFake(() => false)
   stub(wrapper.instance(), 'updateModel').callsFake(() => {})
 
   wrapper.find(Button).simulate('submit')

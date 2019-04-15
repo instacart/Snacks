@@ -1,22 +1,20 @@
-import React              from 'react'
-import MaskedTextField    from './MaskedTextField'
-
+import React from 'react'
+import MaskedTextField from './MaskedTextField'
 
 const phoneRegex = /\(|\)|-| /g
 
 // input masks by alpha-2 code - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 // NOTE: this currently only supports US, but will someday include other regions and countries
 const inputMasks = {
-  'US': {
+  US: {
     mask: ['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/],
-    hint: '(555) 555-555'
-  }
+    hint: '(555) 555-555',
+  },
 }
 
-const getValue = (value) => value.replace(phoneRegex, '')
+const getValue = value => value.replace(phoneRegex, '')
 
 class PhoneNumberField extends React.Component {
-
   static propTypes = {}
 
   static defaultProps = {}
@@ -34,11 +32,11 @@ class PhoneNumberField extends React.Component {
   render() {
     return (
       <MaskedTextField
-        type='tel'
+        type="tel"
         mask={inputMasks.US.mask}
         maskHint={inputMasks.US.hint}
         getValue={getValue}
-        ref={(ref) => this.input = ref}
+        ref={ref => (this.input = ref)}
         {...this.props}
       />
     )

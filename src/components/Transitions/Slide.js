@@ -21,6 +21,8 @@ class Slide extends PureComponent {
     /** Axis that is animated */
     axis: PropTypes.oneOf(['x', 'y']),
 
+    children: PropTypes.node,
+
     /** Optional style overrides for div that is offset and contains children. */
     containerStyle: PropTypes.object,
 
@@ -33,7 +35,7 @@ class Slide extends PureComponent {
     /**
      * Number of pixels to offset the children. To have the children completely hidden
      * prior to animation, offset should equal the width of the widest child.
-    */
+     */
     offset: PropTypes.number,
 
     /** Optional style overrides. */
@@ -62,7 +64,7 @@ class Slide extends PureComponent {
   }
 
   get transformAxis() {
-    return this.props.axis == 'x' ? 'translateX' : 'translateY'
+    return this.props.axis === 'x' ? 'translateX' : 'translateY'
   }
 
   get transitionStyles() {
@@ -70,10 +72,10 @@ class Slide extends PureComponent {
     const offsetDirection = invert ? '-' : ''
     return {
       entering: {
-        transform: `${this.transformAxis}(${offsetDirection}${offset}px)`
+        transform: `${this.transformAxis}(${offsetDirection}${offset}px)`,
       },
       entered: {
-        transform: `${this.transformAxis}(0)`
+        transform: `${this.transformAxis}(0)`,
       },
     }
   }
@@ -87,12 +89,12 @@ class Slide extends PureComponent {
     }
   }
 
-  renderChild = (state) => {
+  renderChild = state => {
     const { style, children, containerStyle } = this.props
     const styles = {
       ...this.initialStyles,
       ...this.transitionStyles[state],
-      ...containerStyle
+      ...containerStyle,
     }
     const topLevelStyle = {
       overflowY: 'hidden',
@@ -102,9 +104,7 @@ class Slide extends PureComponent {
 
     return (
       <div style={topLevelStyle}>
-        <div style={styles} >
-          {children}
-        </div>
+        <div style={styles}>{children}</div>
       </div>
     )
   }
@@ -112,11 +112,7 @@ class Slide extends PureComponent {
   render() {
     const { in: inProp, timeout, appear } = this.props
     return (
-      <Transition
-        in={inProp}
-        appear={appear}
-        timeout={timeout}
-      >
+      <Transition in={inProp} appear={appear} timeout={timeout}>
         {this.renderChild}
       </Transition>
     )

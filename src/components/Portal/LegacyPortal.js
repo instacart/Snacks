@@ -1,19 +1,21 @@
-import React, { Component }   from 'react'
-import ReactDOM               from 'react-dom'
-import PropTypes              from 'prop-types'
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 import { isNodeEnv } from '../../utils/detectFeature'
 
-const DEFAULT_CONTAINER = !isNodeEnv() ? document.body : { 
-  appendChild: () => {} /* eslint-disable-line no-empty-function */
-}
+const DEFAULT_CONTAINER = !isNodeEnv()
+  ? document.body
+  : {
+      appendChild: () => {} /* eslint-disable-line no-empty-function */,
+    }
 
 class Portal extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    container: PropTypes.element
+    container: PropTypes.element,
   }
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.setContainer(props.container)
   }
@@ -32,7 +34,7 @@ class Portal extends Component {
     this.containerEl = null
   }
 
-  setContainer (nextContainer) {
+  setContainer(nextContainer) {
     if (!nextContainer) {
       this.containerEl = document.createElement('div')
       DEFAULT_CONTAINER.appendChild(this.containerEl)
@@ -42,16 +44,12 @@ class Portal extends Component {
   }
 
   renderPortal() {
-    let children = this.props.children
+    let { children } = this.props
     if (typeof this.props.children.type === 'function') {
       children = React.cloneElement(this.props.children)
     }
 
-    ReactDOM.unstable_renderSubtreeIntoContainer(
-      this,
-      children,
-      this.containerEl
-    )
+    ReactDOM.unstable_renderSubtreeIntoContainer(this, children, this.containerEl)
   }
 
   render() {

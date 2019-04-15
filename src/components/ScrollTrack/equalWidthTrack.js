@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 import React, { PureComponent } from 'react'
 import ScrollTrackPropTypes from './ScrollTrackPropTypes'
 
@@ -11,25 +12,28 @@ class EqualWidthTrackError extends TypeError {
  * child to determine how it wants to treat elements that are shown within the track
  * or hidden off the overflow.
  */
-const equalWidthTrack = (childWidth) => {
+const equalWidthTrack = childWidth => {
   if (!['number', 'function'].includes(typeof childWidth)) {
     throw new EqualWidthTrackError('childWidth must be a number or function bassed on props')
   }
 
-  return (WrappedComponent) => {
+  return WrappedComponent => {
     class EqualWidthTrack extends PureComponent {
       static propTypes = {
-        trackProps: ScrollTrackPropTypes.trackProps
+        trackProps: ScrollTrackPropTypes.trackProps,
       }
 
       render() {
-        if (!this.props.trackProps) { return null }
-        const childWidthNumber = typeof childWidth === 'function' ? childWidth(this.props) : childWidth
+        if (!this.props.trackProps) {
+          return null
+        }
+        const childWidthNumber =
+          typeof childWidth === 'function' ? childWidth(this.props) : childWidth
 
         const { left, parentWidth } = this.props.trackProps
 
-        const startIndex = Math.floor(Math.abs(left)/childWidthNumber)
-        const lastIndex = Math.floor((Math.abs(left) + parentWidth)/childWidthNumber)
+        const startIndex = Math.floor(Math.abs(left) / childWidthNumber)
+        const lastIndex = Math.floor((Math.abs(left) + parentWidth) / childWidthNumber)
 
         return <WrappedComponent {...this.props} startIndex={startIndex} lastIndex={lastIndex} />
       }

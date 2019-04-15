@@ -1,6 +1,6 @@
 import responsive from '../../styles/responsive'
-import spacing    from '../../styles/spacing'
-import zIndex     from '../../styles/zIndex'
+import spacing from '../../styles/spacing'
+import zIndex from '../../styles/zIndex'
 
 export default {
   containerStyles: {
@@ -17,7 +17,7 @@ export default {
       display: 'block',
       msOverflowStyle: 'none',
       overflow: '-moz-scrollbars-none',
-      webkitOverflowScrolling: 'touch'
+      webkitOverflowScrolling: 'touch',
     },
   },
   slideButtonStyles: {
@@ -25,9 +25,9 @@ export default {
       position: 'absolute',
       top: '5px',
       display: 'none',
-      ...zIndex.Z_INDEX1
+      ...zIndex.Z_INDEX1,
     },
     left: spacing.LEFT_XS,
-    right: spacing.RIGHT_XS
-  }
+    right: spacing.RIGHT_XS,
+  },
 }

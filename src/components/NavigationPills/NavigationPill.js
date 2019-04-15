@@ -1,14 +1,14 @@
-import React              from 'react'
-import PropTypes          from 'prop-types'
-import Radium             from 'radium'
-import colors             from '../../styles/colors'
-import withTheme          from '../../styles/themer/withTheme'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Radium from 'radium'
+import colors from '../../styles/colors'
+import withTheme from '../../styles/themer/withTheme'
 import { themePropTypes } from '../../styles/themer/utils'
-import spacing            from '../../styles/spacing'
+import spacing from '../../styles/spacing'
 
 const styles = {
   container: {
-    display: 'inline-block'
+    display: 'inline-block',
   },
   main: {
     default: {
@@ -29,15 +29,15 @@ const styles = {
 
       ':hover': {
         textDecoration: 'none',
-        backgroundColor: colors.GRAY_93
+        backgroundColor: colors.GRAY_93,
       },
 
       ':focus': {
         textDecoration: 'none',
         backgroundColor: colors.GRAY_93,
-      }
-    }
-  }
+      },
+    },
+  },
 }
 
 const NavigationPill = props => {
@@ -48,27 +48,20 @@ const NavigationPill = props => {
     color: colors.WHITE,
 
     ':hover': {
-      backgroundColor: primaryForeground
+      backgroundColor: primaryForeground,
     },
     ':focus': {
       backgroundColor: primaryForeground,
-    }
+    },
   }
 
   return (
-    <li
-      style={styles.container}
-      { ...props.elementAttributes }
-    >
+    <li style={styles.container} {...props.elementAttributes}>
       <a
         href={props.path || '#'}
-        data-bypass={true}
+        data-bypass
         onClick={e => props.onClick(e, props)}
-        style={[
-          styles.main.default,
-          { color: primaryForeground },
-          isActive && activeStyles
-        ]}
+        style={[styles.main.default, { color: primaryForeground }, isActive && activeStyles]}
         {...props.anchorItemAttributes}
         key={`pill-anchor-${text}`}
       >
@@ -90,19 +83,19 @@ NavigationPill.propTypes = {
   /** Callback function called after pill click
    * @param {SyntheticEvent} event The react `SyntheticEvent`
    * @param {props} object All the props passed to the component
-  */
+   */
   onClick: PropTypes.func,
   /** url used for href property */
   path: PropTypes.string,
   /** snacks theme attributes */
   snacksTheme: themePropTypes,
   /** text to appear inside pill */
-  text: PropTypes.string
+  text: PropTypes.string,
 }
 
 NavigationPill.defaultProps = {
   elementAttributes: {},
-  isActive: false
+  isActive: false,
 }
 
 export default withTheme(Radium(NavigationPill))

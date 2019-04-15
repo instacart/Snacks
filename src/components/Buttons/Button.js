@@ -39,32 +39,32 @@ const sizeStyles = {
     ...spacing.PADDING_X_XS,
     height: '24px',
     fontSize: '11px',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
   },
 
   small: {
     ...spacing.PADDING_X_XS,
     fontSize: '14px',
-    height: '32px'
+    height: '32px',
   },
 
   standard: {
     ...spacing.PADDING_X_SM,
     fontSize: '16px',
-    height: '40px'
+    height: '40px',
   },
 
   large: {
     ...spacing.PADDING_X_MD,
     fontSize: '18px',
-    height: '48px'
-  }
+    height: '48px',
+  },
 }
 
 const linkStyles = {
   display: 'flex',
   alignItems: 'center',
-  boxSizing: 'border-box'
+  boxSizing: 'border-box',
 }
 
 const getSnacksStyles = props => {
@@ -74,37 +74,37 @@ const getSnacksStyles = props => {
   const disabled = {
     backgroundColor: colors.GRAY_74,
     color: colors.WHITE,
-    cursor: 'not-allowed'
+    cursor: 'not-allowed',
   }
 
   const activeAndFocus = {
     primary: {
       base: {
-        backgroundColor: actionActive
+        backgroundColor: actionActive,
       },
       inverted: {
         backgroundColor: primaryBackground,
-        opacity: '0.8'
-      }
+        opacity: '0.8',
+      },
     },
     secondary: {
       base: {
         color: actionActive,
-        border: `1px solid ${actionActive}`
+        border: `1px solid ${actionActive}`,
       },
       inverted: {
         color: primaryBackground,
         border: `1px solid ${primaryBackground}`,
-        opacity: '0.8'
-      }
+        opacity: '0.8',
+      },
     },
     flat: {
       color: actionActive,
     },
     coupon: {
       border: `1px dashed ${colors.RED_700}`,
-      color: colors.RED_700
-    }
+      color: colors.RED_700,
+    },
   }
 
   return {
@@ -114,10 +114,10 @@ const getSnacksStyles = props => {
         color: primaryBackground,
 
         ':hover': {
-          backgroundColor: actionHover
+          backgroundColor: actionHover,
         },
         ':active': activeAndFocus.primary.base,
-        ':focus': activeAndFocus.primary.base
+        ':focus': activeAndFocus.primary.base,
       },
 
       inverted: {
@@ -127,13 +127,13 @@ const getSnacksStyles = props => {
 
         ':hover': {
           backgroundColor: primaryBackground,
-          opacity: '0.9'
+          opacity: '0.9',
         },
         ':active': activeAndFocus.primary.inverted,
-        ':focus': activeAndFocus.primary.inverted
+        ':focus': activeAndFocus.primary.inverted,
       },
 
-      disabled
+      disabled,
     },
 
     secondary: {
@@ -144,10 +144,10 @@ const getSnacksStyles = props => {
 
         ':hover': {
           color: actionHover,
-          border: `1px solid ${actionHover}`
+          border: `1px solid ${actionHover}`,
         },
         ':active': activeAndFocus.secondary.base,
-        ':focus': activeAndFocus.secondary.base
+        ':focus': activeAndFocus.secondary.base,
       },
 
       inverted: {
@@ -157,13 +157,13 @@ const getSnacksStyles = props => {
         ':hover': {
           color: primaryBackground,
           border: `1px solid ${primaryBackground}`,
-          opacity: '0.9'
+          opacity: '0.9',
         },
         ':active': activeAndFocus.secondary.inverted,
-        ':focus': activeAndFocus.secondary.inverted
+        ':focus': activeAndFocus.secondary.inverted,
       },
 
-      disabled
+      disabled,
     },
 
     flat: {
@@ -175,14 +175,14 @@ const getSnacksStyles = props => {
           color: actionHover,
         },
         ':active': activeAndFocus.flat,
-        ':focus': activeAndFocus.flat
+        ':focus': activeAndFocus.flat,
       },
 
       disabled: {
         backgroundColor: 'transparent',
         color: colors.GRAY_74,
-        cursor: 'not-allowed'
-      }
+        cursor: 'not-allowed',
+      },
     },
 
     coupon: {
@@ -193,14 +193,14 @@ const getSnacksStyles = props => {
 
         ':hover': {
           border: `1px dashed ${colors.RED_600}`,
-          color: colors.RED_600
+          color: colors.RED_600,
         },
         ':active': activeAndFocus.coupon,
-        ':focus': activeAndFocus.coupon
+        ':focus': activeAndFocus.coupon,
       },
 
-      disabled
-    }
+      disabled,
+    },
   }
 }
 
@@ -219,7 +219,7 @@ const Button = props => {
       snacksStyles[props.snacksStyle][props.disabled ? 'disabled' : 'base'],
       props.inverted && snacksStyles[props.snacksStyle].inverted,
       ElementType === 'a' && linkStyles,
-      props.style
+      props.style,
     ],
     onClick: e => {
       if (props.disabled) {
@@ -237,14 +237,13 @@ const Button = props => {
 
       props.onMouseDown(e, props)
     },
-    ...props.elementAttributes
+    ...props.elementAttributes,
   }
   if (props.href) {
     finalProps.href = props.href
   }
 
-  const icon =
-    typeof props.icon === 'string' ? <Icon name={props.icon} /> : props.icon
+  const icon = typeof props.icon === 'string' ? <Icon name={props.icon} /> : props.icon
 
   if (icon && props.iconPosition === 'left') {
     return (
@@ -319,7 +318,7 @@ Button.propTypes = {
   elementAttributes: PropTypes.object,
 
   /** Snacks theme attributes provided by `Themer` */
-  snacksTheme: themePropTypes
+  snacksTheme: themePropTypes,
 }
 
 Button.defaultProps = {
@@ -331,7 +330,7 @@ Button.defaultProps = {
   onClick: noop,
   onMouseDown: noop,
   inverted: false,
-  elementAttributes: {}
+  elementAttributes: {},
 }
 
 export default withTheme(Radium(Button))

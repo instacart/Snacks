@@ -1,6 +1,6 @@
-import React             from 'react'
-import PropTypes         from 'prop-types'
-import spacing           from '../../styles/spacing'
+import React from 'react'
+import PropTypes from 'prop-types'
+import spacing from '../../styles/spacing'
 
 const styles = {
   borderRadius: '4px',
@@ -13,7 +13,7 @@ const styles = {
   overflowY: 'auto',
   userSelect: 'none',
   maxHeight: '500px',
-  outline: 'none'
+  outline: 'none',
 }
 
 class Menu extends React.Component {
@@ -31,37 +31,50 @@ class Menu extends React.Component {
     /** Role HTML attribute */
     role: PropTypes.string,
     /** Customize style of menu parent */
-    style: PropTypes.shape({})
+    style: PropTypes.shape({}),
   }
 
   static defaultProps = {
     role: 'menu',
     ariaHidden: false,
     style: {},
-    onSelect: () => {} // eslint-disable-line no-empty-function
+    onSelect: () => {}, // eslint-disable-line no-empty-function
   }
 
   state = {
-    currentTabIndex: null
+    currentTabIndex: null,
   }
 
-  handleBlur = (event) => {
-    const { onBlur } = this.props
-    const currentTarget = event.currentTarget
+  getMenuItemChildren() {
+    const { children } = this.props
+    const menuItemChildren = []
 
-    setTimeout( () => {
+    React.Children.map(children, child => {
+      if (child.type && child.type.isSnacksMenuItem) {
+        menuItemChildren.push(child)
+      }
+    })
+
+    return menuItemChildren
+  }
+
+  handleBlur = event => {
+    const { onBlur } = this.props
+    const { currentTarget } = event
+
+    setTimeout(() => {
       if (!currentTarget.contains(document.activeElement)) {
-        this.setState({currentTabIndex: null}, () => {
+        this.setState({ currentTabIndex: null }, () => {
           onBlur && onBlur(event)
         })
       }
     }, 0)
   }
 
-  handleKeyDown = (event) => {
+  handleKeyDown = event => {
     const { onKeyDown } = this.props
 
-    switch(event.key) {
+    switch (event.key) {
       case 'ArrowDown': {
         event.preventDefault()
         this.incrementTabIndex()
@@ -77,8 +90,8 @@ class Menu extends React.Component {
     onKeyDown && onKeyDown(event)
   }
 
-  handleMenuItemFocus = (index) => {
-    this.setState({currentTabIndex: index})
+  handleMenuItemFocus = index => {
+    this.setState({ currentTabIndex: index })
   }
 
   blur() {
@@ -90,18 +103,18 @@ class Menu extends React.Component {
   }
 
   incrementTabIndex() {
-    this.setState({currentTabIndex: this.nextValidTabIndex()})
+    this.setState({ currentTabIndex: this.nextValidTabIndex() })
   }
 
   decrementTabIndex() {
-    this.setState({currentTabIndex: this.prevValidTabIndex()})
+    this.setState({ currentTabIndex: this.prevValidTabIndex() })
   }
 
   nextValidTabIndex() {
     const { currentTabIndex } = this.state
     const menuItemChildren = this.getMenuItemChildren()
     const maxIndex = menuItemChildren.length - 1
-    const newIndex = currentTabIndex !== null ? currentTabIndex+1 : 0
+    const newIndex = currentTabIndex !== null ? currentTabIndex + 1 : 0
 
     for (let index = newIndex; index <= maxIndex; index++) {
       const menuItem = menuItemChildren[index]
@@ -118,7 +131,7 @@ class Menu extends React.Component {
     const { currentTabIndex } = this.state
     const menuItemChildren = this.getMenuItemChildren()
 
-    for (let index = (currentTabIndex-1); index >= 0; index--) {
+    for (let index = currentTabIndex - 1; index >= 0; index--) {
       const menuItem = menuItemChildren[index]
 
       if (this.menuItemIsValid(menuItem)) {
@@ -133,33 +146,20 @@ class Menu extends React.Component {
     return menuItem && !menuItem.props.disabled
   }
 
-  getMenuItemChildren() {
-    const { children } = this.props
-    const menuItemChildren = []
-
-    React.Children.map(children, (child) => {
-      if (child.type && child.type.isSnacksMenuItem) {
-        menuItemChildren.push(child)
-      }
-    })
-
-    return menuItemChildren
-  }
-
   renderChildren() {
     const { children, onSelect } = this.props
     const { currentTabIndex } = this.state
     let index = 0
 
-    return React.Children.map(children, (child) => {
+    return React.Children.map(children, child => {
       if (!React.isValidElement(child)) {
-        throw 'Passing invalid element to Menu'
+        throw new Error('Passing invalid element to Menu')
       } else if (child.type && child.type.isSnacksMenuItem) {
         const component = React.cloneElement(child, {
-          index: index,
+          index,
           focus: currentTabIndex === index,
           _onClick: onSelect,
-          onMenuItemFocus: this.handleMenuItemFocus
+          onMenuItemFocus: this.handleMenuItemFocus,
         })
         index += 1
         return component
@@ -170,20 +170,16 @@ class Menu extends React.Component {
   }
 
   render() {
-    const {
-      ariaHidden,
-      style,
-      role,
-    } = this.props
+    const { ariaHidden, style, role } = this.props
 
     const mergedStyles = {
       ...styles,
-      ...style
+      ...style,
     }
 
     return (
       <div
-        ref={(node) => this.menu = node}
+        ref={node => (this.menu = node)}
         role={role}
         style={mergedStyles}
         onKeyDown={this.handleKeyDown}
@@ -191,7 +187,7 @@ class Menu extends React.Component {
         aria-hidden={ariaHidden}
         tabIndex={-1}
       >
-        { this.renderChildren() }
+        {this.renderChildren()}
       </div>
     )
   }

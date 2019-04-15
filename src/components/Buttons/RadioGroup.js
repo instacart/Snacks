@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Radio from './Radio'
 
 const STYLE = {
-  wrapEl: {}
+  wrapEl: {},
 }
 
 const NoOp = () => {} // eslint-disable-line no-empty-function
@@ -22,7 +22,9 @@ class RadioGroup extends React.Component {
         return new Error('Only one radio button can be selected in the group.')
       }
 
-      if (child.props.isSelected) { initHasSelectedRadio = true }
+      if (child.props.isSelected) {
+        initHasSelectedRadio = true
+      }
     }).isRequired,
     name: PropTypes.string.isRequired,
     selectedBtn: PropTypes.instanceOf(Radio),
@@ -30,7 +32,7 @@ class RadioGroup extends React.Component {
     wrapEl: PropTypes.string,
     style: PropTypes.shape({
       wrapEl: PropTypes.object,
-    })
+    }),
   }
 
   static defaultProps = {
@@ -43,12 +45,12 @@ class RadioGroup extends React.Component {
     selectedBtn: this.props.selectedBtn,
   }
 
-  handleBtnChange = (inputBtn) => {
+  handleBtnChange = inputBtn => {
     const { onChange } = this.props
 
-    return (event) => {
+    return event => {
       onChange(event.target.value, inputBtn.props)
-      this.setState({selectedBtn: inputBtn})
+      this.setState({ selectedBtn: inputBtn })
     }
   }
 
@@ -60,17 +62,11 @@ class RadioGroup extends React.Component {
       return React.cloneElement(child, {
         name: this.props.name,
         onChange: this.handleBtnChange(child),
-        isSelected: child.props.id === (selectedBtn ? selectedBtn.props.id : false)
+        isSelected: child.props.id === (selectedBtn ? selectedBtn.props.id : false),
       })
     })
 
-    return (
-      <Element
-        style={{...STYLE.wrapEl, ...style.wrapEl}}
-      >
-        {childrenWithProps}
-      </Element>
-    )
+    return <Element style={{ ...STYLE.wrapEl, ...style.wrapEl }}>{childrenWithProps}</Element>
   }
 }
 

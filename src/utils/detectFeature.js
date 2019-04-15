@@ -1,7 +1,9 @@
 import memoize from './memoize'
 
 export const supportsCSSGrid = memoize(() => {
-  if (isNodeEnv() || isTestEnv()) { return true }
+  if (isNodeEnv() || isTestEnv()) {
+    return true
+  }
 
   const elm = document.createElement('div')
 

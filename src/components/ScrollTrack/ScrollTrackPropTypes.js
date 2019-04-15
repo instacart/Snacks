@@ -7,8 +7,8 @@ const propTypes = {
     left: PropTypes.number,
     parentWidth: PropTypes.number,
     trackWidth: PropTypes.number,
-    trackBounds: PropTypes.object
-  })
+    trackBounds: PropTypes.object,
+  }),
 }
 
 export default propTypes

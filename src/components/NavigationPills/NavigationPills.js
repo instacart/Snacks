@@ -1,10 +1,10 @@
-import React           from 'react'
-import PropTypes       from 'prop-types'
-import Radium          from 'radium'
-import NavigationPill  from './NavigationPill'
-import ScrollTrack     from '../ScrollTrack/ScrollTrack'
-import colors          from '../../styles/colors'
-import spacing         from '../../styles/spacing'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Radium from 'radium'
+import NavigationPill from './NavigationPill'
+import ScrollTrack from '../ScrollTrack/ScrollTrack'
+import colors from '../../styles/colors'
+import spacing from '../../styles/spacing'
 
 const styles = {
   labelStyles: {
@@ -19,7 +19,7 @@ const styles = {
     ...spacing.PADDING_BOTTOM_XS,
     ...spacing.PADDING_LEFT_MD,
     backgroundColor: colors.WHITE,
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   pillsContainerStyles: {
     display: 'inline-block',
@@ -27,16 +27,18 @@ const styles = {
     marginRight: '0',
     marginBottom: '0',
     marginLeft: '0',
-  }
+  },
 }
 
 const NavigationPills = props => {
   const renderLabel = () => {
-    if (!props.label) { return }
+    if (!props.label) {
+      return
+    }
 
+    // eslint-disable-next-line jsx-a11y/label-has-associated-control
     return <label style={styles.labelStyles}>{props.label}</label>
   }
-
 
   const renderPill = (pill, idx) => {
     return (
@@ -53,17 +55,15 @@ const NavigationPills = props => {
 
   const { pillsContainerStyles, wrapperStyles } = styles
 
-  if (!props.pills || props.pills.length <= 1) { return null }
+  if (!props.pills || props.pills.length <= 1) {
+    return null
+  }
 
   return (
     <ScrollTrack>
-      <div
-        style={wrapperStyles}
-        ref='pillsTrack'
-        { ...props.elementAttributes }
-      >
+      <div style={wrapperStyles} ref="pillsTrack" {...props.elementAttributes}>
         {renderLabel()}
-        <ul style={pillsContainerStyles} { ...props.listItemAttributes} >
+        <ul style={pillsContainerStyles} {...props.listItemAttributes}>
           {props.pills.map(renderPill)}
         </ul>
       </div>
@@ -83,16 +83,16 @@ NavigationPills.propTypes = {
   /** Callback function called after pill click
    * @param {SyntheticEvent} event The react `SyntheticEvent`
    * @param {props} object All the props passed to the component
-  */
+   */
   onPillClick: PropTypes.func,
   /** optional label placed in front of pills */
   label: PropTypes.string,
   /** string matching the text of one of the pills. Determines which pill is active, if any */
-  activePill: PropTypes.string
+  activePill: PropTypes.string,
 }
 
 NavigationPills.defaultProps = {
-  elementAttributes: {}
+  elementAttributes: {},
 }
 
 export default Radium(NavigationPills)

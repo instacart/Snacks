@@ -3,53 +3,47 @@ import renderer from 'react-test-renderer'
 import NavigationPill from '../NavigationPill'
 
 it('renders active pill correctly', () => {
-  const tree = renderer.create(
-    <NavigationPill
-      isActive={true}
-      text={'Active pill'}
-    />
-  ).toJSON()
+  const tree = renderer.create(<NavigationPill isActive text={'Active pill'} />).toJSON()
   expect(tree).toMatchSnapshot()
 })
 
 it('renders inactive pill correctly', () => {
-  const tree = renderer.create(
-    <NavigationPill
-      isActive={false}
-      text={'Not active pill'}
-    />
-  ).toJSON()
+  const tree = renderer
+    .create(<NavigationPill isActive={false} text={'Not active pill'} />)
+    .toJSON()
   expect(tree).toMatchSnapshot()
 })
 
 it('renders href pill correctly', () => {
-  const tree = renderer.create(
-    <NavigationPill
-      isActive={false}
-      text={'Pill with href'}
-      path={'/store/doms-cool-store'}
-    />
-  ).toJSON()
+  const tree = renderer
+    .create(
+      <NavigationPill isActive={false} text={'Pill with href'} path={'/store/doms-cool-store'} />
+    )
+    .toJSON()
   expect(tree).toMatchSnapshot()
 })
 
 it('renders element attributes on pill correctly', () => {
-  const tree = renderer.create(
-    <NavigationPill
-      text={'pill with attributes'}
-      elementAttributes={{ ariaLabel:'this is an aria label', role:'tab'}}
-    />
-  ).toJSON()
+  const tree = renderer
+    .create(
+      <NavigationPill
+        text={'pill with attributes'}
+        elementAttributes={{ ariaLabel: 'this is an aria label', role: 'tab' }}
+      />
+    )
+    .toJSON()
   expect(tree).toMatchSnapshot()
 })
 
 it('renders inner element attributes on pill correctly', () => {
-  const tree = renderer.create(
-    <NavigationPill
-      text={'pill with attributes'}
-      elementAttributes={{ role:'tab'}}
-      anchorItemAttributes={{ariaLabel:'this is an aria label'}}
-    />
-  ).toJSON()
+  const tree = renderer
+    .create(
+      <NavigationPill
+        text={'pill with attributes'}
+        elementAttributes={{ role: 'tab' }}
+        anchorItemAttributes={{ ariaLabel: 'this is an aria label' }}
+      />
+    )
+    .toJSON()
   expect(tree).toMatchSnapshot()
 })

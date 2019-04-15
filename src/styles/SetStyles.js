@@ -1,11 +1,10 @@
-import React, { Component }       from 'react'
-import PropTypes                  from 'prop-types'
-import Radium, { Style }          from 'radium'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import Radium, { Style } from 'radium'
 import { Normalize, GlobalTheme } from '../index'
 
-const getFonts = (assetsUrl) => {
-  return (
-    `@font-face {
+const getFonts = assetsUrl => {
+  return `@font-face {
       font-family: 'ic-icons';
       font-weight: normal;
       font-style: normal;
@@ -67,14 +66,15 @@ const getFonts = (assetsUrl) => {
            url('${assetsUrl}/OpenSans-Bold/OpenSans-Bold.ttf') format('truetype'),
            url('${assetsUrl}/OpenSans-Bold/OpenSans-Bold.svg#OpenSans') format('svg');
     }`
-  )
 }
 
 let fontLoaded = false
 
-const writeFonts = (assetsUrl) => {
+const writeFonts = assetsUrl => {
   // if on server, just return
-  if (typeof window === 'undefined') { return }
+  if (typeof window === 'undefined') {
+    return
+  }
 
   const style = document.createElement('style')
   style.setAttribute('type', 'text/css')
@@ -85,18 +85,20 @@ const writeFonts = (assetsUrl) => {
 @Radium
 class Styles extends Component {
   static propTypes = {
-    assetsUrl: PropTypes.string.isRequired
+    assetsUrl: PropTypes.string.isRequired,
   }
 
   componentWillMount() {
-    if (fontLoaded) { return }
+    if (fontLoaded) {
+      return
+    }
 
     writeFonts(this.props.assetsUrl)
     fontLoaded = true
   }
 
   render() {
-    return <Style rules={Object.assign({}, Normalize, GlobalTheme)} />
+    return <Style rules={{ ...Normalize, ...GlobalTheme }} />
   }
 }
 

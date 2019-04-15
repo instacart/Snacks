@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import React from 'react'
 
 // eslint-disable-next-line
@@ -7,7 +8,9 @@ export const TypographyTableRow = ({ variant, usage, example = "Don't talk about
       <Text variant={`${variant}`}>{variant}</Text>
     </td>
     <td>
-      <Text variant="T.18" fontWeight="bold">Common usage</Text>
+      <Text variant="T.18" fontWeight="bold">
+        Common usage
+      </Text>
       {usage.map(line => (
         <Text key={line} variant="T.14">
           {line}

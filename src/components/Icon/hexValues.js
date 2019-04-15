@@ -169,5 +169,5 @@ export default {
   xBold: 'e07a',
   xCircleFilled: 'e06e',
   xCircle: 'e06d',
-  x: 'e000'
+  x: 'e000',
 }

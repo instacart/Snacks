@@ -49,12 +49,12 @@ const expectedExports = [
   'MenuDivider',
   'DropdownMenu',
   'Portal',
-  'Text'
+  'Text',
 ]
 const indexFile = readFileSync(indexPath).toString()
 
 describe('ensure module exports', () => {
-  expectedExports.forEach((expected) => {
+  expectedExports.forEach(expected => {
     it(`exports module: ${expected}`, () => {
       const found = !!indexFile.includes(expected)
       expect(found).toBe(true)
@@ -66,8 +66,11 @@ describe('ensure test for exports', () => {
   const exportStr = indexFile.substr(indexFile.indexOf('export {') + 9)
   const finalStr = exportStr.substr(0, exportStr.indexOf('}') - 1)
   // console.log(finalStr)
-  const arr = finalStr.split('\n').filter(i => !i.includes('//') && i !== '').map(i => i.replace(/ |,/g, ''))
-  arr.forEach((exported) => {
+  const arr = finalStr
+    .split('\n')
+    .filter(i => !i.includes('//') && i !== '')
+    .map(i => i.replace(/ |,/g, ''))
+  arr.forEach(exported => {
     it(`has a test: ${exported}`, () => {
       expect(expectedExports.includes(exported)).toBe(true)
     })

@@ -4,11 +4,14 @@ import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 
 const buildKeyFramesStyles = (startColor, endColor, name) => ({
-  animationName: Radium.keyframes({
-    '0%': { backgroundColor: startColor },
-    '50%': { backgroundColor: endColor },
-    '100%': { backgroundColor: startColor },
-  }, name),
+  animationName: Radium.keyframes(
+    {
+      '0%': { backgroundColor: startColor },
+      '50%': { backgroundColor: endColor },
+      '100%': { backgroundColor: startColor },
+    },
+    name
+  ),
   backgroundColor: startColor,
 })
 
@@ -16,7 +19,7 @@ const baseLoadingStyle = {
   animation: 'x 3s ease-in-out infinite',
   ...buildKeyFramesStyles(colors.GRAY_93, colors.GRAY_88, 'loading'),
   width: '100%',
-  height: '20px'
+  height: '20px',
 }
 
 const backgroundStyles = {
@@ -38,7 +41,7 @@ const shapeStyles = {
     marginTop: 10,
     marginBottom: 10,
     width: 150,
-  }
+  },
 }
 
 const determineStyle = (background, shape, size) => {
@@ -80,9 +83,7 @@ class LoadingBox extends PureComponent {
       ...style,
     }
 
-    return (
-      <div style={boxStyle} />
-    )
+    return <div style={boxStyle} />
   }
 }
 

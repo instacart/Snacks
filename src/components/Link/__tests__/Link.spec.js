@@ -1,9 +1,9 @@
-import Link from '../Link'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
 import { spy } from 'sinon'
+import Link from '../Link'
 import themer from '../../../styles/themer'
 import { defaultTheme } from '../../../styles/themer/utils'
 
@@ -46,7 +46,7 @@ describe('Link', () => {
     const onClick = spy()
     const props = {
       onClick,
-      href: 'broccoli'
+      href: 'broccoli',
     }
     const wrapper = mount(
       <StyleRoot>
@@ -76,8 +76,8 @@ describe('Link', () => {
       colors: {
         action: '#fff',
         primaryBackground: '#4a4a4a',
-        primaryForeground: '#000'
-      }
+        primaryForeground: '#000',
+      },
     }
     wrapper.update()
 

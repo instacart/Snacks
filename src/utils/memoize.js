@@ -1,11 +1,11 @@
-export default (func) => {
-  const memoizedFunc = function () {
+export default func => {
+  const memoizedFunc = function(...args) {
     let result
-    const key = JSON.stringify(arguments)
+    const key = JSON.stringify(args)
     if (memoizedFunc.cache[key] !== undefined) {
       result = memoizedFunc.cache[key]
     } else {
-      result = func.apply(null, arguments)
+      result = func(...args)
       memoizedFunc.cache[key] = result
     }
     return result

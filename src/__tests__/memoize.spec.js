@@ -1,7 +1,7 @@
 import memoize from '../utils/memoize'
 
-const doCallbackFiveTimes = (callback) => {
-  [1,2,3,4,5].forEach(() => callback())
+const doCallbackFiveTimes = callback => {
+  ;[1, 2, 3, 4, 5].forEach(() => callback())
 }
 describe('memoize', () => {
   describe('returns the correct value', () => {

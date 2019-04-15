@@ -18,5 +18,5 @@ export default {
   RED_600: '#CC0033',
   RED_500: '#E6003D',
   RED_400: '#FF195A',
-  RED_300: '#FF467E'
+  RED_300: '#FF467E',
 }

@@ -1,5 +1,5 @@
-import React      from 'react'
-import PropTypes  from 'prop-types'
+import React from 'react'
+import PropTypes from 'prop-types'
 import Radium from 'radium'
 import responsive from '../../styles/responsive'
 
@@ -10,46 +10,38 @@ const styles = {
   marginLeft: 'auto',
 
   [responsive.xs]: {
-    width: '100%'
+    width: '100%',
   },
 
   [responsive.sm]: {
-    width: responsive.screenWidths.sm
+    width: responsive.screenWidths.sm,
   },
 
   [responsive.md]: {
-    width: responsive.screenWidths.md
+    width: responsive.screenWidths.md,
   },
 
   [responsive.mdLg]: {
-    width: responsive.screenWidths.mdLg
+    width: responsive.screenWidths.mdLg,
   },
 
   [responsive.lg]: {
-    width: responsive.screenWidths.lg
+    width: responsive.screenWidths.lg,
   },
 
   [responsive.xl]: {
-    width: responsive.screenWidths.xl
-  }
+    width: responsive.screenWidths.xl,
+  },
 }
 
 const Grid = props => {
-  return (
-    <div
-      style={[
-        styles,
-        props.style
-      ]}
-    >
-      { props.children }
-    </div>
-  )
+  return <div style={[styles, props.style]}>{props.children}</div>
 }
 
 Grid.propTypes = {
+  children: PropTypes.node,
   /** Optional style overrides */
-  style: PropTypes.object
+  style: PropTypes.object,
 }
 
 export default Radium(Grid)
