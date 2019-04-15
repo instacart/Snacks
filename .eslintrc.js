@@ -11,7 +11,12 @@ module.exports = {
   },
   extends: ['@instacart/eslint-config'],
   rules: {
-    'no-plusplus': OFF,
+    'no-plusplus': [
+      ERROR,
+      {
+        allowForLoopAfterthoughts: true,
+      },
+    ],
     // Fails on non literal roles attrs. Set to error after this is released:
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/pull/572
     'jsx-a11y/no-static-element-interactions': WARN,
