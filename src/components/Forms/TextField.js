@@ -263,8 +263,8 @@ class TextField extends React.Component {
               hasError ? `error_${inputId}` : null,
               hintText ? `hint_${inputId}` : null,
             ]
-              .join(' ')
-              .trim()}
+              .filter(Boolean)
+              .join(' ')}
             style={[
               styles.input,
               inputStyle,
