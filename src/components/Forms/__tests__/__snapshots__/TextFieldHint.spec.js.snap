@@ -7,6 +7,7 @@ exports[`renders TextFieldHint correctly 1`] = `
   <div>
     <div
       data-radium={true}
+      id="hint_undefined"
       style={
         Object {
           "color": "#BDBDBD",
@@ -18,6 +19,7 @@ exports[`renders TextFieldHint correctly 1`] = `
           "transform": "scale(1) translate(9px, 26px)",
           "transformOrigin": "left top",
           "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+          "visibility": "visible",
           "zIndex": 1,
         }
       }
@@ -42,6 +44,7 @@ exports[`renders TextFieldHint when disabled 1`] = `
   <div>
     <div
       data-radium={true}
+      id="hint_undefined"
       style={
         Object {
           "color": "#BDBDBD",
@@ -53,6 +56,7 @@ exports[`renders TextFieldHint when disabled 1`] = `
           "transform": "scale(1) translate(9px, 26px)",
           "transformOrigin": "left top",
           "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+          "visibility": "visible",
           "zIndex": 1,
         }
       }
@@ -77,6 +81,7 @@ exports[`renders TextFieldHint when show is false 1`] = `
   <div>
     <div
       data-radium={true}
+      id="hint_undefined"
       style={
         Object {
           "color": "#BDBDBD",
@@ -88,6 +93,7 @@ exports[`renders TextFieldHint when show is false 1`] = `
           "transform": "scale(1) translate(9px, 26px)",
           "transformOrigin": "left top",
           "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+          "visibility": "hidden",
           "zIndex": 1,
         }
       }
