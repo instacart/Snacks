@@ -214,14 +214,10 @@ class TextField extends React.Component {
     const snacksStyles = getSnackStyles(snacksTheme)
 
     const inputId = id
+    const errorId = `error_${inputId}`
+    const hintId = `hint_${inputId}`
     const showHintText = hintText && !hasValue && isFocused
-    let describedByIds = ''
-    if (hasError) {
-      describedByIds += `error_${inputId}`
-    }
-    if (hintText) {
-      describedByIds += ` hint_${inputId}`
-    }
+    const describedByIds = `${hasError ? errorId : ''} ${hintText ? hintId : ''}`.trim()
 
     return (
       <div
@@ -266,7 +262,7 @@ class TextField extends React.Component {
             type={type}
             aria-required={required}
             aria-invalid={hasError}
-            aria-describedby={describedByIds ? describedByIds.trim() : null}
+            aria-describedby={hasError || hintText ? describedByIds : null}
             style={[
               styles.input,
               inputStyle,
