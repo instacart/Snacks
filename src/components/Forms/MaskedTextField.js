@@ -276,7 +276,7 @@ class MaskedTextField extends React.Component {
           />
 
           <TextFieldHint
-            inputId={inputId}
+            inputId={`hint_${inputId}`}
             text={maskHint}
             show={!hasValue && isFocused}
             disabled={disabled}

@@ -215,6 +215,8 @@ class TextField extends React.Component {
 
     const inputId = id
     const showHintText = hintText && !hasValue && isFocused
+    let describedIds = hasError ? `error_${inputId}` : ''
+    describedIds += hintText ? ` hint_${inputId}` : ''
 
     return (
       <div
@@ -238,7 +240,14 @@ class TextField extends React.Component {
             snacksTheme={snacksTheme}
           />
 
-          {hintText && <TextFieldHint text={hintText} show={showHintText} disabled={disabled} />}
+          {hintText && (
+            <TextFieldHint
+              inputId={`hint_${inputId}`}
+              text={hintText}
+              show={showHintText}
+              disabled={disabled}
+            />
+          )}
 
           <input
             value={value}
@@ -252,7 +261,7 @@ class TextField extends React.Component {
             type={type}
             aria-required={required}
             aria-invalid={hasError}
-            aria-describedby={hasError ? `error_${inputId}` : null}
+            aria-describedby={describedIds ? describedIds.trim() : null}
             style={[
               styles.input,
               inputStyle,
