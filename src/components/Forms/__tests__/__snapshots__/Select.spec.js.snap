@@ -121,7 +121,7 @@ exports[`renders Select correctly 1`] = `
                 >
                   <div
                     data-radium={true}
-                    id="hint_undefined"
+                    id={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     style={
@@ -136,7 +136,7 @@ exports[`renders Select correctly 1`] = `
                         "top": 0,
                         "transform": "scale(1) translate(9px, 26px)",
                         "transformOrigin": "left top",
-                        "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "transition": "visibility 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                         "visibility": "hidden",
                         "zIndex": 1,
                       }
@@ -500,7 +500,7 @@ exports[`renders Select w/ server error correctly 1`] = `
                 >
                   <div
                     data-radium={true}
-                    id="hint_undefined"
+                    id={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     style={
@@ -515,7 +515,7 @@ exports[`renders Select w/ server error correctly 1`] = `
                         "top": 0,
                         "transform": "scale(1) translate(9px, 26px)",
                         "transformOrigin": "left top",
-                        "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "transition": "visibility 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                         "visibility": "hidden",
                         "zIndex": 1,
                       }
@@ -881,7 +881,7 @@ exports[`renders disabled Select correctly 1`] = `
                 >
                   <div
                     data-radium={true}
-                    id="hint_undefined"
+                    id={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     style={
@@ -896,7 +896,7 @@ exports[`renders disabled Select correctly 1`] = `
                         "top": 0,
                         "transform": "scale(1) translate(9px, 26px)",
                         "transformOrigin": "left top",
-                        "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "transition": "visibility 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                         "visibility": "hidden",
                         "zIndex": 1,
                       }
@@ -1260,7 +1260,7 @@ exports[`renders invalid Select correctly 1`] = `
                 >
                   <div
                     data-radium={true}
-                    id="hint_undefined"
+                    id={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     style={
@@ -1275,7 +1275,7 @@ exports[`renders invalid Select correctly 1`] = `
                         "top": 0,
                         "transform": "scale(1) translate(9px, 26px)",
                         "transformOrigin": "left top",
-                        "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "transition": "visibility 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                         "visibility": "hidden",
                         "zIndex": 1,
                       }
@@ -1638,7 +1638,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
               >
                 <div
                   data-radium={true}
-                  id="hint_undefined"
+                  id={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   style={
@@ -1653,7 +1653,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                       "top": 0,
                       "transform": "scale(1) translate(9px, 26px)",
                       "transformOrigin": "left top",
-                      "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                      "transition": "visibility 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                       "visibility": "hidden",
                       "zIndex": 1,
                     }
