@@ -52,7 +52,7 @@ exports[`renders Form with TextField correctly 1`] = `
           Email
         </label>
         <input
-          aria-describedby={null}
+          aria-describedby=""
           aria-invalid={false}
           aria-required={undefined}
           autoComplete="on"
