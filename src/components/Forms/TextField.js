@@ -259,7 +259,12 @@ class TextField extends React.Component {
             type={type}
             aria-required={required}
             aria-invalid={hasError}
-            aria-describedby={[hasError ? `error_${inputId}` : null, hintText ? `hint_${inputId}` : null].join(' ').trim()}
+            aria-describedby={[
+              hasError ? `error_${inputId}` : null,
+              hintText ? `hint_${inputId}` : null,
+            ]
+              .join(' ')
+              .trim()}
             style={[
               styles.input,
               inputStyle,
