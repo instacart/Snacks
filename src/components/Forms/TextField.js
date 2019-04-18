@@ -215,8 +215,13 @@ class TextField extends React.Component {
 
     const inputId = id
     const showHintText = hintText && !hasValue && isFocused
-    let describedIds = hasError ? `error_${inputId}` : ''
-    describedIds += hintText ? ` hint_${inputId}` : ''
+    let describedByIds = ''
+    if (hasError) {
+      describedByIds += `error_${inputId}`
+    }
+    if (hintText) {
+      describedByIds += ` hint_${inputId}`
+    }
 
     return (
       <div
@@ -261,7 +266,7 @@ class TextField extends React.Component {
             type={type}
             aria-required={required}
             aria-invalid={hasError}
-            aria-describedby={describedIds ? describedIds.trim() : null}
+            aria-describedby={describedByIds ? describedByIds.trim() : null}
             style={[
               styles.input,
               inputStyle,
