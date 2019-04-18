@@ -12,14 +12,14 @@ const styles = {
     opacity: 0,
     transform: 'scale(1) translate(9px, 26px)',
     transformOrigin: 'left top',
-    transition:
-      'visibility 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms',
+    transition: 'visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms',
     pointerEvents: 'none',
     zIndex: 1,
     visibility: 'hidden',
   },
   show: {
     opacity: 1,
+    transition: 'visibility 0ms linear 0ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms',
     visibility: 'visible',
   },
   disabled: {
