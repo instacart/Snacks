@@ -37,7 +37,7 @@ exports[`renders correctly 1`] = `
               /\\\\d/,
             ]
           }
-          maskHint="(555) 555-555"
+          maskHint="(555) 555-5555"
           name="test"
           type="tel"
         >
@@ -64,7 +64,7 @@ exports[`renders correctly 1`] = `
                 /\\\\d/,
               ]
             }
-            maskHint="(555) 555-555"
+            maskHint="(555) 555-5555"
             name="test"
             snacksTheme={
               Object {
@@ -109,7 +109,7 @@ exports[`renders correctly 1`] = `
                   /\\\\d/,
                 ]
               }
-              maskHint="(555) 555-555"
+              maskHint="(555) 555-5555"
               name="test"
               onBlur={[Function]}
               onChange={[Function]}
@@ -232,7 +232,7 @@ exports[`renders correctly 1`] = `
                   <TextFieldHint
                     disabled={false}
                     key=".1"
-                    text="(555) 555-555"
+                    text="(555) 555-5555"
                   >
                     <div
                       data-radium={true}
@@ -251,7 +251,7 @@ exports[`renders correctly 1`] = `
                         }
                       }
                     >
-                      (555) 555-555
+                      (555) 555-5555
                     </div>
                   </TextFieldHint>
                   <t
@@ -416,7 +416,7 @@ exports[`renders correctly with focus state 1`] = `
               /\\\\d/,
             ]
           }
-          maskHint="(555) 555-555"
+          maskHint="(555) 555-5555"
           name="test"
           type="tel"
         >
@@ -443,7 +443,7 @@ exports[`renders correctly with focus state 1`] = `
                 /\\\\d/,
               ]
             }
-            maskHint="(555) 555-555"
+            maskHint="(555) 555-5555"
             name="test"
             snacksTheme={
               Object {
@@ -488,7 +488,7 @@ exports[`renders correctly with focus state 1`] = `
                   /\\\\d/,
                 ]
               }
-              maskHint="(555) 555-555"
+              maskHint="(555) 555-5555"
               name="test"
               onBlur={[Function]}
               onChange={[Function]}
@@ -614,7 +614,7 @@ exports[`renders correctly with focus state 1`] = `
                     disabled={false}
                     key=".1"
                     show={true}
-                    text="(555) 555-555"
+                    text="(555) 555-5555"
                   >
                     <div
                       data-radium={true}
@@ -633,7 +633,7 @@ exports[`renders correctly with focus state 1`] = `
                         }
                       }
                     >
-                      (555) 555-555
+                      (555) 555-5555
                     </div>
                   </TextFieldHint>
                   <t
@@ -812,7 +812,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
               /\\\\d/,
             ]
           }
-          maskHint="(555) 555-555"
+          maskHint="(555) 555-5555"
           name="test"
           onChange={[Function]}
           snacksTheme={
@@ -853,7 +853,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                 /\\\\d/,
               ]
             }
-            maskHint="(555) 555-555"
+            maskHint="(555) 555-5555"
             name="test"
             onChange={[Function]}
             snacksTheme={
@@ -899,7 +899,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                   /\\\\d/,
                 ]
               }
-              maskHint="(555) 555-555"
+              maskHint="(555) 555-5555"
               name="test"
               onBlur={[Function]}
               onChange={[Function]}
@@ -1022,7 +1022,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                   <TextFieldHint
                     disabled={false}
                     key=".1"
-                    text="(555) 555-555"
+                    text="(555) 555-5555"
                   >
                     <div
                       data-radium={true}
@@ -1041,7 +1041,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                         }
                       }
                     >
-                      (555) 555-555
+                      (555) 555-5555
                     </div>
                   </TextFieldHint>
                   <t
