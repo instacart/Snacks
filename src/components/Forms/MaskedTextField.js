@@ -275,7 +275,12 @@ class MaskedTextField extends React.Component {
             snacksTheme={snacksTheme}
           />
 
-          <TextFieldHint text={maskHint} show={!hasValue && isFocused} disabled={disabled} />
+          <TextFieldHint
+            inputId={`hint_${inputId}`}
+            text={maskHint}
+            show={!hasValue && isFocused}
+            disabled={disabled}
+          />
 
           <MaskedTextInput
             mask={mask}
@@ -285,6 +290,7 @@ class MaskedTextField extends React.Component {
             name={name}
             aria-required={required}
             aria-invalid={hasError}
+            aria-describedby={hasError ? `hint_${inputId} error_${inputId}` : `hint_${inputId}`}
             onBlur={this.handleInputBlur}
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}

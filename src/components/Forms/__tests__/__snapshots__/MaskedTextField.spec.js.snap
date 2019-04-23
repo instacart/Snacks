@@ -210,11 +210,13 @@ exports[`renders correctly 1`] = `
                 </withTheme(RadiumEnhancer)>
                 <TextFieldHint
                   disabled={false}
+                  inputId="hint_test_id"
                   key=".1"
                   text="555-55-5555"
                 >
                   <div
                     data-radium={true}
+                    id="hint_test_id"
                     style={
                       Object {
                         "color": "#BDBDBD",
@@ -225,7 +227,8 @@ exports[`renders correctly 1`] = `
                         "position": "absolute",
                         "transform": "scale(1) translate(9px, 26px)",
                         "transformOrigin": "left top",
-                        "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "visibility": "hidden",
                         "zIndex": 1,
                       }
                     }
@@ -234,6 +237,7 @@ exports[`renders correctly 1`] = `
                   </div>
                 </TextFieldHint>
                 <t
+                  aria-describedby="hint_test_id"
                   aria-invalid={false}
                   autoComplete="on"
                   defaultValue={null}
@@ -266,6 +270,7 @@ exports[`renders correctly 1`] = `
                   render={[Function]}
                 >
                   <input
+                    aria-describedby="hint_test_id"
                     aria-invalid={false}
                     autoComplete="on"
                     defaultValue={null}
@@ -564,12 +569,14 @@ exports[`renders correctly with focus state 1`] = `
                 </withTheme(RadiumEnhancer)>
                 <TextFieldHint
                   disabled={false}
+                  inputId="hint_test_id"
                   key=".1"
                   show={true}
                   text="555-55-5555"
                 >
                   <div
                     data-radium={true}
+                    id="hint_test_id"
                     style={
                       Object {
                         "color": "#BDBDBD",
@@ -580,7 +587,8 @@ exports[`renders correctly with focus state 1`] = `
                         "position": "absolute",
                         "transform": "scale(1) translate(9px, 26px)",
                         "transformOrigin": "left top",
-                        "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "transition": "visibility 0ms linear 0ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "visibility": "visible",
                         "zIndex": 1,
                       }
                     }
@@ -589,6 +597,7 @@ exports[`renders correctly with focus state 1`] = `
                   </div>
                 </TextFieldHint>
                 <t
+                  aria-describedby="hint_test_id"
                   aria-invalid={false}
                   autoComplete="on"
                   defaultValue={null}
@@ -621,6 +630,7 @@ exports[`renders correctly with focus state 1`] = `
                   render={[Function]}
                 >
                   <input
+                    aria-describedby="hint_test_id"
                     aria-invalid={false}
                     autoComplete="on"
                     defaultValue={null}
@@ -932,11 +942,13 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                 </withTheme(RadiumEnhancer)>
                 <TextFieldHint
                   disabled={false}
+                  inputId="hint_test_id"
                   key=".1"
                   text="555-55-5555"
                 >
                   <div
                     data-radium={true}
+                    id="hint_test_id"
                     style={
                       Object {
                         "color": "#BDBDBD",
@@ -947,7 +959,8 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                         "position": "absolute",
                         "transform": "scale(1) translate(9px, 26px)",
                         "transformOrigin": "left top",
-                        "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "visibility": "hidden",
                         "zIndex": 1,
                       }
                     }
@@ -956,6 +969,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                   </div>
                 </TextFieldHint>
                 <t
+                  aria-describedby="hint_test_id"
                   aria-invalid={false}
                   autoComplete="on"
                   defaultValue={null}
@@ -988,6 +1002,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                   render={[Function]}
                 >
                   <input
+                    aria-describedby="hint_test_id"
                     aria-invalid={false}
                     autoComplete="on"
                     defaultValue={null}
