@@ -1,7 +1,7 @@
 import React from 'react'
 import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe'
-import MaskedTextField, { propTypes as maskedTextFieldPropTypes } from './MaskedTextField'
 import { omit } from 'underscore'
+import MaskedTextField, { propTypes as maskedTextFieldPropTypes } from './MaskedTextField'
 
 const mask = [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
 const hint = 'MM/DD/YYYY'
@@ -9,7 +9,15 @@ const pipe = createAutoCorrectedDatePipe('mm/dd/yyyy')
 
 const getValue = value => value
 
-export const propTypes = omit(maskedTextFieldPropTypes, 'type', 'mask', 'maskHint', 'pipe', 'getValue', 'ref')
+export const propTypes = omit(
+  maskedTextFieldPropTypes,
+  'type',
+  'mask',
+  'maskHint',
+  'pipe',
+  'getValue',
+  'ref'
+)
 
 class DateField extends React.Component {
   static propTypes = propTypes
