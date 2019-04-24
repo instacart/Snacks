@@ -91,7 +91,7 @@ const getInputSyles = ({ props, theme, isFocused }) => {
   }
 }
 
-export const propTypes = {
+export const maskedTextFieldPropTypes = {
   /** Name of the field */
   name: PropTypes.string.isRequired,
   /** Transforms the raw value from the input
@@ -164,7 +164,7 @@ export const propTypes = {
 @FormComponent
 @Radium
 class MaskedTextField extends React.Component {
-  static propTypes = propTypes
+  static propTypes = maskedTextFieldPropTypes
 
   static defaultProps = {
     autoComplete: 'on',
