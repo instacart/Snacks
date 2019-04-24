@@ -91,78 +91,80 @@ const getInputSyles = ({ props, theme, isFocused }) => {
   }
 }
 
+export const maskedTextFieldPropTypes = {
+  /** Name of the field */
+  name: PropTypes.string.isRequired,
+  /** Transforms the raw value from the input
+   *
+   * @example strips slashes from a phone number
+   *   (value) => value.replace(NON_DIGIT_REGEX, '')
+   * @param {string} value
+   * @returns {string}
+   */
+  getValue: PropTypes.func.isRequired,
+  /** The mask */
+  mask: PropTypes.array.isRequired,
+  /** The pipe mask */
+  pipe: PropTypes.func,
+  /** The mask hint */
+  maskHint: PropTypes.string.isRequired,
+  /** The type of the input */
+  type: PropTypes.string.isRequired,
+  /** HTML autocomplete attribute */
+  autoComplete: PropTypes.string,
+  /** DefaultValue for non controlled component */
+  defaultValue: PropTypes.any,
+  /** Disable the text field */
+  disabled: PropTypes.bool,
+  /** Text of label that will animate when TextField is focused */
+  floatingLabelText: PropTypes.string,
+  /** Sets width to 100% */
+  fullWidth: PropTypes.bool,
+  /** Sets width to 162px */
+  halfWidth: PropTypes.bool,
+  /** FormComponent error for validation */
+  hasError: PropTypes.bool,
+  /** Helper text will show up in bottom right corner below TextField */
+  helperText: PropTypes.string,
+  /** Uniq id for input */
+  id: PropTypes.string,
+  /** Style for input */
+  inputStyle: PropTypes.object,
+  /** Set by FormComponent by default.   */
+  isValid: PropTypes.bool,
+  /** onFocus callback */
+  onFocus: PropTypes.func,
+  /** onChange callback
+   *
+   * @param {SyntheticEvent} event The react `SyntheticEvent`
+   * @param {String} value The value from the input with `(`, `)`, space, and `-` characters removed
+   * @param {String} rawValue The raw value from the input
+   */
+
+  onChange: PropTypes.func,
+  /** onBlur callback */
+  onBlur: PropTypes.func,
+  /** onKeyDown callback */
+  onKeyDown: PropTypes.func,
+  /** Mark the field as required.  */
+  required: PropTypes.bool,
+  /** Error from server to show ServerError message */
+  serverError: PropTypes.string,
+  /** Wrapper styles */
+  style: PropTypes.object,
+  /** Text to show for validation error  */
+  validationErrorText: PropTypes.string,
+  /** Value will make TextField a controlled component  */
+  value: PropTypes.string,
+  /** Snacks theme attributes provided by `Themer` */
+  snacksTheme: themePropTypes,
+}
+
 @withTheme
 @FormComponent
 @Radium
 class MaskedTextField extends React.Component {
-  static propTypes = {
-    /** Name of the field */
-    name: PropTypes.string.isRequired,
-    /** Transforms the raw value from the input
-     *
-     * @example strips slashes from a phone number
-     *   (value) => value.replace(NON_DIGIT_REGEX, '')
-     * @param {string} value
-     * @returns {string}
-     */
-    getValue: PropTypes.func.isRequired,
-    /** The mask */
-    mask: PropTypes.array.isRequired,
-    /** The pipe mask */
-    pipe: PropTypes.func,
-    /** The mask hint */
-    maskHint: PropTypes.string.isRequired,
-    /** The type of the input */
-    type: PropTypes.string.isRequired,
-    /** HTML autocomplete attribute */
-    autoComplete: PropTypes.string,
-    /** DefaultValue for non controlled component */
-    defaultValue: PropTypes.any,
-    /** Disable the text field */
-    disabled: PropTypes.bool,
-    /** Text of label that will animate when TextField is focused */
-    floatingLabelText: PropTypes.string,
-    /** Sets width to 100% */
-    fullWidth: PropTypes.bool,
-    /** Sets width to 162px */
-    halfWidth: PropTypes.bool,
-    /** FormComponent error for validation */
-    hasError: PropTypes.bool,
-    /** Helper text will show up in bottom right corner below TextField */
-    helperText: PropTypes.string,
-    /** Uniq id for input */
-    id: PropTypes.string,
-    /** Style for input */
-    inputStyle: PropTypes.object,
-    /** Set by FormComponent by default.   */
-    isValid: PropTypes.bool,
-    /** onFocus callback */
-    onFocus: PropTypes.func,
-    /** onChange callback
-     *
-     * @param {SyntheticEvent} event The react `SyntheticEvent`
-     * @param {String} value The value from the input with `(`, `)`, space, and `-` characters removed
-     * @param {String} rawValue The raw value from the input
-     */
-
-    onChange: PropTypes.func,
-    /** onBlur callback */
-    onBlur: PropTypes.func,
-    /** onKeyDown callback */
-    onKeyDown: PropTypes.func,
-    /** Mark the field as required.  */
-    required: PropTypes.bool,
-    /** Error from server to show ServerError message */
-    serverError: PropTypes.string,
-    /** Wrapper styles */
-    style: PropTypes.object,
-    /** Text to show for validation error  */
-    validationErrorText: PropTypes.string,
-    /** Value will make TextField a controlled component  */
-    value: PropTypes.string,
-    /** Snacks theme attributes provided by `Themer` */
-    snacksTheme: themePropTypes,
-  }
+  static propTypes = maskedTextFieldPropTypes
 
   static defaultProps = {
     autoComplete: 'on',
