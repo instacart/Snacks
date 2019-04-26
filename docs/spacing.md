@@ -10,7 +10,7 @@ The pixel values are a base-8 strategy as defined by the design system.
 | MD         | 24px      |
 | LG         | 32px      |
 | XL         | 48px      |
-| HUGE       | 64px      |
+| XXL        | 64px      |
 
 ### Example usage:
 

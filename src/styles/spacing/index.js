@@ -16,7 +16,7 @@ export const spacings = {
   MD: 24,
   LG: 32,
   XL: 48,
-  HUGE: 64,
+  XXL: 64,
 }
 
 const createXRules = (type, value) => ({
