@@ -1,7 +1,7 @@
 ### Groups
 Create a radio button group where only one radio button can be selected at a time.
 
-```js
+```jsx static
 <RadioGroup name="radioContact">
   <Radio id="radioContactGroup1" value="email">Email</Radio>
   <Radio id="radioContactGroup2" value="phone">Phone</Radio>
@@ -11,7 +11,7 @@ Create a radio button group where only one radio button can be selected at a tim
 
 ### Styling
 You can pass an object to the `style` prop for styling the parent element. Optionally, you can pass styles to each radio button:
-```js
+```jsx static
 <RadioGroup name="radioColors" style={{wrapEl: {border: '2px dotted lightblue', padding: 20}}}>
   <Radio id="radioColorGroup1" value="email" style={{label: {color: 'green'}}}>Green</Radio>
   <Radio id="radioColorGroup2" value="phone" style={{label: {color: 'red'}}}>Red</Radio>
@@ -21,7 +21,7 @@ You can pass an object to the `style` prop for styling the parent element. Optio
 
 ### Callback
 You can keep track of the currently selected radio button by passing a callback to the `onChange` prop:
-```js
+```jsx static
 function alertMeal(value, props) {
   alert(`The current meal is "${value}" and the id is "${props.id}"`)
 }
@@ -35,7 +35,7 @@ function alertMeal(value, props) {
 
 ### Disabeling radio buttons
 You can disable radio buttons inside a group and the remaining enabled buttons will function as expected. Note that if you passed both `isSelected` and `isDisabled` the former will be ignored (see example below).
-```js
+```jsx static
 function alertCity(value, props) {
   alert(`The selected city is "${value}"`)
 }

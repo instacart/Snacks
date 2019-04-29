@@ -2,9 +2,9 @@ The PhoneNumberField is similar to the TextField component, but with input maski
 
 PhoneNumberField Example:
 
-```js
+```jsx static
 <Form
-  onSubmit={(model) => ( console.log(model) ) }
+  onSubmit={(model) => ( console.log(model) )}
   serverErrors={{}}
   formProps={{}}
 >

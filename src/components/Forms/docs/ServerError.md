@@ -1,6 +1,6 @@
 ServerError Example:
 
-```js
+```jsx static
 <div>
   <TextField
     name="test"

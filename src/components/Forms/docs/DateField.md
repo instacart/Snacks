@@ -1,10 +1,11 @@
 DateField Example:
-```js
+
+```jsx static
 <div style={{ marginBottom: 10 }}>
   <DateField
-    name='dob'
-    type='text'
-    floatingLabelText='Date of birth'
+    name="dob"
+    type="text"
+    floatingLabelText="Date of birth"
     required
     halfWidth
     id="dob"

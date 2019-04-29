@@ -1,6 +1,6 @@
 ValidationError is small red styled text that is used for clientside validation errors. ex TextField:
 
-```js
+```jsx static
 <div>
   <TextField
     name="email"

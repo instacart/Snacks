@@ -2,7 +2,7 @@ Consistent typography and hierarchy is our most useful tool in creating a clear 
 
 Provide a `variant` prop to specify which typography variant to use:
 
-```jsx
+```jsx static
 <Text variant="T.14">
   T.14 (body text)
 </Text>
@@ -10,7 +10,7 @@ Provide a `variant` prop to specify which typography variant to use:
 
 With an optional `fontWeight`:
 
-```jsx
+```jsx static
 <Text variant="T.14" fontWeight="bold">
   T.14 (bold body text)
 </Text>
@@ -18,7 +18,7 @@ With an optional `fontWeight`:
 
 With an optional `elementType`. `Text` comes with a default typography variant => HTML element mapping, but you may need to pass a custom element type to ensure your markup is correct:
 
-```jsx
+```jsx static
 <Text variant="T.18" elementType="h2">
   T.18 (title/subtitle text)
 </Text>
@@ -26,14 +26,14 @@ With an optional `elementType`. `Text` comes with a default typography variant =
 
 Provide an optional style object (will override any existing styles as it's applied last). Use only when other component props are insufficient (e.g. for gutters):
 
-```jsx
+```jsx static
 <Text variant="T.14" style={{ marginBottom: 10 }}>
   T.14 (body text)
 </Text>
 ```
 
 ```jsx noeditor
-const TypographyTableRow = require('./helpers').TypographyTableRow;
+const TypographyTableRow = require('./helpers').TypographyTableRow
 
 <div style={{marginTop: '24px'}}>
   <style dangerouslySetInnerHTML={{__html: `

@@ -1,4 +1,7 @@
 CircleButton example:
-    <div>
-      <CircleButton>+</CircleButton>
-    </div>
+
+```jsx static
+<div>
+  <CircleButton>+</CircleButton>
+</div>
+```

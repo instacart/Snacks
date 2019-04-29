@@ -5,7 +5,7 @@ You can define whether the button starts in the pressed on unpressed state throu
 ### Label
 Associating a label to every switch button is very important for accessibility purposes. There are two ways to do it. The easiest is to enclose the text with the component: `<Switch>My label</Switch>`. The other option is to associate a label yourself:
 
-```js
+```jsx static
 <div style={{display: 'flex', flexDirection: 'column'}}>
   <div style={{display: 'flex', marginBottom: 20}}>
     <Switch id="switch1" isSelected />
@@ -19,7 +19,7 @@ Associating a label to every switch button is very important for accessibility p
 ### On/Off Label
 You can display an on off label to assist vision impaired users in determining whether the switch is on or off
 
-```js
+```jsx static
 <div style={{display: 'flex', flexDirection: 'column'}}>
   <Switch id="switch2" displayOnOffLabel>Switch with on/off label</Switch>
 </div>
@@ -27,10 +27,10 @@ You can display an on off label to assist vision impaired users in determining w
 
 ### Styling
 You can pass an object to the `style` prop for styling the label, radio button and wrap element using Radium's structure:
-```js
+```jsx static
 <Switch
   id="switch3"
-  wrapEl='span'
+  wrapEl="span"
   style={{
     wrapEl: {padding: 10, border: '2px dotted lightblue'},
     button: {marginRight: 40},
@@ -41,11 +41,10 @@ You can pass an object to the `style` prop for styling the label, radio button a
 </Switch>
 ```
 
-
 ### Callback
 You can pass a callback through the `onChange` prop:
 
-```js
+```jsx static
 function onChange(event, props) {
   alert(`This button is ${props.isSelected ? '' : 'not '}selected`)
 }
@@ -56,11 +55,11 @@ function onChange(event, props) {
 ### Disabling
 You can disable a switch by declaring the `isDisabled` prop:
 
-```js
+```jsx static
 function onChange(event, props) {
   alert(`This function will not be called`)
 }
 
-<Switch id  ="switch5" onChange={onChange} isDisabled>I am disabled</Switch>
+<Switch id="switch5" onChange={onChange} isDisabled>I am disabled</Switch>
 ```
 **Important!** If you attach a label to a switch manually, make sure the colors for the disabled state follow the styleguide.

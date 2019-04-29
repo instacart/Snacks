@@ -1,11 +1,12 @@
 ### Pill example:
-```jsx
-const defaultTheme = require('../../../styles/themer/utils').defaultTheme;
-const colors = require('../../../styles/colors').default;
+
+```jsx static
+const defaultTheme = require('../../../styles/themer/utils').defaultTheme
+const colors = require('../../../styles/colors').default
 
 const internalTrackStyles = {
   RightArrow: {
-    backgroundColor: 'blue'
+    backgroundColor: 'blue',
   }
 }
 
@@ -16,8 +17,9 @@ const styles = {
   borderRadius: '4px',
   backgroundColor: '#eee',
   color: '#43B02A',
-  top: '8px'
-};
+  top: '8px',
+}
+
 <div>
   <h3>Passing in theme color keys </h3>
   <div style={{ height: '56px' }}>

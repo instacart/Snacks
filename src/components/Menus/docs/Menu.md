@@ -1,7 +1,6 @@
 Menu Example:
 
-```js
-
+```jsx static
 function onSelect(e, foo) {
   console.log(foo)
 }

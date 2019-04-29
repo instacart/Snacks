@@ -7,7 +7,7 @@ You can define whether the button starts in the pressed on unpressed state throu
 ### Label
 Associating a label to every radio button is very important for accessibility purposes. There are two ways to do it. The easiest is to enclose the text with the component: `<Radio>My label<Radio>`. The other option is to associate a label yourself:
 
-```js
+```jsx static
 <div style={{display: 'flex', flexDirection: 'column'}}>
   <div style={{display: 'flex', marginBottom: 20}}>
     <Radio id="radio1" isSelected />
@@ -23,10 +23,10 @@ To create a radio group where only one button can be selected [see here](#radiog
 
 ### Styling
 You can pass an object to the `style` prop for styling the label, radio button and wrap element using Radium's structure:
-```js
+```jsx static
 <Radio
   id="radio3"
-  wrapEl='span'
+  wrapEl="span"
   style={{
     wrapEl: {padding: 10, border: '2px dotted lightblue'},
     button: {marginRight: 40},
@@ -41,7 +41,7 @@ You can pass an object to the `style` prop for styling the label, radio button a
 ### Callback
 You can pass a callback through the `onChange` prop:
 
-```js
+```jsx static
 function onChange(event, props) {
   alert(`This button is ${props.isSelected ? '' : 'not '}selected`)
 }
@@ -54,7 +54,7 @@ You can disable a checkbox by declaring the `isDisabled` prop:
 
 **Important!** If you attach a label to a Radio button manually, make sure the styleguide is followed for the disabled state.
 
-```js
+```jsx static
 function onChange(event, props) {
   alert(`This function will not be called`)
 }

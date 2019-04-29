@@ -26,7 +26,7 @@ themer.themeConfig = {
     primaryForeground: 'red',
     secondaryBackground: 'rgba(255, 255, 255, 5)',
     secondaryForeground: '#ff3355',
-  }
+  },
 }
 
 themer.get('colors', 'primaryForeground') // returns red
@@ -36,7 +36,7 @@ themer.get('colors', 'action') // returns #ededed
 Themes will be validated before being set, and must match the theme config template found in `src/styles/themer/utils`
 
 ```js static
-import themer from `ic-snacks`
+import themer from 'ic-snacks'
 
 themer.themeConfig = {
   colors: {
@@ -45,9 +45,9 @@ themer.themeConfig = {
     primaryForeground: 'red',
     secondaryBackground: 'rgba(255, 255, 255, 5)',
     secondaryForeground: '#ff3355',
-    whatever:'i am special'
+    whatever: 'i am special',
   },
-  things: 'stuff'
+  things: 'stuff',
 }
 
 // console errors non-standard keys.
@@ -61,8 +61,8 @@ bad keys will not be set
     primaryBackground: '#ccc',
     primaryForeground: 'red',
     secondaryBackground: 'rgba(255, 255, 255, 5)',
-    secondaryForeground: '#ff3355'
-  }
+    secondaryForeground: '#ff3355',
+  },
 }
 */
 ```

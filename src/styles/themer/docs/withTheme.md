@@ -3,24 +3,26 @@ The withTheme higher order component is the best way to use Snacks themes in you
 If you'd like to change the theme, you'll need to import `themer` from snacks and set it there.
 
 Class with decorator style
-```js static
-  import React, { Component } from 'react'
-  import { withTheme } from 'ic-snacks'
+```jsx static
+import React, { Component } from 'react'
+import { withTheme } from 'ic-snacks'
 
-  @withTheme
-  class MyComponent extends Component {
-    render() {
+@withTheme
+class MyComponent extends Component {
+  render() {
+    return (
       <p style={{ color: this.props.snacksTheme.color.action }}>
         Hi!
       </p>
-    }
+    )
   }
+}
 
-  export default MyComponent
+export default MyComponent
 ```
 
 Functional style
-```js static
+```jsx static
 import { withTheme, themePropTypes } from 'ic-snacks'
 
 const MyComponent = props => {
@@ -32,7 +34,7 @@ const MyComponent = props => {
 }
 
 MyComponent.propTypes = {
-  snacksTheme: themePropTypes
+  snacksTheme: themePropTypes,
 }
 
 export default withTheme(MyComponent)

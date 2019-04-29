@@ -1,6 +1,6 @@
 TextField Example:
 
-```js
+```jsx static
 <div style={{width: '335px'}}>
   <div style={{marginBottom: '10px'}}>
     <TextField
@@ -32,7 +32,6 @@ TextField Example:
       required
     />
   </div>
-
   <div>
     <TextField
       name="password"

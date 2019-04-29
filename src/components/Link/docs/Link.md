@@ -1,7 +1,7 @@
 The `Link` component is valuable mainly because it's hooked up to Themer.
 The link's resting/hover colors will match the current theme's action and actionHover values.
 
-```js
+```jsx static
 <div>
   <div style={{marginBottom: '16px'}}>
     <Link href="/radish">Normal link</Link>

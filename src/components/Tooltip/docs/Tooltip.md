@@ -1,8 +1,7 @@
 Examples:
 
-```js
-
-initialState = {
+```jsx static
+const initialState = {
   size: 'medium',
   placement: 'bottom',
   style: 'primary',
@@ -26,7 +25,7 @@ const handleTriggerChange = (trigger) => {
   setState({trigger: trigger})
 }
 
-toggleVisibility = () => {
+const toggleVisibility = () => {
   setState({isVisible: !state.isVisible})
 }
 

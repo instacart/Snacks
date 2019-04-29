@@ -1,7 +1,6 @@
-
-```js
+```jsx static
 <Form
-  onSubmit={(model) => ( console.log(model) ) }
+  onSubmit={(model) => ( console.log(model) )}
   serverErrors={{}}
   formProps={{}}
 >
@@ -41,8 +40,8 @@
         fullWidth
         required
       >
-        <MenuItem label="United States" value="US"/>
-        <MenuItem label="Canada" value="CA"/>
+        <MenuItem label="United States" value="US" />
+        <MenuItem label="Canada" value="CA" />
       </Select>
     </div>
 
@@ -54,5 +53,4 @@
     </div>
   </div>
 </Form>
-
 ```

@@ -9,7 +9,7 @@ Primary buttons are for, you guessed it, the primary action.
 Don't use these lightly.
 Overuse on a single screen could hinder your main objective rather than help it.
 
-```js
+```jsx static
 <div style={{display: 'flex'}}>
   <div style={{marginRight: '24px'}}>
     <div style={{marginBottom: '8px'}}>Tiny</div>
@@ -42,7 +42,7 @@ Overuse on a single screen could hinder your main objective rather than help it.
 Secondary buttons are for your second most important action.
 A good use is as a cancel button when asking the user a question.
 
-```js
+```jsx static
 <div style={{display: 'flex'}}>
   <div style={{marginRight: '24px'}}>
     <div style={{marginBottom: '8px'}}>Tiny</div>
@@ -77,7 +77,7 @@ A typical solution is to use an anchor tag to do this, however this approach
 has issues such as not having consistent padding to a button and there are
 accessibility concerns (links should navigate, buttons should cause actions).
 
-```js
+```jsx static
 <div style={{display: 'flex'}}>
   <div style={{marginRight: '24px'}}>
     <div style={{marginBottom: '8px'}}>Tiny</div>
@@ -116,7 +116,7 @@ accessibility concerns (links should navigate, buttons should cause actions).
 
 Note that coupon buttons aren't affected by a Snacks theme.
 
-```js
+```jsx static
 <div style={{display: 'flex'}}>
   <div style={{marginRight: '24px'}}>
     <div style={{marginBottom: '8px'}}>Tiny</div>
@@ -149,7 +149,7 @@ Note that coupon buttons aren't affected by a Snacks theme.
 
 Disabled buttons are to show the user there is a future action they can take, but they must first accomplish another task.
 
-```js
+```jsx static
 <div>
   <span style={{marginRight: '24px'}}>
     <Button disabled snacksStyle="primary" size="tiny">
@@ -177,7 +177,7 @@ Disabled buttons are to show the user there is a future action they can take, bu
 ### Inverted colors
 Button colors can be inverted for darker backgrounds.
 
-```js
+```jsx static
 <div style={{padding: '24px', backgroundColor: '#43B02A'}}>
   <span style={{marginRight: '24px'}}>
     <Button inverted snacksStyle="primary" size="standard">
@@ -200,10 +200,10 @@ Button colors can be inverted for darker backgrounds.
 ### With icons
 Buttons can be rendered with an icon to the left or right of the primary content.
 
-```js
+```jsx static
 <div style={{padding: '24px'}}>
   <span style={{marginRight: '24px'}}>
-    <Button iconPosition="right" icon={<Icon name="arrowRightSmallBold" />} snacksStyle="secondary" size="standard">
+    <Button iconPosition="right" snacksStyle="secondary" size="standard" icon={<Icon name="arrowRightSmallBold" />}>
       View 24 more
     </Button>
   </span>
@@ -213,7 +213,7 @@ Buttons can be rendered with an icon to the left or right of the primary content
     </Button>
   </span>
   <span style={{marginRight: '24px'}}>
-    <Button icon={<Icon name="deals" />} snacksStyle="coupon" size="small">
+    <Button snacksStyle="coupon" size="small" icon={<Icon name="deals" />}>
       Save $5.00
     </Button>
   </span>
