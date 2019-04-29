@@ -4,19 +4,19 @@ If you'd like to change the theme, you'll need to import `themer` from snacks an
 
 Class with decorator style
 ```js static
-  import React, { Component } from 'react'
-  import { withTheme } from 'ic-snacks'
+import React, { Component } from 'react'
+import { withTheme } from 'ic-snacks'
 
-  @withTheme
-  class MyComponent extends Component {
-    render() {
-      <p style={{ color: this.props.snacksTheme.color.action }}>
-        Hi!
-      </p>
-    }
+@withTheme
+class MyComponent extends Component {
+  render() {
+    <p style={{ color: this.props.snacksTheme.color.action }}>
+      Hi!
+    </p>
   }
+}
 
-  export default MyComponent
+export default MyComponent
 ```
 
 Functional style
