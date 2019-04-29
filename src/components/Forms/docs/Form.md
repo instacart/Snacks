@@ -28,7 +28,7 @@
         validationErrorText="Password must be at least 6 characters"
         fullWidth
         required
-      ></TextField>
+      />
     </div>
 
     <div>
@@ -40,8 +40,8 @@
         fullWidth
         required
       >
-        <MenuItem label="United States" value="US"></MenuItem>
-        <MenuItem label="Canada" value="CA"></MenuItem>
+        <MenuItem label="United States" value="US" />
+        <MenuItem label="Canada" value="CA" />
       </Select>
     </div>
 
