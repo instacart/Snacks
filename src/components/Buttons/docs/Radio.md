@@ -26,7 +26,7 @@ You can pass an object to the `style` prop for styling the label, radio button a
 ```js
 <Radio
   id="radio3"
-  wrapEl='span'
+  wrapEl="span"
   style={{
     wrapEl: {padding: 10, border: '2px dotted lightblue'},
     button: {marginRight: 40},
