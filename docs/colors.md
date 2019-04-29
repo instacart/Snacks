@@ -39,9 +39,7 @@ const colorsSwatches = Object.keys(colors).map(name => {
   )
 })
 
-(
-  <ul style={wrapperStyles}>
-   { colorsSwatches }
-  </ul>
-)
+<ul style={wrapperStyles}>
+ { colorsSwatches }
+</ul>
 ```

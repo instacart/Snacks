@@ -6,15 +6,13 @@ You can define whether the button starts in the pressed on unpressed state throu
 Associating a label to every switch button is very important for accessibility purposes. There are two ways to do it. The easiest is to enclose the text with the component: `<Switch>My label</Switch>`. The other option is to associate a label yourself:
 
 ```jsx static
-(
-  <div style={{display: 'flex', flexDirection: 'column'}}>
-    <div style={{display: 'flex', marginBottom: 20}}>
-      <Switch id="switch1" isSelected />
-      <label htmlFor="switch1" style={{marginLeft: 10, lineHeight: '22px'}}>Label associated manually</label>
-    </div>
-    <Switch id="switch2">Label auto-generated</Switch>
+<div style={{display: 'flex', flexDirection: 'column'}}>
+  <div style={{display: 'flex', marginBottom: 20}}>
+    <Switch id="switch1" isSelected />
+    <label htmlFor="switch1" style={{marginLeft: 10, lineHeight: '22px'}}>Label associated manually</label>
   </div>
-)
+  <Switch id="switch2">Label auto-generated</Switch>
+</div>
 ```
 **Important!** If you attach a label to a switch manually, make sure you set the line-height and margin-left properties as per the example above.
 
@@ -22,31 +20,26 @@ Associating a label to every switch button is very important for accessibility p
 You can display an on off label to assist vision impaired users in determining whether the switch is on or off
 
 ```jsx static
-(
-  <div style={{display: 'flex', flexDirection: 'column'}}>
-    <Switch id="switch2" displayOnOffLabel>Switch with on/off label</Switch>
-  </div>
-)
+<div style={{display: 'flex', flexDirection: 'column'}}>
+  <Switch id="switch2" displayOnOffLabel>Switch with on/off label</Switch>
+</div>
 ```
 
 ### Styling
 You can pass an object to the `style` prop for styling the label, radio button and wrap element using Radium's structure:
 ```jsx static
-(
-  <Switch
-    id="switch3"
-    wrapEl="span"
-    style={{
-      wrapEl: {padding: 10, border: '2px dotted lightblue'},
-      button: {marginRight: 40},
-      label: {color: 'salmon'},
-    }}
-  >
-    My Switch Button Label
-  </Switch>
-)
+<Switch
+  id="switch3"
+  wrapEl="span"
+  style={{
+    wrapEl: {padding: 10, border: '2px dotted lightblue'},
+    button: {marginRight: 40},
+    label: {color: 'salmon'},
+  }}
+>
+  My Switch Button Label
+</Switch>
 ```
-
 
 ### Callback
 You can pass a callback through the `onChange` prop:
@@ -56,9 +49,7 @@ function onChange(event, props) {
   alert(`This button is ${props.isSelected ? '' : 'not '}selected`)
 }
 
-(
-  <Switch id="switch4" onChange={onChange}>Click me!</Switch>
-)
+<Switch id="switch4" onChange={onChange}>Click me!</Switch>
 ```
 
 ### Disabling
@@ -69,8 +60,6 @@ function onChange(event, props) {
   alert(`This function will not be called`)
 }
 
-(
-  <Switch id="switch5" onChange={onChange} isDisabled>I am disabled</Switch>
-)
+<Switch id="switch5" onChange={onChange} isDisabled>I am disabled</Switch>
 ```
 **Important!** If you attach a label to a switch manually, make sure the colors for the disabled state follow the styleguide.

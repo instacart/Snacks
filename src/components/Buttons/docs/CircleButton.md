@@ -1,9 +1,7 @@
 CircleButton example:
 
 ```jsx static
-(
-  <div>
-    <CircleButton>+</CircleButton>
-  </div>
-)
+<div>
+  <CircleButton>+</CircleButton>
+</div>
 ```

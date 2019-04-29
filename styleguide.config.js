@@ -5,7 +5,7 @@ module.exports = {
     var componentName = parts[parts.length - 1];
     return componentPath.replace(`/${componentName}`, `/docs/${componentName.replace('.js', '')}.md`);
   },
-  highlightTheme: 'pastel-on-dark',
+  // highlightTheme: 'pastel-on-dark',
   ignore: [
     '**/*/*Styles.js',
     '**/*.spec.js',

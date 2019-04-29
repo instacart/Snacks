@@ -14,18 +14,16 @@ const pills = [
   { text: 'potatoes' },
 ]
 
-(
-  <div>
-    <NavigationPills
-      pills={pills}
-      onPillClick={(e, pill) => {
-        e.preventDefault();
-        setState({ activePill: pill.text })
-        console.log('NavigationPills NavigationPill clicked!', pill)
-      }}
-      label='Filter by'
-      activePill={state.activePill}
-    />
-  </div>
-)
+<div>
+  <NavigationPills
+    pills={pills}
+    onPillClick={(e, pill) => {
+      e.preventDefault()
+      setState({ activePill: pill.text })
+      console.log('NavigationPills NavigationPill clicked!', pill)
+    }}
+    label="Filter by"
+    activePill={state.activePill}
+  />
+</div>
 ```

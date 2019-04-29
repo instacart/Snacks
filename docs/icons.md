@@ -5,7 +5,8 @@ upgrade please follow the instructions
 [here](https://github.com/instacart/Snacks/pull/155).
 
 Available Icons:
-```jsx
+
+```jsx static
 const hexValues = require('../src/components/Icon/hexValues')
 const colors = require('../src/styles/colors').default
 const wrapperStyles = {
@@ -29,18 +30,17 @@ const iconStyle = {
   fontSize: '26px',
   color: colors.GREEN_500,
 }
+
 const icons = Object.keys(hexValues.default).map(name => {
   return (
     <li style={iconWrapStyles}>
       <Icon name={name} style={iconStyle}/>
       <p>{name}</p>
     </li>
-  );
-});
+  )
+})
 
-(
-  <ul style={wrapperStyles}>
-   { icons }
-  </ul>
-)
+<ul style={wrapperStyles}>
+ { icons }
+</ul>
 ```
