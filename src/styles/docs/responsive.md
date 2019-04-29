@@ -13,22 +13,24 @@ based on the Snacks grid system.
 There are four helpers available for generating media queries:
 
 ```js static
+import { responsive } from 'ic-snacks'
+
 // Target a given screen size and larger
-up('sm') //=> '@media (min-width: 768px)'
-up('lg') //=> '@media (min-width: 1248px)'
+responsive,up('sm') //=> '@media (min-width: 768px)'
+responsive,up('lg') //=> '@media (min-width: 1248px)'
 
 // Target a given screen size and smaller
-down('sm') //=> '@media (max-width: 831px)'
-down('lg') //=> '@media (min-width: 1248px)'
+responsive,down('sm') //=> '@media (max-width: 831px)'
+responsive,down('lg') //=> '@media (min-width: 1248px)'
 
 // Target a single screen size
-only('xs') //=> '@media (max-width: 768px)'
-only('md') //=> '@media (min-width: 832px) and (max-width: 1039px)'
-only('lg') //=> '@media (min-width: 1248px) and (max-width: 1455px)'
+responsive,only('xs') //=> '@media (max-width: 768px)'
+responsive,only('md') //=> '@media (min-width: 832px) and (max-width: 1039px)'
+responsive,only('lg') //=> '@media (min-width: 1248px) and (max-width: 1455px)'
 
 // Target a given screen size up to but
 // not including a second screen size
-between('sm', 'md') //=> '@media (min-width: 0px) and (max-width: 832px)'
-between('sm', 'xl') //=> '@media (min-width: 768px) and (max-width: 1456px)'
+responsive,between('sm', 'md') //=> '@media (min-width: 0px) and (max-width: 832px)'
+responsive,between('sm', 'xl') //=> '@media (min-width: 768px) and (max-width: 1456px)'
 ```
 
