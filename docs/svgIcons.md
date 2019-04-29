@@ -1,8 +1,9 @@
 To use an icon, see the `SVGIcon` component in the Components section.
 
 Available SVGIcons:
-```jsx
-const icons = Object.keys(require('../src/components/SVGIcon/icons'));
+
+```jsx static
+const icons = Object.keys(require('../src/components/SVGIcon/icons'))
 const groups = {
   People: ['account', 'person', 'personAdd', 'walking'],
   'Social Media': ['google', 'facebook', 'instagram', 'twitter', 'pinterest', 'appStore', 'playStore'],
@@ -18,7 +19,7 @@ const groups = {
   UI: ['browse', 'filter', 'more', 'menu', 'scissors', 'search', 'sort', 'zoomIn', 'zoomOut', 'copy', 'delete', 'lock', 'unlock', 'skip', 'logout', 'gear', 'share'],
   Miscellaneous: ['accessibility', 'bell', 'backgroundCheck', 'gift', 'glitter', 'graph', 'lightbulb', 'lightning', 'photo', 'photoMissing', 'ticket', 'view'],
 }
-const colors = require('../src/styles/colors').default;
+const colors = require('../src/styles/colors').default
 const wrapperStyles = {
   display: 'flex',
   flexDirection: 'row',
@@ -38,43 +39,44 @@ const rowStyles = {
 }
 const iconStyles = {
   marginRight: 5,
-};
-  <div>
-    {
-      Object.keys(groups).map(group => (
-        <div>
-          <h2>{group}</h2>
-          <ul style={wrapperStyles}>
-            {
-              groups[group].map(name => (
-                !name.endsWith('Filled') &&
-                <li style={iconWrapStyles} key={name}>
-                  <div style={rowStyles}>
-                    <span title={name}>
+}
+
+<div>
+  {
+    Object.keys(groups).map(group => (
+      <div>
+        <h2>{group}</h2>
+        <ul style={wrapperStyles}>
+          {
+            groups[group].map(name => (
+              !name.endsWith('Filled') &&
+              <li style={iconWrapStyles} key={name}>
+                <div style={rowStyles}>
+                  <span title={name}>
+                    <SVGIcon
+                      name={name}
+                      color={colors.GREEN_500}
+                      style={iconStyles}
+                    />
+                  </span>
+                  {
+                    icons.includes(`${name}Filled`) &&
+                    <span title={`${name}Filled`}>
                       <SVGIcon
-                        name={name}
+                        name={`${name}Filled`}
                         color={colors.GREEN_500}
                         style={iconStyles}
                       />
                     </span>
-                    {
-                      icons.includes(`${name}Filled`) &&
-                      <span title={`${name}Filled`}>
-                        <SVGIcon
-                          name={`${name}Filled`}
-                          color={colors.GREEN_500}
-                          style={iconStyles}
-                        />
-                      </span>
-                    }
-                  </div>
-                  <div style={rowStyles}>{name}</div>
-                </li>
-              ))
-            }
-          </ul>
-        </div>
-      ))
-    }
-  </div>
+                  }
+                </div>
+                <div style={rowStyles}>{name}</div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    ))
+  }
+</div>
 ```

@@ -2,6 +2,7 @@ The spacing module exports values which can be used for padding, margin, and pos
 Using predefined values for spacing help us keep things visually consistent.
 
 The pixel values are a base-8 strategy as defined by the design system.
+
 ### Sizes
 | Property   | Px value  |
 |------------|-----------|
@@ -14,7 +15,7 @@ The pixel values are a base-8 strategy as defined by the design system.
 
 ### Example usage:
 
-```markdown
+```js static
 import { spacing } from 'ic-snacks'
 
 // If you need to reference the pixel values directly
@@ -30,11 +31,11 @@ const styles = {
   ...spacing.MARGIN_TOP_MD,            // => { marginLeft: 24 }
 
   // Padding/margin along one dimension
-  ...spacing.PADDING_Y_XL              // => { paddingTop: 64, paddingBottom: 64 }
+  ...spacing.PADDING_Y_XL,             // => { paddingTop: 64, paddingBottom: 64 }
   ...spacing.MARGIN_X_LG,              // => { marginLeft: 32, marginRight: 32 }
 
   // Positioning
-  ...spacing.LEFT_XS                   // => { left: 8 }
+  ...spacing.LEFT_XS,                  // => { left: 8 }
   ...spacing.RIGHT_SM,                 // => { right: 16 }
 }
 ```

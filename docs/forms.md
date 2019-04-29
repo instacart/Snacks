@@ -19,7 +19,7 @@ The base component to wrap all input types in to inherit Form callbacks and vali
 * **serverErrors** - marks errors on each input based on the input's “name” attribute
 * **formProps** - Props to pass to html <form> element
 
-```js static
+```jsx static
 import { Form, TextField } from 'ic-snacks'
 
 class SomeComponent extends React.Component {
@@ -57,7 +57,6 @@ class SomeComponent extends React.Component {
 export default SomeComponent
 ```
 
-
 ## Build Custom Components
 
 **FormComponent**
@@ -72,13 +71,13 @@ In order to build custom inputs you'll want to use FormComponent as a Higher Ord
 * **regexValidation** - a regex string to validate via regex
 * **validations** - Validator.js (https://github.com/chriso/validator.js) validations use syntax: {validatorMethod: arguments}
 
-```js static
+```jsx static
 import { FormComponent } from 'ic-snacks'
 
 @FormComponent
 class CustomInput extends React.Component {
   static propTypes = {
-    name    : React.PropTypes.string.isRequired,
+    name: React.PropTypes.string.isRequired,
     disabled: React.PropTypes.bool,
     required: React.PropTypes.bool,
   }

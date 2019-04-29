@@ -1,10 +1,10 @@
 Read more @ https://github.com/nbwar/icformable
 
-```md
+```jsx static
 @FormComponent
 class ICCustomInput extends React.Component {
   static propTypes = {
-    name    : React.PropTypes.string.isRequired,
+    name: React.PropTypes.string.isRequired,
     disabled: React.PropTypes.bool,
     required: React.PropTypes.bool,
   }
