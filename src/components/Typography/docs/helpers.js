@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-no-undef */
 import React from 'react'
+import Text from '../Text.js'
 
 // eslint-disable-next-line
 export const TypographyTableRow = ({ variant, usage, example = "Don't talk about snacks" }) => (

@@ -1,6 +1,8 @@
 NavigationPills example:
 
-```jsx static
+```jsx
+import { NavigationPills } from 'ic-snacks'
+
 const initialState = { activePill: 'carrots' }
 const pills = [
   { text: 'bananas' },
@@ -14,16 +16,16 @@ const pills = [
   { text: 'potatoes' },
 ]
 
-<div>
-  <NavigationPills
-    pills={pills}
-    onPillClick={(e, pill) => {
-      e.preventDefault()
-      setState({ activePill: pill.text })
-      console.log('NavigationPills NavigationPill clicked!', pill)
-    }}
-    label="Filter by"
-    activePill={state.activePill}
-  />
-</div>
+; <div>
+    <NavigationPills
+      pills={pills}
+      onPillClick={(e, pill) => {
+        e.preventDefault()
+        setState({ activePill: pill.text })
+        console.log('NavigationPills NavigationPill clicked!', pill)
+      }}
+      label="Filter by"
+      activePill={state.activePill}
+    />
+  </div>
 ```

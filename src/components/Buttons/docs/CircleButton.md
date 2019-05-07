@@ -1,7 +1,9 @@
 CircleButton example:
 
-```jsx static
-<div>
-  <CircleButton>+</CircleButton>
-</div>
+```jsx
+import { CircleButton } from 'ic-snacks'
+
+; <div>
+    <CircleButton>+</CircleButton>
+  </div>
 ```

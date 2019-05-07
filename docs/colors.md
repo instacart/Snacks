@@ -1,7 +1,8 @@
 Available colors:
 
-```jsx static
-const colors = require('../src/styles/colors').default
+```jsx
+import { colors } from 'ic-snacks'
+
 const wrapperStyles = {
   display: 'flex',
   flexDirection: 'row',
@@ -39,7 +40,7 @@ const colorsSwatches = Object.keys(colors).map(name => {
   )
 })
 
-<ul style={wrapperStyles}>
- { colorsSwatches }
-</ul>
+; <ul style={wrapperStyles}>
+   { colorsSwatches }
+  </ul>
 ```

@@ -3,6 +3,7 @@ import Tooltip from './components/Tooltip/Tooltip'
 import Button from './components/Buttons/Button'
 import CircleButton from './components/Buttons/CircleButton'
 import Radio from './components/Buttons/Radio'
+import RadioGroup from './components/Buttons/RadioGroup'
 import Checkbox from './components/Buttons/Checkbox'
 import Switch from './components/Buttons/Switch'
 import Column from './components/Grid/Column'
@@ -84,6 +85,7 @@ export {
   Button,
   CircleButton,
   Radio,
+  RadioGroup,
   Checkbox,
   Switch,
   Icon,
