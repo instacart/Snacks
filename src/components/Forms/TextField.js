@@ -123,7 +123,7 @@ class TextField extends React.Component {
     value: PropTypes.string,
     /** Snacks theme attributes provided by `Themer` */
     snacksTheme: themePropTypes,
-     /** Any additonal props to add to the element (e.g. data attributes). */
+    /** Any additonal props to add to the element (e.g. data attributes) */
     elementAttributes: PropTypes.object,
   }
 
@@ -283,7 +283,7 @@ class TextField extends React.Component {
             onKeyDown={this.handleKeyDown}
             autoComplete={autoComplete}
             placeholder=""
-            { ...elementAttributes }
+            {...elementAttributes}
           />
         </div>
 
