@@ -1,4 +1,10 @@
 const path = require('path');
+
+const webpackConfig = require('./webpack.config');
+webpackConfig.resolve = webpackConfig.resolve || {};
+webpackConfig.resolve.alias = webpackConfig.resolve.alias || {};
+webpackConfig.resolve.alias['ic-snacks'] = path.join(__dirname, 'dist', 'snacks.js');
+
 module.exports = {
   getExampleFilename(componentPath) {
     var parts = componentPath.split('/');
@@ -171,5 +177,6 @@ module.exports = {
       ]
     }
   },
-  title: "Snacks"
+  title: 'Snacks',
+  webpackConfig: webpackConfig
 }

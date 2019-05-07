@@ -1,30 +1,32 @@
 NavigationPill example:
 
-```jsx static
-<div>
-  <NavigationPill
-    isActive={false}
-    onClick={e => {
-      e.preventDefault()
-      console.log('NavigationPill click!', "bananas")
-    }}
-    text="bananas"
-  />
-  <NavigationPill
-    isActive={true}
-    onClick={e => {
-      e.preventDefault()
-      console.log('NavigationPill click!', "carrots")
-    }}
-    text="carrots"
-  />
-  <NavigationPill
-    isActive={false}
-    onClick={e => {
-      e.preventDefault()
-      console.log('NavigationPill click!', "watermelon")
-    }}
-    text="watermelon"
-  />
-</div>
+```jsx
+import { NavigationPill } from 'ic-snacks'
+
+; <div>
+    <NavigationPill
+      isActive={false}
+      onClick={e => {
+        e.preventDefault()
+        console.log('NavigationPill click!', "bananas")
+      }}
+      text="bananas"
+    />
+    <NavigationPill
+      isActive={true}
+      onClick={e => {
+        e.preventDefault()
+        console.log('NavigationPill click!', "carrots")
+      }}
+      text="carrots"
+    />
+    <NavigationPill
+      isActive={false}
+      onClick={e => {
+        e.preventDefault()
+        console.log('NavigationPill click!', "watermelon")
+      }}
+      text="watermelon"
+    />
+  </div>
 ```

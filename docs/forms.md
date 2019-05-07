@@ -48,7 +48,7 @@ class SomeComponent extends React.Component {
           validationErrorText="Sorry, please enter a valid email."
           required
         />
-        <button type="submit"> Submit </button>
+        <button type="submit">Submit</button>
       </Form>
     )
   }

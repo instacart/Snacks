@@ -6,9 +6,10 @@ upgrade please follow the instructions
 
 Available Icons:
 
-```jsx static
+```jsx
+import { Icon, colors } from 'ic-snacks'
 const hexValues = require('../src/components/Icon/hexValues')
-const colors = require('../src/styles/colors').default
+
 const wrapperStyles = {
   display: 'flex',
   flexDirection: 'row',
@@ -40,7 +41,7 @@ const icons = Object.keys(hexValues.default).map(name => {
   )
 })
 
-<ul style={wrapperStyles}>
- { icons }
-</ul>
+; <ul style={wrapperStyles}>
+   { icons }
+  </ul>
 ```

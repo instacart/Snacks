@@ -2,14 +2,14 @@ The Themer allows you to set and get the current theme being used by Snacks. It'
 
 To get a value from the Themer:
 ```js static
-import themer from 'ic-snacks'
+import { themer } from 'ic-snacks'
 
 themer.get('colors', 'primaryForeground') // returns #43B02A if using default themer
 ```
 
 To set a value in the Themer:
 ```js static
-import themer from 'ic-snacks'
+import { themer } from 'ic-snacks'
 
 themer.set('colors', 'primaryForeground', '#000')
 themer.get('colors', 'primaryForeground') // returns #000
@@ -17,7 +17,7 @@ themer.get('colors', 'primaryForeground') // returns #000
 
 To set the entire Themer config:
 ```js static
-import themer from 'ic-snacks'
+import { themer } from 'ic-snacks'
 
 themer.themeConfig = {
   colors: {
@@ -36,7 +36,7 @@ themer.get('colors', 'action') // returns #ededed
 Themes will be validated before being set, and must match the theme config template found in `src/styles/themer/utils`
 
 ```js static
-import themer from 'ic-snacks'
+import { themer } from 'ic-snacks'
 
 themer.themeConfig = {
   colors: {
@@ -69,7 +69,7 @@ bad keys will not be set
 
 To get the entire Themer config:
 ```js static
-import themer from 'ic-snacks'
+import { themer } from 'ic-snacks'
 
 themer.themeConfig // return entire config object
 ```
