@@ -123,6 +123,8 @@ class TextField extends React.Component {
     value: PropTypes.string,
     /** Snacks theme attributes provided by `Themer` */
     snacksTheme: themePropTypes,
+     /** Any additonal props to add to the element (e.g. data attributes). */
+    elementAttributes: PropTypes.object,
   }
 
   static defaultProps = {
@@ -207,6 +209,7 @@ class TextField extends React.Component {
       helperText,
       autoComplete,
       snacksTheme,
+      elementAttributes,
     } = this.props
 
     const { hasValue, isFocused } = this.state
@@ -228,15 +231,17 @@ class TextField extends React.Component {
         {serverError && !disabled && !isValid && <ServerError text={serverError} />}
 
         <div style={styles.inputContainer}>
-          <FloatingLabel
-            text={floatingLabelText}
-            float={isFocused || hasValue}
-            disabled={disabled}
-            isActive={isFocused}
-            hasError={hasError}
-            htmlFor={inputId}
-            snacksTheme={snacksTheme}
-          />
+          {floatingLabelText && (
+            <FloatingLabel
+              text={floatingLabelText}
+              float={isFocused || hasValue}
+              disabled={disabled}
+              isActive={isFocused}
+              hasError={hasError}
+              htmlFor={inputId}
+              snacksTheme={snacksTheme}
+            />
+          )}
 
           {hintText && (
             <TextFieldHint
@@ -278,6 +283,7 @@ class TextField extends React.Component {
             onKeyDown={this.handleKeyDown}
             autoComplete={autoComplete}
             placeholder=""
+            { ...elementAttributes }
           />
         </div>
 
