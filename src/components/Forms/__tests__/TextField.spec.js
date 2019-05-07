@@ -5,22 +5,36 @@ import { mount } from 'enzyme'
 import { spy } from 'sinon'
 import TextField from '../TextField'
 
-const defaultTextField = (
+const defaultProps = {
+  id: 'test_id',
+  name: 'test',
+  type: 'email',
+  floatingLabelText: 'Email',
+  hintText: 'Enter your email address',
+}
+
+const defaultTextField = props => (
   <StyleRoot>
     <div>
-      <TextField
-        id="test_id"
-        name="test"
-        type="email"
-        floatingLabelText="Email"
-        hintText="Enter your email address"
-      />
+      <TextField {...props} />
     </div>
   </StyleRoot>
 )
 
 it('renders TextField correctly', () => {
-  const tree = renderer.create(defaultTextField).toJSON()
+  const tree = renderer.create(defaultTextField(defaultProps)).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+it('renders TextField without label correctly', () => {
+  const props = {
+    ...defaultProps,
+    floatingLabelText: null,
+    elementAttributes: {
+      'aria-label': 'enter email',
+    },
+  }
+  const tree = renderer.create(defaultTextField(props)).toJSON()
   expect(tree).toMatchSnapshot()
 })
 
@@ -47,7 +61,7 @@ it('fires the onFocus prop', () => {
 })
 
 it('fires the triggerFocus method', () => {
-  const wrapper = mount(defaultTextField)
+  const wrapper = mount(defaultTextField(defaultProps))
 
   wrapper
     .find('TextField')
