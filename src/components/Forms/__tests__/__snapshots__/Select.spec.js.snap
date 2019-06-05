@@ -35,12 +35,10 @@ exports[`renders Select correctly 1`] = `
           >
             <div
               aria-expanded={false}
-              aria-haspopup={true}
               data-radium={true}
               elementAttributes={
                 Object {
                   "aria-expanded": false,
-                  "aria-haspopup": true,
                 }
               }
               onBlur={[Function]}
@@ -414,12 +412,10 @@ exports[`renders Select w/ server error correctly 1`] = `
           >
             <div
               aria-expanded={false}
-              aria-haspopup={true}
               data-radium={true}
               elementAttributes={
                 Object {
                   "aria-expanded": false,
-                  "aria-haspopup": true,
                 }
               }
               onBlur={[Function]}
@@ -795,12 +791,10 @@ exports[`renders disabled Select correctly 1`] = `
           >
             <div
               aria-expanded={false}
-              aria-haspopup={true}
               data-radium={true}
               elementAttributes={
                 Object {
                   "aria-expanded": false,
-                  "aria-haspopup": true,
                 }
               }
               onBlur={[Function]}
@@ -1174,12 +1168,10 @@ exports[`renders invalid Select correctly 1`] = `
           >
             <div
               aria-expanded={false}
-              aria-haspopup={true}
               data-radium={true}
               elementAttributes={
                 Object {
                   "aria-expanded": false,
-                  "aria-haspopup": true,
                 }
               }
               onBlur={[Function]}
@@ -1552,12 +1544,10 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
         >
           <div
             aria-expanded={false}
-            aria-haspopup={true}
             data-radium={true}
             elementAttributes={
               Object {
                 "aria-expanded": false,
-                "aria-haspopup": true,
               }
             }
             onBlur={[Function]}
