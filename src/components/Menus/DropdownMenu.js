@@ -1,7 +1,6 @@
 import React from 'react'
 import { findDOMNode } from 'react-dom'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import Menu from './Menu'
 import Slide from '../Transitions/Slide'
 import Fade from '../Transitions/Fade'
@@ -31,7 +30,6 @@ const styles = {
   },
 }
 
-@Radium
 class DropdownMenu extends React.Component {
   static propTypes = {
     /** MenuItems or Divider */
@@ -195,17 +193,17 @@ class DropdownMenu extends React.Component {
     const isOpen = this.state.open
 
     return (
-      <div onKeyDown={this.handleKeyDown} style={style}>
-        <div style={{ position: 'relative' }}>{this.renderTriggerElement()}</div>
+      <div onKeyDown={this.handleKeyDown} css={style}>
+        <div css={{ position: 'relative' }}>{this.renderTriggerElement()}</div>
         <div
-          style={[
+          css={[
             styles.menuContainer,
             menuContainerStyle,
             isOpen && styles.menuContainerOpen,
             !isOpen && styles.menuContainerClosed,
           ]}
         >
-          <Slide in={isOpen} axis="y" style={styles.transitionContainer} offset={30}>
+          <Slide in={isOpen} axis="y" css={styles.transitionContainer} offset={30}>
             <Fade in={isOpen} transitionTime={200}>
               <Menu
                 ref={node => (this.menu = node)}

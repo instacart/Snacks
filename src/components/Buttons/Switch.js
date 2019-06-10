@@ -43,10 +43,10 @@ const STYLES = {
 
 const renderInputButton = (isSelected, style, displayOnOffLabel) => {
   return (
-    <div style={[style, { backgroundColor: style.fill }, STYLES.background]}>
-      {displayOnOffLabel && isSelected && <OneSvg style={STYLES.one} />}
-      {displayOnOffLabel && !isSelected && <ZeroSvg style={STYLES.zero} />}
-      <div style={[STYLES.toggle.default, isSelected && STYLES.toggle.selected]} />
+    <div css={[style, { backgroundColor: style.fill }, STYLES.background]}>
+      {displayOnOffLabel && isSelected && <OneSvg css={STYLES.one} />}
+      {displayOnOffLabel && !isSelected && <ZeroSvg css={STYLES.zero} />}
+      <div css={[STYLES.toggle.default, isSelected && STYLES.toggle.selected]} />
     </div>
   )
 }

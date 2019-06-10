@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { colors } from '../../styles'
 
@@ -140,7 +139,7 @@ function Text({ variant, style, children, elementType, fontWeight, ...restProps 
   }
 
   return (
-    <ElementType style={finalStyles} {...restProps}>
+    <ElementType css={finalStyles} {...restProps}>
       {children}
     </ElementType>
   )
@@ -165,4 +164,4 @@ Text.propTypes = {
   style: PropTypes.shape({}),
 }
 
-export default Radium(Text)
+export default Text

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import { colors } from '../../styles'
 
 const styles = {
@@ -27,7 +26,6 @@ const styles = {
   },
 }
 
-@Radium
 class TextFieldHint extends Component {
   static propTypes = {
     /** Hint Text */
@@ -52,7 +50,7 @@ class TextFieldHint extends Component {
     return (
       <div
         id={inputId}
-        style={[styles.root, style, disabled && styles.disabled, show && styles.show]}
+        css={[styles.root, style, disabled && styles.disabled, show && styles.show]}
       >
         {text}
       </div>

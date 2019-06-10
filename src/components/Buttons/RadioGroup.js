@@ -66,7 +66,7 @@ class RadioGroup extends React.Component {
       })
     })
 
-    return <Element style={{ ...STYLE.wrapEl, ...style.wrapEl }}>{childrenWithProps}</Element>
+    return <Element css={{ ...STYLE.wrapEl, ...style.wrapEl }}>{childrenWithProps}</Element>
   }
 }
 

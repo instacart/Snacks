@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import colors from '../styles/colors'
 import withTheme from '../styles/themer/withTheme'
 import { themePropTypes } from '../styles/themer/utils'
@@ -113,13 +112,13 @@ class RadioCheckboxBase extends React.PureComponent {
     const internalStyle = getStyles(this.props)
 
     return (
-      <div style={{ ...internalStyle.button, ...style.button }}>
+      <div css={{ ...internalStyle.button, ...style.button }}>
         {renderInputButton(isSelected, getInputStyles(this.props, this.state))}
         <input
           id={id}
           type={btnType}
           onChange={this.handleChange}
-          style={{ ...internalStyle.inputBtn, ...style.inputBtn }}
+          css={{ ...internalStyle.inputBtn, ...style.inputBtn }}
           value={value}
           checked={isSelected}
           disabled={isDisabled}
@@ -142,12 +141,9 @@ class RadioCheckboxBase extends React.PureComponent {
     // ensure both text and id are supplied so the button and label are correctly associated
     if (labelText && id) {
       return (
-        <Element style={{ ...internalStyle.wrapEl, ...style.wrapEl }}>
+        <Element css={{ ...internalStyle.wrapEl, ...style.wrapEl }}>
           {this.renderInputBtn()}
-          <label
-            htmlFor={id}
-            style={{ ...internalStyle.label, ...style.label, ...isDisabledStyle }}
-          >
+          <label htmlFor={id} css={{ ...internalStyle.label, ...style.label, ...isDisabledStyle }}>
             {labelText}
           </label>
         </Element>
@@ -158,4 +154,4 @@ class RadioCheckboxBase extends React.PureComponent {
   }
 }
 
-export default withTheme(Radium(RadioCheckboxBase))
+export default withTheme(RadioCheckboxBase)

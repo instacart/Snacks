@@ -144,7 +144,7 @@ class Grow extends PureComponent {
       ...style,
     }
 
-    return <div style={styles}>{children}</div>
+    return <div css={styles}>{children}</div>
   }
 
   render() {

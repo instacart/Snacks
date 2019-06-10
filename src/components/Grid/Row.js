@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unused-prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import responsive from '../../styles/responsive'
 import { supportsCSSGrid } from '../../utils/detectFeature'
 
@@ -129,7 +128,7 @@ const Row = props => {
 
   return (
     <div
-      style={[
+      css={[
         {
           ...componentStyles,
           ...getMaxColumnsStyles(props),
@@ -157,4 +156,4 @@ Row.defaultProps = {
   maxColumns: 14,
 }
 
-export default Radium(Row)
+export default Row

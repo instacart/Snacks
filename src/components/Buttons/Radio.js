@@ -6,7 +6,7 @@ import radioSelectedSvg from '../../assets/radioSelected.svg'
 
 const renderInputButton = (isSelected, style) => {
   const SvgComponent = isSelected ? radioSelectedSvg : radioBaseSvg
-  return <SvgComponent aria-hidden="true" style={style} />
+  return <SvgComponent aria-hidden="true" css={style} />
 }
 
 const Radio = props => {

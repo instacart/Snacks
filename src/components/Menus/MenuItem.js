@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import { colors } from '../../styles'
 import Icon from '../Icon/Icon'
 import spacing from '../../styles/spacing'
@@ -48,7 +47,6 @@ const styles = {
   },
 }
 
-@Radium
 class MenuItem extends React.Component {
   static propTypes = {
     /** Completely override the MenuItem rendering and create a custom MenuItem */
@@ -137,14 +135,14 @@ class MenuItem extends React.Component {
 
     const iconComponent =
       typeof leftIcon === 'string' ? (
-        <Icon name={leftIcon} style={[styles.leftIconStyles, leftIconStyles]} />
+        <Icon name={leftIcon} css={[styles.leftIconStyles, leftIconStyles]} />
       ) : (
         leftIcon
       )
 
     return (
-      <div style={styles.iconContainer}>
-        <div style={{ display: 'flex' }}>{iconComponent}</div>
+      <div css={styles.iconContainer}>
+        <div css={{ display: 'flex' }}>{iconComponent}</div>
       </div>
     )
   }
@@ -157,9 +155,9 @@ class MenuItem extends React.Component {
     }
 
     return (
-      <div style={styles.menuitem}>
+      <div css={styles.menuitem}>
         {this.renderLeftIcon()}
-        <div style={[styles.label, labelStyles]}>{label}</div>
+        <div css={[styles.label, labelStyles]}>{label}</div>
       </div>
     )
   }
@@ -171,7 +169,7 @@ class MenuItem extends React.Component {
       <div
         ref={node => (this.menuItem = node)}
         role={role}
-        style={[styles.root, style, disabled && styles.disabled]}
+        css={[styles.root, style, disabled && styles.disabled]}
         onClick={this.handleClick}
         onFocus={this.handleFocus}
         tabIndex={useTabIndex && !disabled ? tabIndex || 0 : undefined}

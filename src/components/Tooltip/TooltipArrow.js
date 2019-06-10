@@ -106,7 +106,7 @@ class TooltipArrow extends PureComponent {
   }
 
   render() {
-    return <div style={this.calculatedStyles} />
+    return <div css={this.calculatedStyles} />
   }
 }
 

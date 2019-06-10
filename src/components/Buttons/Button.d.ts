@@ -1,9 +1,12 @@
 import * as React from 'react'
-import { RadiumStyles, ElementAttributes } from '../..'
+import { Interpolation } from '@emotion/core'
+import { ElementAttributes } from '../..'
 import { WithThemeInjectedProps, ApplyWithTheme } from '../../styles/themer/withTheme'
 
 export interface ButtonProps extends WithThemeInjectedProps {
   children?: React.ReactNode
+
+  className?: string
 
   /** Whether or not the button is disabled. */
   disabled?: boolean
@@ -14,8 +17,14 @@ export interface ButtonProps extends WithThemeInjectedProps {
   /** Snacks button variants. */
   snacksStyle?: 'primary' | 'secondary' | 'flat' | 'coupon'
 
-  /** Optional style overrides. */
-  style?: RadiumStyles
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  style?: Interpolation
 
   /** An optional icon. Can be a an icon name or a Snacks `Icon` component. */
   icon?: string | React.ReactElement<any> // eslint-disable-line @typescript-eslint/no-explicit-any

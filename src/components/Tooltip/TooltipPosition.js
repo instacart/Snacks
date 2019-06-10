@@ -140,7 +140,7 @@ class TooltipPosition extends PureComponent {
     })
 
     return (
-      <div style={computedStyles} ref={node => (this.overlay = node)}>
+      <div css={computedStyles} ref={node => (this.overlay = node)}>
         {child}
       </div>
     )

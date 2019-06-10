@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import { colors } from '../../styles'
 import withTheme from '../../styles/themer/withTheme'
 import { themePropTypes } from '../../styles/themer/utils'
@@ -46,7 +45,6 @@ const getSnackStyles = snacksTheme => {
 }
 
 @withTheme
-@Radium
 class FloatingLabel extends Component {
   static propTypes = {
     /** Disabled styling for the label */
@@ -61,6 +59,7 @@ class FloatingLabel extends Component {
     isActive: PropTypes.bool,
     /** Override styles */
     style: PropTypes.object,
+    className: PropTypes.string,
     /** Label text */
     text: PropTypes.string,
     /** Snacks theme attributes provided by `Themer` */
@@ -72,7 +71,17 @@ class FloatingLabel extends Component {
   }
 
   render() {
-    const { float, disabled, hasError, htmlFor, isActive, style, text, snacksTheme } = this.props
+    const {
+      className,
+      float,
+      disabled,
+      hasError,
+      htmlFor,
+      isActive,
+      style,
+      text,
+      snacksTheme,
+    } = this.props
 
     const snacksStyles = getSnackStyles(snacksTheme)
 
@@ -86,7 +95,7 @@ class FloatingLabel extends Component {
     ]
 
     return (
-      <label htmlFor={htmlFor} style={inputStyles}>
+      <label htmlFor={htmlFor} css={inputStyles} className={className}>
         {text}
       </label>
     )

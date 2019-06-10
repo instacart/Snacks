@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
 import PropTypes from 'prop-types'
 import hexValues from './hexValues'
 
@@ -27,7 +26,7 @@ const Icon = props => {
   const { style, onClick } = props
   const icon = getIcon(props)
   return (
-    <i style={[baseStyles, style]} aria-hidden onClick={onClick}>
+    <i css={[baseStyles, style]} aria-hidden onClick={onClick}>
       {icon}
     </i>
   )
@@ -48,4 +47,4 @@ Icon.propTypes = {
   onClick: PropTypes.func,
 }
 
-export default Radium(Icon)
+export default Icon

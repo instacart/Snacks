@@ -19,6 +19,7 @@ module.exports = api => {
         },
       ],
       '@babel/preset-react',
+      '@emotion/babel-preset-css-prop',
     ],
     plugins: [
       [

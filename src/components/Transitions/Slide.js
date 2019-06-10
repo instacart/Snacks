@@ -103,8 +103,8 @@ class Slide extends PureComponent {
     }
 
     return (
-      <div style={topLevelStyle}>
-        <div style={styles}>{children}</div>
+      <div css={topLevelStyle}>
+        <div css={styles}>{children}</div>
       </div>
     )
   }

@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import responsive from '../../styles/responsive'
 import { supportsCSSGrid } from '../../utils/detectFeature'
 
@@ -75,7 +74,7 @@ const Column = props => {
 
   const styles = supportsCSSGrid() ? getSizedStyles(sizes) : getLecacySizedStyles(sizes)
 
-  return <div style={[styles, props.style]}>{props.children}</div>
+  return <div css={[styles, props.style]}>{props.children}</div>
 }
 
 Column.propTypes = {
@@ -97,4 +96,4 @@ Column.defaultProps = {
   sizes: {},
 }
 
-export default Radium(Column)
+export default Column

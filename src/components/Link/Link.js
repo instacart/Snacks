@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import withTheme from '../../styles/themer/withTheme'
 import { themePropTypes } from '../../styles/themer/utils'
 
@@ -27,7 +26,7 @@ const Link = props => {
   return (
     <a
       href={props.href}
-      style={[styles, props.style]}
+      css={[styles, props.style]}
       onClick={e => {
         props.onClick(e, props)
       }}
@@ -63,4 +62,4 @@ Link.defaultProps = {
   onClick: noop,
 }
 
-export default withTheme(Radium(Link))
+export default withTheme(Link)

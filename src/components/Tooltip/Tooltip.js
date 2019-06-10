@@ -92,7 +92,7 @@ class Tooltip extends PureComponent {
           show={isVisible || this.state.show}
           onRootClose={this.handleHideToolTip}
         >
-          <InnerToolTip size={size} style={style} arrowStyle={arrowStyle} snacksStyle={snacksStyle}>
+          <InnerToolTip size={size} css={style} arrowStyle={arrowStyle} snacksStyle={snacksStyle}>
             {children}
           </InnerToolTip>
         </TooltipOverlay>

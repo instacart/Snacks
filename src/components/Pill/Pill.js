@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import spacing from '../../styles/spacing'
 import withTheme from '../../styles/themer/withTheme'
 
@@ -26,7 +25,7 @@ const Pill = props => {
   const styles = getStyles(props)
 
   return (
-    <div style={[styles, props.style]} {...props.elementAttributes}>
+    <div css={[styles, props.style]} {...props.elementAttributes}>
       {props.children}
     </div>
   )
@@ -50,4 +49,4 @@ Pill.defaultProps = {
   color: '#CC0033',
 }
 
-export default withTheme(Radium(Pill))
+export default withTheme(Pill)

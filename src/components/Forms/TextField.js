@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import { colors } from '../../styles'
 import FormComponent from './FormComponent'
 import ValidationError from './ValidationError'
@@ -72,7 +71,6 @@ const getSnackStyles = snacksTheme => {
 
 @withTheme
 @FormComponent
-@Radium
 class TextField extends React.Component {
   static propTypes = {
     /** Name of the field */
@@ -221,16 +219,11 @@ class TextField extends React.Component {
 
     return (
       <div
-        style={[
-          styles.wrapper,
-          fullWidth && styles.fullWidth,
-          halfWidth && styles.halfWidth,
-          style,
-        ]}
+        css={[styles.wrapper, fullWidth && styles.fullWidth, halfWidth && styles.halfWidth, style]}
       >
         {serverError && !disabled && !isValid && <ServerError text={serverError} />}
 
-        <div style={styles.inputContainer}>
+        <div css={styles.inputContainer}>
           {floatingLabelText && (
             <FloatingLabel
               text={floatingLabelText}
@@ -270,7 +263,7 @@ class TextField extends React.Component {
             ]
               .filter(Boolean)
               .join(' ')}
-            style={[
+            css={[
               styles.input,
               inputStyle,
               disabled && styles.inputDisabled,

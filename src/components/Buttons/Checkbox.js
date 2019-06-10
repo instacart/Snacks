@@ -6,7 +6,7 @@ import checkboxSelectedSvg from '../../assets/checkboxSelected.svg'
 
 const renderInputButton = (isSelected, style) => {
   const SvgComponent = isSelected ? checkboxSelectedSvg : checkboxBaseSvg
-  return <SvgComponent aria-hidden="true" style={style} />
+  return <SvgComponent aria-hidden="true" css={style} />
 }
 
 const Checkbox = props => {

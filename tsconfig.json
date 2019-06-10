@@ -3,7 +3,12 @@
   "compilerOptions": {
     "noEmit": true,
     "allowSyntheticDefaultImports": false,
+    "types": []
   },
+  "include": [
+    "src/**/*",
+    "test/**/*"
+  ],
   "exclude": [
     "dist",
     "node_modules"

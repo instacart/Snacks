@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
 import PropTypes from 'prop-types'
 import * as icons from './icons'
 
@@ -21,4 +20,4 @@ function SVGIcon({ color, name, size, ...props }) {
   return <Component aria-hidden fill={color} width={sizes[size]} height={sizes[size]} {...props} />
 }
 
-export default Radium(SVGIcon)
+export default SVGIcon

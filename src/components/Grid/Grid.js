@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import responsive from '../../styles/responsive'
 
 const styles = {
@@ -35,7 +34,7 @@ const styles = {
 }
 
 const Grid = props => {
-  return <div style={[styles, props.style]}>{props.children}</div>
+  return <div css={[styles, props.style]}>{props.children}</div>
 }
 
 Grid.propTypes = {
@@ -44,4 +43,4 @@ Grid.propTypes = {
   style: PropTypes.object,
 }
 
-export default Radium(Grid)
+export default Grid

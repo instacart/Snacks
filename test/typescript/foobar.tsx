@@ -7,7 +7,11 @@ export function Foo() {
 
 export function Foo2() {
   return (
-    <Button href="foo.html" onClick={(e: React.MouseEvent<HTMLAnchorElement>) => e}>
+    <Button
+      className="foo"
+      css={{ background: 'red', ':hover': { background: 'purple' } }}
+      style={{ background: 'red', ':hover': { background: 'purple' } }}
+    >
       Foo
     </Button>
   )

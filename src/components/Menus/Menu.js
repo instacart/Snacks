@@ -181,7 +181,7 @@ class Menu extends React.Component {
       <div
         ref={node => (this.menu = node)}
         role={role}
-        style={mergedStyles}
+        css={mergedStyles}
         onKeyDown={this.handleKeyDown}
         onBlur={this.handleBlur}
         aria-hidden={ariaHidden}

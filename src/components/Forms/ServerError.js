@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import { colors } from '../../styles'
 
 const styles = {
@@ -17,7 +16,6 @@ const styles = {
   },
 }
 
-@Radium
 class ServerError extends Component {
   static propTypes = {
     /** Override styles */
@@ -30,7 +28,7 @@ class ServerError extends Component {
     const { style, text } = this.props
 
     return (
-      <div style={[styles.root, style]} aria-live={'assertive'} aria-atomic>
+      <div css={[styles.root, style]} aria-live={'assertive'} aria-atomic>
         {text}
       </div>
     )

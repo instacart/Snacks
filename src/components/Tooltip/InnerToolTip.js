@@ -108,7 +108,7 @@ class InnerToolTip extends PureComponent {
     return (
       <Fade>
         {this.renderArrow()}
-        <div style={this.contentStyles}>{this.props.children}</div>
+        <div css={this.contentStyles}>{this.props.children}</div>
       </Fade>
     )
   }

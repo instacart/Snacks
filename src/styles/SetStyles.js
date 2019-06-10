@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Radium, { Style } from 'radium'
+import { Global } from '@emotion/core'
 import { Normalize, GlobalTheme } from '../index'
 
 const getFonts = assetsUrl => {
@@ -82,7 +82,6 @@ const writeFonts = assetsUrl => {
   document.head.appendChild(style)
 }
 
-@Radium
 class Styles extends Component {
   static propTypes = {
     assetsUrl: PropTypes.string.isRequired,
@@ -98,7 +97,7 @@ class Styles extends Component {
   }
 
   render() {
-    return <Style rules={{ ...Normalize, ...GlobalTheme }} />
+    return <Global styles={{ ...Normalize, ...GlobalTheme }} />
   }
 }
 

@@ -98,7 +98,7 @@ class Fade extends PureComponent {
       ...this.initialStyles,
       ...this.transitionStyles[state],
     }
-    return <div style={styles}>{children}</div>
+    return <div css={styles}>{children}</div>
   }
 
   render() {
