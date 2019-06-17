@@ -73,7 +73,6 @@ exports[`renders TextField correctly 1`] = `
         <input
           aria-describedby="hint_test_id"
           aria-invalid={false}
-          aria-required={undefined}
           autoComplete="on"
           data-radium={true}
           defaultValue={null}
@@ -109,7 +108,6 @@ exports[`renders TextField correctly 1`] = `
             }
           }
           type="email"
-          value={undefined}
         />
       </div>
       <div
@@ -193,7 +191,6 @@ exports[`renders TextField without label correctly 1`] = `
           aria-describedby="hint_test_id"
           aria-invalid={false}
           aria-label="enter email"
-          aria-required={undefined}
           autoComplete="on"
           data-radium={true}
           defaultValue={null}
@@ -229,7 +226,6 @@ exports[`renders TextField without label correctly 1`] = `
             }
           }
           type="email"
-          value={undefined}
         />
       </div>
       <div
@@ -336,7 +332,6 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
         <input
           aria-describedby="hint_test_id"
           aria-invalid={false}
-          aria-required={undefined}
           autoComplete="on"
           data-radium={true}
           defaultValue={null}
@@ -372,7 +367,6 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
             }
           }
           type="email"
-          value={undefined}
         />
       </div>
       <div

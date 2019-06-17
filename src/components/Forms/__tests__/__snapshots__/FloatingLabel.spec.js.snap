@@ -7,7 +7,6 @@ exports[`renders FloatingLabel correctly when disabled 1`] = `
   <div>
     <label
       data-radium={true}
-      htmlFor={undefined}
       style={
         Object {
           "color": "#BDBDBD",
@@ -47,7 +46,6 @@ exports[`renders FloatingLabel correctly when disabled and float 1`] = `
   <div>
     <label
       data-radium={true}
-      htmlFor={undefined}
       style={
         Object {
           "color": "#BDBDBD",
@@ -87,7 +85,6 @@ exports[`renders FloatingLabel correctly when floated 1`] = `
   <div>
     <label
       data-radium={true}
-      htmlFor={undefined}
       style={
         Object {
           "color": "#757575",
@@ -127,7 +124,6 @@ exports[`renders FloatingLabel correctly when isActive and float 1`] = `
   <div>
     <label
       data-radium={true}
-      htmlFor={undefined}
       style={
         Object {
           "color": "#43B02A",
@@ -167,7 +163,6 @@ exports[`renders FloatingLabel correctly when not floating 1`] = `
   <div>
     <label
       data-radium={true}
-      htmlFor={undefined}
       style={
         Object {
           "color": "#757575",

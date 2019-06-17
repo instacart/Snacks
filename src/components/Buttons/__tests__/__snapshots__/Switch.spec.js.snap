@@ -49,14 +49,10 @@ exports[`Switch generates a label if a child prop of text is supplied 1`] = `
       />
     </div>
     <input
-      aria-label={undefined}
       checked={false}
       data-radium={true}
-      disabled={undefined}
       id={1}
-      onBlur={undefined}
       onChange={[Function]}
-      onFocus={undefined}
       style={
         Object {
           "MozAppearance": "none",
@@ -74,7 +70,6 @@ exports[`Switch generates a label if a child prop of text is supplied 1`] = `
         }
       }
       type="checkbox"
-      value={undefined}
     />
   </div>
   <label
@@ -143,14 +138,10 @@ exports[`Switch incorporates user style if passed 1`] = `
       />
     </div>
     <input
-      aria-label={undefined}
       checked={false}
       data-radium={true}
-      disabled={undefined}
       id={1}
-      onBlur={undefined}
       onChange={[Function]}
-      onFocus={undefined}
       style={
         Object {
           "MozAppearance": "none",
@@ -168,7 +159,6 @@ exports[`Switch incorporates user style if passed 1`] = `
         }
       }
       type="checkbox"
-      value={undefined}
     />
   </div>
   <label
@@ -236,14 +226,10 @@ exports[`Switch incorporates user style if passed 2`] = `
       />
     </div>
     <input
-      aria-label={undefined}
       checked={false}
       data-radium={true}
-      disabled={undefined}
       id={2}
-      onBlur={undefined}
       onChange={[Function]}
-      onFocus={undefined}
       style={
         Object {
           "MozAppearance": "none",
@@ -261,7 +247,6 @@ exports[`Switch incorporates user style if passed 2`] = `
         }
       }
       type="checkbox"
-      value={undefined}
     />
   </div>
   <label
@@ -320,14 +305,10 @@ exports[`Switch renders the correct button type 1`] = `
     />
   </div>
   <input
-    aria-label={undefined}
     checked={false}
     data-radium={true}
-    disabled={undefined}
     id={1}
-    onBlur={undefined}
     onChange={[Function]}
-    onFocus={undefined}
     style={
       Object {
         "MozAppearance": "none",
@@ -345,7 +326,6 @@ exports[`Switch renders the correct button type 1`] = `
       }
     }
     type="checkbox"
-    value={undefined}
   />
 </div>
 `;
@@ -391,14 +371,10 @@ exports[`Switch renders the correct selected state 1`] = `
     />
   </div>
   <input
-    aria-label={undefined}
     checked={false}
     data-radium={true}
-    disabled={undefined}
     id={1}
-    onBlur={undefined}
     onChange={[Function]}
-    onFocus={undefined}
     style={
       Object {
         "MozAppearance": "none",
@@ -416,7 +392,6 @@ exports[`Switch renders the correct selected state 1`] = `
       }
     }
     type="checkbox"
-    value={undefined}
   />
 </div>
 `;
@@ -462,14 +437,10 @@ exports[`Switch renders the correct selected state 2`] = `
     />
   </div>
   <input
-    aria-label={undefined}
     checked={true}
     data-radium={true}
-    disabled={undefined}
     id={2}
-    onBlur={undefined}
     onChange={[Function]}
-    onFocus={undefined}
     style={
       Object {
         "MozAppearance": "none",
@@ -487,7 +458,6 @@ exports[`Switch renders the correct selected state 2`] = `
       }
     }
     type="checkbox"
-    value={undefined}
   />
 </div>
 `;
@@ -533,14 +503,11 @@ exports[`Switch renders the correct selected state 3`] = `
     />
   </div>
   <input
-    aria-label={undefined}
     checked={true}
     data-radium={true}
     disabled={true}
     id={2}
-    onBlur={undefined}
     onChange={[Function]}
-    onFocus={undefined}
     style={
       Object {
         "MozAppearance": "none",
@@ -558,7 +525,6 @@ exports[`Switch renders the correct selected state 3`] = `
       }
     }
     type="checkbox"
-    value={undefined}
   />
 </div>
 `;

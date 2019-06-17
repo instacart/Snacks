@@ -19,7 +19,6 @@ exports[`renders ScrollTrack correctly 1`] = `
         aria-label="back"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -51,7 +50,6 @@ exports[`renders ScrollTrack correctly 1`] = `
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",
@@ -114,7 +112,6 @@ exports[`renders ScrollTrack correctly 1`] = `
         aria-label="next"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -146,7 +143,6 @@ exports[`renders ScrollTrack correctly 1`] = `
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",
@@ -203,7 +199,6 @@ exports[`renders ScrollTrack with animation props correctly 1`] = `
         aria-label="back"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -235,7 +230,6 @@ exports[`renders ScrollTrack with animation props correctly 1`] = `
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",
@@ -298,7 +292,6 @@ exports[`renders ScrollTrack with animation props correctly 1`] = `
         aria-label="next"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -330,7 +323,6 @@ exports[`renders ScrollTrack with animation props correctly 1`] = `
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",
@@ -402,7 +394,6 @@ exports[`renders custom ScrollTrack buttons correctly 1`] = `
         aria-label="back"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -476,7 +467,6 @@ exports[`renders custom ScrollTrack buttons correctly 1`] = `
         aria-label="next"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -508,7 +498,6 @@ exports[`renders custom ScrollTrack buttons correctly 1`] = `
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",

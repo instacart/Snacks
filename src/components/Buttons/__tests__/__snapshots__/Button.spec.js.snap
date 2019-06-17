@@ -41,7 +41,6 @@ exports[`Button applies the elementAttributes prop correctly 1`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     Hi
@@ -98,7 +97,6 @@ exports[`Button can render as a link if an href is provided 1`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     Hi
@@ -154,7 +152,6 @@ exports[`Button renders all sizes correctly 1`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     Primary Button
@@ -209,7 +206,6 @@ exports[`Button renders all sizes correctly 2`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     Primary Button
@@ -264,7 +260,6 @@ exports[`Button renders all sizes correctly 3`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     Primary Button
@@ -319,7 +314,6 @@ exports[`Button renders all sizes correctly 4`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     Primary Button
@@ -374,7 +368,6 @@ exports[`Button renders all snacks button variants correctly 1`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     Hi
@@ -429,7 +422,6 @@ exports[`Button renders all snacks button variants correctly 2`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     Hi
@@ -484,7 +476,6 @@ exports[`Button renders all snacks button variants correctly 3`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     Hi
@@ -539,7 +530,6 @@ exports[`Button renders all snacks button variants correctly 4`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     Hi
@@ -588,7 +578,6 @@ exports[`Button renders correctly when disabled 1`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     Hi
@@ -643,13 +632,11 @@ exports[`Button renders icons correctly 1`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     <i
       aria-hidden={true}
       data-radium={true}
-      onClick={undefined}
       style={
         Object {
           "fontFamily": "ic-icons",
@@ -728,7 +715,6 @@ exports[`Button renders icons correctly 2`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     Hi
@@ -743,7 +729,6 @@ exports[`Button renders icons correctly 2`] = `
     <i
       aria-hidden={true}
       data-radium={true}
-      onClick={undefined}
       style={
         Object {
           "fontFamily": "ic-icons",
@@ -813,13 +798,11 @@ exports[`Button renders icons correctly 3`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     <i
       aria-hidden={true}
       data-radium={true}
-      onClick={undefined}
       style={
         Object {
           "fontFamily": "ic-icons",
@@ -898,7 +881,6 @@ exports[`Button renders icons correctly 4`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     Hi
@@ -913,7 +895,6 @@ exports[`Button renders icons correctly 4`] = `
     <i
       aria-hidden={true}
       data-radium={true}
-      onClick={undefined}
       style={
         Object {
           "fontFamily": "ic-icons",
@@ -983,7 +964,6 @@ exports[`Button renders with inverted colors 1`] = `
         "whiteSpace": "nowrap",
       }
     }
-    tabIndex={undefined}
     type="button"
   >
     Hi

@@ -19,7 +19,6 @@ exports[`renders NavigationPills correctly 1`] = `
         aria-label="back"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -51,7 +50,6 @@ exports[`renders NavigationPills correctly 1`] = `
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",
@@ -331,7 +329,6 @@ exports[`renders NavigationPills correctly 1`] = `
         aria-label="next"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -363,7 +360,6 @@ exports[`renders NavigationPills correctly 1`] = `
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",
@@ -420,7 +416,6 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
         aria-label="back"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -452,7 +447,6 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",
@@ -722,7 +716,6 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
         aria-label="next"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -754,7 +747,6 @@ exports[`renders NavigationPills wihtout label correctly 1`] = `
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",
@@ -811,7 +803,6 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
         aria-label="back"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -843,7 +834,6 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",
@@ -1135,7 +1125,6 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
         aria-label="next"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -1167,7 +1156,6 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",
@@ -1224,7 +1212,6 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
         aria-label="back"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -1256,7 +1243,6 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",
@@ -1538,7 +1524,6 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
         aria-label="next"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -1570,7 +1555,6 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",
@@ -1627,7 +1611,6 @@ exports[`renders NavigationPills with inner elementAttributes correctly 1`] = `
         aria-label="back"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -1659,7 +1642,6 @@ exports[`renders NavigationPills with inner elementAttributes correctly 1`] = `
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",
@@ -1941,7 +1923,6 @@ exports[`renders NavigationPills with inner elementAttributes correctly 1`] = `
         aria-label="next"
         className="rmq-4534e6b"
         data-radium={true}
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -1973,7 +1954,6 @@ exports[`renders NavigationPills with inner elementAttributes correctly 1`] = `
         <i
           aria-hidden={true}
           data-radium={true}
-          onClick={undefined}
           style={
             Object {
               "fontFamily": "ic-icons",
