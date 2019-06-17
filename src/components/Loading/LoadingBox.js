@@ -1,7 +1,7 @@
 import Radium from 'radium'
-import { colors } from 'styles'
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
+import { colors } from '../../styles'
 
 const buildKeyFramesStyles = (startColor, endColor, name) => ({
   animationName: Radium.keyframes(

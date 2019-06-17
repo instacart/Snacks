@@ -114,6 +114,8 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/scripts/test/fileMock.js",
       "\\.(css|less)$": "<rootDir>/scripts/test/styleMock.js"
     },
-    "setupFilesAfterEnv": ["<rootDir>/scripts/test/testSetup.js"]
+    "setupFilesAfterEnv": [
+      "<rootDir>/scripts/test/testSetup.js"
+    ]
   }
 }

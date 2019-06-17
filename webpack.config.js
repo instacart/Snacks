@@ -37,12 +37,6 @@ module.exports = {
     }),
     anaylzerEnabled && new BundleAnalyzerPlugin(), // optionally anaylze if flag passed in
   ].filter(i => !!i), // filter out false items
-  resolve: {
-    alias: {
-      utils: path.resolve(__dirname, 'src/utils'),
-      styles: path.resolve(__dirname, 'src/styles'),
-    },
-  },
   externals: {
     react: 'react',
     'react-dom': 'react-dom',

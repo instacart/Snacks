@@ -46,12 +46,6 @@ module.exports = {
     filename: 'snacks.js',
     globalObject: "typeof self !== 'undefined' ? self : this",
   },
-  resolve: {
-    alias: {
-      utils: path.resolve(__dirname, 'src/utils'),
-      styles: path.resolve(__dirname, 'src/styles'),
-    },
-  },
   externals: {
     react: 'react',
     'react-dom': 'react-dom',
