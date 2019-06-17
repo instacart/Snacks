@@ -23,12 +23,6 @@ const styles = {
   },
 }
 
-const spanStyles = {
-  root: {
-    position: 'relative',
-  },
-}
-
 const RESOLVED_COLOR = {
   primary: {
     background: colors.GREEN_500,
@@ -113,10 +107,8 @@ class InnerToolTip extends PureComponent {
   render() {
     return (
       <Fade>
-        <div style={this.contentStyles}>
-          {this.renderArrow()}
-          <span style={spanStyles.root}>{this.props.children}</span>
-        </div>
+        {this.renderArrow()}
+        <div style={this.contentStyles}>{this.props.children}</div>
       </Fade>
     )
   }
