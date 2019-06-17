@@ -1,9 +1,0 @@
-import React from 'react'
-
-const SvgSaveForLaterFilled = props => (
-  <svg width={24} height={24} viewBox="0 0 24 24" {...props}>
-    <path d="M7 2h10a2 2 0 0 1 2 2v17.482a.5.5 0 0 1-.815.388l-5.87-4.755a.5.5 0 0 0-.63 0l-5.87 4.755A.5.5 0 0 1 5 21.482V4a2 2 0 0 1 2-2z" />
-  </svg>
-)
-
-export default SvgSaveForLaterFilled
