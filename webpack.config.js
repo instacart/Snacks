@@ -11,36 +11,43 @@ module.exports = {
       { test: /\.js$/, loaders: ['babel-loader'], exclude: /node_modules/ },
       {
         test: /\.svg/,
-        loader: 'svgr/webpack',
         exclude: /node_modules/,
-        options: { extract: true }
+        use: [
+          'babel-loader',
+          {
+            loader: '@svgr/webpack',
+            options: {
+              babel: false,
+            },
+          },
+        ],
       },
-    ]
+    ],
   },
   entry: './src/index.js',
   output: {
     library: 'Snacks',
     libraryTarget: 'umd',
     filename: 'snacks.js',
-    path: path.resolve(__dirname, 'tmp')
+    path: path.resolve(__dirname, 'tmp'),
   },
   plugins: [
     new webpack.DefinePlugin({
-      __DEV__: JSON.stringify(true)
+      __DEV__: JSON.stringify(true),
     }),
-    anaylzerEnabled && new BundleAnalyzerPlugin() // optionally anaylze if flag passed in
+    anaylzerEnabled && new BundleAnalyzerPlugin(), // optionally anaylze if flag passed in
   ].filter(i => !!i), // filter out false items
   resolve: {
     alias: {
       utils: path.resolve(__dirname, 'src/utils'),
       styles: path.resolve(__dirname, 'src/styles'),
-    }
+    },
   },
   externals: {
-    'react': 'react',
+    react: 'react',
     'react-dom': 'react-dom',
-    'radium': 'radium',
-    'prop-types': 'prop-types'
+    radium: 'radium',
+    'prop-types': 'prop-types',
   },
-  devtool: 'cheap-module-eval-source-map'
+  devtool: 'cheap-module-eval-source-map',
 }
