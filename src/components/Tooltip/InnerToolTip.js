@@ -44,9 +44,9 @@ const RESOLVED_COLOR = {
 const RESOLVED_SIZE = {
   small: {
     fontSize: '14px',
-    ...spacing.PADDDING_X_XS,
     paddingTop: '9px',
     paddingBottom: '9px',
+    ...spacing.PADDING_X_XS,
   },
   medium: {
     fontSize: '16px',
