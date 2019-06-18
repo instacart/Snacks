@@ -12,7 +12,7 @@ export interface FormProps {
   children?: React.ReactNode
 
   /** HTML form attributes */
-  formProps?: React.ComponentPropsWithoutRef<'form'>
+  formProps?: React.ComponentPropsWithRef<'form'>
 
   /** onSubmit callback will pass in model as parameter */
   onSubmit(model: { [key: string]: string }): void
