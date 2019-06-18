@@ -1,0 +1,33 @@
+# Logs
+*.log
+
+src
+scripts
+lib
+docs
+test
+.babelrc
+.codeclimate.yml
+.codecov.yml
+.eslintrc.js
+tsconfig.json
+prettier.config.js
+styleguide.config.js
+webpack.config.js
+webpack.release.config.js
+yarn.lock
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Dependency directories
+node_modules
+
+.DS_Store
+
+# IDE
+.idea
+.vscode
+
+# dev build folder
+tmp
