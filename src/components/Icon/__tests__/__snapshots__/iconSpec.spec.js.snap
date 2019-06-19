@@ -4,7 +4,6 @@ exports[`renders cart icon correctly 1`] = `
 <i
   aria-hidden={true}
   data-radium={true}
-  onClick={undefined}
   style={
     Object {
       "fontFamily": "ic-icons",
@@ -29,7 +28,6 @@ exports[`renders cart icon with hex code correctly 1`] = `
 <i
   aria-hidden={true}
   data-radium={true}
-  onClick={undefined}
   style={
     Object {
       "fontFamily": "ic-icons",
@@ -54,7 +52,6 @@ exports[`renders cart icon with styles 1`] = `
 <i
   aria-hidden={true}
   data-radium={true}
-  onClick={undefined}
   style={
     Object {
       "color": "#fff",

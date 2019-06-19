@@ -54,7 +54,6 @@ exports[`renders Form with TextField correctly 1`] = `
         <input
           aria-describedby=""
           aria-invalid={false}
-          aria-required={undefined}
           autoComplete="on"
           data-radium={true}
           defaultValue={null}
@@ -90,7 +89,6 @@ exports[`renders Form with TextField correctly 1`] = `
             }
           }
           type="email"
-          value={undefined}
         />
       </div>
       <div

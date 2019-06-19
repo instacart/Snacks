@@ -23,7 +23,6 @@ exports[`renders Select correctly 1`] = `
         <div
           data-radium={true}
           onKeyDown={[Function]}
-          style={undefined}
         >
           <div
             data-radium={true}
@@ -51,7 +50,6 @@ exports[`renders Select correctly 1`] = `
             >
               <div
                 aria-invalid={false}
-                aria-required={undefined}
                 data-radium={true}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -81,7 +79,6 @@ exports[`renders Select correctly 1`] = `
               >
                 <label
                   data-radium={true}
-                  htmlFor={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   style={
@@ -121,7 +118,6 @@ exports[`renders Select correctly 1`] = `
                 >
                   <div
                     data-radium={true}
-                    id={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     style={
@@ -161,7 +157,6 @@ exports[`renders Select correctly 1`] = `
                   <i
                     aria-hidden={true}
                     data-radium={true}
-                    onClick={undefined}
                     style={
                       Object {
                         "color": "#43B02A",
@@ -402,7 +397,6 @@ exports[`renders Select w/ server error correctly 1`] = `
         <div
           data-radium={true}
           onKeyDown={[Function]}
-          style={undefined}
         >
           <div
             data-radium={true}
@@ -430,7 +424,6 @@ exports[`renders Select w/ server error correctly 1`] = `
             >
               <div
                 aria-invalid={false}
-                aria-required={undefined}
                 data-radium={true}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -460,7 +453,6 @@ exports[`renders Select w/ server error correctly 1`] = `
               >
                 <label
                   data-radium={true}
-                  htmlFor={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   style={
@@ -500,7 +492,6 @@ exports[`renders Select w/ server error correctly 1`] = `
                 >
                   <div
                     data-radium={true}
-                    id={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     style={
@@ -540,7 +531,6 @@ exports[`renders Select w/ server error correctly 1`] = `
                   <i
                     aria-hidden={true}
                     data-radium={true}
-                    onClick={undefined}
                     style={
                       Object {
                         "color": "#757575",
@@ -783,7 +773,6 @@ exports[`renders disabled Select correctly 1`] = `
         <div
           data-radium={true}
           onKeyDown={[Function]}
-          style={undefined}
         >
           <div
             data-radium={true}
@@ -811,7 +800,6 @@ exports[`renders disabled Select correctly 1`] = `
             >
               <div
                 aria-invalid={false}
-                aria-required={undefined}
                 data-radium={true}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -841,7 +829,6 @@ exports[`renders disabled Select correctly 1`] = `
               >
                 <label
                   data-radium={true}
-                  htmlFor={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   style={
@@ -881,7 +868,6 @@ exports[`renders disabled Select correctly 1`] = `
                 >
                   <div
                     data-radium={true}
-                    id={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     style={
@@ -921,7 +907,6 @@ exports[`renders disabled Select correctly 1`] = `
                   <i
                     aria-hidden={true}
                     data-radium={true}
-                    onClick={undefined}
                     style={
                       Object {
                         "color": "#757575",
@@ -1162,7 +1147,6 @@ exports[`renders invalid Select correctly 1`] = `
         <div
           data-radium={true}
           onKeyDown={[Function]}
-          style={undefined}
         >
           <div
             data-radium={true}
@@ -1190,7 +1174,6 @@ exports[`renders invalid Select correctly 1`] = `
             >
               <div
                 aria-invalid={false}
-                aria-required={undefined}
                 data-radium={true}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -1220,7 +1203,6 @@ exports[`renders invalid Select correctly 1`] = `
               >
                 <label
                   data-radium={true}
-                  htmlFor={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   style={
@@ -1260,7 +1242,6 @@ exports[`renders invalid Select correctly 1`] = `
                 >
                   <div
                     data-radium={true}
-                    id={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     style={
@@ -1300,7 +1281,6 @@ exports[`renders invalid Select correctly 1`] = `
                   <i
                     aria-hidden={true}
                     data-radium={true}
-                    onClick={undefined}
                     style={
                       Object {
                         "color": "#757575",
@@ -1540,7 +1520,6 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
       <div
         data-radium={true}
         onKeyDown={[Function]}
-        style={undefined}
       >
         <div
           data-radium={true}
@@ -1568,7 +1547,6 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
           >
             <div
               aria-invalid={false}
-              aria-required={undefined}
               data-radium={true}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
@@ -1598,7 +1576,6 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
             >
               <label
                 data-radium={true}
-                htmlFor={undefined}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
                 style={
@@ -1638,7 +1615,6 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
               >
                 <div
                   data-radium={true}
-                  id={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   style={
@@ -1678,7 +1654,6 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                 <i
                   aria-hidden={true}
                   data-radium={true}
-                  onClick={undefined}
                   style={
                     Object {
                       "color": "green",

@@ -6,10 +6,8 @@ exports[`renders CircleButton with Icon correctly 1`] = `
 >
   <div>
     <button
-      aria-label={undefined}
       className="rmq-4534e6b"
       data-radium={true}
-      disabled={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -37,7 +35,6 @@ exports[`renders CircleButton with Icon correctly 1`] = `
       <i
         aria-hidden={true}
         data-radium={true}
-        onClick={undefined}
         style={
           Object {
             "fontFamily": "ic-icons",
@@ -77,7 +74,6 @@ exports[`renders CircleButton with passed ariaLabel correctly 1`] = `
       aria-label="this is a button test"
       className="rmq-4534e6b"
       data-radium={true}
-      disabled={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -121,7 +117,6 @@ exports[`renders CircleButton with passed disabled prop correctly 1`] = `
 >
   <div>
     <button
-      aria-label={undefined}
       className="rmq-4534e6b"
       data-radium={true}
       disabled={true}
@@ -168,10 +163,8 @@ exports[`renders CircleButton with passed style prop correctly 1`] = `
 >
   <div>
     <button
-      aria-label={undefined}
       className="rmq-4534e6b"
       data-radium={true}
-      disabled={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -218,10 +211,8 @@ exports[`renders basic CircleButton correctly 1`] = `
 >
   <div>
     <button
-      aria-label={undefined}
       className="rmq-4534e6b"
       data-radium={true}
-      disabled={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}

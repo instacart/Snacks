@@ -7,7 +7,6 @@ exports[`renders TextFieldHint correctly 1`] = `
   <div>
     <div
       data-radium={true}
-      id={undefined}
       style={
         Object {
           "color": "#BDBDBD",
@@ -44,7 +43,6 @@ exports[`renders TextFieldHint when disabled 1`] = `
   <div>
     <div
       data-radium={true}
-      id={undefined}
       style={
         Object {
           "color": "#BDBDBD",
@@ -81,7 +79,6 @@ exports[`renders TextFieldHint when show is false 1`] = `
   <div>
     <div
       data-radium={true}
-      id={undefined}
       style={
         Object {
           "color": "#BDBDBD",
