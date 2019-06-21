@@ -1,13 +1,20 @@
+function isBabelNode(caller) {
+  return !!(caller && caller.name === '@babel/node')
+}
+
 module.exports = api => {
   const env = api.env()
+  const isNode = api.caller(isBabelNode)
   const isTest = env === 'test'
+
+  const useESModules = !isTest && !isNode
 
   return {
     presets: [
       [
         '@babel/preset-env',
         {
-          modules: isTest ? 'commonjs' : false,
+          modules: useESModules ? false : 'commonjs',
           loose: true,
         },
       ],
@@ -22,7 +29,7 @@ module.exports = api => {
       ],
       ['@babel/plugin-proposal-class-properties', { loose: true }],
       ['@babel/plugin-proposal-object-rest-spread', { loose: true }],
-      ['@babel/transform-runtime', { useESModules: isTest ? false : true }],
+      ['@babel/transform-runtime', { useESModules }],
       '@babel/plugin-transform-react-constant-elements',
     ],
   }
