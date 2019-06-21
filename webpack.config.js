@@ -33,7 +33,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      __DEV__: JSON.stringify(true),
+      'process.env.NODE_ENV': JSON.stringify('development'),
     }),
     anaylzerEnabled && new BundleAnalyzerPlugin(), // optionally anaylze if flag passed in
   ].filter(i => !!i), // filter out false items
