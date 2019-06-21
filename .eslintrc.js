@@ -27,6 +27,11 @@ module.exports = {
     'react/forbid-prop-types': [WARN, { forbid: 'any' }],
     'react/jsx-filename-extension': OFF,
     'react/jsx-no-literals': OFF,
+
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['scripts/**/*.js', '**/*.spec.js'] },
+    ],
   },
   globals: {
     __DEV__: true,
@@ -38,4 +43,13 @@ module.exports = {
       },
     },
   },
+  overrides: [
+    {
+      files: ['*.d.ts'],
+      rules: {
+        'react/prefer-stateless-function': OFF,
+        'import/named': OFF,
+      },
+    },
+  ],
 }

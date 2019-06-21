@@ -1,0 +1,10 @@
+{
+  "extends": "@instacart/tsconfig/babel",
+  "compilerOptions": {
+    "noEmit": true,
+    "allowSyntheticDefaultImports": false,
+  },
+  "exclude": [
+    "dist"
+  ]
+}

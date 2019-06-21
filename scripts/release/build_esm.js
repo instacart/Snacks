@@ -1,6 +1,6 @@
 const path = require('path')
 const fs = require('fs')
-const execSync = require('child_process').execSync
+const { execSync } = require('child_process')
 
 const exec = command => execSync(command, { stdio: 'inherit' })
 
@@ -22,9 +22,17 @@ console.log('Building ESM build...')
 
 exec('yarn babel --out-dir dist/esm --ignore=**/__tests__/**,**/docs/** src')
 
+console.log('Building icon components with svgr')
+
 // do these separately so we don't catch the svg font, it has no ignore option
 exec('yarn svgr --filename-case=camel --ext="svg.js" -d tmp/svgr/assets src/assets')
 exec('yarn svgr --filename-case=camel --ext="svg.js" -d tmp/svgr/components src/components')
 
+console.log('Babelifying icon components')
+
 // now babel the icons
 exec('yarn babel --out-dir dist/esm tmp/svgr')
+
+console.log('Copying types...')
+
+exec('babel-node scripts/release/copy-types.js')
