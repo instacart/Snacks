@@ -62,7 +62,7 @@ const runTests = () => execSync('npm test')
 const buildProject = () => execSync('npm run build')
 const verifyBuild = () => execSync('npm run release:verifyBuild')
 const buildStyleGuide = () => execSync('npm run styleguide:build')
-const commitChanges = newVersion => execSync(`git add -A dist && git add -A docs && git commit -m 'creating new dist for ${newVersion} release'`)
+const commitChanges = newVersion => execSync(`git add -A docs && git commit -m 'creating new dist for ${newVersion} release'`)
 const updatePackageVersion = versionType => execSync(`npm version ${versionType}`)
 const pushChanges = version => execSync(`git push origin ${version}`)
 
