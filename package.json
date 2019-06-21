@@ -7,7 +7,7 @@
   "types": "dist/esm/index.d.ts",
   "scripts": {
     "analyze-webpack-bundles": "analyze=true npm run start",
-    "build": "yarn build:umd && yarn build:esm",
+    "build": "yarn build:umd && yarn build:esm && cp -R src/fonts dist/fonts",
     "build:umd": "webpack --progress --config webpack.release.config.js",
     "build:esm": "babel-node scripts/release/build_esm.js",
     "release:build": "babel-node scripts/release/build_release.js",
