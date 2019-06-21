@@ -1,6 +1,6 @@
-import path from 'path'
-import fse from 'fs-extra'
-import glob from 'glob'
+const path = require('path')
+const fse = require('fs-extra')
+const glob = require('glob')
 
 function copyTypes() {
   const from = path.resolve(__dirname, '../../src')
