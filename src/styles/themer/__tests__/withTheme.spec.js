@@ -3,37 +3,43 @@ import renderer from 'react-test-renderer'
 import withTheme from '../withTheme'
 import { defaultTheme, themePropTypes } from '../utils'
 
-const TestComponent = withTheme(
-  class extends React.Component {
-    // eslint-disable-line react/prefer-stateless-function
-    render() {
-      return (
-        <div
-          style={{
-            backgroundColor: this.props.snacksTheme.colors.primaryBackground,
-          }}
-        >
-          Hello
-        </div>
-      )
-    }
-  }
-)
+// eslint-disable-next-line react/prefer-stateless-function
+class Test extends React.Component {
+  static propTypes = { snacksTheme: themePropTypes }
 
-TestComponent.propTypes = { snacksTheme: themePropTypes }
+  render() {
+    return (
+      <div
+        style={{
+          backgroundColor: this.props.snacksTheme.colors.primaryBackground,
+        }}
+      >
+        Hello
+      </div>
+    )
+  }
+}
 
 it('renders without error with default theme', () => {
+  const TestComponent = withTheme(Test)
   const tree = renderer.create(<TestComponent />).toJSON()
   expect(tree).toMatchSnapshot()
 })
 
 describe('while in production mode', () => {
-  beforeAll(() => {
-    global.__DEV__ = false
+  let TestComponent
+  let backupEnv
+
+  beforeEach(() => {
+    backupEnv = { ...process.env }
+
+    jest.resetModules()
+    process.env.NODE_ENV = 'production'
+    TestComponent = require('../withTheme').default(Test)
   })
 
-  afterAll(() => {
-    global.__DEV__ = true
+  afterEach(() => {
+    process.env = backupEnv
   })
 
   it('can be overridden', () => {
@@ -60,9 +66,8 @@ describe('while in production mode', () => {
   })
 })
 
-describe('while in development mode', () => {
+describe('while not in production mode', () => {
   beforeEach(() => {
-    global.__DEV__ = true
     // we can stop swallowing these when this is finished
     // https://github.com/facebook/react/issues/11098
     jest.spyOn(console, 'error')
@@ -72,7 +77,9 @@ describe('while in development mode', () => {
   afterEach(() => {
     global.console.error.mockRestore()
   })
+
   it('throws an error on invalid snacksTheme', () => {
+    const TestComponent = withTheme(Test)
     const createTree = () => renderer.create(<TestComponent snacksTheme={1} />).toJSON()
     expect(() => createTree()).toThrow()
   })

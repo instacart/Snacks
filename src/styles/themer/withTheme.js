@@ -37,7 +37,7 @@ function withTheme(InnerComponent) {
     }
 
     validateSnacksTheme() {
-      if (__DEV__) {
+      if (process.env.NODE_ENV !== 'production') {
         // eslint-disable-line no-undef
         const { snacksTheme } = this.props
         const themeIsBad = snacksTheme && !Object.keys(cleanConfig(snacksTheme)).length
