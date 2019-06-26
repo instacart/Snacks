@@ -1,57 +1,60 @@
-const path = require('path');
+const path = require('path')
 
-const webpackConfig = require('./webpack.config');
-webpackConfig.resolve = webpackConfig.resolve || {};
-webpackConfig.resolve.alias = webpackConfig.resolve.alias || {};
-webpackConfig.resolve.alias['ic-snacks'] = path.join(__dirname, 'dist', 'snacks.js');
+const webpackConfig =
+  process.env.NODE_ENV === 'production'
+    ? require('./webpack.release.config')
+    : require('./webpack.config')
+webpackConfig.resolve = webpackConfig.resolve || {}
+webpackConfig.resolve.alias = webpackConfig.resolve.alias || {}
+webpackConfig.resolve.alias['ic-snacks'] = path.join(__dirname, 'dist', 'snacks.js')
 
 module.exports = {
   getExampleFilename(componentPath) {
-    var parts = componentPath.split('/');
-    var componentName = parts[parts.length - 1];
-    return componentPath.replace(`/${componentName}`, `/docs/${componentName.replace('.js', '')}.md`);
+    var parts = componentPath.split('/')
+    var componentName = parts[parts.length - 1]
+    return componentPath.replace(
+      `/${componentName}`,
+      `/docs/${componentName.replace('.js', '')}.md`
+    )
   },
-  ignore: [
-    '**/*/*Styles.js',
-    '**/*.spec.js',
-  ],
+  ignore: ['**/*/*Styles.js', '**/*.spec.js'],
   sections: [
     {
       name: 'Introduction',
-      content: 'docs/introduction.md'
+      content: 'docs/introduction.md',
     },
     {
       name: 'Installation',
-      content: 'docs/installation.md'
+      content: 'docs/installation.md',
     },
     {
       name: 'Basic usage',
-      content: 'docs/basic_usage.md'
+      content: 'docs/basic_usage.md',
     },
     {
       name: 'Utilities',
       sections: [
         {
           name: 'Colors',
-          content: 'docs/colors.md'
+          content: 'docs/colors.md',
         },
         {
           name: 'Spacing',
-          content: 'docs/spacing.md'
+          content: 'docs/spacing.md',
         },
         {
           name: 'Responsive',
-          content: 'src/styles/docs/responsive.md'
+          content: 'src/styles/docs/responsive.md',
         },
-      ]
+      ],
     },
     {
       name: 'Icons',
-      content: 'docs/icons.md'
+      content: 'docs/icons.md',
     },
     {
       name: 'SVGIcons',
-      content: 'docs/svgIcons.md'
+      content: 'docs/svgIcons.md',
     },
     {
       name: 'Themes',
@@ -59,13 +62,13 @@ module.exports = {
       sections: [
         {
           name: 'Themer',
-          content: 'src/styles/themer/docs/themer.md'
+          content: 'src/styles/themer/docs/themer.md',
         },
         {
           name: 'withTheme HOC',
-          content: 'src/styles/themer/docs/withTheme.md'
-        }
-      ]
+          content: 'src/styles/themer/docs/withTheme.md',
+        },
+      ],
     },
     {
       name: 'Components',
@@ -73,83 +76,82 @@ module.exports = {
       sections: [
         {
           name: 'Buttons',
-          components: 'src/components/Buttons/[A-Z]*.js'
+          components: 'src/components/Buttons/[A-Z]*.js',
         },
         {
           name: 'Forms',
           content: 'docs/forms.md',
-          components: 'src/components/Forms/[A-Z]*.js'
+          components: 'src/components/Forms/[A-Z]*.js',
         },
         {
           name: 'Typography',
-          components: 'src/components/Typography/[A-Z]*.js'
+          components: 'src/components/Typography/[A-Z]*.js',
         },
         {
           name: 'Grid',
-          components: 'src/components/Grid/[A-Z]*.js'
+          components: 'src/components/Grid/[A-Z]*.js',
         },
         {
           name: 'Icon',
-          components: 'src/components/Icon/Icon.js'
+          components: 'src/components/Icon/Icon.js',
         },
         {
           name: 'SVGIcon',
-          components: 'src/components/SVGIcon/SVGIcon.js'
+          components: 'src/components/SVGIcon/SVGIcon.js',
         },
         {
           name: 'Link',
-          components: 'src/components/Link/Link.js'
+          components: 'src/components/Link/Link.js',
         },
         {
           name: 'Loading',
-          components: 'src/components/Loading/[A-Z]*.js'
+          components: 'src/components/Loading/[A-Z]*.js',
         },
         {
           name: 'Menus',
-          components: 'src/components/Menus/[A-Z]*.js'
+          components: 'src/components/Menus/[A-Z]*.js',
         },
         {
           name: 'NavigationPills',
-          components: 'src/components/NavigationPills/[A-Z]*.js'
+          components: 'src/components/NavigationPills/[A-Z]*.js',
         },
         {
           name: 'Pill',
-          components: 'src/components/Pill/Pill.js'
+          components: 'src/components/Pill/Pill.js',
         },
         {
           name: 'ScrollTrack',
-          components: 'src/components/ScrollTrack/[A-Z]*.js'
+          components: 'src/components/ScrollTrack/[A-Z]*.js',
         },
         {
           name: 'Tooltip',
-          components: 'src/components/Tooltip/Tooltip.js'
+          components: 'src/components/Tooltip/Tooltip.js',
         },
         {
           name: 'Transitions',
-          components: 'src/components/Transitions/[A-Z]*.js'
-        }
-      ]
-
-    }
+          components: 'src/components/Transitions/[A-Z]*.js',
+        },
+      ],
+    },
   ],
   showCode: true,
   showUsage: true,
   styles: {
     StyleGuide: {
       content: {
-        maxWidth: '1600px'
-      }
+        maxWidth: '1600px',
+      },
     },
     ReactComponent: {
       root: {
         marginBottom: '48px',
         backgroundColor: '#fff',
-        padding: '16px'
-      }
-    }
+        padding: '16px',
+      },
+    },
   },
   styleguideComponents: {
-    Wrapper: path.join(__dirname, 'lib/styleguide/Wrapper')
+    Wrapper: path.join(__dirname, 'lib/styleguide/Wrapper'),
   },
   styleguideDir: path.join(__dirname, 'docs'),
   theme: {
@@ -169,14 +171,9 @@ module.exports = {
       sidebarBackground: '#fff',
     },
     fontFamily: {
-      base: [
-        'Open Sans',
-        'Helvetica Neue',
-        'Helvetica',
-        'sans-serif'
-      ]
-    }
+      base: ['Open Sans', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
+    },
   },
   title: 'Snacks',
-  webpackConfig: webpackConfig
+  webpackConfig: webpackConfig,
 }
