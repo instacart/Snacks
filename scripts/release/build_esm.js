@@ -1,22 +1,6 @@
-import path from 'path'
-import fs from 'fs'
 import { execSync } from 'child_process'
 
 const exec = command => execSync(command, { stdio: 'inherit' })
-
-const svgrTempDir = path.resolve(process.cwd(), 'tmp/svgr')
-const svgrAssetsDir = path.resolve(svgrTempDir, 'assets')
-const svgrComponentsDir = path.resolve(svgrTempDir, 'components')
-
-function ensureDir(dir) {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir)
-  }
-}
-
-// svg will complain if the --out-dir does not exist
-ensureDir(svgrAssetsDir)
-ensureDir(svgrComponentsDir)
 
 console.log('Building ESM build...')
 
@@ -24,9 +8,16 @@ exec('yarn babel --out-dir dist/esm --ignore=**/__tests__/**,**/docs/** src')
 
 console.log('Building icon components with svgr')
 
-// do these separately so we don't catch the svg font, it has no ignore option
-exec('yarn svgr --filename-case=camel --ext="svg.js" -d tmp/svgr/assets src/assets')
-exec('yarn svgr --filename-case=camel --ext="svg.js" -d tmp/svgr/components src/components')
+function buildIconComponents(args = []) {
+  const finalArgs = [...args, '--filename-case=camel', '--no-prettier']
+  exec(`yarn svgr ${finalArgs.join(' ')} -d tmp/svgr/assets src/assets`)
+  exec(`yarn svgr ${finalArgs.join(' ')} -d tmp/svgr/components src/components`)
+}
+
+// build the JS files
+buildIconComponents(['--ext="svg.js"'])
+// build the d.ts files
+buildIconComponents(['--ext="svg.d.ts"', '--template scripts/svgDtsTemplate.js'])
 
 console.log('Babelifying icon components')
 

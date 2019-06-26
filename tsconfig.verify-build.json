@@ -2,10 +2,12 @@
   "extends": "@instacart/tsconfig/babel",
   "compilerOptions": {
     "noEmit": true,
-    "allowSyntheticDefaultImports": false,
+    "allowSyntheticDefaultImports": false
   },
+  "include": [
+    "./dist/esm/**/*"
+  ],
   "exclude": [
-    "dist",
     "node_modules"
   ]
 }
