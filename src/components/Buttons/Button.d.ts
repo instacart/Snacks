@@ -2,6 +2,7 @@ import * as React from 'react'
 import { RadiumStyles, ElementAttributes } from '../..'
 import { WithThemeInjectedProps, ApplyWithTheme } from '../../styles/themer/withTheme'
 
+
 export interface ButtonProps
   extends WithThemeInjectedProps,
     Pick<
@@ -39,6 +40,13 @@ export interface ButtonProps
    * tag with the supplied href value.
    */
   href?: string
+
+  /**
+    * If passed, users will have the ability to render a custom element
+    * or React Component in the DOM while leveraging the styling of a
+    * Snacks Button (e.g., using react-router's Link)
+    */
+  elementType?: keyof JSX.IntrinsicElements | Function
 }
 
 declare const Button: ApplyWithTheme<React.ComponentClass<ButtonProps>>

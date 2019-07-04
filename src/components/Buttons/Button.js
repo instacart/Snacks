@@ -207,7 +207,7 @@ const getSnacksStyles = props => {
 const Button = props => {
   const snacksStyles = getSnacksStyles(props)
 
-  const ElementType = props.customElement ? props.customElement : props.href ? 'a' : 'button'
+  const ElementType = props.elementType ? props.elementType : props.href ? 'a' : 'button'
 
   const finalProps = {
     disabled: props.disabled,
@@ -238,13 +238,9 @@ const Button = props => {
       props.onMouseDown(e, props)
     },
     ...props.elementAttributes,
-    ...props.customElementProps,
   }
   if (props.href) {
     finalProps.href = props.href
-  }
-  if (props.customElement) {
-    finalProps.role = 'button'
   }
 
   const icon = typeof props.icon === 'string' ? <Icon name={props.icon} /> : props.icon
@@ -329,9 +325,7 @@ Button.propTypes = {
     or React Component in the DOM while leveraging the styling of a
     Snacks Button (e.g., using react-router's Link)
   */
-  customElement: PropTypes.node,
-
-  customElementProps: PropTypes.object,
+  elementType: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
 }
 
 Button.defaultProps = {

@@ -233,23 +233,3 @@ import { Button, Icon } from 'ic-snacks'
     </span>
   </div>
 ```
-
-### Custom Element
-Buttons can render a custom base HTML Element or React Component, while leveraging the full styling of a Snacks Button.
-
-```jsx
-import { Button, Icon, Link } from 'ic-snacks';
-
-  <div style={{padding: '24px'}}>
-    <span style={{marginRight: '24px'}}>
-      <Button snacksStyle="primary" size="small" customElement='span'>
-        Using a Custom HTML Element
-      </Button>
-    </span>
-    <span style={{marginRight: '24px'}}>
-      <Button snacksStyle="primary" size="small" customElement={Link} customElementProps={{ href: '/foo' }}>
-        Using a Custom Component
-      </Button>
-    </span>
-  </div>
-```
