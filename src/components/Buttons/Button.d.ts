@@ -2,7 +2,6 @@ import * as React from 'react'
 import { RadiumStyles, ElementAttributes } from '../..'
 import { WithThemeInjectedProps, ApplyWithTheme } from '../../styles/themer/withTheme'
 
-
 export interface ButtonProps
   extends WithThemeInjectedProps,
     Pick<
