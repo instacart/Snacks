@@ -6,6 +6,8 @@ import { spy } from 'sinon'
 import Icon from '../../Icon/Icon'
 import Button from '../Button'
 
+const Foo = props => <div {...props} />
+
 describe('Button', () => {
   it('renders all sizes correctly', () => {
     const testCases = [
@@ -143,6 +145,28 @@ describe('Button', () => {
       <StyleRoot>
         <Button href="/carrot" snacksType="primary">
           Hi
+        </Button>
+      </StyleRoot>
+    )
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('can render a different parent element if HTML element is passed', () => {
+    const tree = renderer.create(
+      <StyleRoot>
+        <Button snacksType="primary" elementType="span">
+          Renders span as parent
+        </Button>
+      </StyleRoot>
+    )
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('can render a different parent element if React component is passed', () => {
+    const tree = renderer.create(
+      <StyleRoot>
+        <Button snacksType="primary" elementType={Foo}>
+          Renders Foo as parent
         </Button>
       </StyleRoot>
     )

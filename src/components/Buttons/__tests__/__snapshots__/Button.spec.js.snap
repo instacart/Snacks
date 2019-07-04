@@ -55,6 +55,125 @@ exports[`Button applies the elementAttributes prop correctly 1`] = `
 </div>
 `;
 
+exports[`Button can render a different parent element if HTML element is passed 1`] = `
+<div
+  data-radium={true}
+>
+  <span
+    data-radium={true}
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "MozOsxFontSmoothing": "grayscale",
+        "WebkitFontSmoothing": "antialiased",
+        "alignItems": "center",
+        "backgroundColor": "#43B02A",
+        "backgroundImage": "none",
+        "border": "1px solid transparent",
+        "borderBottomLeftRadius": 4,
+        "borderBottomRightRadius": 4,
+        "borderTopLeftRadius": 4,
+        "borderTopRightRadius": 4,
+        "color": "#FFFFFF",
+        "cursor": "pointer",
+        "display": "inline-flex",
+        "fontSize": "16px",
+        "fontWeight": 600,
+        "height": "40px",
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "touchAction": "manipulation",
+        "userSelect": "none",
+        "whiteSpace": "nowrap",
+      }
+    }
+    type="button"
+  >
+    Renders span as parent
+  </span>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Button can render a different parent element if React component is passed 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    disabled={false}
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    style={
+      Array [
+        Object {
+          "MozOsxFontSmoothing": "grayscale",
+          "WebkitFontSmoothing": "antialiased",
+          "alignItems": "center",
+          "backgroundImage": "none",
+          "border": "1px solid transparent",
+          "borderBottomLeftRadius": 4,
+          "borderBottomRightRadius": 4,
+          "borderTopLeftRadius": 4,
+          "borderTopRightRadius": 4,
+          "cursor": "pointer",
+          "display": "inline-flex",
+          "fontWeight": 600,
+          "touchAction": "manipulation",
+          "userSelect": "none",
+          "whiteSpace": "nowrap",
+        },
+        Object {
+          "fontSize": "16px",
+          "height": "40px",
+          "paddingLeft": 16,
+          "paddingRight": 16,
+        },
+        Object {
+          ":active": Object {
+            "backgroundColor": "#146e04",
+          },
+          ":focus": Object {
+            "backgroundColor": "#146e04",
+          },
+          ":hover": Object {
+            "backgroundColor": "#177D05",
+          },
+          "backgroundColor": "#43B02A",
+          "color": "#FFFFFF",
+        },
+        false,
+        false,
+        undefined,
+      ]
+    }
+    type="button"
+  >
+    Renders Foo as parent
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`Button can render as a link if an href is provided 1`] = `
 <div
   data-radium={true}
