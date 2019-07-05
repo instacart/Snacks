@@ -61,7 +61,6 @@ exports[`Button can render a different parent element if HTML element is passed 
 >
   <span
     data-radium={true}
-    disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
@@ -95,7 +94,6 @@ exports[`Button can render a different parent element if HTML element is passed 
         "whiteSpace": "nowrap",
       }
     }
-    type="button"
   >
     Renders span as parent
   </span>
@@ -114,7 +112,6 @@ exports[`Button can render a different parent element if React component is pass
   data-radium={true}
 >
   <div
-    disabled={false}
     onClick={[Function]}
     onMouseDown={[Function]}
     style={
@@ -160,7 +157,6 @@ exports[`Button can render a different parent element if React component is pass
         undefined,
       ]
     }
-    type="button"
   >
     Renders Foo as parent
   </div>
@@ -180,7 +176,6 @@ exports[`Button can render as a link if an href is provided 1`] = `
 >
   <a
     data-radium={true}
-    disabled={false}
     href="/carrot"
     onBlur={[Function]}
     onClick={[Function]}
@@ -216,7 +211,6 @@ exports[`Button can render as a link if an href is provided 1`] = `
         "whiteSpace": "nowrap",
       }
     }
-    type="button"
   >
     Hi
   </a>
