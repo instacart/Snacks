@@ -210,9 +210,7 @@ const Button = props => {
   const ElementType = props.elementType ? props.elementType : props.href ? 'a' : 'button'
 
   const finalProps = {
-    disabled: props.disabled,
     tabIndex: props.tabIndex,
-    type: props.type,
     style: [
       baseStyles,
       sizeStyles[props.size],
@@ -238,6 +236,10 @@ const Button = props => {
       props.onMouseDown(e, props)
     },
     ...props.elementAttributes,
+  }
+  if (ElementType === 'button') {
+    finalProps.disabled = props.disabled
+    finalProps.type = props.type
   }
   if (props.href) {
     finalProps.href = props.href
