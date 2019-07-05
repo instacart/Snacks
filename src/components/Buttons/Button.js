@@ -322,11 +322,7 @@ Button.propTypes = {
   /** Snacks theme attributes provided by `Themer` */
   snacksTheme: themePropTypes,
 
-  /**
-    If passed, users will have the ability to render a custom element
-    or React Component in the DOM while leveraging the styling of a
-    Snacks Button (e.g., using react-router's Link)
-  */
+  /** A custom element to render instead of a button. */
   elementType: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
 }
 
