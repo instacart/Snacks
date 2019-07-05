@@ -45,7 +45,7 @@ export interface ButtonProps
     * or React Component in the DOM while leveraging the styling of a
     * Snacks Button (e.g., using react-router's Link)
     */
-  elementType?: keyof JSX.IntrinsicElements | React.ElementType
+  elementType?: React.ElementType
 }
 
 declare const Button: ApplyWithTheme<React.ComponentClass<ButtonProps>>
