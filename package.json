@@ -78,7 +78,7 @@
     "react-styleguidist": "9.0.9",
     "react-test-renderer": "^16.2.0",
     "react-transition-group": "^2.2.1",
-    "sinon": "^2.3.8",
+    "sinon": "^7.3.2",
     "typescript": "^3.2.2",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "url-parse": "1.4.3",
