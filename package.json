@@ -43,7 +43,7 @@
   },
   "homepage": "https://github.com/instacart/Snacks#readme",
   "devDependencies": {
-    "@babel/cli": "7.4.4",
+    "@babel/cli": "^7.5.0",
     "@babel/core": "^7.0.0",
     "@babel/node": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
