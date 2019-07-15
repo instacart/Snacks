@@ -275,7 +275,13 @@ Button.propTypes = {
   /** Snacks button variants. */
   snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'flat', 'coupon']),
 
-  /** Optional style overrides. */
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.object,
 
   className: PropTypes.string,
