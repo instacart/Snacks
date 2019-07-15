@@ -39,7 +39,7 @@ import MenuDivider from './components/Menus/MenuDivider'
 import DropdownMenu from './components/Menus/DropdownMenu'
 import zIndex from './styles/zIndex'
 import themer from './styles/themer/index'
-import withTheme from './styles/themer/withTheme'
+import withTheme, { WithThemeInjectedProps } from './styles/themer/withTheme'
 import Slide from './components/Transitions/Slide'
 import Grow from './components/Transitions/Grow'
 import Fade from './components/Transitions/Fade'
@@ -76,6 +76,7 @@ export {
   // theming
   themer,
   withTheme,
+  WithThemeInjectedProps,
   themePropTypes,
   // grid system
   responsive,
