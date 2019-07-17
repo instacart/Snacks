@@ -3,16 +3,16 @@ import { RadiumStyles } from '../..'
 
 export interface LoadingBoxProps {
   /** Use for rendering dark backgrounds. */
-  background: 'light' | 'dark'
+  background?: 'light' | 'dark'
 
   /** Use for rendering light backgrounds, overrides dark */
-  shape: 'circle' | 'square' | 'line'
+  shape?: 'circle' | 'square' | 'line'
 
   /**
    *  By default, `size` will determine the components width.
    *  If the `shape` is prop `circle` or `square`, `size` will apply to height and width.
    */
-  size: string | number
+  size?: string | number
 
   style?: RadiumStyles
 }

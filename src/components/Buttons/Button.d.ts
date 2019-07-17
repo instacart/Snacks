@@ -2,12 +2,7 @@ import * as React from 'react'
 import { RadiumStyles, ElementAttributes } from '../..'
 import { WithThemeInjectedProps, ApplyWithTheme } from '../../styles/themer/withTheme'
 
-export interface ButtonProps
-  extends WithThemeInjectedProps,
-    Pick<
-      React.ComponentPropsWithoutRef<'button'>,
-      'onClick' | 'onMouseDown' | 'type' | 'tabIndex'
-    > {
+export interface ButtonProps extends WithThemeInjectedProps {
   children?: React.ReactNode
 
   /** Whether or not the button is disabled. */
@@ -21,9 +16,6 @@ export interface ButtonProps
 
   /** Optional style overrides. */
   style?: RadiumStyles
-
-  /** Any additonal props to add to the element (e.g. data attributes). */
-  elementAttributes?: ElementAttributes<React.ComponentPropsWithoutRef<'button'>>
 
   /** An optional icon. Can be a an icon name or a Snacks `Icon` component. */
   icon?: string | React.ReactElement<any> // eslint-disable-line @typescript-eslint/no-explicit-any
@@ -41,6 +33,19 @@ export interface ButtonProps
   href?: string
 }
 
-declare const Button: ApplyWithTheme<React.ComponentClass<ButtonProps>>
+type ButtonElementProps<C extends React.ElementType> = Pick<
+  React.ComponentPropsWithRef<C>,
+  'onClick' | 'onMouseDown' | 'type' | 'tabIndex'
+> & {
+  elementAttributes?: ElementAttributes<React.ComponentPropsWithoutRef<C>>
+}
+
+type ButtonBase<C extends React.ElementType, P = {}> = ApplyWithTheme<
+  (props: P & ButtonProps & ButtonElementProps<C>) => JSX.Element
+>
+
+type Button = ButtonBase<'a', { href: string }> & ButtonBase<'button'>
+
+declare const Button: Button
 
 export default Button
