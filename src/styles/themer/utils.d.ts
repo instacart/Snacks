@@ -32,9 +32,7 @@ export declare function cleanConfig<T extends Theme>(themeConfig: T): Theme
 
 export declare function validConfigValue(section: string, sectionKey: string): boolean
 
-type DeepPartial<T> = { [P in keyof T]?: DeepPartial<T[P]> }
-
-export interface ThemePropTypes extends DeepPartial<Theme> {}
+export type ThemePropTypes = Theme
 
 export declare const themePropTypes: PropTypes.Requireable<
   PropTypes.InferProps<{
