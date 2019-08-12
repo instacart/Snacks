@@ -1,7 +1,7 @@
 import * as React from 'react'
+import { Interpolation } from '@emotion/core'
 import { FormComponentInjectedProps, ApplyFormComponent } from './FormComponent'
 import { WithThemeInjectedProps, ApplyWithTheme } from '../../styles/themer/withTheme'
-import { RadiumStyles } from '../..'
 
 export type Option<TValue = string | number | boolean> = {
   label: string
@@ -11,6 +11,8 @@ export type Option<TValue = string | number | boolean> = {
 export interface SelectProps extends FormComponentInjectedProps, WithThemeInjectedProps {
   /** Name of the field */
   name: string
+
+  className?: string
 
   /** Children are passed to Menu and should be MenuItems or MenuDivider */
   children?: React.ReactNode
@@ -66,8 +68,14 @@ export interface SelectProps extends FormComponentInjectedProps, WithThemeInject
   /** Error from server to show ServerError message */
   serverError: string | null
 
-  /** Wrapper styles, mainly used for custom width */
-  style: RadiumStyles
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  style?: Interpolation
 
   /** Text to show for validation error  */
   validationErrorText?: string

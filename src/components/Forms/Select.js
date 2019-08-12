@@ -127,6 +127,7 @@ class Select extends React.PureComponent {
   static propTypes = {
     /** Name of the field */
     name: PropTypes.string.isRequired,
+    className: PropTypes.string,
     /** Children are passed to Menu and should be MenuItems or MenuDivider */
     children: PropTypes.node,
     /** DefaultOption */
@@ -169,7 +170,13 @@ class Select extends React.PureComponent {
     }),
     /** Error from server to show ServerError message */
     serverError: PropTypes.string,
-    /** Wrapper styles, mainly used for custom width */
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.object,
     /** Text to show for validation error  */
     validationErrorText: PropTypes.string,
@@ -240,7 +247,15 @@ class Select extends React.PureComponent {
   }
 
   renderTrigger() {
-    const { disabled, required, hasError, hintText, floatingLabelText, snacksTheme } = this.props
+    const {
+      className,
+      disabled,
+      required,
+      hasError,
+      hintText,
+      floatingLabelText,
+      snacksTheme,
+    } = this.props
 
     const snacksStyles = getSnackStyles(snacksTheme)
 
@@ -257,6 +272,7 @@ class Select extends React.PureComponent {
         ref={node => (this.trigger = node)}
       >
         <div
+          className={className}
           css={[
             styles.trigger,
             disabled && styles.triggerDisabled,

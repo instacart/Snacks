@@ -76,7 +76,13 @@ CircleButton.propTypes = {
   onClick: PropTypes.func,
   /** snacks theme attributes */
   snacksTheme: themePropTypes,
-  /** Optional style overrides */
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 }
 

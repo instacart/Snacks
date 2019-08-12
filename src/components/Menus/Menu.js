@@ -18,6 +18,8 @@ const styles = {
 
 class Menu extends React.Component {
   static propTypes = {
+    className: PropTypes.string,
+
     /** aria-hidden HTML attribute */
     ariaHidden: PropTypes.bool,
     /** MenuItems or Divider */
@@ -30,7 +32,14 @@ class Menu extends React.Component {
     onBlur: PropTypes.func,
     /** Role HTML attribute */
     role: PropTypes.string,
-    /** Customize style of menu parent */
+
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.shape({}),
   }
 
@@ -170,7 +179,7 @@ class Menu extends React.Component {
   }
 
   render() {
-    const { ariaHidden, style, role } = this.props
+    const { className, ariaHidden, style, role } = this.props
 
     const mergedStyles = {
       ...styles,
@@ -181,6 +190,7 @@ class Menu extends React.Component {
       <div
         ref={node => (this.menu = node)}
         role={role}
+        className={className}
         css={mergedStyles}
         onKeyDown={this.handleKeyDown}
         onBlur={this.handleBlur}

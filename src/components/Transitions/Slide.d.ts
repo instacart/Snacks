@@ -6,6 +6,18 @@ export interface SlideProps extends Partial<Pick<TransitionProps, 'in' | 'appear
 
   children: React.ReactNode
 
+  className?: string
+
+  /** Optional style overrides for div that is offset and contains children. */
+  containerClassName?: string
+
+  /**
+   * Optional style overrides for div that is offset and contains children
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   containerStyle?: React.CSSProperties
 
   /** Inverts offset direction, e.g. changes animation direction from right to left */
@@ -23,6 +35,13 @@ export interface SlideProps extends Partial<Pick<TransitionProps, 'in' | 'appear
   /** Name of the transition-timing-function CSS property. */
   timingFunction?: 'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'
 
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style?: React.CSSProperties
 }
 

@@ -1,8 +1,10 @@
 import * as React from 'react'
+import { Interpolation } from '@emotion/core'
 import { WithThemeInjectedProps, ApplyWithTheme } from '../../styles/themer/withTheme'
-import { RadiumStyles } from '../..'
 
 export interface FloatingLabelProps extends WithThemeInjectedProps {
+  children?: React.ReactNode
+
   /** Disabled styling for the label */
   disabled?: boolean
 
@@ -18,8 +20,14 @@ export interface FloatingLabelProps extends WithThemeInjectedProps {
   /** Is the input in an active state */
   isActive?: boolean
 
-  /** Override styles */
-  style?: RadiumStyles
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  style?: Interpolation
 
   /** Label text */
   text?: string

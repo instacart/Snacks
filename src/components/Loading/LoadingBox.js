@@ -63,6 +63,8 @@ const determineStyle = (background, shape, size) => {
 
 class LoadingBox extends PureComponent {
   static propTypes = {
+    className: PropTypes.string,
+
     /** Use for rendering dark backgrounds. */
     background: PropTypes.oneOf(['light', 'dark']),
 
@@ -76,12 +78,18 @@ class LoadingBox extends PureComponent {
      */
     size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-    /** Optional style overrides. */
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.object,
   }
 
   render() {
-    const { background, shape, size, style } = this.props
+    const { className, background, shape, size, style } = this.props
 
     const boxStyle = {
       ...baseLoadingStyle,
@@ -89,7 +97,7 @@ class LoadingBox extends PureComponent {
       ...style,
     }
 
-    return <div css={boxStyle} />
+    return <div className={className} css={boxStyle} />
   }
 }
 

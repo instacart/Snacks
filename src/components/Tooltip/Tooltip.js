@@ -8,8 +8,16 @@ const noop = () => {} // eslint-disable-line no-empty-function
 class Tooltip extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
+    className: PropTypes.string,
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     placement: PropTypes.oneOf(['top', 'left', 'right', 'bottom']),
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.shape({
       border: PropTypes.string,
       padding: PropTypes.string,
@@ -81,7 +89,16 @@ class Tooltip extends PureComponent {
   }
 
   render() {
-    const { children, placement, size, style, arrowStyle, snacksStyle, isVisible } = this.props
+    const {
+      children,
+      className,
+      placement,
+      size,
+      style,
+      arrowStyle,
+      snacksStyle,
+      isVisible,
+    } = this.props
 
     return (
       <div>
@@ -92,7 +109,13 @@ class Tooltip extends PureComponent {
           show={isVisible || this.state.show}
           onRootClose={this.handleHideToolTip}
         >
-          <InnerToolTip size={size} css={style} arrowStyle={arrowStyle} snacksStyle={snacksStyle}>
+          <InnerToolTip
+            size={size}
+            className={className}
+            css={style}
+            arrowStyle={arrowStyle}
+            snacksStyle={snacksStyle}
+          >
             {children}
           </InnerToolTip>
         </TooltipOverlay>

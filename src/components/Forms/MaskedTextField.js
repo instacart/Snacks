@@ -91,6 +91,7 @@ const getInputSyles = ({ props, theme, isFocused }) => {
 }
 
 export const maskedTextFieldPropTypes = {
+  className: PropTypes.string,
   /** Name of the field */
   name: PropTypes.string.isRequired,
   /** Transforms the raw value from the input
@@ -149,7 +150,13 @@ export const maskedTextFieldPropTypes = {
   required: PropTypes.bool,
   /** Error from server to show ServerError message */
   serverError: PropTypes.string,
-  /** Wrapper styles */
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.object,
   /** Text to show for validation error  */
   validationErrorText: PropTypes.string,
@@ -228,6 +235,7 @@ class MaskedTextField extends React.Component {
 
   render() {
     const {
+      className,
       mask,
       pipe,
       maskHint,
@@ -254,6 +262,7 @@ class MaskedTextField extends React.Component {
 
     return (
       <div
+        className={className}
         css={[styles.wrapper, fullWidth && styles.fullWidth, halfWidth && styles.halfWidth, style]}
       >
         {serverError && !disabled && !isValid && <ServerError text={serverError} />}

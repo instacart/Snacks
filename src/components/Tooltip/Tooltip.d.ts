@@ -1,18 +1,32 @@
 import * as React from 'react'
+import { Interpolation } from '@emotion/core'
 
 export interface TooltipProps {
   children?: React.ReactNode
+
+  className?: string
+  arrowClassName?: string
 
   size?: 'small' | 'medium' | 'large'
 
   placement?: 'top' | 'left' | 'right' | 'bottom'
 
-  style?: {
-    border?: string
-    padding?: string
-    boxShadow?: string
-  }
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  style?: Interpolation
 
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   arrowStyle?: {
     border?: string
     boxShadowRight?: string

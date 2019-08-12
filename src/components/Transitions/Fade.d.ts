@@ -4,6 +4,8 @@ import { TransitionProps } from 'react-transition-group/Transition'
 export interface FadeProps extends Partial<Pick<TransitionProps, 'in' | 'appear' | 'timeout'>> {
   children: React.ReactNode
 
+  className?: string
+
   /**
    * Settings for opacity during animation.
    *
@@ -21,6 +23,13 @@ export interface FadeProps extends Partial<Pick<TransitionProps, 'in' | 'appear'
   /** Name of the transition-timing-function CSS property. */
   timingFunction?: 'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'
 
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style?: React.CSSProperties
 }
 

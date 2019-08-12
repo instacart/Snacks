@@ -25,7 +25,7 @@ const Pill = props => {
   const styles = getStyles(props)
 
   return (
-    <div css={[styles, props.style]} {...props.elementAttributes}>
+    <div className={props.className} css={[styles, props.style]} {...props.elementAttributes}>
       {props.children}
     </div>
   )
@@ -38,7 +38,15 @@ Pill.propTypes = {
   /** The pill's text content. */
   children: PropTypes.node.isRequired,
 
-  /** Optional styles. */
+  className: PropTypes.string,
+
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.object,
 
   /** Any addional props. */

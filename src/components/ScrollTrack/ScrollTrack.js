@@ -24,6 +24,8 @@ class ScrollTrack extends Component {
     /** The elements to scroll */
     children: PropTypes.node,
 
+    className: PropTypes.string,
+
     /** Manually control left positioning of ScrollTrack */
     leftOverride: PropTypes.number,
 
@@ -61,7 +63,13 @@ class ScrollTrack extends Component {
     /** Transition timing function to use for scrolling animation - defaults to ease-in-out */
     scrollTimingFunction: PropTypes.string,
 
-    /** Style top level element */
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.object,
 
     /** Style specifc children elements [LeftArrow, RightArrow, Track] */
@@ -403,6 +411,7 @@ class ScrollTrack extends Component {
   render() {
     const { containerStyles, innerContainerStyles } = componentStyles
     const {
+      className,
       children,
       scrollSpeed,
       scrollTimingFunction,
@@ -416,7 +425,12 @@ class ScrollTrack extends Component {
 
     return (
       // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-      <div ref="container" css={{ ...containerStyles, ...style }} onKeyDown={this.onKeyDown}>
+      <div
+        ref="container"
+        className={className}
+        css={{ ...containerStyles, ...style }}
+        onKeyDown={this.onKeyDown}
+      >
         {this.renderLeftArrow()}
         <div
           css={[

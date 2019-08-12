@@ -1,13 +1,15 @@
 import * as React from 'react'
 import { MaskedInputProps } from 'react-text-mask'
+import { Interpolation } from '@emotion/core'
 import { FormComponentInjectedProps, ApplyFormComponent } from './FormComponent'
 import { WithThemeInjectedProps, ApplyWithTheme } from '../../styles/themer/withTheme'
-import { RadiumStyles } from '../..'
 
 export interface MaskedTextFieldProps
   extends FormComponentInjectedProps,
     WithThemeInjectedProps,
     Pick<React.ComponentProps<'input'>, 'onFocus' | 'onBlur' | 'onKeyDown'> {
+  className?: string
+
   /** Name of the field */
   name: string
 
@@ -62,7 +64,7 @@ export interface MaskedTextFieldProps
   id: string
 
   /** Style for input */
-  inputStyle: RadiumStyles
+  inputStyle: Interpolation
 
   /** Set by FormComponent by default.   */
   isValid: boolean
@@ -86,8 +88,14 @@ export interface MaskedTextFieldProps
   /** Error from server to show ServerError message */
   serverError: string | null
 
-  /** Wrapper styles */
-  style?: RadiumStyles
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  style?: Interpolation
 
   /** Text to show for validation error  */
   validationErrorText?: string

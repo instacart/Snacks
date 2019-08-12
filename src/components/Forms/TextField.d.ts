@@ -1,12 +1,15 @@
 import * as React from 'react'
+import { Interpolation } from '@emotion/core'
 import { FormComponentInjectedProps, ApplyFormComponent } from './FormComponent'
 import { WithThemeInjectedProps, ApplyWithTheme } from '../../styles/themer/withTheme'
-import { RadiumStyles, ElementAttributes } from '../..'
+import { ElementAttributes } from '../..'
 
 export interface TextFieldProps
   extends FormComponentInjectedProps,
     WithThemeInjectedProps,
     Pick<React.ComponentProps<'input'>, 'onFocus' | 'onBlur' | 'onKeyDown'> {
+  className?: string
+
   /** Name of the field */
   name: string
 
@@ -37,8 +40,11 @@ export interface TextFieldProps
   /** Uniq id for input */
   id: string
 
+  /* className for input */
+  inputClassName?: string
+
   /** Style for input */
-  inputStyle?: RadiumStyles
+  inputStyle?: Interpolation
 
   /** Set by FormComponent by default.   */
   isValid: boolean
@@ -52,8 +58,14 @@ export interface TextFieldProps
   /** Error from server to show ServerError message */
   serverError: string | null
 
-  /** Wrapper styles */
-  style?: RadiumStyles
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  style?: Interpolation
 
   /** Input type ie. 'text', 'email', password, etc..  */
   type?: string

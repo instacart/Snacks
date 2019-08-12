@@ -65,6 +65,7 @@ const RESOLVED_SIZE = {
 class InnerToolTip extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
+    className: PropTypes.string,
     snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark']),
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     style: PropTypes.shape({
@@ -108,7 +109,9 @@ class InnerToolTip extends PureComponent {
     return (
       <Fade>
         {this.renderArrow()}
-        <div css={this.contentStyles}>{this.props.children}</div>
+        <div className={this.props.className} css={this.contentStyles}>
+          {this.props.children}
+        </div>
       </Fade>
     )
   }

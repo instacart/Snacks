@@ -1,6 +1,7 @@
 import * as React from 'react'
+import { Interpolation } from '@emotion/core'
 import { WithThemeInjectedProps, ApplyWithTheme } from '../../styles/themer/withTheme'
-import { RadiumStyles, ElementAttributes } from '../..'
+import { ElementAttributes } from '../..'
 import { Theme } from '../../styles/themer/utils'
 
 export interface PillProps extends WithThemeInjectedProps {
@@ -10,8 +11,16 @@ export interface PillProps extends WithThemeInjectedProps {
   /** The pill's text content. */
   children: React.ReactNode
 
-  /** Optional styles. */
-  style?: RadiumStyles
+  className?: string
+
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  style?: Interpolation
 
   /** Any addional props. */
   elementAttributes?: ElementAttributes<React.ComponentPropsWithoutRef<'div'>>

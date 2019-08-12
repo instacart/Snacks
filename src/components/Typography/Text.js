@@ -129,7 +129,7 @@ const htmlTagMapping = {
   'T.11': 'p',
 }
 
-function Text({ variant, style, children, elementType, fontWeight, ...restProps }) {
+function Text({ variant, style, children, className, elementType, fontWeight, ...restProps }) {
   const ElementType = elementType || htmlTagMapping[variant]
   const finalStyles = {
     ...baseStyles,
@@ -139,7 +139,7 @@ function Text({ variant, style, children, elementType, fontWeight, ...restProps 
   }
 
   return (
-    <ElementType css={finalStyles} {...restProps}>
+    <ElementType className={className} css={finalStyles} {...restProps}>
       {children}
     </ElementType>
   )
@@ -152,6 +152,8 @@ Text.propTypes = {
   /** Text content to be rendered. */
   children: PropTypes.node.isRequired,
 
+  className: PropTypes.string,
+
   /** Overrides the default HTML element type. Each typography variant has a default HTML element (e.g. h1, p),
    * but this is only a best guess. Always ensure you're using the correct header markup -- element
    * types with Snacks typography should be used to describe document structure, not visual style. */
@@ -160,7 +162,13 @@ Text.propTypes = {
   /** Overrides the variant's default font weight. */
   fontWeight: PropTypes.oneOf(Object.keys(fontWeights)),
 
-  /** Any custom inline styles. Useful for things like gutters and responsive styles. */
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.shape({}),
 }
 

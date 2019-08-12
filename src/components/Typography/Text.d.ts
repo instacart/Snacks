@@ -1,8 +1,11 @@
 import * as React from 'react'
-import { RadiumStyles, Omit } from '../..'
+import { Interpolation } from '@emotion/core'
+import { Omit } from '../..'
 
 export interface TextProps extends Omit<React.HTMLAttributes<HTMLElement>, 'style'> {
   children: React.ReactNode
+
+  className?: string
 
   /**
    * Overrides the default HTML element type. Each typography variant has a default HTML element (e.g. h1, p),
@@ -31,7 +34,14 @@ export interface TextProps extends Omit<React.HTMLAttributes<HTMLElement>, 'styl
     | 'T.82'
     | 'T.92'
 
-  style?: RadiumStyles
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  style?: Interpolation
 }
 
 declare const Text: React.ComponentClass<TextProps>

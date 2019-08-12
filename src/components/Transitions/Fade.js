@@ -24,6 +24,8 @@ class Fade extends PureComponent {
 
     children: PropTypes.node,
 
+    className: PropTypes.string,
+
     /** Show the component; triggers the enter or exit states */
     in: PropTypes.bool,
 
@@ -38,7 +40,13 @@ class Fade extends PureComponent {
       end: PropTypes.number,
     }),
 
-    /** Optional style overrides. */
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.object,
 
     /** Delay in milliseconds until animation start. */
@@ -92,13 +100,17 @@ class Fade extends PureComponent {
   }
 
   renderChild = state => {
-    const { style, children } = this.props
+    const { className, style, children } = this.props
     const styles = {
       ...style,
       ...this.initialStyles,
       ...this.transitionStyles[state],
     }
-    return <div css={styles}>{children}</div>
+    return (
+      <div className={className} css={styles}>
+        {children}
+      </div>
+    )
   }
 
   render() {

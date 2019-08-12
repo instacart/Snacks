@@ -26,15 +26,23 @@ const styles = {
   },
 }
 
+// eslint-disable-next-line react/prefer-stateless-function
 class TextFieldHint extends Component {
   static propTypes = {
+    className: PropTypes.string,
     /** Hint Text */
     text: PropTypes.string.isRequired,
     /** Disabled styling */
     disabled: PropTypes.bool,
     /** Show the hint text */
     show: PropTypes.bool,
-    /** Override styles */
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.object,
     /** A uniq id */
     inputId: PropTypes.string,
@@ -45,10 +53,11 @@ class TextFieldHint extends Component {
   }
 
   render() {
-    const { disabled, show, style, text, inputId } = this.props
+    const { className, disabled, show, style, text, inputId } = this.props
 
     return (
       <div
+        className={className}
         id={inputId}
         css={[styles.root, style, disabled && styles.disabled, show && styles.show]}
       >

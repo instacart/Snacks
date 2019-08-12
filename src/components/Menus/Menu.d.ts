@@ -1,8 +1,11 @@
 import * as React from 'react'
+import { Interpolation } from '@emotion/core'
 import { MenuItemProps } from './MenuItem'
 
 export interface MenuProps<TValue extends string | number | boolean = string>
   extends Pick<React.ComponentProps<'div'>, 'onBlur' | 'onKeyDown'> {
+  className?: string
+
   /** aria-hidden HTML attribute */
   ariaHidden?: boolean
 
@@ -15,8 +18,14 @@ export interface MenuProps<TValue extends string | number | boolean = string>
   /** Role HTML attribute */
   role?: string
 
-  /** Customize style of menu parent */
-  style?: React.CSSProperties
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  style?: Interpolation
 }
 
 export default class Menu<

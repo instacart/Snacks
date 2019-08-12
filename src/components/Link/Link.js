@@ -44,10 +44,18 @@ Link.propTypes = {
   /** Callback fired when the link is clicked. */
   onClick: PropTypes.func,
 
+  className: PropTypes.string,
+
   /** The link's text content. */
   children: PropTypes.node,
 
-  /** Optional styles. */
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.object,
 
   /** Any addional props. */

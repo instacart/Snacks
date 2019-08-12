@@ -6,6 +6,8 @@ export interface GrowProps extends Partial<Pick<TransitionProps, 'in' | 'appear'
 
   children: React.ReactNode
 
+  className?: string
+
   /**
    * Settings for max-height and max-width during animation (this is what animates the element's height/width).
    *
@@ -34,6 +36,13 @@ export interface GrowProps extends Partial<Pick<TransitionProps, 'in' | 'appear'
   /** Name of the transition-timing-function CSS property. */
   timingFunction?: 'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'
 
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style?: React.CSSProperties
 }
 

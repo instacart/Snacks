@@ -73,6 +73,7 @@ const getSnackStyles = snacksTheme => {
 @FormComponent
 class TextField extends React.Component {
   static propTypes = {
+    className: PropTypes.string,
     /** Name of the field */
     name: PropTypes.string.isRequired,
     /** HTML autocomplete attribute */
@@ -95,6 +96,8 @@ class TextField extends React.Component {
     hintText: PropTypes.string,
     /** Uniq id for input */
     id: PropTypes.string,
+    /** className for input */
+    inputClassName: PropTypes.string,
     /** Style for input */
     inputStyle: PropTypes.object,
     /** Set by FormComponent by default.   */
@@ -111,7 +114,13 @@ class TextField extends React.Component {
     required: PropTypes.bool,
     /** Error from server to show ServerError message */
     serverError: PropTypes.string,
-    /** Wrapper styles */
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.object,
     /** Input type ie. 'text', 'email', password, etc..  */
     type: PropTypes.string,
@@ -187,6 +196,7 @@ class TextField extends React.Component {
 
   render() {
     const {
+      className,
       floatingLabelText,
       defaultValue,
       disabled,
@@ -195,6 +205,7 @@ class TextField extends React.Component {
       hasError,
       hintText,
       id,
+      inputClassName,
       inputStyle,
       isValid,
       name,
@@ -219,6 +230,7 @@ class TextField extends React.Component {
 
     return (
       <div
+        className={className}
         css={[styles.wrapper, fullWidth && styles.fullWidth, halfWidth && styles.halfWidth, style]}
       >
         {serverError && !disabled && !isValid && <ServerError text={serverError} />}
@@ -263,6 +275,7 @@ class TextField extends React.Component {
             ]
               .filter(Boolean)
               .join(' ')}
+            className={inputClassName}
             css={[
               styles.input,
               inputStyle,

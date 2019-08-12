@@ -128,6 +128,7 @@ const Row = props => {
 
   return (
     <div
+      className={props.className}
       css={[
         {
           ...componentStyles,
@@ -143,12 +144,19 @@ const Row = props => {
 }
 
 Row.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.node,
   /** Force Row to width of 100vw -- Snacks will add negative margin */
   forceFullPage: PropTypes.bool,
   /** Maximum number of columns this Row should grow to as screen width increases. Cannot exceed 14. */
   maxColumns: PropTypes.number,
-  /** Optional style overrides */
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.object,
 }
 

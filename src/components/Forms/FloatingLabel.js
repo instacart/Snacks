@@ -57,7 +57,13 @@ class FloatingLabel extends Component {
     htmlFor: PropTypes.string,
     /** Is the input in an active state */
     isActive: PropTypes.bool,
-    /** Override styles */
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.object,
     className: PropTypes.string,
     /** Label text */

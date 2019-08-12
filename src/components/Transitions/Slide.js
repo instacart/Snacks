@@ -23,6 +23,11 @@ class Slide extends PureComponent {
 
     children: PropTypes.node,
 
+    className: PropTypes.string,
+
+    /** Optional style overrides for div that is offset and contains children. */
+    containerClassName: PropTypes.string,
+
     /** Optional style overrides for div that is offset and contains children. */
     containerStyle: PropTypes.object,
 
@@ -38,7 +43,13 @@ class Slide extends PureComponent {
      */
     offset: PropTypes.number,
 
-    /** Optional style overrides. */
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.object,
 
     /** Delay in milliseconds until animation start. */
@@ -90,7 +101,7 @@ class Slide extends PureComponent {
   }
 
   renderChild = state => {
-    const { style, children, containerStyle } = this.props
+    const { className, containerClassName, style, children, containerStyle } = this.props
     const styles = {
       ...this.initialStyles,
       ...this.transitionStyles[state],
@@ -103,8 +114,10 @@ class Slide extends PureComponent {
     }
 
     return (
-      <div css={topLevelStyle}>
-        <div css={styles}>{children}</div>
+      <div className={className} css={topLevelStyle}>
+        <div className={containerClassName} css={styles}>
+          {children}
+        </div>
       </div>
     )
   }
