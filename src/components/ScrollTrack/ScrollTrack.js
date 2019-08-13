@@ -9,7 +9,7 @@ import ScrollTrackPropTypes from './ScrollTrackPropTypes'
 import { isNodeEnv } from '../../utils/detectFeature'
 import debounce from '../../utils/debounce'
 import CircleButton from '../Buttons/CircleButton'
-import Icon from '../Icon/Icon'
+import SVGIcon from '../SVGIcon/SVGIcon'
 
 const noOp = () => {} // eslint-disable-line no-empty-function
 
@@ -372,7 +372,7 @@ class ScrollTrack extends Component {
         ]}
         ref={node => (this.nextButton = node)}
       >
-        {nextButtonContent || <Icon name="arrowRightSmallBold" style={{ fontSize: '20px' }} />}
+        {nextButtonContent || <SVGIcon name='arrowRight' size='small' />}
       </CircleButton>
     )
   }
@@ -397,7 +397,7 @@ class ScrollTrack extends Component {
         ]}
         ref={node => (this.backButton = node)}
       >
-        {backButtonContent || <Icon name="arrowLeftSmallBold" style={{ fontSize: '20px' }} />}
+        {backButtonContent || <SVGIcon name='arrowLeft' size='small' />}
       </CircleButton>
     )
   }
