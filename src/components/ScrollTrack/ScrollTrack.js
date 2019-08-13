@@ -372,7 +372,7 @@ class ScrollTrack extends Component {
         ]}
         ref={node => (this.nextButton = node)}
       >
-        {nextButtonContent || <SVGIcon name='arrowRight' size='small' />}
+        {nextButtonContent || <SVGIcon name="arrowRight" size="small" />}
       </CircleButton>
     )
   }
@@ -397,7 +397,7 @@ class ScrollTrack extends Component {
         ]}
         ref={node => (this.backButton = node)}
       >
-        {backButtonContent || <SVGIcon name='arrowLeft' size='small' />}
+        {backButtonContent || <SVGIcon name="arrowLeft" size="small" />}
       </CircleButton>
     )
   }
