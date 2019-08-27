@@ -1,536 +1,543 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders ScrollTrack correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      data-radium={true}
-      onKeyDown={[Function]}
-      style={
-        Object {
-          "overflow": "hidden",
-          "position": "relative",
-        }
-      }
+.emotion-6 {
+  overflow: hidden;
+  position: relative;
+}
+
+.emotion-1 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  left: 8px;
+}
+
+@media (max-width:767px) {
+  .emotion-1 {
+    display: none;
+  }
+}
+
+.emotion-1:hover {
+  background-color: #177D05;
+}
+
+.emotion-1:active {
+  background-color: #177D05;
+}
+
+.emotion-1:focus {
+  background-color: #177D05;
+}
+
+.emotion-0 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  font-size: 20px;
+}
+
+.emotion-3 {
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  -webkit-transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  -webkit-transform: translate3d(0px,0,0);
+  -ms-transform: translate3d(0px,0,0);
+  transform: translate3d(0px,0,0);
+  white-space: nowrap;
+  position: relative;
+}
+
+@media (max-width:767px) {
+  .emotion-3 {
+    left: inherit;
+    overflow-x: scroll;
+    display: block;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    webkit-overflow-scrolling: touch;
+  }
+}
+
+.emotion-5 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  right: 8px;
+}
+
+@media (max-width:767px) {
+  .emotion-5 {
+    display: none;
+  }
+}
+
+.emotion-5:hover {
+  background-color: #177D05;
+}
+
+.emotion-5:active {
+  background-color: #177D05;
+}
+
+.emotion-5:focus {
+  background-color: #177D05;
+}
+
+<div>
+  <div
+    className="emotion-6"
+    onKeyDown={[Function]}
+  >
+    <button
+      aria-label="back"
+      className="emotion-1"
+      onClick={[Function]}
     >
-      <button
-        aria-label="back"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#43B02A",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "left": 8,
-            "lineHeight": "1",
-            "position": "absolute",
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
+      <i
+        aria-hidden={true}
+        className="emotion-0"
       >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
+        
+      </i>
+    </button>
+    <div
+      className="emotion-3"
+    >
       <div
-        className="rmq-16b35912"
-        data-radium={true}
-        style={
-          Object {
-            "position": "relative",
-            "transform": "translate3d(0px, 0, 0)",
-            "transition": "transform 150ms ease-in-out",
-            "whiteSpace": "nowrap",
-          }
-        }
+        className="emotion-2"
       >
-        <div
-          data-radium={true}
-          style={Object {}}
-        >
-          <p>
-            one
-          </p>
-          <p>
-            two
-          </p>
-          <p>
-            three
-          </p>
-          <p>
-            four
-          </p>
-          <p>
-            five
-          </p>
-          <p>
-            six
-          </p>
-          <p>
-            seven
-          </p>
-        </div>
+        <p>
+          one
+        </p>
+        <p>
+          two
+        </p>
+        <p>
+          three
+        </p>
+        <p>
+          four
+        </p>
+        <p>
+          five
+        </p>
+        <p>
+          six
+        </p>
+        <p>
+          seven
+        </p>
       </div>
-      <button
-        aria-label="next"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#43B02A",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "lineHeight": "1",
-            "position": "absolute",
-            "right": 8,
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
-      >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
     </div>
+    <button
+      aria-label="next"
+      className="emotion-5"
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden={true}
+        className="emotion-0"
+      >
+        
+      </i>
+    </button>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
-overflow-x: scroll !important;
-display: block !important;
--ms-overflow-style: none !important;
-overflow: -moz-scrollbars-none !important;
-webkit-overflow-scrolling: touch !important;}}
-@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
-      }
-    }
-  />
 </div>
 `;
 
 exports[`renders ScrollTrack with animation props correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      data-radium={true}
-      onKeyDown={[Function]}
-      style={
-        Object {
-          "overflow": "hidden",
-          "position": "relative",
-        }
-      }
+.emotion-6 {
+  overflow: hidden;
+  position: relative;
+}
+
+.emotion-1 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  left: 8px;
+}
+
+@media (max-width:767px) {
+  .emotion-1 {
+    display: none;
+  }
+}
+
+.emotion-1:hover {
+  background-color: #177D05;
+}
+
+.emotion-1:active {
+  background-color: #177D05;
+}
+
+.emotion-1:focus {
+  background-color: #177D05;
+}
+
+.emotion-0 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  font-size: 20px;
+}
+
+.emotion-5 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  right: 8px;
+}
+
+@media (max-width:767px) {
+  .emotion-5 {
+    display: none;
+  }
+}
+
+.emotion-5:hover {
+  background-color: #177D05;
+}
+
+.emotion-5:active {
+  background-color: #177D05;
+}
+
+.emotion-5:focus {
+  background-color: #177D05;
+}
+
+.emotion-3 {
+  -webkit-transition: -webkit-transform 1000ms ease-in;
+  -webkit-transition: transform 1000ms ease-in;
+  transition: transform 1000ms ease-in;
+  -webkit-transform: translate3d(0px,0,0);
+  -ms-transform: translate3d(0px,0,0);
+  transform: translate3d(0px,0,0);
+  white-space: nowrap;
+  position: relative;
+}
+
+@media (max-width:767px) {
+  .emotion-3 {
+    left: inherit;
+    overflow-x: scroll;
+    display: block;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    webkit-overflow-scrolling: touch;
+  }
+}
+
+<div>
+  <div
+    className="emotion-6"
+    onKeyDown={[Function]}
+  >
+    <button
+      aria-label="back"
+      className="emotion-1"
+      onClick={[Function]}
     >
-      <button
-        aria-label="back"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#43B02A",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "left": 8,
-            "lineHeight": "1",
-            "position": "absolute",
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
+      <i
+        aria-hidden={true}
+        className="emotion-0"
       >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
+        
+      </i>
+    </button>
+    <div
+      className="emotion-3"
+    >
       <div
-        className="rmq-16b35912"
-        data-radium={true}
-        style={
-          Object {
-            "position": "relative",
-            "transform": "translate3d(0px, 0, 0)",
-            "transition": "transform 1000ms ease-in",
-            "whiteSpace": "nowrap",
-          }
-        }
+        className="emotion-2"
       >
-        <div
-          data-radium={true}
-          style={Object {}}
-        >
-          <p>
-            one
-          </p>
-          <p>
-            two
-          </p>
-          <p>
-            three
-          </p>
-          <p>
-            four
-          </p>
-          <p>
-            five
-          </p>
-          <p>
-            six
-          </p>
-          <p>
-            seven
-          </p>
-        </div>
+        <p>
+          one
+        </p>
+        <p>
+          two
+        </p>
+        <p>
+          three
+        </p>
+        <p>
+          four
+        </p>
+        <p>
+          five
+        </p>
+        <p>
+          six
+        </p>
+        <p>
+          seven
+        </p>
       </div>
-      <button
-        aria-label="next"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#43B02A",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "lineHeight": "1",
-            "position": "absolute",
-            "right": 8,
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
-      >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
     </div>
+    <button
+      aria-label="next"
+      className="emotion-5"
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden={true}
+        className="emotion-0"
+      >
+        
+      </i>
+    </button>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
-overflow-x: scroll !important;
-display: block !important;
--ms-overflow-style: none !important;
-overflow: -moz-scrollbars-none !important;
-webkit-overflow-scrolling: touch !important;}}
-@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
-      }
-    }
-  />
 </div>
 `;
 
-exports[`renders ScrollTrack without children correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div />
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
-`;
+exports[`renders ScrollTrack without children correctly 1`] = `<div />`;
 
 exports[`renders custom ScrollTrack buttons correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      data-radium={true}
-      onKeyDown={[Function]}
-      style={
-        Object {
-          "overflow": "hidden",
-          "position": "relative",
-        }
-      }
+.emotion-5 {
+  overflow: hidden;
+  position: relative;
+}
+
+.emotion-3 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  font-size: 20px;
+}
+
+.emotion-2 {
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  -webkit-transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  -webkit-transform: translate3d(0px,0,0);
+  -ms-transform: translate3d(0px,0,0);
+  transform: translate3d(0px,0,0);
+  white-space: nowrap;
+  position: relative;
+}
+
+@media (max-width:767px) {
+  .emotion-2 {
+    left: inherit;
+    overflow-x: scroll;
+    display: block;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    webkit-overflow-scrolling: touch;
+  }
+}
+
+.emotion-0 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  left: 8px;
+  background-color: red;
+}
+
+@media (max-width:767px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+.emotion-0:hover {
+  background-color: #177D05;
+}
+
+.emotion-0:active {
+  background-color: #177D05;
+}
+
+.emotion-0:focus {
+  background-color: #177D05;
+}
+
+.emotion-4 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  right: 8px;
+  background-color: blue;
+}
+
+@media (max-width:767px) {
+  .emotion-4 {
+    display: none;
+  }
+}
+
+.emotion-4:hover {
+  background-color: #177D05;
+}
+
+.emotion-4:active {
+  background-color: #177D05;
+}
+
+.emotion-4:focus {
+  background-color: #177D05;
+}
+
+<div>
+  <div
+    className="emotion-5"
+    onKeyDown={[Function]}
+  >
+    <button
+      aria-label="back"
+      className="emotion-0"
+      onClick={[Function]}
     >
-      <button
-        aria-label="back"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "red",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "left": 8,
-            "lineHeight": "1",
-            "position": "absolute",
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
-      >
-        HI
-      </button>
+      HI
+    </button>
+    <div
+      className="emotion-2"
+    >
       <div
-        className="rmq-16b35912"
-        data-radium={true}
-        style={
-          Object {
-            "position": "relative",
-            "transform": "translate3d(0px, 0, 0)",
-            "transition": "transform 150ms ease-in-out",
-            "whiteSpace": "nowrap",
-          }
-        }
+        className="emotion-1"
       >
-        <div
-          data-radium={true}
-          style={Object {}}
-        >
-          <p>
-            one
-          </p>
-          <p>
-            two
-          </p>
-          <p>
-            three
-          </p>
-          <p>
-            four
-          </p>
-          <p>
-            five
-          </p>
-          <p>
-            six
-          </p>
-          <p>
-            seven
-          </p>
-        </div>
+        <p>
+          one
+        </p>
+        <p>
+          two
+        </p>
+        <p>
+          three
+        </p>
+        <p>
+          four
+        </p>
+        <p>
+          five
+        </p>
+        <p>
+          six
+        </p>
+        <p>
+          seven
+        </p>
       </div>
-      <button
-        aria-label="next"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "blue",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "lineHeight": "1",
-            "position": "absolute",
-            "right": 8,
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
-      >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
     </div>
+    <button
+      aria-label="next"
+      className="emotion-4"
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden={true}
+        className="emotion-3"
+      >
+        
+      </i>
+    </button>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
-overflow-x: scroll !important;
-display: block !important;
--ms-overflow-style: none !important;
-overflow: -moz-scrollbars-none !important;
-webkit-overflow-scrolling: touch !important;}}
-@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
-      }
-    }
-  />
 </div>
 `;

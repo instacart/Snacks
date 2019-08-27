@@ -16,7 +16,7 @@ const styles = {
 const MenuDivider = props => {
   const { style } = props
 
-  return <hr style={{ ...styles, ...style }} />
+  return <hr css={{ ...styles, ...style }} />
 }
 
 MenuDivider.propTypes = {

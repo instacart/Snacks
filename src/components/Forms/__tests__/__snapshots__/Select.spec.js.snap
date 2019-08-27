@@ -1,1538 +1,261 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Select correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div
-    data-radium={true}
-  >
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "display": "inline-block",
-          "position": "relative",
-          "width": "343px",
-        }
-      }
-    >
-      <div
-        data-radium={true}
-      >
-        <div
-          data-radium={true}
-          onKeyDown={[Function]}
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "position": "relative",
-              }
-            }
-          >
-            <div
-              aria-expanded={false}
-              aria-haspopup={true}
-              data-radium={true}
-              elementAttributes={
-                Object {
-                  "aria-expanded": false,
-                  "aria-haspopup": true,
-                }
-              }
-              onBlur={[Function]}
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              role="button"
-              tabIndex={0}
-            >
-              <div
-                aria-invalid={false}
-                data-radium={true}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                style={
-                  Object {
-                    "WebkitOpacity": 1,
-                    "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-                    "backgroundColor": "#FFF",
-                    "border": "solid 1px #BDBDBD",
-                    "borderRadius": "4px",
-                    "boxSizing": "border-box",
-                    "color": "#424242",
-                    "fontSize": "16px",
-                    "height": "56px",
-                    "marginBottom": 0,
-                    "marginLeft": 0,
-                    "marginRight": 0,
-                    "marginTop": 0,
-                    "outline": "none",
-                    "paddingBottom": 8,
-                    "paddingLeft": 8,
-                    "paddingRight": "25px",
-                    "paddingTop": "25px",
-                    "position": "relative",
-                  }
-                }
-              >
-                <label
-                  data-radium={true}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "color": "#757575",
-                      "cursor": "text",
-                      "fontSize": "16px",
-                      "left": 0,
-                      "marginBottom": 0,
-                      "marginLeft": 0,
-                      "marginRight": 0,
-                      "marginTop": 0,
-                      "pointerEvents": "auto",
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": "scale(1) translate(8px, 17px)",
-                      "transformOrigin": "left top",
-                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                      "userSelect": "none",
-                      "zIndex": 1,
-                    }
-                  }
-                >
-                  Country
-                </label>
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "display": "inline-block",
-                      "overflow": "hidden",
-                      "textOverflow": "ellipsis",
-                      "userSelect": "none",
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <div
-                    data-radium={true}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    style={
-                      Object {
-                        "color": "#BDBDBD",
-                        "cursor": "inherit",
-                        "fontSize": "16px",
-                        "left": 0,
-                        "opacity": 0,
-                        "pointerEvents": "none",
-                        "position": "absolute",
-                        "top": 0,
-                        "transform": "scale(1) translate(9px, 26px)",
-                        "transformOrigin": "left top",
-                        "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "visibility": "hidden",
-                        "zIndex": 1,
-                      }
-                    }
-                  >
-                    Select a country
-                  </div>
-                </div>
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "display": "flex",
-                      "flexDirection": "column",
-                      "position": "absolute",
-                      "right": "8px",
-                      "top": "22px",
-                      "userSelect": "none",
-                    }
-                  }
-                >
-                  <i
-                    aria-hidden={true}
-                    data-radium={true}
-                    style={
-                      Object {
-                        "color": "#43B02A",
-                        "fontFamily": "ic-icons",
-                        "fontSize": "16px",
-                        "fontSmoothing": "antialiased",
-                        "fontStyle": "normal",
-                        "fontVariant": "normal",
-                        "fontWeight": "normal",
-                        "lineHeight": "1",
-                        "osxFontSmoothing": "grayscale",
-                        "position": "relative",
-                        "speak": "none",
-                        "textTransform": "none",
-                        "transition": "transform 100ms",
-                        "userSelect": "none",
-                      }
-                    }
-                  >
-                    
-                  </i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "display": "block",
-                "pointerEvents": "none",
-                "position": "absolute",
-                "width": "100%",
-                "zIndex": -9000,
-              }
-            }
-          >
-            <div
-              style={
-                Object {
-                  "overflowX": "visible",
-                  "overflowY": "hidden",
-                  "paddingBottom": "5px",
-                  "paddingLeft": "5px",
-                  "paddingRight": "5px",
-                  "paddingTop": "2px",
-                  "transform": "translateX(-5px)",
-                  "width": "100%",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "transform": "translateY(-30px)",
-                    "transition": "all 200ms ease-in-out",
-                  }
-                }
-              >
-                <div
-                  style={
-                    Object {
-                      "opacity": 0,
-                      "transition": "all 200ms ease-in-out",
-                    }
-                  }
-                >
-                  <div
-                    aria-hidden={true}
-                    onBlur={[Function]}
-                    onKeyDown={[Function]}
-                    role="menu"
-                    style={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderRadius": "4px",
-                        "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
-                        "display": "inline-block",
-                        "maxHeight": "500px",
-                        "outline": "none",
-                        "overflowY": "auto",
-                        "paddingBottom": 8,
-                        "paddingLeft": 0,
-                        "paddingRight": 0,
-                        "paddingTop": 8,
-                        "userSelect": "none",
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={-1}
-                  >
-                    <div
-                      data-radium={true}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="menuitem"
-                      style={
-                        Object {
-                          "backgroundColor": "#ffffff",
-                          "paddingBottom": 16,
-                          "paddingLeft": 0,
-                          "paddingRight": 0,
-                          "paddingTop": 16,
-                        }
-                      }
-                      tabIndex={0}
-                    >
-                      <div
-                        data-radium={true}
-                        style={
-                          Object {
-                            "display": "table",
-                          }
-                        }
-                      >
-                        <div
-                          data-radium={true}
-                          style={
-                            Object {
-                              "paddingBottom": 0,
-                              "paddingLeft": 16,
-                              "paddingRight": 16,
-                              "paddingTop": 0,
-                              "whiteSpace": "nowrap",
-                            }
-                          }
-                        >
-                          United States
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      data-radium={true}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="menuitem"
-                      style={
-                        Object {
-                          "backgroundColor": "#ffffff",
-                          "paddingBottom": 16,
-                          "paddingLeft": 0,
-                          "paddingRight": 0,
-                          "paddingTop": 16,
-                        }
-                      }
-                      tabIndex={0}
-                    >
-                      <div
-                        data-radium={true}
-                        style={
-                          Object {
-                            "display": "table",
-                          }
-                        }
-                      >
-                        <div
-                          data-radium={true}
-                          style={
-                            Object {
-                              "paddingBottom": 0,
-                              "paddingLeft": 16,
-                              "paddingRight": 16,
-                              "paddingTop": 0,
-                              "whiteSpace": "nowrap",
-                            }
-                          }
-                        >
-                          Canada
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-atomic={true}
-          aria-live="assertive"
-          data-radium={true}
-          id="error_test_id"
-          style={
-            Object {
-              "color": "#B30029",
-              "display": "none",
-              "fontSize": "12px",
-              "marginLeft": "1px",
-              "marginTop": "2px",
-              "opacity": "0",
-              "pointerEvents": "none",
-              "textAlign": "left",
-              "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-            }
-          }
-        />
-      </div>
-    </div>
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
-`;
+.emotion-19 {
+  display: inline-block;
+  position: relative;
+  width: 343px;
+}
 
-exports[`renders Select w/ server error correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div
-    data-radium={true}
-  >
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "display": "inline-block",
-          "position": "relative",
-          "width": "343px",
-        }
-      }
-    >
-      <div
-        data-radium={true}
-      >
-        <div
-          data-radium={true}
-          onKeyDown={[Function]}
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "position": "relative",
-              }
-            }
-          >
-            <div
-              aria-expanded={false}
-              aria-haspopup={true}
-              data-radium={true}
-              elementAttributes={
-                Object {
-                  "aria-expanded": false,
-                  "aria-haspopup": true,
-                }
-              }
-              onBlur={[Function]}
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              role="button"
-              tabIndex={0}
-            >
-              <div
-                aria-invalid={false}
-                data-radium={true}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                style={
-                  Object {
-                    "WebkitOpacity": 1,
-                    "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-                    "backgroundColor": "#EEEEEE",
-                    "border": "1px dashed #BDBDBD",
-                    "borderRadius": "4px",
-                    "boxSizing": "border-box",
-                    "color": "#757575",
-                    "fontSize": "16px",
-                    "height": "56px",
-                    "marginBottom": 0,
-                    "marginLeft": 0,
-                    "marginRight": 0,
-                    "marginTop": 0,
-                    "outline": "none",
-                    "paddingBottom": 8,
-                    "paddingLeft": 8,
-                    "paddingRight": "25px",
-                    "paddingTop": "25px",
-                    "position": "relative",
-                  }
-                }
-              >
-                <label
-                  data-radium={true}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "color": "#BDBDBD",
-                      "cursor": "not-allowed",
-                      "fontSize": "16px",
-                      "left": 0,
-                      "marginBottom": 0,
-                      "marginLeft": 0,
-                      "marginRight": 0,
-                      "marginTop": 0,
-                      "pointerEvents": "auto",
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": "scale(1) translate(8px, 17px)",
-                      "transformOrigin": "left top",
-                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                      "userSelect": "none",
-                      "zIndex": 1,
-                    }
-                  }
-                >
-                  Country
-                </label>
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "display": "inline-block",
-                      "overflow": "hidden",
-                      "textOverflow": "ellipsis",
-                      "userSelect": "none",
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <div
-                    data-radium={true}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    style={
-                      Object {
-                        "color": "#BDBDBD",
-                        "cursor": "not-allowed",
-                        "fontSize": "16px",
-                        "left": 0,
-                        "opacity": 0,
-                        "pointerEvents": "none",
-                        "position": "absolute",
-                        "top": 0,
-                        "transform": "scale(1) translate(9px, 26px)",
-                        "transformOrigin": "left top",
-                        "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "visibility": "hidden",
-                        "zIndex": 1,
-                      }
-                    }
-                  >
-                    Select a country
-                  </div>
-                </div>
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "display": "flex",
-                      "flexDirection": "column",
-                      "position": "absolute",
-                      "right": "8px",
-                      "top": "22px",
-                      "userSelect": "none",
-                    }
-                  }
-                >
-                  <i
-                    aria-hidden={true}
-                    data-radium={true}
-                    style={
-                      Object {
-                        "color": "#757575",
-                        "fontFamily": "ic-icons",
-                        "fontSize": "16px",
-                        "fontSmoothing": "antialiased",
-                        "fontStyle": "normal",
-                        "fontVariant": "normal",
-                        "fontWeight": "normal",
-                        "lineHeight": "1",
-                        "osxFontSmoothing": "grayscale",
-                        "position": "relative",
-                        "speak": "none",
-                        "textTransform": "none",
-                        "transition": "transform 100ms",
-                        "userSelect": "none",
-                      }
-                    }
-                  >
-                    
-                  </i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "display": "block",
-                "pointerEvents": "none",
-                "position": "absolute",
-                "width": "100%",
-                "zIndex": -9000,
-              }
-            }
-          >
-            <div
-              style={
-                Object {
-                  "overflowX": "visible",
-                  "overflowY": "hidden",
-                  "paddingBottom": "5px",
-                  "paddingLeft": "5px",
-                  "paddingRight": "5px",
-                  "paddingTop": "2px",
-                  "transform": "translateX(-5px)",
-                  "width": "100%",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "transform": "translateY(-30px)",
-                    "transition": "all 200ms ease-in-out",
-                  }
-                }
-              >
-                <div
-                  style={
-                    Object {
-                      "opacity": 0,
-                      "transition": "all 200ms ease-in-out",
-                    }
-                  }
-                >
-                  <div
-                    aria-hidden={true}
-                    onBlur={[Function]}
-                    onKeyDown={[Function]}
-                    role="menu"
-                    style={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderRadius": "4px",
-                        "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
-                        "display": "inline-block",
-                        "maxHeight": "500px",
-                        "outline": "none",
-                        "overflowY": "auto",
-                        "paddingBottom": 8,
-                        "paddingLeft": 0,
-                        "paddingRight": 0,
-                        "paddingTop": 8,
-                        "userSelect": "none",
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={-1}
-                  >
-                    <div
-                      data-radium={true}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="menuitem"
-                      style={
-                        Object {
-                          "backgroundColor": "#ffffff",
-                          "paddingBottom": 16,
-                          "paddingLeft": 0,
-                          "paddingRight": 0,
-                          "paddingTop": 16,
-                        }
-                      }
-                      tabIndex={0}
-                    >
-                      <div
-                        data-radium={true}
-                        style={
-                          Object {
-                            "display": "table",
-                          }
-                        }
-                      >
-                        <div
-                          data-radium={true}
-                          style={
-                            Object {
-                              "paddingBottom": 0,
-                              "paddingLeft": 16,
-                              "paddingRight": 16,
-                              "paddingTop": 0,
-                              "whiteSpace": "nowrap",
-                            }
-                          }
-                        >
-                          United States
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      data-radium={true}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="menuitem"
-                      style={
-                        Object {
-                          "backgroundColor": "#ffffff",
-                          "paddingBottom": 16,
-                          "paddingLeft": 0,
-                          "paddingRight": 0,
-                          "paddingTop": 16,
-                        }
-                      }
-                      tabIndex={0}
-                    >
-                      <div
-                        data-radium={true}
-                        style={
-                          Object {
-                            "display": "table",
-                          }
-                        }
-                      >
-                        <div
-                          data-radium={true}
-                          style={
-                            Object {
-                              "paddingBottom": 0,
-                              "paddingLeft": 16,
-                              "paddingRight": 16,
-                              "paddingTop": 0,
-                              "whiteSpace": "nowrap",
-                            }
-                          }
-                        >
-                          Canada
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-atomic={true}
-          aria-live="assertive"
-          data-radium={true}
-          id="error_test_id"
-          style={
-            Object {
-              "color": "#B30029",
-              "display": "none",
-              "fontSize": "12px",
-              "marginLeft": "1px",
-              "marginTop": "2px",
-              "opacity": "0",
-              "pointerEvents": "none",
-              "textAlign": "left",
-              "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-            }
-          }
-        >
-          Select a valid country
-        </div>
-      </div>
-    </div>
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
-`;
+.emotion-6 {
+  position: relative;
+}
 
-exports[`renders disabled Select correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div
-    data-radium={true}
-  >
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "display": "inline-block",
-          "position": "relative",
-          "width": "343px",
-        }
-      }
-    >
-      <div
-        data-radium={true}
-      >
-        <div
-          data-radium={true}
-          onKeyDown={[Function]}
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "position": "relative",
-              }
-            }
-          >
-            <div
-              aria-expanded={false}
-              aria-haspopup={true}
-              data-radium={true}
-              elementAttributes={
-                Object {
-                  "aria-expanded": false,
-                  "aria-haspopup": true,
-                }
-              }
-              onBlur={[Function]}
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              role="button"
-              tabIndex={0}
-            >
-              <div
-                aria-invalid={false}
-                data-radium={true}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                style={
-                  Object {
-                    "WebkitOpacity": 1,
-                    "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-                    "backgroundColor": "#EEEEEE",
-                    "border": "1px dashed #BDBDBD",
-                    "borderRadius": "4px",
-                    "boxSizing": "border-box",
-                    "color": "#757575",
-                    "fontSize": "16px",
-                    "height": "56px",
-                    "marginBottom": 0,
-                    "marginLeft": 0,
-                    "marginRight": 0,
-                    "marginTop": 0,
-                    "outline": "none",
-                    "paddingBottom": 8,
-                    "paddingLeft": 8,
-                    "paddingRight": "25px",
-                    "paddingTop": "25px",
-                    "position": "relative",
-                  }
-                }
-              >
-                <label
-                  data-radium={true}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "color": "#BDBDBD",
-                      "cursor": "not-allowed",
-                      "fontSize": "16px",
-                      "left": 0,
-                      "marginBottom": 0,
-                      "marginLeft": 0,
-                      "marginRight": 0,
-                      "marginTop": 0,
-                      "pointerEvents": "auto",
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": "scale(1) translate(8px, 17px)",
-                      "transformOrigin": "left top",
-                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                      "userSelect": "none",
-                      "zIndex": 1,
-                    }
-                  }
-                >
-                  Country
-                </label>
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "display": "inline-block",
-                      "overflow": "hidden",
-                      "textOverflow": "ellipsis",
-                      "userSelect": "none",
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <div
-                    data-radium={true}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    style={
-                      Object {
-                        "color": "#BDBDBD",
-                        "cursor": "not-allowed",
-                        "fontSize": "16px",
-                        "left": 0,
-                        "opacity": 0,
-                        "pointerEvents": "none",
-                        "position": "absolute",
-                        "top": 0,
-                        "transform": "scale(1) translate(9px, 26px)",
-                        "transformOrigin": "left top",
-                        "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "visibility": "hidden",
-                        "zIndex": 1,
-                      }
-                    }
-                  >
-                    Select a country
-                  </div>
-                </div>
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "display": "flex",
-                      "flexDirection": "column",
-                      "position": "absolute",
-                      "right": "8px",
-                      "top": "22px",
-                      "userSelect": "none",
-                    }
-                  }
-                >
-                  <i
-                    aria-hidden={true}
-                    data-radium={true}
-                    style={
-                      Object {
-                        "color": "#757575",
-                        "fontFamily": "ic-icons",
-                        "fontSize": "16px",
-                        "fontSmoothing": "antialiased",
-                        "fontStyle": "normal",
-                        "fontVariant": "normal",
-                        "fontWeight": "normal",
-                        "lineHeight": "1",
-                        "osxFontSmoothing": "grayscale",
-                        "position": "relative",
-                        "speak": "none",
-                        "textTransform": "none",
-                        "transition": "transform 100ms",
-                        "userSelect": "none",
-                      }
-                    }
-                  >
-                    
-                  </i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "display": "block",
-                "pointerEvents": "none",
-                "position": "absolute",
-                "width": "100%",
-                "zIndex": -9000,
-              }
-            }
-          >
-            <div
-              style={
-                Object {
-                  "overflowX": "visible",
-                  "overflowY": "hidden",
-                  "paddingBottom": "5px",
-                  "paddingLeft": "5px",
-                  "paddingRight": "5px",
-                  "paddingTop": "2px",
-                  "transform": "translateX(-5px)",
-                  "width": "100%",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "transform": "translateY(-30px)",
-                    "transition": "all 200ms ease-in-out",
-                  }
-                }
-              >
-                <div
-                  style={
-                    Object {
-                      "opacity": 0,
-                      "transition": "all 200ms ease-in-out",
-                    }
-                  }
-                >
-                  <div
-                    aria-hidden={true}
-                    onBlur={[Function]}
-                    onKeyDown={[Function]}
-                    role="menu"
-                    style={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderRadius": "4px",
-                        "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
-                        "display": "inline-block",
-                        "maxHeight": "500px",
-                        "outline": "none",
-                        "overflowY": "auto",
-                        "paddingBottom": 8,
-                        "paddingLeft": 0,
-                        "paddingRight": 0,
-                        "paddingTop": 8,
-                        "userSelect": "none",
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={-1}
-                  >
-                    <div
-                      data-radium={true}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="menuitem"
-                      style={
-                        Object {
-                          "backgroundColor": "#ffffff",
-                          "paddingBottom": 16,
-                          "paddingLeft": 0,
-                          "paddingRight": 0,
-                          "paddingTop": 16,
-                        }
-                      }
-                      tabIndex={0}
-                    >
-                      <div
-                        data-radium={true}
-                        style={
-                          Object {
-                            "display": "table",
-                          }
-                        }
-                      >
-                        <div
-                          data-radium={true}
-                          style={
-                            Object {
-                              "paddingBottom": 0,
-                              "paddingLeft": 16,
-                              "paddingRight": 16,
-                              "paddingTop": 0,
-                              "whiteSpace": "nowrap",
-                            }
-                          }
-                        >
-                          United States
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      data-radium={true}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="menuitem"
-                      style={
-                        Object {
-                          "backgroundColor": "#ffffff",
-                          "paddingBottom": 16,
-                          "paddingLeft": 0,
-                          "paddingRight": 0,
-                          "paddingTop": 16,
-                        }
-                      }
-                      tabIndex={0}
-                    >
-                      <div
-                        data-radium={true}
-                        style={
-                          Object {
-                            "display": "table",
-                          }
-                        }
-                      >
-                        <div
-                          data-radium={true}
-                          style={
-                            Object {
-                              "paddingBottom": 0,
-                              "paddingLeft": 16,
-                              "paddingRight": 16,
-                              "paddingTop": 0,
-                              "whiteSpace": "nowrap",
-                            }
-                          }
-                        >
-                          Canada
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-atomic={true}
-          aria-live="assertive"
-          data-radium={true}
-          id="error_test_id"
-          style={
-            Object {
-              "color": "#B30029",
-              "display": "none",
-              "fontSize": "12px",
-              "marginLeft": "1px",
-              "marginTop": "2px",
-              "opacity": "0",
-              "pointerEvents": "none",
-              "textAlign": "left",
-              "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-            }
-          }
-        />
-      </div>
-    </div>
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
-`;
+.emotion-5 {
+  background-color: #FFF;
+  border: solid 1px #BDBDBD;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #424242;
+  font-size: 16px;
+  height: 56px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  outline: none;
+  position: relative;
+  -webkit-opacity: 1px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 
-exports[`renders invalid Select correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div
-    data-radium={true}
-  >
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "display": "inline-block",
-          "position": "relative",
-          "width": "343px",
-        }
-      }
-    >
-      <div
-        data-radium={true}
-      >
-        <div
-          data-radium={true}
-          onKeyDown={[Function]}
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "position": "relative",
-              }
-            }
-          >
-            <div
-              aria-expanded={false}
-              aria-haspopup={true}
-              data-radium={true}
-              elementAttributes={
-                Object {
-                  "aria-expanded": false,
-                  "aria-haspopup": true,
-                }
-              }
-              onBlur={[Function]}
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              role="button"
-              tabIndex={0}
-            >
-              <div
-                aria-invalid={false}
-                data-radium={true}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                style={
-                  Object {
-                    "WebkitOpacity": 1,
-                    "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-                    "backgroundColor": "#EEEEEE",
-                    "border": "1px dashed #BDBDBD",
-                    "borderRadius": "4px",
-                    "boxSizing": "border-box",
-                    "color": "#757575",
-                    "fontSize": "16px",
-                    "height": "56px",
-                    "marginBottom": 0,
-                    "marginLeft": 0,
-                    "marginRight": 0,
-                    "marginTop": 0,
-                    "outline": "none",
-                    "paddingBottom": 8,
-                    "paddingLeft": 8,
-                    "paddingRight": "25px",
-                    "paddingTop": "25px",
-                    "position": "relative",
-                  }
-                }
-              >
-                <label
-                  data-radium={true}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "color": "#BDBDBD",
-                      "cursor": "not-allowed",
-                      "fontSize": "16px",
-                      "left": 0,
-                      "marginBottom": 0,
-                      "marginLeft": 0,
-                      "marginRight": 0,
-                      "marginTop": 0,
-                      "pointerEvents": "auto",
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": "scale(1) translate(8px, 17px)",
-                      "transformOrigin": "left top",
-                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                      "userSelect": "none",
-                      "zIndex": 1,
-                    }
-                  }
-                >
-                  Country
-                </label>
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "display": "inline-block",
-                      "overflow": "hidden",
-                      "textOverflow": "ellipsis",
-                      "userSelect": "none",
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <div
-                    data-radium={true}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    style={
-                      Object {
-                        "color": "#BDBDBD",
-                        "cursor": "not-allowed",
-                        "fontSize": "16px",
-                        "left": 0,
-                        "opacity": 0,
-                        "pointerEvents": "none",
-                        "position": "absolute",
-                        "top": 0,
-                        "transform": "scale(1) translate(9px, 26px)",
-                        "transformOrigin": "left top",
-                        "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "visibility": "hidden",
-                        "zIndex": 1,
-                      }
-                    }
-                  >
-                    Select a country
-                  </div>
-                </div>
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "display": "flex",
-                      "flexDirection": "column",
-                      "position": "absolute",
-                      "right": "8px",
-                      "top": "22px",
-                      "userSelect": "none",
-                    }
-                  }
-                >
-                  <i
-                    aria-hidden={true}
-                    data-radium={true}
-                    style={
-                      Object {
-                        "color": "#757575",
-                        "fontFamily": "ic-icons",
-                        "fontSize": "16px",
-                        "fontSmoothing": "antialiased",
-                        "fontStyle": "normal",
-                        "fontVariant": "normal",
-                        "fontWeight": "normal",
-                        "lineHeight": "1",
-                        "osxFontSmoothing": "grayscale",
-                        "position": "relative",
-                        "speak": "none",
-                        "textTransform": "none",
-                        "transition": "transform 100ms",
-                        "userSelect": "none",
-                      }
-                    }
-                  >
-                    
-                  </i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "display": "block",
-                "pointerEvents": "none",
-                "position": "absolute",
-                "width": "100%",
-                "zIndex": -9000,
-              }
-            }
-          >
-            <div
-              style={
-                Object {
-                  "overflowX": "visible",
-                  "overflowY": "hidden",
-                  "paddingBottom": "5px",
-                  "paddingLeft": "5px",
-                  "paddingRight": "5px",
-                  "paddingTop": "2px",
-                  "transform": "translateX(-5px)",
-                  "width": "100%",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "transform": "translateY(-30px)",
-                    "transition": "all 200ms ease-in-out",
-                  }
-                }
-              >
-                <div
-                  style={
-                    Object {
-                      "opacity": 0,
-                      "transition": "all 200ms ease-in-out",
-                    }
-                  }
-                >
-                  <div
-                    aria-hidden={true}
-                    onBlur={[Function]}
-                    onKeyDown={[Function]}
-                    role="menu"
-                    style={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "borderRadius": "4px",
-                        "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
-                        "display": "inline-block",
-                        "maxHeight": "500px",
-                        "outline": "none",
-                        "overflowY": "auto",
-                        "paddingBottom": 8,
-                        "paddingLeft": 0,
-                        "paddingRight": 0,
-                        "paddingTop": 8,
-                        "userSelect": "none",
-                        "width": "100%",
-                      }
-                    }
-                    tabIndex={-1}
-                  >
-                    <div
-                      data-radium={true}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="menuitem"
-                      style={
-                        Object {
-                          "backgroundColor": "#ffffff",
-                          "paddingBottom": 16,
-                          "paddingLeft": 0,
-                          "paddingRight": 0,
-                          "paddingTop": 16,
-                        }
-                      }
-                      tabIndex={0}
-                    >
-                      <div
-                        data-radium={true}
-                        style={
-                          Object {
-                            "display": "table",
-                          }
-                        }
-                      >
-                        <div
-                          data-radium={true}
-                          style={
-                            Object {
-                              "paddingBottom": 0,
-                              "paddingLeft": 16,
-                              "paddingRight": 16,
-                              "paddingTop": 0,
-                              "whiteSpace": "nowrap",
-                            }
-                          }
-                        >
-                          United States
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      data-radium={true}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      role="menuitem"
-                      style={
-                        Object {
-                          "backgroundColor": "#ffffff",
-                          "paddingBottom": 16,
-                          "paddingLeft": 0,
-                          "paddingRight": 0,
-                          "paddingTop": 16,
-                        }
-                      }
-                      tabIndex={0}
-                    >
-                      <div
-                        data-radium={true}
-                        style={
-                          Object {
-                            "display": "table",
-                          }
-                        }
-                      >
-                        <div
-                          data-radium={true}
-                          style={
-                            Object {
-                              "paddingBottom": 0,
-                              "paddingLeft": 16,
-                              "paddingRight": 16,
-                              "paddingTop": 0,
-                              "whiteSpace": "nowrap",
-                            }
-                          }
-                        >
-                          Canada
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-atomic={true}
-          aria-live="assertive"
-          data-radium={true}
-          id="error_test_id"
-          style={
-            Object {
-              "color": "#B30029",
-              "display": "none",
-              "fontSize": "12px",
-              "marginLeft": "1px",
-              "marginTop": "2px",
-              "opacity": "0",
-              "pointerEvents": "none",
-              "textAlign": "left",
-              "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-            }
-          }
-        >
-          Select a valid country
-        </div>
-      </div>
-    </div>
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
-`;
+.emotion-5:hover {
+  cursor: pointer;
+}
 
-exports[`uses a custom theme for all child components if one is provided 1`] = `
-<div
-  data-radium={true}
->
+.emotion-0 {
+  color: #757575;
+  cursor: text;
+  font-size: 16px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  pointer-events: auto;
+  position: absolute;
+  -webkit-transform: scale(1) translate(8px,17px);
+  -ms-transform: scale(1) translate(8px,17px);
+  transform: scale(1) translate(8px,17px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.emotion-0:hover {
+  cursor: pointer;
+}
+
+.emotion-2 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+}
+
+.emotion-1 {
+  color: #BDBDBD;
+  cursor: inherit;
+  font-size: 16px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1) translate(9px,26px);
+  -ms-transform: scale(1) translate(9px,26px);
+  transform: scale(1) translate(9px,26px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.emotion-1:hover {
+  cursor: pointer;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  right: 8px;
+  top: 22px;
+}
+
+.emotion-3 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #43B02A;
+}
+
+.emotion-17 {
+  position: absolute;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  z-index: -9000;
+  pointer-events: none;
+}
+
+.emotion-16 {
+  overflow-y: hidden;
+  overflow-x: visible;
+  padding-top: 2px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  width: 100%;
+  -webkit-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  transform: translateX(-5px);
+}
+
+.emotion-15 {
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-14 {
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-13 {
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.16),0 3px 10px 0 rgba(0,0,0,0.23);
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 0;
+  padding-left: 0;
+  overflow-y: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  max-height: 500px;
+  outline: none;
+  width: 100%;
+}
+
+.emotion-9 {
+  background-color: #ffffff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.emotion-9:hover {
+  cursor: pointer;
+  background-color: #F7F7F7;
+}
+
+.emotion-9:focus {
+  background-color: #F7F7F7;
+}
+
+.emotion-8 {
+  display: table;
+}
+
+.emotion-7 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+  white-space: nowrap;
+}
+
+.emotion-18 {
+  color: #B30029;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 1px;
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  text-align: left;
+  -webkit-transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+}
+
+<div>
   <div
-    data-radium={true}
-    style={
-      Object {
-        "display": "inline-block",
-        "position": "relative",
-        "width": "343px",
-      }
-    }
+    className="emotion-19"
   >
-    <div
-      data-radium={true}
-    >
+    <div>
       <div
-        data-radium={true}
         onKeyDown={[Function]}
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "position": "relative",
-            }
-          }
+          className="emotion-6"
         >
           <div
             aria-expanded={false}
             aria-haspopup={true}
-            data-radium={true}
             elementAttributes={
               Object {
                 "aria-expanded": false,
@@ -1547,131 +270,28 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
           >
             <div
               aria-invalid={false}
-              data-radium={true}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={
-                Object {
-                  "WebkitOpacity": 1,
-                  "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-                  "backgroundColor": "#FFF",
-                  "border": "solid 1px #BDBDBD",
-                  "borderRadius": "4px",
-                  "boxSizing": "border-box",
-                  "color": "#424242",
-                  "fontSize": "16px",
-                  "height": "56px",
-                  "marginBottom": 0,
-                  "marginLeft": 0,
-                  "marginRight": 0,
-                  "marginTop": 0,
-                  "outline": "none",
-                  "paddingBottom": 8,
-                  "paddingLeft": 8,
-                  "paddingRight": "25px",
-                  "paddingTop": "25px",
-                  "position": "relative",
-                }
-              }
+              className="emotion-5"
             >
               <label
-                data-radium={true}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                style={
-                  Object {
-                    "color": "#757575",
-                    "cursor": "text",
-                    "fontSize": "16px",
-                    "left": 0,
-                    "marginBottom": 0,
-                    "marginLeft": 0,
-                    "marginRight": 0,
-                    "marginTop": 0,
-                    "pointerEvents": "auto",
-                    "position": "absolute",
-                    "top": 0,
-                    "transform": "scale(1) translate(8px, 17px)",
-                    "transformOrigin": "left top",
-                    "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                    "userSelect": "none",
-                    "zIndex": 1,
-                  }
-                }
+                className="emotion-0"
               >
                 Country
               </label>
               <div
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                    "overflow": "hidden",
-                    "textOverflow": "ellipsis",
-                    "userSelect": "none",
-                    "whiteSpace": "nowrap",
-                  }
-                }
+                className="emotion-2"
               >
                 <div
-                  data-radium={true}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "color": "#BDBDBD",
-                      "cursor": "inherit",
-                      "fontSize": "16px",
-                      "left": 0,
-                      "opacity": 0,
-                      "pointerEvents": "none",
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": "scale(1) translate(9px, 26px)",
-                      "transformOrigin": "left top",
-                      "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                      "visibility": "hidden",
-                      "zIndex": 1,
-                    }
-                  }
+                  className="emotion-1"
                 >
                   Select a country
                 </div>
               </div>
               <div
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "flex",
-                    "flexDirection": "column",
-                    "position": "absolute",
-                    "right": "8px",
-                    "top": "22px",
-                    "userSelect": "none",
-                  }
-                }
+                className="emotion-4"
               >
                 <i
                   aria-hidden={true}
-                  data-radium={true}
-                  style={
-                    Object {
-                      "color": "green",
-                      "fontFamily": "ic-icons",
-                      "fontSize": "16px",
-                      "fontSmoothing": "antialiased",
-                      "fontStyle": "normal",
-                      "fontVariant": "normal",
-                      "fontWeight": "normal",
-                      "lineHeight": "1",
-                      "osxFontSmoothing": "grayscale",
-                      "position": "relative",
-                      "speak": "none",
-                      "textTransform": "none",
-                      "transition": "transform 100ms",
-                      "userSelect": "none",
-                    }
-                  }
+                  className="emotion-3"
                 >
                   
                 </i>
@@ -1680,112 +300,58 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
           </div>
         </div>
         <div
-          data-radium={true}
-          style={
-            Object {
-              "display": "block",
-              "pointerEvents": "none",
-              "position": "absolute",
-              "width": "100%",
-              "zIndex": -9000,
-            }
-          }
+          className="emotion-17"
         >
           <div
-            style={
-              Object {
-                "overflowX": "visible",
-                "overflowY": "hidden",
-                "paddingBottom": "5px",
-                "paddingLeft": "5px",
-                "paddingRight": "5px",
-                "paddingTop": "2px",
-                "transform": "translateX(-5px)",
-                "width": "100%",
-              }
-            }
+            className="emotion-16"
           >
             <div
-              style={
-                Object {
-                  "transform": "translateY(-30px)",
-                  "transition": "all 200ms ease-in-out",
-                }
-              }
+              className="emotion-15"
             >
               <div
-                style={
-                  Object {
-                    "opacity": 0,
-                    "transition": "all 200ms ease-in-out",
-                  }
-                }
+                className="emotion-14"
               >
                 <div
                   aria-hidden={true}
+                  className="emotion-13"
                   onBlur={[Function]}
                   onKeyDown={[Function]}
                   role="menu"
-                  style={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "borderRadius": "4px",
-                      "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
-                      "display": "inline-block",
-                      "maxHeight": "500px",
-                      "outline": "none",
-                      "overflowY": "auto",
-                      "paddingBottom": 8,
-                      "paddingLeft": 0,
-                      "paddingRight": 0,
-                      "paddingTop": 8,
-                      "userSelect": "none",
-                      "width": "100%",
-                    }
-                  }
                   tabIndex={-1}
                 >
                   <div
-                    data-radium={true}
-                    onBlur={[Function]}
+                    className="emotion-9"
                     onClick={[Function]}
                     onFocus={[Function]}
                     onKeyDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
                     role="menuitem"
-                    style={
-                      Object {
-                        "backgroundColor": "#ffffff",
-                        "paddingBottom": 16,
-                        "paddingLeft": 0,
-                        "paddingRight": 0,
-                        "paddingTop": 16,
-                      }
-                    }
                     tabIndex={0}
                   >
                     <div
-                      data-radium={true}
-                      style={
-                        Object {
-                          "display": "table",
-                        }
-                      }
+                      className="emotion-8"
                     >
                       <div
-                        data-radium={true}
-                        style={
-                          Object {
-                            "paddingBottom": 0,
-                            "paddingLeft": 16,
-                            "paddingRight": 16,
-                            "paddingTop": 0,
-                            "whiteSpace": "nowrap",
-                          }
-                        }
+                        className="emotion-7"
                       >
                         United States
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-9"
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex={0}
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <div
+                        className="emotion-7"
+                      >
+                        Canada
                       </div>
                     </div>
                   </div>
@@ -1798,30 +364,1515 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
       <div
         aria-atomic={true}
         aria-live="assertive"
-        data-radium={true}
+        className="emotion-18"
         id="error_test_id"
-        style={
-          Object {
-            "color": "#B30029",
-            "display": "none",
-            "fontSize": "12px",
-            "marginLeft": "1px",
-            "marginTop": "2px",
-            "opacity": "0",
-            "pointerEvents": "none",
-            "textAlign": "left",
-            "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-          }
-        }
       />
     </div>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
+</div>
+`;
+
+exports[`renders Select w/ server error correctly 1`] = `
+.emotion-19 {
+  display: inline-block;
+  position: relative;
+  width: 343px;
+}
+
+.emotion-6 {
+  position: relative;
+}
+
+.emotion-2 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  right: 8px;
+  top: 22px;
+}
+
+.emotion-17 {
+  position: absolute;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  z-index: -9000;
+  pointer-events: none;
+}
+
+.emotion-16 {
+  overflow-y: hidden;
+  overflow-x: visible;
+  padding-top: 2px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  width: 100%;
+  -webkit-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  transform: translateX(-5px);
+}
+
+.emotion-15 {
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-14 {
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-13 {
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.16),0 3px 10px 0 rgba(0,0,0,0.23);
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 0;
+  padding-left: 0;
+  overflow-y: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  max-height: 500px;
+  outline: none;
+  width: 100%;
+}
+
+.emotion-9 {
+  background-color: #ffffff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.emotion-9:hover {
+  cursor: pointer;
+  background-color: #F7F7F7;
+}
+
+.emotion-9:focus {
+  background-color: #F7F7F7;
+}
+
+.emotion-8 {
+  display: table;
+}
+
+.emotion-7 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+  white-space: nowrap;
+}
+
+.emotion-18 {
+  color: #B30029;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 1px;
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  text-align: left;
+  -webkit-transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+}
+
+.emotion-5 {
+  background-color: #FFF;
+  border: solid 1px #BDBDBD;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #424242;
+  font-size: 16px;
+  height: 56px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  outline: none;
+  position: relative;
+  -webkit-opacity: 1px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  border: 1px dashed #BDBDBD;
+  background-color: #EEEEEE;
+  color: #757575;
+}
+
+.emotion-5:hover {
+  cursor: pointer;
+}
+
+.emotion-5:hover {
+  cursor: not-allowed;
+}
+
+.emotion-0 {
+  color: #757575;
+  cursor: text;
+  font-size: 16px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  pointer-events: auto;
+  position: absolute;
+  -webkit-transform: scale(1) translate(8px,17px);
+  -ms-transform: scale(1) translate(8px,17px);
+  transform: scale(1) translate(8px,17px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
+  cursor: not-allowed;
+  color: #BDBDBD;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.emotion-0:hover {
+  cursor: pointer;
+}
+
+.emotion-1 {
+  color: #BDBDBD;
+  cursor: inherit;
+  font-size: 16px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1) translate(9px,26px);
+  -ms-transform: scale(1) translate(9px,26px);
+  transform: scale(1) translate(9px,26px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden;
+  cursor: not-allowed;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.emotion-1:hover {
+  cursor: pointer;
+}
+
+.emotion-3 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #43B02A;
+  color: #757575;
+}
+
+<div>
+  <div
+    className="emotion-19"
+  >
+    <div>
+      <div
+        onKeyDown={[Function]}
+      >
+        <div
+          className="emotion-6"
+        >
+          <div
+            aria-expanded={false}
+            aria-haspopup={true}
+            elementAttributes={
+              Object {
+                "aria-expanded": false,
+                "aria-haspopup": true,
+              }
+            }
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <div
+              aria-invalid={false}
+              className="emotion-5"
+            >
+              <label
+                className="emotion-0"
+              >
+                Country
+              </label>
+              <div
+                className="emotion-2"
+              >
+                <div
+                  className="emotion-1"
+                >
+                  Select a country
+                </div>
+              </div>
+              <div
+                className="emotion-4"
+              >
+                <i
+                  aria-hidden={true}
+                  className="emotion-3"
+                >
+                  
+                </i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="emotion-17"
+        >
+          <div
+            className="emotion-16"
+          >
+            <div
+              className="emotion-15"
+            >
+              <div
+                className="emotion-14"
+              >
+                <div
+                  aria-hidden={true}
+                  className="emotion-13"
+                  onBlur={[Function]}
+                  onKeyDown={[Function]}
+                  role="menu"
+                  tabIndex={-1}
+                >
+                  <div
+                    className="emotion-9"
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex={0}
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <div
+                        className="emotion-7"
+                      >
+                        United States
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-9"
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex={0}
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <div
+                        className="emotion-7"
+                      >
+                        Canada
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-atomic={true}
+        aria-live="assertive"
+        className="emotion-18"
+        id="error_test_id"
+      >
+        Select a valid country
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders disabled Select correctly 1`] = `
+.emotion-19 {
+  display: inline-block;
+  position: relative;
+  width: 343px;
+}
+
+.emotion-6 {
+  position: relative;
+}
+
+.emotion-2 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  right: 8px;
+  top: 22px;
+}
+
+.emotion-17 {
+  position: absolute;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  z-index: -9000;
+  pointer-events: none;
+}
+
+.emotion-16 {
+  overflow-y: hidden;
+  overflow-x: visible;
+  padding-top: 2px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  width: 100%;
+  -webkit-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  transform: translateX(-5px);
+}
+
+.emotion-15 {
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-14 {
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-13 {
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.16),0 3px 10px 0 rgba(0,0,0,0.23);
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 0;
+  padding-left: 0;
+  overflow-y: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  max-height: 500px;
+  outline: none;
+  width: 100%;
+}
+
+.emotion-9 {
+  background-color: #ffffff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.emotion-9:hover {
+  cursor: pointer;
+  background-color: #F7F7F7;
+}
+
+.emotion-9:focus {
+  background-color: #F7F7F7;
+}
+
+.emotion-8 {
+  display: table;
+}
+
+.emotion-7 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+  white-space: nowrap;
+}
+
+.emotion-18 {
+  color: #B30029;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 1px;
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  text-align: left;
+  -webkit-transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+}
+
+.emotion-5 {
+  background-color: #FFF;
+  border: solid 1px #BDBDBD;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #424242;
+  font-size: 16px;
+  height: 56px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  outline: none;
+  position: relative;
+  -webkit-opacity: 1px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  border: 1px dashed #BDBDBD;
+  background-color: #EEEEEE;
+  color: #757575;
+}
+
+.emotion-5:hover {
+  cursor: pointer;
+}
+
+.emotion-5:hover {
+  cursor: not-allowed;
+}
+
+.emotion-0 {
+  color: #757575;
+  cursor: text;
+  font-size: 16px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  pointer-events: auto;
+  position: absolute;
+  -webkit-transform: scale(1) translate(8px,17px);
+  -ms-transform: scale(1) translate(8px,17px);
+  transform: scale(1) translate(8px,17px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
+  cursor: not-allowed;
+  color: #BDBDBD;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.emotion-0:hover {
+  cursor: pointer;
+}
+
+.emotion-1 {
+  color: #BDBDBD;
+  cursor: inherit;
+  font-size: 16px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1) translate(9px,26px);
+  -ms-transform: scale(1) translate(9px,26px);
+  transform: scale(1) translate(9px,26px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden;
+  cursor: not-allowed;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.emotion-1:hover {
+  cursor: pointer;
+}
+
+.emotion-3 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #43B02A;
+  color: #757575;
+}
+
+<div>
+  <div
+    className="emotion-19"
+  >
+    <div>
+      <div
+        onKeyDown={[Function]}
+      >
+        <div
+          className="emotion-6"
+        >
+          <div
+            aria-expanded={false}
+            aria-haspopup={true}
+            elementAttributes={
+              Object {
+                "aria-expanded": false,
+                "aria-haspopup": true,
+              }
+            }
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <div
+              aria-invalid={false}
+              className="emotion-5"
+            >
+              <label
+                className="emotion-0"
+              >
+                Country
+              </label>
+              <div
+                className="emotion-2"
+              >
+                <div
+                  className="emotion-1"
+                >
+                  Select a country
+                </div>
+              </div>
+              <div
+                className="emotion-4"
+              >
+                <i
+                  aria-hidden={true}
+                  className="emotion-3"
+                >
+                  
+                </i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="emotion-17"
+        >
+          <div
+            className="emotion-16"
+          >
+            <div
+              className="emotion-15"
+            >
+              <div
+                className="emotion-14"
+              >
+                <div
+                  aria-hidden={true}
+                  className="emotion-13"
+                  onBlur={[Function]}
+                  onKeyDown={[Function]}
+                  role="menu"
+                  tabIndex={-1}
+                >
+                  <div
+                    className="emotion-9"
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex={0}
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <div
+                        className="emotion-7"
+                      >
+                        United States
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-9"
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex={0}
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <div
+                        className="emotion-7"
+                      >
+                        Canada
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-atomic={true}
+        aria-live="assertive"
+        className="emotion-18"
+        id="error_test_id"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders invalid Select correctly 1`] = `
+.emotion-19 {
+  display: inline-block;
+  position: relative;
+  width: 343px;
+}
+
+.emotion-6 {
+  position: relative;
+}
+
+.emotion-2 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  right: 8px;
+  top: 22px;
+}
+
+.emotion-17 {
+  position: absolute;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  z-index: -9000;
+  pointer-events: none;
+}
+
+.emotion-16 {
+  overflow-y: hidden;
+  overflow-x: visible;
+  padding-top: 2px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  width: 100%;
+  -webkit-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  transform: translateX(-5px);
+}
+
+.emotion-15 {
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-14 {
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-13 {
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.16),0 3px 10px 0 rgba(0,0,0,0.23);
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 0;
+  padding-left: 0;
+  overflow-y: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  max-height: 500px;
+  outline: none;
+  width: 100%;
+}
+
+.emotion-9 {
+  background-color: #ffffff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.emotion-9:hover {
+  cursor: pointer;
+  background-color: #F7F7F7;
+}
+
+.emotion-9:focus {
+  background-color: #F7F7F7;
+}
+
+.emotion-8 {
+  display: table;
+}
+
+.emotion-7 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+  white-space: nowrap;
+}
+
+.emotion-18 {
+  color: #B30029;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 1px;
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  text-align: left;
+  -webkit-transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+}
+
+.emotion-5 {
+  background-color: #FFF;
+  border: solid 1px #BDBDBD;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #424242;
+  font-size: 16px;
+  height: 56px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  outline: none;
+  position: relative;
+  -webkit-opacity: 1px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  border: 1px dashed #BDBDBD;
+  background-color: #EEEEEE;
+  color: #757575;
+}
+
+.emotion-5:hover {
+  cursor: pointer;
+}
+
+.emotion-5:hover {
+  cursor: not-allowed;
+}
+
+.emotion-0 {
+  color: #757575;
+  cursor: text;
+  font-size: 16px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  pointer-events: auto;
+  position: absolute;
+  -webkit-transform: scale(1) translate(8px,17px);
+  -ms-transform: scale(1) translate(8px,17px);
+  transform: scale(1) translate(8px,17px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
+  cursor: not-allowed;
+  color: #BDBDBD;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.emotion-0:hover {
+  cursor: pointer;
+}
+
+.emotion-1 {
+  color: #BDBDBD;
+  cursor: inherit;
+  font-size: 16px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1) translate(9px,26px);
+  -ms-transform: scale(1) translate(9px,26px);
+  transform: scale(1) translate(9px,26px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden;
+  cursor: not-allowed;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.emotion-1:hover {
+  cursor: pointer;
+}
+
+.emotion-3 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #43B02A;
+  color: #757575;
+}
+
+<div>
+  <div
+    className="emotion-19"
+  >
+    <div>
+      <div
+        onKeyDown={[Function]}
+      >
+        <div
+          className="emotion-6"
+        >
+          <div
+            aria-expanded={false}
+            aria-haspopup={true}
+            elementAttributes={
+              Object {
+                "aria-expanded": false,
+                "aria-haspopup": true,
+              }
+            }
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <div
+              aria-invalid={false}
+              className="emotion-5"
+            >
+              <label
+                className="emotion-0"
+              >
+                Country
+              </label>
+              <div
+                className="emotion-2"
+              >
+                <div
+                  className="emotion-1"
+                >
+                  Select a country
+                </div>
+              </div>
+              <div
+                className="emotion-4"
+              >
+                <i
+                  aria-hidden={true}
+                  className="emotion-3"
+                >
+                  
+                </i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="emotion-17"
+        >
+          <div
+            className="emotion-16"
+          >
+            <div
+              className="emotion-15"
+            >
+              <div
+                className="emotion-14"
+              >
+                <div
+                  aria-hidden={true}
+                  className="emotion-13"
+                  onBlur={[Function]}
+                  onKeyDown={[Function]}
+                  role="menu"
+                  tabIndex={-1}
+                >
+                  <div
+                    className="emotion-9"
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex={0}
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <div
+                        className="emotion-7"
+                      >
+                        United States
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-9"
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex={0}
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <div
+                        className="emotion-7"
+                      >
+                        Canada
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-atomic={true}
+        aria-live="assertive"
+        className="emotion-18"
+        id="error_test_id"
+      >
+        Select a valid country
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`uses a custom theme for all child components if one is provided 1`] = `
+.emotion-16 {
+  display: inline-block;
+  position: relative;
+  width: 343px;
+}
+
+.emotion-6 {
+  position: relative;
+}
+
+.emotion-5 {
+  background-color: #FFF;
+  border: solid 1px #BDBDBD;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #424242;
+  font-size: 16px;
+  height: 56px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  outline: none;
+  position: relative;
+  -webkit-opacity: 1px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.emotion-5:hover {
+  cursor: pointer;
+}
+
+.emotion-0 {
+  color: #757575;
+  cursor: text;
+  font-size: 16px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  pointer-events: auto;
+  position: absolute;
+  -webkit-transform: scale(1) translate(8px,17px);
+  -ms-transform: scale(1) translate(8px,17px);
+  transform: scale(1) translate(8px,17px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.emotion-0:hover {
+  cursor: pointer;
+}
+
+.emotion-2 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+}
+
+.emotion-1 {
+  color: #BDBDBD;
+  cursor: inherit;
+  font-size: 16px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1) translate(9px,26px);
+  -ms-transform: scale(1) translate(9px,26px);
+  transform: scale(1) translate(9px,26px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.emotion-1:hover {
+  cursor: pointer;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  right: 8px;
+  top: 22px;
+}
+
+.emotion-14 {
+  position: absolute;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  z-index: -9000;
+  pointer-events: none;
+}
+
+.emotion-13 {
+  overflow-y: hidden;
+  overflow-x: visible;
+  padding-top: 2px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  width: 100%;
+  -webkit-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  transform: translateX(-5px);
+}
+
+.emotion-12 {
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-11 {
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-10 {
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.16),0 3px 10px 0 rgba(0,0,0,0.23);
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 0;
+  padding-left: 0;
+  overflow-y: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  max-height: 500px;
+  outline: none;
+  width: 100%;
+}
+
+.emotion-9 {
+  background-color: #ffffff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.emotion-9:hover {
+  cursor: pointer;
+  background-color: #F7F7F7;
+}
+
+.emotion-9:focus {
+  background-color: #F7F7F7;
+}
+
+.emotion-8 {
+  display: table;
+}
+
+.emotion-7 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+  white-space: nowrap;
+}
+
+.emotion-15 {
+  color: #B30029;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 1px;
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  text-align: left;
+  -webkit-transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+}
+
+.emotion-3 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: green;
+}
+
+<div
+  className="emotion-16"
+>
+  <div>
+    <div
+      onKeyDown={[Function]}
+    >
+      <div
+        className="emotion-6"
+      >
+        <div
+          aria-expanded={false}
+          aria-haspopup={true}
+          elementAttributes={
+            Object {
+              "aria-expanded": false,
+              "aria-haspopup": true,
+            }
+          }
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            aria-invalid={false}
+            className="emotion-5"
+          >
+            <label
+              className="emotion-0"
+            >
+              Country
+            </label>
+            <div
+              className="emotion-2"
+            >
+              <div
+                className="emotion-1"
+              >
+                Select a country
+              </div>
+            </div>
+            <div
+              className="emotion-4"
+            >
+              <i
+                aria-hidden={true}
+                className="emotion-3"
+              >
+                
+              </i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="emotion-14"
+      >
+        <div
+          className="emotion-13"
+        >
+          <div
+            className="emotion-12"
+          >
+            <div
+              className="emotion-11"
+            >
+              <div
+                aria-hidden={true}
+                className="emotion-10"
+                onBlur={[Function]}
+                onKeyDown={[Function]}
+                role="menu"
+                tabIndex={-1}
+              >
+                <div
+                  className="emotion-9"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  role="menuitem"
+                  tabIndex={0}
+                >
+                  <div
+                    className="emotion-8"
+                  >
+                    <div
+                      className="emotion-7"
+                    >
+                      United States
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-atomic={true}
+      aria-live="assertive"
+      className="emotion-15"
+      id="error_test_id"
+    />
+  </div>
 </div>
 `;

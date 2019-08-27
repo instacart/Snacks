@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import withTheme from '../../styles/themer/withTheme'
 import { themePropTypes } from '../../styles/themer/utils'
 
@@ -27,7 +26,7 @@ const Link = props => {
   return (
     <a
       href={props.href}
-      style={[styles, props.style]}
+      css={[styles, props.style]}
       onClick={e => {
         props.onClick(e, props)
       }}
@@ -45,10 +44,18 @@ Link.propTypes = {
   /** Callback fired when the link is clicked. */
   onClick: PropTypes.func,
 
+  className: PropTypes.string,
+
   /** The link's text content. */
   children: PropTypes.node,
 
-  /** Optional styles. */
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.object,
 
   /** Any addional props. */
@@ -63,4 +70,4 @@ Link.defaultProps = {
   onClick: noop,
 }
 
-export default withTheme(Radium(Link))
+export default withTheme(Link)

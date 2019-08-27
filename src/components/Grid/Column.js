@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import responsive from '../../styles/responsive'
 import { supportsCSSGrid } from '../../utils/detectFeature'
 
@@ -62,7 +61,7 @@ const getSizedStyles = sizes => {
 }
 
 const Column = props => {
-  const { sizes } = props
+  const { className, sizes } = props
 
   if (props.sizes.xs) {
     console.warn(
@@ -75,10 +74,15 @@ const Column = props => {
 
   const styles = supportsCSSGrid() ? getSizedStyles(sizes) : getLecacySizedStyles(sizes)
 
-  return <div style={[styles, props.style]}>{props.children}</div>
+  return (
+    <div className={className} css={[styles, props.style]}>
+      {props.children}
+    </div>
+  )
 }
 
 Column.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.node,
   /** object where keys are breakpoint and value is number of columns to span at that breakpoint */
   sizes: PropTypes.shape({
@@ -89,7 +93,13 @@ Column.propTypes = {
     lg: PropTypes.number,
     xl: PropTypes.number,
   }),
-  /** Optional style overrides */
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.object,
 }
 
@@ -97,4 +107,4 @@ Column.defaultProps = {
   sizes: {},
 }
 
-export default Radium(Column)
+export default Column

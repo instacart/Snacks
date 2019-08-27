@@ -10,7 +10,7 @@ const style = {
   width: '100%',
 }
 
-const HelperText = ({ helperText }) => (helperText ? <div style={style}>{helperText}</div> : null)
+const HelperText = ({ helperText }) => (helperText ? <div css={style}>{helperText}</div> : null)
 
 HelperText.propTypes = {
   /** Text */

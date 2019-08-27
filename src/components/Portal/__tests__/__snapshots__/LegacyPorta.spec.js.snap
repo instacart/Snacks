@@ -1,15 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Legacy Portal renders properly 1`] = `
-<div
-  data-radium={true}
->
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
-`;
+exports[`Legacy Portal renders properly 1`] = `null`;

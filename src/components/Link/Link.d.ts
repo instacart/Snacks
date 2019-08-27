@@ -1,8 +1,11 @@
 import * as React from 'react'
-import { RadiumStyles, ElementAttributes } from '../..'
+import { Interpolation } from '@emotion/core'
+import { ElementAttributes } from '../..'
 import { WithThemeInjectedProps, ApplyWithTheme } from '../../styles/themer/withTheme'
 
 export interface LinkProps extends WithThemeInjectedProps {
+  className?: string
+
   /** The link's text content. */
   children?: React.ReactNode
 
@@ -15,7 +18,14 @@ export interface LinkProps extends WithThemeInjectedProps {
   /** Any additonal props */
   elementAttributes?: ElementAttributes<React.ComponentPropsWithoutRef<'a'>>
 
-  style?: RadiumStyles
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  style?: Interpolation
 }
 
 declare const Link: ApplyWithTheme<React.ComponentType<LinkProps>>

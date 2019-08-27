@@ -1,6 +1,6 @@
 import * as React from 'react'
+import { Interpolation } from '@emotion/core'
 import { MenuProps } from './Menu'
-import { RadiumStyles } from '../..'
 
 export interface DropdownMenuProps<TValue extends string | number | boolean = string> {
   /** MenuItems or Divider */
@@ -27,11 +27,26 @@ export interface DropdownMenuProps<TValue extends string | number | boolean = st
   /** Callback function fired when a MenuItem is selected */
   onSelect?: MenuProps<TValue>['onSelect']
 
-  /** Customize style root element */
-  style?: RadiumStyles
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  style?: Interpolation
+
+  /**
+   * Customize style of menu parent
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  menuContainerStyle?: Interpolation
 
   /** Customize style of menu parent */
-  menuContainerStyle?: RadiumStyles
+  menuContainerClassName?: string
 
   /** Props passed to Menu component */
   menuProps?: MenuProps

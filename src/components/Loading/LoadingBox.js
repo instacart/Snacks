@@ -1,30 +1,37 @@
-import Radium from 'radium'
+import { keyframes } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { colors } from '../../styles'
 
-const buildKeyFramesStyles = (startColor, endColor, name) => ({
-  animationName: Radium.keyframes(
-    {
-      '0%': { backgroundColor: startColor },
-      '50%': { backgroundColor: endColor },
-      '100%': { backgroundColor: startColor },
-    },
-    name
-  ),
-  backgroundColor: startColor,
-})
+const buildKeyFrames = (startColor, endColor) =>
+  keyframes({
+    '0%': { backgroundColor: startColor },
+    '50%': { backgroundColor: endColor },
+    '100%': { backgroundColor: startColor },
+  })
+
+const animations = {
+  loading: buildKeyFrames(colors.GRAY_93, colors.GRAY_88),
+  darkLoading: buildKeyFrames(colors.GRAY_88, colors.GRAY_74),
+  lightLoading: buildKeyFrames(colors.GRAY_97, colors.GRAY_93),
+}
 
 const baseLoadingStyle = {
-  animation: 'x 3s ease-in-out infinite',
-  ...buildKeyFramesStyles(colors.GRAY_93, colors.GRAY_88, 'loading'),
+  animation: `${animations.loading} 3s ease-in-out infinite`,
+  background: colors.GRAY_93,
   width: '100%',
   height: '20px',
 }
 
 const backgroundStyles = {
-  dark: buildKeyFramesStyles(colors.GRAY_88, colors.GRAY_74, 'darkLoading'),
-  light: buildKeyFramesStyles(colors.GRAY_97, colors.GRAY_93, 'lightLoading'),
+  dark: {
+    animation: `${animations.darkLoading} 3s ease-in-out infinite`,
+    background: colors.GRAY_88,
+  },
+  light: {
+    animation: `${animations.lightLoading} 3s ease-in-out infinite`,
+    background: colors.GRAY_97,
+  },
 }
 
 const shapeStyles = {
@@ -54,9 +61,10 @@ const determineStyle = (background, shape, size) => {
   }
 }
 
-@Radium
 class LoadingBox extends PureComponent {
   static propTypes = {
+    className: PropTypes.string,
+
     /** Use for rendering dark backgrounds. */
     background: PropTypes.oneOf(['light', 'dark']),
 
@@ -70,12 +78,18 @@ class LoadingBox extends PureComponent {
      */
     size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-    /** Optional style overrides. */
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.object,
   }
 
   render() {
-    const { background, shape, size, style } = this.props
+    const { className, background, shape, size, style } = this.props
 
     const boxStyle = {
       ...baseLoadingStyle,
@@ -83,7 +97,7 @@ class LoadingBox extends PureComponent {
       ...style,
     }
 
-    return <div style={boxStyle} />
+    return <div className={className} css={boxStyle} />
   }
 }
 

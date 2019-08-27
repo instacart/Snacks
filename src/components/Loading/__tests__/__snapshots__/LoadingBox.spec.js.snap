@@ -1,253 +1,383 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the LoadingBox with a combination of props 1`] = `
-<div
-  data-radium={true}
->
-  <div
-    data-radium={true}
-    style={
-      Object {
-        "animation": "x 3s ease-in-out infinite",
-        "animationName": "darkLoading-radium-animation-f5235588",
-        "backgroundColor": "#E0E0E0",
-        "borderRadius": "50%",
-        "height": 200,
-        "width": 200,
-      }
-    }
-  />
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@keyframes darkLoading-radium-animation-f5235588 {
-0%{background-color: #E0E0E0;}
-50%{background-color: #BDBDBD;}
-100%{background-color: #E0E0E0;}
+@keyframes animation-0 {
+  0% {
+    background-color: #E0E0E0;
+  }
+
+  50% {
+    background-color: #BDBDBD;
+  }
+
+  100% {
+    background-color: #E0E0E0;
+  }
 }
-",
-      }
-    }
-  />
-</div>
+
+@keyframes animation-0 {
+  0% {
+    background-color: #E0E0E0;
+  }
+
+  50% {
+    background-color: #BDBDBD;
+  }
+
+  100% {
+    background-color: #E0E0E0;
+  }
+}
+
+.emotion-0 {
+  -webkit-animation: animation-0 3s ease-in-out infinite;
+  animation: animation-0 3s ease-in-out infinite;
+  background: #E0E0E0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+<div
+  className="emotion-0"
+/>
 `;
 
 exports[`renders the LoadingBox with a size 1`] = `
-<div
-  data-radium={true}
->
-  <div
-    data-radium={true}
-    style={
-      Object {
-        "animation": "x 3s ease-in-out infinite",
-        "animationName": "loading-radium-animation-2dabe53b",
-        "backgroundColor": "#EEEEEE",
-        "height": "20px",
-        "width": 100,
-      }
-    }
-  />
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@keyframes loading-radium-animation-2dabe53b {
-0%{background-color: #EEEEEE;}
-50%{background-color: #E0E0E0;}
-100%{background-color: #EEEEEE;}
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
 }
-",
-      }
-    }
-  />
-</div>
+
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
+}
+
+.emotion-0 {
+  -webkit-animation: animation-0 3s ease-in-out infinite;
+  animation: animation-0 3s ease-in-out infinite;
+  background: #EEEEEE;
+  width: 100px;
+  height: 20px;
+}
+
+<div
+  className="emotion-0"
+/>
 `;
 
 exports[`renders the circle LoadingBox 1`] = `
-<div
-  data-radium={true}
->
-  <div
-    data-radium={true}
-    style={
-      Object {
-        "animation": "x 3s ease-in-out infinite",
-        "animationName": "loading-radium-animation-2dabe53b",
-        "backgroundColor": "#EEEEEE",
-        "borderRadius": "50%",
-        "height": 100,
-        "width": 100,
-      }
-    }
-  />
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@keyframes loading-radium-animation-2dabe53b {
-0%{background-color: #EEEEEE;}
-50%{background-color: #E0E0E0;}
-100%{background-color: #EEEEEE;}
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
 }
-",
-      }
-    }
-  />
-</div>
+
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
+}
+
+.emotion-0 {
+  -webkit-animation: animation-0 3s ease-in-out infinite;
+  animation: animation-0 3s ease-in-out infinite;
+  background: #EEEEEE;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+<div
+  className="emotion-0"
+/>
 `;
 
 exports[`renders the dark LoadingBox 1`] = `
-<div
-  data-radium={true}
->
-  <div
-    data-radium={true}
-    style={
-      Object {
-        "animation": "x 3s ease-in-out infinite",
-        "animationName": "darkLoading-radium-animation-f5235588",
-        "backgroundColor": "#E0E0E0",
-        "height": "20px",
-        "width": "100%",
-      }
-    }
-  />
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@keyframes darkLoading-radium-animation-f5235588 {
-0%{background-color: #E0E0E0;}
-50%{background-color: #BDBDBD;}
-100%{background-color: #E0E0E0;}
+@keyframes animation-0 {
+  0% {
+    background-color: #E0E0E0;
+  }
+
+  50% {
+    background-color: #BDBDBD;
+  }
+
+  100% {
+    background-color: #E0E0E0;
+  }
 }
-",
-      }
-    }
-  />
-</div>
+
+.emotion-0 {
+  -webkit-animation: animation-0 3s ease-in-out infinite;
+  animation: animation-0 3s ease-in-out infinite;
+  background: #E0E0E0;
+  width: 100%;
+  height: 20px;
+}
+
+<div
+  className="emotion-0"
+/>
 `;
 
 exports[`renders the light LoadingBox 1`] = `
-<div
-  data-radium={true}
->
-  <div
-    data-radium={true}
-    style={
-      Object {
-        "animation": "x 3s ease-in-out infinite",
-        "animationName": "lightLoading-radium-animation-438c49ee",
-        "backgroundColor": "#F7F7F7",
-        "height": "20px",
-        "width": "100%",
-      }
-    }
-  />
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@keyframes lightLoading-radium-animation-438c49ee {
-0%{background-color: #F7F7F7;}
-50%{background-color: #EEEEEE;}
-100%{background-color: #F7F7F7;}
+@keyframes animation-0 {
+  0% {
+    background-color: #F7F7F7;
+  }
+
+  50% {
+    background-color: #EEEEEE;
+  }
+
+  100% {
+    background-color: #F7F7F7;
+  }
 }
-",
-      }
-    }
-  />
-</div>
+
+.emotion-0 {
+  -webkit-animation: animation-0 3s ease-in-out infinite;
+  animation: animation-0 3s ease-in-out infinite;
+  background: #F7F7F7;
+  width: 100%;
+  height: 20px;
+}
+
+<div
+  className="emotion-0"
+/>
 `;
 
 exports[`renders the line LoadingBox 1`] = `
-<div
-  data-radium={true}
->
-  <div
-    data-radium={true}
-    style={
-      Object {
-        "animation": "x 3s ease-in-out infinite",
-        "animationName": "loading-radium-animation-2dabe53b",
-        "backgroundColor": "#EEEEEE",
-        "height": "20px",
-        "marginBottom": 10,
-        "marginTop": 10,
-        "width": 150,
-      }
-    }
-  />
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@keyframes loading-radium-animation-2dabe53b {
-0%{background-color: #EEEEEE;}
-50%{background-color: #E0E0E0;}
-100%{background-color: #EEEEEE;}
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
 }
-",
-      }
-    }
-  />
-</div>
+
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
+}
+
+.emotion-0 {
+  -webkit-animation: animation-0 3s ease-in-out infinite;
+  animation: animation-0 3s ease-in-out infinite;
+  background: #EEEEEE;
+  width: 150px;
+  height: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+<div
+  className="emotion-0"
+/>
 `;
 
 exports[`renders the square LoadingBox 1`] = `
-<div
-  data-radium={true}
->
-  <div
-    data-radium={true}
-    style={
-      Object {
-        "animation": "x 3s ease-in-out infinite",
-        "animationName": "loading-radium-animation-2dabe53b",
-        "backgroundColor": "#EEEEEE",
-        "height": 100,
-        "width": 100,
-      }
-    }
-  />
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@keyframes loading-radium-animation-2dabe53b {
-0%{background-color: #EEEEEE;}
-50%{background-color: #E0E0E0;}
-100%{background-color: #EEEEEE;}
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
 }
-",
-      }
-    }
-  />
-</div>
+
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
+}
+
+.emotion-0 {
+  -webkit-animation: animation-0 3s ease-in-out infinite;
+  animation: animation-0 3s ease-in-out infinite;
+  background: #EEEEEE;
+  width: 100px;
+  height: 100px;
+}
+
+<div
+  className="emotion-0"
+/>
 `;
 
 exports[`renders the standard LoadingBox correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div
-    data-radium={true}
-    style={
-      Object {
-        "animation": "x 3s ease-in-out infinite",
-        "animationName": "loading-radium-animation-2dabe53b",
-        "backgroundColor": "#EEEEEE",
-        "height": "20px",
-        "width": "50px",
-      }
-    }
-  />
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@keyframes loading-radium-animation-2dabe53b {
-0%{background-color: #EEEEEE;}
-50%{background-color: #E0E0E0;}
-100%{background-color: #EEEEEE;}
+@keyframes animation-0 {
+  0% {
+    background-color: #EEEEEE;
+  }
+
+  50% {
+    background-color: #E0E0E0;
+  }
+
+  100% {
+    background-color: #EEEEEE;
+  }
 }
-",
-      }
-    }
-  />
-</div>
+
+.emotion-0 {
+  -webkit-animation: animation-0 3s ease-in-out infinite;
+  animation: animation-0 3s ease-in-out infinite;
+  background: #EEEEEE;
+  width: 50px;
+  height: 20px;
+}
+
+<div
+  className="emotion-0"
+/>
 `;

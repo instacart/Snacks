@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import NavigationPill from './NavigationPill'
 import ScrollTrack from '../ScrollTrack/ScrollTrack'
 import colors from '../../styles/colors'
@@ -37,7 +36,7 @@ const NavigationPills = props => {
     }
 
     // eslint-disable-next-line jsx-a11y/label-has-associated-control
-    return <label style={styles.labelStyles}>{props.label}</label>
+    return <label css={styles.labelStyles}>{props.label}</label>
   }
 
   const renderPill = (pill, idx) => {
@@ -61,9 +60,9 @@ const NavigationPills = props => {
 
   return (
     <ScrollTrack>
-      <div style={wrapperStyles} ref="pillsTrack" {...props.elementAttributes}>
+      <div css={wrapperStyles} {...props.elementAttributes}>
         {renderLabel()}
-        <ul style={pillsContainerStyles} {...props.listItemAttributes}>
+        <ul css={pillsContainerStyles} {...props.listItemAttributes}>
           {props.pills.map(renderPill)}
         </ul>
       </div>
@@ -95,4 +94,4 @@ NavigationPills.defaultProps = {
   elementAttributes: {},
 }
 
-export default Radium(NavigationPills)
+export default NavigationPills

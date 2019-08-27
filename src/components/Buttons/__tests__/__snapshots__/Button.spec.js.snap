@@ -1,979 +1,1048 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button applies the elementAttributes prop correctly 1`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  height: 40px;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover {
+  background-color: #177D05;
+}
+
+.emotion-0:active {
+  background-color: #146e04;
+}
+
+.emotion-0:focus {
+  background-color: #146e04;
+}
+
+<button
+  aria-label="foo"
+  className="emotion-0"
+  disabled={false}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    aria-label="foo"
-    data-radium={true}
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "#43B02A",
-        "backgroundImage": "none",
-        "border": "1px solid transparent",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#FFFFFF",
-        "cursor": "pointer",
-        "display": "inline-flex",
-        "fontSize": "16px",
-        "fontWeight": 600,
-        "height": "40px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
-  >
-    Hi
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Hi
+</button>
 `;
 
 exports[`Button can render as a link if an href is provided 1`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  height: 40px;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.emotion-0:hover {
+  background-color: #177D05;
+}
+
+.emotion-0:active {
+  background-color: #146e04;
+}
+
+.emotion-0:focus {
+  background-color: #146e04;
+}
+
+<a
+  className="emotion-0"
+  disabled={false}
+  href="/carrot"
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <a
-    data-radium={true}
-    disabled={false}
-    href="/carrot"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "#43B02A",
-        "backgroundImage": "none",
-        "border": "1px solid transparent",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "boxSizing": "border-box",
-        "color": "#FFFFFF",
-        "cursor": "pointer",
-        "display": "flex",
-        "fontSize": "16px",
-        "fontWeight": 600,
-        "height": "40px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
-  >
-    Hi
-  </a>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Hi
+</a>
 `;
 
 exports[`Button renders all sizes correctly 1`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 24px;
+  font-size: 11px;
+  text-transform: uppercase;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover {
+  background-color: #177D05;
+}
+
+.emotion-0:active {
+  background-color: #146e04;
+}
+
+.emotion-0:focus {
+  background-color: #146e04;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    data-radium={true}
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "#43B02A",
-        "backgroundImage": "none",
-        "border": "1px solid transparent",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#FFFFFF",
-        "cursor": "pointer",
-        "display": "inline-flex",
-        "fontSize": "11px",
-        "fontWeight": 600,
-        "height": "24px",
-        "paddingLeft": 8,
-        "paddingRight": 8,
-        "textTransform": "uppercase",
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
-  >
-    Primary Button
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Primary Button
+</button>
 `;
 
 exports[`Button renders all sizes correctly 2`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 14px;
+  height: 32px;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover {
+  background-color: #177D05;
+}
+
+.emotion-0:active {
+  background-color: #146e04;
+}
+
+.emotion-0:focus {
+  background-color: #146e04;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    data-radium={true}
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "#43B02A",
-        "backgroundImage": "none",
-        "border": "1px solid transparent",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#FFFFFF",
-        "cursor": "pointer",
-        "display": "inline-flex",
-        "fontSize": "14px",
-        "fontWeight": 600,
-        "height": "32px",
-        "paddingLeft": 8,
-        "paddingRight": 8,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
-  >
-    Primary Button
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Primary Button
+</button>
 `;
 
 exports[`Button renders all sizes correctly 3`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  height: 40px;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover {
+  background-color: #177D05;
+}
+
+.emotion-0:active {
+  background-color: #146e04;
+}
+
+.emotion-0:focus {
+  background-color: #146e04;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    data-radium={true}
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "#43B02A",
-        "backgroundImage": "none",
-        "border": "1px solid transparent",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#FFFFFF",
-        "cursor": "pointer",
-        "display": "inline-flex",
-        "fontSize": "16px",
-        "fontWeight": 600,
-        "height": "40px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
-  >
-    Primary Button
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Primary Button
+</button>
 `;
 
 exports[`Button renders all sizes correctly 4`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-size: 18px;
+  height: 48px;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover {
+  background-color: #177D05;
+}
+
+.emotion-0:active {
+  background-color: #146e04;
+}
+
+.emotion-0:focus {
+  background-color: #146e04;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    data-radium={true}
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "#43B02A",
-        "backgroundImage": "none",
-        "border": "1px solid transparent",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#FFFFFF",
-        "cursor": "pointer",
-        "display": "inline-flex",
-        "fontSize": "18px",
-        "fontWeight": 600,
-        "height": "48px",
-        "paddingLeft": 24,
-        "paddingRight": 24,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
-  >
-    Primary Button
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Primary Button
+</button>
 `;
 
 exports[`Button renders all snacks button variants correctly 1`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  height: 40px;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover {
+  background-color: #177D05;
+}
+
+.emotion-0:active {
+  background-color: #146e04;
+}
+
+.emotion-0:focus {
+  background-color: #146e04;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    data-radium={true}
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "#43B02A",
-        "backgroundImage": "none",
-        "border": "1px solid transparent",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#FFFFFF",
-        "cursor": "pointer",
-        "display": "inline-flex",
-        "fontSize": "16px",
-        "fontWeight": 600,
-        "height": "40px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
-  >
-    Hi
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Hi
+</button>
 `;
 
 exports[`Button renders all snacks button variants correctly 2`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  height: 40px;
+  background-color: transparent;
+  color: #43B02A;
+  border: 1px solid #43B02A;
+}
+
+.emotion-0:hover {
+  color: #177D05;
+  border: 1px solid #177D05;
+}
+
+.emotion-0:active {
+  color: #146e04;
+  border: 1px solid #146e04;
+}
+
+.emotion-0:focus {
+  color: #146e04;
+  border: 1px solid #146e04;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    data-radium={true}
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "transparent",
-        "backgroundImage": "none",
-        "border": "1px solid #43B02A",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#43B02A",
-        "cursor": "pointer",
-        "display": "inline-flex",
-        "fontSize": "16px",
-        "fontWeight": 600,
-        "height": "40px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
-  >
-    Hi
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Hi
+</button>
 `;
 
 exports[`Button renders all snacks button variants correctly 3`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  height: 40px;
+  background-color: transparent;
+  color: #43B02A;
+}
+
+.emotion-0:hover {
+  color: #177D05;
+}
+
+.emotion-0:active {
+  color: #146e04;
+}
+
+.emotion-0:focus {
+  color: #146e04;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    data-radium={true}
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "transparent",
-        "backgroundImage": "none",
-        "border": "1px solid transparent",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#43B02A",
-        "cursor": "pointer",
-        "display": "inline-flex",
-        "fontSize": "16px",
-        "fontWeight": 600,
-        "height": "40px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
-  >
-    Hi
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Hi
+</button>
 `;
 
 exports[`Button renders all snacks button variants correctly 4`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  height: 40px;
+  background-color: #FFFFFF;
+  color: #E6003D;
+  border: 1px dashed #E6003D;
+}
+
+.emotion-0:hover {
+  border: 1px dashed #CC0033;
+  color: #CC0033;
+}
+
+.emotion-0:active {
+  border: 1px dashed #B30029;
+  color: #B30029;
+}
+
+.emotion-0:focus {
+  border: 1px dashed #B30029;
+  color: #B30029;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    data-radium={true}
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "#FFFFFF",
-        "backgroundImage": "none",
-        "border": "1px dashed #E6003D",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#E6003D",
-        "cursor": "pointer",
-        "display": "inline-flex",
-        "fontSize": "16px",
-        "fontWeight": 600,
-        "height": "40px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
-  >
-    Hi
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Hi
+</button>
 `;
 
 exports[`Button renders correctly when disabled 1`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  height: 40px;
+  background-color: #BDBDBD;
+  color: #FFFFFF;
+  cursor: not-allowed;
+}
+
+<button
+  className="emotion-0"
+  disabled={true}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    data-radium={true}
-    disabled={true}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "#BDBDBD",
-        "backgroundImage": "none",
-        "border": "1px solid transparent",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#FFFFFF",
-        "cursor": "not-allowed",
-        "display": "inline-flex",
-        "fontSize": "16px",
-        "fontWeight": 600,
-        "height": "40px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
-  >
-    Hi
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Hi
+</button>
 `;
 
 exports[`Button renders icons correctly 1`] = `
-<div
-  data-radium={true}
+.emotion-2 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  height: 40px;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+.emotion-2:hover {
+  background-color: #177D05;
+}
+
+.emotion-2:active {
+  background-color: #146e04;
+}
+
+.emotion-2:focus {
+  background-color: #146e04;
+}
+
+.emotion-0 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+}
+
+.emotion-1 {
+  margin-right: 8px;
+}
+
+<button
+  className="emotion-2"
+  disabled={false}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    data-radium={true}
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "#43B02A",
-        "backgroundImage": "none",
-        "border": "1px solid transparent",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#FFFFFF",
-        "cursor": "pointer",
-        "display": "inline-flex",
-        "fontSize": "16px",
-        "fontWeight": 600,
-        "height": "40px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
+  <i
+    aria-hidden={true}
+    className="emotion-0"
   >
-    <i
-      aria-hidden={true}
-      data-radium={true}
-      style={
-        Object {
-          "fontFamily": "ic-icons",
-          "fontSize": "16px",
-          "fontSmoothing": "antialiased",
-          "fontStyle": "normal",
-          "fontVariant": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "1",
-          "osxFontSmoothing": "grayscale",
-          "position": "relative",
-          "speak": "none",
-          "textTransform": "none",
-        }
-      }
-    >
-      
-    </i>
-    <span
-      data-radium={true}
-      style={
-        Object {
-          "marginRight": 8,
-        }
-      }
-    />
-    Hi
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
+    
+  </i>
+  <span
+    className="emotion-1"
   />
-</div>
+  Hi
+</button>
 `;
 
 exports[`Button renders icons correctly 2`] = `
-<div
-  data-radium={true}
+.emotion-2 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  height: 40px;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+.emotion-2:hover {
+  background-color: #177D05;
+}
+
+.emotion-2:active {
+  background-color: #146e04;
+}
+
+.emotion-2:focus {
+  background-color: #146e04;
+}
+
+.emotion-1 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+}
+
+.emotion-0 {
+  margin-left: 8px;
+}
+
+<button
+  className="emotion-2"
+  disabled={false}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    data-radium={true}
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "#43B02A",
-        "backgroundImage": "none",
-        "border": "1px solid transparent",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#FFFFFF",
-        "cursor": "pointer",
-        "display": "inline-flex",
-        "fontSize": "16px",
-        "fontWeight": 600,
-        "height": "40px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
-  >
-    Hi
-    <span
-      data-radium={true}
-      style={
-        Object {
-          "marginLeft": 8,
-        }
-      }
-    />
-    <i
-      aria-hidden={true}
-      data-radium={true}
-      style={
-        Object {
-          "fontFamily": "ic-icons",
-          "fontSize": "16px",
-          "fontSmoothing": "antialiased",
-          "fontStyle": "normal",
-          "fontVariant": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "1",
-          "osxFontSmoothing": "grayscale",
-          "position": "relative",
-          "speak": "none",
-          "textTransform": "none",
-        }
-      }
-    >
-      
-    </i>
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
+  Hi
+  <span
+    className="emotion-0"
   />
-</div>
+  <i
+    aria-hidden={true}
+    className="emotion-1"
+  >
+    
+  </i>
+</button>
 `;
 
 exports[`Button renders icons correctly 3`] = `
-<div
-  data-radium={true}
+.emotion-2 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  height: 40px;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+.emotion-2:hover {
+  background-color: #177D05;
+}
+
+.emotion-2:active {
+  background-color: #146e04;
+}
+
+.emotion-2:focus {
+  background-color: #146e04;
+}
+
+.emotion-0 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+}
+
+.emotion-1 {
+  margin-right: 8px;
+}
+
+<button
+  className="emotion-2"
+  disabled={false}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    data-radium={true}
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "#43B02A",
-        "backgroundImage": "none",
-        "border": "1px solid transparent",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#FFFFFF",
-        "cursor": "pointer",
-        "display": "inline-flex",
-        "fontSize": "16px",
-        "fontWeight": 600,
-        "height": "40px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
+  <i
+    aria-hidden={true}
+    className="emotion-0"
   >
-    <i
-      aria-hidden={true}
-      data-radium={true}
-      style={
-        Object {
-          "fontFamily": "ic-icons",
-          "fontSize": "16px",
-          "fontSmoothing": "antialiased",
-          "fontStyle": "normal",
-          "fontVariant": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "1",
-          "osxFontSmoothing": "grayscale",
-          "position": "relative",
-          "speak": "none",
-          "textTransform": "none",
-        }
-      }
-    >
-      
-    </i>
-    <span
-      data-radium={true}
-      style={
-        Object {
-          "marginRight": 8,
-        }
-      }
-    />
-    Hi
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
+    
+  </i>
+  <span
+    className="emotion-1"
   />
-</div>
+  Hi
+</button>
 `;
 
 exports[`Button renders icons correctly 4`] = `
-<div
-  data-radium={true}
+.emotion-2 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  height: 40px;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+.emotion-2:hover {
+  background-color: #177D05;
+}
+
+.emotion-2:active {
+  background-color: #146e04;
+}
+
+.emotion-2:focus {
+  background-color: #146e04;
+}
+
+.emotion-1 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+}
+
+.emotion-0 {
+  margin-left: 8px;
+}
+
+<button
+  className="emotion-2"
+  disabled={false}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    data-radium={true}
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "#43B02A",
-        "backgroundImage": "none",
-        "border": "1px solid transparent",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#FFFFFF",
-        "cursor": "pointer",
-        "display": "inline-flex",
-        "fontSize": "16px",
-        "fontWeight": 600,
-        "height": "40px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
-  >
-    Hi
-    <span
-      data-radium={true}
-      style={
-        Object {
-          "marginLeft": 8,
-        }
-      }
-    />
-    <i
-      aria-hidden={true}
-      data-radium={true}
-      style={
-        Object {
-          "fontFamily": "ic-icons",
-          "fontSize": "16px",
-          "fontSmoothing": "antialiased",
-          "fontStyle": "normal",
-          "fontVariant": "normal",
-          "fontWeight": "normal",
-          "lineHeight": "1",
-          "osxFontSmoothing": "grayscale",
-          "position": "relative",
-          "speak": "none",
-          "textTransform": "none",
-        }
-      }
-    >
-      
-    </i>
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
+  Hi
+  <span
+    className="emotion-0"
   />
-</div>
+  <i
+    aria-hidden={true}
+    className="emotion-1"
+  >
+    
+  </i>
+</button>
 `;
 
 exports[`Button renders with inverted colors 1`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 14px;
+  height: 32px;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  background-color: #FFFFFF;
+  border: 1px solid #43B02A;
+  color: #43B02A;
+}
+
+.emotion-0:hover {
+  background-color: #177D05;
+}
+
+.emotion-0:active {
+  background-color: #146e04;
+}
+
+.emotion-0:focus {
+  background-color: #146e04;
+}
+
+.emotion-0:hover {
+  background-color: #FFFFFF;
+  opacity: 0.9;
+}
+
+.emotion-0:active {
+  background-color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.emotion-0:focus {
+  background-color: #FFFFFF;
+  opacity: 0.8;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
 >
-  <button
-    data-radium={true}
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "MozOsxFontSmoothing": "grayscale",
-        "WebkitFontSmoothing": "antialiased",
-        "alignItems": "center",
-        "backgroundColor": "#FFFFFF",
-        "backgroundImage": "none",
-        "border": "1px solid #43B02A",
-        "borderBottomLeftRadius": 4,
-        "borderBottomRightRadius": 4,
-        "borderTopLeftRadius": 4,
-        "borderTopRightRadius": 4,
-        "color": "#43B02A",
-        "cursor": "pointer",
-        "display": "inline-flex",
-        "fontSize": "14px",
-        "fontWeight": 600,
-        "height": "32px",
-        "paddingLeft": 8,
-        "paddingRight": 8,
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "whiteSpace": "nowrap",
-      }
-    }
-    type="button"
-  >
-    Hi
-  </button>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Hi
+</button>
 `;

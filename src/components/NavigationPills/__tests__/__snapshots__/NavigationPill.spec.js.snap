@@ -1,42 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders active pill correctly 1`] = `
+.emotion-1 {
+  display: inline-block;
+}
+
+.emotion-0 {
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  display: block;
+  font-size: 14px;
+  background-color: #F7F7F7;
+  border-radius: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  line-height: 1.2;
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  color: #43B02A;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-0:hover {
+  background-color: #43B02A;
+}
+
+.emotion-0:focus {
+  background-color: #43B02A;
+}
+
 <li
-  data-radium={true}
-  style={
-    Object {
-      "display": "inline-block",
-    }
-  }
+  className="emotion-1"
 >
   <a
+    className="emotion-0"
     data-bypass={true}
-    data-radium={true}
     href="#"
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "backgroundColor": "#43B02A",
-        "borderRadius": "24px",
-        "color": "#FFFFFF",
-        "display": "block",
-        "fontSize": "14px",
-        "lineHeight": "1.2",
-        "marginBottom": 0,
-        "marginLeft": "4px",
-        "marginRight": "4px",
-        "marginTop": 0,
-        "paddingBottom": "12px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "paddingTop": "12px",
-        "transition": "background-color 150ms ease-in-out",
-      }
-    }
   >
     Active pill
   </a>
@@ -44,44 +61,51 @@ exports[`renders active pill correctly 1`] = `
 `;
 
 exports[`renders element attributes on pill correctly 1`] = `
+.emotion-1 {
+  display: inline-block;
+}
+
+.emotion-0 {
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  display: block;
+  font-size: 14px;
+  background-color: #F7F7F7;
+  border-radius: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  line-height: 1.2;
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  color: #43B02A;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
 <li
   ariaLabel="this is an aria label"
-  data-radium={true}
+  className="emotion-1"
   role="tab"
-  style={
-    Object {
-      "display": "inline-block",
-    }
-  }
 >
   <a
+    className="emotion-0"
     data-bypass={true}
-    data-radium={true}
     href="#"
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "backgroundColor": "#F7F7F7",
-        "borderRadius": "24px",
-        "color": "#43B02A",
-        "display": "block",
-        "fontSize": "14px",
-        "lineHeight": "1.2",
-        "marginBottom": 0,
-        "marginLeft": "4px",
-        "marginRight": "4px",
-        "marginTop": 0,
-        "paddingBottom": "12px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "paddingTop": "12px",
-        "transition": "background-color 150ms ease-in-out",
-      }
-    }
   >
     pill with attributes
   </a>
@@ -89,42 +113,49 @@ exports[`renders element attributes on pill correctly 1`] = `
 `;
 
 exports[`renders href pill correctly 1`] = `
+.emotion-1 {
+  display: inline-block;
+}
+
+.emotion-0 {
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  display: block;
+  font-size: 14px;
+  background-color: #F7F7F7;
+  border-radius: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  line-height: 1.2;
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  color: #43B02A;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
 <li
-  data-radium={true}
-  style={
-    Object {
-      "display": "inline-block",
-    }
-  }
+  className="emotion-1"
 >
   <a
+    className="emotion-0"
     data-bypass={true}
-    data-radium={true}
     href="/store/doms-cool-store"
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "backgroundColor": "#F7F7F7",
-        "borderRadius": "24px",
-        "color": "#43B02A",
-        "display": "block",
-        "fontSize": "14px",
-        "lineHeight": "1.2",
-        "marginBottom": 0,
-        "marginLeft": "4px",
-        "marginRight": "4px",
-        "marginTop": 0,
-        "paddingBottom": "12px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "paddingTop": "12px",
-        "transition": "background-color 150ms ease-in-out",
-      }
-    }
   >
     Pill with href
   </a>
@@ -132,42 +163,49 @@ exports[`renders href pill correctly 1`] = `
 `;
 
 exports[`renders inactive pill correctly 1`] = `
+.emotion-1 {
+  display: inline-block;
+}
+
+.emotion-0 {
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  display: block;
+  font-size: 14px;
+  background-color: #F7F7F7;
+  border-radius: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  line-height: 1.2;
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  color: #43B02A;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
 <li
-  data-radium={true}
-  style={
-    Object {
-      "display": "inline-block",
-    }
-  }
+  className="emotion-1"
 >
   <a
+    className="emotion-0"
     data-bypass={true}
-    data-radium={true}
     href="#"
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "backgroundColor": "#F7F7F7",
-        "borderRadius": "24px",
-        "color": "#43B02A",
-        "display": "block",
-        "fontSize": "14px",
-        "lineHeight": "1.2",
-        "marginBottom": 0,
-        "marginLeft": "4px",
-        "marginRight": "4px",
-        "marginTop": 0,
-        "paddingBottom": "12px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "paddingTop": "12px",
-        "transition": "background-color 150ms ease-in-out",
-      }
-    }
   >
     Not active pill
   </a>
@@ -175,44 +213,51 @@ exports[`renders inactive pill correctly 1`] = `
 `;
 
 exports[`renders inner element attributes on pill correctly 1`] = `
+.emotion-1 {
+  display: inline-block;
+}
+
+.emotion-0 {
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  display: block;
+  font-size: 14px;
+  background-color: #F7F7F7;
+  border-radius: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  line-height: 1.2;
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  color: #43B02A;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
 <li
-  data-radium={true}
+  className="emotion-1"
   role="tab"
-  style={
-    Object {
-      "display": "inline-block",
-    }
-  }
 >
   <a
     ariaLabel="this is an aria label"
+    className="emotion-0"
     data-bypass={true}
-    data-radium={true}
     href="#"
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "backgroundColor": "#F7F7F7",
-        "borderRadius": "24px",
-        "color": "#43B02A",
-        "display": "block",
-        "fontSize": "14px",
-        "lineHeight": "1.2",
-        "marginBottom": 0,
-        "marginLeft": "4px",
-        "marginRight": "4px",
-        "marginTop": 0,
-        "paddingBottom": "12px",
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "paddingTop": "12px",
-        "transition": "background-color 150ms ease-in-out",
-      }
-    }
   >
     pill with attributes
   </a>

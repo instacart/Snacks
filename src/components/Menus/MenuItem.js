@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import { colors } from '../../styles'
 import Icon from '../Icon/Icon'
 import spacing from '../../styles/spacing'
@@ -48,9 +47,9 @@ const styles = {
   },
 }
 
-@Radium
 class MenuItem extends React.Component {
   static propTypes = {
+    className: PropTypes.string,
     /** Completely override the MenuItem rendering and create a custom MenuItem */
     children: PropTypes.node,
     /** Disable the MenuItem */
@@ -63,10 +62,12 @@ class MenuItem extends React.Component {
     label: PropTypes.string.isRequired,
     /** Override styles of label */
     labelStyles: PropTypes.shape({}),
+    labelClassName: PropTypes.string,
     /** Icon name or Icon component displayed left of label */
     leftIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
     /** Override styles for leftIcon */
     leftIconStyles: PropTypes.shape({}),
+    leftIconClassName: PropTypes.string,
     /** Callback function fired when the menu item is click. Overriden by parent Menu or DropdownMenu */
     _onClick: PropTypes.func,
     /** Callback function fired when the menu item is focused. */
@@ -77,7 +78,13 @@ class MenuItem extends React.Component {
     preventDefault: PropTypes.bool,
     /** Role HTML attribute */
     role: PropTypes.string,
-    /** Customize style of MenuItem */
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.shape({}),
     /** Override tabIndex property */
     tabIndex: PropTypes.number,
@@ -130,48 +137,55 @@ class MenuItem extends React.Component {
   }
 
   renderLeftIcon() {
-    const { leftIcon, leftIconStyles } = this.props
+    const { leftIcon, leftIconStyles, leftIconClassName } = this.props
     if (!leftIcon) {
       return
     }
 
     const iconComponent =
       typeof leftIcon === 'string' ? (
-        <Icon name={leftIcon} style={[styles.leftIconStyles, leftIconStyles]} />
+        <Icon
+          className={leftIconClassName}
+          name={leftIcon}
+          css={[styles.leftIconStyles, leftIconStyles]}
+        />
       ) : (
         leftIcon
       )
 
     return (
-      <div style={styles.iconContainer}>
-        <div style={{ display: 'flex' }}>{iconComponent}</div>
+      <div css={styles.iconContainer}>
+        <div css={{ display: 'flex' }}>{iconComponent}</div>
       </div>
     )
   }
 
   renderMenuItem() {
-    const { children, label, labelStyles } = this.props
+    const { children, label, labelStyles, labelClassName } = this.props
 
     if (children) {
       return children
     }
 
     return (
-      <div style={styles.menuitem}>
+      <div css={styles.menuitem}>
         {this.renderLeftIcon()}
-        <div style={[styles.label, labelStyles]}>{label}</div>
+        <div className={labelClassName} css={[styles.label, labelStyles]}>
+          {label}
+        </div>
       </div>
     )
   }
 
   render() {
-    const { disabled, role, style, tabIndex, useTabIndex } = this.props
+    const { className, disabled, role, style, tabIndex, useTabIndex } = this.props
 
     return (
       <div
         ref={node => (this.menuItem = node)}
         role={role}
-        style={[styles.root, style, disabled && styles.disabled]}
+        className={className}
+        css={[styles.root, style, disabled && styles.disabled]}
         onClick={this.handleClick}
         onFocus={this.handleFocus}
         tabIndex={useTabIndex && !disabled ? tabIndex || 0 : undefined}

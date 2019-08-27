@@ -1,6 +1,5 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
 import { spy } from 'sinon'
 import TextField from '../TextField'
@@ -14,11 +13,9 @@ const defaultProps = {
 }
 
 const defaultTextField = props => (
-  <StyleRoot>
-    <div>
-      <TextField {...props} />
-    </div>
-  </StyleRoot>
+  <div>
+    <TextField {...props} />
+  </div>
 )
 
 it('renders TextField correctly', () => {
@@ -41,18 +38,16 @@ it('renders TextField without label correctly', () => {
 it('fires the onFocus prop', () => {
   const onFocus = spy()
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <TextField
-          id="test_id"
-          name="test"
-          type="email"
-          floatingLabelText="Email"
-          hintText="Enter your email address"
-          onFocus={onFocus}
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <TextField
+        id="test_id"
+        name="test"
+        type="email"
+        floatingLabelText="Email"
+        hintText="Enter your email address"
+        onFocus={onFocus}
+      />
+    </div>
   )
 
   wrapper.find('input').simulate('focus')
@@ -79,18 +74,16 @@ it('fires the triggerFocus method', () => {
 it('fires the onBlur prop', () => {
   const onBlur = spy()
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <TextField
-          id="test_id"
-          name="test"
-          type="email"
-          floatingLabelText="Email"
-          hintText="Enter your email address"
-          onBlur={onBlur}
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <TextField
+        id="test_id"
+        name="test"
+        type="email"
+        floatingLabelText="Email"
+        hintText="Enter your email address"
+        onBlur={onBlur}
+      />
+    </div>
   )
 
   wrapper.find('input').simulate('blur')
@@ -101,18 +94,16 @@ it('fires the onBlur prop', () => {
 it('fires the onChange prop', () => {
   const onChange = spy()
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <TextField
-          id="test_id"
-          name="test"
-          type="email"
-          floatingLabelText="Email"
-          hintText="Enter your email address"
-          onChange={onChange}
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <TextField
+        id="test_id"
+        name="test"
+        type="email"
+        floatingLabelText="Email"
+        hintText="Enter your email address"
+        onChange={onChange}
+      />
+    </div>
   )
 
   wrapper.find('input').simulate('change', { target: { value: 'My new value' } })
@@ -135,19 +126,17 @@ it('uses a custom theme for all child components if one is provided', () => {
 
   const tree = renderer
     .create(
-      <StyleRoot>
-        <div>
-          <TextField
-            id="test_id"
-            name="test"
-            type="email"
-            floatingLabelText="Email"
-            hintText="Enter your email address"
-            onChange={() => {}}
-            snacksTheme={customTheme}
-          />
-        </div>
-      </StyleRoot>
+      <div>
+        <TextField
+          id="test_id"
+          name="test"
+          type="email"
+          floatingLabelText="Email"
+          hintText="Enter your email address"
+          onChange={() => {}}
+          snacksTheme={customTheme}
+        />
+      </div>
     )
     .toJSON()
 

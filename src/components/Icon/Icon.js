@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
 import PropTypes from 'prop-types'
 import hexValues from './hexValues'
 
@@ -24,23 +23,30 @@ const getIcon = ({ name, code }) => {
 }
 
 const Icon = props => {
-  const { style, onClick } = props
+  const { className, style, onClick } = props
   const icon = getIcon(props)
   return (
-    <i style={[baseStyles, style]} aria-hidden onClick={onClick}>
+    <i className={className} css={[baseStyles, style]} aria-hidden onClick={onClick}>
       {icon}
     </i>
   )
 }
 
 Icon.propTypes = {
+  className: PropTypes.string,
   /**
    * String name of icon - ex 'cart'
    */
   name: PropTypes.oneOf(Object.keys(hexValues)),
   /** Hexcode of desired icon from ic-icons */
   code: PropTypes.string,
-  /** Optional style overrides */
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.object,
   /** Callback function called after button click
    * @param {SyntheticEvent} event The react `SyntheticEvent`
@@ -48,4 +54,4 @@ Icon.propTypes = {
   onClick: PropTypes.func,
 }
 
-export default Radium(Icon)
+export default Icon

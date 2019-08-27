@@ -49,7 +49,7 @@ module.exports = {
   externals: {
     react: 'react',
     'react-dom': 'react-dom',
-    radium: 'radium',
+    '@emotion/core': '@emotion/core',
     'prop-types': 'prop-types',
   },
 }

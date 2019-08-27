@@ -1,5 +1,4 @@
 import React from 'react'
-import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import renderer from 'react-test-renderer'
@@ -7,16 +6,9 @@ import DateField from '../DateField'
 
 it('renders without error', () => {
   const mounted = mount(
-    <StyleRoot>
-      <div>
-        <DateField
-          id="test_id"
-          name="test"
-          floatingLabelText="Date of Birth"
-          hintText="MM/DD/YYYY"
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <DateField id="test_id" name="test" floatingLabelText="Date of Birth" hintText="MM/DD/YYYY" />
+    </div>
   )
 
   expect(mounted).toBe.truthy
@@ -24,16 +16,9 @@ it('renders without error', () => {
 
 it('renders correctly', () => {
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <DateField
-          id="test_id"
-          name="test"
-          floatingLabelText="Date of Birth"
-          hintText="MM/DD/YYYY"
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <DateField id="test_id" name="test" floatingLabelText="Date of Birth" hintText="MM/DD/YYYY" />
+    </div>
   )
 
   expect(toJson(wrapper)).toMatchSnapshot()
@@ -41,16 +26,9 @@ it('renders correctly', () => {
 
 it('renders correctly with focus state', () => {
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <DateField
-          id="test_id"
-          name="test"
-          floatingLabelText="Date of Birth"
-          hintText="MM/DD/YYYY"
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <DateField id="test_id" name="test" floatingLabelText="Date of Birth" hintText="MM/DD/YYYY" />
+    </div>
   )
 
   wrapper.find('input').simulate('focus')
@@ -61,17 +39,15 @@ it('renders correctly with focus state', () => {
 it('fires the onFocus prop', () => {
   const onFocus = jest.fn()
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <DateField
-          id="test_id"
-          name="test"
-          floatingLabelText="Date of Birth"
-          hintText="MM/DD/YYYY"
-          onFocus={onFocus}
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <DateField
+        id="test_id"
+        name="test"
+        floatingLabelText="Date of Birth"
+        hintText="MM/DD/YYYY"
+        onFocus={onFocus}
+      />
+    </div>
   )
 
   wrapper.find('input').simulate('focus')
@@ -82,16 +58,9 @@ it('fires the onFocus prop', () => {
 
 it('fires the triggerFocus method', () => {
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <DateField
-          id="test_id"
-          name="test"
-          floatingLabelText="Date of Birth"
-          hintText="MM/DD/YYYY"
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <DateField id="test_id" name="test" floatingLabelText="Date of Birth" hintText="MM/DD/YYYY" />
+    </div>
   )
 
   wrapper
@@ -110,17 +79,15 @@ it('fires the triggerFocus method', () => {
 it('fires the onBlur prop', () => {
   const onBlur = jest.fn()
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <DateField
-          id="test_id"
-          name="test"
-          floatingLabelText="Date of Birth"
-          hintText="MM/DD/YYYY"
-          onBlur={onBlur}
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <DateField
+        id="test_id"
+        name="test"
+        floatingLabelText="Date of Birth"
+        hintText="MM/DD/YYYY"
+        onBlur={onBlur}
+      />
+    </div>
   )
 
   wrapper.find('input').simulate('blur')
@@ -132,17 +99,15 @@ it('fires the onBlur prop', () => {
 it('fires the onChange prop', () => {
   const onChange = jest.fn()
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <DateField
-          id="test_id"
-          name="test"
-          floatingLabelText="Date of Birth"
-          hintText="MM/DD/YYYY"
-          onChange={onChange}
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <DateField
+        id="test_id"
+        name="test"
+        floatingLabelText="Date of Birth"
+        hintText="MM/DD/YYYY"
+        onChange={onChange}
+      />
+    </div>
   )
 
   // update input to 04/27/1993
@@ -174,18 +139,16 @@ it('uses a custom theme for all child components if one is provided', () => {
   }
 
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <DateField
-          id="test_id"
-          name="test"
-          floatingLabelText="Date of Birth"
-          hintText="MM/DD/YYYY"
-          onChange={() => {}}
-          snacksTheme={customTheme}
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <DateField
+        id="test_id"
+        name="test"
+        floatingLabelText="Date of Birth"
+        hintText="MM/DD/YYYY"
+        onChange={() => {}}
+        snacksTheme={customTheme}
+      />
+    </div>
   )
 
   expect(toJson(wrapper)).toMatchSnapshot()

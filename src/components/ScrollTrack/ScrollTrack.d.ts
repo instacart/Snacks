@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { RadiumStyles } from '../..'
+import { Interpolation } from '@emotion/core'
 
 interface CallbackProps {
   atStart: boolean
@@ -15,6 +15,8 @@ export interface ScrollTrackProps {
 
   /** The elements to scroll */
   children?: React.ReactNode
+
+  className?: string
 
   /** Manually control left positioning of ScrollTrack */
   leftOverride?: number
@@ -53,14 +55,20 @@ export interface ScrollTrackProps {
   /** Transition timing function to use for scrolling animation - defaults to ease-in-out */
   scrollTimingFunction?: string
 
-  /** Style top level element */
-  style?: RadiumStyles
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  style?: Interpolation
 
   /** Style specifc children elements [LeftArrow, RightArrow, Track] */
   styles?: {
-    LeftArrow?: RadiumStyles
-    RightArrow?: RadiumStyles
-    Track?: RadiumStyles
+    LeftArrow?: Interpolation
+    RightArrow?: Interpolation
+    Track?: Interpolation
   }
 }
 

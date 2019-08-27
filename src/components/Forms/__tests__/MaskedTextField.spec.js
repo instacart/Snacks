@@ -1,5 +1,4 @@
 import React from 'react'
-import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import renderer from 'react-test-renderer'
@@ -14,18 +13,16 @@ const getValue = value => value.replace(/-/g, '')
 
 it('renders without error', () => {
   const mounted = mount(
-    <StyleRoot>
-      <div>
-        <MaskedTextField
-          id="test_id"
-          name="test"
-          mask={mask}
-          maskHint={maskHint}
-          getValue={getValue}
-          floatingLabelText="SSN"
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <MaskedTextField
+        id="test_id"
+        name="test"
+        mask={mask}
+        maskHint={maskHint}
+        getValue={getValue}
+        floatingLabelText="SSN"
+      />
+    </div>
   )
 
   expect(mounted).toBe.truthy
@@ -33,18 +30,16 @@ it('renders without error', () => {
 
 it('renders correctly', () => {
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <MaskedTextField
-          id="test_id"
-          name="test"
-          mask={mask}
-          maskHint={maskHint}
-          getValue={getValue}
-          floatingLabelText="SSN"
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <MaskedTextField
+        id="test_id"
+        name="test"
+        mask={mask}
+        maskHint={maskHint}
+        getValue={getValue}
+        floatingLabelText="SSN"
+      />
+    </div>
   )
 
   expect(toJson(wrapper)).toMatchSnapshot()
@@ -52,18 +47,16 @@ it('renders correctly', () => {
 
 it('renders correctly with focus state', () => {
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <MaskedTextField
-          id="test_id"
-          name="test"
-          mask={mask}
-          maskHint={maskHint}
-          getValue={getValue}
-          floatingLabelText="SSN"
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <MaskedTextField
+        id="test_id"
+        name="test"
+        mask={mask}
+        maskHint={maskHint}
+        getValue={getValue}
+        floatingLabelText="SSN"
+      />
+    </div>
   )
 
   wrapper.find('input').simulate('focus')
@@ -74,19 +67,17 @@ it('renders correctly with focus state', () => {
 it('fires the onFocus prop', () => {
   const onFocus = jest.fn()
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <MaskedTextField
-          id="test_id"
-          name="test"
-          mask={mask}
-          maskHint={maskHint}
-          getValue={getValue}
-          floatingLabelText="SSN"
-          onFocus={onFocus}
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <MaskedTextField
+        id="test_id"
+        name="test"
+        mask={mask}
+        maskHint={maskHint}
+        getValue={getValue}
+        floatingLabelText="SSN"
+        onFocus={onFocus}
+      />
+    </div>
   )
 
   wrapper.find('input').simulate('focus')
@@ -97,18 +88,16 @@ it('fires the onFocus prop', () => {
 
 it('fires the triggerFocus method', () => {
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <MaskedTextField
-          id="test_id"
-          name="test"
-          mask={mask}
-          maskHint={maskHint}
-          getValue={getValue}
-          floatingLabelText="SSN"
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <MaskedTextField
+        id="test_id"
+        name="test"
+        mask={mask}
+        maskHint={maskHint}
+        getValue={getValue}
+        floatingLabelText="SSN"
+      />
+    </div>
   )
 
   wrapper
@@ -127,19 +116,17 @@ it('fires the triggerFocus method', () => {
 it('fires the onBlur prop', () => {
   const onBlur = jest.fn()
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <MaskedTextField
-          id="test_id"
-          name="test"
-          mask={mask}
-          maskHint={maskHint}
-          getValue={getValue}
-          floatingLabelText="SSN"
-          onBlur={onBlur}
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <MaskedTextField
+        id="test_id"
+        name="test"
+        mask={mask}
+        maskHint={maskHint}
+        getValue={getValue}
+        floatingLabelText="SSN"
+        onBlur={onBlur}
+      />
+    </div>
   )
 
   wrapper.find('input').simulate('blur')
@@ -151,19 +138,17 @@ it('fires the onBlur prop', () => {
 it('fires the onChange prop', () => {
   const onChange = jest.fn()
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <MaskedTextField
-          id="test_id"
-          name="test"
-          mask={mask}
-          maskHint={maskHint}
-          getValue={getValue}
-          floatingLabelText="SSN"
-          onChange={onChange}
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <MaskedTextField
+        id="test_id"
+        name="test"
+        mask={mask}
+        maskHint={maskHint}
+        getValue={getValue}
+        floatingLabelText="SSN"
+        onChange={onChange}
+      />
+    </div>
   )
 
   // update input to 123-45-6789
@@ -195,20 +180,18 @@ it('uses a custom theme for all child components if one is provided', () => {
   }
 
   const wrapper = mount(
-    <StyleRoot>
-      <div>
-        <MaskedTextField
-          id="test_id"
-          name="test"
-          mask={mask}
-          maskHint={maskHint}
-          getValue={getValue}
-          floatingLabelText="SSN"
-          onChange={() => {}}
-          snacksTheme={customTheme}
-        />
-      </div>
-    </StyleRoot>
+    <div>
+      <MaskedTextField
+        id="test_id"
+        name="test"
+        mask={mask}
+        maskHint={maskHint}
+        getValue={getValue}
+        floatingLabelText="SSN"
+        onChange={() => {}}
+        snacksTheme={customTheme}
+      />
+    </div>
   )
 
   expect(toJson(wrapper)).toMatchSnapshot()

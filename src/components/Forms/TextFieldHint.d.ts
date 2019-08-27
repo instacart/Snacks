@@ -1,7 +1,9 @@
 import * as React from 'react'
-import { RadiumStyles } from '../..'
+import { Interpolation } from '@emotion/core'
 
 export interface TextFieldHintProps {
+  className?: string
+
   /** Hint Text */
   text: React.ReactNode
 
@@ -11,8 +13,14 @@ export interface TextFieldHintProps {
   /** Show the hint text */
   show?: boolean
 
-  /** Override styles */
-  style?: RadiumStyles
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  style?: Interpolation
 
   /** A uniq id */
   inputId: string

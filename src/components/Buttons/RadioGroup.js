@@ -11,6 +11,7 @@ let initHasSelectedRadio
 
 class RadioGroup extends React.Component {
   static propTypes = {
+    className: PropTypes.string,
     children: PropTypes.arrayOf((propValue, key) => {
       const child = propValue[key]
 
@@ -30,6 +31,14 @@ class RadioGroup extends React.Component {
     selectedBtn: PropTypes.instanceOf(Radio),
     onChange: PropTypes.func,
     wrapEl: PropTypes.string,
+
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.shape({
       wrapEl: PropTypes.object,
     }),
@@ -55,7 +64,7 @@ class RadioGroup extends React.Component {
   }
 
   render() {
-    const { children, style, wrapEl: Element } = this.props
+    const { children, className, style, wrapEl: Element } = this.props
     const childrenWithProps = React.Children.map(children, child => {
       const { selectedBtn } = this.state
 
@@ -66,7 +75,11 @@ class RadioGroup extends React.Component {
       })
     })
 
-    return <Element style={{ ...STYLE.wrapEl, ...style.wrapEl }}>{childrenWithProps}</Element>
+    return (
+      <Element className={className} css={{ ...STYLE.wrapEl, ...style.wrapEl }}>
+        {childrenWithProps}
+      </Element>
+    )
   }
 }
 

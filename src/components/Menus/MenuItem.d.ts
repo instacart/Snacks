@@ -1,9 +1,11 @@
 import * as React from 'react'
-import { RadiumStyles } from '../..'
+import { Interpolation } from '@emotion/core'
 
 export interface MenuItemProps<TValue extends string | number | boolean = string> {
   /** Completely override the MenuItem rendering and create a custom MenuItem */
   children?: React.ReactNode
+
+  className?: string
 
   /** Disable the MenuItem */
   disabled?: boolean
@@ -18,13 +20,17 @@ export interface MenuItemProps<TValue extends string | number | boolean = string
   label: string
 
   /** Override styles of label */
-  labelStyles?: RadiumStyles
+  labelStyles?: Interpolation
+
+  labelClassName?: string
 
   /** Icon name or Icon component displayed left of label */
   leftIcon?: string | React.ReactNode
 
   /** Override styles for leftIcon */
-  leftIconStyles?: RadiumStyles
+  leftIconStyles?: Interpolation
+
+  leftIconClassName?: string
 
   /** Callback function fired when the menu item is click. Overriden by parent Menu or DropdownMenu */
   _onClick?(
@@ -45,8 +51,14 @@ export interface MenuItemProps<TValue extends string | number | boolean = string
   /** Role HTML attribute */
   role?: string
 
-  /** Customize style of MenuItem */
-  style?: RadiumStyles
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
+  style?: Interpolation
 
   /** Override tabIndex property */
   tabIndex?: number

@@ -1,233 +1,148 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Menu with MenuItems correctly 1`] = `
-<div
-  data-radium={true}
->
+.emotion-13 {
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.16),0 3px 10px 0 rgba(0,0,0,0.23);
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 0;
+  padding-left: 0;
+  overflow-y: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  max-height: 500px;
+  outline: none;
+}
+
+.emotion-2 {
+  background-color: #ffffff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.emotion-2:hover {
+  cursor: pointer;
+  background-color: #F7F7F7;
+}
+
+.emotion-2:focus {
+  background-color: #F7F7F7;
+}
+
+.emotion-1 {
+  display: table;
+}
+
+.emotion-0 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+  white-space: nowrap;
+}
+
+.emotion-9 {
+  background-color: #E0E0E0;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 0;
+  margin-right: 0;
+  height: 1px;
+  border: none;
+}
+
+<div>
   <div
-    data-radium={true}
+    aria-hidden={false}
+    className="emotion-13"
+    onBlur={[Function]}
+    onKeyDown={[Function]}
+    role="menu"
+    tabIndex={-1}
   >
     <div
-      aria-hidden={false}
-      onBlur={[Function]}
+      className="emotion-2"
+      onClick={[Function]}
+      onFocus={[Function]}
       onKeyDown={[Function]}
-      role="menu"
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderRadius": "4px",
-          "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
-          "display": "inline-block",
-          "maxHeight": "500px",
-          "outline": "none",
-          "overflowY": "auto",
-          "paddingBottom": 8,
-          "paddingLeft": 0,
-          "paddingRight": 0,
-          "paddingTop": 8,
-          "userSelect": "none",
-        }
-      }
-      tabIndex={-1}
+      role="menuitem"
+      tabIndex={0}
     >
       <div
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        role="menuitem"
-        style={
-          Object {
-            "backgroundColor": "#ffffff",
-            "paddingBottom": 16,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 16,
-          }
-        }
-        tabIndex={0}
+        className="emotion-1"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "display": "table",
-            }
-          }
+          className="emotion-0"
         >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "paddingBottom": 0,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 0,
-                "whiteSpace": "nowrap",
-              }
-            }
-          >
-            First
-          </div>
+          First
         </div>
       </div>
+    </div>
+    <div
+      className="emotion-2"
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      role="menuitem"
+      tabIndex={0}
+    >
       <div
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        role="menuitem"
-        style={
-          Object {
-            "backgroundColor": "#ffffff",
-            "paddingBottom": 16,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 16,
-          }
-        }
-        tabIndex={0}
+        className="emotion-1"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "display": "table",
-            }
-          }
+          className="emotion-0"
         >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "paddingBottom": 0,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 0,
-                "whiteSpace": "nowrap",
-              }
-            }
-          >
-            Second
-          </div>
+          Second
         </div>
       </div>
+    </div>
+    <div
+      className="emotion-2"
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      role="menuitem"
+      tabIndex={0}
+    >
       <div
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        role="menuitem"
-        style={
-          Object {
-            "backgroundColor": "#ffffff",
-            "paddingBottom": 16,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 16,
-          }
-        }
-        tabIndex={0}
+        className="emotion-1"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "display": "table",
-            }
-          }
+          className="emotion-0"
         >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "paddingBottom": 0,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 0,
-                "whiteSpace": "nowrap",
-              }
-            }
-          >
-            Third
-          </div>
+          Third
         </div>
       </div>
-      <hr
-        style={
-          Object {
-            "backgroundColor": "#E0E0E0",
-            "border": "none",
-            "height": 1,
-            "marginBottom": 8,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 8,
-            "width": "100%",
-          }
-        }
-      />
+    </div>
+    <hr
+      className="emotion-9"
+    />
+    <div
+      className="emotion-2"
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      role="menuitem"
+      tabIndex={0}
+    >
       <div
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        role="menuitem"
-        style={
-          Object {
-            "backgroundColor": "#ffffff",
-            "paddingBottom": 16,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 16,
-          }
-        }
-        tabIndex={0}
+        className="emotion-1"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "display": "table",
-            }
-          }
+          className="emotion-0"
         >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "paddingBottom": 0,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 0,
-                "whiteSpace": "nowrap",
-              }
-            }
-          >
-            Fourth
-          </div>
+          Fourth
         </div>
       </div>
     </div>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </div>
 `;

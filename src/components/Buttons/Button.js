@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import Icon from '../Icon/Icon'
 import withTheme from '../../styles/themer/withTheme'
 import { themePropTypes } from '../../styles/themer/utils'
@@ -213,7 +212,8 @@ const Button = props => {
     disabled: props.disabled,
     tabIndex: props.tabIndex,
     type: props.type,
-    style: [
+    className: props.className,
+    css: [
       baseStyles,
       sizeStyles[props.size],
       snacksStyles[props.snacksStyle][props.disabled ? 'disabled' : 'base'],
@@ -249,7 +249,7 @@ const Button = props => {
     return (
       <ElementType {...finalProps}>
         {icon}
-        <span style={{ ...spacing.MARGIN_RIGHT_XS }} />
+        <span css={{ ...spacing.MARGIN_RIGHT_XS }} />
         {props.children}
       </ElementType>
     )
@@ -259,7 +259,7 @@ const Button = props => {
     return (
       <ElementType {...finalProps}>
         {props.children}
-        <span style={{ ...spacing.MARGIN_LEFT_XS }} />
+        <span css={{ ...spacing.MARGIN_LEFT_XS }} />
         {icon}
       </ElementType>
     )
@@ -275,8 +275,16 @@ Button.propTypes = {
   /** Snacks button variants. */
   snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'flat', 'coupon']),
 
-  /** Optional style overrides. */
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.object,
+
+  className: PropTypes.string,
 
   /** Whether or not the button is disabled. */
   disabled: PropTypes.bool,
@@ -333,4 +341,4 @@ Button.defaultProps = {
   elementAttributes: {},
 }
 
-export default withTheme(Radium(Button))
+export default withTheme(Button)

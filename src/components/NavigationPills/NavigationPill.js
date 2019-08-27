@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import colors from '../../styles/colors'
 import withTheme from '../../styles/themer/withTheme'
 import { themePropTypes } from '../../styles/themer/utils'
@@ -56,12 +55,12 @@ const NavigationPill = props => {
   }
 
   return (
-    <li style={styles.container} {...props.elementAttributes}>
+    <li css={styles.container} {...props.elementAttributes}>
       <a
         href={props.path || '#'}
         data-bypass
         onClick={e => props.onClick(e, props)}
-        style={[styles.main.default, { color: primaryForeground }, isActive && activeStyles]}
+        css={[styles.main.default, { color: primaryForeground }, isActive && activeStyles]}
         {...props.anchorItemAttributes}
         key={`pill-anchor-${text}`}
       >
@@ -98,4 +97,4 @@ NavigationPill.defaultProps = {
   isActive: false,
 }
 
-export default withTheme(Radium(NavigationPill))
+export default withTheme(NavigationPill)

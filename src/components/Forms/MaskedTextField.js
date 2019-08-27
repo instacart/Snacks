@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import MaskedTextInput from 'react-text-mask'
 import { colors } from '../../styles'
 import withTheme from '../../styles/themer/withTheme'
@@ -92,6 +91,7 @@ const getInputSyles = ({ props, theme, isFocused }) => {
 }
 
 export const maskedTextFieldPropTypes = {
+  className: PropTypes.string,
   /** Name of the field */
   name: PropTypes.string.isRequired,
   /** Transforms the raw value from the input
@@ -150,7 +150,13 @@ export const maskedTextFieldPropTypes = {
   required: PropTypes.bool,
   /** Error from server to show ServerError message */
   serverError: PropTypes.string,
-  /** Wrapper styles */
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.object,
   /** Text to show for validation error  */
   validationErrorText: PropTypes.string,
@@ -162,7 +168,6 @@ export const maskedTextFieldPropTypes = {
 
 @withTheme
 @FormComponent
-@Radium
 class MaskedTextField extends React.Component {
   static propTypes = maskedTextFieldPropTypes
 
@@ -230,6 +235,7 @@ class MaskedTextField extends React.Component {
 
   render() {
     const {
+      className,
       mask,
       pipe,
       maskHint,
@@ -256,16 +262,12 @@ class MaskedTextField extends React.Component {
 
     return (
       <div
-        style={[
-          styles.wrapper,
-          fullWidth && styles.fullWidth,
-          halfWidth && styles.halfWidth,
-          style,
-        ]}
+        className={className}
+        css={[styles.wrapper, fullWidth && styles.fullWidth, halfWidth && styles.halfWidth, style]}
       >
         {serverError && !disabled && !isValid && <ServerError text={serverError} />}
 
-        <div style={styles.inputContainer}>
+        <div css={styles.inputContainer}>
           <FloatingLabel
             text={floatingLabelText}
             float={isFocused || hasValue}
@@ -273,7 +275,7 @@ class MaskedTextField extends React.Component {
             isActive={isFocused}
             hasError={hasError}
             htmlFor={inputId}
-            style={{ pointerEvents: 'none' }}
+            css={{ pointerEvents: 'none' }}
             snacksTheme={snacksTheme}
           />
 
@@ -309,7 +311,7 @@ class MaskedTextField extends React.Component {
                   this.input = input
                   ref(input)
                 }}
-                style={getInputSyles({
+                css={getInputSyles({
                   props: this.props,
                   theme: snacksTheme,
                   isFocused,

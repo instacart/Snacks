@@ -1,80 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pill applies the elementAttributes prop correctly 1`] = `
+.emotion-0 {
+  background-color: #CC0033;
+  color: white;
+  border-radius: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+}
+
 <div
   aria-label="foo"
-  data-radium={true}
-  style={
-    Object {
-      "backgroundColor": "#CC0033",
-      "borderRadius": 16,
-      "color": "white",
-      "display": "inline-block",
-      "marginBottom": 8,
-      "marginLeft": 8,
-      "marginRight": 8,
-      "marginTop": 8,
-      "paddingBottom": 0,
-      "paddingLeft": 8,
-      "paddingRight": 8,
-      "paddingTop": 0,
-      "textAlign": "center",
-      "width": "auto",
-    }
-  }
+  className="emotion-0"
 >
   HI
 </div>
 `;
 
 exports[`Pill renders correctly when style overrides are provided 1`] = `
+.emotion-0 {
+  background-color: #CC0033;
+  color: white;
+  border-radius: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 <div
-  data-radium={true}
-  style={
-    Object {
-      "backgroundColor": "#CC0033",
-      "borderRadius": 16,
-      "color": "white",
-      "display": "inline-block",
-      "marginBottom": 8,
-      "marginLeft": 8,
-      "marginRight": 8,
-      "marginTop": 8,
-      "paddingBottom": 0,
-      "paddingLeft": 8,
-      "paddingRight": 8,
-      "paddingTop": 0,
-      "textAlign": "center",
-      "textDecoration": "underline",
-      "width": "auto",
-    }
-  }
+  className="emotion-0"
 >
   HI
 </div>
 `;
 
 exports[`Pill renders without throwing 1`] = `
+.emotion-0 {
+  background-color: #CC0033;
+  color: white;
+  border-radius: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+}
+
 <div
-  data-radium={true}
-  style={
-    Object {
-      "backgroundColor": "#CC0033",
-      "borderRadius": 16,
-      "color": "white",
-      "display": "inline-block",
-      "marginBottom": 8,
-      "marginLeft": 8,
-      "marginRight": 8,
-      "marginTop": 8,
-      "paddingBottom": 0,
-      "paddingLeft": 8,
-      "paddingRight": 8,
-      "paddingTop": 0,
-      "textAlign": "center",
-      "width": "auto",
-    }
-  }
+  className="emotion-0"
 >
   HI
 </div>

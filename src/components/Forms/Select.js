@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import { colors } from '../../styles'
 import FormComponent from './FormComponent'
 import DropdownMenu from '../Menus/DropdownMenu'
@@ -124,11 +123,11 @@ const getSnackStyles = snacksTheme => {
 
 @withTheme
 @FormComponent
-@Radium
 class Select extends React.PureComponent {
   static propTypes = {
     /** Name of the field */
     name: PropTypes.string.isRequired,
+    className: PropTypes.string,
     /** Children are passed to Menu and should be MenuItems or MenuDivider */
     children: PropTypes.node,
     /** DefaultOption */
@@ -171,7 +170,13 @@ class Select extends React.PureComponent {
     }),
     /** Error from server to show ServerError message */
     serverError: PropTypes.string,
-    /** Wrapper styles, mainly used for custom width */
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.object,
     /** Text to show for validation error  */
     validationErrorText: PropTypes.string,
@@ -242,7 +247,15 @@ class Select extends React.PureComponent {
   }
 
   renderTrigger() {
-    const { disabled, required, hasError, hintText, floatingLabelText, snacksTheme } = this.props
+    const {
+      className,
+      disabled,
+      required,
+      hasError,
+      hintText,
+      floatingLabelText,
+      snacksTheme,
+    } = this.props
 
     const snacksStyles = getSnackStyles(snacksTheme)
 
@@ -259,7 +272,8 @@ class Select extends React.PureComponent {
         ref={node => (this.trigger = node)}
       >
         <div
-          style={[
+          className={className}
+          css={[
             styles.trigger,
             disabled && styles.triggerDisabled,
             (isOpen || isFocused) && !hasError && snacksStyles.highlight,
@@ -274,27 +288,27 @@ class Select extends React.PureComponent {
             disabled={disabled}
             isActive={isOpen || isFocused}
             hasError={hasError}
-            style={styles.floatingLabel}
+            css={styles.floatingLabel}
             snacksTheme={snacksTheme}
           />
 
-          <div style={styles.labelContainer}>
+          <div css={styles.labelContainer}>
             {hintText && (
               <TextFieldHint
                 text={hintText}
                 show={showHintText}
                 disabled={disabled}
-                style={styles.floatingLabel}
+                css={styles.floatingLabel}
               />
             )}
 
             {selectedOption && selectedOption.label}
           </div>
 
-          <div style={styles.iconContainer}>
+          <div css={styles.iconContainer}>
             <Icon
               name="arrowDownSmallBold"
-              style={[
+              css={[
                 styles.icon,
                 snacksStyles.icon,
                 isOpen && styles.iconOpen,
@@ -325,9 +339,7 @@ class Select extends React.PureComponent {
     const { isOpen } = this.state
 
     return (
-      <div
-        style={[styles.root, fullWidth && styles.fullWidth, halfWidth && styles.halfWidth, style]}
-      >
+      <div css={[styles.root, fullWidth && styles.fullWidth, halfWidth && styles.halfWidth, style]}>
         <div>
           {serverError && !disabled && !isValid && <ServerError text={serverError} />}
 

@@ -3,7 +3,6 @@
  *
  * @author [Dominic Cocchiarella ](https://github.com/docchia)
  */
-import Radium from 'radium'
 import React from 'react'
 import PropTypes from 'prop-types'
 import responsive from '../../styles/responsive'
@@ -34,6 +33,7 @@ const CircleButton = props => {
 
   return (
     <button
+      className={props.className}
       onClick={e => {
         if (props.onClick) {
           e.preventDefault()
@@ -41,7 +41,7 @@ const CircleButton = props => {
         }
       }}
       aria-label={props.ariaLabel}
-      style={[
+      css={[
         styles.default,
         {
           backgroundColor: action,
@@ -69,14 +69,21 @@ CircleButton.propTypes = {
   /** Label to be used by screen readers */
   ariaLabel: PropTypes.string,
   children: PropTypes.node,
+  className: PropTypes.string,
   /** Bool to disable click/touch listeners */
   disabled: PropTypes.bool,
   /** Callback function called after button click */
   onClick: PropTypes.func,
   /** snacks theme attributes */
   snacksTheme: themePropTypes,
-  /** Optional style overrides */
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 }
 
-export default withTheme(Radium(CircleButton))
+export default withTheme(CircleButton)

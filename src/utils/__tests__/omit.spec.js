@@ -5,14 +5,14 @@ it('omits keys', () => {
     key1: 'a',
     key2: 'b',
     key3: 'c',
-    key4: 'd'
+    key4: 'd',
   }
 
   const objB = omit(objA, 'key1', 'key4')
 
   expect(objB).toEqual({
     key2: 'b',
-    key3: 'c'
+    key3: 'c',
   })
 })
 
@@ -21,14 +21,14 @@ it('does not blow up on keys that do not exist', () => {
     key1: 'a',
     key2: 'b',
     key3: 'c',
-    key4: 'd'
+    key4: 'd',
   }
 
   const objB = omit(objA, 'key8', 'key20', 'key3', 'key1')
 
   expect(objB).toEqual({
     key2: 'b',
-    key4: 'd'
+    key4: 'd',
   })
 })
 
@@ -37,7 +37,7 @@ it('returns a new reference', () => {
     key1: 'a',
     key2: 'b',
     key3: 'c',
-    key4: 'd'
+    key4: 'd',
   }
 
   const objB = omit(objA)

@@ -1,7 +1,6 @@
 import React from 'react'
 import { findDOMNode } from 'react-dom'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import Menu from './Menu'
 import Slide from '../Transitions/Slide'
 import Fade from '../Transitions/Fade'
@@ -31,9 +30,9 @@ const styles = {
   },
 }
 
-@Radium
 class DropdownMenu extends React.Component {
   static propTypes = {
+    className: PropTypes.string,
     /** MenuItems or Divider */
     children: PropTypes.node.isRequired,
     /** React component or HTML that will be used as the dropdown trigger. ie. Button or Icon */
@@ -52,10 +51,24 @@ class DropdownMenu extends React.Component {
     onRequestChange: PropTypes.func,
     /** Callback function fired when a MenuItem is selected */
     onSelect: PropTypes.func,
-    /** Customize style root element */
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.shape({}),
-    /** Customize style of menu parent */
+    /**
+     * Customize style of menu parent
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     menuContainerStyle: PropTypes.shape({}),
+    /** Customize style of menu parent */
+    menuContainerClassName: PropTypes.string,
     /** Props passed to Menu component */
     menuProps: PropTypes.shape({}),
   }
@@ -190,22 +203,30 @@ class DropdownMenu extends React.Component {
   }
 
   render() {
-    const { style, children, menuProps, menuContainerStyle } = this.props
+    const {
+      className,
+      style,
+      children,
+      menuProps,
+      menuContainerStyle,
+      menuContainerClassName,
+    } = this.props
 
     const isOpen = this.state.open
 
     return (
-      <div onKeyDown={this.handleKeyDown} style={style}>
-        <div style={{ position: 'relative' }}>{this.renderTriggerElement()}</div>
+      <div onKeyDown={this.handleKeyDown} css={style} className={className}>
+        <div css={{ position: 'relative' }}>{this.renderTriggerElement()}</div>
         <div
-          style={[
+          className={menuContainerClassName}
+          css={[
             styles.menuContainer,
             menuContainerStyle,
             isOpen && styles.menuContainerOpen,
             !isOpen && styles.menuContainerClosed,
           ]}
         >
-          <Slide in={isOpen} axis="y" style={styles.transitionContainer} offset={30}>
+          <Slide in={isOpen} axis="y" css={styles.transitionContainer} offset={30}>
             <Fade in={isOpen} transitionTime={200}>
               <Menu
                 ref={node => (this.menu = node)}

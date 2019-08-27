@@ -144,7 +144,7 @@ const CustomComponent = ScrollTrack.equalWidthTrack(186)(({ startIndex, lastInde
     }
 
     return (
-      <div style={style}>Item</div>
+      <div key={`item_${index}`} style={style}>Item</div>
     )
   })
 

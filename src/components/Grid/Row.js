@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unused-prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import responsive from '../../styles/responsive'
 import { supportsCSSGrid } from '../../utils/detectFeature'
 
@@ -129,7 +128,8 @@ const Row = props => {
 
   return (
     <div
-      style={[
+      className={props.className}
+      css={[
         {
           ...componentStyles,
           ...getMaxColumnsStyles(props),
@@ -144,12 +144,19 @@ const Row = props => {
 }
 
 Row.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.node,
   /** Force Row to width of 100vw -- Snacks will add negative margin */
   forceFullPage: PropTypes.bool,
   /** Maximum number of columns this Row should grow to as screen width increases. Cannot exceed 14. */
   maxColumns: PropTypes.number,
-  /** Optional style overrides */
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.object,
 }
 
@@ -157,4 +164,4 @@ Row.defaultProps = {
   maxColumns: 14,
 }
 
-export default Radium(Row)
+export default Row

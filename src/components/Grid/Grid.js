@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import responsive from '../../styles/responsive'
 
 const styles = {
@@ -35,13 +34,24 @@ const styles = {
 }
 
 const Grid = props => {
-  return <div style={[styles, props.style]}>{props.children}</div>
+  return (
+    <div className={props.className} css={[styles, props.style]}>
+      {props.children}
+    </div>
+  )
 }
 
 Grid.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.node,
-  /** Optional style overrides */
+  /**
+   * Optional style overrides merged into emotion css
+   *
+   * @deprecated
+   * This prop exists for backwards compatibility and will be
+   * removed in a future version
+   */
   style: PropTypes.object,
 }
 
-export default Radium(Grid)
+export default Grid

@@ -76,6 +76,7 @@ const resolveStylePlacementBorders = (style, arrowStyle, placement) => {
 
 class TooltipArrow extends PureComponent {
   static propTypes = {
+    className: PropTypes.string,
     position: PropTypes.shape({
       left: PropTypes.number,
       top: PropTypes.number,
@@ -106,7 +107,7 @@ class TooltipArrow extends PureComponent {
   }
 
   render() {
-    return <div style={this.calculatedStyles} />
+    return <div className={this.props.className} css={this.calculatedStyles} />
   }
 }
 

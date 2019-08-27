@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
 
 const anaylzerEnabled = process.env.analyze || false
 
@@ -40,7 +40,7 @@ module.exports = {
   externals: {
     react: 'react',
     'react-dom': 'react-dom',
-    radium: 'radium',
+    '@emotion/core': '@emotion/core',
     'prop-types': 'prop-types',
   },
   devtool: 'cheap-module-eval-source-map',

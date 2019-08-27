@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import { colors } from '../../styles'
 
 const styles = {
@@ -17,20 +16,27 @@ const styles = {
   },
 }
 
-@Radium
+// eslint-disable-next-line react/prefer-stateless-function
 class ServerError extends Component {
   static propTypes = {
-    /** Override styles */
+    className: PropTypes.string,
+    /**
+     * Optional style overrides merged into emotion css
+     *
+     * @deprecated
+     * This prop exists for backwards compatibility and will be
+     * removed in a future version
+     */
     style: PropTypes.object,
     /** Error text */
     text: PropTypes.string,
   }
 
   render() {
-    const { style, text } = this.props
+    const { className, style, text } = this.props
 
     return (
-      <div style={[styles.root, style]} aria-live={'assertive'} aria-atomic>
+      <div className={className} css={[styles.root, style]} aria-live={'assertive'} aria-atomic>
         {text}
       </div>
     )

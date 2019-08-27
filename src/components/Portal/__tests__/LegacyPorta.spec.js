@@ -1,6 +1,5 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
 import LegacyPortal from '../LegacyPortal'
 
@@ -8,11 +7,9 @@ describe('Legacy Portal', () => {
   it('renders properly', () => {
     const tree = renderer
       .create(
-        <StyleRoot>
-          <LegacyPortal>
-            <p>Test content</p>
-          </LegacyPortal>
-        </StyleRoot>
+        <LegacyPortal>
+          <p>Test content</p>
+        </LegacyPortal>
       )
       .toJSON()
     expect(tree).toMatchSnapshot()
@@ -21,9 +18,7 @@ describe('Legacy Portal', () => {
   it('renders with a passed in conatiner', () => {
     const container = mount(<div />)
     const Portal = mount(
-      <StyleRoot>
-        <LegacyPortal container={container.instance()}>{<p>Test content</p>}</LegacyPortal>
-      </StyleRoot>
+      <LegacyPortal container={container.instance()}>{<p>Test content</p>}</LegacyPortal>
     )
 
     expect(Portal).toBeTruthy()

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
 import { colors } from '../../styles'
 
 const styles = {
@@ -21,7 +20,7 @@ const styles = {
   },
 }
 
-@Radium
+// eslint-disable-next-line react/prefer-stateless-function
 class ValidationError extends Component {
   static propTypes = {
     /** A uniq id */
@@ -37,7 +36,7 @@ class ValidationError extends Component {
 
     return (
       <div
-        style={[styles.root, show && styles.show]}
+        css={[styles.root, show && styles.show]}
         aria-live={'assertive'}
         aria-atomic
         id={`error_${inputId}`}
