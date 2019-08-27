@@ -1,401 +1,385 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders TextField correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
+.emotion-5 {
+  cursor: auto;
+  display: inline-block;
+  position: relative;
+  width: 343px;
+}
+
+.emotion-3 {
+  border-radius: 4px;
+  position: relative;
+}
+
+.emotion-0 {
+  color: #757575;
+  cursor: text;
+  font-size: 16px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  pointer-events: auto;
+  position: absolute;
+  -webkit-transform: scale(1) translate(8px,17px);
+  -ms-transform: scale(1) translate(8px,17px);
+  transform: scale(1) translate(8px,17px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
+}
+
+.emotion-1 {
+  color: #BDBDBD;
+  cursor: inherit;
+  font-size: 16px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1) translate(9px,26px);
+  -ms-transform: scale(1) translate(9px,26px);
+  transform: scale(1) translate(9px,26px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.emotion-2 {
+  background-color: #FFF;
+  border: solid 1px #BDBDBD;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #424242;
+  font-size: 16px;
+  height: 56px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 25px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  position: relative;
+  width: 100%;
+  -webkit-opacity: 1px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.emotion-4 {
+  color: #B30029;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 1px;
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  text-align: left;
+  -webkit-transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+}
+
+<div>
+  <div
+    className="emotion-5"
+  >
     <div
-      data-radium={true}
-      style={
-        Object {
-          "cursor": "auto",
-          "display": "inline-block",
-          "position": "relative",
-          "width": "343px",
-        }
-      }
+      className="emotion-3"
     >
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "borderRadius": "4px",
-            "position": "relative",
-          }
-        }
+      <label
+        className="emotion-0"
+        htmlFor="test_id"
       >
-        <label
-          data-radium={true}
-          htmlFor="test_id"
-          style={
-            Object {
-              "color": "#757575",
-              "cursor": "text",
-              "fontSize": "16px",
-              "marginBottom": 0,
-              "marginLeft": 0,
-              "marginRight": 0,
-              "marginTop": 0,
-              "pointerEvents": "auto",
-              "position": "absolute",
-              "transform": "scale(1) translate(8px, 17px)",
-              "transformOrigin": "left top",
-              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-              "userSelect": "none",
-              "zIndex": 1,
-            }
-          }
-        >
-          Email
-        </label>
-        <div
-          data-radium={true}
-          id="hint_test_id"
-          style={
-            Object {
-              "color": "#BDBDBD",
-              "cursor": "inherit",
-              "fontSize": "16px",
-              "opacity": 0,
-              "pointerEvents": "none",
-              "position": "absolute",
-              "transform": "scale(1) translate(9px, 26px)",
-              "transformOrigin": "left top",
-              "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-              "visibility": "hidden",
-              "zIndex": 1,
-            }
-          }
-        >
-          Enter your email address
-        </div>
-        <input
-          aria-describedby="hint_test_id"
-          aria-invalid={false}
-          autoComplete="on"
-          data-radium={true}
-          defaultValue={null}
-          disabled={false}
-          id="test_id"
-          name="test"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          placeholder=""
-          style={
-            Object {
-              "WebkitOpacity": 1,
-              "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-              "backgroundColor": "#FFF",
-              "border": "solid 1px #BDBDBD",
-              "borderRadius": "4px",
-              "boxSizing": "border-box",
-              "color": "#424242",
-              "fontSize": "16px",
-              "height": "56px",
-              "marginBottom": 0,
-              "marginLeft": 0,
-              "marginRight": 0,
-              "marginTop": 0,
-              "paddingBottom": 8,
-              "paddingLeft": 8,
-              "paddingRight": 8,
-              "paddingTop": "25px",
-              "position": "relative",
-              "width": "100%",
-            }
-          }
-          type="email"
-        />
-      </div>
+        Email
+      </label>
       <div
-        aria-atomic={true}
-        aria-live="assertive"
-        data-radium={true}
-        id="error_test_id"
-        style={
-          Object {
-            "color": "#B30029",
-            "display": "none",
-            "fontSize": "12px",
-            "marginLeft": "1px",
-            "marginTop": "2px",
-            "opacity": "0",
-            "pointerEvents": "none",
-            "textAlign": "left",
-            "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-          }
-        }
+        className="emotion-1"
+        id="hint_test_id"
+      >
+        Enter your email address
+      </div>
+      <input
+        aria-describedby="hint_test_id"
+        aria-invalid={false}
+        autoComplete="on"
+        className="emotion-2"
+        defaultValue={null}
+        disabled={false}
+        id="test_id"
+        name="test"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder=""
+        type="email"
       />
     </div>
+    <div
+      aria-atomic={true}
+      aria-live="assertive"
+      className="emotion-4"
+      id="error_test_id"
+    />
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </div>
 `;
 
 exports[`renders TextField without label correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
+.emotion-4 {
+  cursor: auto;
+  display: inline-block;
+  position: relative;
+  width: 343px;
+}
+
+.emotion-2 {
+  border-radius: 4px;
+  position: relative;
+}
+
+.emotion-0 {
+  color: #BDBDBD;
+  cursor: inherit;
+  font-size: 16px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1) translate(9px,26px);
+  -ms-transform: scale(1) translate(9px,26px);
+  transform: scale(1) translate(9px,26px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.emotion-1 {
+  background-color: #FFF;
+  border: solid 1px #BDBDBD;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #424242;
+  font-size: 16px;
+  height: 56px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 25px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  position: relative;
+  width: 100%;
+  -webkit-opacity: 1px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.emotion-3 {
+  color: #B30029;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 1px;
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  text-align: left;
+  -webkit-transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+}
+
+<div>
+  <div
+    className="emotion-4"
+  >
     <div
-      data-radium={true}
-      style={
-        Object {
-          "cursor": "auto",
-          "display": "inline-block",
-          "position": "relative",
-          "width": "343px",
-        }
-      }
+      className="emotion-2"
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "borderRadius": "4px",
-            "position": "relative",
-          }
-        }
+        className="emotion-0"
+        id="hint_test_id"
       >
-        <div
-          data-radium={true}
-          id="hint_test_id"
-          style={
-            Object {
-              "color": "#BDBDBD",
-              "cursor": "inherit",
-              "fontSize": "16px",
-              "opacity": 0,
-              "pointerEvents": "none",
-              "position": "absolute",
-              "transform": "scale(1) translate(9px, 26px)",
-              "transformOrigin": "left top",
-              "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-              "visibility": "hidden",
-              "zIndex": 1,
-            }
-          }
-        >
-          Enter your email address
-        </div>
-        <input
-          aria-describedby="hint_test_id"
-          aria-invalid={false}
-          aria-label="enter email"
-          autoComplete="on"
-          data-radium={true}
-          defaultValue={null}
-          disabled={false}
-          id="test_id"
-          name="test"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          placeholder=""
-          style={
-            Object {
-              "WebkitOpacity": 1,
-              "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-              "backgroundColor": "#FFF",
-              "border": "solid 1px #BDBDBD",
-              "borderRadius": "4px",
-              "boxSizing": "border-box",
-              "color": "#424242",
-              "fontSize": "16px",
-              "height": "56px",
-              "marginBottom": 0,
-              "marginLeft": 0,
-              "marginRight": 0,
-              "marginTop": 0,
-              "paddingBottom": 8,
-              "paddingLeft": 8,
-              "paddingRight": 8,
-              "paddingTop": "25px",
-              "position": "relative",
-              "width": "100%",
-            }
-          }
-          type="email"
-        />
+        Enter your email address
       </div>
-      <div
-        aria-atomic={true}
-        aria-live="assertive"
-        data-radium={true}
-        id="error_test_id"
-        style={
-          Object {
-            "color": "#B30029",
-            "display": "none",
-            "fontSize": "12px",
-            "marginLeft": "1px",
-            "marginTop": "2px",
-            "opacity": "0",
-            "pointerEvents": "none",
-            "textAlign": "left",
-            "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-          }
-        }
+      <input
+        aria-describedby="hint_test_id"
+        aria-invalid={false}
+        aria-label="enter email"
+        autoComplete="on"
+        className="emotion-1"
+        defaultValue={null}
+        disabled={false}
+        id="test_id"
+        name="test"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder=""
+        type="email"
       />
     </div>
+    <div
+      aria-atomic={true}
+      aria-live="assertive"
+      className="emotion-3"
+      id="error_test_id"
+    />
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </div>
 `;
 
 exports[`uses a custom theme for all child components if one is provided 1`] = `
-<div
-  data-radium={true}
->
-  <div>
+.emotion-5 {
+  cursor: auto;
+  display: inline-block;
+  position: relative;
+  width: 343px;
+}
+
+.emotion-3 {
+  border-radius: 4px;
+  position: relative;
+}
+
+.emotion-0 {
+  color: #757575;
+  cursor: text;
+  font-size: 16px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  pointer-events: auto;
+  position: absolute;
+  -webkit-transform: scale(1) translate(8px,17px);
+  -ms-transform: scale(1) translate(8px,17px);
+  transform: scale(1) translate(8px,17px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
+}
+
+.emotion-1 {
+  color: #BDBDBD;
+  cursor: inherit;
+  font-size: 16px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1) translate(9px,26px);
+  -ms-transform: scale(1) translate(9px,26px);
+  transform: scale(1) translate(9px,26px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.emotion-2 {
+  background-color: #FFF;
+  border: solid 1px #BDBDBD;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #424242;
+  font-size: 16px;
+  height: 56px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 25px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  position: relative;
+  width: 100%;
+  -webkit-opacity: 1px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.emotion-4 {
+  color: #B30029;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 1px;
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  text-align: left;
+  -webkit-transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+}
+
+<div>
+  <div
+    className="emotion-5"
+  >
     <div
-      data-radium={true}
-      style={
-        Object {
-          "cursor": "auto",
-          "display": "inline-block",
-          "position": "relative",
-          "width": "343px",
-        }
-      }
+      className="emotion-3"
     >
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "borderRadius": "4px",
-            "position": "relative",
-          }
-        }
+      <label
+        className="emotion-0"
+        htmlFor="test_id"
       >
-        <label
-          data-radium={true}
-          htmlFor="test_id"
-          style={
-            Object {
-              "color": "#757575",
-              "cursor": "text",
-              "fontSize": "16px",
-              "marginBottom": 0,
-              "marginLeft": 0,
-              "marginRight": 0,
-              "marginTop": 0,
-              "pointerEvents": "auto",
-              "position": "absolute",
-              "transform": "scale(1) translate(8px, 17px)",
-              "transformOrigin": "left top",
-              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-              "userSelect": "none",
-              "zIndex": 1,
-            }
-          }
-        >
-          Email
-        </label>
-        <div
-          data-radium={true}
-          id="hint_test_id"
-          style={
-            Object {
-              "color": "#BDBDBD",
-              "cursor": "inherit",
-              "fontSize": "16px",
-              "opacity": 0,
-              "pointerEvents": "none",
-              "position": "absolute",
-              "transform": "scale(1) translate(9px, 26px)",
-              "transformOrigin": "left top",
-              "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-              "visibility": "hidden",
-              "zIndex": 1,
-            }
-          }
-        >
-          Enter your email address
-        </div>
-        <input
-          aria-describedby="hint_test_id"
-          aria-invalid={false}
-          autoComplete="on"
-          data-radium={true}
-          defaultValue={null}
-          disabled={false}
-          id="test_id"
-          name="test"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          placeholder=""
-          style={
-            Object {
-              "WebkitOpacity": 1,
-              "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-              "backgroundColor": "#FFF",
-              "border": "solid 1px #BDBDBD",
-              "borderRadius": "4px",
-              "boxSizing": "border-box",
-              "color": "#424242",
-              "fontSize": "16px",
-              "height": "56px",
-              "marginBottom": 0,
-              "marginLeft": 0,
-              "marginRight": 0,
-              "marginTop": 0,
-              "paddingBottom": 8,
-              "paddingLeft": 8,
-              "paddingRight": 8,
-              "paddingTop": "25px",
-              "position": "relative",
-              "width": "100%",
-            }
-          }
-          type="email"
-        />
-      </div>
+        Email
+      </label>
       <div
-        aria-atomic={true}
-        aria-live="assertive"
-        data-radium={true}
-        id="error_test_id"
-        style={
-          Object {
-            "color": "#B30029",
-            "display": "none",
-            "fontSize": "12px",
-            "marginLeft": "1px",
-            "marginTop": "2px",
-            "opacity": "0",
-            "pointerEvents": "none",
-            "textAlign": "left",
-            "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-          }
-        }
+        className="emotion-1"
+        id="hint_test_id"
+      >
+        Enter your email address
+      </div>
+      <input
+        aria-describedby="hint_test_id"
+        aria-invalid={false}
+        autoComplete="on"
+        className="emotion-2"
+        defaultValue={null}
+        disabled={false}
+        id="test_id"
+        name="test"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder=""
+        type="email"
       />
     </div>
+    <div
+      aria-atomic={true}
+      aria-live="assertive"
+      className="emotion-4"
+      id="error_test_id"
+    />
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </div>
 `;

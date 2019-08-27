@@ -1,13 +1,9 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { StyleRoot } from 'radium'
+import { mount } from 'enzyme'
 import Text from '../Text'
 
-const getComponent = props => (
-  <StyleRoot>
-    <Text {...props}>Don't talk about snacks</Text>
-  </StyleRoot>
-)
+const getComponent = props => <Text {...props}>Don't talk about snacks</Text>
 
 describe('Text', () => {
   it('renders all typography variants correctly', () => {
@@ -45,14 +41,12 @@ describe('Text', () => {
     const component = getComponent({ elementType: 'span', variant: 'T.14' })
     const tree = renderer.create(component).toJSON()
 
-    // Using `children` since the Radium wrapper will be the root node.
-    expect(tree.children[0].type).toEqual('span')
+    expect(tree.type).toEqual('span')
   })
 
   it('applies a custom font weight', () => {
     const component = getComponent({ variant: 'T.28', fontWeight: 'semiBold' })
-    const tree = renderer.create(component).toJSON()
-
-    expect(tree.children[0].props.style.fontWeight).toEqual(600)
+    const style = window.getComputedStyle(mount(component).getDOMNode())
+    expect(style.fontWeight).toEqual('600')
   })
 })

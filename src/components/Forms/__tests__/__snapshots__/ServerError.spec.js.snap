@@ -1,37 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders ServerError correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      aria-atomic={true}
-      aria-live="assertive"
-      data-radium={true}
-      style={
-        Object {
-          "backgroundColor": "rgba(233, 0, 56, 0.1)",
-          "borderRadius": "4px",
-          "color": "#E6003D",
-          "fontSize": "15px",
-          "marginBottom": "12px",
-          "paddingBottom": "15px",
-          "paddingLeft": "15px",
-          "paddingRight": "15px",
-          "paddingTop": "15px",
-        }
-      }
-    >
-      Error Text
-    </div>
+.emotion-0 {
+  background-color: rgba(233,0,56,0.1);
+  border-radius: 4px;
+  color: #E6003D;
+  font-size: 15px;
+  margin-bottom: 12px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+<div>
+  <div
+    aria-atomic={true}
+    aria-live="assertive"
+    className="emotion-0"
+  >
+    Error Text
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </div>
 `;

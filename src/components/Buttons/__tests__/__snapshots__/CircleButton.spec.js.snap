@@ -1,251 +1,245 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders CircleButton with Icon correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <button
-      className="rmq-4534e6b"
-      data-radium={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      style={
-        Object {
-          "backgroundColor": "#43B02A",
-          "border": "0",
-          "borderRadius": "50%",
-          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-          "color": "#FFFFFF",
-          "height": "48px",
-          "lineHeight": "1",
-          "textAlign": "center",
-          "transition": "background-color 150ms ease-in-out",
-          "width": "48px",
-          "zIndex": 100,
-        }
-      }
+.emotion-1 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+@media (max-width:767px) {
+  .emotion-1 {
+    display: none;
+  }
+}
+
+.emotion-1:hover {
+  background-color: #177D05;
+}
+
+.emotion-1:active {
+  background-color: #177D05;
+}
+
+.emotion-1:focus {
+  background-color: #177D05;
+}
+
+.emotion-0 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+}
+
+<div>
+  <button
+    className="emotion-1"
+    onClick={[Function]}
+  >
+    <i
+      aria-hidden={true}
+      className="emotion-0"
     >
-      <i
-        aria-hidden={true}
-        data-radium={true}
-        style={
-          Object {
-            "fontFamily": "ic-icons",
-            "fontSize": "16px",
-            "fontSmoothing": "antialiased",
-            "fontStyle": "normal",
-            "fontVariant": "normal",
-            "fontWeight": "normal",
-            "lineHeight": "1",
-            "osxFontSmoothing": "grayscale",
-            "position": "relative",
-            "speak": "none",
-            "textTransform": "none",
-          }
-        }
-      >
-        
-      </i>
-    </button>
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
-      }
-    }
-  />
+      
+    </i>
+  </button>
 </div>
 `;
 
 exports[`renders CircleButton with passed ariaLabel correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <button
-      aria-label="this is a button test"
-      className="rmq-4534e6b"
-      data-radium={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      style={
-        Object {
-          "backgroundColor": "#43B02A",
-          "border": "0",
-          "borderRadius": "50%",
-          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-          "color": "#FFFFFF",
-          "height": "48px",
-          "lineHeight": "1",
-          "textAlign": "center",
-          "transition": "background-color 150ms ease-in-out",
-          "width": "48px",
-          "zIndex": 100,
-        }
-      }
-    >
-      1
-    </button>
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
-      }
-    }
-  />
+.emotion-0 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+@media (max-width:767px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+.emotion-0:hover {
+  background-color: #177D05;
+}
+
+.emotion-0:active {
+  background-color: #177D05;
+}
+
+.emotion-0:focus {
+  background-color: #177D05;
+}
+
+<div>
+  <button
+    aria-label="this is a button test"
+    className="emotion-0"
+    onClick={[Function]}
+  >
+    1
+  </button>
 </div>
 `;
 
 exports[`renders CircleButton with passed disabled prop correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <button
-      className="rmq-4534e6b"
-      data-radium={true}
-      disabled={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      style={
-        Object {
-          "backgroundColor": "#43B02A",
-          "border": "0",
-          "borderRadius": "50%",
-          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-          "color": "#FFFFFF",
-          "height": "48px",
-          "lineHeight": "1",
-          "textAlign": "center",
-          "transition": "background-color 150ms ease-in-out",
-          "width": "48px",
-          "zIndex": 100,
-        }
-      }
-    >
-      1
-    </button>
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
-      }
-    }
-  />
+.emotion-0 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+@media (max-width:767px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+.emotion-0:hover {
+  background-color: #177D05;
+}
+
+.emotion-0:active {
+  background-color: #177D05;
+}
+
+.emotion-0:focus {
+  background-color: #177D05;
+}
+
+<div>
+  <button
+    className="emotion-0"
+    disabled={true}
+    onClick={[Function]}
+  >
+    1
+  </button>
 </div>
 `;
 
 exports[`renders CircleButton with passed style prop correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <button
-      className="rmq-4534e6b"
-      data-radium={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      style={
-        Object {
-          "backgroundColor": "#43B02A",
-          "border": "0",
-          "borderRadius": "50%",
-          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-          "color": "#FFFFFF",
-          "height": "48px",
-          "lineHeight": "1",
-          "position": "absolute",
-          "right": "8px",
-          "textAlign": "center",
-          "top": "8px",
-          "transition": "background-color 150ms ease-in-out",
-          "width": "48px",
-          "zIndex": 100,
-        }
-      }
-    >
-      1
-    </button>
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
-      }
-    }
-  />
+.emotion-0 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  top: 8px;
+  right: 8px;
+  position: absolute;
+}
+
+@media (max-width:767px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+.emotion-0:hover {
+  background-color: #177D05;
+}
+
+.emotion-0:active {
+  background-color: #177D05;
+}
+
+.emotion-0:focus {
+  background-color: #177D05;
+}
+
+<div>
+  <button
+    className="emotion-0"
+    onClick={[Function]}
+  >
+    1
+  </button>
 </div>
 `;
 
 exports[`renders basic CircleButton correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <button
-      className="rmq-4534e6b"
-      data-radium={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      style={
-        Object {
-          "backgroundColor": "#43B02A",
-          "border": "0",
-          "borderRadius": "50%",
-          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-          "color": "#FFFFFF",
-          "height": "48px",
-          "lineHeight": "1",
-          "textAlign": "center",
-          "transition": "background-color 150ms ease-in-out",
-          "width": "48px",
-          "zIndex": 100,
-        }
-      }
-    >
-      1
-    </button>
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
-      }
-    }
-  />
+.emotion-0 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+@media (max-width:767px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+.emotion-0:hover {
+  background-color: #177D05;
+}
+
+.emotion-0:active {
+  background-color: #177D05;
+}
+
+.emotion-0:focus {
+  background-color: #177D05;
+}
+
+<div>
+  <button
+    className="emotion-0"
+    onClick={[Function]}
+  >
+    1
+  </button>
 </div>
 `;

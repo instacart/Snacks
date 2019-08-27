@@ -1,92 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Link applies the elementAttributes prop correctly 1`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #43B02A;
+}
+
+.emotion-0:hover {
+  color: #177D05;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<a
+  aria-label="foo"
+  className="emotion-0"
+  href="#"
+  onClick={[Function]}
 >
-  <a
-    aria-label="foo"
-    data-radium={true}
-    href="#"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "color": "#43B02A",
-        "cursor": "pointer",
-        "textDecoration": "none",
-      }
-    }
-  >
-    HI
-  </a>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  HI
+</a>
 `;
 
 exports[`Link renders correctly when style overrides are provided 1`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #43B02A;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover {
+  color: #177D05;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<a
+  className="emotion-0"
+  href="#"
+  onClick={[Function]}
 >
-  <a
-    data-radium={true}
-    href="#"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "color": "#43B02A",
-        "cursor": "pointer",
-        "textDecoration": "underline",
-      }
-    }
-  >
-    HI
-  </a>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  HI
+</a>
 `;
 
 exports[`Link renders without throwing 1`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #43B02A;
+}
+
+.emotion-0:hover {
+  color: #177D05;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<a
+  className="emotion-0"
+  href="#"
+  onClick={[Function]}
 >
-  <a
-    data-radium={true}
-    href="#"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "color": "#43B02A",
-        "cursor": "pointer",
-        "textDecoration": "none",
-      }
-    }
-  >
-    HI
-  </a>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  HI
+</a>
 `;

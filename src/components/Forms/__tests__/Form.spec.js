@@ -1,6 +1,5 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
 import { spy, stub } from 'sinon'
 import Form from '../Form'
@@ -10,11 +9,9 @@ import Button from '../../Buttons/Button'
 it('renders Form with TextField correctly', () => {
   const tree = renderer
     .create(
-      <StyleRoot>
-        <Form>
-          <TextField name="email" type="email" id="email_id" floatingLabelText="Email" />
-        </Form>
-      </StyleRoot>
+      <Form>
+        <TextField name="email" type="email" id="email_id" floatingLabelText="Email" />
+      </Form>
     )
     .toJSON()
   expect(tree).toMatchSnapshot()

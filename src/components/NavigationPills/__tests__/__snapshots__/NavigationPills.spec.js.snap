@@ -1,2007 +1,1515 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders NavigationPills correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      data-radium={true}
-      onKeyDown={[Function]}
-      style={
-        Object {
-          "overflow": "hidden",
-          "position": "relative",
-        }
-      }
+.emotion-19 {
+  overflow: hidden;
+  position: relative;
+}
+
+.emotion-1 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  left: 8px;
+}
+
+@media (max-width:767px) {
+  .emotion-1 {
+    display: none;
+  }
+}
+
+.emotion-1:hover {
+  background-color: #177D05;
+}
+
+.emotion-1:active {
+  background-color: #177D05;
+}
+
+.emotion-1:focus {
+  background-color: #177D05;
+}
+
+.emotion-0 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  font-size: 20px;
+}
+
+.emotion-16 {
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  -webkit-transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  -webkit-transform: translate3d(0px,0,0);
+  -ms-transform: translate3d(0px,0,0);
+  transform: translate3d(0px,0,0);
+  white-space: nowrap;
+  position: relative;
+}
+
+@media (max-width:767px) {
+  .emotion-16 {
+    left: inherit;
+    overflow-x: scroll;
+    display: block;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    webkit-overflow-scrolling: touch;
+  }
+}
+
+.emotion-14 {
+  display: inline-block;
+  height: 56px;
+  min-width: 100%;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.emotion-2 {
+  margin-right: 10px;
+}
+
+.emotion-13 {
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.emotion-4 {
+  display: inline-block;
+}
+
+.emotion-3 {
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  display: block;
+  font-size: 14px;
+  background-color: #F7F7F7;
+  border-radius: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  line-height: 1.2;
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  color: #43B02A;
+}
+
+.emotion-3:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-3:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-18 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  right: 8px;
+}
+
+@media (max-width:767px) {
+  .emotion-18 {
+    display: none;
+  }
+}
+
+.emotion-18:hover {
+  background-color: #177D05;
+}
+
+.emotion-18:active {
+  background-color: #177D05;
+}
+
+.emotion-18:focus {
+  background-color: #177D05;
+}
+
+<div>
+  <div
+    className="emotion-19"
+    onKeyDown={[Function]}
+  >
+    <button
+      aria-label="back"
+      className="emotion-1"
+      onClick={[Function]}
     >
-      <button
-        aria-label="back"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#43B02A",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "left": 8,
-            "lineHeight": "1",
-            "position": "absolute",
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
+      <i
+        aria-hidden={true}
+        className="emotion-0"
       >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
+        
+      </i>
+    </button>
+    <div
+      className="emotion-16"
+    >
       <div
-        className="rmq-16b35912"
-        data-radium={true}
-        style={
-          Object {
-            "position": "relative",
-            "transform": "translate3d(0px, 0, 0)",
-            "transition": "transform 150ms ease-in-out",
-            "whiteSpace": "nowrap",
-          }
-        }
+        className="emotion-15"
       >
         <div
-          data-radium={true}
-          style={Object {}}
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "boxSizing": "border-box",
-                "display": "inline-block",
-                "height": "56px",
-                "minWidth": "100%",
-                "paddingBottom": 8,
-                "paddingLeft": 24,
-                "paddingRight": 8,
-                "paddingTop": 8,
-              }
+          className="emotion-14"
+          trackProps={
+            Object {
+              "isSliding": false,
+              "left": 0,
+              "parentWidth": undefined,
+              "showLeftArrow": false,
+              "showRightArrow": false,
+              "trackBounds": undefined,
+              "trackWidth": undefined,
             }
+          }
+        >
+          <label
+            className="emotion-2"
           >
-            <label
-              data-radium={true}
-              style={
-                Object {
-                  "marginRight": "10px",
-                }
-              }
+            Filter by
+          </label>
+          <ul
+            className="emotion-13"
+          >
+            <li
+              className="emotion-4"
             >
-              Filter by
-            </label>
-            <ul
-              data-radium={true}
-              style={
-                Object {
-                  "display": "inline-block",
-                  "marginBottom": "0",
-                  "marginLeft": "0",
-                  "marginRight": "0",
-                  "marginTop": "0",
-                }
-              }
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
+              >
+                doms
+              </a>
+            </li>
+            <li
+              className="emotion-4"
             >
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+                doms1
+              </a>
+            </li>
+            <li
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms1
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+                doms2
+              </a>
+            </li>
+            <li
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms2
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
-              >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms3
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
-              >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                />
-              </li>
-            </ul>
-          </div>
+                doms3
+              </a>
+            </li>
+            <li
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
+              />
+            </li>
+          </ul>
         </div>
       </div>
-      <button
-        aria-label="next"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#43B02A",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "lineHeight": "1",
-            "position": "absolute",
-            "right": 8,
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
-      >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
     </div>
+    <button
+      aria-label="next"
+      className="emotion-18"
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden={true}
+        className="emotion-0"
+      >
+        
+      </i>
+    </button>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
-overflow-x: scroll !important;
-display: block !important;
--ms-overflow-style: none !important;
-overflow: -moz-scrollbars-none !important;
-webkit-overflow-scrolling: touch !important;}}
-@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
-      }
-    }
-  />
 </div>
 `;
 
 exports[`renders NavigationPills wihtout label correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      data-radium={true}
-      onKeyDown={[Function]}
-      style={
-        Object {
-          "overflow": "hidden",
-          "position": "relative",
-        }
-      }
+.emotion-18 {
+  overflow: hidden;
+  position: relative;
+}
+
+.emotion-1 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  left: 8px;
+}
+
+@media (max-width:767px) {
+  .emotion-1 {
+    display: none;
+  }
+}
+
+.emotion-1:hover {
+  background-color: #177D05;
+}
+
+.emotion-1:active {
+  background-color: #177D05;
+}
+
+.emotion-1:focus {
+  background-color: #177D05;
+}
+
+.emotion-0 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  font-size: 20px;
+}
+
+.emotion-15 {
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  -webkit-transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  -webkit-transform: translate3d(0px,0,0);
+  -ms-transform: translate3d(0px,0,0);
+  transform: translate3d(0px,0,0);
+  white-space: nowrap;
+  position: relative;
+}
+
+@media (max-width:767px) {
+  .emotion-15 {
+    left: inherit;
+    overflow-x: scroll;
+    display: block;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    webkit-overflow-scrolling: touch;
+  }
+}
+
+.emotion-13 {
+  display: inline-block;
+  height: 56px;
+  min-width: 100%;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.emotion-12 {
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.emotion-3 {
+  display: inline-block;
+}
+
+.emotion-2 {
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  display: block;
+  font-size: 14px;
+  background-color: #F7F7F7;
+  border-radius: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  line-height: 1.2;
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  color: #43B02A;
+}
+
+.emotion-2:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-2:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-17 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  right: 8px;
+}
+
+@media (max-width:767px) {
+  .emotion-17 {
+    display: none;
+  }
+}
+
+.emotion-17:hover {
+  background-color: #177D05;
+}
+
+.emotion-17:active {
+  background-color: #177D05;
+}
+
+.emotion-17:focus {
+  background-color: #177D05;
+}
+
+<div>
+  <div
+    className="emotion-18"
+    onKeyDown={[Function]}
+  >
+    <button
+      aria-label="back"
+      className="emotion-1"
+      onClick={[Function]}
     >
-      <button
-        aria-label="back"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#43B02A",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "left": 8,
-            "lineHeight": "1",
-            "position": "absolute",
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
+      <i
+        aria-hidden={true}
+        className="emotion-0"
       >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
+        
+      </i>
+    </button>
+    <div
+      className="emotion-15"
+    >
       <div
-        className="rmq-16b35912"
-        data-radium={true}
-        style={
-          Object {
-            "position": "relative",
-            "transform": "translate3d(0px, 0, 0)",
-            "transition": "transform 150ms ease-in-out",
-            "whiteSpace": "nowrap",
-          }
-        }
+        className="emotion-14"
       >
         <div
-          data-radium={true}
-          style={Object {}}
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "boxSizing": "border-box",
-                "display": "inline-block",
-                "height": "56px",
-                "minWidth": "100%",
-                "paddingBottom": 8,
-                "paddingLeft": 24,
-                "paddingRight": 8,
-                "paddingTop": 8,
-              }
+          className="emotion-13"
+          trackProps={
+            Object {
+              "isSliding": false,
+              "left": 0,
+              "parentWidth": undefined,
+              "showLeftArrow": false,
+              "showRightArrow": false,
+              "trackBounds": undefined,
+              "trackWidth": undefined,
             }
+          }
+        >
+          <ul
+            className="emotion-12"
           >
-            <ul
-              data-radium={true}
-              style={
-                Object {
-                  "display": "inline-block",
-                  "marginBottom": "0",
-                  "marginLeft": "0",
-                  "marginRight": "0",
-                  "marginTop": "0",
-                }
-              }
+            <li
+              className="emotion-3"
             >
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+              <a
+                className="emotion-2"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+                doms
+              </a>
+            </li>
+            <li
+              className="emotion-3"
+            >
+              <a
+                className="emotion-2"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms1
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+                doms1
+              </a>
+            </li>
+            <li
+              className="emotion-3"
+            >
+              <a
+                className="emotion-2"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms2
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+                doms2
+              </a>
+            </li>
+            <li
+              className="emotion-3"
+            >
+              <a
+                className="emotion-2"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms3
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
-              >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                />
-              </li>
-            </ul>
-          </div>
+                doms3
+              </a>
+            </li>
+            <li
+              className="emotion-3"
+            >
+              <a
+                className="emotion-2"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
+              />
+            </li>
+          </ul>
         </div>
       </div>
-      <button
-        aria-label="next"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#43B02A",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "lineHeight": "1",
-            "position": "absolute",
-            "right": 8,
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
-      >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
     </div>
+    <button
+      aria-label="next"
+      className="emotion-17"
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden={true}
+        className="emotion-0"
+      >
+        
+      </i>
+    </button>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
-overflow-x: scroll !important;
-display: block !important;
--ms-overflow-style: none !important;
-overflow: -moz-scrollbars-none !important;
-webkit-overflow-scrolling: touch !important;}}
-@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
-      }
-    }
-  />
 </div>
 `;
 
 exports[`renders NavigationPills with each pill's elementAttributes correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      data-radium={true}
-      onKeyDown={[Function]}
-      style={
-        Object {
-          "overflow": "hidden",
-          "position": "relative",
-        }
-      }
+.emotion-19 {
+  overflow: hidden;
+  position: relative;
+}
+
+.emotion-1 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  left: 8px;
+}
+
+@media (max-width:767px) {
+  .emotion-1 {
+    display: none;
+  }
+}
+
+.emotion-1:hover {
+  background-color: #177D05;
+}
+
+.emotion-1:active {
+  background-color: #177D05;
+}
+
+.emotion-1:focus {
+  background-color: #177D05;
+}
+
+.emotion-0 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  font-size: 20px;
+}
+
+.emotion-16 {
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  -webkit-transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  -webkit-transform: translate3d(0px,0,0);
+  -ms-transform: translate3d(0px,0,0);
+  transform: translate3d(0px,0,0);
+  white-space: nowrap;
+  position: relative;
+}
+
+@media (max-width:767px) {
+  .emotion-16 {
+    left: inherit;
+    overflow-x: scroll;
+    display: block;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    webkit-overflow-scrolling: touch;
+  }
+}
+
+.emotion-14 {
+  display: inline-block;
+  height: 56px;
+  min-width: 100%;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.emotion-2 {
+  margin-right: 10px;
+}
+
+.emotion-13 {
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.emotion-4 {
+  display: inline-block;
+}
+
+.emotion-3 {
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  display: block;
+  font-size: 14px;
+  background-color: #F7F7F7;
+  border-radius: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  line-height: 1.2;
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  color: #43B02A;
+}
+
+.emotion-3:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-3:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-18 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  right: 8px;
+}
+
+@media (max-width:767px) {
+  .emotion-18 {
+    display: none;
+  }
+}
+
+.emotion-18:hover {
+  background-color: #177D05;
+}
+
+.emotion-18:active {
+  background-color: #177D05;
+}
+
+.emotion-18:focus {
+  background-color: #177D05;
+}
+
+<div>
+  <div
+    className="emotion-19"
+    onKeyDown={[Function]}
+  >
+    <button
+      aria-label="back"
+      className="emotion-1"
+      onClick={[Function]}
     >
-      <button
-        aria-label="back"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#43B02A",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "left": 8,
-            "lineHeight": "1",
-            "position": "absolute",
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
+      <i
+        aria-hidden={true}
+        className="emotion-0"
       >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
+        
+      </i>
+    </button>
+    <div
+      className="emotion-16"
+    >
       <div
-        className="rmq-16b35912"
-        data-radium={true}
-        style={
-          Object {
-            "position": "relative",
-            "transform": "translate3d(0px, 0, 0)",
-            "transition": "transform 150ms ease-in-out",
-            "whiteSpace": "nowrap",
-          }
-        }
+        className="emotion-15"
       >
         <div
-          data-radium={true}
-          style={Object {}}
-        >
-          <div
-            ariaLabel="this is an aria label"
-            data-radium={true}
-            role="tabs"
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "boxSizing": "border-box",
-                "display": "inline-block",
-                "height": "56px",
-                "minWidth": "100%",
-                "paddingBottom": 8,
-                "paddingLeft": 24,
-                "paddingRight": 8,
-                "paddingTop": 8,
-              }
+          ariaLabel="this is an aria label"
+          className="emotion-14"
+          role="tabs"
+          trackProps={
+            Object {
+              "isSliding": false,
+              "left": 0,
+              "parentWidth": undefined,
+              "showLeftArrow": false,
+              "showRightArrow": false,
+              "trackBounds": undefined,
+              "trackWidth": undefined,
             }
+          }
+        >
+          <label
+            className="emotion-2"
           >
-            <label
-              data-radium={true}
-              style={
-                Object {
-                  "marginRight": "10px",
-                }
-              }
+            Filter by
+          </label>
+          <ul
+            className="emotion-13"
+          >
+            <li
+              aria-label="doms"
+              className="emotion-4"
             >
-              Filter by
-            </label>
-            <ul
-              data-radium={true}
-              style={
-                Object {
-                  "display": "inline-block",
-                  "marginBottom": "0",
-                  "marginLeft": "0",
-                  "marginRight": "0",
-                  "marginTop": "0",
-                }
-              }
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
+                role="tab"
+              >
+                doms
+              </a>
+            </li>
+            <li
+              aria-label="doms1"
+              className="emotion-4"
             >
-              <li
-                aria-label="doms"
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
+                role="tab"
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="tab"
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms
-                </a>
-              </li>
-              <li
-                aria-label="doms1"
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+                doms1
+              </a>
+            </li>
+            <li
+              aria-label="doms2"
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
+                role="tab"
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="tab"
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms1
-                </a>
-              </li>
-              <li
-                aria-label="doms2"
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+                doms2
+              </a>
+            </li>
+            <li
+              aria-label="doms3"
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
+                role="tab"
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="tab"
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms2
-                </a>
-              </li>
-              <li
-                aria-label="doms3"
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
-              >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="tab"
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms3
-                </a>
-              </li>
-              <li
-                aria-label="four"
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
-              >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="tab"
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                />
-              </li>
-            </ul>
-          </div>
+                doms3
+              </a>
+            </li>
+            <li
+              aria-label="four"
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
+                role="tab"
+              />
+            </li>
+          </ul>
         </div>
       </div>
-      <button
-        aria-label="next"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#43B02A",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "lineHeight": "1",
-            "position": "absolute",
-            "right": 8,
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
-      >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
     </div>
+    <button
+      aria-label="next"
+      className="emotion-18"
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden={true}
+        className="emotion-0"
+      >
+        
+      </i>
+    </button>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
-overflow-x: scroll !important;
-display: block !important;
--ms-overflow-style: none !important;
-overflow: -moz-scrollbars-none !important;
-webkit-overflow-scrolling: touch !important;}}
-@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
-      }
-    }
-  />
 </div>
 `;
 
 exports[`renders NavigationPills with elementAttributes correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      data-radium={true}
-      onKeyDown={[Function]}
-      style={
-        Object {
-          "overflow": "hidden",
-          "position": "relative",
-        }
-      }
+.emotion-19 {
+  overflow: hidden;
+  position: relative;
+}
+
+.emotion-1 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  left: 8px;
+}
+
+@media (max-width:767px) {
+  .emotion-1 {
+    display: none;
+  }
+}
+
+.emotion-1:hover {
+  background-color: #177D05;
+}
+
+.emotion-1:active {
+  background-color: #177D05;
+}
+
+.emotion-1:focus {
+  background-color: #177D05;
+}
+
+.emotion-0 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  font-size: 20px;
+}
+
+.emotion-16 {
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  -webkit-transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  -webkit-transform: translate3d(0px,0,0);
+  -ms-transform: translate3d(0px,0,0);
+  transform: translate3d(0px,0,0);
+  white-space: nowrap;
+  position: relative;
+}
+
+@media (max-width:767px) {
+  .emotion-16 {
+    left: inherit;
+    overflow-x: scroll;
+    display: block;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    webkit-overflow-scrolling: touch;
+  }
+}
+
+.emotion-14 {
+  display: inline-block;
+  height: 56px;
+  min-width: 100%;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.emotion-2 {
+  margin-right: 10px;
+}
+
+.emotion-13 {
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.emotion-4 {
+  display: inline-block;
+}
+
+.emotion-3 {
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  display: block;
+  font-size: 14px;
+  background-color: #F7F7F7;
+  border-radius: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  line-height: 1.2;
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  color: #43B02A;
+}
+
+.emotion-3:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-3:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-18 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  right: 8px;
+}
+
+@media (max-width:767px) {
+  .emotion-18 {
+    display: none;
+  }
+}
+
+.emotion-18:hover {
+  background-color: #177D05;
+}
+
+.emotion-18:active {
+  background-color: #177D05;
+}
+
+.emotion-18:focus {
+  background-color: #177D05;
+}
+
+<div>
+  <div
+    className="emotion-19"
+    onKeyDown={[Function]}
+  >
+    <button
+      aria-label="back"
+      className="emotion-1"
+      onClick={[Function]}
     >
-      <button
-        aria-label="back"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#43B02A",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "left": 8,
-            "lineHeight": "1",
-            "position": "absolute",
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
+      <i
+        aria-hidden={true}
+        className="emotion-0"
       >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
+        
+      </i>
+    </button>
+    <div
+      className="emotion-16"
+    >
       <div
-        className="rmq-16b35912"
-        data-radium={true}
-        style={
-          Object {
-            "position": "relative",
-            "transform": "translate3d(0px, 0, 0)",
-            "transition": "transform 150ms ease-in-out",
-            "whiteSpace": "nowrap",
-          }
-        }
+        className="emotion-15"
       >
         <div
-          data-radium={true}
-          style={Object {}}
-        >
-          <div
-            ariaLabel="this is an aria label"
-            data-radium={true}
-            role="tabs"
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "boxSizing": "border-box",
-                "display": "inline-block",
-                "height": "56px",
-                "minWidth": "100%",
-                "paddingBottom": 8,
-                "paddingLeft": 24,
-                "paddingRight": 8,
-                "paddingTop": 8,
-              }
+          ariaLabel="this is an aria label"
+          className="emotion-14"
+          role="tabs"
+          trackProps={
+            Object {
+              "isSliding": false,
+              "left": 0,
+              "parentWidth": undefined,
+              "showLeftArrow": false,
+              "showRightArrow": false,
+              "trackBounds": undefined,
+              "trackWidth": undefined,
             }
+          }
+        >
+          <label
+            className="emotion-2"
           >
-            <label
-              data-radium={true}
-              style={
-                Object {
-                  "marginRight": "10px",
-                }
-              }
+            Filter by
+          </label>
+          <ul
+            className="emotion-13"
+          >
+            <li
+              className="emotion-4"
             >
-              Filter by
-            </label>
-            <ul
-              data-radium={true}
-              style={
-                Object {
-                  "display": "inline-block",
-                  "marginBottom": "0",
-                  "marginLeft": "0",
-                  "marginRight": "0",
-                  "marginTop": "0",
-                }
-              }
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
+              >
+                doms
+              </a>
+            </li>
+            <li
+              className="emotion-4"
             >
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+                doms1
+              </a>
+            </li>
+            <li
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms1
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+                doms2
+              </a>
+            </li>
+            <li
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms2
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
-              >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms3
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
-              >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                />
-              </li>
-            </ul>
-          </div>
+                doms3
+              </a>
+            </li>
+            <li
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
+              />
+            </li>
+          </ul>
         </div>
       </div>
-      <button
-        aria-label="next"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#43B02A",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "lineHeight": "1",
-            "position": "absolute",
-            "right": 8,
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
-      >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
     </div>
+    <button
+      aria-label="next"
+      className="emotion-18"
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden={true}
+        className="emotion-0"
+      >
+        
+      </i>
+    </button>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
-overflow-x: scroll !important;
-display: block !important;
--ms-overflow-style: none !important;
-overflow: -moz-scrollbars-none !important;
-webkit-overflow-scrolling: touch !important;}}
-@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
-      }
-    }
-  />
 </div>
 `;
 
 exports[`renders NavigationPills with inner elementAttributes correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      data-radium={true}
-      onKeyDown={[Function]}
-      style={
-        Object {
-          "overflow": "hidden",
-          "position": "relative",
-        }
-      }
+.emotion-19 {
+  overflow: hidden;
+  position: relative;
+}
+
+.emotion-1 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  left: 8px;
+}
+
+@media (max-width:767px) {
+  .emotion-1 {
+    display: none;
+  }
+}
+
+.emotion-1:hover {
+  background-color: #177D05;
+}
+
+.emotion-1:active {
+  background-color: #177D05;
+}
+
+.emotion-1:focus {
+  background-color: #177D05;
+}
+
+.emotion-0 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  font-size: 20px;
+}
+
+.emotion-16 {
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  -webkit-transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  -webkit-transform: translate3d(0px,0,0);
+  -ms-transform: translate3d(0px,0,0);
+  transform: translate3d(0px,0,0);
+  white-space: nowrap;
+  position: relative;
+}
+
+@media (max-width:767px) {
+  .emotion-16 {
+    left: inherit;
+    overflow-x: scroll;
+    display: block;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    webkit-overflow-scrolling: touch;
+  }
+}
+
+.emotion-14 {
+  display: inline-block;
+  height: 56px;
+  min-width: 100%;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.emotion-2 {
+  margin-right: 10px;
+}
+
+.emotion-13 {
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.emotion-4 {
+  display: inline-block;
+}
+
+.emotion-3 {
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  display: block;
+  font-size: 14px;
+  background-color: #F7F7F7;
+  border-radius: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  line-height: 1.2;
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  color: #43B02A;
+}
+
+.emotion-3:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-3:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #EEEEEE;
+}
+
+.emotion-18 {
+  z-index: 100;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26),0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  text-align: center;
+  line-height: 1;
+  background-color: #43B02A;
+  color: #FFFFFF;
+  position: absolute;
+  top: 5px;
+  display: none;
+  z-index: 100;
+  right: 8px;
+}
+
+@media (max-width:767px) {
+  .emotion-18 {
+    display: none;
+  }
+}
+
+.emotion-18:hover {
+  background-color: #177D05;
+}
+
+.emotion-18:active {
+  background-color: #177D05;
+}
+
+.emotion-18:focus {
+  background-color: #177D05;
+}
+
+<div>
+  <div
+    className="emotion-19"
+    onKeyDown={[Function]}
+  >
+    <button
+      aria-label="back"
+      className="emotion-1"
+      onClick={[Function]}
     >
-      <button
-        aria-label="back"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#43B02A",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "left": 8,
-            "lineHeight": "1",
-            "position": "absolute",
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
+      <i
+        aria-hidden={true}
+        className="emotion-0"
       >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
+        
+      </i>
+    </button>
+    <div
+      className="emotion-16"
+    >
       <div
-        className="rmq-16b35912"
-        data-radium={true}
-        style={
-          Object {
-            "position": "relative",
-            "transform": "translate3d(0px, 0, 0)",
-            "transition": "transform 150ms ease-in-out",
-            "whiteSpace": "nowrap",
-          }
-        }
+        className="emotion-15"
       >
         <div
-          data-radium={true}
-          style={Object {}}
-        >
-          <div
-            data-radium={true}
-            role="tabs"
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "boxSizing": "border-box",
-                "display": "inline-block",
-                "height": "56px",
-                "minWidth": "100%",
-                "paddingBottom": 8,
-                "paddingLeft": 24,
-                "paddingRight": 8,
-                "paddingTop": 8,
-              }
+          className="emotion-14"
+          role="tabs"
+          trackProps={
+            Object {
+              "isSliding": false,
+              "left": 0,
+              "parentWidth": undefined,
+              "showLeftArrow": false,
+              "showRightArrow": false,
+              "trackBounds": undefined,
+              "trackWidth": undefined,
             }
+          }
+        >
+          <label
+            className="emotion-2"
           >
-            <label
-              data-radium={true}
-              style={
-                Object {
-                  "marginRight": "10px",
-                }
-              }
+            Filter by
+          </label>
+          <ul
+            ariaLabel="this is an aria label"
+            className="emotion-13"
+          >
+            <li
+              className="emotion-4"
             >
-              Filter by
-            </label>
-            <ul
-              ariaLabel="this is an aria label"
-              data-radium={true}
-              style={
-                Object {
-                  "display": "inline-block",
-                  "marginBottom": "0",
-                  "marginLeft": "0",
-                  "marginRight": "0",
-                  "marginTop": "0",
-                }
-              }
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
+              >
+                doms
+              </a>
+            </li>
+            <li
+              className="emotion-4"
             >
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+                doms1
+              </a>
+            </li>
+            <li
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms1
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
+                doms2
+              </a>
+            </li>
+            <li
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
               >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms2
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
-              >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                >
-                  doms3
-                </a>
-              </li>
-              <li
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "inline-block",
-                  }
-                }
-              >
-                <a
-                  data-bypass={true}
-                  data-radium={true}
-                  href="#"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "backgroundColor": "#F7F7F7",
-                      "borderRadius": "24px",
-                      "color": "#43B02A",
-                      "display": "block",
-                      "fontSize": "14px",
-                      "lineHeight": "1.2",
-                      "marginBottom": 0,
-                      "marginLeft": "4px",
-                      "marginRight": "4px",
-                      "marginTop": 0,
-                      "paddingBottom": "12px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": "12px",
-                      "transition": "background-color 150ms ease-in-out",
-                    }
-                  }
-                />
-              </li>
-            </ul>
-          </div>
+                doms3
+              </a>
+            </li>
+            <li
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                data-bypass={true}
+                href="#"
+                onClick={[Function]}
+              />
+            </li>
+          </ul>
         </div>
       </div>
-      <button
-        aria-label="next"
-        className="rmq-4534e6b"
-        data-radium={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#43B02A",
-            "border": "0",
-            "borderRadius": "50%",
-            "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
-            "color": "#FFFFFF",
-            "display": "none",
-            "height": "48px",
-            "lineHeight": "1",
-            "position": "absolute",
-            "right": 8,
-            "textAlign": "center",
-            "top": "5px",
-            "transition": "background-color 150ms ease-in-out",
-            "width": "48px",
-            "zIndex": 100,
-          }
-        }
-      >
-        <i
-          aria-hidden={true}
-          data-radium={true}
-          style={
-            Object {
-              "fontFamily": "ic-icons",
-              "fontSize": "20px",
-              "fontSmoothing": "antialiased",
-              "fontStyle": "normal",
-              "fontVariant": "normal",
-              "fontWeight": "normal",
-              "lineHeight": "1",
-              "osxFontSmoothing": "grayscale",
-              "position": "relative",
-              "speak": "none",
-              "textTransform": "none",
-            }
-          }
-        >
-          
-        </i>
-      </button>
     </div>
+    <button
+      aria-label="next"
+      className="emotion-18"
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden={true}
+        className="emotion-0"
+      >
+        
+      </i>
+    </button>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
-overflow-x: scroll !important;
-display: block !important;
--ms-overflow-style: none !important;
-overflow: -moz-scrollbars-none !important;
-webkit-overflow-scrolling: touch !important;}}
-@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
-      }
-    }
-  />
 </div>
 `;
 
-exports[`renders NavigationPills without pills correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div />
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
-`;
+exports[`renders NavigationPills without pills correctly 1`] = `<div />`;

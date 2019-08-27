@@ -1,17 +1,170 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<StyleRoot>
-  <div
-    data-radium={true}
+.emotion-8 {
+  cursor: auto;
+  display: inline-block;
+  position: relative;
+  width: 343px;
+}
+
+.emotion-6 {
+  border-radius: 4px;
+  position: relative;
+}
+
+.emotion-1 {
+  pointer-events: none;
+}
+
+.emotion-0 {
+  color: #757575;
+  cursor: text;
+  font-size: 16px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  pointer-events: auto;
+  position: absolute;
+  -webkit-transform: scale(1) translate(8px,17px);
+  -ms-transform: scale(1) translate(8px,17px);
+  transform: scale(1) translate(8px,17px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.emotion-4 {
+  color: #BDBDBD;
+  cursor: inherit;
+  font-size: 16px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1) translate(9px,26px);
+  -ms-transform: scale(1) translate(9px,26px);
+  transform: scale(1) translate(9px,26px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.emotion-5 {
+  background-color: #FFFFFF;
+  border: solid 1px #BDBDBD;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #424242;
+  font-size: 16px;
+  height: 56px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 25px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  outline: none;
+  position: relative;
+  width: 100%;
+  -webkit-opacity: 1px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.emotion-7 {
+  color: #B30029;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 1px;
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  text-align: left;
+  -webkit-transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+}
+
+<div>
+  <withTheme(FormComponent)
+    floatingLabelText="SSN"
+    getValue={[Function]}
+    id="test_id"
+    mask={
+      Array [
+        /\\\\d/,
+        /\\\\d/,
+        /\\\\d/,
+        "-",
+        /\\\\d/,
+        /\\\\d/,
+        "-",
+        /\\\\d/,
+        /\\\\d/,
+        /\\\\d/,
+        /\\\\d/,
+      ]
+    }
+    maskHint="555-55-5555"
+    name="test"
   >
-    <div
-      key=".0"
+    <FormComponent
+      floatingLabelText="SSN"
+      getValue={[Function]}
+      id="test_id"
+      mask={
+        Array [
+          /\\\\d/,
+          /\\\\d/,
+          /\\\\d/,
+          "-",
+          /\\\\d/,
+          /\\\\d/,
+          "-",
+          /\\\\d/,
+          /\\\\d/,
+          /\\\\d/,
+          /\\\\d/,
+        ]
+      }
+      maskHint="555-55-5555"
+      name="test"
+      snacksTheme={
+        Object {
+          "colors": Object {
+            "action": "#43B02A",
+            "actionHover": "#177D05",
+            "primaryBackground": "#FFFFFF",
+            "primaryForeground": "#43B02A",
+            "secondaryBackground": "#43B02A",
+            "secondaryForeground": "#FFFFFF",
+            "secondaryForegroundFocus": "#757575",
+          },
+        }
+      }
     >
-      <withTheme(FormComponent)
+      <MaskedTextField
+        autoComplete="on"
+        defaultValue={null}
+        disabled={false}
         floatingLabelText="SSN"
         getValue={[Function]}
+        hasError={false}
         id="test_id"
+        isValid={true}
         mask={
           Array [
             /\\\\d/,
@@ -29,346 +182,336 @@ exports[`renders correctly 1`] = `
         }
         maskHint="555-55-5555"
         name="test"
-      >
-        <FormComponent
-          floatingLabelText="SSN"
-          getValue={[Function]}
-          id="test_id"
-          mask={
-            Array [
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-              "-",
-              /\\\\d/,
-              /\\\\d/,
-              "-",
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-            ]
-          }
-          maskHint="555-55-5555"
-          name="test"
-          snacksTheme={
-            Object {
-              "colors": Object {
-                "action": "#43B02A",
-                "actionHover": "#177D05",
-                "primaryBackground": "#FFFFFF",
-                "primaryForeground": "#43B02A",
-                "secondaryBackground": "#43B02A",
-                "secondaryForeground": "#FFFFFF",
-                "secondaryForegroundFocus": "#757575",
-              },
-            }
-          }
-        >
-          <MaskedTextField
-            autoComplete="on"
-            defaultValue={null}
-            disabled={false}
-            floatingLabelText="SSN"
-            getValue={[Function]}
-            hasError={false}
-            id="test_id"
-            isValid={true}
-            mask={
-              Array [
-                /\\\\d/,
-                /\\\\d/,
-                /\\\\d/,
-                "-",
-                /\\\\d/,
-                /\\\\d/,
-                "-",
-                /\\\\d/,
-                /\\\\d/,
-                /\\\\d/,
-                /\\\\d/,
-              ]
-            }
-            maskHint="555-55-5555"
-            name="test"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            serverError={null}
-            snacksTheme={
-              Object {
-                "colors": Object {
-                  "action": "#43B02A",
-                  "actionHover": "#177D05",
-                  "primaryBackground": "#FFFFFF",
-                  "primaryForeground": "#43B02A",
-                  "secondaryBackground": "#43B02A",
-                  "secondaryForeground": "#FFFFFF",
-                  "secondaryForegroundFocus": "#757575",
-                },
-              }
-            }
-          >
-            <div
-              data-radium={true}
-              style={
-                Object {
-                  "cursor": "auto",
-                  "display": "inline-block",
-                  "position": "relative",
-                  "width": 343,
-                }
-              }
-            >
-              <div
-                data-radium={true}
-                key=".1"
-                style={
-                  Object {
-                    "borderRadius": 4,
-                    "position": "relative",
-                  }
-                }
-              >
-                <withTheme(RadiumEnhancer)
-                  disabled={false}
-                  float={false}
-                  hasError={false}
-                  htmlFor="test_id"
-                  key=".0"
-                  snacksTheme={
-                    Object {
-                      "colors": Object {
-                        "action": "#43B02A",
-                        "actionHover": "#177D05",
-                        "primaryBackground": "#FFFFFF",
-                        "primaryForeground": "#43B02A",
-                        "secondaryBackground": "#43B02A",
-                        "secondaryForeground": "#FFFFFF",
-                        "secondaryForegroundFocus": "#757575",
-                      },
-                    }
-                  }
-                  style={
-                    Object {
-                      "pointerEvents": "none",
-                    }
-                  }
-                  text="SSN"
-                >
-                  <FloatingLabel
-                    disabled={false}
-                    float={false}
-                    hasError={false}
-                    htmlFor="test_id"
-                    snacksTheme={
-                      Object {
-                        "colors": Object {
-                          "action": "#43B02A",
-                          "actionHover": "#177D05",
-                          "primaryBackground": "#FFFFFF",
-                          "primaryForeground": "#43B02A",
-                          "secondaryBackground": "#43B02A",
-                          "secondaryForeground": "#FFFFFF",
-                          "secondaryForegroundFocus": "#757575",
-                        },
-                      }
-                    }
-                    style={
-                      Object {
-                        "pointerEvents": "none",
-                      }
-                    }
-                    text="SSN"
-                  >
-                    <label
-                      data-radium={true}
-                      htmlFor="test_id"
-                      style={
-                        Object {
-                          "color": "#757575",
-                          "cursor": "text",
-                          "fontSize": "16px",
-                          "marginBottom": 0,
-                          "marginLeft": 0,
-                          "marginRight": 0,
-                          "marginTop": 0,
-                          "pointerEvents": "none",
-                          "position": "absolute",
-                          "transform": "scale(1) translate(8px, 17px)",
-                          "transformOrigin": "left top",
-                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                          "userSelect": "none",
-                          "zIndex": 1,
-                        }
-                      }
-                    >
-                      SSN
-                    </label>
-                  </FloatingLabel>
-                </withTheme(RadiumEnhancer)>
-                <TextFieldHint
-                  disabled={false}
-                  inputId="hint_test_id"
-                  key=".1"
-                  text="555-55-5555"
-                >
-                  <div
-                    data-radium={true}
-                    id="hint_test_id"
-                    style={
-                      Object {
-                        "color": "#BDBDBD",
-                        "cursor": "inherit",
-                        "fontSize": "16px",
-                        "opacity": 0,
-                        "pointerEvents": "none",
-                        "position": "absolute",
-                        "transform": "scale(1) translate(9px, 26px)",
-                        "transformOrigin": "left top",
-                        "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "visibility": "hidden",
-                        "zIndex": 1,
-                      }
-                    }
-                  >
-                    555-55-5555
-                  </div>
-                </TextFieldHint>
-                <t
-                  aria-describedby="hint_test_id"
-                  aria-invalid={false}
-                  autoComplete="on"
-                  defaultValue={null}
-                  disabled={false}
-                  guide={false}
-                  id="test_id"
-                  keepCharPositions={true}
-                  key=".2"
-                  mask={
-                    Array [
-                      /\\\\d/,
-                      /\\\\d/,
-                      /\\\\d/,
-                      "-",
-                      /\\\\d/,
-                      /\\\\d/,
-                      "-",
-                      /\\\\d/,
-                      /\\\\d/,
-                      /\\\\d/,
-                      /\\\\d/,
-                    ]
-                  }
-                  name="test"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder=""
-                  render={[Function]}
-                >
-                  <input
-                    aria-describedby="hint_test_id"
-                    aria-invalid={false}
-                    autoComplete="on"
-                    defaultValue={null}
-                    disabled={false}
-                    id="test_id"
-                    name="test"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    placeholder=""
-                    style={
-                      Object {
-                        "WebkitOpacity": 1,
-                        "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-                        "backgroundColor": "#FFFFFF",
-                        "border": "solid 1px #BDBDBD",
-                        "borderRadius": 4,
-                        "boxSizing": "border-box",
-                        "color": "#424242",
-                        "fontSize": 16,
-                        "height": 56,
-                        "marginBottom": 0,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 0,
-                        "outline": "none",
-                        "paddingBottom": 8,
-                        "paddingLeft": 8,
-                        "paddingRight": 8,
-                        "paddingTop": "25px",
-                        "position": "relative",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </t>
-              </div>
-              <ValidationError
-                inputId="test_id"
-                key=".2"
-                show={false}
-              >
-                <div
-                  aria-atomic={true}
-                  aria-live="assertive"
-                  data-radium={true}
-                  id="error_test_id"
-                  style={
-                    Object {
-                      "color": "#B30029",
-                      "display": "none",
-                      "fontSize": "12px",
-                      "marginLeft": "1px",
-                      "marginTop": "2px",
-                      "opacity": "0",
-                      "pointerEvents": "none",
-                      "textAlign": "left",
-                      "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                    }
-                  }
-                />
-              </ValidationError>
-              <HelperText
-                key=".3"
-              />
-            </div>
-          </MaskedTextField>
-        </FormComponent>
-      </withTheme(FormComponent)>
-    </div>
-    <StyleSheet
-      key=".1"
-    >
-      <style
-        dangerouslySetInnerHTML={
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        serverError={null}
+        snacksTheme={
           Object {
-            "__html": "",
+            "colors": Object {
+              "action": "#43B02A",
+              "actionHover": "#177D05",
+              "primaryBackground": "#FFFFFF",
+              "primaryForeground": "#43B02A",
+              "secondaryBackground": "#43B02A",
+              "secondaryForeground": "#FFFFFF",
+              "secondaryForegroundFocus": "#757575",
+            },
           }
         }
-      />
-    </StyleSheet>
-  </div>
-</StyleRoot>
+      >
+        <div
+          className="emotion-8"
+        >
+          <div
+            className="emotion-6"
+          >
+            <withTheme(FloatingLabel)
+              className="emotion-1"
+              disabled={false}
+              float={false}
+              hasError={false}
+              htmlFor="test_id"
+              snacksTheme={
+                Object {
+                  "colors": Object {
+                    "action": "#43B02A",
+                    "actionHover": "#177D05",
+                    "primaryBackground": "#FFFFFF",
+                    "primaryForeground": "#43B02A",
+                    "secondaryBackground": "#43B02A",
+                    "secondaryForeground": "#FFFFFF",
+                    "secondaryForegroundFocus": "#757575",
+                  },
+                }
+              }
+              text="SSN"
+            >
+              <FloatingLabel
+                className="emotion-1"
+                disabled={false}
+                float={false}
+                hasError={false}
+                htmlFor="test_id"
+                snacksTheme={
+                  Object {
+                    "colors": Object {
+                      "action": "#43B02A",
+                      "actionHover": "#177D05",
+                      "primaryBackground": "#FFFFFF",
+                      "primaryForeground": "#43B02A",
+                      "secondaryBackground": "#43B02A",
+                      "secondaryForeground": "#FFFFFF",
+                      "secondaryForegroundFocus": "#757575",
+                    },
+                  }
+                }
+                text="SSN"
+              >
+                <label
+                  className="emotion-0"
+                  htmlFor="test_id"
+                >
+                  SSN
+                </label>
+              </FloatingLabel>
+            </withTheme(FloatingLabel)>
+            <TextFieldHint
+              disabled={false}
+              inputId="hint_test_id"
+              text="555-55-5555"
+            >
+              <div
+                className="emotion-4"
+                id="hint_test_id"
+              >
+                555-55-5555
+              </div>
+            </TextFieldHint>
+            <t
+              aria-describedby="hint_test_id"
+              aria-invalid={false}
+              autoComplete="on"
+              defaultValue={null}
+              disabled={false}
+              guide={false}
+              id="test_id"
+              keepCharPositions={true}
+              mask={
+                Array [
+                  /\\\\d/,
+                  /\\\\d/,
+                  /\\\\d/,
+                  "-",
+                  /\\\\d/,
+                  /\\\\d/,
+                  "-",
+                  /\\\\d/,
+                  /\\\\d/,
+                  /\\\\d/,
+                  /\\\\d/,
+                ]
+              }
+              name="test"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder=""
+              render={[Function]}
+            >
+              <input
+                aria-describedby="hint_test_id"
+                aria-invalid={false}
+                autoComplete="on"
+                className="emotion-5"
+                defaultValue={null}
+                disabled={false}
+                id="test_id"
+                name="test"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+              />
+            </t>
+          </div>
+          <ValidationError
+            inputId="test_id"
+            show={false}
+          >
+            <div
+              aria-atomic={true}
+              aria-live="assertive"
+              className="emotion-7"
+              id="error_test_id"
+            />
+          </ValidationError>
+          <HelperText />
+        </div>
+      </MaskedTextField>
+    </FormComponent>
+  </withTheme(FormComponent)>
+</div>
 `;
 
 exports[`renders correctly with focus state 1`] = `
-<StyleRoot>
-  <div
-    data-radium={true}
+.emotion-8 {
+  cursor: auto;
+  display: inline-block;
+  position: relative;
+  width: 343px;
+}
+
+.emotion-6 {
+  border-radius: 4px;
+  position: relative;
+}
+
+.emotion-1 {
+  pointer-events: none;
+}
+
+.emotion-7 {
+  color: #B30029;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 1px;
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  text-align: left;
+  -webkit-transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+}
+
+.emotion-0 {
+  color: #757575;
+  cursor: text;
+  font-size: 16px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  pointer-events: auto;
+  position: absolute;
+  -webkit-transform: scale(1) translate(8px,17px);
+  -ms-transform: scale(1) translate(8px,17px);
+  transform: scale(1) translate(8px,17px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
+  cursor: inherit;
+  -webkit-transform: scale(0.85) translate(8px,6px);
+  -ms-transform: scale(0.85) translate(8px,6px);
+  transform: scale(0.85) translate(8px,6px);
+  pointer-events: none;
+  color: #43B02A;
+  pointer-events: none;
+}
+
+.emotion-4 {
+  color: #BDBDBD;
+  cursor: inherit;
+  font-size: 16px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1) translate(9px,26px);
+  -ms-transform: scale(1) translate(9px,26px);
+  transform: scale(1) translate(9px,26px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 1;
+  -webkit-transition: visibility 0ms linear 0ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 0ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  visibility: visible;
+}
+
+.emotion-5 {
+  background-color: #FFFFFF;
+  border: 1px solid #43B02A;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #424242;
+  font-size: 16px;
+  height: 56px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 25px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  outline: none;
+  position: relative;
+  width: 100%;
+  -webkit-opacity: 1px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+<div>
+  <withTheme(FormComponent)
+    floatingLabelText="SSN"
+    getValue={[Function]}
+    id="test_id"
+    mask={
+      Array [
+        /\\\\d/,
+        /\\\\d/,
+        /\\\\d/,
+        "-",
+        /\\\\d/,
+        /\\\\d/,
+        "-",
+        /\\\\d/,
+        /\\\\d/,
+        /\\\\d/,
+        /\\\\d/,
+      ]
+    }
+    maskHint="555-55-5555"
+    name="test"
   >
-    <div
-      key=".0"
+    <FormComponent
+      floatingLabelText="SSN"
+      getValue={[Function]}
+      id="test_id"
+      mask={
+        Array [
+          /\\\\d/,
+          /\\\\d/,
+          /\\\\d/,
+          "-",
+          /\\\\d/,
+          /\\\\d/,
+          "-",
+          /\\\\d/,
+          /\\\\d/,
+          /\\\\d/,
+          /\\\\d/,
+        ]
+      }
+      maskHint="555-55-5555"
+      name="test"
+      snacksTheme={
+        Object {
+          "colors": Object {
+            "action": "#43B02A",
+            "actionHover": "#177D05",
+            "primaryBackground": "#FFFFFF",
+            "primaryForeground": "#43B02A",
+            "secondaryBackground": "#43B02A",
+            "secondaryForeground": "#FFFFFF",
+            "secondaryForegroundFocus": "#757575",
+          },
+        }
+      }
     >
-      <withTheme(FormComponent)
+      <MaskedTextField
+        autoComplete="on"
+        defaultValue={null}
+        disabled={false}
         floatingLabelText="SSN"
         getValue={[Function]}
+        hasError={false}
         id="test_id"
+        isValid={true}
         mask={
           Array [
             /\\\\d/,
@@ -386,349 +529,344 @@ exports[`renders correctly with focus state 1`] = `
         }
         maskHint="555-55-5555"
         name="test"
-      >
-        <FormComponent
-          floatingLabelText="SSN"
-          getValue={[Function]}
-          id="test_id"
-          mask={
-            Array [
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-              "-",
-              /\\\\d/,
-              /\\\\d/,
-              "-",
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-            ]
-          }
-          maskHint="555-55-5555"
-          name="test"
-          snacksTheme={
-            Object {
-              "colors": Object {
-                "action": "#43B02A",
-                "actionHover": "#177D05",
-                "primaryBackground": "#FFFFFF",
-                "primaryForeground": "#43B02A",
-                "secondaryBackground": "#43B02A",
-                "secondaryForeground": "#FFFFFF",
-                "secondaryForegroundFocus": "#757575",
-              },
-            }
-          }
-        >
-          <MaskedTextField
-            autoComplete="on"
-            defaultValue={null}
-            disabled={false}
-            floatingLabelText="SSN"
-            getValue={[Function]}
-            hasError={false}
-            id="test_id"
-            isValid={true}
-            mask={
-              Array [
-                /\\\\d/,
-                /\\\\d/,
-                /\\\\d/,
-                "-",
-                /\\\\d/,
-                /\\\\d/,
-                "-",
-                /\\\\d/,
-                /\\\\d/,
-                /\\\\d/,
-                /\\\\d/,
-              ]
-            }
-            maskHint="555-55-5555"
-            name="test"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            serverError={null}
-            snacksTheme={
-              Object {
-                "colors": Object {
-                  "action": "#43B02A",
-                  "actionHover": "#177D05",
-                  "primaryBackground": "#FFFFFF",
-                  "primaryForeground": "#43B02A",
-                  "secondaryBackground": "#43B02A",
-                  "secondaryForeground": "#FFFFFF",
-                  "secondaryForegroundFocus": "#757575",
-                },
-              }
-            }
-          >
-            <div
-              data-radium={true}
-              style={
-                Object {
-                  "cursor": "auto",
-                  "display": "inline-block",
-                  "position": "relative",
-                  "width": 343,
-                }
-              }
-            >
-              <div
-                data-radium={true}
-                key=".1"
-                style={
-                  Object {
-                    "borderRadius": 4,
-                    "position": "relative",
-                  }
-                }
-              >
-                <withTheme(RadiumEnhancer)
-                  disabled={false}
-                  float={true}
-                  hasError={false}
-                  htmlFor="test_id"
-                  isActive={true}
-                  key=".0"
-                  snacksTheme={
-                    Object {
-                      "colors": Object {
-                        "action": "#43B02A",
-                        "actionHover": "#177D05",
-                        "primaryBackground": "#FFFFFF",
-                        "primaryForeground": "#43B02A",
-                        "secondaryBackground": "#43B02A",
-                        "secondaryForeground": "#FFFFFF",
-                        "secondaryForegroundFocus": "#757575",
-                      },
-                    }
-                  }
-                  style={
-                    Object {
-                      "pointerEvents": "none",
-                    }
-                  }
-                  text="SSN"
-                >
-                  <FloatingLabel
-                    disabled={false}
-                    float={true}
-                    hasError={false}
-                    htmlFor="test_id"
-                    isActive={true}
-                    snacksTheme={
-                      Object {
-                        "colors": Object {
-                          "action": "#43B02A",
-                          "actionHover": "#177D05",
-                          "primaryBackground": "#FFFFFF",
-                          "primaryForeground": "#43B02A",
-                          "secondaryBackground": "#43B02A",
-                          "secondaryForeground": "#FFFFFF",
-                          "secondaryForegroundFocus": "#757575",
-                        },
-                      }
-                    }
-                    style={
-                      Object {
-                        "pointerEvents": "none",
-                      }
-                    }
-                    text="SSN"
-                  >
-                    <label
-                      data-radium={true}
-                      htmlFor="test_id"
-                      style={
-                        Object {
-                          "color": "#43B02A",
-                          "cursor": "inherit",
-                          "fontSize": "16px",
-                          "marginBottom": 0,
-                          "marginLeft": 0,
-                          "marginRight": 0,
-                          "marginTop": 0,
-                          "pointerEvents": "none",
-                          "position": "absolute",
-                          "transform": "scale(0.85) translate(8px, 6px)",
-                          "transformOrigin": "left top",
-                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                          "userSelect": "none",
-                          "zIndex": 1,
-                        }
-                      }
-                    >
-                      SSN
-                    </label>
-                  </FloatingLabel>
-                </withTheme(RadiumEnhancer)>
-                <TextFieldHint
-                  disabled={false}
-                  inputId="hint_test_id"
-                  key=".1"
-                  show={true}
-                  text="555-55-5555"
-                >
-                  <div
-                    data-radium={true}
-                    id="hint_test_id"
-                    style={
-                      Object {
-                        "color": "#BDBDBD",
-                        "cursor": "inherit",
-                        "fontSize": "16px",
-                        "opacity": 1,
-                        "pointerEvents": "none",
-                        "position": "absolute",
-                        "transform": "scale(1) translate(9px, 26px)",
-                        "transformOrigin": "left top",
-                        "transition": "visibility 0ms linear 0ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "visibility": "visible",
-                        "zIndex": 1,
-                      }
-                    }
-                  >
-                    555-55-5555
-                  </div>
-                </TextFieldHint>
-                <t
-                  aria-describedby="hint_test_id"
-                  aria-invalid={false}
-                  autoComplete="on"
-                  defaultValue={null}
-                  disabled={false}
-                  guide={false}
-                  id="test_id"
-                  keepCharPositions={true}
-                  key=".2"
-                  mask={
-                    Array [
-                      /\\\\d/,
-                      /\\\\d/,
-                      /\\\\d/,
-                      "-",
-                      /\\\\d/,
-                      /\\\\d/,
-                      "-",
-                      /\\\\d/,
-                      /\\\\d/,
-                      /\\\\d/,
-                      /\\\\d/,
-                    ]
-                  }
-                  name="test"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder=""
-                  render={[Function]}
-                >
-                  <input
-                    aria-describedby="hint_test_id"
-                    aria-invalid={false}
-                    autoComplete="on"
-                    defaultValue={null}
-                    disabled={false}
-                    id="test_id"
-                    name="test"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    placeholder=""
-                    style={
-                      Object {
-                        "WebkitOpacity": 1,
-                        "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-                        "backgroundColor": "#FFFFFF",
-                        "border": "1px solid #43B02A",
-                        "borderRadius": 4,
-                        "boxSizing": "border-box",
-                        "color": "#424242",
-                        "fontSize": 16,
-                        "height": 56,
-                        "marginBottom": 0,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 0,
-                        "outline": "none",
-                        "paddingBottom": 8,
-                        "paddingLeft": 8,
-                        "paddingRight": 8,
-                        "paddingTop": "25px",
-                        "position": "relative",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </t>
-              </div>
-              <ValidationError
-                inputId="test_id"
-                key=".2"
-                show={false}
-              >
-                <div
-                  aria-atomic={true}
-                  aria-live="assertive"
-                  data-radium={true}
-                  id="error_test_id"
-                  style={
-                    Object {
-                      "color": "#B30029",
-                      "display": "none",
-                      "fontSize": "12px",
-                      "marginLeft": "1px",
-                      "marginTop": "2px",
-                      "opacity": "0",
-                      "pointerEvents": "none",
-                      "textAlign": "left",
-                      "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                    }
-                  }
-                />
-              </ValidationError>
-              <HelperText
-                key=".3"
-              />
-            </div>
-          </MaskedTextField>
-        </FormComponent>
-      </withTheme(FormComponent)>
-    </div>
-    <StyleSheet
-      key=".1"
-    >
-      <style
-        dangerouslySetInnerHTML={
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        serverError={null}
+        snacksTheme={
           Object {
-            "__html": "",
+            "colors": Object {
+              "action": "#43B02A",
+              "actionHover": "#177D05",
+              "primaryBackground": "#FFFFFF",
+              "primaryForeground": "#43B02A",
+              "secondaryBackground": "#43B02A",
+              "secondaryForeground": "#FFFFFF",
+              "secondaryForegroundFocus": "#757575",
+            },
           }
         }
-      />
-    </StyleSheet>
-  </div>
-</StyleRoot>
+      >
+        <div
+          className="emotion-8"
+        >
+          <div
+            className="emotion-6"
+          >
+            <withTheme(FloatingLabel)
+              className="emotion-1"
+              disabled={false}
+              float={true}
+              hasError={false}
+              htmlFor="test_id"
+              isActive={true}
+              snacksTheme={
+                Object {
+                  "colors": Object {
+                    "action": "#43B02A",
+                    "actionHover": "#177D05",
+                    "primaryBackground": "#FFFFFF",
+                    "primaryForeground": "#43B02A",
+                    "secondaryBackground": "#43B02A",
+                    "secondaryForeground": "#FFFFFF",
+                    "secondaryForegroundFocus": "#757575",
+                  },
+                }
+              }
+              text="SSN"
+            >
+              <FloatingLabel
+                className="emotion-1"
+                disabled={false}
+                float={true}
+                hasError={false}
+                htmlFor="test_id"
+                isActive={true}
+                snacksTheme={
+                  Object {
+                    "colors": Object {
+                      "action": "#43B02A",
+                      "actionHover": "#177D05",
+                      "primaryBackground": "#FFFFFF",
+                      "primaryForeground": "#43B02A",
+                      "secondaryBackground": "#43B02A",
+                      "secondaryForeground": "#FFFFFF",
+                      "secondaryForegroundFocus": "#757575",
+                    },
+                  }
+                }
+                text="SSN"
+              >
+                <label
+                  className="emotion-0"
+                  htmlFor="test_id"
+                >
+                  SSN
+                </label>
+              </FloatingLabel>
+            </withTheme(FloatingLabel)>
+            <TextFieldHint
+              disabled={false}
+              inputId="hint_test_id"
+              show={true}
+              text="555-55-5555"
+            >
+              <div
+                className="emotion-4"
+                id="hint_test_id"
+              >
+                555-55-5555
+              </div>
+            </TextFieldHint>
+            <t
+              aria-describedby="hint_test_id"
+              aria-invalid={false}
+              autoComplete="on"
+              defaultValue={null}
+              disabled={false}
+              guide={false}
+              id="test_id"
+              keepCharPositions={true}
+              mask={
+                Array [
+                  /\\\\d/,
+                  /\\\\d/,
+                  /\\\\d/,
+                  "-",
+                  /\\\\d/,
+                  /\\\\d/,
+                  "-",
+                  /\\\\d/,
+                  /\\\\d/,
+                  /\\\\d/,
+                  /\\\\d/,
+                ]
+              }
+              name="test"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder=""
+              render={[Function]}
+            >
+              <input
+                aria-describedby="hint_test_id"
+                aria-invalid={false}
+                autoComplete="on"
+                className="emotion-5"
+                defaultValue={null}
+                disabled={false}
+                id="test_id"
+                name="test"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+              />
+            </t>
+          </div>
+          <ValidationError
+            inputId="test_id"
+            show={false}
+          >
+            <div
+              aria-atomic={true}
+              aria-live="assertive"
+              className="emotion-7"
+              id="error_test_id"
+            />
+          </ValidationError>
+          <HelperText />
+        </div>
+      </MaskedTextField>
+    </FormComponent>
+  </withTheme(FormComponent)>
+</div>
 `;
 
 exports[`uses a custom theme for all child components if one is provided 1`] = `
-<StyleRoot>
-  <div
-    data-radium={true}
+.emotion-8 {
+  cursor: auto;
+  display: inline-block;
+  position: relative;
+  width: 343px;
+}
+
+.emotion-6 {
+  border-radius: 4px;
+  position: relative;
+}
+
+.emotion-1 {
+  pointer-events: none;
+}
+
+.emotion-0 {
+  color: #757575;
+  cursor: text;
+  font-size: 16px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  pointer-events: auto;
+  position: absolute;
+  -webkit-transform: scale(1) translate(8px,17px);
+  -ms-transform: scale(1) translate(8px,17px);
+  transform: scale(1) translate(8px,17px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: all 450ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.emotion-4 {
+  color: #BDBDBD;
+  cursor: inherit;
+  font-size: 16px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1) translate(9px,26px);
+  -ms-transform: scale(1) translate(9px,26px);
+  transform: scale(1) translate(9px,26px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.emotion-5 {
+  background-color: #FFFFFF;
+  border: solid 1px #BDBDBD;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #424242;
+  font-size: 16px;
+  height: 56px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 25px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  outline: none;
+  position: relative;
+  width: 100%;
+  -webkit-opacity: 1px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.emotion-7 {
+  color: #B30029;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 1px;
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  text-align: left;
+  -webkit-transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+}
+
+<div>
+  <withTheme(FormComponent)
+    floatingLabelText="SSN"
+    getValue={[Function]}
+    id="test_id"
+    mask={
+      Array [
+        /\\\\d/,
+        /\\\\d/,
+        /\\\\d/,
+        "-",
+        /\\\\d/,
+        /\\\\d/,
+        "-",
+        /\\\\d/,
+        /\\\\d/,
+        /\\\\d/,
+        /\\\\d/,
+      ]
+    }
+    maskHint="555-55-5555"
+    name="test"
+    onChange={[Function]}
+    snacksTheme={
+      Object {
+        "colors": Object {
+          "action": "green",
+          "actionHover": "darkgreen",
+          "primaryBackground": "white",
+          "primaryForeground": "green",
+          "secondaryBackground": "green",
+          "secondaryForeground": "white",
+          "secondaryForegroundFocus": "gray",
+        },
+      }
+    }
   >
-    <div
-      key=".0"
+    <FormComponent
+      floatingLabelText="SSN"
+      getValue={[Function]}
+      id="test_id"
+      mask={
+        Array [
+          /\\\\d/,
+          /\\\\d/,
+          /\\\\d/,
+          "-",
+          /\\\\d/,
+          /\\\\d/,
+          "-",
+          /\\\\d/,
+          /\\\\d/,
+          /\\\\d/,
+          /\\\\d/,
+        ]
+      }
+      maskHint="555-55-5555"
+      name="test"
+      onChange={[Function]}
+      snacksTheme={
+        Object {
+          "colors": Object {
+            "action": "green",
+            "actionHover": "darkgreen",
+            "primaryBackground": "white",
+            "primaryForeground": "green",
+            "secondaryBackground": "green",
+            "secondaryForeground": "white",
+            "secondaryForegroundFocus": "gray",
+          },
+        }
+      }
     >
-      <withTheme(FormComponent)
+      <MaskedTextField
+        autoComplete="on"
+        defaultValue={null}
+        disabled={false}
         floatingLabelText="SSN"
         getValue={[Function]}
+        hasError={false}
         id="test_id"
+        isValid={true}
         mask={
           Array [
             /\\\\d/,
@@ -746,7 +884,11 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
         }
         maskHint="555-55-5555"
         name="test"
+        onBlur={[Function]}
         onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        serverError={null}
         snacksTheme={
           Object {
             "colors": Object {
@@ -761,330 +903,138 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
           }
         }
       >
-        <FormComponent
-          floatingLabelText="SSN"
-          getValue={[Function]}
-          id="test_id"
-          mask={
-            Array [
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-              "-",
-              /\\\\d/,
-              /\\\\d/,
-              "-",
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-            ]
-          }
-          maskHint="555-55-5555"
-          name="test"
-          onChange={[Function]}
-          snacksTheme={
-            Object {
-              "colors": Object {
-                "action": "green",
-                "actionHover": "darkgreen",
-                "primaryBackground": "white",
-                "primaryForeground": "green",
-                "secondaryBackground": "green",
-                "secondaryForeground": "white",
-                "secondaryForegroundFocus": "gray",
-              },
-            }
-          }
+        <div
+          className="emotion-8"
         >
-          <MaskedTextField
-            autoComplete="on"
-            defaultValue={null}
-            disabled={false}
-            floatingLabelText="SSN"
-            getValue={[Function]}
-            hasError={false}
-            id="test_id"
-            isValid={true}
-            mask={
-              Array [
-                /\\\\d/,
-                /\\\\d/,
-                /\\\\d/,
-                "-",
-                /\\\\d/,
-                /\\\\d/,
-                "-",
-                /\\\\d/,
-                /\\\\d/,
-                /\\\\d/,
-                /\\\\d/,
-              ]
-            }
-            maskHint="555-55-5555"
-            name="test"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            serverError={null}
-            snacksTheme={
-              Object {
-                "colors": Object {
-                  "action": "green",
-                  "actionHover": "darkgreen",
-                  "primaryBackground": "white",
-                  "primaryForeground": "green",
-                  "secondaryBackground": "green",
-                  "secondaryForeground": "white",
-                  "secondaryForegroundFocus": "gray",
-                },
-              }
-            }
+          <div
+            className="emotion-6"
           >
-            <div
-              data-radium={true}
-              style={
+            <withTheme(FloatingLabel)
+              className="emotion-1"
+              disabled={false}
+              float={false}
+              hasError={false}
+              htmlFor="test_id"
+              snacksTheme={
                 Object {
-                  "cursor": "auto",
-                  "display": "inline-block",
-                  "position": "relative",
-                  "width": 343,
+                  "colors": Object {
+                    "action": "green",
+                    "actionHover": "darkgreen",
+                    "primaryBackground": "white",
+                    "primaryForeground": "green",
+                    "secondaryBackground": "green",
+                    "secondaryForeground": "white",
+                    "secondaryForegroundFocus": "gray",
+                  },
                 }
               }
+              text="SSN"
+            >
+              <FloatingLabel
+                className="emotion-1"
+                disabled={false}
+                float={false}
+                hasError={false}
+                htmlFor="test_id"
+                snacksTheme={
+                  Object {
+                    "colors": Object {
+                      "action": "green",
+                      "actionHover": "darkgreen",
+                      "primaryBackground": "white",
+                      "primaryForeground": "green",
+                      "secondaryBackground": "green",
+                      "secondaryForeground": "white",
+                      "secondaryForegroundFocus": "gray",
+                    },
+                  }
+                }
+                text="SSN"
+              >
+                <label
+                  className="emotion-0"
+                  htmlFor="test_id"
+                >
+                  SSN
+                </label>
+              </FloatingLabel>
+            </withTheme(FloatingLabel)>
+            <TextFieldHint
+              disabled={false}
+              inputId="hint_test_id"
+              text="555-55-5555"
             >
               <div
-                data-radium={true}
-                key=".1"
-                style={
-                  Object {
-                    "borderRadius": 4,
-                    "position": "relative",
-                  }
-                }
+                className="emotion-4"
+                id="hint_test_id"
               >
-                <withTheme(RadiumEnhancer)
-                  disabled={false}
-                  float={false}
-                  hasError={false}
-                  htmlFor="test_id"
-                  key=".0"
-                  snacksTheme={
-                    Object {
-                      "colors": Object {
-                        "action": "green",
-                        "actionHover": "darkgreen",
-                        "primaryBackground": "white",
-                        "primaryForeground": "green",
-                        "secondaryBackground": "green",
-                        "secondaryForeground": "white",
-                        "secondaryForegroundFocus": "gray",
-                      },
-                    }
-                  }
-                  style={
-                    Object {
-                      "pointerEvents": "none",
-                    }
-                  }
-                  text="SSN"
-                >
-                  <FloatingLabel
-                    disabled={false}
-                    float={false}
-                    hasError={false}
-                    htmlFor="test_id"
-                    snacksTheme={
-                      Object {
-                        "colors": Object {
-                          "action": "green",
-                          "actionHover": "darkgreen",
-                          "primaryBackground": "white",
-                          "primaryForeground": "green",
-                          "secondaryBackground": "green",
-                          "secondaryForeground": "white",
-                          "secondaryForegroundFocus": "gray",
-                        },
-                      }
-                    }
-                    style={
-                      Object {
-                        "pointerEvents": "none",
-                      }
-                    }
-                    text="SSN"
-                  >
-                    <label
-                      data-radium={true}
-                      htmlFor="test_id"
-                      style={
-                        Object {
-                          "color": "#757575",
-                          "cursor": "text",
-                          "fontSize": "16px",
-                          "marginBottom": 0,
-                          "marginLeft": 0,
-                          "marginRight": 0,
-                          "marginTop": 0,
-                          "pointerEvents": "none",
-                          "position": "absolute",
-                          "transform": "scale(1) translate(8px, 17px)",
-                          "transformOrigin": "left top",
-                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                          "userSelect": "none",
-                          "zIndex": 1,
-                        }
-                      }
-                    >
-                      SSN
-                    </label>
-                  </FloatingLabel>
-                </withTheme(RadiumEnhancer)>
-                <TextFieldHint
-                  disabled={false}
-                  inputId="hint_test_id"
-                  key=".1"
-                  text="555-55-5555"
-                >
-                  <div
-                    data-radium={true}
-                    id="hint_test_id"
-                    style={
-                      Object {
-                        "color": "#BDBDBD",
-                        "cursor": "inherit",
-                        "fontSize": "16px",
-                        "opacity": 0,
-                        "pointerEvents": "none",
-                        "position": "absolute",
-                        "transform": "scale(1) translate(9px, 26px)",
-                        "transformOrigin": "left top",
-                        "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "visibility": "hidden",
-                        "zIndex": 1,
-                      }
-                    }
-                  >
-                    555-55-5555
-                  </div>
-                </TextFieldHint>
-                <t
-                  aria-describedby="hint_test_id"
-                  aria-invalid={false}
-                  autoComplete="on"
-                  defaultValue={null}
-                  disabled={false}
-                  guide={false}
-                  id="test_id"
-                  keepCharPositions={true}
-                  key=".2"
-                  mask={
-                    Array [
-                      /\\\\d/,
-                      /\\\\d/,
-                      /\\\\d/,
-                      "-",
-                      /\\\\d/,
-                      /\\\\d/,
-                      "-",
-                      /\\\\d/,
-                      /\\\\d/,
-                      /\\\\d/,
-                      /\\\\d/,
-                    ]
-                  }
-                  name="test"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder=""
-                  render={[Function]}
-                >
-                  <input
-                    aria-describedby="hint_test_id"
-                    aria-invalid={false}
-                    autoComplete="on"
-                    defaultValue={null}
-                    disabled={false}
-                    id="test_id"
-                    name="test"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    placeholder=""
-                    style={
-                      Object {
-                        "WebkitOpacity": 1,
-                        "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-                        "backgroundColor": "#FFFFFF",
-                        "border": "solid 1px #BDBDBD",
-                        "borderRadius": 4,
-                        "boxSizing": "border-box",
-                        "color": "#424242",
-                        "fontSize": 16,
-                        "height": 56,
-                        "marginBottom": 0,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 0,
-                        "outline": "none",
-                        "paddingBottom": 8,
-                        "paddingLeft": 8,
-                        "paddingRight": 8,
-                        "paddingTop": "25px",
-                        "position": "relative",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </t>
+                555-55-5555
               </div>
-              <ValidationError
-                inputId="test_id"
-                key=".2"
-                show={false}
-              >
-                <div
-                  aria-atomic={true}
-                  aria-live="assertive"
-                  data-radium={true}
-                  id="error_test_id"
-                  style={
-                    Object {
-                      "color": "#B30029",
-                      "display": "none",
-                      "fontSize": "12px",
-                      "marginLeft": "1px",
-                      "marginTop": "2px",
-                      "opacity": "0",
-                      "pointerEvents": "none",
-                      "textAlign": "left",
-                      "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                    }
-                  }
-                />
-              </ValidationError>
-              <HelperText
-                key=".3"
+            </TextFieldHint>
+            <t
+              aria-describedby="hint_test_id"
+              aria-invalid={false}
+              autoComplete="on"
+              defaultValue={null}
+              disabled={false}
+              guide={false}
+              id="test_id"
+              keepCharPositions={true}
+              mask={
+                Array [
+                  /\\\\d/,
+                  /\\\\d/,
+                  /\\\\d/,
+                  "-",
+                  /\\\\d/,
+                  /\\\\d/,
+                  "-",
+                  /\\\\d/,
+                  /\\\\d/,
+                  /\\\\d/,
+                  /\\\\d/,
+                ]
+              }
+              name="test"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder=""
+              render={[Function]}
+            >
+              <input
+                aria-describedby="hint_test_id"
+                aria-invalid={false}
+                autoComplete="on"
+                className="emotion-5"
+                defaultValue={null}
+                disabled={false}
+                id="test_id"
+                name="test"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
               />
-            </div>
-          </MaskedTextField>
-        </FormComponent>
-      </withTheme(FormComponent)>
-    </div>
-    <StyleSheet
-      key=".1"
-    >
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
-          }
-        }
-      />
-    </StyleSheet>
-  </div>
-</StyleRoot>
+            </t>
+          </div>
+          <ValidationError
+            inputId="test_id"
+            show={false}
+          >
+            <div
+              aria-atomic={true}
+              aria-live="assertive"
+              className="emotion-7"
+              id="error_test_id"
+            />
+          </ValidationError>
+          <HelperText />
+        </div>
+      </MaskedTextField>
+    </FormComponent>
+  </withTheme(FormComponent)>
+</div>
 `;

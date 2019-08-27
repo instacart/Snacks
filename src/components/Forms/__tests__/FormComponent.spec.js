@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import renderer from 'react-test-renderer'
@@ -38,11 +37,9 @@ describe('when a component has a #getValue method', () => {
     }
 
     const wrapper = mount(
-      <StyleRoot>
-        <div>
-          <MyComponent name="test" onChange={noOp} />
-        </div>
-      </StyleRoot>
+      <div>
+        <MyComponent name="test" onChange={noOp} />
+      </div>
     )
 
     expect(
@@ -76,11 +73,9 @@ describe('when a component does not have #getValue method, but has value in stat
     }
 
     const wrapper = mount(
-      <StyleRoot>
-        <div>
-          <MyComponent />
-        </div>
-      </StyleRoot>
+      <div>
+        <MyComponent />
+      </div>
     )
 
     expect(

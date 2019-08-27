@@ -1,6 +1,5 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { StyleRoot } from 'radium'
 import { ReactWrapper, mount } from 'enzyme'
 import { spy } from 'sinon'
 import Icon from '../../Icon/Icon'
@@ -9,19 +8,17 @@ import ScrollTrack from '../ScrollTrack'
 it('renders ScrollTrack correctly', () => {
   const tree = renderer
     .create(
-      <StyleRoot>
-        <div>
-          <ScrollTrack leftOverride={0}>
-            <p>one</p>
-            <p>two</p>
-            <p>three</p>
-            <p>four</p>
-            <p>five</p>
-            <p>six</p>
-            <p>seven</p>
-          </ScrollTrack>
-        </div>
-      </StyleRoot>
+      <div>
+        <ScrollTrack leftOverride={0}>
+          <p>one</p>
+          <p>two</p>
+          <p>three</p>
+          <p>four</p>
+          <p>five</p>
+          <p>six</p>
+          <p>seven</p>
+        </ScrollTrack>
+      </div>
     )
     .toJSON()
   expect(tree).toMatchSnapshot()
@@ -30,11 +27,9 @@ it('renders ScrollTrack correctly', () => {
 it('renders ScrollTrack without children correctly', () => {
   const tree = renderer
     .create(
-      <StyleRoot>
-        <div>
-          <ScrollTrack leftOverride={0} />
-        </div>
-      </StyleRoot>
+      <div>
+        <ScrollTrack leftOverride={0} />
+      </div>
     )
     .toJSON()
   expect(tree).toMatchSnapshot()
@@ -51,19 +46,17 @@ it('renders ScrollTrack buttons correctly', () => {
   }
 
   const track = mount(
-    <StyleRoot>
-      <div>
-        <ScrollTrack leftOverride={0} styles={styles}>
-          <p>one</p>
-          <p>two</p>
-          <p>three</p>
-          <p>four</p>
-          <p>five</p>
-          <p>six</p>
-          <p>seven</p>
-        </ScrollTrack>
-      </div>
-    </StyleRoot>
+    <div>
+      <ScrollTrack leftOverride={0} styles={styles}>
+        <p>one</p>
+        <p>two</p>
+        <p>three</p>
+        <p>four</p>
+        <p>five</p>
+        <p>six</p>
+        <p>seven</p>
+      </ScrollTrack>
+    </div>
   )
 
   // should have 2 buttons
@@ -73,8 +66,8 @@ it('renders ScrollTrack buttons correctly', () => {
   expect(buttons).toHaveLength(2)
 
   // check that neither are showing
-  let leftButtonStyle = leftButton.props().style
-  let rightButtonStyle = rightButton.props().style
+  let leftButtonStyle = window.getComputedStyle(leftButton.getDOMNode())
+  let rightButtonStyle = window.getComputedStyle(rightButton.getDOMNode())
   expect(leftButtonStyle.display).toEqual('none')
   expect(rightButtonStyle.display).toEqual('none')
 
@@ -89,8 +82,8 @@ it('renders ScrollTrack buttons correctly', () => {
   buttons = track.find('button')
   leftButton = buttons.first()
   rightButton = buttons.last()
-  leftButtonStyle = leftButton.props().style
-  rightButtonStyle = rightButton.props().style
+  leftButtonStyle = window.getComputedStyle(leftButton.getDOMNode())
+  rightButtonStyle = window.getComputedStyle(rightButton.getDOMNode())
 
   // make sure styles are correct
   expect(buttons).toHaveLength(2)
@@ -107,8 +100,8 @@ it('renders ScrollTrack buttons correctly', () => {
   buttons = track.find('button')
   leftButton = buttons.first()
   rightButton = buttons.last()
-  leftButtonStyle = leftButton.props().style
-  rightButtonStyle = rightButton.props().style
+  leftButtonStyle = window.getComputedStyle(leftButton.getDOMNode())
+  rightButtonStyle = window.getComputedStyle(rightButton.getDOMNode())
 
   // make sure styles are correct
   expect(rightButtonStyle.display).toEqual('block')
@@ -124,8 +117,8 @@ it('renders ScrollTrack buttons correctly', () => {
   buttons = track.find('button')
   leftButton = buttons.first()
   rightButton = buttons.last()
-  leftButtonStyle = leftButton.props().style
-  rightButtonStyle = rightButton.props().style
+  leftButtonStyle = window.getComputedStyle(leftButton.getDOMNode())
+  rightButtonStyle = window.getComputedStyle(rightButton.getDOMNode())
 
   // ensure both are hidden
   expect(leftButtonStyle.display).toEqual('none')
@@ -144,23 +137,21 @@ it('renders custom ScrollTrack buttons correctly', () => {
 
   const tree = renderer
     .create(
-      <StyleRoot>
-        <div>
-          <ScrollTrack
-            styles={styles}
-            backButtonContent={'HI'}
-            nextButtonElement={<Icon name="cart" />}
-          >
-            <p>one</p>
-            <p>two</p>
-            <p>three</p>
-            <p>four</p>
-            <p>five</p>
-            <p>six</p>
-            <p>seven</p>
-          </ScrollTrack>
-        </div>
-      </StyleRoot>
+      <div>
+        <ScrollTrack
+          styles={styles}
+          backButtonContent={'HI'}
+          nextButtonElement={<Icon name="cart" />}
+        >
+          <p>one</p>
+          <p>two</p>
+          <p>three</p>
+          <p>four</p>
+          <p>five</p>
+          <p>six</p>
+          <p>seven</p>
+        </ScrollTrack>
+      </div>
     )
     .toJSON()
   expect(tree).toMatchSnapshot()
@@ -177,23 +168,21 @@ it('works with custom ScrollTrack buttons correctly', () => {
   }
 
   const track = mount(
-    <StyleRoot>
-      <div>
-        <ScrollTrack
-          styles={styles}
-          backButtonContent={'HI'}
-          nextButtonElement={<Icon name="cart" />}
-        >
-          <p>one</p>
-          <p>two</p>
-          <p>three</p>
-          <p>four</p>
-          <p>five</p>
-          <p>six</p>
-          <p>seven</p>
-        </ScrollTrack>
-      </div>
-    </StyleRoot>
+    <div>
+      <ScrollTrack
+        styles={styles}
+        backButtonContent={'HI'}
+        nextButtonElement={<Icon name="cart" />}
+      >
+        <p>one</p>
+        <p>two</p>
+        <p>three</p>
+        <p>four</p>
+        <p>five</p>
+        <p>six</p>
+        <p>seven</p>
+      </ScrollTrack>
+    </div>
   )
 
   // should have 2 buttons
@@ -203,8 +192,8 @@ it('works with custom ScrollTrack buttons correctly', () => {
   expect(buttons).toHaveLength(2)
 
   // check that neither are showing
-  let leftButtonStyle = leftButton.props().style
-  let rightButtonStyle = rightButton.props().style
+  let leftButtonStyle = window.getComputedStyle(leftButton.getDOMNode())
+  let rightButtonStyle = window.getComputedStyle(rightButton.getDOMNode())
   expect(leftButtonStyle.display).toEqual('none')
   expect(rightButtonStyle.display).toEqual('none')
 
@@ -219,8 +208,8 @@ it('works with custom ScrollTrack buttons correctly', () => {
   buttons = track.find('button')
   leftButton = buttons.first()
   rightButton = buttons.last()
-  leftButtonStyle = leftButton.props().style
-  rightButtonStyle = rightButton.props().style
+  leftButtonStyle = window.getComputedStyle(leftButton.getDOMNode())
+  rightButtonStyle = window.getComputedStyle(rightButton.getDOMNode())
 
   // make sure styles are correct
   expect(buttons).toHaveLength(2)
@@ -237,8 +226,8 @@ it('works with custom ScrollTrack buttons correctly', () => {
   buttons = track.find('button')
   leftButton = buttons.first()
   rightButton = buttons.last()
-  leftButtonStyle = leftButton.props().style
-  rightButtonStyle = rightButton.props().style
+  leftButtonStyle = window.getComputedStyle(leftButton.getDOMNode())
+  rightButtonStyle = window.getComputedStyle(rightButton.getDOMNode())
 
   // make sure styles are correct
   expect(rightButtonStyle.display).toEqual('block')
@@ -254,8 +243,8 @@ it('works with custom ScrollTrack buttons correctly', () => {
   buttons = track.find('button')
   leftButton = buttons.first()
   rightButton = buttons.last()
-  leftButtonStyle = leftButton.props().style
-  rightButtonStyle = rightButton.props().style
+  leftButtonStyle = window.getComputedStyle(leftButton.getDOMNode())
+  rightButtonStyle = window.getComputedStyle(rightButton.getDOMNode())
 
   // ensure both are hidden
   expect(leftButtonStyle.display).toEqual('none')
@@ -265,48 +254,8 @@ it('works with custom ScrollTrack buttons correctly', () => {
 it('renders ScrollTrack with animation props correctly', () => {
   const tree = renderer
     .create(
-      <StyleRoot>
-        <div>
-          <ScrollTrack scrollTimingFunction={'ease-in'} scrollSpeed={1000}>
-            <p>one</p>
-            <p>two</p>
-            <p>three</p>
-            <p>four</p>
-            <p>five</p>
-            <p>six</p>
-            <p>seven</p>
-          </ScrollTrack>
-        </div>
-      </StyleRoot>
-    )
-    .toJSON()
-  expect(tree).toMatchSnapshot()
-})
-
-it('onBefore promises & callbacks called correctly', async () => {
-  const onBeforeNext = spy()
-  const onBeforeBack = spy()
-  const track = mount(
-    <StyleRoot>
       <div>
-        <ScrollTrack
-          onBeforeNext={() => {
-            return new Promise((resolve, reject) => {
-              setTimeout(() => {
-                onBeforeNext()
-                resolve()
-              }, 1)
-            })
-          }}
-          onBeforeBack={() => {
-            return new Promise((resolve, reject) => {
-              setTimeout(() => {
-                onBeforeBack()
-                resolve()
-              }, 1)
-            })
-          }}
-        >
+        <ScrollTrack scrollTimingFunction={'ease-in'} scrollSpeed={1000}>
           <p>one</p>
           <p>two</p>
           <p>three</p>
@@ -316,7 +265,43 @@ it('onBefore promises & callbacks called correctly', async () => {
           <p>seven</p>
         </ScrollTrack>
       </div>
-    </StyleRoot>
+    )
+    .toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+it('onBefore promises & callbacks called correctly', async () => {
+  const onBeforeNext = spy()
+  const onBeforeBack = spy()
+  const track = mount(
+    <div>
+      <ScrollTrack
+        onBeforeNext={() => {
+          return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              onBeforeNext()
+              resolve()
+            }, 1)
+          })
+        }}
+        onBeforeBack={() => {
+          return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              onBeforeBack()
+              resolve()
+            }, 1)
+          })
+        }}
+      >
+        <p>one</p>
+        <p>two</p>
+        <p>three</p>
+        <p>four</p>
+        <p>five</p>
+        <p>six</p>
+        <p>seven</p>
+      </ScrollTrack>
+    </div>
   )
 
   // show and click next
@@ -354,38 +339,36 @@ it('onAfter promises & callbacks called correctly', async () => {
   const onAfterNext = spy()
   const onAfterBack = spy()
   const track = mount(
-    <StyleRoot>
-      <div>
-        <ScrollTrack
-          onBeforeBack={() => {
-            return new Promise((resolve, reject) => {
-              setTimeout(() => {
-                onBeforeBack()
-                resolve()
-              }, 1)
-            })
-          }}
-          onAfterBack={onAfterBack}
-          onAfterNext={onAfterNext}
-          onBeforeNext={() => {
-            return new Promise((resolve, reject) => {
-              setTimeout(() => {
-                onBeforeNext()
-                resolve()
-              }, 1)
-            })
-          }}
-        >
-          <p>one</p>
-          <p>two</p>
-          <p>three</p>
-          <p>four</p>
-          <p>five</p>
-          <p>six</p>
-          <p>seven</p>
-        </ScrollTrack>
-      </div>
-    </StyleRoot>
+    <div>
+      <ScrollTrack
+        onBeforeBack={() => {
+          return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              onBeforeBack()
+              resolve()
+            }, 1)
+          })
+        }}
+        onAfterBack={onAfterBack}
+        onAfterNext={onAfterNext}
+        onBeforeNext={() => {
+          return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              onBeforeNext()
+              resolve()
+            }, 1)
+          })
+        }}
+      >
+        <p>one</p>
+        <p>two</p>
+        <p>three</p>
+        <p>four</p>
+        <p>five</p>
+        <p>six</p>
+        <p>seven</p>
+      </ScrollTrack>
+    </div>
   )
 
   // show and click next
@@ -421,19 +404,17 @@ it('onAfter promises & callbacks called correctly', async () => {
 
 it('works without any callbacks passed in', async () => {
   const track = mount(
-    <StyleRoot>
-      <div>
-        <ScrollTrack>
-          <p>one</p>
-          <p>two</p>
-          <p>three</p>
-          <p>four</p>
-          <p>five</p>
-          <p>six</p>
-          <p>seven</p>
-        </ScrollTrack>
-      </div>
-    </StyleRoot>
+    <div>
+      <ScrollTrack>
+        <p>one</p>
+        <p>two</p>
+        <p>three</p>
+        <p>four</p>
+        <p>five</p>
+        <p>six</p>
+        <p>seven</p>
+      </ScrollTrack>
+    </div>
   )
 
   // show and click next

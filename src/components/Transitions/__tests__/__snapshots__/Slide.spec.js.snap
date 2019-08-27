@@ -1,72 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Slide correctly with custom props 1`] = `
+.emotion-1 {
+  overflow-y: hidden;
+  overflow-x: visible;
+  background: red;
+}
+
+.emotion-0 {
+  -webkit-transform: translateY(200px);
+  -ms-transform: translateY(200px);
+  transform: translateY(200px);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
 <div
-  data-radium={true}
+  className="emotion-1"
 >
   <div
-    style={
-      Object {
-        "background": "red",
-        "overflowX": "visible",
-        "overflowY": "hidden",
-      }
-    }
+    className="emotion-0"
   >
-    <div
-      style={
-        Object {
-          "transform": "translateY(200px)",
-          "transition": "all 500ms ease-in-out",
-        }
-      }
-    >
-      <h3>
-         Content 
-      </h3>
-    </div>
+    <h3>
+       Content 
+    </h3>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </div>
 `;
 
 exports[`renders Slide in correctly 1`] = `
+.emotion-1 {
+  overflow-y: hidden;
+  overflow-x: visible;
+}
+
+.emotion-0 {
+  -webkit-transform: translateX(200px);
+  -ms-transform: translateX(200px);
+  transform: translateX(200px);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
 <div
-  data-radium={true}
+  className="emotion-1"
 >
   <div
-    style={
-      Object {
-        "overflowX": "visible",
-        "overflowY": "hidden",
-      }
-    }
+    className="emotion-0"
   >
-    <div
-      style={
-        Object {
-          "transform": "translateX(200px)",
-          "transition": "all 200ms ease-in-out",
-        }
-      }
-    >
-      <h3>
-         Content 
-      </h3>
-    </div>
+    <h3>
+       Content 
+    </h3>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </div>
 `;

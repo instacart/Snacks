@@ -1,6 +1,5 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { StyleRoot } from 'radium'
 import Grow from '../Grow'
 
 jest.mock('react-dom', () => ({
@@ -12,11 +11,9 @@ jest.mock('react-dom', () => ({
 it('renders Fade in correctly', () => {
   const tree = renderer
     .create(
-      <StyleRoot>
-        <Grow in>
-          <h3> Content </h3>
-        </Grow>
-      </StyleRoot>
+      <Grow in>
+        <h3> Content </h3>
+      </Grow>
     )
     .toJSON()
   expect(tree).toMatchSnapshot()
@@ -33,18 +30,16 @@ it('renders Grow correctly with custom props', () => {
   }
   const tree = renderer
     .create(
-      <StyleRoot>
-        <Grow
-          in
-          axis="y"
-          style={{ background: 'red' }}
-          transitionTime={500}
-          scale={scale}
-          maxSize={maxSize}
-        >
-          <h3> Content </h3>
-        </Grow>
-      </StyleRoot>
+      <Grow
+        in
+        axis="y"
+        style={{ background: 'red' }}
+        transitionTime={500}
+        scale={scale}
+        maxSize={maxSize}
+      >
+        <h3> Content </h3>
+      </Grow>
     )
     .toJSON()
   expect(tree).toMatchSnapshot()

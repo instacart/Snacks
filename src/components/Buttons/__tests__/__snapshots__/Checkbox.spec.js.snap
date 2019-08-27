@@ -1,66 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox generates a label if a child node is supplied 1`] = `
+.emotion-2 {
+  position: relative;
+}
+
+.emotion-0 {
+  width: 22px;
+  height: 22px;
+  fill: #757575;
+}
+
+.emotion-1 {
+  width: 22px;
+  height: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
+  margin-left: 10px;
+  line-height: 22px;
+}
+
 <div
-  data-radium={true}
-  style={
-    Object {
-      "display": "flex",
-    }
-  }
+  className="emotion-4"
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
+    className="emotion-2"
   >
     <test-file-stub
       aria-hidden="true"
-      data-radium={true}
-      style={
-        Object {
-          "fill": "#757575",
-          "height": 22,
-          "width": 22,
-        }
-      }
+      className="emotion-0"
     />
     <input
       checked={false}
-      data-radium={true}
+      className="emotion-1"
       id={1}
       onChange={[Function]}
-      style={
-        Object {
-          "MozAppearance": "none",
-          "MsAppearance": "none",
-          "WebkitAppearance": "none",
-          "appearance": "none",
-          "backgroundImage": "none",
-          "cursor": "pointer",
-          "height": 22,
-          "left": 0,
-          "opacity": 0,
-          "position": "absolute",
-          "top": 0,
-          "width": 22,
-        }
-      }
       type="checkbox"
     />
   </div>
   <label
-    data-radium={true}
+    className="emotion-3"
     htmlFor={1}
-    style={
-      Object {
-        "lineHeight": "22px",
-        "marginLeft": 10,
-      }
-    }
   >
     Test label
   </label>
@@ -68,66 +68,66 @@ exports[`Checkbox generates a label if a child node is supplied 1`] = `
 `;
 
 exports[`Checkbox generates a label if a child prop of text is supplied 1`] = `
+.emotion-2 {
+  position: relative;
+}
+
+.emotion-0 {
+  width: 22px;
+  height: 22px;
+  fill: #757575;
+}
+
+.emotion-1 {
+  width: 22px;
+  height: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
+  margin-left: 10px;
+  line-height: 22px;
+}
+
 <div
-  data-radium={true}
-  style={
-    Object {
-      "display": "flex",
-    }
-  }
+  className="emotion-4"
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
+    className="emotion-2"
   >
     <test-file-stub
       aria-hidden="true"
-      data-radium={true}
-      style={
-        Object {
-          "fill": "#757575",
-          "height": 22,
-          "width": 22,
-        }
-      }
+      className="emotion-0"
     />
     <input
       checked={false}
-      data-radium={true}
+      className="emotion-1"
       id={1}
       onChange={[Function]}
-      style={
-        Object {
-          "MozAppearance": "none",
-          "MsAppearance": "none",
-          "WebkitAppearance": "none",
-          "appearance": "none",
-          "backgroundImage": "none",
-          "cursor": "pointer",
-          "height": 22,
-          "left": 0,
-          "opacity": 0,
-          "position": "absolute",
-          "top": 0,
-          "width": 22,
-        }
-      }
       type="checkbox"
     />
   </div>
   <label
-    data-radium={true}
+    className="emotion-3"
     htmlFor={1}
-    style={
-      Object {
-        "lineHeight": "22px",
-        "marginLeft": 10,
-      }
-    }
   >
     Test label
   </label>
@@ -135,69 +135,69 @@ exports[`Checkbox generates a label if a child prop of text is supplied 1`] = `
 `;
 
 exports[`Checkbox incorporates user style if passed 1`] = `
+.emotion-0 {
+  width: 22px;
+  height: 22px;
+  fill: #757575;
+}
+
+.emotion-1 {
+  width: 22px;
+  height: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: pink;
+}
+
+.emotion-2 {
+  position: relative;
+  border: 2px solid purple;
+}
+
+.emotion-3 {
+  margin-left: 10px;
+  line-height: 22px;
+  color: green;
+}
+
 <div
-  data-radium={true}
-  style={
-    Object {
-      "background": "pink",
-      "display": "flex",
-    }
-  }
+  className="emotion-4"
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "border": "2px solid purple",
-        "position": "relative",
-      }
-    }
+    className="emotion-2"
   >
     <test-file-stub
       aria-hidden="true"
-      data-radium={true}
-      style={
-        Object {
-          "fill": "#757575",
-          "height": 22,
-          "width": 22,
-        }
-      }
+      className="emotion-0"
     />
     <input
       checked={false}
-      data-radium={true}
+      className="emotion-1"
       id={1}
       onChange={[Function]}
-      style={
-        Object {
-          "MozAppearance": "none",
-          "MsAppearance": "none",
-          "WebkitAppearance": "none",
-          "appearance": "none",
-          "backgroundImage": "none",
-          "cursor": "pointer",
-          "height": 22,
-          "left": 0,
-          "opacity": 0,
-          "position": "absolute",
-          "top": 0,
-          "width": 22,
-        }
-      }
       type="checkbox"
     />
   </div>
   <label
-    data-radium={true}
+    className="emotion-3"
     htmlFor={1}
-    style={
-      Object {
-        "color": "green",
-        "lineHeight": "22px",
-        "marginLeft": 10,
-      }
-    }
   >
     Test label
   </label>
@@ -205,66 +205,66 @@ exports[`Checkbox incorporates user style if passed 1`] = `
 `;
 
 exports[`Checkbox incorporates user style if passed 2`] = `
+.emotion-2 {
+  position: relative;
+}
+
+.emotion-0 {
+  width: 22px;
+  height: 22px;
+  fill: #757575;
+}
+
+.emotion-1 {
+  width: 22px;
+  height: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
+  margin-left: 10px;
+  line-height: 22px;
+}
+
 <div
-  data-radium={true}
-  style={
-    Object {
-      "display": "flex",
-    }
-  }
+  className="emotion-4"
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
+    className="emotion-2"
   >
     <test-file-stub
       aria-hidden="true"
-      data-radium={true}
-      style={
-        Object {
-          "fill": "#757575",
-          "height": 22,
-          "width": 22,
-        }
-      }
+      className="emotion-0"
     />
     <input
       checked={false}
-      data-radium={true}
+      className="emotion-1"
       id={2}
       onChange={[Function]}
-      style={
-        Object {
-          "MozAppearance": "none",
-          "MsAppearance": "none",
-          "WebkitAppearance": "none",
-          "appearance": "none",
-          "backgroundImage": "none",
-          "cursor": "pointer",
-          "height": 22,
-          "left": 0,
-          "opacity": 0,
-          "position": "absolute",
-          "top": 0,
-          "width": 22,
-        }
-      }
       type="checkbox"
     />
   </div>
   <label
-    data-radium={true}
+    className="emotion-3"
     htmlFor={2}
-    style={
-      Object {
-        "lineHeight": "22px",
-        "marginLeft": 10,
-      }
-    }
   >
     Test label
   </label>
@@ -272,185 +272,181 @@ exports[`Checkbox incorporates user style if passed 2`] = `
 `;
 
 exports[`Checkbox renders the correct button type 1`] = `
+.emotion-2 {
+  position: relative;
+}
+
+.emotion-0 {
+  width: 22px;
+  height: 22px;
+  fill: #757575;
+}
+
+.emotion-1 {
+  width: 22px;
+  height: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
 <div
-  data-radium={true}
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
+  className="emotion-2"
 >
   <test-file-stub
     aria-hidden="true"
-    data-radium={true}
-    style={
-      Object {
-        "fill": "#757575",
-        "height": 22,
-        "width": 22,
-      }
-    }
+    className="emotion-0"
   />
   <input
     checked={false}
-    data-radium={true}
+    className="emotion-1"
     id={1}
     onChange={[Function]}
-    style={
-      Object {
-        "MozAppearance": "none",
-        "MsAppearance": "none",
-        "WebkitAppearance": "none",
-        "appearance": "none",
-        "backgroundImage": "none",
-        "cursor": "pointer",
-        "height": 22,
-        "left": 0,
-        "opacity": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": 22,
-      }
-    }
     type="checkbox"
   />
 </div>
 `;
 
 exports[`Checkbox renders the correct selected state 1`] = `
+.emotion-2 {
+  position: relative;
+}
+
+.emotion-0 {
+  width: 22px;
+  height: 22px;
+  fill: #757575;
+}
+
+.emotion-1 {
+  width: 22px;
+  height: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
 <div
-  data-radium={true}
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
+  className="emotion-2"
 >
   <test-file-stub
     aria-hidden="true"
-    data-radium={true}
-    style={
-      Object {
-        "fill": "#757575",
-        "height": 22,
-        "width": 22,
-      }
-    }
+    className="emotion-0"
   />
   <input
     checked={false}
-    data-radium={true}
+    className="emotion-1"
     id={1}
     onChange={[Function]}
-    style={
-      Object {
-        "MozAppearance": "none",
-        "MsAppearance": "none",
-        "WebkitAppearance": "none",
-        "appearance": "none",
-        "backgroundImage": "none",
-        "cursor": "pointer",
-        "height": 22,
-        "left": 0,
-        "opacity": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": 22,
-      }
-    }
     type="checkbox"
   />
 </div>
 `;
 
 exports[`Checkbox renders the correct selected state 2`] = `
+.emotion-2 {
+  position: relative;
+}
+
+.emotion-1 {
+  width: 22px;
+  height: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.emotion-0 {
+  width: 22px;
+  height: 22px;
+  fill: #43B02A;
+}
+
 <div
-  data-radium={true}
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
+  className="emotion-2"
 >
   <test-file-stub
     aria-hidden="true"
-    data-radium={true}
-    style={
-      Object {
-        "fill": "#43B02A",
-        "height": 22,
-        "width": 22,
-      }
-    }
+    className="emotion-0"
   />
   <input
     checked={true}
-    data-radium={true}
+    className="emotion-1"
     id={2}
     onChange={[Function]}
-    style={
-      Object {
-        "MozAppearance": "none",
-        "MsAppearance": "none",
-        "WebkitAppearance": "none",
-        "appearance": "none",
-        "backgroundImage": "none",
-        "cursor": "pointer",
-        "height": 22,
-        "left": 0,
-        "opacity": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": 22,
-      }
-    }
     type="checkbox"
   />
 </div>
 `;
 
 exports[`Checkbox renders the correct selected state 3`] = `
+.emotion-2 {
+  position: relative;
+}
+
+.emotion-1 {
+  width: 22px;
+  height: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.emotion-0 {
+  width: 22px;
+  height: 22px;
+  fill: #BDBDBD;
+}
+
 <div
-  data-radium={true}
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
+  className="emotion-2"
 >
   <test-file-stub
     aria-hidden="true"
-    data-radium={true}
-    style={
-      Object {
-        "fill": "#BDBDBD",
-        "height": 22,
-        "width": 22,
-      }
-    }
+    className="emotion-0"
   />
   <input
     checked={true}
-    data-radium={true}
+    className="emotion-1"
     disabled={true}
     id={2}
     onChange={[Function]}
-    style={
-      Object {
-        "MozAppearance": "none",
-        "MsAppearance": "none",
-        "WebkitAppearance": "none",
-        "appearance": "none",
-        "backgroundImage": "none",
-        "cursor": "pointer",
-        "height": 22,
-        "left": 0,
-        "opacity": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": 22,
-      }
-    }
     type="checkbox"
   />
 </div>

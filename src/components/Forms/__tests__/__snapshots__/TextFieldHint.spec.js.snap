@@ -1,109 +1,97 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders TextFieldHint correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "color": "#BDBDBD",
-          "cursor": "inherit",
-          "fontSize": "16px",
-          "opacity": 1,
-          "pointerEvents": "none",
-          "position": "absolute",
-          "transform": "scale(1) translate(9px, 26px)",
-          "transformOrigin": "left top",
-          "transition": "visibility 0ms linear 0ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-          "visibility": "visible",
-          "zIndex": 1,
-        }
-      }
-    >
-      Text field hint text
-    </div>
+.emotion-0 {
+  color: #BDBDBD;
+  cursor: inherit;
+  font-size: 16px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1) translate(9px,26px);
+  -ms-transform: scale(1) translate(9px,26px);
+  transform: scale(1) translate(9px,26px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 1;
+  -webkit-transition: visibility 0ms linear 0ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 0ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  visibility: visible;
+}
+
+<div>
+  <div
+    className="emotion-0"
+  >
+    Text field hint text
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </div>
 `;
 
 exports[`renders TextFieldHint when disabled 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "color": "#BDBDBD",
-          "cursor": "not-allowed",
-          "fontSize": "16px",
-          "opacity": 1,
-          "pointerEvents": "none",
-          "position": "absolute",
-          "transform": "scale(1) translate(9px, 26px)",
-          "transformOrigin": "left top",
-          "transition": "visibility 0ms linear 0ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-          "visibility": "visible",
-          "zIndex": 1,
-        }
-      }
-    >
-      Text field hint text
-    </div>
+.emotion-0 {
+  color: #BDBDBD;
+  cursor: inherit;
+  font-size: 16px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1) translate(9px,26px);
+  -ms-transform: scale(1) translate(9px,26px);
+  transform: scale(1) translate(9px,26px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden;
+  cursor: not-allowed;
+  opacity: 1;
+  -webkit-transition: visibility 0ms linear 0ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 0ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  visibility: visible;
+}
+
+<div>
+  <div
+    className="emotion-0"
+  >
+    Text field hint text
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </div>
 `;
 
 exports[`renders TextFieldHint when show is false 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "color": "#BDBDBD",
-          "cursor": "inherit",
-          "fontSize": "16px",
-          "opacity": 0,
-          "pointerEvents": "none",
-          "position": "absolute",
-          "transform": "scale(1) translate(9px, 26px)",
-          "transformOrigin": "left top",
-          "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-          "visibility": "hidden",
-          "zIndex": 1,
-        }
-      }
-    >
-      Text field hint text
-    </div>
+.emotion-0 {
+  color: #BDBDBD;
+  cursor: inherit;
+  font-size: 16px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1) translate(9px,26px);
+  -ms-transform: scale(1) translate(9px,26px);
+  transform: scale(1) translate(9px,26px);
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  transition: visibility 0ms linear 250ms,opacity 250ms cubic-bezier(0.23,1,0.32,1) 0ms;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden;
+}
+
+<div>
+  <div
+    className="emotion-0"
+  >
+    Text field hint text
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </div>
 `;

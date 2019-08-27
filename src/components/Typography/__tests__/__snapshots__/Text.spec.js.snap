@@ -1,541 +1,406 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text applies custom inline styles 1`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+  color: #212121;
+  font-size: 14px;
+  line-height: 21px;
+  -webkit-letter-spacing: 0.03em;
+  -moz-letter-spacing: 0.03em;
+  -ms-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+<p
+  className="emotion-0"
 >
-  <p
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "14px",
-        "fontWeight": 400,
-        "letterSpacing": "0.03em",
-        "lineHeight": "21px",
-        "marginBottom": "10px",
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </p>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</p>
 `;
 
 exports[`Text renders all typography variants correctly 1`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #212121;
+  font-size: 92px;
+  line-height: 138px;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+<h1
+  className="emotion-0"
 >
-  <h1
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "92px",
-        "fontWeight": 400,
-        "letterSpacing": "0",
-        "lineHeight": "138px",
-        "marginBottom": 0,
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </h1>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</h1>
 `;
 
 exports[`Text renders all typography variants correctly 2`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #212121;
+  font-size: 82px;
+  line-height: 123px;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+<h1
+  className="emotion-0"
 >
-  <h1
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "82px",
-        "fontWeight": 400,
-        "letterSpacing": "0",
-        "lineHeight": "123px",
-        "marginBottom": 0,
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </h1>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</h1>
 `;
 
 exports[`Text renders all typography variants correctly 3`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #212121;
+  font-size: 72px;
+  line-height: 108px;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+<h1
+  className="emotion-0"
 >
-  <h1
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "72px",
-        "fontWeight": 400,
-        "letterSpacing": "0",
-        "lineHeight": "108px",
-        "marginBottom": 0,
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </h1>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</h1>
 `;
 
 exports[`Text renders all typography variants correctly 4`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #212121;
+  font-size: 64px;
+  line-height: 96px;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+<h1
+  className="emotion-0"
 >
-  <h1
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "64px",
-        "fontWeight": 400,
-        "letterSpacing": "0",
-        "lineHeight": "96px",
-        "marginBottom": 0,
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </h1>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</h1>
 `;
 
 exports[`Text renders all typography variants correctly 5`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #212121;
+  font-size: 58px;
+  line-height: 87px;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+<h1
+  className="emotion-0"
 >
-  <h1
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "58px",
-        "fontWeight": 400,
-        "letterSpacing": "0",
-        "lineHeight": "87px",
-        "marginBottom": 0,
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </h1>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</h1>
 `;
 
 exports[`Text renders all typography variants correctly 6`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #212121;
+  font-size: 46px;
+  line-height: 69px;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+<h1
+  className="emotion-0"
 >
-  <h1
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "46px",
-        "fontWeight": 400,
-        "letterSpacing": "0",
-        "lineHeight": "69px",
-        "marginBottom": 0,
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </h1>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</h1>
 `;
 
 exports[`Text renders all typography variants correctly 7`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #212121;
+  font-size: 36px;
+  line-height: 54px;
+  -webkit-letter-spacing: 0.03em;
+  -moz-letter-spacing: 0.03em;
+  -ms-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+<h2
+  className="emotion-0"
 >
-  <h2
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "36px",
-        "fontWeight": 400,
-        "letterSpacing": "0.03em",
-        "lineHeight": "54px",
-        "marginBottom": 0,
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </h2>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</h2>
 `;
 
 exports[`Text renders all typography variants correctly 8`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #212121;
+  font-size: 28px;
+  line-height: 42px;
+  -webkit-letter-spacing: 0.05em;
+  -moz-letter-spacing: 0.05em;
+  -ms-letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+<h2
+  className="emotion-0"
 >
-  <h2
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "28px",
-        "fontWeight": 700,
-        "letterSpacing": "0.05em",
-        "lineHeight": "42px",
-        "marginBottom": 0,
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </h2>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</h2>
 `;
 
 exports[`Text renders all typography variants correctly 9`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #212121;
+  font-size: 22px;
+  line-height: 32px;
+  -webkit-letter-spacing: 0.03em;
+  -moz-letter-spacing: 0.03em;
+  -ms-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+<h2
+  className="emotion-0"
 >
-  <h2
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "22px",
-        "fontWeight": 400,
-        "letterSpacing": "0.03em",
-        "lineHeight": "32px",
-        "marginBottom": 0,
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </h2>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</h2>
 `;
 
 exports[`Text renders all typography variants correctly 10`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #212121;
+  font-size: 18px;
+  line-height: 32px;
+  -webkit-letter-spacing: 0.03em;
+  -moz-letter-spacing: 0.03em;
+  -ms-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+<p
+  className="emotion-0"
 >
-  <p
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "18px",
-        "fontWeight": 400,
-        "letterSpacing": "0.03em",
-        "lineHeight": "32px",
-        "marginBottom": 0,
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </p>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</p>
 `;
 
 exports[`Text renders all typography variants correctly 11`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #212121;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-letter-spacing: 0.03em;
+  -moz-letter-spacing: 0.03em;
+  -ms-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+<p
+  className="emotion-0"
 >
-  <p
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "16px",
-        "fontWeight": 400,
-        "letterSpacing": "0.03em",
-        "lineHeight": "24px",
-        "marginBottom": 0,
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </p>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</p>
 `;
 
 exports[`Text renders all typography variants correctly 12`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #212121;
+  font-size: 14px;
+  line-height: 21px;
+  -webkit-letter-spacing: 0.03em;
+  -moz-letter-spacing: 0.03em;
+  -ms-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+<p
+  className="emotion-0"
 >
-  <p
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "14px",
-        "fontWeight": 400,
-        "letterSpacing": "0.03em",
-        "lineHeight": "21px",
-        "marginBottom": 0,
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </p>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</p>
 `;
 
 exports[`Text renders all typography variants correctly 13`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #212121;
+  font-size: 12px;
+  line-height: 18px;
+  -webkit-letter-spacing: 0.05em;
+  -moz-letter-spacing: 0.05em;
+  -ms-letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+<p
+  className="emotion-0"
 >
-  <p
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "12px",
-        "fontWeight": 400,
-        "letterSpacing": "0.05em",
-        "lineHeight": "18px",
-        "marginBottom": 0,
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </p>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</p>
 `;
 
 exports[`Text renders all typography variants correctly 14`] = `
-<div
-  data-radium={true}
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #212121;
+  font-size: 11px;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.05em;
+  -moz-letter-spacing: 0.05em;
+  -ms-letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+<p
+  className="emotion-0"
 >
-  <p
-    data-radium={true}
-    style={
-      Object {
-        "color": "#212121",
-        "fontSize": "11px",
-        "fontWeight": 400,
-        "letterSpacing": "0.05em",
-        "lineHeight": "16px",
-        "marginBottom": 0,
-        "marginLeft": 0,
-        "marginRight": 0,
-        "marginTop": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
-      }
-    }
-  >
-    Don't talk about snacks
-  </p>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  Don't talk about snacks
+</p>
 `;

@@ -1,385 +1,330 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
+.emotion-1 {
+  position: relative;
+}
+
+.emotion-0 {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  background-image: none;
+  -moz-osx-font-smoothing: grayscale;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  height: 40px;
+  background-color: #43B02A;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover {
+  background-color: #177D05;
+}
+
+.emotion-0:active {
+  background-color: #146e04;
+}
+
+.emotion-0:focus {
+  background-color: #146e04;
+}
+
+.emotion-24 {
+  position: absolute;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  z-index: -9000;
+  pointer-events: none;
+}
+
+.emotion-23 {
+  overflow-y: hidden;
+  overflow-x: visible;
+  padding-top: 2px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  width: 100%;
+  -webkit-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  transform: translateX(-5px);
+}
+
+.emotion-22 {
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-21 {
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-20 {
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.16),0 3px 10px 0 rgba(0,0,0,0.23);
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 0;
+  padding-left: 0;
+  overflow-y: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  max-height: 500px;
+  outline: none;
+}
+
+.emotion-7 {
+  background-color: #ffffff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.emotion-7:hover {
+  cursor: pointer;
+  background-color: #F7F7F7;
+}
+
+.emotion-7:focus {
+  background-color: #F7F7F7;
+}
+
+.emotion-6 {
+  display: table;
+}
+
+.emotion-4 {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 16px;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  font-size: 22px;
+}
+
+.emotion-5 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+  white-space: nowrap;
+}
+
+.emotion-8 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  font-size: 22px;
+  color: #3c5a99;
+}
+
+.emotion-14 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  font-size: 22px;
+  color: #1da1f2;
+}
+
+<div>
+  <div
+    onKeyDown={[Function]}
+  >
     <div
-      data-radium={true}
-      onKeyDown={[Function]}
+      className="emotion-1"
+    >
+      <button
+        aria-expanded={false}
+        aria-haspopup={true}
+        className="emotion-0"
+        disabled={false}
+        onClick={[Function]}
+        onMouseDown={[Function]}
+        type="button"
+      >
+         Share 
+      </button>
+    </div>
+    <div
+      className="emotion-24"
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "position": "relative",
-          }
-        }
-      >
-        <button
-          aria-expanded={false}
-          aria-haspopup={true}
-          data-radium={true}
-          disabled={false}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "MozOsxFontSmoothing": "grayscale",
-              "WebkitFontSmoothing": "antialiased",
-              "alignItems": "center",
-              "backgroundColor": "#43B02A",
-              "backgroundImage": "none",
-              "border": "1px solid transparent",
-              "borderBottomLeftRadius": 4,
-              "borderBottomRightRadius": 4,
-              "borderTopLeftRadius": 4,
-              "borderTopRightRadius": 4,
-              "color": "#FFFFFF",
-              "cursor": "pointer",
-              "display": "inline-flex",
-              "fontSize": "16px",
-              "fontWeight": 600,
-              "height": "40px",
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "touchAction": "manipulation",
-              "userSelect": "none",
-              "whiteSpace": "nowrap",
-            }
-          }
-          type="button"
-        >
-           Share 
-        </button>
-      </div>
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "display": "block",
-            "pointerEvents": "none",
-            "position": "absolute",
-            "width": "100%",
-            "zIndex": -9000,
-          }
-        }
+        className="emotion-23"
       >
         <div
-          style={
-            Object {
-              "overflowX": "visible",
-              "overflowY": "hidden",
-              "paddingBottom": "5px",
-              "paddingLeft": "5px",
-              "paddingRight": "5px",
-              "paddingTop": "2px",
-              "transform": "translateX(-5px)",
-              "width": "100%",
-            }
-          }
+          className="emotion-22"
         >
           <div
-            style={
-              Object {
-                "transform": "translateY(-30px)",
-                "transition": "all 200ms ease-in-out",
-              }
-            }
+            className="emotion-21"
           >
             <div
-              style={
-                Object {
-                  "opacity": 0,
-                  "transition": "all 200ms ease-in-out",
-                }
-              }
+              aria-hidden={true}
+              className="emotion-20"
+              onBlur={[Function]}
+              onKeyDown={[Function]}
+              role="menu"
+              tabIndex={-1}
             >
               <div
-                aria-hidden={true}
-                onBlur={[Function]}
+                className="emotion-7"
+                onClick={[Function]}
+                onFocus={[Function]}
                 onKeyDown={[Function]}
-                role="menu"
-                style={
-                  Object {
-                    "backgroundColor": "#ffffff",
-                    "borderRadius": "4px",
-                    "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
-                    "display": "inline-block",
-                    "maxHeight": "500px",
-                    "outline": "none",
-                    "overflowY": "auto",
-                    "paddingBottom": 8,
-                    "paddingLeft": 0,
-                    "paddingRight": 0,
-                    "paddingTop": 8,
-                    "userSelect": "none",
-                  }
-                }
-                tabIndex={-1}
+                role="menuitem"
+                tabIndex={0}
               >
                 <div
-                  data-radium={true}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="menuitem"
-                  style={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "paddingBottom": 16,
-                      "paddingLeft": 0,
-                      "paddingRight": 0,
-                      "paddingTop": 16,
-                    }
-                  }
-                  tabIndex={0}
+                  className="emotion-6"
                 >
                   <div
-                    data-radium={true}
-                    style={
-                      Object {
-                        "display": "table",
-                      }
-                    }
+                    className="emotion-4"
                   >
                     <div
-                      data-radium={true}
-                      style={
-                        Object {
-                          "display": "table-cell",
-                          "paddingLeft": "16px",
-                          "verticalAlign": "middle",
-                        }
-                      }
+                      className="emotion-3"
                     >
-                      <div
-                        data-radium={true}
-                        style={
-                          Object {
-                            "display": "flex",
-                          }
-                        }
+                      <i
+                        aria-hidden={true}
+                        className="emotion-2"
                       >
-                        <i
-                          aria-hidden={true}
-                          data-radium={true}
-                          style={
-                            Object {
-                              "fontFamily": "ic-icons",
-                              "fontSize": "22px",
-                              "fontSmoothing": "antialiased",
-                              "fontStyle": "normal",
-                              "fontVariant": "normal",
-                              "fontWeight": "normal",
-                              "lineHeight": "1",
-                              "osxFontSmoothing": "grayscale",
-                              "position": "relative",
-                              "speak": "none",
-                              "textTransform": "none",
-                            }
-                          }
-                        >
-                          
-                        </i>
-                      </div>
-                    </div>
-                    <div
-                      data-radium={true}
-                      style={
-                        Object {
-                          "paddingBottom": 0,
-                          "paddingLeft": 16,
-                          "paddingRight": 16,
-                          "paddingTop": 0,
-                          "whiteSpace": "nowrap",
-                        }
-                      }
-                    >
-                      Share via Email
+                        
+                      </i>
                     </div>
                   </div>
-                </div>
-                <div
-                  data-radium={true}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="menuitem"
-                  style={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "paddingBottom": 16,
-                      "paddingLeft": 0,
-                      "paddingRight": 0,
-                      "paddingTop": 16,
-                    }
-                  }
-                  tabIndex={0}
-                >
                   <div
-                    data-radium={true}
-                    style={
-                      Object {
-                        "display": "table",
-                      }
-                    }
+                    className="emotion-5"
                   >
-                    <div
-                      data-radium={true}
-                      style={
-                        Object {
-                          "display": "table-cell",
-                          "paddingLeft": "16px",
-                          "verticalAlign": "middle",
-                        }
-                      }
-                    >
-                      <div
-                        data-radium={true}
-                        style={
-                          Object {
-                            "display": "flex",
-                          }
-                        }
-                      >
-                        <i
-                          aria-hidden={true}
-                          data-radium={true}
-                          style={
-                            Object {
-                              "color": "#3c5a99",
-                              "fontFamily": "ic-icons",
-                              "fontSize": "22px",
-                              "fontSmoothing": "antialiased",
-                              "fontStyle": "normal",
-                              "fontVariant": "normal",
-                              "fontWeight": "normal",
-                              "lineHeight": "1",
-                              "osxFontSmoothing": "grayscale",
-                              "position": "relative",
-                              "speak": "none",
-                              "textTransform": "none",
-                            }
-                          }
-                        >
-                          
-                        </i>
-                      </div>
-                    </div>
-                    <div
-                      data-radium={true}
-                      style={
-                        Object {
-                          "paddingBottom": 0,
-                          "paddingLeft": 16,
-                          "paddingRight": 16,
-                          "paddingTop": 0,
-                          "whiteSpace": "nowrap",
-                        }
-                      }
-                    >
-                      Share via Facebook
-                    </div>
+                    Share via Email
                   </div>
                 </div>
+              </div>
+              <div
+                className="emotion-7"
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                role="menuitem"
+                tabIndex={0}
+              >
                 <div
-                  data-radium={true}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  role="menuitem"
-                  style={
-                    Object {
-                      "backgroundColor": "#ffffff",
-                      "paddingBottom": 16,
-                      "paddingLeft": 0,
-                      "paddingRight": 0,
-                      "paddingTop": 16,
-                    }
-                  }
-                  tabIndex={0}
+                  className="emotion-6"
                 >
                   <div
-                    data-radium={true}
-                    style={
-                      Object {
-                        "display": "table",
-                      }
-                    }
+                    className="emotion-4"
                   >
                     <div
-                      data-radium={true}
-                      style={
-                        Object {
-                          "display": "table-cell",
-                          "paddingLeft": "16px",
-                          "verticalAlign": "middle",
-                        }
-                      }
+                      className="emotion-3"
                     >
-                      <div
-                        data-radium={true}
-                        style={
-                          Object {
-                            "display": "flex",
-                          }
-                        }
+                      <i
+                        aria-hidden={true}
+                        className="emotion-8"
                       >
-                        <i
-                          aria-hidden={true}
-                          data-radium={true}
-                          style={
-                            Object {
-                              "color": "#1da1f2",
-                              "fontFamily": "ic-icons",
-                              "fontSize": "22px",
-                              "fontSmoothing": "antialiased",
-                              "fontStyle": "normal",
-                              "fontVariant": "normal",
-                              "fontWeight": "normal",
-                              "lineHeight": "1",
-                              "osxFontSmoothing": "grayscale",
-                              "position": "relative",
-                              "speak": "none",
-                              "textTransform": "none",
-                            }
-                          }
-                        >
-                          
-                        </i>
-                      </div>
+                        
+                      </i>
                     </div>
+                  </div>
+                  <div
+                    className="emotion-5"
+                  >
+                    Share via Facebook
+                  </div>
+                </div>
+              </div>
+              <div
+                className="emotion-7"
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                role="menuitem"
+                tabIndex={0}
+              >
+                <div
+                  className="emotion-6"
+                >
+                  <div
+                    className="emotion-4"
+                  >
                     <div
-                      data-radium={true}
-                      style={
-                        Object {
-                          "paddingBottom": 0,
-                          "paddingLeft": 16,
-                          "paddingRight": 16,
-                          "paddingTop": 0,
-                          "whiteSpace": "nowrap",
-                        }
-                      }
+                      className="emotion-3"
                     >
-                      Share via Twitter
+                      <i
+                        aria-hidden={true}
+                        className="emotion-14"
+                      >
+                        
+                      </i>
                     </div>
+                  </div>
+                  <div
+                    className="emotion-5"
+                  >
+                    Share via Twitter
                   </div>
                 </div>
               </div>
@@ -389,12 +334,5 @@ exports[`renders DropdownMenu with icons and trigger correctly 1`] = `
       </div>
     </div>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </div>
 `;

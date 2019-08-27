@@ -1,73 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders cart icon correctly 1`] = `
+.emotion-0 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+}
+
 <i
   aria-hidden={true}
-  data-radium={true}
-  style={
-    Object {
-      "fontFamily": "ic-icons",
-      "fontSize": "16px",
-      "fontSmoothing": "antialiased",
-      "fontStyle": "normal",
-      "fontVariant": "normal",
-      "fontWeight": "normal",
-      "lineHeight": "1",
-      "osxFontSmoothing": "grayscale",
-      "position": "relative",
-      "speak": "none",
-      "textTransform": "none",
-    }
-  }
+  className="emotion-0"
 >
   
 </i>
 `;
 
 exports[`renders cart icon with hex code correctly 1`] = `
+.emotion-0 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+}
+
 <i
   aria-hidden={true}
-  data-radium={true}
-  style={
-    Object {
-      "fontFamily": "ic-icons",
-      "fontSize": "16px",
-      "fontSmoothing": "antialiased",
-      "fontStyle": "normal",
-      "fontVariant": "normal",
-      "fontWeight": "normal",
-      "lineHeight": "1",
-      "osxFontSmoothing": "grayscale",
-      "position": "relative",
-      "speak": "none",
-      "textTransform": "none",
-    }
-  }
+  className="emotion-0"
 >
   
 </i>
 `;
 
 exports[`renders cart icon with styles 1`] = `
+.emotion-0 {
+  font-size: 16px;
+  position: relative;
+  font-family: ic-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  osx-font-smoothing: grayscale;
+  color: #fff;
+}
+
 <i
   aria-hidden={true}
-  data-radium={true}
-  style={
-    Object {
-      "color": "#fff",
-      "fontFamily": "ic-icons",
-      "fontSize": "16px",
-      "fontSmoothing": "antialiased",
-      "fontStyle": "normal",
-      "fontVariant": "normal",
-      "fontWeight": "normal",
-      "lineHeight": "1",
-      "osxFontSmoothing": "grayscale",
-      "position": "relative",
-      "speak": "none",
-      "textTransform": "none",
-    }
-  }
+  className="emotion-0"
 >
   
 </i>

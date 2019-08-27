@@ -13,24 +13,13 @@ exports[`Tooltip expect overlay to appear correctly when shown 1`] = `
 `;
 
 exports[`Tooltip renders Tooltip properly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      aria-expanded={false}
-      aria-haspopup={true}
-      onClick={[Function]}
-    >
-      TRIGGER
-    </div>
+<div>
+  <div
+    aria-expanded={false}
+    aria-haspopup={true}
+    onClick={[Function]}
+  >
+    TRIGGER
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </div>
 `;

@@ -1,58 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Fade in correctly 1`] = `
+.emotion-0 {
+  max-width: 0;
+  max-height: 0;
+  -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
 <div
-  data-radium={true}
+  className="emotion-0"
 >
-  <div
-    style={
-      Object {
-        "maxHeight": 0,
-        "maxWidth": 0,
-        "transform": "scaleY(0)",
-        "transition": "all 200ms ease-in-out",
-      }
-    }
-  >
-    <h3>
-       Content 
-    </h3>
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
+  <h3>
+     Content 
+  </h3>
 </div>
 `;
 
 exports[`renders Grow correctly with custom props 1`] = `
+.emotion-0 {
+  max-width: 10px;
+  max-height: 10px;
+  -webkit-transform: scaleY(0.2);
+  -ms-transform: scaleY(0.2);
+  transform: scaleY(0.2);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  background: red;
+}
+
 <div
-  data-radium={true}
+  className="emotion-0"
 >
-  <div
-    style={
-      Object {
-        "background": "red",
-        "maxHeight": 10,
-        "maxWidth": 10,
-        "transform": "scaleY(0.2)",
-        "transition": "all 500ms ease-in-out",
-      }
-    }
-  >
-    <h3>
-       Content 
-    </h3>
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
+  <h3>
+     Content 
+  </h3>
 </div>
 `;

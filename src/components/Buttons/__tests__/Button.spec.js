@@ -1,6 +1,5 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { StyleRoot } from 'radium'
 import { mount } from 'enzyme'
 import { spy } from 'sinon'
 import Icon from '../../Icon/Icon'
@@ -16,13 +15,7 @@ describe('Button', () => {
     ]
 
     testCases.forEach(props => {
-      const tree = renderer
-        .create(
-          <StyleRoot>
-            <Button {...props}>Primary Button</Button>
-          </StyleRoot>
-        )
-        .toJSON()
+      const tree = renderer.create(<Button {...props}>Primary Button</Button>).toJSON()
       expect(tree).toMatchSnapshot()
     })
   })
@@ -36,13 +29,7 @@ describe('Button', () => {
     ]
 
     testCases.forEach(props => {
-      const tree = renderer
-        .create(
-          <StyleRoot>
-            <Button {...props}>Hi</Button>
-          </StyleRoot>
-        )
-        .toJSON()
+      const tree = renderer.create(<Button {...props}>Hi</Button>).toJSON()
       expect(tree).toMatchSnapshot()
     })
   })
@@ -50,11 +37,9 @@ describe('Button', () => {
   it('renders with inverted colors', () => {
     const tree = renderer
       .create(
-        <StyleRoot>
-          <Button inverted snacksType="primary" size="small">
-            Hi
-          </Button>
-        </StyleRoot>
+        <Button inverted snacksType="primary" size="small">
+          Hi
+        </Button>
       )
       .toJSON()
     expect(tree).toMatchSnapshot()
@@ -69,13 +54,7 @@ describe('Button', () => {
     ]
 
     testCases.forEach(props => {
-      const tree = renderer
-        .create(
-          <StyleRoot>
-            <Button {...props}>Hi</Button>
-          </StyleRoot>
-        )
-        .toJSON()
+      const tree = renderer.create(<Button {...props}>Hi</Button>).toJSON()
       expect(tree).toMatchSnapshot()
     })
   })
@@ -83,11 +62,9 @@ describe('Button', () => {
   it('applies the elementAttributes prop correctly', () => {
     const tree = renderer
       .create(
-        <StyleRoot>
-          <Button elementAttributes={{ 'aria-label': 'foo' }} nacksType="primary">
-            Hi
-          </Button>
-        </StyleRoot>
+        <Button elementAttributes={{ 'aria-label': 'foo' }} nacksType="primary">
+          Hi
+        </Button>
       )
       .toJSON()
     expect(tree).toMatchSnapshot()
@@ -96,13 +73,11 @@ describe('Button', () => {
   it('fires the onClick prop', () => {
     const onClick = spy()
     const wrapper = mount(
-      <StyleRoot>
-        <div>
-          <Button snacksType="primary" onClick={onClick}>
-            Hi
-          </Button>
-        </div>
-      </StyleRoot>
+      <div>
+        <Button snacksType="primary" onClick={onClick}>
+          Hi
+        </Button>
+      </div>
     )
 
     wrapper.find('button').simulate('click')
@@ -113,11 +88,9 @@ describe('Button', () => {
   it('renders correctly when disabled', () => {
     const tree = renderer
       .create(
-        <StyleRoot>
-          <Button disabled snacksType="primary">
-            Hi
-          </Button>
-        </StyleRoot>
+        <Button disabled snacksType="primary">
+          Hi
+        </Button>
       )
       .toJSON()
     expect(tree).toMatchSnapshot()
@@ -126,11 +99,9 @@ describe('Button', () => {
   it('does not fire the onClick prop when disabled', () => {
     const onClick = spy()
     const wrapper = mount(
-      <StyleRoot>
-        <Button disabled snacksType="primary">
-          Hi
-        </Button>
-      </StyleRoot>
+      <Button disabled snacksType="primary">
+        Hi
+      </Button>
     )
 
     wrapper.find('button').simulate('click')
@@ -140,11 +111,9 @@ describe('Button', () => {
 
   it('can render as a link if an href is provided', () => {
     const tree = renderer.create(
-      <StyleRoot>
-        <Button href="/carrot" snacksType="primary">
-          Hi
-        </Button>
-      </StyleRoot>
+      <Button href="/carrot" snacksType="primary">
+        Hi
+      </Button>
     )
     expect(tree).toMatchSnapshot()
   })

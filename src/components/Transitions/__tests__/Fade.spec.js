@@ -1,6 +1,5 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { StyleRoot } from 'radium'
 import Fade from '../Fade'
 
 jest.mock('react-dom', () => ({
@@ -12,11 +11,9 @@ jest.mock('react-dom', () => ({
 it('renders Fade in correctly', () => {
   const tree = renderer
     .create(
-      <StyleRoot>
-        <Fade in>
-          <h3> Content </h3>
-        </Fade>
-      </StyleRoot>
+      <Fade in>
+        <h3> Content </h3>
+      </Fade>
     )
     .toJSON()
   expect(tree).toMatchSnapshot()
@@ -29,11 +26,9 @@ it('renders Fade correctly with custom props', () => {
   }
   const tree = renderer
     .create(
-      <StyleRoot>
-        <Fade in axis="y" style={{ background: 'red' }} transitionTime={500} opacity={opacity}>
-          <h3> Content </h3>
-        </Fade>
-      </StyleRoot>
+      <Fade in axis="y" style={{ background: 'red' }} transitionTime={500} opacity={opacity}>
+        <h3> Content </h3>
+      </Fade>
     )
     .toJSON()
   expect(tree).toMatchSnapshot()

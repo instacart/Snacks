@@ -20,6 +20,7 @@ const styles = {
   },
 }
 
+// eslint-disable-next-line react/prefer-stateless-function
 class ValidationError extends Component {
   static propTypes = {
     /** A uniq id */

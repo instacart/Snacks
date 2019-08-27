@@ -16,6 +16,7 @@ const styles = {
   },
 }
 
+// eslint-disable-next-line react/prefer-stateless-function
 class ServerError extends Component {
   static propTypes = {
     className: PropTypes.string,

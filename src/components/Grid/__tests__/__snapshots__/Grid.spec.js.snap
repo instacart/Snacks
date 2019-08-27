@@ -1,194 +1,353 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Grid correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      className="rmq-2c87bfe9 rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d"
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": 0,
-          "marginLeft": "auto",
-          "marginRight": "auto",
-          "marginTop": 0,
-        }
-      }
-    />
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
-@media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
-@media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}",
-      }
-    }
+.emotion-0 {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+@media (max-width:767px) {
+  .emotion-0 {
+    width: 100%;
+  }
+}
+
+@media (min-width:768px) and (max-width:831px) {
+  .emotion-0 {
+    width: 624px;
+  }
+}
+
+@media (min-width:832px) and (max-width:1039px) {
+  .emotion-0 {
+    width: 832px;
+  }
+}
+
+@media (min-width:1040px) and (max-width:1247px) {
+  .emotion-0 {
+    width: 1040px;
+  }
+}
+
+@media (min-width:1248px) and (max-width:1455px) {
+  .emotion-0 {
+    width: 1248px;
+  }
+}
+
+@media (min-width:1456px) {
+  .emotion-0 {
+    width: 1456px;
+  }
+}
+
+<div>
+  <div
+    className="emotion-0"
   />
 </div>
 `;
 
 exports[`renders Grid with Row correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
+.emotion-1 {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+@media (max-width:767px) {
+  .emotion-1 {
+    width: 100%;
+  }
+}
+
+@media (min-width:768px) and (max-width:831px) {
+  .emotion-1 {
+    width: 624px;
+  }
+}
+
+@media (min-width:832px) and (max-width:1039px) {
+  .emotion-1 {
+    width: 832px;
+  }
+}
+
+@media (min-width:1040px) and (max-width:1247px) {
+  .emotion-1 {
+    width: 1040px;
+  }
+}
+
+@media (min-width:1248px) and (max-width:1455px) {
+  .emotion-1 {
+    width: 1248px;
+  }
+}
+
+@media (min-width:1456px) {
+  .emotion-1 {
+    width: 1456px;
+  }
+}
+
+@media (max-width:767px) {
+  .emotion-0 {
+    display: block;
+  }
+}
+
+@media (min-width:768px) and (max-width:831px) {
+  .emotion-0 {
+    display: grid;
+    grid-template-columns: repeat(6,104px);
+  }
+}
+
+@media (min-width:832px) and (max-width:1039px) {
+  .emotion-0 {
+    display: grid;
+    grid-template-columns: repeat(8,104px);
+  }
+}
+
+@media (min-width:1040px) and (max-width:1247px) {
+  .emotion-0 {
+    display: grid;
+    grid-template-columns: repeat(10,104px);
+  }
+}
+
+@media (min-width:1248px) and (max-width:1455px) {
+  .emotion-0 {
+    display: grid;
+    grid-template-columns: repeat(10,104px);
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:1456px) {
+  .emotion-0 {
+    display: grid;
+    grid-template-columns: repeat(10,104px);
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+<div>
+  <div
+    className="emotion-1"
+  >
     <div
-      className="rmq-2c87bfe9 rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d"
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": 0,
-          "marginLeft": "auto",
-          "marginRight": "auto",
-          "marginTop": 0,
-        }
-      }
-    >
-      <div
-        className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2ab11e56 rmq-a217a03d"
-        data-radium={true}
-        style={Object {}}
-      />
-    </div>
+      className="emotion-0"
+    />
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
-@media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
-@media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}
-@media (max-width: 767px){ .rmq-e9fd10a8{display: block !important;}}
-@media (min-width: 768px) and (max-width: 831px){ .rmq-94de0125{display: grid !important;
-grid-template-columns: repeat(6, 104px) !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-eeb4761a{display: grid !important;
-grid-template-columns: repeat(8, 104px) !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-3e10bf34{display: grid !important;
-grid-template-columns: repeat(10, 104px) !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2ab11e56{display: grid !important;
-grid-template-columns: repeat(10, 104px) !important;
-justify-content: center !important;}}
-@media (min-width: 1456px){ .rmq-a217a03d{display: grid !important;
-grid-template-columns: repeat(10, 104px) !important;
-justify-content: center !important;}}",
-      }
-    }
-  />
 </div>
 `;
 
 exports[`renders Grid with Row with Columns correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
+.emotion-4 {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+@media (max-width:767px) {
+  .emotion-4 {
+    width: 100%;
+  }
+}
+
+@media (min-width:768px) and (max-width:831px) {
+  .emotion-4 {
+    width: 624px;
+  }
+}
+
+@media (min-width:832px) and (max-width:1039px) {
+  .emotion-4 {
+    width: 832px;
+  }
+}
+
+@media (min-width:1040px) and (max-width:1247px) {
+  .emotion-4 {
+    width: 1040px;
+  }
+}
+
+@media (min-width:1248px) and (max-width:1455px) {
+  .emotion-4 {
+    width: 1248px;
+  }
+}
+
+@media (min-width:1456px) {
+  .emotion-4 {
+    width: 1456px;
+  }
+}
+
+@media (max-width:767px) {
+  .emotion-3 {
+    display: block;
+  }
+}
+
+@media (min-width:768px) and (max-width:831px) {
+  .emotion-3 {
+    display: grid;
+    grid-template-columns: repeat(6,104px);
+  }
+}
+
+@media (min-width:832px) and (max-width:1039px) {
+  .emotion-3 {
+    display: grid;
+    grid-template-columns: repeat(8,104px);
+  }
+}
+
+@media (min-width:1040px) and (max-width:1247px) {
+  .emotion-3 {
+    display: grid;
+    grid-template-columns: repeat(10,104px);
+  }
+}
+
+@media (min-width:1248px) and (max-width:1455px) {
+  .emotion-3 {
+    display: grid;
+    grid-template-columns: repeat(10,104px);
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:1456px) {
+  .emotion-3 {
+    display: grid;
+    grid-template-columns: repeat(10,104px);
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:768px) and (max-width:831px) {
+  .emotion-0 {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width:832px) and (max-width:1039px) {
+  .emotion-0 {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width:1040px) and (max-width:1247px) {
+  .emotion-0 {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width:1248px) and (max-width:1455px) {
+  .emotion-0 {
+    grid-column: span 4;
+  }
+}
+
+@media (min-width:1456px) {
+  .emotion-0 {
+    grid-column: span 5;
+  }
+}
+
+<div>
+  <div
+    className="emotion-4"
+  >
     <div
-      className="rmq-2c87bfe9 rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d"
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": 0,
-          "marginLeft": "auto",
-          "marginRight": "auto",
-          "marginTop": 0,
-        }
-      }
+      className="emotion-3"
     >
       <div
-        className="rmq-e9fd10a8 rmq-94de0125 rmq-eeb4761a rmq-3e10bf34 rmq-2ab11e56 rmq-a217a03d"
-        data-radium={true}
-        style={Object {}}
-      >
-        <div
-          className="rmq-8f6274a rmq-9b0e1a5b rmq-a542a9ac rmq-f1cb9e65 rmq-dd3ac64f"
-          data-radium={true}
-          style={Object {}}
-        />
-        <div
-          className="rmq-8f6274a rmq-9b0e1a5b rmq-a542a9ac rmq-f1cb9e65 rmq-dd3ac64f"
-          data-radium={true}
-          style={Object {}}
-        />
-        <div
-          className="rmq-8f6274a rmq-9b0e1a5b rmq-a542a9ac rmq-f1cb9e65 rmq-dd3ac64f"
-          data-radium={true}
-          style={Object {}}
-        />
-      </div>
+        className="emotion-0"
+      />
+      <div
+        className="emotion-0"
+      />
+      <div
+        className="emotion-0"
+      />
     </div>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
-@media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
-@media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}
-@media (max-width: 767px){ .rmq-e9fd10a8{display: block !important;}}
-@media (min-width: 768px) and (max-width: 831px){ .rmq-94de0125{display: grid !important;
-grid-template-columns: repeat(6, 104px) !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-eeb4761a{display: grid !important;
-grid-template-columns: repeat(8, 104px) !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-3e10bf34{display: grid !important;
-grid-template-columns: repeat(10, 104px) !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2ab11e56{display: grid !important;
-grid-template-columns: repeat(10, 104px) !important;
-justify-content: center !important;}}
-@media (min-width: 1456px){ .rmq-a217a03d{display: grid !important;
-grid-template-columns: repeat(10, 104px) !important;
-justify-content: center !important;}}
-@media (min-width: 768px) and (max-width: 831px){ .rmq-8f6274a{grid-column: span 2 !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-9b0e1a5b{grid-column: span 2 !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-a542a9ac{grid-column: span 2 !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-f1cb9e65{grid-column: span 4 !important;}}
-@media (min-width: 1456px){ .rmq-dd3ac64f{grid-column: span 5 !important;}}",
-      }
-    }
-  />
 </div>
 `;
 
 exports[`renders Grid with styles correctly 1`] = `
-<div
-  data-radium={true}
->
-  <div>
-    <div
-      className="rmq-2c87bfe9 rmq-136ec809 rmq-816a7dd1 rmq-b3aaa63a rmq-2e8763ff rmq-7dcad03d"
-      data-radium={true}
-      style={
-        Object {
-          "color": "#ccc",
-          "marginBottom": 0,
-          "marginLeft": "auto",
-          "marginRight": "auto",
-          "marginTop": 0,
-          "width": "100%",
-        }
-      }
-    />
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (max-width: 767px){ .rmq-2c87bfe9{width: 100% !important;}}
-@media (min-width: 768px) and (max-width: 831px){ .rmq-136ec809{width: 624px !important;}}
-@media (min-width: 832px) and (max-width: 1039px){ .rmq-816a7dd1{width: 832px !important;}}
-@media (min-width: 1040px) and (max-width: 1247px){ .rmq-b3aaa63a{width: 1040px !important;}}
-@media (min-width: 1248px) and (max-width: 1455px){ .rmq-2e8763ff{width: 1248px !important;}}
-@media (min-width: 1456px){ .rmq-7dcad03d{width: 1456px !important;}}",
-      }
-    }
+.emotion-0 {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  width: 100%;
+  color: #ccc;
+}
+
+@media (max-width:767px) {
+  .emotion-0 {
+    width: 100%;
+  }
+}
+
+@media (min-width:768px) and (max-width:831px) {
+  .emotion-0 {
+    width: 624px;
+  }
+}
+
+@media (min-width:832px) and (max-width:1039px) {
+  .emotion-0 {
+    width: 832px;
+  }
+}
+
+@media (min-width:1040px) and (max-width:1247px) {
+  .emotion-0 {
+    width: 1040px;
+  }
+}
+
+@media (min-width:1248px) and (max-width:1455px) {
+  .emotion-0 {
+    width: 1248px;
+  }
+}
+
+@media (min-width:1456px) {
+  .emotion-0 {
+    width: 1456px;
+  }
+}
+
+<div>
+  <div
+    className="emotion-0"
   />
 </div>
 `;
