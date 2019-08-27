@@ -85,8 +85,7 @@ type FinalSpacings = { [Key in MarginXRuleProperty]: MarginXRules } &
   { [Key in MarginRuleProperty]: MarginRules } &
   { [Key in PaddingRuleProperty]: PaddingRules } &
   { [Key in PaddingXRuleProperty]: PaddingXRules } &
-  { [Key in PaddingYRuleProperty]: PaddingYRules } &
-  { [Key in PaddingRuleProperty]: PaddingRules } & {
+  { [Key in PaddingYRuleProperty]: PaddingYRules } & {
     MARGIN_TOP_XS: {
       marginTop: Spacing
     }
