@@ -99,6 +99,8 @@ class TextField extends React.Component {
     id: PropTypes.string,
     /** Style for input */
     inputStyle: PropTypes.object,
+    /** Style for input label */
+    labelStyle: PropTypes.object,
     /** Set by FormComponent by default.   */
     isValid: PropTypes.bool,
     /** onFocus callback */
@@ -198,6 +200,7 @@ class TextField extends React.Component {
       hintText,
       id,
       inputStyle,
+      labelStyle,
       isValid,
       name,
       required,
@@ -240,6 +243,7 @@ class TextField extends React.Component {
               hasError={hasError}
               htmlFor={inputId}
               snacksTheme={snacksTheme}
+              style={labelStyle}
             />
           )}
 
