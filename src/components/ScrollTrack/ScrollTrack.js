@@ -238,9 +238,9 @@ class ScrollTrack extends Component {
     } // already sliding
 
     const { parentWidth, trackWidth } = this.getNodeWidths()
+    const { onBeforeNext, scrollOffset } = this.props
     let nextForward = this.state.left - parentWidth + scrollOffset
     const fullForward = parentWidth - trackWidth
-    const { onBeforeNext, scrollOffset } = this.props
 
     // already is, or is going to be, full forward
     if (nextForward <= fullForward) {
