@@ -40,6 +40,9 @@ export interface TextFieldProps
   /** Style for input */
   inputStyle?: RadiumStyles
 
+  /** Style for input */
+  labelStyle?: RadiumStyles
+
   /** Set by FormComponent by default.   */
   isValid: boolean
 

@@ -38,6 +38,17 @@ it('renders TextField without label correctly', () => {
   expect(tree).toMatchSnapshot()
 })
 
+it('correctly applies label styles when provided', () => {
+  const props = {
+    ...defaultProps,
+    labelStyle: {
+      paddingLeft: '1234px',
+    },
+  }
+  const tree = renderer.create(defaultTextField(props)).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
 it('fires the onFocus prop', () => {
   const onFocus = spy()
   const wrapper = mount(
