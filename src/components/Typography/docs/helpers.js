@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-no-undef */
+/* eslint-disable react/jsx-no-undef, react/prop-types */
 import React from 'react'
 import Text from '../Text.js'
 

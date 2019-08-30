@@ -1,5 +1,12 @@
 import memoize from './memoize'
 
+export const isNodeEnv = () => typeof window === 'undefined'
+
+export const isTestEnv = () => {
+  const userAgent = (window && window.navigator && navigator.userAgent) || ''
+  return userAgent.match(/(Node.js|jsdom)/)
+}
+
 export const supportsCSSGrid = memoize(() => {
   if (isNodeEnv() || isTestEnv()) {
     return true
@@ -9,12 +16,5 @@ export const supportsCSSGrid = memoize(() => {
 
   return elm.style['grid-template-rows'] !== undefined
 })
-
-export const isNodeEnv = () => typeof window === 'undefined'
-
-export const isTestEnv = () => {
-  const userAgent = (window && window.navigator && navigator.userAgent) || ''
-  return userAgent.match(/(Node.js|jsdom)/)
-}
 
 export default { isNodeEnv, isTestEnv, supportsCSSGrid }

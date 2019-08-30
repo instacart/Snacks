@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Radium, { Style } from 'radium'
-import { Normalize, GlobalTheme } from '../index'
+import Normalize from './Normalize'
+import GlobalTheme from './GlobalTheme'
 
 const getFonts = assetsUrl => {
   return `@font-face {

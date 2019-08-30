@@ -24,7 +24,7 @@ module.exports = {
     'react/no-find-dom-node': OFF,
     'react/no-multi-comp': [ERROR, { ignoreStateless: true }],
     'react/no-unused-prop-types': WARN,
-    'react/forbid-prop-types': [WARN, { forbid: 'any' }],
+    'react/forbid-prop-types': [WARN, { forbid: ['any'] }],
     'react/jsx-filename-extension': OFF,
     'react/jsx-no-literals': OFF,
 
