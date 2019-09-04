@@ -10,7 +10,7 @@ const icons = Object.keys(iconsList)
 
 const groups = {
   People: ['account', 'person', 'personAdd', 'walking'],
-  'Social Media': ['google', 'facebook', 'instagram', 'twitter', 'pinterest', 'appStore', 'playStore'],
+  'Social Media': ['google', 'facebook', 'instagram', 'twitter', 'pinterest', 'appStore', 'playStore', 'ios'],
   Orders: ['order', 'orders', 'addToOrder', 'orderIssue', 'orderReview', 'recurringOrder', 'reorder', 'replacement', 'adjustment', 'refund'],
   'Times of Day': ['sunset', 'moon', 'inSeason'],
   Shopping: ['cart', 'bag', 'store', 'money', 'creditCard', 'loyaltyCard', 'giftcard', 'coupons', 'categories', 'recipes', 'sale'],
