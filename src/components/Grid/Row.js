@@ -62,12 +62,13 @@ const styles = {
 }
 
 const getMaxColumnsStyles = props => {
-  const { maxColumns } = props
+  const { maxColumns, autoWidth } = props
 
+  const columnWidth = autoWidth ? 'auto' : `${responsive.columnWidth}px`
   const override = supportsCSSGrid()
     ? {
         display: 'grid',
-        gridTemplateColumns: `repeat(${maxColumns}, ${responsive.columnWidth}px)`,
+        gridTemplateColumns: `repeat(${maxColumns}, ${columnWidth})`,
         justifyContent: 'center',
       }
     : {
