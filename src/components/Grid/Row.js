@@ -61,23 +61,28 @@ const styles = {
   },
 }
 
+const overrideColumnsStyles = (maxColumns, autoWidth) => {
+  const columnWidth = autoWidth ? 'auto' : `${responsive.columnWidth}px`
+  if (supportsCSSGrid()) {
+    return {
+      display: 'grid',
+      gridTemplateColumns: `repeat(${maxColumns}, ${columnWidth})`,
+      justifyContent: 'center',
+    }
+  }
+
+  return {
+    width: `${maxColumns * responsive.columnWidth}px`,
+    marginTop: 0,
+    marginRight: 'auto',
+    marginBottom: 0,
+    marginLeft: 'auto',
+  }
+}
+
 const getMaxColumnsStyles = props => {
   const { maxColumns, autoWidth } = props
-
-  const columnWidth = autoWidth ? 'auto' : `${responsive.columnWidth}px`
-  const override = supportsCSSGrid()
-    ? {
-        display: 'grid',
-        gridTemplateColumns: `repeat(${maxColumns}, ${columnWidth})`,
-        justifyContent: 'center',
-      }
-    : {
-        width: `${maxColumns * responsive.columnWidth}px`,
-        marginTop: 0,
-        marginRight: 'auto',
-        marginBottom: 0,
-        marginLeft: 'auto',
-      }
+  const override = overrideColumnsStyles(maxColumns, autoWidth)
 
   if (maxColumns <= 6) {
     return {
