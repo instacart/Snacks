@@ -53,9 +53,14 @@ interface RadiumCSSProperties extends React.CSSProperties {
   ':active'?: React.CSSProperties
 }
 
-type RadiumStylesBase = RadiumCSSProperties | RadiumCSSProperties[]
+// Radium ignores non-objects, so you can do `this.state.isCool && styles.cool`
+type RadiumStylesBase = RadiumCSSProperties | number | string | undefined | false | null
 
-export type RadiumStyles = RadiumStylesBase | RadiumStylesBase[]
+// Radium supports style arrays and merges multiple style objects
+interface RadiumStylesArray extends Array<RadiumStyles> {}
+
+// Radium recursively merges style arrays
+export type RadiumStyles = RadiumStylesBase | RadiumStylesArray
 
 export type ElementAttributes<T> = (T extends keyof JSX.IntrinsicElements
   ? React.ComponentPropsWithoutRef<T>
