@@ -47,15 +47,30 @@ import Portal from './components/Portal/Portal'
 import Text from './components/Typography/Text'
 import { themePropTypes } from './styles/themer/utils'
 
-interface RadiumCSSProperties extends React.CSSProperties {
-  ':hover'?: React.CSSProperties
-  ':focus'?: React.CSSProperties
-  ':active'?: React.CSSProperties
-}
+// Radium only supports these interaction styles
+type RadiumPseudos = ':hover' | ':focus' | ':active'
+type RadiumCSSPseudosObject = { [K in RadiumPseudos]?: RadiumCSSObject }
 
-type RadiumStylesBase = RadiumCSSProperties | RadiumCSSProperties[]
+// Allows for arbitrary properties as a last resort -- this enables support for "@media xxxxxxx" etc
+type RadiumCSSOthersObject = { [propertiesName: string]: RadiumStyles }
 
-export type RadiumStyles = RadiumStylesBase | RadiumStylesBase[]
+interface RadiumCSSObject
+  extends React.CSSProperties,
+    RadiumCSSPseudosObject,
+    RadiumCSSOthersObject {}
+
+// Radium supports style arrays and merges multiple style objects
+interface RadiumStylesArray extends Array<RadiumStyles> {}
+
+// Radium ignores non-objects/arrays so you can do `this.state.isCool && styles.cool`
+export type RadiumStyles =
+  | null
+  | undefined
+  | boolean
+  | number
+  | string
+  | RadiumCSSObject
+  | RadiumStylesArray
 
 export type ElementAttributes<T> = (T extends keyof JSX.IntrinsicElements
   ? React.ComponentPropsWithoutRef<T>
