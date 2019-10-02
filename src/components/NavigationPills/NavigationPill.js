@@ -72,10 +72,10 @@ const NavigationPill = props => {
 }
 
 NavigationPill.propTypes = {
-  /** Any additonal props to add to the element (e.g. data attributes). */
+  /** Any additional props to add to the element (e.g. data attributes). */
   elementAttributes: PropTypes.object,
 
-  /** Any additonal props to add to the inner a element (e.g. data attributes). */
+  /** Any additional props to add to the inner a element (e.g. data attributes). */
   anchorItemAttributes: PropTypes.object,
 
   /** determines wether or not active styles are applied */

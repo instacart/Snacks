@@ -1,5 +1,4 @@
 import React from 'react'
-import tinycolor from 'tinycolor2'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
 import colors from '../../styles/colors'
@@ -9,32 +8,26 @@ import { themePropTypes } from '../../styles/themer/utils'
 import spacing from '../../styles/spacing'
 import { setAlpha } from '../../utils'
 
-const styles = {
+const STYLES = {
   container: {
     display: 'inline-block',
   },
-  main: {
-    default: {
-      fontWeight: 600,
-      fontSize: 14,
-      height: 32,
-      lineHeight: '32px',
-      borderRadius: 24,
-      display: 'block',
-      ...spacing.PADDING_X_SM,
-      marginTop: 0,
-      marginBottom: 0,
-      marginLeft: '4px',
-      marginRight: '4px',
-      borderWidth: 1,
-      borderStyle: 'solid',
-      borderColor: colors.GRAY_88,
-      transition: 'background-color 150ms ease-in-out',
-
-      ':hover': {
-        textDecoration: 'none',
-      },
-    },
+  checkbox: {
+    display: 'block',
+    fontWeight: 600,
+    fontSize: 14,
+    height: 32,
+    lineHeight: '32px',
+    borderRadius: 24,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.GRAY_88,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: '4px',
+    marginRight: '4px',
+    ...spacing.PADDING_X_SM,
+    transition: 'background-color 150ms ease-in-out',
   },
   checkBoxOverrideStyle: {
     border: 0,
@@ -45,22 +38,27 @@ const styles = {
     padding: 0,
     position: 'absolute',
     whiteSpace: 'nowrap',
-  }
+    height: 1,
+    width: 1,
+  },
 }
 
 class SelectionPill extends React.PureComponent {
   static propTypes = {
-    /** Required unique identifier for the checkbox */
+    /** Required unique identifier for the pill */
     id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 
-    /** Any additonal props to add to the list element (e.g. data attributes). */
+    /** Any additional props to add to the list element (e.g. data attributes). */
     listElementAttributes: PropTypes.object,
 
-    /** Any additonal props to add to the checkbox element (e.g. data attributes). */
+    /** Any additional props to add to the checkbox element (e.g. data attributes). */
     elementAttributes: PropTypes.object,
 
-    /** determines wether or not selected styles are applied and start is a selected state */
+    /** Determines wether or not selected styles are applied and start is a selected state */
     isSelected: PropTypes.bool,
+
+    /** Determines Whether or not the pill is disabled. */
+    isDisabled: PropTypes.bool,
 
     /** Callback function called after pill click
      * @param {SyntheticEvent} event The react `SyntheticEvent`
@@ -81,11 +79,16 @@ class SelectionPill extends React.PureComponent {
     onBlur: PropTypes.func,
 
     snacksTheme: themePropTypes,
-    /** text to appear inside pill */
+    /** Text to appear inside pill */
     text: PropTypes.string,
 
-  /** Optional style overrides. */
+    /** Optional style overrides. */
     style: PropTypes.object,
+
+    /** Aria overrides for accessibility (i.e. use if label is not descriptive enough for screen readers) */
+    aria: PropTypes.shape({
+      label: PropTypes.string,
+    }),
   }
 
   static defaultProps = {
@@ -99,8 +102,9 @@ class SelectionPill extends React.PureComponent {
   }
 
   handleChange = event => {
-    const { onClick } = this.props
+    const { onClick, isDisabled } = this.props
     const { isSelected } = this.state
+    if (isDisabled) return
 
     this.setState({ isSelected: !isSelected })
     onClick(event, { ...this.props, isSelected: !isSelected })
@@ -112,39 +116,49 @@ class SelectionPill extends React.PureComponent {
   }
 
   handleFocus = event => {
-    const { onFocus } = this.props
+    const { onFocus, isDisabled } = this.props
     const { isFocused } = this.state
+    if (isDisabled) return
 
     this.toggleFocus()
     onFocus(event, { ...this.props, isFocused: !isFocused })
   }
 
   handleBlur = event => {
-    const { onBlur } = this.props
+    const { onBlur, isDisabled } = this.props
     const { isFocused } = this.state
+    if (isDisabled) return
 
     this.toggleFocus()
     onBlur(event, { ...this.props, isFocused: !isFocused })
   }
 
   render() {
-    const { id, snacksTheme, text } = this.props
+    const { id, snacksTheme, text, style, aria, isDisabled } = this.props
     const { isSelected, isFocused } = this.state
     const { primaryForeground } = snacksTheme.colors
     const backgroundColor = setAlpha(primaryForeground, 0.1)
+
     const activeStyles = {
       backgroundColor,
       borderColor: primaryForeground,
       ':hover': {
-        backgroundColor: setAlpha(primaryForeground, 0.2),
+        backgroundColor: setAlpha(primaryForeground, 0.3),
       },
     }
 
-    const mainStyles = {
+    const checkboxThemedStyles = {
       color: primaryForeground,
-
       ':hover': {
         backgroundColor,
+      },
+    }
+
+    const disabledStyles = {
+      color: setAlpha(primaryForeground, 0.5),
+      backgroundColor: setAlpha(colors.GRAY_88, 0.5),
+      ':hover': {
+        backgroundColor: setAlpha(colors.GRAY_88, 0.5),
       },
     }
 
@@ -154,20 +168,23 @@ class SelectionPill extends React.PureComponent {
     }
 
     return (
-      <li style={styles.container} {...this.props.listElementAttributes}>
+      <li style={STYLES.container} {...this.props.listElementAttributes}>
         <Checkbox
           id={id}
           onChange={this.handleChange}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
+          aria={aria}
           style={{
             label: {
-              ...styles.main.default,
-              ...mainStyles,
+              ...STYLES.checkbox,
+              ...checkboxThemedStyles,
               ...(isSelected && activeStyles),
               ...(isFocused && focusStyles),
+              ...(isDisabled && disabledStyles),
+              ...style,
             },
-            button: styles.checkBoxOverrideStyle,
+            button: STYLES.checkBoxOverrideStyle,
           }}
           {...this.props.elementAttributes}
       >

@@ -30,5 +30,14 @@ import SelectionPill from '../SelectionPill.js'
       }}
       text="watermelon"
     />
+    <SelectionPill
+      id="selection4"
+      isSelected={false}
+      isDisabled={true}
+      onClick={e => {
+        console.log('SelectionPill click!', "cabbage")
+      }}
+      text="cabbage"
+    />
   </div>
 ```
