@@ -8,27 +8,24 @@ import SelectionPill from '../SelectionPill.js'
 ; <div>
     <SelectionPill
       id="selection1"
-      isActive={false}
+      isSelected={false}
       onClick={e => {
-        e.preventDefault()
         console.log('SelectionPill click!', "bananas")
       }}
       text="bananas"
     />
     <SelectionPill
       id="selection2"
-      isActive={true}
+      isSelected={true}
       onClick={e => {
-        e.preventDefault()
         console.log('SelectionPill click!', "carrots")
       }}
       text="carrots"
     />
     <SelectionPill
       id="selection3"
-      isActive={false}
+      isSelected={false}
       onClick={e => {
-        e.preventDefault()
         console.log('SelectionPill click!', "watermelon")
       }}
       text="watermelon"
