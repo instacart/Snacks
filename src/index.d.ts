@@ -17,6 +17,7 @@ import LoadingBox from './components/Loading/LoadingBox'
 import Pill from './components/Pill/Pill'
 import NavigationPill from './components/NavigationPills/NavigationPill'
 import NavigationPills from './components/NavigationPills/NavigationPills'
+import SelectionPill from './components/SelectionPills/SelectionPill'
 import Normalize from './styles/Normalize'
 import responsive from './styles/responsive'
 import Row from './components/Grid/Row'
@@ -128,6 +129,7 @@ export {
   LoadingBox,
   NavigationPill,
   NavigationPills,
+  SelectionPill,
   ScrollTrack,
   Menu,
   MenuItem,

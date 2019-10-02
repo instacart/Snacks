@@ -116,6 +116,10 @@ module.exports = {
           components: 'src/components/NavigationPills/[A-Z]*.js',
         },
         {
+          name: 'SelectionPills',
+          components: 'src/components/SelectionPills/[A-Z]*.js',
+        },
+        {
           name: 'Pill',
           components: 'src/components/Pill/Pill.js',
         },
@@ -175,5 +179,5 @@ module.exports = {
     },
   },
   title: 'Snacks',
-  webpackConfig: webpackConfig,
+  webpackConfig,
 }
