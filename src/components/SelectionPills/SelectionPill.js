@@ -8,39 +8,65 @@ import { themePropTypes } from '../../styles/themer/utils'
 import spacing from '../../styles/spacing'
 import { setAlpha } from '../../utils'
 
-const STYLES = {
-  container: {
-    display: 'inline-block',
-  },
-  checkbox: {
-    display: 'block',
-    fontWeight: 600,
-    fontSize: 14,
-    height: 32,
-    lineHeight: '32px',
-    borderRadius: 24,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: colors.GRAY_88,
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: '4px',
-    marginRight: '4px',
-    ...spacing.PADDING_X_SM,
-    transition: 'background-color 150ms ease-in-out',
-  },
-  checkBoxOverrideStyle: {
-    border: 0,
-    clip: 'rect(0 0 0 0)',
-    clippath: 'inset(50%)',
-    margin: -1,
-    overflow: 'hidden',
-    padding: 0,
-    position: 'absolute',
-    whiteSpace: 'nowrap',
-    height: 1,
-    width: 1,
-  },
+const getStyles = (props, primaryForeground) => {
+  const backgroundColor = setAlpha(primaryForeground, 0.1)
+
+  return {
+    container: {
+      display: 'inline-block',
+    },
+    checkbox: {
+      display: 'block',
+      fontWeight: 600,
+      fontSize: 14,
+      height: 32,
+      lineHeight: '32px',
+      borderRadius: 24,
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderColor: colors.GRAY_88,
+      color: primaryForeground,
+      marginTop: 0,
+      marginBottom: 0,
+      marginLeft: '4px',
+      marginRight: '4px',
+      ...spacing.PADDING_X_SM,
+      transition: 'background-color 150ms ease-in-out',
+      ':hover': {
+        backgroundColor,
+      },
+    },
+    checkBoxOverrideStyle: {
+      border: 0,
+      clip: 'rect(0 0 0 0)',
+      clippath: 'inset(50%)',
+      margin: -1,
+      overflow: 'hidden',
+      padding: 0,
+      position: 'absolute',
+      whiteSpace: 'nowrap',
+      height: 1,
+      width: 1,
+    },
+    focusStyles: {
+      outline: '5px auto rgb(59, 153, 252)',
+      borderColor: primaryForeground,
+    },
+    disabledStyles: {
+      color: setAlpha(primaryForeground, 0.6),
+      backgroundColor: colors.GRAY_97,
+      ':hover': {
+        backgroundColor: colors.GRAY_97,
+      },
+    },
+    activeStyles: {
+      backgroundColor,
+      borderColor: primaryForeground,
+      ':hover': {
+        backgroundColor: setAlpha(primaryForeground, 0.3),
+      },
+    },
+  }
 }
 
 class SelectionPill extends React.PureComponent {
@@ -73,9 +99,9 @@ class SelectionPill extends React.PureComponent {
     onFocus: PropTypes.func,
 
     /** Callback function called after pill has lost focus
-      * @param {SyntheticEvent} event The react `SyntheticEvent`
-      * @param {props} object All the props passed to the component
-      */
+     * @param {SyntheticEvent} event The react `SyntheticEvent`
+     * @param {props} object All the props passed to the component
+     */
     onBlur: PropTypes.func,
 
     snacksTheme: themePropTypes,
@@ -136,39 +162,10 @@ class SelectionPill extends React.PureComponent {
   render() {
     const { id, snacksTheme, text, style, aria, isDisabled } = this.props
     const { isSelected, isFocused } = this.state
-    const { primaryForeground } = snacksTheme.colors
-    const backgroundColor = setAlpha(primaryForeground, 0.1)
-
-    const activeStyles = {
-      backgroundColor,
-      borderColor: primaryForeground,
-      ':hover': {
-        backgroundColor: setAlpha(primaryForeground, 0.3),
-      },
-    }
-
-    const checkboxThemedStyles = {
-      color: primaryForeground,
-      ':hover': {
-        backgroundColor,
-      },
-    }
-
-    const disabledStyles = {
-      color: setAlpha(primaryForeground, 0.5),
-      backgroundColor: setAlpha(colors.GRAY_88, 0.5),
-      ':hover': {
-        backgroundColor: setAlpha(colors.GRAY_88, 0.5),
-      },
-    }
-
-    const focusStyles = {
-      outline: '5px auto rgb(59, 153, 252)',
-      borderColor: primaryForeground,
-    }
+    const internalStyles = getStyles(this.props, snacksTheme.colors.primaryForeground)
 
     return (
-      <li style={STYLES.container} {...this.props.listElementAttributes}>
+      <li style={internalStyles.container} {...this.props.listElementAttributes}>
         <Checkbox
           id={id}
           onChange={this.handleChange}
@@ -177,17 +174,16 @@ class SelectionPill extends React.PureComponent {
           aria={aria}
           style={{
             label: {
-              ...STYLES.checkbox,
-              ...checkboxThemedStyles,
-              ...(isSelected && activeStyles),
-              ...(isFocused && focusStyles),
-              ...(isDisabled && disabledStyles),
+              ...internalStyles.checkbox,
+              ...(isSelected && internalStyles.activeStyles),
+              ...(isFocused && internalStyles.focusStyles),
+              ...(isDisabled && internalStyles.disabledStyles),
               ...style,
             },
-            button: STYLES.checkBoxOverrideStyle,
+            button: internalStyles.checkBoxOverrideStyle,
           }}
           {...this.props.elementAttributes}
-      >
+        >
           {text}
         </Checkbox>
       </li>

@@ -8,6 +8,5 @@ export const darken = memoize((baseColor, amount) => {
 })
 
 export const setAlpha = memoize((baseColor, alpha) => {
-  return tinycolor(baseColor)
-    .setAlpha(alpha)
+  return tinycolor(baseColor).setAlpha(alpha)
 })

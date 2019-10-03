@@ -45,6 +45,7 @@ const expectedExports = [
   'NavigationPill',
   'NavigationPills',
   'ScrollTrack',
+  'SelectionPill',
   'Menu',
   'MenuItem',
   'MenuDivider',
