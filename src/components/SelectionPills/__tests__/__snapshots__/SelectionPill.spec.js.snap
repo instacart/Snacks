@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders disabled pill correctly 1`] = `
+exports[`SelectionPill renders disabled pill correctly 1`] = `
 <li
   data-radium={true}
   style={
@@ -39,7 +39,7 @@ exports[`renders disabled pill correctly 1`] = `
         data-radium={true}
         style={
           Object {
-            "fill": "#757575",
+            "fill": "#BDBDBD",
             "height": 22,
             "width": 22,
           }
@@ -48,6 +48,7 @@ exports[`renders disabled pill correctly 1`] = `
       <input
         checked={false}
         data-radium={true}
+        disabled={true}
         id="selection1"
         onBlur={[Function]}
         onChange={[Function]}
@@ -105,7 +106,7 @@ exports[`renders disabled pill correctly 1`] = `
 </li>
 `;
 
-exports[`renders element attributes on pill correctly 1`] = `
+exports[`SelectionPill renders element attributes on pill correctly 1`] = `
 <li
   data-radium={true}
   style={
@@ -209,7 +210,7 @@ exports[`renders element attributes on pill correctly 1`] = `
 </li>
 `;
 
-exports[`renders element attributes on pill correctly 2`] = `
+exports[`SelectionPill renders element attributes on pill correctly 2`] = `
 <li
   data-radium={true}
   style={
@@ -313,7 +314,7 @@ exports[`renders element attributes on pill correctly 2`] = `
 </li>
 `;
 
-exports[`renders selected pill correctly 1`] = `
+exports[`SelectionPill renders selected pill correctly 1`] = `
 <li
   data-radium={true}
   style={
@@ -418,7 +419,7 @@ exports[`renders selected pill correctly 1`] = `
 </li>
 `;
 
-exports[`renders unselected pill correctly 1`] = `
+exports[`SelectionPill renders unselected pill correctly 1`] = `
 <li
   data-radium={true}
   style={

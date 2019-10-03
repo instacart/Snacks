@@ -19,6 +19,7 @@ export interface RadioCheckboxBaseProps
     label?: React.CSSProperties
     wrapEl?: React.CSSProperties
     inputBtn?: React.CSSProperties
+    disabledLabel?: React.CSSProperties
   }
 }
 

@@ -128,9 +128,8 @@ class SelectionPill extends React.PureComponent {
   }
 
   handleChange = event => {
-    const { onClick, isDisabled } = this.props
+    const { onClick } = this.props
     const { isSelected } = this.state
-    if (isDisabled) return
 
     this.setState({ isSelected: !isSelected })
     onClick(event, { ...this.props, isSelected: !isSelected })
@@ -142,18 +141,16 @@ class SelectionPill extends React.PureComponent {
   }
 
   handleFocus = event => {
-    const { onFocus, isDisabled } = this.props
+    const { onFocus } = this.props
     const { isFocused } = this.state
-    if (isDisabled) return
 
     this.toggleFocus()
     onFocus(event, { ...this.props, isFocused: !isFocused })
   }
 
   handleBlur = event => {
-    const { onBlur, isDisabled } = this.props
+    const { onBlur } = this.props
     const { isFocused } = this.state
-    if (isDisabled) return
 
     this.toggleFocus()
     onBlur(event, { ...this.props, isFocused: !isFocused })
@@ -171,16 +168,17 @@ class SelectionPill extends React.PureComponent {
           onChange={this.handleChange}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
+          isDisabled={isDisabled}
           aria={aria}
           style={{
+            button: internalStyles.checkBoxOverrideStyle,
             label: {
               ...internalStyles.checkbox,
               ...(isSelected && internalStyles.activeStyles),
               ...(isFocused && internalStyles.focusStyles),
-              ...(isDisabled && internalStyles.disabledStyles),
               ...style,
             },
-            button: internalStyles.checkBoxOverrideStyle,
+            disabledLabel: internalStyles.disabledStyles,
           }}
           {...this.props.elementAttributes}
         >

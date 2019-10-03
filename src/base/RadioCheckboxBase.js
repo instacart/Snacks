@@ -68,6 +68,7 @@ class RadioCheckboxBase extends React.PureComponent {
       label: PropTypes.object,
       wrapEl: PropTypes.object,
       inputBtn: PropTypes.object,
+      disabledLabel: PropTypes.object,
     }),
     snacksTheme: themePropTypes,
     value: PropTypes.string,
@@ -146,7 +147,12 @@ class RadioCheckboxBase extends React.PureComponent {
           {this.renderInputBtn()}
           <label
             htmlFor={id}
-            style={{ ...internalStyle.label, ...style.label, ...isDisabledStyle }}
+            style={{
+              ...internalStyle.label,
+              ...style.label,
+              ...isDisabledStyle,
+              ...(isDisabled && style.disabledLabel),
+            }}
           >
             {labelText}
           </label>
