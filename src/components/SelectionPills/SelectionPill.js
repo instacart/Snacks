@@ -169,6 +169,7 @@ class SelectionPill extends React.PureComponent {
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
           isDisabled={isDisabled}
+          isSelected={isSelected}
           aria={aria}
           style={{
             button: internalStyles.checkBoxOverrideStyle,
