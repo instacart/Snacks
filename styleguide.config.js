@@ -118,7 +118,10 @@ module.exports = {
         },
         {
           name: 'SelectionPills',
-          components: 'src/components/SelectionPills/[A-Z]*.js',
+          components: [
+            'src/components/SelectionPills/SelectionPills.js',
+            'src/components/SelectionPills/SelectionPill/SelectionPill.js',
+          ],
         },
         {
           name: 'Pill',
