@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { WithThemeInjectedProps, ApplyWithTheme } from '../../styles/themer/withTheme'
-import { RadiumStyles, ElementAttributes } from '../..'
+import { WithThemeInjectedProps, ApplyWithTheme } from '../../../styles/themer/withTheme'
+import { RadiumStyles, ElementAttributes } from '../../..'
 
 export interface SelectionPillProps extends WithThemeInjectedProps {
   /** Required unique identifier for the pill */

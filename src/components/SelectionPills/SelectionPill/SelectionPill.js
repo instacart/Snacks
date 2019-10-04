@@ -6,6 +6,7 @@ import withTheme from '../../../styles/themer/withTheme'
 import Checkbox from '../../Buttons/Checkbox'
 import { getStyles } from './styles'
 
+const NoOp = () => {} // eslint-disable-line no-empty-function
 class SelectionPill extends React.PureComponent {
   static propTypes = {
     /** Required unique identifier for the pill */
@@ -59,6 +60,9 @@ class SelectionPill extends React.PureComponent {
   static defaultProps = {
     elementAttributes: {},
     isSelected: false,
+    onClick: NoOp,
+    onFocus: NoOp,
+    onBlur: NoOp,
   }
 
   state = {

@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import SelectionPill from '../SelectionPill'
+import SelectionPill from '../SelectionPill/SelectionPill'
 import { mount } from 'enzyme'
 
 describe('SelectionPill', () => {
