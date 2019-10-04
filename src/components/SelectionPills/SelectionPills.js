@@ -63,7 +63,7 @@ class SelectionPills extends React.PureComponent {
   state = {
     pillsList: this.props.pills,
     selectedCount: this.props.pills.filter(p => p.isSelected === true).length,
-    selectionMax: this.props.selectionMax,
+    allSelected: false,
   }
 
   componentDidMount() {
@@ -75,6 +75,20 @@ class SelectionPills extends React.PureComponent {
         }
       }),
     }))
+  }
+
+  onSelectAll = () => {
+    // this.setState(prevState => ({
+    //   pillsList: prevState.pillsList.map(p => {
+    //     return {
+    //       ...p,
+    //       isSelected: !prevState.allSelected,
+    //     }
+    //   }),
+    // }))
+    this.state.pillsList.forEach(p => {
+      this.onSelectPill(null, p)
+    })
   }
 
   onSelectPill = (e, pill) => {
@@ -97,6 +111,20 @@ class SelectionPills extends React.PureComponent {
     onSelectPill(e, pill, newPillList)
   }
 
+  renderSelectAllPill = () => {
+    const { selectionMax, includeSelectAll } = this.props
+    if (selectionMax || !includeSelectAll) return
+    const text = this.state.allSelected ? 'Unselect all' : 'Select all'
+    return (
+      <SelectionPill
+        onClick={e => this.onSelectAll(e)}
+        text={text}
+        key="selectAllPill"
+        id="selectAllPill"
+      />
+    )
+  }
+
   renderLabel = () => {
     const { label, labelStyle } = this.props
     if (!label) return null
@@ -104,7 +132,9 @@ class SelectionPills extends React.PureComponent {
   }
 
   renderPill = (pill, idx) => {
-    const { selectedCount, selectionMax } = this.state
+    console.log(pill)
+    const { selectionMax } = this.props
+    const { selectedCount } = this.state
     const disablePill = !pill.isSelected && selectionMax && selectedCount >= selectionMax
     return (
       <SelectionPill
@@ -123,11 +153,13 @@ class SelectionPills extends React.PureComponent {
   render() {
     const { listAttributes, elementAttributes } = this.props
     const { pillsList } = this.state
+    console.log(pillsList)
     return (
       <ScrollTrack>
         <div style={STYLES.wrapperStyles} ref="pillsTrack" {...elementAttributes}>
           {this.renderLabel()}
           <ul style={STYLES.pillsListStyles} {...listAttributes}>
+            {this.renderSelectAllPill()}
             {pillsList.map(this.renderPill)}
           </ul>
         </div>

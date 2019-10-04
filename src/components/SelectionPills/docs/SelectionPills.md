@@ -17,8 +17,20 @@ const pills = [
   { text: 'potatoes', id: 'selection-9' },
 ]
 
-; <div>
+;
+// <div>
+//     <SelectionPills
+//       pills={pills}
+//       onPillClick={(e, pill) => {
+//         e.preventDefault()
+//         console.log('SelectionPills SelectionPill clicked!', pill)
+//       }}
+//       label="Filter by"
+//     />
+//   </div>
+  <div>
     <SelectionPills
+      includeSelectAll
       pills={pills}
       onPillClick={(e, pill) => {
         e.preventDefault()
