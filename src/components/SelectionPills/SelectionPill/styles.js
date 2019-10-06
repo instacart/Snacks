@@ -2,14 +2,20 @@ import colors from '../../../styles/colors'
 import { setAlpha } from '../../../utils'
 import spacing from '../../../styles/spacing'
 
-export const getStyles = (props, primaryForeground) => {
+export const getStyles = ({
+  isSelected = false,
+  isFocused = false,
+  isDisabled = false,
+  primaryForeground,
+  externalStyles = {},
+}) => {
   const backgroundColor = setAlpha(primaryForeground, 0.1)
 
   return {
-    container: {
+    listElement: {
       display: 'inline-block',
     },
-    checkbox: {
+    labelButton: {
       display: 'block',
       fontWeight: 600,
       fontSize: 14,
@@ -29,7 +35,33 @@ export const getStyles = (props, primaryForeground) => {
       ':hover': {
         backgroundColor,
       },
+      ...externalStyles.button,
+
+      ...(isFocused && {
+        outline: '5px auto rgb(59, 153, 252)',
+        borderColor: primaryForeground,
+        ...externalStyles.focusedStyle,
+      }),
+
+      ...(isDisabled && {
+        color: setAlpha(primaryForeground, 0.6),
+        backgroundColor: colors.GRAY_97,
+        ':hover': {
+          backgroundColor: colors.GRAY_97,
+        },
+        ...externalStyles.disabledStyle,
+      }),
+
+      ...(isSelected && {
+        backgroundColor,
+        borderColor: primaryForeground,
+        ':hover': {
+          backgroundColor: setAlpha(primaryForeground, 0.3),
+        },
+        ...externalStyles.selectedStyle,
+      }),
     },
+
     checkBoxOverrideStyle: {
       border: 0,
       clip: 'rect(0 0 0 0)',
@@ -41,24 +73,6 @@ export const getStyles = (props, primaryForeground) => {
       whiteSpace: 'nowrap',
       height: 1,
       width: 1,
-    },
-    focusStyles: {
-      outline: '5px auto rgb(59, 153, 252)',
-      borderColor: primaryForeground,
-    },
-    disabledStyles: {
-      color: setAlpha(primaryForeground, 0.6),
-      backgroundColor: colors.GRAY_97,
-      ':hover': {
-        backgroundColor: colors.GRAY_97,
-      },
-    },
-    activeStyles: {
-      backgroundColor,
-      borderColor: primaryForeground,
-      ':hover': {
-        backgroundColor: setAlpha(primaryForeground, 0.3),
-      },
     },
   }
 }

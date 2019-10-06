@@ -78,17 +78,15 @@ class SelectionPills extends React.PureComponent {
   }
 
   onSelectAll = () => {
-    // this.setState(prevState => ({
-    //   pillsList: prevState.pillsList.map(p => {
-    //     return {
-    //       ...p,
-    //       isSelected: !prevState.allSelected,
-    //     }
-    //   }),
-    // }))
-    this.state.pillsList.forEach(p => {
-      this.onSelectPill(null, p)
-    })
+    this.setState(prevState => ({
+      pillsList: prevState.pillsList.map(p => {
+        return {
+          ...p,
+          isSelected: !prevState.allSelected,
+        }
+      }),
+      allSelected: !prevState.allSelected,
+    }))
   }
 
   onSelectPill = (e, pill) => {
@@ -114,7 +112,7 @@ class SelectionPills extends React.PureComponent {
   renderSelectAllPill = () => {
     const { selectionMax, includeSelectAll } = this.props
     if (selectionMax || !includeSelectAll) return
-    const text = this.state.allSelected ? 'Unselect all' : 'Select all'
+    const text = 'All'
     return (
       <SelectionPill
         onClick={e => this.onSelectAll(e)}
@@ -146,6 +144,7 @@ class SelectionPills extends React.PureComponent {
         id={pill.id || `selectionPill-${pill.text}-${idx}`}
         listElementAttributes={pill.elementAttributes}
         elementAttributes={pill.elementAttributes}
+        controlled
       />
     )
   }

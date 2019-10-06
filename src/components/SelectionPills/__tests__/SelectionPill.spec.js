@@ -67,12 +67,12 @@ describe('SelectionPill', () => {
         isDisabled
       />
     )
-    wrapper.find('input').simulate('change')
+    wrapper.find('input').simulate('click')
 
     expect(onClick).not.toHaveBeenCalled()
   })
 
-  fit('calls callback functions when enabled', () => {
+  it('calls callback functions when enabled', () => {
     const wrapper = mount(
       <SelectionPill
         id="selection1"

@@ -3,7 +3,6 @@ import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { themePropTypes } from '../../../styles/themer/utils'
 import withTheme from '../../../styles/themer/withTheme'
-import Checkbox from '../../Buttons/Checkbox'
 import { getStyles } from './styles'
 
 const NoOp = () => {} // eslint-disable-line no-empty-function
@@ -17,6 +16,9 @@ class SelectionPill extends React.PureComponent {
 
     /** Any additional props to add to the checkbox element (e.g. data attributes). */
     elementAttributes: PropTypes.object,
+
+    /** Flag determining if component selected state is controlled by parent through props or internal state */
+    controlled: PropTypes.bool,
 
     /** Determines wether or not selected styles are applied and start is a selected state */
     isSelected: PropTypes.bool,
@@ -48,8 +50,13 @@ class SelectionPill extends React.PureComponent {
     /** Text to appear inside pill */
     text: PropTypes.string,
 
-    /** Optional style overrides. */
-    style: PropTypes.object,
+    /** Optional style overrides for button and its states */
+    style: PropTypes.shape({
+      button: PropTypes.object,
+      disabledStyle: PropTypes.object,
+      selectedStyle: PropTypes.object,
+      focusedStyle: PropTypes.object,
+    }),
 
     /** Aria overrides for accessibility (i.e. use if label is not descriptive enough for screen readers) */
     aria: PropTypes.shape({
@@ -63,6 +70,8 @@ class SelectionPill extends React.PureComponent {
     onClick: NoOp,
     onFocus: NoOp,
     onBlur: NoOp,
+    style: {},
+    aria: {},
   }
 
   state = {
@@ -99,35 +108,47 @@ class SelectionPill extends React.PureComponent {
     onBlur(event, { ...this.props, isFocused: !isFocused })
   }
 
-  render() {
-    const { id, snacksTheme, text, style, aria, isDisabled } = this.props
-    const { isSelected, isFocused } = this.state
-    const internalStyles = getStyles(this.props, snacksTheme.colors.primaryForeground)
+  renderInputBtn() {
+    const { aria, isDisabled, id } = this.props
+    const { isSelected } = this.state
+
+    const componentStyles = getStyles({})
 
     return (
-      <li style={internalStyles.container} {...this.props.listElementAttributes}>
-        <Checkbox
+      <div style={componentStyles.checkBoxOverrideStyle}>
+        <input
           id={id}
+          type="checkbox"
           onChange={this.handleChange}
-          onFocus={this.handleFocus}
+          checked={isSelected}
+          disabled={isDisabled}
+          aria-label={aria.label}
           onBlur={this.handleBlur}
-          isDisabled={isDisabled}
-          isSelected={isSelected}
-          aria={aria}
-          style={{
-            button: internalStyles.checkBoxOverrideStyle,
-            label: {
-              ...internalStyles.checkbox,
-              ...(isSelected && internalStyles.activeStyles),
-              ...(isFocused && internalStyles.focusStyles),
-              ...style,
-            },
-            disabledLabel: internalStyles.disabledStyles,
-          }}
-          {...this.props.elementAttributes}
-        >
+          onFocus={this.handleFocus}
+        />
+      </div>
+    )
+  }
+
+  render() {
+    const { id, snacksTheme, text, style, isDisabled, controlled } = this.props
+    const { isFocused } = this.state
+    const { primaryForeground } = snacksTheme.colors
+    const selected = (controlled && this.props.isSelected) || this.state.isSelected
+    const componentStyles = getStyles({
+      isSelected: selected,
+      isFocused,
+      isDisabled,
+      primaryForeground,
+      externalStyles: style,
+    })
+
+    return (
+      <li style={componentStyles.listElement} {...this.props.listElementAttributes}>
+        {this.renderInputBtn()}
+        <label htmlFor={id} style={componentStyles.labelButton}>
           {text}
-        </Checkbox>
+        </label>
       </li>
     )
   }

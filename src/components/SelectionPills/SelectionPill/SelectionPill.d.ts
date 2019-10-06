@@ -10,7 +10,10 @@ export interface SelectionPillProps extends WithThemeInjectedProps {
   listElementAttributes?: ElementAttributes<'li'>
 
   /** Any additional props to add to the checkbox element (e.g. data attributes). */
-  elementAttributes?: ElementAttributes<'Checkbox'>
+  elementAttributes?: ElementAttributes<'label'>
+
+  /** Flag determining if component selected state is controlled by parent through props or internal state */
+  controlled?: boolean
 
   /** Determines wether or not selected styles are applied and start is a selected state */
   isSelected?: boolean
@@ -31,7 +34,12 @@ export interface SelectionPillProps extends WithThemeInjectedProps {
   text?: string
 
   /** Optional styles. */
-  style?: RadiumStyles
+  style?: {
+    button?: React.CSSProperties
+    disabledStyle?: React.CSSProperties
+    selectedStyle?: React.CSSProperties
+    focusedStyle?: React.CSSProperties
+  }
 
   /** Aria overrides for accessibility (i.e. use if label is not descriptive enough for screen readers) */
   aria?: { label ?: string }

@@ -13,96 +13,59 @@ exports[`SelectionPill renders disabled pill correctly 1`] = `
     data-radium={true}
     style={
       Object {
-        "display": "flex",
+        "border": 0,
+        "clip": "rect(0 0 0 0)",
+        "clippath": "inset(50%)",
+        "height": 1,
+        "margin": -1,
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "absolute",
+        "whiteSpace": "nowrap",
+        "width": 1,
       }
     }
   >
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "border": 0,
-          "clip": "rect(0 0 0 0)",
-          "clippath": "inset(50%)",
-          "height": 1,
-          "margin": -1,
-          "overflow": "hidden",
-          "padding": 0,
-          "position": "absolute",
-          "whiteSpace": "nowrap",
-          "width": 1,
-        }
-      }
-    >
-      <test-file-stub
-        aria-hidden="true"
-        data-radium={true}
-        style={
-          Object {
-            "fill": "#BDBDBD",
-            "height": 22,
-            "width": 22,
-          }
-        }
-      />
-      <input
-        checked={false}
-        data-radium={true}
-        disabled={true}
-        id="selection1"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        style={
-          Object {
-            "MozAppearance": "none",
-            "MsAppearance": "none",
-            "WebkitAppearance": "none",
-            "appearance": "none",
-            "backgroundImage": "none",
-            "cursor": "pointer",
-            "height": 22,
-            "left": 0,
-            "opacity": 0,
-            "position": "absolute",
-            "top": 0,
-            "width": 22,
-          }
-        }
-        type="checkbox"
-      />
-    </div>
-    <label
-      data-radium={true}
-      htmlFor="selection1"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      style={
-        Object {
-          "backgroundColor": "#F7F7F7",
-          "borderColor": "#E0E0E0",
-          "borderRadius": 24,
-          "borderStyle": "solid",
-          "borderWidth": 1,
-          "color": "rgba(67, 176, 42, 0.6)",
-          "display": "block",
-          "fontSize": 14,
-          "fontWeight": 600,
-          "height": 32,
-          "lineHeight": "32px",
-          "marginBottom": 0,
-          "marginLeft": "4px",
-          "marginRight": "4px",
-          "marginTop": 0,
-          "paddingLeft": 16,
-          "paddingRight": 16,
-          "transition": "background-color 150ms ease-in-out",
-        }
-      }
-    >
-      Disabled pill
-    </label>
+    <input
+      checked={false}
+      disabled={true}
+      id="selection1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      type="checkbox"
+    />
   </div>
+  <label
+    data-radium={true}
+    htmlFor="selection1"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#F7F7F7",
+        "borderColor": "#E0E0E0",
+        "borderRadius": 24,
+        "borderStyle": "solid",
+        "borderWidth": 1,
+        "color": "rgba(67, 176, 42, 0.6)",
+        "display": "block",
+        "fontSize": 14,
+        "fontWeight": 600,
+        "height": 32,
+        "lineHeight": "32px",
+        "marginBottom": 0,
+        "marginLeft": "4px",
+        "marginRight": "4px",
+        "marginTop": 0,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "transition": "background-color 150ms ease-in-out",
+      }
+    }
+  >
+    Disabled pill
+  </label>
 </li>
 `;
 
@@ -119,94 +82,57 @@ exports[`SelectionPill renders element attributes on pill correctly 1`] = `
     data-radium={true}
     style={
       Object {
-        "display": "flex",
+        "border": 0,
+        "clip": "rect(0 0 0 0)",
+        "clippath": "inset(50%)",
+        "height": 1,
+        "margin": -1,
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "absolute",
+        "whiteSpace": "nowrap",
+        "width": 1,
       }
     }
   >
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "border": 0,
-          "clip": "rect(0 0 0 0)",
-          "clippath": "inset(50%)",
-          "height": 1,
-          "margin": -1,
-          "overflow": "hidden",
-          "padding": 0,
-          "position": "absolute",
-          "whiteSpace": "nowrap",
-          "width": 1,
-        }
-      }
-    >
-      <test-file-stub
-        aria-hidden="true"
-        data-radium={true}
-        style={
-          Object {
-            "fill": "#757575",
-            "height": 22,
-            "width": 22,
-          }
-        }
-      />
-      <input
-        checked={false}
-        data-radium={true}
-        id="selection1"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        style={
-          Object {
-            "MozAppearance": "none",
-            "MsAppearance": "none",
-            "WebkitAppearance": "none",
-            "appearance": "none",
-            "backgroundImage": "none",
-            "cursor": "pointer",
-            "height": 22,
-            "left": 0,
-            "opacity": 0,
-            "position": "absolute",
-            "top": 0,
-            "width": 22,
-          }
-        }
-        type="checkbox"
-      />
-    </div>
-    <label
-      data-radium={true}
-      htmlFor="selection1"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      style={
-        Object {
-          "borderColor": "#E0E0E0",
-          "borderRadius": 24,
-          "borderStyle": "solid",
-          "borderWidth": 1,
-          "color": "#43B02A",
-          "display": "block",
-          "fontSize": 14,
-          "fontWeight": 600,
-          "height": 32,
-          "lineHeight": "32px",
-          "marginBottom": 0,
-          "marginLeft": "4px",
-          "marginRight": "4px",
-          "marginTop": 0,
-          "paddingLeft": 16,
-          "paddingRight": 16,
-          "transition": "background-color 150ms ease-in-out",
-        }
-      }
-    >
-      pill with attributes
-    </label>
+    <input
+      checked={false}
+      id="selection1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      type="checkbox"
+    />
   </div>
+  <label
+    data-radium={true}
+    htmlFor="selection1"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "borderColor": "#E0E0E0",
+        "borderRadius": 24,
+        "borderStyle": "solid",
+        "borderWidth": 1,
+        "color": "#43B02A",
+        "display": "block",
+        "fontSize": 14,
+        "fontWeight": 600,
+        "height": 32,
+        "lineHeight": "32px",
+        "marginBottom": 0,
+        "marginLeft": "4px",
+        "marginRight": "4px",
+        "marginTop": 0,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "transition": "background-color 150ms ease-in-out",
+      }
+    }
+  >
+    pill with attributes
+  </label>
 </li>
 `;
 
@@ -223,94 +149,57 @@ exports[`SelectionPill renders element attributes on pill correctly 2`] = `
     data-radium={true}
     style={
       Object {
-        "display": "flex",
+        "border": 0,
+        "clip": "rect(0 0 0 0)",
+        "clippath": "inset(50%)",
+        "height": 1,
+        "margin": -1,
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "absolute",
+        "whiteSpace": "nowrap",
+        "width": 1,
       }
     }
   >
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "border": 0,
-          "clip": "rect(0 0 0 0)",
-          "clippath": "inset(50%)",
-          "height": 1,
-          "margin": -1,
-          "overflow": "hidden",
-          "padding": 0,
-          "position": "absolute",
-          "whiteSpace": "nowrap",
-          "width": 1,
-        }
-      }
-    >
-      <test-file-stub
-        aria-hidden="true"
-        data-radium={true}
-        style={
-          Object {
-            "fill": "#757575",
-            "height": 22,
-            "width": 22,
-          }
-        }
-      />
-      <input
-        checked={false}
-        data-radium={true}
-        id="selection1"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        style={
-          Object {
-            "MozAppearance": "none",
-            "MsAppearance": "none",
-            "WebkitAppearance": "none",
-            "appearance": "none",
-            "backgroundImage": "none",
-            "cursor": "pointer",
-            "height": 22,
-            "left": 0,
-            "opacity": 0,
-            "position": "absolute",
-            "top": 0,
-            "width": 22,
-          }
-        }
-        type="checkbox"
-      />
-    </div>
-    <label
-      data-radium={true}
-      htmlFor="selection1"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      style={
-        Object {
-          "borderColor": "#E0E0E0",
-          "borderRadius": 24,
-          "borderStyle": "solid",
-          "borderWidth": 1,
-          "color": "#43B02A",
-          "display": "block",
-          "fontSize": 14,
-          "fontWeight": 600,
-          "height": 32,
-          "lineHeight": "32px",
-          "marginBottom": 0,
-          "marginLeft": "4px",
-          "marginRight": "4px",
-          "marginTop": 0,
-          "paddingLeft": 16,
-          "paddingRight": 16,
-          "transition": "background-color 150ms ease-in-out",
-        }
-      }
-    >
-      pill with attributes
-    </label>
+    <input
+      checked={false}
+      id="selection1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      type="checkbox"
+    />
   </div>
+  <label
+    data-radium={true}
+    htmlFor="selection1"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "borderColor": "#E0E0E0",
+        "borderRadius": 24,
+        "borderStyle": "solid",
+        "borderWidth": 1,
+        "color": "#43B02A",
+        "display": "block",
+        "fontSize": 14,
+        "fontWeight": 600,
+        "height": 32,
+        "lineHeight": "32px",
+        "marginBottom": 0,
+        "marginLeft": "4px",
+        "marginRight": "4px",
+        "marginTop": 0,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "transition": "background-color 150ms ease-in-out",
+      }
+    }
+  >
+    pill with attributes
+  </label>
 </li>
 `;
 
@@ -327,95 +216,58 @@ exports[`SelectionPill renders selected pill correctly 1`] = `
     data-radium={true}
     style={
       Object {
-        "display": "flex",
+        "border": 0,
+        "clip": "rect(0 0 0 0)",
+        "clippath": "inset(50%)",
+        "height": 1,
+        "margin": -1,
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "absolute",
+        "whiteSpace": "nowrap",
+        "width": 1,
       }
     }
   >
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "border": 0,
-          "clip": "rect(0 0 0 0)",
-          "clippath": "inset(50%)",
-          "height": 1,
-          "margin": -1,
-          "overflow": "hidden",
-          "padding": 0,
-          "position": "absolute",
-          "whiteSpace": "nowrap",
-          "width": 1,
-        }
-      }
-    >
-      <test-file-stub
-        aria-hidden="true"
-        data-radium={true}
-        style={
-          Object {
-            "fill": "#757575",
-            "height": 22,
-            "width": 22,
-          }
-        }
-      />
-      <input
-        checked={false}
-        data-radium={true}
-        id="selection1"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        style={
-          Object {
-            "MozAppearance": "none",
-            "MsAppearance": "none",
-            "WebkitAppearance": "none",
-            "appearance": "none",
-            "backgroundImage": "none",
-            "cursor": "pointer",
-            "height": 22,
-            "left": 0,
-            "opacity": 0,
-            "position": "absolute",
-            "top": 0,
-            "width": 22,
-          }
-        }
-        type="checkbox"
-      />
-    </div>
-    <label
-      data-radium={true}
-      htmlFor="selection1"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      style={
-        Object {
-          "backgroundColor": "rgba(67, 176, 42, 0.1)",
-          "borderColor": "#43B02A",
-          "borderRadius": 24,
-          "borderStyle": "solid",
-          "borderWidth": 1,
-          "color": "#43B02A",
-          "display": "block",
-          "fontSize": 14,
-          "fontWeight": 600,
-          "height": 32,
-          "lineHeight": "32px",
-          "marginBottom": 0,
-          "marginLeft": "4px",
-          "marginRight": "4px",
-          "marginTop": 0,
-          "paddingLeft": 16,
-          "paddingRight": 16,
-          "transition": "background-color 150ms ease-in-out",
-        }
-      }
-    >
-      selected pill
-    </label>
+    <input
+      checked={true}
+      id="selection1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      type="checkbox"
+    />
   </div>
+  <label
+    data-radium={true}
+    htmlFor="selection1"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "backgroundColor": "rgba(67, 176, 42, 0.1)",
+        "borderColor": "#43B02A",
+        "borderRadius": 24,
+        "borderStyle": "solid",
+        "borderWidth": 1,
+        "color": "#43B02A",
+        "display": "block",
+        "fontSize": 14,
+        "fontWeight": 600,
+        "height": 32,
+        "lineHeight": "32px",
+        "marginBottom": 0,
+        "marginLeft": "4px",
+        "marginRight": "4px",
+        "marginTop": 0,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "transition": "background-color 150ms ease-in-out",
+      }
+    }
+  >
+    selected pill
+  </label>
 </li>
 `;
 
@@ -432,93 +284,56 @@ exports[`SelectionPill renders unselected pill correctly 1`] = `
     data-radium={true}
     style={
       Object {
-        "display": "flex",
+        "border": 0,
+        "clip": "rect(0 0 0 0)",
+        "clippath": "inset(50%)",
+        "height": 1,
+        "margin": -1,
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "absolute",
+        "whiteSpace": "nowrap",
+        "width": 1,
       }
     }
   >
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "border": 0,
-          "clip": "rect(0 0 0 0)",
-          "clippath": "inset(50%)",
-          "height": 1,
-          "margin": -1,
-          "overflow": "hidden",
-          "padding": 0,
-          "position": "absolute",
-          "whiteSpace": "nowrap",
-          "width": 1,
-        }
-      }
-    >
-      <test-file-stub
-        aria-hidden="true"
-        data-radium={true}
-        style={
-          Object {
-            "fill": "#757575",
-            "height": 22,
-            "width": 22,
-          }
-        }
-      />
-      <input
-        checked={false}
-        data-radium={true}
-        id="selection1"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        style={
-          Object {
-            "MozAppearance": "none",
-            "MsAppearance": "none",
-            "WebkitAppearance": "none",
-            "appearance": "none",
-            "backgroundImage": "none",
-            "cursor": "pointer",
-            "height": 22,
-            "left": 0,
-            "opacity": 0,
-            "position": "absolute",
-            "top": 0,
-            "width": 22,
-          }
-        }
-        type="checkbox"
-      />
-    </div>
-    <label
-      data-radium={true}
-      htmlFor="selection1"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      style={
-        Object {
-          "borderColor": "#E0E0E0",
-          "borderRadius": 24,
-          "borderStyle": "solid",
-          "borderWidth": 1,
-          "color": "#43B02A",
-          "display": "block",
-          "fontSize": 14,
-          "fontWeight": 600,
-          "height": 32,
-          "lineHeight": "32px",
-          "marginBottom": 0,
-          "marginLeft": "4px",
-          "marginRight": "4px",
-          "marginTop": 0,
-          "paddingLeft": 16,
-          "paddingRight": 16,
-          "transition": "background-color 150ms ease-in-out",
-        }
-      }
-    >
-      Not selected pill
-    </label>
+    <input
+      checked={false}
+      id="selection1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      type="checkbox"
+    />
   </div>
+  <label
+    data-radium={true}
+    htmlFor="selection1"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "borderColor": "#E0E0E0",
+        "borderRadius": 24,
+        "borderStyle": "solid",
+        "borderWidth": 1,
+        "color": "#43B02A",
+        "display": "block",
+        "fontSize": 14,
+        "fontWeight": 600,
+        "height": 32,
+        "lineHeight": "32px",
+        "marginBottom": 0,
+        "marginLeft": "4px",
+        "marginRight": "4px",
+        "marginTop": 0,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "transition": "background-color 150ms ease-in-out",
+      }
+    }
+  >
+    Not selected pill
+  </label>
 </li>
 `;
