@@ -18,7 +18,7 @@ class SelectionPill extends React.PureComponent {
     elementAttributes: PropTypes.object,
 
     /** Flag determining if component selected state is controlled by parent through props or internal state */
-    controlled: PropTypes.bool,
+    parentControlledState: PropTypes.bool,
 
     /** Determines wether or not selected styles are applied and start is a selected state */
     isSelected: PropTypes.bool,
@@ -108,10 +108,8 @@ class SelectionPill extends React.PureComponent {
     onBlur(event, { ...this.props, isFocused: !isFocused })
   }
 
-  renderInputBtn() {
+  renderInputBtn({ selected }) {
     const { aria, isDisabled, id } = this.props
-    const { isSelected } = this.state
-
     const componentStyles = getStyles({})
 
     return (
@@ -120,7 +118,7 @@ class SelectionPill extends React.PureComponent {
           id={id}
           type="checkbox"
           onChange={this.handleChange}
-          checked={isSelected}
+          checked={selected}
           disabled={isDisabled}
           aria-label={aria.label}
           onBlur={this.handleBlur}
@@ -131,10 +129,10 @@ class SelectionPill extends React.PureComponent {
   }
 
   render() {
-    const { id, snacksTheme, text, style, isDisabled, controlled } = this.props
+    const { id, snacksTheme, text, style, isDisabled, parentControlledState } = this.props
     const { isFocused } = this.state
     const { primaryForeground } = snacksTheme.colors
-    const selected = (controlled && this.props.isSelected) || this.state.isSelected
+    const selected = parentControlledState ? this.props.isSelected : this.state.isSelected
     const componentStyles = getStyles({
       isSelected: selected,
       isFocused,
@@ -145,7 +143,7 @@ class SelectionPill extends React.PureComponent {
 
     return (
       <li style={componentStyles.listElement} {...this.props.listElementAttributes}>
-        {this.renderInputBtn()}
+        {this.renderInputBtn({ selected })}
         <label htmlFor={id} style={componentStyles.labelButton}>
           {text}
         </label>

@@ -13,7 +13,7 @@ export interface SelectionPillProps extends WithThemeInjectedProps {
   elementAttributes?: ElementAttributes<'label'>
 
   /** Flag determining if component selected state is controlled by parent through props or internal state */
-  controlled?: boolean
+  parentControlledState?: boolean
 
   /** Determines wether or not selected styles are applied and start is a selected state */
   isSelected?: boolean

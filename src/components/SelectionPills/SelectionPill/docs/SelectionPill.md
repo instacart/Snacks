@@ -1,4 +1,9 @@
-SelectionPill example:
+**`SelectionPill` example:**
+
+`SelectionPill` maintains its own internal state for selected and focused, but
+can also be controlled by it's parent when passing in the `parentControlledState`
+prop. When this prop is present, internal state is ignored and the `isSelected`
+controls whether a `SelectionPill` is is selected or not.
 
 ```jsx
 // import { SelectionPill } from 'ic-snacks'

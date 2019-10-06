@@ -2,31 +2,16 @@ import React from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
 import ScrollTrack from '../ScrollTrack/ScrollTrack'
-import spacing from '../../styles/spacing'
 import SelectionPill from './SelectionPill'
+import { getStyles } from './styles'
 
 const NoOp = () => {} // eslint-disable-line no-empty-function
-
-const STYLES = {
-  wrapperStyles: {
-    display: 'inline-block',
-    minWidth: '100%',
-    padding: 0,
-  },
-  pillsListStyles: {
-    display: 'inline-block',
-    padding: 0,
-    marginRight: 4,
-    marginLeft: 4,
-    ...spacing.MARGIN_Y_SM,
-  },
-}
-
 class SelectionPills extends React.PureComponent {
   static propTypes = {
     /** Callback function called after pill click
      * @param {SyntheticEvent} event The react `SyntheticEvent`
-     * @param {props} object All the props passed to the component
+     * @param {pill} object All pill attributes for pill selected
+     * @param {pillList} object List of all pills
      */
     onSelectPill: PropTypes.func,
 
@@ -36,28 +21,41 @@ class SelectionPills extends React.PureComponent {
     /** Any additional props to add to the inner ul element (e.g. data attributes). */
     listAttributes: PropTypes.object,
 
-    /** Array of pill objects */
+    /** Flag determining if pills selected state is controlled by parent through props or internal state */
+    parentControlledState: PropTypes.bool,
+
+    /** Array of selectionPill attributes */
     pills: PropTypes.array,
 
     /** Optional label placed in front of pills */
     label: PropTypes.string,
 
-    /** Optional label style overrides. */
-    labelStyle: PropTypes.object,
+    /** Option to only allow a maximum number of selected items. No restriction if not set. */
+    maxSelectionCount: PropTypes.number,
 
-    /** Option to only allow a maximum number of selected items. No restriction if not set */
-    selectionMax: PropTypes.number,
-
-    /** Option to include a generated pill that will toggle all other pills on / off */
+    /** Option to include a generated pill that will toggle all other pills on / off. Disabled if a maxSelectionCount or parentControlledState. */
     includeSelectAll: PropTypes.bool,
+
+    /** Optional override of the select all pill label */
+    selectAllLabel: PropTypes.string,
+
+    /** Optional override styles */
+    style: PropTypes.shape({
+      wrapperStyle: PropTypes.object,
+      listStyle: PropTypes.object,
+      labelStyle: PropTypes.object,
+    })
   }
 
   static defaultProps = {
     elementAttributes: {},
     onSelectPill: NoOp,
     pills: [],
-    selectionMax: null,
+    maxSelectionCount: null,
     includeSelectAll: false,
+    selectAllLabel: 'All',
+    parentControlledState: false,
+    style: {},
   }
 
   state = {
@@ -66,6 +64,7 @@ class SelectionPills extends React.PureComponent {
     allSelected: false,
   }
 
+  // Initialize pills selected states
   componentDidMount() {
     this.setState(prevState => ({
       pillsList: prevState.pillsList.map(p => {
@@ -77,89 +76,116 @@ class SelectionPills extends React.PureComponent {
     }))
   }
 
-  onSelectAll = () => {
-    this.setState(prevState => ({
-      pillsList: prevState.pillsList.map(p => {
-        return {
-          ...p,
-          isSelected: !prevState.allSelected,
-        }
-      }),
-      allSelected: !prevState.allSelected,
-    }))
-  }
-
-  onSelectPill = (e, pill) => {
-    const { onSelectPill } = this.props
-    const { pillsList, selectedCount } = this.state
+  onSelectAll = e => {
+    const { selectAllLabel, onSelectPill } = this.props
+    const { pillsList, allSelected } = this.state
+    const selectedPill = { id: 'selectAllPill', isSelected: !allSelected, text: selectAllLabel }
     const newPillList = pillsList.map(p => {
-      if (p.id !== pill.id) {
-        return p
-      }
       return {
         ...p,
-        isSelected: !pill.isSelected,
+        isSelected: false,
       }
     })
 
     this.setState({
       pillsList: newPillList,
-      selectedCount: pill.isSelected ? selectedCount - 1 : selectedCount + 1,
+      allSelected: !allSelected,
     })
-    onSelectPill(e, pill, newPillList)
+    onSelectPill(e, selectedPill, newPillList)
+  }
+
+  onSelectPill = (e, pill) => {
+    const { onSelectPill, pills, parentControlledState } = this.props
+    const selectedPill = { ...pill, isSelected: !pill.isSelected }
+    if (parentControlledState) {
+      return onSelectPill(e, selectedPill, pills)
+    }
+
+    const { pillsList, selectedCount } = this.state
+    const newPillList = pillsList.map(p => {
+      if (p.id !== pill.id) {
+        return p
+      }
+      return selectedPill
+    })
+
+    this.setState({
+      pillsList: newPillList,
+      selectedCount: pill.isSelected ? selectedCount - 1 : selectedCount + 1,
+      allSelected: false,
+    })
+    onSelectPill(e, selectedPill, newPillList)
+  }
+
+  // Disable not selected pills when max pills reached. Not applicable when parent controlled
+  isDisabledPill = pill => {
+    const { maxSelectionCount, parentControlledState } = this.props
+    const { selectedCount } = this.state
+    if (parentControlledState || pill.isSelected) return false
+    if (!selectedCount || !maxSelectionCount) return false
+    return selectedCount >= maxSelectionCount
   }
 
   renderSelectAllPill = () => {
-    const { selectionMax, includeSelectAll } = this.props
-    if (selectionMax || !includeSelectAll) return
-    const text = 'All'
+    const {
+      maxSelectionCount,
+      includeSelectAll,
+      selectAllLabel,
+      parentControlledState,
+    } = this.props
+    const { allSelected } = this.state
+    if (maxSelectionCount || !includeSelectAll || parentControlledState) return
+
     return (
       <SelectionPill
         onClick={e => this.onSelectAll(e)}
-        text={text}
+        isSelected={allSelected}
+        text={selectAllLabel}
+        aria={{ label: selectAllLabel }}
         key="selectAllPill"
         id="selectAllPill"
+        parentControlledState
       />
     )
   }
 
   renderLabel = () => {
-    const { label, labelStyle } = this.props
+    const { label, style } = this.props
     if (!label) return null
-    return <span style={{ ...STYLES.labelStyles, ...labelStyle }}>{label}</span>
-  }
-
-  renderPill = (pill, idx) => {
-    console.log(pill)
-    const { selectionMax } = this.props
-    const { selectedCount } = this.state
-    const disablePill = !pill.isSelected && selectionMax && selectedCount >= selectionMax
     return (
-      <SelectionPill
-        isSelected={pill.isSelected}
-        isDisabled={disablePill || pill.isDisabled}
-        onClick={e => this.onSelectPill(e, pill)}
-        text={pill.text}
-        key={`selectionPill-${idx}`}
-        id={pill.id || `selectionPill-${pill.text}-${idx}`}
-        listElementAttributes={pill.elementAttributes}
-        elementAttributes={pill.elementAttributes}
-        controlled
-      />
+      <span id="selectionPillsLabel" style={style.labelStyle}>
+        {label}
+      </span>
     )
   }
 
+  renderPill = (pill, idx) => (
+    <SelectionPill
+      isDisabled={this.isDisabledPill(pill)}
+      onClick={e => this.onSelectPill(e, pill)}
+      key={`selectionPill-${idx}`}
+      id={pill.id || `selectionPill-${pill.text}-${idx}`}
+      parentControlledState
+      {...pill}
+    />
+  )
+
   render() {
-    const { listAttributes, elementAttributes } = this.props
-    const { pillsList } = this.state
-    console.log(pillsList)
+    const { listAttributes, elementAttributes, parentControlledState, style } = this.props
+    const listToRender = parentControlledState ? this.props.pills : this.state.pillsList
+    const componentStyles = getStyles({ externalStyles: style })
+
     return (
       <ScrollTrack>
-        <div style={STYLES.wrapperStyles} ref="pillsTrack" {...elementAttributes}>
+        <div style={componentStyles.wrapperStyles} ref="pillsTrack" {...elementAttributes}>
           {this.renderLabel()}
-          <ul style={STYLES.pillsListStyles} {...listAttributes}>
+          <ul
+            style={componentStyles.pillsListStyles}
+            aria-labelledby="selectionPillsLabel"
+            {...listAttributes}
+          >
             {this.renderSelectAllPill()}
-            {pillsList.map(this.renderPill)}
+            {listToRender.map(this.renderPill)}
           </ul>
         </div>
       </ScrollTrack>
