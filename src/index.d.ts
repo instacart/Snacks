@@ -18,6 +18,7 @@ import Pill from './components/Pill/Pill'
 import NavigationPill from './components/NavigationPills/NavigationPill'
 import NavigationPills from './components/NavigationPills/NavigationPills'
 import SelectionPill from './components/SelectionPills/SelectionPill/SelectionPill'
+import SelectionPills from './components/SelectionPills/SelectionPills'
 import Normalize from './styles/Normalize'
 import responsive from './styles/responsive'
 import Row from './components/Grid/Row'
@@ -130,6 +131,7 @@ export {
   NavigationPill,
   NavigationPills,
   SelectionPill,
+  SelectionPills,
   ScrollTrack,
   Menu,
   MenuItem,

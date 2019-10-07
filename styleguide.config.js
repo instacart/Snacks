@@ -121,6 +121,7 @@ module.exports = {
           components: [
             'src/components/SelectionPills/SelectionPills.js',
             'src/components/SelectionPills/SelectionPill/SelectionPill.js',
+            'src/components/SelectionPills/SelectionPills.js',
           ],
         },
         {
