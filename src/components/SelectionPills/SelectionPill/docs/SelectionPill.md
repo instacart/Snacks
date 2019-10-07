@@ -6,8 +6,7 @@ prop. When this prop is present, internal state is ignored and the `isSelected`
 controls whether a `SelectionPill` is is selected or not.
 
 ```jsx
-// import { SelectionPill } from 'ic-snacks'
-import SelectionPill from '../SelectionPill.js'
+import { SelectionPill } from 'ic-snacks'
 
 ; <div>
     <SelectionPill

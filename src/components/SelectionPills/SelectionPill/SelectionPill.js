@@ -67,6 +67,7 @@ class SelectionPill extends React.PureComponent {
   static defaultProps = {
     elementAttributes: {},
     isSelected: false,
+    parentControlledState: false,
     onClick: NoOp,
     onFocus: NoOp,
     onBlur: NoOp,

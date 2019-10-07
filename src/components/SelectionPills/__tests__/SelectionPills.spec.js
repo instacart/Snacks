@@ -123,6 +123,7 @@ describe('SelectionPills', () => {
     )
 
     const allPills = Pills.find('input')
+    // Select all is in position 0
     const bananasPill = allPills.at(1).instance()
     const applePill = allPills.at(2).instance()
 
@@ -136,10 +137,7 @@ describe('SelectionPills', () => {
   })
 
   xit('responds to parent controlled state correctly', () => {
-    const selectPills = [
-      { text: 'bananas', id: 'selection-1', isSelected: true },
-      { text: 'apple', id: 'selection-2' },
-    ]
+    const selectPills = [{ text: 'bananas', id: 'selection-1', isSelected: true }]
     const Pills = mount(
       <StyleRoot>
         <SelectionPills pills={selectPills} parentControlledState />
@@ -157,8 +155,8 @@ describe('SelectionPills', () => {
         isSelected: false,
       }
     })
-    console.log('UPDATED', updatedPills)
     Pills.setProps({ pills: updatedPills })
+    Pills.update()
     expect(bananasPill.instance().checked).toBe(false)
   })
 })

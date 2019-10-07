@@ -9,8 +9,7 @@ The array of `pills` all for all the properties of a `SelectionPill` to be passe
 to override the underlying pill behavior or style.
 
 ```jsx
-// import { SelectionPills } from 'ic-snacks'
-import SelectionPills from '../SelectionPills.js'
+import { SelectionPills } from 'ic-snacks'
 
 const initialState = { activePill: 'carrots' }
 const pills = [
@@ -29,7 +28,6 @@ const pills = [
   <SelectionPills
     pills={pills}
     onSelectPill={(e, pill) => {
-      e.preventDefault()
       console.log('SelectionPills SelectionPill clicked!', pill)
     }}
     label="Filter by"
@@ -43,8 +41,7 @@ Optional parameter to include select all button that unselects all selected opti
 when clicked.
 
 ```jsx
-// import { SelectionPills } from 'ic-snacks'
-import SelectionPills from '../SelectionPills.js'
+import { SelectionPills } from 'ic-snacks'
 
 const pills = [
   { text: 'bananas', id: 'selection-1', isSelected: true },
@@ -63,7 +60,6 @@ const pills = [
     selectAllLabel="Select all"
     pills={pills}
     onSelectPill={(e, pill) => {
-      e.preventDefault()
       console.log('SelectionPills SelectionPill clicked!', pill)
     }}
     label="Filter by"
@@ -76,8 +72,7 @@ const pills = [
 Optional parameter to restrict the number of selections that can be chosen
 
 ```jsx
-// import { SelectionPills } from 'ic-snacks'
-import SelectionPills from '../SelectionPills.js'
+import { SelectionPills } from 'ic-snacks'
 
 const pills = [
   { text: 'bananas', id: 'maxSelection-1' },
@@ -95,7 +90,6 @@ const pills = [
     maxSelectionCount={3}
     pills={pills}
     onSelectPill={(e, pill) => {
-      e.preventDefault()
       console.log('SelectionPills SelectionPill clicked!', pill)
     }}
     label="Select up to 3:"
@@ -112,8 +106,7 @@ array prop controls the state of each pill through the `isSelected` property.
 
 
 ```jsx
-// import { SelectionPills } from 'ic-snacks'
-import SelectionPills from '../SelectionPills.js'
+import { SelectionPills } from 'ic-snacks'
 
 const initialState = {
   pills: [
@@ -133,7 +126,6 @@ const initialState = {
     parentControlledState
     pills={state.pills}
     onSelectPill={(e, pill) => {
-      e.preventDefault()
       console.log('SelectionPills SelectionPill clicked!', pill)
       const updatedPills = state.pills.map(p => {
         if (p.id === pill.id) {
