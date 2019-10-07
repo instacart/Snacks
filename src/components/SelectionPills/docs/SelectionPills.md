@@ -37,7 +37,7 @@ const pills = [
   </div>
 ```
 
-#### With Select all option
+#### With select all pill
 
 Optional parameter to include select all button that unselects all selected options
 when clicked.
@@ -46,7 +46,6 @@ when clicked.
 // import { SelectionPills } from 'ic-snacks'
 import SelectionPills from '../SelectionPills.js'
 
-const initialState = { activePill: 'carrots' }
 const pills = [
   { text: 'bananas', id: 'selection-1', isSelected: true },
   { text: 'carrots', id: 'selection-2' },
@@ -80,7 +79,6 @@ Optional parameter to restrict the number of selections that can be chosen
 // import { SelectionPills } from 'ic-snacks'
 import SelectionPills from '../SelectionPills.js'
 
-const initialState = { activePill: 'carrots' }
 const pills = [
   { text: 'bananas', id: 'maxSelection-1' },
   { text: 'carrots', id: 'maxSelection-2' },
@@ -101,6 +99,56 @@ const pills = [
       console.log('SelectionPills SelectionPill clicked!', pill)
     }}
     label="Select up to 3:"
+  />
+  </div>
+```
+
+### Parent controlled state
+
+State of each `SelectionPill` can be controlled by a parent component by passing a
+in the `parentControlledState` prop. When this prop is present, the `pills`
+array prop controls the state of each pill through the `isSelected` property.
+
+
+
+```jsx
+// import { SelectionPills } from 'ic-snacks'
+import SelectionPills from '../SelectionPills.js'
+
+const initialState = {
+  pills: [
+    { text: 'bananas', id: 'parentControlled-1' },
+    { text: 'carrots', id: 'parentControlled-2' },
+    { text: 'watermelon', id: 'parentControlled-3' },
+    { text: 'snacks', id: 'parentControlled-4' },
+    { text: 'kale', id: 'parentControlled-5' },
+    { text: 'endives', id: 'parentControlled-6' },
+    { text: 'arugula', id: 'parentControlled-7' },
+    { text: 'spinach', id: 'parentControlled-8' },
+    { text: 'potatoes', id: 'parentControlled-9' },
+  ]
+}
+;<div>
+  <SelectionPills
+    parentControlledState
+    pills={state.pills}
+    onSelectPill={(e, pill) => {
+      e.preventDefault()
+      console.log('SelectionPills SelectionPill clicked!', pill)
+      const updatedPills = state.pills.map(p => {
+        if (p.id === pill.id) {
+          return {
+            ...p,
+            isSelected: !p.isSelected
+          }
+        }
+        return p
+      })
+      setState({
+        pills: updatedPills
+      })
+    }}
+    label="Filter by"
   />
   </div>
 ```

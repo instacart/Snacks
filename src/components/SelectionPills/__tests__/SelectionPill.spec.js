@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import SelectionPill from '../SelectionPill/SelectionPill'
 import { mount } from 'enzyme'
+import SelectionPill from '../SelectionPill/SelectionPill'
 
 describe('SelectionPill', () => {
   const onBlur = jest.fn()

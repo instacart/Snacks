@@ -44,7 +44,7 @@ class SelectionPills extends React.PureComponent {
       wrapperStyle: PropTypes.object,
       listStyle: PropTypes.object,
       labelStyle: PropTypes.object,
-    })
+    }),
   }
 
   static defaultProps = {

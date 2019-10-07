@@ -1,0 +1,1087 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectionPills renders SelectionPills correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "overflow": "hidden",
+        "position": "relative",
+      }
+    }
+  >
+    <button
+      aria-label="back"
+      className="rmq-4534e6b"
+      data-radium={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#43B02A",
+          "border": "0",
+          "borderRadius": "50%",
+          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
+          "color": "#FFFFFF",
+          "display": "none",
+          "height": "48px",
+          "left": 8,
+          "lineHeight": "1",
+          "position": "absolute",
+          "textAlign": "center",
+          "top": "5px",
+          "transition": "background-color 150ms ease-in-out",
+          "width": "48px",
+          "zIndex": 100,
+        }
+      }
+    >
+      <i
+        aria-hidden={true}
+        data-radium={true}
+        style={
+          Object {
+            "fontFamily": "ic-icons",
+            "fontSize": "20px",
+            "fontSmoothing": "antialiased",
+            "fontStyle": "normal",
+            "fontVariant": "normal",
+            "fontWeight": "normal",
+            "lineHeight": "1",
+            "osxFontSmoothing": "grayscale",
+            "position": "relative",
+            "speak": "none",
+            "textTransform": "none",
+          }
+        }
+      >
+        
+      </i>
+    </button>
+    <div
+      className="rmq-16b35912"
+      data-radium={true}
+      style={
+        Object {
+          "position": "relative",
+          "transform": "translate3d(0px, 0, 0)",
+          "transition": "transform 150ms ease-in-out",
+          "whiteSpace": "nowrap",
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={Object {}}
+      >
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "display": "inline-block",
+              "minWidth": "100%",
+              "padding": 0,
+            }
+          }
+        >
+          <span
+            id="selectionPillsLabel"
+          >
+            Filter by
+          </span>
+          <ul
+            aria-labelledby="selectionPillsLabel"
+            data-radium={true}
+            style={
+              Object {
+                "display": "inline-block",
+                "marginBottom": 16,
+                "marginLeft": 4,
+                "marginRight": 4,
+                "marginTop": 16,
+                "padding": 0,
+              }
+            }
+          >
+            <li
+              data-radium={true}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clippath": "inset(50%)",
+                    "height": 1,
+                    "margin": -1,
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": 1,
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  id="selection-1"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="checkbox"
+                />
+              </div>
+              <label
+                data-radium={true}
+                htmlFor="selection-1"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "borderColor": "#E0E0E0",
+                    "borderRadius": 24,
+                    "borderStyle": "solid",
+                    "borderWidth": 1,
+                    "color": "#43B02A",
+                    "display": "block",
+                    "fontSize": 14,
+                    "fontWeight": 600,
+                    "height": 32,
+                    "lineHeight": "32px",
+                    "marginBottom": 0,
+                    "marginLeft": "4px",
+                    "marginRight": "4px",
+                    "marginTop": 0,
+                    "paddingLeft": 16,
+                    "paddingRight": 16,
+                    "transition": "background-color 150ms ease-in-out",
+                  }
+                }
+              >
+                bananas
+              </label>
+            </li>
+            <li
+              data-radium={true}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clippath": "inset(50%)",
+                    "height": 1,
+                    "margin": -1,
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": 1,
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  id="selection-2"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="checkbox"
+                />
+              </div>
+              <label
+                data-radium={true}
+                htmlFor="selection-2"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "borderColor": "#E0E0E0",
+                    "borderRadius": 24,
+                    "borderStyle": "solid",
+                    "borderWidth": 1,
+                    "color": "#43B02A",
+                    "display": "block",
+                    "fontSize": 14,
+                    "fontWeight": 600,
+                    "height": 32,
+                    "lineHeight": "32px",
+                    "marginBottom": 0,
+                    "marginLeft": "4px",
+                    "marginRight": "4px",
+                    "marginTop": 0,
+                    "paddingLeft": 16,
+                    "paddingRight": 16,
+                    "transition": "background-color 150ms ease-in-out",
+                  }
+                }
+              >
+                arugula
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button
+      aria-label="next"
+      className="rmq-4534e6b"
+      data-radium={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#43B02A",
+          "border": "0",
+          "borderRadius": "50%",
+          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
+          "color": "#FFFFFF",
+          "display": "none",
+          "height": "48px",
+          "lineHeight": "1",
+          "position": "absolute",
+          "right": 8,
+          "textAlign": "center",
+          "top": "5px",
+          "transition": "background-color 150ms ease-in-out",
+          "width": "48px",
+          "zIndex": 100,
+        }
+      }
+    >
+      <i
+        aria-hidden={true}
+        data-radium={true}
+        style={
+          Object {
+            "fontFamily": "ic-icons",
+            "fontSize": "20px",
+            "fontSmoothing": "antialiased",
+            "fontStyle": "normal",
+            "fontVariant": "normal",
+            "fontWeight": "normal",
+            "lineHeight": "1",
+            "osxFontSmoothing": "grayscale",
+            "position": "relative",
+            "speak": "none",
+            "textTransform": "none",
+          }
+        }
+      >
+        
+      </i>
+    </button>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
+overflow-x: scroll !important;
+display: block !important;
+-ms-overflow-style: none !important;
+overflow: -moz-scrollbars-none !important;
+webkit-overflow-scrolling: touch !important;}}
+@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`SelectionPills renders SelectionPills with pill attributes set correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "overflow": "hidden",
+        "position": "relative",
+      }
+    }
+  >
+    <button
+      aria-label="back"
+      className="rmq-4534e6b"
+      data-radium={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#43B02A",
+          "border": "0",
+          "borderRadius": "50%",
+          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
+          "color": "#FFFFFF",
+          "display": "none",
+          "height": "48px",
+          "left": 8,
+          "lineHeight": "1",
+          "position": "absolute",
+          "textAlign": "center",
+          "top": "5px",
+          "transition": "background-color 150ms ease-in-out",
+          "width": "48px",
+          "zIndex": 100,
+        }
+      }
+    >
+      <i
+        aria-hidden={true}
+        data-radium={true}
+        style={
+          Object {
+            "fontFamily": "ic-icons",
+            "fontSize": "20px",
+            "fontSmoothing": "antialiased",
+            "fontStyle": "normal",
+            "fontVariant": "normal",
+            "fontWeight": "normal",
+            "lineHeight": "1",
+            "osxFontSmoothing": "grayscale",
+            "position": "relative",
+            "speak": "none",
+            "textTransform": "none",
+          }
+        }
+      >
+        
+      </i>
+    </button>
+    <div
+      className="rmq-16b35912"
+      data-radium={true}
+      style={
+        Object {
+          "position": "relative",
+          "transform": "translate3d(0px, 0, 0)",
+          "transition": "transform 150ms ease-in-out",
+          "whiteSpace": "nowrap",
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={Object {}}
+      >
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "display": "inline-block",
+              "minWidth": "100%",
+              "padding": 0,
+            }
+          }
+        >
+          <span
+            id="selectionPillsLabel"
+          >
+            Filter by
+          </span>
+          <ul
+            aria-labelledby="selectionPillsLabel"
+            data-radium={true}
+            style={
+              Object {
+                "display": "inline-block",
+                "marginBottom": 16,
+                "marginLeft": 4,
+                "marginRight": 4,
+                "marginTop": 16,
+                "padding": 0,
+              }
+            }
+          >
+            <li
+              data-radium={true}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clippath": "inset(50%)",
+                    "height": 1,
+                    "margin": -1,
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": 1,
+                  }
+                }
+              >
+                <input
+                  checked={true}
+                  disabled={false}
+                  id="selection-1"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="checkbox"
+                />
+              </div>
+              <label
+                data-radium={true}
+                htmlFor="selection-1"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "rgba(67, 176, 42, 0.1)",
+                    "borderColor": "#43B02A",
+                    "borderRadius": 24,
+                    "borderStyle": "solid",
+                    "borderWidth": 1,
+                    "color": "#43B02A",
+                    "display": "block",
+                    "fontSize": 14,
+                    "fontWeight": 600,
+                    "height": 32,
+                    "lineHeight": "32px",
+                    "marginBottom": 0,
+                    "marginLeft": "4px",
+                    "marginRight": "4px",
+                    "marginTop": 0,
+                    "paddingLeft": 16,
+                    "paddingRight": 16,
+                    "transition": "background-color 150ms ease-in-out",
+                  }
+                }
+              >
+                bananas
+              </label>
+            </li>
+            <li
+              data-radium={true}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clippath": "inset(50%)",
+                    "height": 1,
+                    "margin": -1,
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": 1,
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={true}
+                  id="selection-2"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="checkbox"
+                />
+              </div>
+              <label
+                data-radium={true}
+                htmlFor="selection-2"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#F7F7F7",
+                    "borderColor": "#E0E0E0",
+                    "borderRadius": 24,
+                    "borderStyle": "solid",
+                    "borderWidth": 1,
+                    "color": "rgba(67, 176, 42, 0.6)",
+                    "display": "block",
+                    "fontSize": 14,
+                    "fontWeight": 600,
+                    "height": 32,
+                    "lineHeight": "32px",
+                    "marginBottom": 0,
+                    "marginLeft": "4px",
+                    "marginRight": "4px",
+                    "marginTop": 0,
+                    "paddingLeft": 16,
+                    "paddingRight": 16,
+                    "transition": "background-color 150ms ease-in-out",
+                  }
+                }
+              >
+                arugula
+              </label>
+            </li>
+            <li
+              data-radium={true}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clippath": "inset(50%)",
+                    "height": 1,
+                    "margin": -1,
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": 1,
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  id="selection-3"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="checkbox"
+                />
+              </div>
+              <label
+                data-radium={true}
+                htmlFor="selection-3"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "borderColor": "#E0E0E0",
+                    "borderRadius": 24,
+                    "borderStyle": "solid",
+                    "borderWidth": 1,
+                    "color": "#43B02A",
+                    "display": "block",
+                    "fontSize": 14,
+                    "fontWeight": 600,
+                    "height": 32,
+                    "lineHeight": "32px",
+                    "marginBottom": 0,
+                    "marginLeft": "10px",
+                    "marginRight": "4px",
+                    "marginTop": 0,
+                    "paddingLeft": 16,
+                    "paddingRight": 16,
+                    "transition": "background-color 150ms ease-in-out",
+                  }
+                }
+              >
+                apples
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button
+      aria-label="next"
+      className="rmq-4534e6b"
+      data-radium={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#43B02A",
+          "border": "0",
+          "borderRadius": "50%",
+          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
+          "color": "#FFFFFF",
+          "display": "none",
+          "height": "48px",
+          "lineHeight": "1",
+          "position": "absolute",
+          "right": 8,
+          "textAlign": "center",
+          "top": "5px",
+          "transition": "background-color 150ms ease-in-out",
+          "width": "48px",
+          "zIndex": 100,
+        }
+      }
+    >
+      <i
+        aria-hidden={true}
+        data-radium={true}
+        style={
+          Object {
+            "fontFamily": "ic-icons",
+            "fontSize": "20px",
+            "fontSmoothing": "antialiased",
+            "fontStyle": "normal",
+            "fontVariant": "normal",
+            "fontWeight": "normal",
+            "lineHeight": "1",
+            "osxFontSmoothing": "grayscale",
+            "position": "relative",
+            "speak": "none",
+            "textTransform": "none",
+          }
+        }
+      >
+        
+      </i>
+    </button>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
+overflow-x: scroll !important;
+display: block !important;
+-ms-overflow-style: none !important;
+overflow: -moz-scrollbars-none !important;
+webkit-overflow-scrolling: touch !important;}}
+@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`SelectionPills renders SelectionPills with select all included correctly 1`] = `
+<div
+  data-radium={true}
+>
+  <div
+    data-radium={true}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "overflow": "hidden",
+        "position": "relative",
+      }
+    }
+  >
+    <button
+      aria-label="back"
+      className="rmq-4534e6b"
+      data-radium={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#43B02A",
+          "border": "0",
+          "borderRadius": "50%",
+          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
+          "color": "#FFFFFF",
+          "display": "none",
+          "height": "48px",
+          "left": 8,
+          "lineHeight": "1",
+          "position": "absolute",
+          "textAlign": "center",
+          "top": "5px",
+          "transition": "background-color 150ms ease-in-out",
+          "width": "48px",
+          "zIndex": 100,
+        }
+      }
+    >
+      <i
+        aria-hidden={true}
+        data-radium={true}
+        style={
+          Object {
+            "fontFamily": "ic-icons",
+            "fontSize": "20px",
+            "fontSmoothing": "antialiased",
+            "fontStyle": "normal",
+            "fontVariant": "normal",
+            "fontWeight": "normal",
+            "lineHeight": "1",
+            "osxFontSmoothing": "grayscale",
+            "position": "relative",
+            "speak": "none",
+            "textTransform": "none",
+          }
+        }
+      >
+        
+      </i>
+    </button>
+    <div
+      className="rmq-16b35912"
+      data-radium={true}
+      style={
+        Object {
+          "position": "relative",
+          "transform": "translate3d(0px, 0, 0)",
+          "transition": "transform 150ms ease-in-out",
+          "whiteSpace": "nowrap",
+        }
+      }
+    >
+      <div
+        data-radium={true}
+        style={Object {}}
+      >
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "display": "inline-block",
+              "minWidth": "100%",
+              "padding": 0,
+            }
+          }
+        >
+          <span
+            id="selectionPillsLabel"
+          >
+            Filter by
+          </span>
+          <ul
+            aria-labelledby="selectionPillsLabel"
+            data-radium={true}
+            style={
+              Object {
+                "display": "inline-block",
+                "marginBottom": 16,
+                "marginLeft": 4,
+                "marginRight": 4,
+                "marginTop": 16,
+                "padding": 0,
+              }
+            }
+          >
+            <li
+              data-radium={true}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clippath": "inset(50%)",
+                    "height": 1,
+                    "margin": -1,
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": 1,
+                  }
+                }
+              >
+                <input
+                  aria-label="Select all"
+                  checked={false}
+                  id="selectAllPill"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="checkbox"
+                />
+              </div>
+              <label
+                data-radium={true}
+                htmlFor="selectAllPill"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "borderColor": "#E0E0E0",
+                    "borderRadius": 24,
+                    "borderStyle": "solid",
+                    "borderWidth": 1,
+                    "color": "#43B02A",
+                    "display": "block",
+                    "fontSize": 14,
+                    "fontWeight": 600,
+                    "height": 32,
+                    "lineHeight": "32px",
+                    "marginBottom": 0,
+                    "marginLeft": "4px",
+                    "marginRight": "4px",
+                    "marginTop": 0,
+                    "paddingLeft": 16,
+                    "paddingRight": 16,
+                    "transition": "background-color 150ms ease-in-out",
+                  }
+                }
+              >
+                Select all
+              </label>
+            </li>
+            <li
+              data-radium={true}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clippath": "inset(50%)",
+                    "height": 1,
+                    "margin": -1,
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": 1,
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  id="selection-1"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="checkbox"
+                />
+              </div>
+              <label
+                data-radium={true}
+                htmlFor="selection-1"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "borderColor": "#E0E0E0",
+                    "borderRadius": 24,
+                    "borderStyle": "solid",
+                    "borderWidth": 1,
+                    "color": "#43B02A",
+                    "display": "block",
+                    "fontSize": 14,
+                    "fontWeight": 600,
+                    "height": 32,
+                    "lineHeight": "32px",
+                    "marginBottom": 0,
+                    "marginLeft": "4px",
+                    "marginRight": "4px",
+                    "marginTop": 0,
+                    "paddingLeft": 16,
+                    "paddingRight": 16,
+                    "transition": "background-color 150ms ease-in-out",
+                  }
+                }
+              >
+                bananas
+              </label>
+            </li>
+            <li
+              data-radium={true}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "clippath": "inset(50%)",
+                    "height": 1,
+                    "margin": -1,
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": 1,
+                  }
+                }
+              >
+                <input
+                  checked={false}
+                  disabled={false}
+                  id="selection-2"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="checkbox"
+                />
+              </div>
+              <label
+                data-radium={true}
+                htmlFor="selection-2"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "borderColor": "#E0E0E0",
+                    "borderRadius": 24,
+                    "borderStyle": "solid",
+                    "borderWidth": 1,
+                    "color": "#43B02A",
+                    "display": "block",
+                    "fontSize": 14,
+                    "fontWeight": 600,
+                    "height": 32,
+                    "lineHeight": "32px",
+                    "marginBottom": 0,
+                    "marginLeft": "4px",
+                    "marginRight": "4px",
+                    "marginTop": 0,
+                    "paddingLeft": 16,
+                    "paddingRight": 16,
+                    "transition": "background-color 150ms ease-in-out",
+                  }
+                }
+              >
+                arugula
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button
+      aria-label="next"
+      className="rmq-4534e6b"
+      data-radium={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#43B02A",
+          "border": "0",
+          "borderRadius": "50%",
+          "boxShadow": "0 1px 2px 0 rgba(0, 0, 0, 0.26), 0 1px 4px 0 rgba(0, 0, 0, 0.16)",
+          "color": "#FFFFFF",
+          "display": "none",
+          "height": "48px",
+          "lineHeight": "1",
+          "position": "absolute",
+          "right": 8,
+          "textAlign": "center",
+          "top": "5px",
+          "transition": "background-color 150ms ease-in-out",
+          "width": "48px",
+          "zIndex": 100,
+        }
+      }
+    >
+      <i
+        aria-hidden={true}
+        data-radium={true}
+        style={
+          Object {
+            "fontFamily": "ic-icons",
+            "fontSize": "20px",
+            "fontSmoothing": "antialiased",
+            "fontStyle": "normal",
+            "fontVariant": "normal",
+            "fontWeight": "normal",
+            "lineHeight": "1",
+            "osxFontSmoothing": "grayscale",
+            "position": "relative",
+            "speak": "none",
+            "textTransform": "none",
+          }
+        }
+      >
+        
+      </i>
+    </button>
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@media (max-width: 767px){ .rmq-16b35912{left: inherit !important;
+overflow-x: scroll !important;
+display: block !important;
+-ms-overflow-style: none !important;
+overflow: -moz-scrollbars-none !important;
+webkit-overflow-scrolling: touch !important;}}
+@media (max-width: 767px){ .rmq-4534e6b{display: none !important;}}",
+      }
+    }
+  />
+</div>
+`;
