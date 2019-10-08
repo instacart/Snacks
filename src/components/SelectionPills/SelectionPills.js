@@ -80,6 +80,12 @@ class SelectionPills extends React.PureComponent {
     }))
   }
 
+  labelId = () => {
+    const { label } = this.props
+    if (!label) return
+    return `selection_pills_label_${label.split(' ').join('_')}`
+  }
+
   onSelectAll = e => {
     const { selectAllLabel, onSelectPill } = this.props
     const { pillsList, allSelected } = this.state
@@ -157,7 +163,7 @@ class SelectionPills extends React.PureComponent {
     const { label, style } = this.props
     if (!label) return null
     return (
-      <span id="selectionPillsLabel" style={style.labelStyle}>
+      <span id={this.labelId()} style={style.labelStyle}>
         {label}
       </span>
     )
@@ -166,13 +172,14 @@ class SelectionPills extends React.PureComponent {
   renderPill = (pill, idx) => {
     const { excludeScrollTrack, style } = this.props
     const componentStyles = getStyles({ externalStyles: style, excludeScrollTrack })
+    const pillId = pill.id || `selectionPill-${pill.text}-${idx}`
 
     return (
       <SelectionPill
         isDisabled={this.isDisabledPill(pill)}
         onClick={e => this.onSelectPill(e, pill)}
-        key={`selectionPill-${idx}`}
-        id={pill.id || `selectionPill-${pill.text}-${idx}`}
+        key={pillId}
+        id={pillId}
         style={{ ...componentStyles.pillOverrideStyles, ...pill.style }}
         parentControlledState
         {...pill}
@@ -194,11 +201,11 @@ class SelectionPills extends React.PureComponent {
 
     return (
       <WrapperElement>
-        <div style={componentStyles.wrapperStyles} ref="pillsTrack" {...elementAttributes}>
+        <div style={componentStyles.wrapperStyles} {...elementAttributes}>
           {this.renderLabel()}
           <ul
             style={componentStyles.pillsListStyles}
-            aria-labelledby="selectionPillsLabel"
+            aria-labelledby={this.labelId()}
             {...listAttributes}
           >
             {this.renderSelectAllPill()}

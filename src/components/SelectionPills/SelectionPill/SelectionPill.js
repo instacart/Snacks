@@ -9,7 +9,7 @@ const NoOp = () => {} // eslint-disable-line no-empty-function
 
 // As of HTML5, id must consist of at least one character and no spaces
 const textToID = text => {
-  return `selection_pill_${text.replace(' ', '_')}`
+  return `selection_pill_${text.split(' ').join('_')}`
 }
 
 class SelectionPill extends React.PureComponent {

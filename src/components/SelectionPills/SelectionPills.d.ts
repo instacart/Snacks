@@ -12,7 +12,7 @@ export interface SelectionPillsProps extends WithThemeInjectedProps {
      * @param {pill} object All pill attributes for pill selected
      * @param {pillList} object List of all pills
      */
-    onSelectPill(): void
+    onSelectPill?(e: React.MouseEvent<HTMLElement>, pill: Pill, pills: Pill[]): void
 
     /** Any additional props to add to the wrapper element (e.g. data attributes). */
     elementAttributes?: ElementAttributes<'div'>
@@ -21,25 +21,25 @@ export interface SelectionPillsProps extends WithThemeInjectedProps {
     listAttributes?: ElementAttributes<'ul'>
 
     /** Flag determining if pills selected state is controlled by parent through props or internal state */
-    parentControlledState: boolean
+    parentControlledState?: boolean
 
     /** Option to exclude ScrollTrack wrapper and present pills in grid format wrapping within parent. */
-    excludeScrollTrack: boolean,
+    excludeScrollTrack?: boolean,
 
     /** Array of selectionPill attributes */
     pills: Pill[]
 
     /** Optional label placed in front of pills */
-    label: string
+    label?: string
 
     /** Option to only allow a maximum number of selected items. No restriction if not set. */
-    maxSelectionCount: number
+    maxSelectionCount?: number
 
     /** Option to include a generated pill that will toggle all other pills on / off. Disabled if a maxSelectionCount or parentControlledState. */
-    includeSelectAll: boolean
+    includeSelectAll?: boolean
 
     /** Optional override of the select all pill label */
-    selectAllLabel: string
+    selectAllLabel?: string
 
     /** Optional styles. */
     style?: {

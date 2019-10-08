@@ -4,7 +4,7 @@ import { RadiumStyles, ElementAttributes } from '../../..'
 
 export interface SelectionPillProps extends WithThemeInjectedProps {
   /** unique identifier for the pill */
-  id: string | number
+  id?: string | number
 
   /** Any additional props to add to the list element (e.g. data attributes). */
   listElementAttributes?: ElementAttributes<'li'>
@@ -22,13 +22,13 @@ export interface SelectionPillProps extends WithThemeInjectedProps {
   isDisabled?: boolean
 
   /** Callback function called after pill click */
-  onClick(): void
+  onClick?(e: React.MouseEvent<HTMLElement>, props: SelectionPillProps): void
 
   /** Callback function called after pill gained focus */
-  onFocus(): void
+  onFocus?(e: React.MouseEvent<HTMLElement>, props: SelectionPillProps, isFocused: boolean): void
 
   /** Callback function called after pill has lost focus */
-  onBlur(): void
+  onBlur?(e: React.MouseEvent<HTMLElement>, props: SelectionPillProps, isFocused: boolean): void
 
   /** Text to appear inside pill */
   text: string

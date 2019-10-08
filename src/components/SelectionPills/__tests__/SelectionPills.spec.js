@@ -83,7 +83,8 @@ describe('SelectionPills', () => {
       </StyleRoot>
     )
 
-    wrapper.find('input')
+    wrapper
+      .find('input')
       .first()
       .simulate('change')
     expect(onSelectPill.called).toBeTruthy()
@@ -113,7 +114,7 @@ describe('SelectionPills', () => {
     expect(applePill.disabled).toBe(true)
   })
 
-  it('unselects other pills when select all is included', () => {
+  it('handles select all correctly', () => {
     const selectPills = [
       { text: 'bananas', id: 'selection-1', isSelected: true },
       { text: 'apple', id: 'selection-2' },
@@ -125,6 +126,7 @@ describe('SelectionPills', () => {
     )
 
     const allPills = wrapper.find('input')
+    const selectAll = allPills.first()
     // Select all is in position 0
     const bananasPill = allPills.at(1).instance()
     const applePill = allPills.at(2).instance()
@@ -132,8 +134,9 @@ describe('SelectionPills', () => {
     expect(bananasPill.checked).toBe(true)
     expect(applePill.checked).toBe(false)
 
-    allPills.first().simulate('change')
+    selectAll.simulate('change')
 
+    expect(selectAll.instance().checked).toBe(true)
     expect(bananasPill.checked).toBe(false)
     expect(applePill.checked).toBe(false)
   })

@@ -1,11 +1,12 @@
 
 ### Self controlled state
 
-`SelectionPills` maintains its own internal for the array of pills provided. The
-initial selected state of a pill may be passed as a property of the pill object,
-but all changes will be maintained by `SelectionPills` component.
+Initial state for all pills is set through properties of individual pills in the `pills` array prop.
+All changes in pill state through user interaction is stored and updated within the
+`SelectionPills` internal state unless the `parentControlledState` state prop is passed in.
+The parent component of `SelectionPills` does not need to maintain state for pills once mounted.
 
-The array of `pills` all for all the properties of a `SelectionPill` to be passed
+The `pills` array accept all properties of a `SelectionPill` and can be used to
 to override the underlying pill behavior or style.
 
 ```jsx
@@ -37,8 +38,7 @@ const pills = [
 
 #### With select all pill
 
-Optional parameter to include select all button that unselects all selected options
-when clicked.
+Optional parameter to include a "select all" button. It deselects all other options when clicked.
 
 ```jsx
 import { SelectionPills } from 'ic-snacks'

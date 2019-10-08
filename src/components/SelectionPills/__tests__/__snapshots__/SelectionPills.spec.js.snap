@@ -95,12 +95,12 @@ exports[`SelectionPills renders SelectionPills correctly 1`] = `
           }
         >
           <span
-            id="selectionPillsLabel"
+            id="selection_pills_label_Filter_by"
           >
             Filter by
           </span>
           <ul
-            aria-labelledby="selectionPillsLabel"
+            aria-labelledby="selection_pills_label_Filter_by"
             data-radium={true}
             style={
               Object {
@@ -413,12 +413,12 @@ exports[`SelectionPills renders SelectionPills with pill attributes set correctl
           }
         >
           <span
-            id="selectionPillsLabel"
+            id="selection_pills_label_Filter_by"
           >
             Filter by
           </span>
           <ul
-            aria-labelledby="selectionPillsLabel"
+            aria-labelledby="selection_pills_label_Filter_by"
             data-radium={true}
             style={
               Object {
@@ -798,12 +798,12 @@ exports[`SelectionPills renders SelectionPills with select all included correctl
           }
         >
           <span
-            id="selectionPillsLabel"
+            id="selection_pills_label_Filter_by"
           >
             Filter by
           </span>
           <ul
-            aria-labelledby="selectionPillsLabel"
+            aria-labelledby="selection_pills_label_Filter_by"
             data-radium={true}
             style={
               Object {
