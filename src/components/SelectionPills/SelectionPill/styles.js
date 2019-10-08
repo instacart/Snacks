@@ -1,7 +1,7 @@
 import colors from '../../../styles/colors'
 import { setAlpha } from '../../../utils'
 import spacing from '../../../styles/spacing'
-import { visuallyHidden } from '../../../utils/accessibility'
+import accessibility from '../../../utils/accessibility'
 
 export const getStyles = ({
   isSelected = false,
@@ -63,6 +63,6 @@ export const getStyles = ({
       }),
     },
 
-    checkBoxOverrideStyle: visuallyHidden,
+    checkBoxOverrideStyle: accessibility.VISUALLY_HIDDEN,
   }
 }

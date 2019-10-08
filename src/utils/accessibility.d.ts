@@ -11,4 +11,8 @@ export interface VisuallyHidden {
   width: number
 }
 
-export declare const visuallyHidden: VisuallyHidden
+type accessibility = {
+  VISUALLY_HIDDEN: VisuallyHidden
+}
+
+export default accessibility

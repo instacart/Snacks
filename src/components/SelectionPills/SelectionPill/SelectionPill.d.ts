@@ -25,10 +25,10 @@ export interface SelectionPillProps extends WithThemeInjectedProps {
   onClick?(e: React.MouseEvent<HTMLElement>, props: SelectionPillProps): void
 
   /** Callback function called after pill gained focus */
-  onFocus?(e: React.MouseEvent<HTMLElement>, props: SelectionPillProps, isFocused: boolean): void
+  onFocus?(e: React.MouseEvent<HTMLElement>, props: SelectionPillProps & { isFocused: boolean }): void
 
   /** Callback function called after pill has lost focus */
-  onBlur?(e: React.MouseEvent<HTMLElement>, props: SelectionPillProps, isFocused: boolean): void
+  onBlur?(e: React.MouseEvent<HTMLElement>, props: SelectionPillProps & { isFocused: boolean }): void
 
   /** Text to appear inside pill */
   text: string
