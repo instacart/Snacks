@@ -36,6 +36,9 @@ class SelectionPills extends React.PureComponent {
     /** Option to include a generated pill that will toggle all other pills on / off. Disabled if a maxSelectionCount or parentControlledState. */
     includeSelectAll: PropTypes.bool,
 
+    /** Option to exclude ScrollTrack wrapper and present pills in grid format wrapping within parent. */
+    excludeScrollTrack: PropTypes.bool,
+
     /** Optional override of the select all pill label */
     selectAllLabel: PropTypes.string,
 
@@ -55,6 +58,7 @@ class SelectionPills extends React.PureComponent {
     includeSelectAll: false,
     selectAllLabel: 'All',
     parentControlledState: false,
+    excludeScrollTrack: false,
     style: {},
   }
 
@@ -159,24 +163,37 @@ class SelectionPills extends React.PureComponent {
     )
   }
 
-  renderPill = (pill, idx) => (
-    <SelectionPill
-      isDisabled={this.isDisabledPill(pill)}
-      onClick={e => this.onSelectPill(e, pill)}
-      key={`selectionPill-${idx}`}
-      id={pill.id || `selectionPill-${pill.text}-${idx}`}
-      parentControlledState
-      {...pill}
-    />
-  )
-
-  render() {
-    const { listAttributes, elementAttributes, parentControlledState, style } = this.props
-    const listToRender = parentControlledState ? this.props.pills : this.state.pillsList
-    const componentStyles = getStyles({ externalStyles: style })
+  renderPill = (pill, idx) => {
+    const { excludeScrollTrack, style } = this.props
+    const componentStyles = getStyles({ externalStyles: style, excludeScrollTrack })
 
     return (
-      <ScrollTrack>
+      <SelectionPill
+        isDisabled={this.isDisabledPill(pill)}
+        onClick={e => this.onSelectPill(e, pill)}
+        key={`selectionPill-${idx}`}
+        id={pill.id || `selectionPill-${pill.text}-${idx}`}
+        style={{ ...componentStyles.pillOverrideStyles, ...pill.style }}
+        parentControlledState
+        {...pill}
+      />
+    )
+  }
+
+  render() {
+    const {
+      listAttributes,
+      elementAttributes,
+      excludeScrollTrack,
+      parentControlledState,
+      style,
+    } = this.props
+    const listToRender = parentControlledState ? this.props.pills : this.state.pillsList
+    const componentStyles = getStyles({ externalStyles: style })
+    const WrapperElement = excludeScrollTrack ? 'span' : ScrollTrack
+
+    return (
+      <WrapperElement>
         <div style={componentStyles.wrapperStyles} ref="pillsTrack" {...elementAttributes}>
           {this.renderLabel()}
           <ul
@@ -188,7 +205,7 @@ class SelectionPills extends React.PureComponent {
             {listToRender.map(this.renderPill)}
           </ul>
         </div>
-      </ScrollTrack>
+      </WrapperElement>
     )
   }
 }

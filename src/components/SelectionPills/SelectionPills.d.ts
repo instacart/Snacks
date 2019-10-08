@@ -23,6 +23,9 @@ export interface SelectionPillsProps extends WithThemeInjectedProps {
     /** Flag determining if pills selected state is controlled by parent through props or internal state */
     parentControlledState: boolean
 
+    /** Option to exclude ScrollTrack wrapper and present pills in grid format wrapping within parent. */
+    excludeScrollTrack: boolean,
+
     /** Array of selectionPill attributes */
     pills: Pill[]
 

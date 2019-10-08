@@ -77,13 +77,13 @@ describe('SelectionPills', () => {
 
   it('handles onPillClick correctly', () => {
     const onSelectPill = spy()
-    const Pills = mount(
+    const wrapper = mount(
       <StyleRoot>
         <SelectionPills pills={testPills} onSelectPill={onSelectPill} />
       </StyleRoot>
     )
 
-    Pills.find('input')
+    wrapper.find('input')
       .first()
       .simulate('change')
     expect(onSelectPill.called).toBeTruthy()
@@ -96,16 +96,18 @@ describe('SelectionPills', () => {
       { text: 'arugula', id: 'selection-2', isSelected: true },
       { text: 'apple', id: 'selection-3' },
     ]
-    const Pills = mount(
+    const wrapper = mount(
       <StyleRoot>
         <SelectionPills pills={selectPills} maxSelectionCount={2} />
       </StyleRoot>
     )
 
-    Pills.find('input')
+    wrapper
+      .find('input')
       .first()
       .simulate('change')
-    const applePill = Pills.find('input')
+    const applePill = wrapper
+      .find('input')
       .last()
       .instance()
     expect(applePill.disabled).toBe(true)
@@ -116,13 +118,13 @@ describe('SelectionPills', () => {
       { text: 'bananas', id: 'selection-1', isSelected: true },
       { text: 'apple', id: 'selection-2' },
     ]
-    const Pills = mount(
+    const wrapper = mount(
       <StyleRoot>
         <SelectionPills pills={selectPills} includeSelectAll />
       </StyleRoot>
     )
 
-    const allPills = Pills.find('input')
+    const allPills = wrapper.find('input')
     // Select all is in position 0
     const bananasPill = allPills.at(1).instance()
     const applePill = allPills.at(2).instance()
@@ -134,29 +136,5 @@ describe('SelectionPills', () => {
 
     expect(bananasPill.checked).toBe(false)
     expect(applePill.checked).toBe(false)
-  })
-
-  xit('responds to parent controlled state correctly', () => {
-    const selectPills = [{ text: 'bananas', id: 'selection-1', isSelected: true }]
-    const Pills = mount(
-      <StyleRoot>
-        <SelectionPills pills={selectPills} parentControlledState />
-      </StyleRoot>
-    )
-    const allPills = Pills.find('input')
-    const bananasPill = allPills.first()
-    expect(bananasPill.instance().checked).toBe(true)
-    bananasPill.simulate('change')
-    expect(bananasPill.instance().checked).toBe(true)
-
-    const updatedPills = selectPills.map(p => {
-      return {
-        ...p,
-        isSelected: false,
-      }
-    })
-    Pills.setProps({ pills: updatedPills })
-    Pills.update()
-    expect(bananasPill.instance().checked).toBe(false)
   })
 })

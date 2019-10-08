@@ -1,6 +1,6 @@
 import spacing from '../../styles/spacing'
 
-export const getStyles = ({ externalStyles = {} }) => ({
+export const getStyles = ({ externalStyles = {}, excludeScrollTrack = false } = {}) => ({
   wrapperStyles: {
     display: 'inline-block',
     minWidth: '100%',
@@ -15,4 +15,11 @@ export const getStyles = ({ externalStyles = {} }) => ({
     ...spacing.MARGIN_Y_SM,
     ...externalStyles.listStyle,
   },
+
+  // Provide bottom margin to pills when in grid format
+  ...(excludeScrollTrack && {
+    pillOverrideStyles: {
+      button: { marginBottom: 8 },
+    },
+  }),
 })

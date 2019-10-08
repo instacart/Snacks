@@ -97,6 +97,35 @@ const pills = [
   </div>
 ```
 
+#### Without ScrollTrack wrapper
+
+Optional parameter to layout in grid format without `ScrollTrack` wrapper
+
+```jsx
+import { SelectionPills } from 'ic-snacks'
+
+const pills = [
+  { text: 'bananas', id: 'gridSelection-1' },
+  { text: 'carrots', id: 'gridSelection-2' },
+  { text: 'watermelon', id: 'gridSelection-3' },
+  { text: 'snacks', id: 'gridSelection-4' },
+  { text: 'kale', id: 'gridSelection-5' },
+  { text: 'endives', id: 'gridSelection-6' },
+  { text: 'arugula', id: 'gridSelection-7' },
+  { text: 'spinach', id: 'gridSelection-8' },
+  { text: 'potatoes', id: 'gridSelection-9' },
+]
+;<div>
+  <SelectionPills
+    excludeScrollTrack
+    pills={pills}
+    onSelectPill={(e, pill) => {
+      console.log('SelectionPills SelectionPill clicked!', pill)
+    }}
+  />
+  </div>
+```
+
 ### Parent controlled state
 
 State of each `SelectionPill` can be controlled by a parent component by passing a

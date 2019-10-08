@@ -8,7 +8,7 @@ export const getStyles = ({
   isDisabled = false,
   primaryForeground,
   externalStyles = {},
-}) => {
+} = {}) => {
   const backgroundColor = setAlpha(primaryForeground, 0.1)
 
   return {

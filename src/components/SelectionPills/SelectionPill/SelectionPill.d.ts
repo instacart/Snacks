@@ -3,7 +3,7 @@ import { WithThemeInjectedProps, ApplyWithTheme } from '../../../styles/themer/w
 import { RadiumStyles, ElementAttributes } from '../../..'
 
 export interface SelectionPillProps extends WithThemeInjectedProps {
-  /** Required unique identifier for the pill */
+  /** unique identifier for the pill */
   id: string | number
 
   /** Any additional props to add to the list element (e.g. data attributes). */
@@ -31,7 +31,7 @@ export interface SelectionPillProps extends WithThemeInjectedProps {
   onBlur(): void
 
   /** Text to appear inside pill */
-  text?: string
+  text: string
 
   /** Optional styles. */
   style?: {

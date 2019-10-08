@@ -1,3 +1,9 @@
+### tl;dr
+`SelectionPill` is a checkbox based component used for multi-selection purposes, such as filters.
+This differs from `NavigationPill`, which supports single selection in the form of a link.
+The main distinction between these components is the accessibility support, which will
+inform screen reader users how to interact with the pill appropriately.
+
 **`SelectionPill` example:**
 
 `SelectionPill` maintains its own internal state for selected and focused, but
@@ -10,7 +16,6 @@ import { SelectionPill } from 'ic-snacks'
 
 ; <div>
     <SelectionPill
-      id="selection2"
       isSelected={true}
       onClick={e => {
         console.log('SelectionPill click!', "carrots")
@@ -18,7 +23,6 @@ import { SelectionPill } from 'ic-snacks'
       text="carrots"
     />
     <SelectionPill
-      id="selection3"
       isSelected={false}
       onClick={e => {
         console.log('SelectionPill click!', "watermelon")
@@ -26,7 +30,7 @@ import { SelectionPill } from 'ic-snacks'
       text="watermelon"
     />
     <SelectionPill
-      id="selection4"
+      id="selection3"
       isSelected={false}
       isDisabled={true}
       onClick={e => {

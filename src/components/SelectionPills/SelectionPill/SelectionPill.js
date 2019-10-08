@@ -6,10 +6,16 @@ import withTheme from '../../../styles/themer/withTheme'
 import { getStyles } from './styles'
 
 const NoOp = () => {} // eslint-disable-line no-empty-function
+
+// As of HTML5, id must consist of at least one character and no spaces
+const textToID = text => {
+  return `selection_pill_${text.replace(' ', '_')}`
+}
+
 class SelectionPill extends React.PureComponent {
   static propTypes = {
-    /** Required unique identifier for the pill */
-    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    /** Unique identifier for the pill. Default to text input if not provided. */
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /** Any additional props to add to the list element (e.g. data attributes). */
     listElementAttributes: PropTypes.object,
@@ -47,8 +53,8 @@ class SelectionPill extends React.PureComponent {
     /** Snacks theme attributes provided by Themer */
     snacksTheme: themePropTypes,
 
-    /** Text to appear inside pill */
-    text: PropTypes.string,
+    /** Required text to appear inside pill */
+    text: PropTypes.string.isRequired,
 
     /** Optional style overrides for button and its states */
     style: PropTypes.shape({
@@ -103,14 +109,14 @@ class SelectionPill extends React.PureComponent {
     this.props.onBlur(event, { ...this.props, isFocused: !this.state.isFocused })
   }
 
-  renderInputBtn({ selected }) {
-    const { aria, isDisabled, id } = this.props
-    const componentStyles = getStyles({})
+  renderInputBtn({ selected, inputId }) {
+    const { aria, isDisabled } = this.props
+    const componentStyles = getStyles()
 
     return (
       <div style={componentStyles.checkBoxOverrideStyle}>
         <input
-          id={id}
+          id={inputId}
           type="checkbox"
           onChange={this.handleChange}
           checked={selected}
@@ -127,6 +133,7 @@ class SelectionPill extends React.PureComponent {
     const { id, snacksTheme, text, style, isDisabled, parentControlledState } = this.props
     const { isFocused } = this.state
     const { primaryForeground } = snacksTheme.colors
+    const inputId = id || textToID(text)
     const selected = parentControlledState ? this.props.isSelected : this.state.isSelected
     const componentStyles = getStyles({
       isSelected: selected,
@@ -138,8 +145,8 @@ class SelectionPill extends React.PureComponent {
 
     return (
       <li style={componentStyles.listElement} {...this.props.listElementAttributes}>
-        {this.renderInputBtn({ selected })}
-        <label htmlFor={id} style={componentStyles.labelButton}>
+        {this.renderInputBtn({ selected, inputId })}
+        <label htmlFor={inputId} style={componentStyles.labelButton}>
           {text}
         </label>
       </li>
