@@ -94,19 +94,13 @@ class SelectionPill extends React.PureComponent {
   }
 
   handleFocus = event => {
-    const { onFocus } = this.props
-    const { isFocused } = this.state
-
     this.toggleFocus()
-    onFocus(event, { ...this.props, isFocused: !isFocused })
+    this.props.onFocus(event, { ...this.props, isFocused: !this.state.isFocused })
   }
 
   handleBlur = event => {
-    const { onBlur } = this.props
-    const { isFocused } = this.state
-
     this.toggleFocus()
-    onBlur(event, { ...this.props, isFocused: !isFocused })
+    this.props.onBlur(event, { ...this.props, isFocused: !this.state.isFocused })
   }
 
   renderInputBtn({ selected }) {
