@@ -3,12 +3,31 @@
 exports[`Tooltip expect overlay to appear correctly when shown 1`] = `
 <div>
   <button
-    aria-expanded={false}
+    aria-expanded={true}
     aria-haspopup={true}
     onClick={[Function]}
   >
     TRIGGER
   </button>
+  <TooltipOverlay
+    onRootClose={[Function]}
+    placement="right"
+    rootCloseEnabled={true}
+    show={true}
+    style={
+      Object {
+        "zIndex": 2345,
+      }
+    }
+    target={[Function]}
+  >
+    <InnerToolTip
+      size="small"
+      snacksStyle="secondary"
+    >
+      Right Secondary small
+    </InnerToolTip>
+  </TooltipOverlay>
 </div>
 `;
 
