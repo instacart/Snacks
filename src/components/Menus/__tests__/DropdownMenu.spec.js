@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { StyleRoot } from 'radium'
-import { mount, shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import { spy } from 'sinon'
 import DropdownMenu from '../DropdownMenu'
 import MenuItem from '../MenuItem'
@@ -35,12 +35,16 @@ it('renders DropdownMenu with icons and trigger correctly', () => {
 })
 
 it('renders DropdownMenu in open state correctly', () => {
+  const menuContainerSelector = "div[data-testid='menu-container']"
+  const hiddenZIndex = -9000
+  const shownZIndex = 1234
+
   const wrapper = mount(
     <StyleRoot>
       <div>
         <DropdownMenu
-          menuContainerOpenStyle={{ zIndex: 1234 }}
-          triggerElement={<Button> Share </Button>}
+          menuContainerOpenStyle={{ zIndex: shownZIndex }}
+          triggerElement={<Button id="trigger"> Share </Button>}
         >
           <MenuItem label="Share via Email" value="email" leftIcon="emailFilled" />
           <MenuItem
@@ -60,7 +64,10 @@ it('renders DropdownMenu in open state correctly', () => {
     </StyleRoot>
   )
 
-  wrapper.find('button').simulate('click')
+  expect(wrapper.find(menuContainerSelector).prop('style').zIndex).toBe(hiddenZIndex)
+  wrapper.find('#trigger button').simulate('mousedown')
+  expect(wrapper.find(menuContainerSelector).prop('style').zIndex).toBe(shownZIndex)
+
   expect(wrapper).toMatchSnapshot()
 })
 

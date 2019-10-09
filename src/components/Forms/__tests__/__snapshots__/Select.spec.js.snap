@@ -184,6 +184,7 @@ exports[`renders Select correctly 1`] = `
           </div>
           <div
             data-radium={true}
+            data-testid="menu-container"
             style={
               Object {
                 "display": "block",
@@ -558,6 +559,7 @@ exports[`renders Select w/ server error correctly 1`] = `
           </div>
           <div
             data-radium={true}
+            data-testid="menu-container"
             style={
               Object {
                 "display": "block",
@@ -934,6 +936,7 @@ exports[`renders disabled Select correctly 1`] = `
           </div>
           <div
             data-radium={true}
+            data-testid="menu-container"
             style={
               Object {
                 "display": "block",
@@ -1308,6 +1311,7 @@ exports[`renders invalid Select correctly 1`] = `
           </div>
           <div
             data-radium={true}
+            data-testid="menu-container"
             style={
               Object {
                 "display": "block",
@@ -1681,6 +1685,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
         </div>
         <div
           data-radium={true}
+          data-testid="menu-container"
           style={
             Object {
               "display": "block",

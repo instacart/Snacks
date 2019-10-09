@@ -1,34 +1,177 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tooltip expect overlay to appear correctly when shown 1`] = `
-<div>
-  <button
-    aria-expanded={true}
-    aria-haspopup={true}
-    onClick={[Function]}
-  >
-    TRIGGER
-  </button>
-  <TooltipOverlay
-    onRootClose={[Function]}
-    placement="right"
-    rootCloseEnabled={true}
-    show={true}
-    style={
-      Object {
-        "zIndex": 2345,
-      }
+<Tooltip
+  onDismiss={[Function]}
+  onShow={[Function]}
+  overlayStyle={
+    Object {
+      "zIndex": 2345,
     }
-    target={[Function]}
-  >
-    <InnerToolTip
-      size="small"
-      snacksStyle="secondary"
+  }
+  placement="right"
+  size="small"
+  snacksStyle="secondary"
+  target={
+    <button>
+      TRIGGER
+    </button>
+  }
+>
+  <div>
+    <button
+      aria-expanded={true}
+      aria-haspopup={true}
+      onClick={[Function]}
     >
-      Right Secondary small
-    </InnerToolTip>
-  </TooltipOverlay>
-</div>
+      TRIGGER
+    </button>
+    <TooltipOverlay
+      onRootClose={[Function]}
+      placement="right"
+      rootCloseEnabled={true}
+      show={true}
+      style={
+        Object {
+          "zIndex": 2345,
+        }
+      }
+      target={[Function]}
+    >
+      <Portal>
+        <TooltipRootClose
+          onRootClose={[Function]}
+          rootCloseEnabled={true}
+        >
+          <TooltipPosition
+            placement="right"
+            style={
+              Object {
+                "zIndex": 2345,
+              }
+            }
+            target={[Function]}
+          >
+            <div
+              style={
+                Object {
+                  "position": "absolute",
+                  "zIndex": 99999,
+                }
+              }
+            >
+              <InnerToolTip
+                arrowPosition={
+                  Object {
+                    "left": -6,
+                    "placement": "right",
+                    "top": -7,
+                  }
+                }
+                placement="right"
+                size="small"
+                snacksStyle="secondary"
+              >
+                <Fade
+                  appear={true}
+                  in={true}
+                  opacity={
+                    Object {
+                      "end": 1,
+                      "start": 0,
+                    }
+                  }
+                  style={Object {}}
+                  timeout={0}
+                  timingFunction="ease-in-out"
+                  transitionTime={400}
+                >
+                  <Transition
+                    appear={true}
+                    enter={true}
+                    exit={true}
+                    in={true}
+                    mountOnEnter={false}
+                    onEnter={[Function]}
+                    onEntered={[Function]}
+                    onEntering={[Function]}
+                    onExit={[Function]}
+                    onExited={[Function]}
+                    onExiting={[Function]}
+                    timeout={0}
+                    unmountOnExit={false}
+                  >
+                    <div
+                      style={
+                        Object {
+                          "opacity": 0,
+                          "transition": "all 400ms ease-in-out",
+                        }
+                      }
+                    >
+                      <TooltipArrow
+                        position={
+                          Object {
+                            "left": -6,
+                            "placement": "right",
+                            "top": -7,
+                          }
+                        }
+                        snacksStyle="secondary"
+                      >
+                        <div
+                          style={
+                            Object {
+                              "backgroundColor": "#FFF",
+                              "borderLeft": "1px solid #BDBDBD",
+                              "borderTop": "1px solid #BDBDBD",
+                              "boxShadow": undefined,
+                              "display": "block",
+                              "height": "12px",
+                              "left": -6,
+                              "position": "absolute",
+                              "top": -7,
+                              "transform": "rotate(-45deg)",
+                              "width": "12px",
+                            }
+                          }
+                        />
+                      </TooltipArrow>
+                      <div
+                        style={
+                          Object {
+                            "background": "#FFF",
+                            "border": "1px solid #BDBDBD",
+                            "borderRadius": 4,
+                            "color": "#757575",
+                            "fontSize": "14px",
+                            "fontWeight": 600,
+                            "paddingBottom": "9px",
+                            "paddingLeft": 8,
+                            "paddingRight": 8,
+                            "paddingTop": "9px",
+                            "textAlign": "center",
+                            "whiteSpace": "nowrap",
+                          }
+                        }
+                      >
+                        <span
+                          id="contents"
+                        >
+                          Right Secondary small
+                        </span>
+                      </div>
+                    </div>
+                  </Transition>
+                </Fade>
+              </InnerToolTip>
+            </div>
+          </TooltipPosition>
+        </TooltipRootClose>
+      </Portal>
+    </TooltipOverlay>
+  </div>
+</Tooltip>
 `;
 
 exports[`Tooltip renders Tooltip properly 1`] = `

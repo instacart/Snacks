@@ -196,6 +196,8 @@ class DropdownMenu extends React.Component {
 
     const isOpen = this.state.open
 
+    console.log(isOpen)
+
     return (
       <div onKeyDown={this.handleKeyDown} style={style}>
         <div style={{ position: 'relative' }}>{this.renderTriggerElement()}</div>
@@ -206,6 +208,7 @@ class DropdownMenu extends React.Component {
             isOpen && [styles.menuContainerOpen, menuContainerOpenStyle],
             !isOpen && styles.menuContainerClosed,
           ]}
+          data-testid="menu-container"
         >
           <Slide in={isOpen} axis="y" style={styles.transitionContainer} offset={30}>
             <Fade in={isOpen} transitionTime={200}>

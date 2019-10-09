@@ -1,9 +1,8 @@
 import React from 'react'
-import ReactTestUtils from 'react-dom/test-utils'
 import renderer from 'react-test-renderer'
 import { StyleRoot } from 'radium'
 import { mount, shallow } from 'enzyme'
-import { spy, stub } from 'sinon'
+import { spy } from 'sinon'
 import Tooltip from '../Tooltip'
 
 describe('Tooltip', () => {
@@ -26,20 +25,22 @@ describe('Tooltip', () => {
   })
 
   it('expect overlay to appear correctly when shown', () => {
-    const tooltip = shallow(
+    const tooltip = mount(
       <Tooltip
         target={<button>TRIGGER</button>}
         placement="right"
         size="small"
         snacksStyle="secondary"
-        overlayStyle={{zIndex: 2345}}
+        overlayStyle={{ zIndex: 2345 }}
       >
-        Right Secondary small
+        <span id="contents">Right Secondary small</span>
       </Tooltip>
     )
 
+    expect(tooltip.find('#contents').length).toBe(0)
     const trigger = tooltip.find('button').last()
     trigger.last().simulate('click')
+    expect(tooltip.find('#contents').length).toBe(1)
 
     expect(tooltip).toMatchSnapshot()
   })
