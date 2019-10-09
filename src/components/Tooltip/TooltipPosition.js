@@ -18,7 +18,7 @@ class TooltipPosition extends PureComponent {
     children: PropTypes.node.isRequired,
     target: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
     placement: PropTypes.oneOf(['top', 'left', 'right', 'bottom']).isRequired,
-    style: PropTypes.shape({})
+    style: PropTypes.shape({}),
   }
 
   state = {

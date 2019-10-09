@@ -82,7 +82,16 @@ class Tooltip extends PureComponent {
   }
 
   render() {
-    const { children, placement, size, style, arrowStyle, snacksStyle, isVisible, overlayStyle } = this.props
+    const {
+      children,
+      placement,
+      size,
+      style,
+      arrowStyle,
+      snacksStyle,
+      isVisible,
+      overlayStyle,
+    } = this.props
 
     return (
       <div>
