@@ -33,6 +33,9 @@ export interface DropdownMenuProps<TValue extends string | number | boolean = st
   /** Customize style of menu parent */
   menuContainerStyle?: RadiumStyles
 
+  /** Customize style of menu parent when dropdown is open */
+  menuContainerOpenStyle?: RadiumStyles
+
   /** Props passed to Menu component */
   menuProps?: MenuProps
 }
