@@ -196,8 +196,6 @@ class DropdownMenu extends React.Component {
 
     const isOpen = this.state.open
 
-    console.log(isOpen)
-
     return (
       <div onKeyDown={this.handleKeyDown} style={style}>
         <div style={{ position: 'relative' }}>{this.renderTriggerElement()}</div>
