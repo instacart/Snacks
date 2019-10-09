@@ -6,3 +6,7 @@ export const darken = memoize((baseColor, amount) => {
     .darken(amount)
     .toHexString()
 })
+
+export const setAlpha = memoize((baseColor, alpha) => {
+  return tinycolor(baseColor).setAlpha(alpha)
+})

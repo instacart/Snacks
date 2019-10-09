@@ -4,14 +4,15 @@ const webpackConfig =
   process.env.NODE_ENV === 'production'
     ? require('./webpack.release.config')
     : require('./webpack.config')
+
 webpackConfig.resolve = webpackConfig.resolve || {}
 webpackConfig.resolve.alias = webpackConfig.resolve.alias || {}
 webpackConfig.resolve.alias['ic-snacks'] = path.join(__dirname, 'dist', 'snacks.js')
 
 module.exports = {
   getExampleFilename(componentPath) {
-    var parts = componentPath.split('/')
-    var componentName = parts[parts.length - 1]
+    const parts = componentPath.split('/')
+    const componentName = parts[parts.length - 1]
     return componentPath.replace(
       `/${componentName}`,
       `/docs/${componentName.replace('.js', '')}.md`
@@ -116,6 +117,13 @@ module.exports = {
           components: 'src/components/NavigationPills/[A-Z]*.js',
         },
         {
+          name: 'SelectionPills',
+          components: [
+            'src/components/SelectionPills/SelectionPill/SelectionPill.js',
+            'src/components/SelectionPills/SelectionPills.js',
+          ],
+        },
+        {
           name: 'Pill',
           components: 'src/components/Pill/Pill.js',
         },
@@ -175,5 +183,5 @@ module.exports = {
     },
   },
   title: 'Snacks',
-  webpackConfig: webpackConfig,
+  webpackConfig,
 }
