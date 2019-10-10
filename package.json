@@ -1,6 +1,6 @@
 {
   "name": "ic-snacks",
-  "version": "0.0.136",
+  "version": "0.0.137",
   "description": "The Instacart Component Library for Web",
   "main": "dist/snacks.js",
   "module": "dist/esm/index.js",
@@ -127,6 +127,8 @@
     "setupFilesAfterEnv": [
       "<rootDir>/scripts/test/testSetup.js"
     ],
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }
