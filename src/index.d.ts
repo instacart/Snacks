@@ -73,6 +73,7 @@ export type RadiumStyles =
   | string
   | RadiumCSSObject
   | RadiumStylesArray
+  | React.CSSProperties
 
 export type ElementAttributes<T> = (T extends keyof JSX.IntrinsicElements
   ? React.ComponentPropsWithoutRef<T>
