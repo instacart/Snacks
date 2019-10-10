@@ -1,12 +1,19 @@
 import * as React from 'react'
 import { Button, SVGIcon } from '../../src'
 
+const cssProperties: React.CSSProperties = { display: 'block' }
+
 export function Foo() {
   return (
     <Button
       style={[
         { background: 'green', ':hover': { background: 'purple' } },
         true && { color: 'red' },
+        cssProperties,
+        {
+          display: 'block',
+          '@media (max-width: 123px)': { display: 'inline' },
+        },
       ]}
       onClick={(e: React.MouseEvent<HTMLButtonElement>) => e}
     >
