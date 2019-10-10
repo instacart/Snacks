@@ -34,6 +34,43 @@ it('renders DropdownMenu with icons and trigger correctly', () => {
   expect(tree).toMatchSnapshot()
 })
 
+it('renders DropdownMenu in open state correctly', () => {
+  const menuContainerSelector = "div[data-testid='menu-container']"
+  const hiddenZIndex = -9000
+  const shownZIndex = 1234
+
+  const wrapper = mount(
+    <StyleRoot>
+      <div>
+        <DropdownMenu
+          menuContainerOpenStyle={{ zIndex: shownZIndex }}
+          triggerElement={<Button id="trigger"> Share </Button>}
+        >
+          <MenuItem label="Share via Email" value="email" leftIcon="emailFilled" />
+          <MenuItem
+            label="Share via Facebook"
+            value="facebook"
+            leftIcon="facebookFilled"
+            leftIconStyles={{ color: '#3c5a99' }}
+          />
+          <MenuItem
+            label="Share via Twitter"
+            value="twitter"
+            leftIcon="twitterFilled"
+            leftIconStyles={{ color: '#1da1f2' }}
+          />
+        </DropdownMenu>
+      </div>
+    </StyleRoot>
+  )
+
+  expect(wrapper.find(menuContainerSelector).prop('style').zIndex).toBe(hiddenZIndex)
+  wrapper.find('#trigger button').simulate('mousedown')
+  expect(wrapper.find(menuContainerSelector).prop('style').zIndex).toBe(shownZIndex)
+
+  expect(wrapper).toMatchSnapshot()
+})
+
 it('should call callbacks correctly', () => {
   const onClose = spy()
   const onOpen = spy()

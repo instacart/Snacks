@@ -126,6 +126,7 @@
     },
     "setupFilesAfterEnv": [
       "<rootDir>/scripts/test/testSetup.js"
-    ]
+    ],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   }
 }

@@ -13,6 +13,8 @@ export interface TooltipProps {
     boxShadow?: string
   }
 
+  overlayStyle?: React.CSSProperties
+
   arrowStyle?: {
     border?: string
     boxShadowRight?: string

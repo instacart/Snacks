@@ -56,6 +56,8 @@ class DropdownMenu extends React.Component {
     style: PropTypes.shape({}),
     /** Customize style of menu parent */
     menuContainerStyle: PropTypes.shape({}),
+    /** Customize style of menu parent when dropdown is open */
+    menuContainerOpenStyle: PropTypes.shape({}),
     /** Props passed to Menu component */
     menuProps: PropTypes.shape({}),
   }
@@ -190,7 +192,7 @@ class DropdownMenu extends React.Component {
   }
 
   render() {
-    const { style, children, menuProps, menuContainerStyle } = this.props
+    const { style, children, menuProps, menuContainerStyle, menuContainerOpenStyle } = this.props
 
     const isOpen = this.state.open
 
@@ -201,9 +203,10 @@ class DropdownMenu extends React.Component {
           style={[
             styles.menuContainer,
             menuContainerStyle,
-            isOpen && styles.menuContainerOpen,
+            isOpen && [styles.menuContainerOpen, menuContainerOpenStyle],
             !isOpen && styles.menuContainerClosed,
           ]}
+          data-testid="menu-container"
         >
           <Slide in={isOpen} axis="y" style={styles.transitionContainer} offset={30}>
             <Fade in={isOpen} transitionTime={200}>

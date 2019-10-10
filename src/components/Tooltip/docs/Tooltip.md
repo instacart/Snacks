@@ -1,7 +1,7 @@
 Examples:
 
 ```jsx
-import { RadioGroup, Radio, Button, Tooltip } from 'ic-snacks'
+import { RadioGroup, Radio, Button, Icon, Tooltip } from 'ic-snacks'
 
 const initialState = {
   size: 'medium',
@@ -70,7 +70,7 @@ const toggleVisibility = () => {
 
     <div style={{padding: '30px', textAlign: 'center'}}>
       <Tooltip
-        target={state.trigger === 'icon' ? <Icon name='info' /> : 
+        target={state.trigger === 'icon' ? <Icon name='info' onClick={toggleVisibility} /> : 
           <Button onClick={toggleVisibility}> Toggle </Button>}
         placement={state.placement}
         size={state.size}

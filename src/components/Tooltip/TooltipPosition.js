@@ -18,6 +18,7 @@ class TooltipPosition extends PureComponent {
     children: PropTypes.node.isRequired,
     target: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
     placement: PropTypes.oneOf(['top', 'left', 'right', 'bottom']).isRequired,
+    style: PropTypes.shape({}),
   }
 
   state = {
@@ -120,13 +121,14 @@ class TooltipPosition extends PureComponent {
   }
 
   render() {
-    const { children, placement } = this.props
+    const { children, placement, style } = this.props
     const { overlayRect } = this.state
     let computedStyles = styles.root
 
     if (overlayRect.top) {
       computedStyles = {
         ...computedStyles,
+        ...style,
         top: overlayRect.top,
         left: overlayRect.left,
       }

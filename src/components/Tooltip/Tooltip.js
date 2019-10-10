@@ -15,6 +15,7 @@ class Tooltip extends PureComponent {
       padding: PropTypes.string,
       boxShadow: PropTypes.string,
     }),
+    overlayStyle: PropTypes.shape({}),
     arrowStyle: PropTypes.shape({
       border: PropTypes.string,
       boxShadowRight: PropTypes.string,
@@ -81,7 +82,16 @@ class Tooltip extends PureComponent {
   }
 
   render() {
-    const { children, placement, size, style, arrowStyle, snacksStyle, isVisible } = this.props
+    const {
+      children,
+      placement,
+      size,
+      style,
+      arrowStyle,
+      snacksStyle,
+      isVisible,
+      overlayStyle,
+    } = this.props
 
     return (
       <div>
@@ -91,6 +101,7 @@ class Tooltip extends PureComponent {
           target={() => this.trigger}
           show={isVisible || this.state.show}
           onRootClose={this.handleHideToolTip}
+          style={overlayStyle}
         >
           <InnerToolTip size={size} style={style} arrowStyle={arrowStyle} snacksStyle={snacksStyle}>
             {children}
