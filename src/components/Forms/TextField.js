@@ -266,7 +266,7 @@ class TextField extends React.Component {
             disabled={disabled}
             name={name}
             type={type}
-            aria-required={required}
+            required={required}
             aria-invalid={hasError}
             aria-describedby={[
               hasError ? `error_${inputId}` : null,
