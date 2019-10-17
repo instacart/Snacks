@@ -9,6 +9,7 @@ export interface SwitchProps
     keyof WithThemeInjectedProps | 'renderInputButton' | 'btnType'
   > {
   name?: string
+  displayOnOffLabel?: boolean
 }
 
 declare const Switch: React.FunctionComponent<SwitchProps>
