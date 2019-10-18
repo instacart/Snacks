@@ -69,12 +69,12 @@ export interface TextFieldProps
 
   /** Any additonal props to add to the element (e.g. data attributes). */
   elementAttributes?: ElementAttributes<React.ComponentPropsWithoutRef<'input'>>
+
+  ref?: React.Ref<{
+    triggerFocus(): void
+  }>
 }
 
-declare class TextFieldBase extends React.Component<TextFieldProps> {
-  triggerFocus(): void
-}
-
-declare const TextField: ApplyWithTheme<ApplyFormComponent<typeof TextFieldBase>>
+declare const TextField: ApplyWithTheme<ApplyFormComponent<React.ComponentType<TextFieldProps>>>
 
 export default TextField

@@ -11,16 +11,6 @@ interface WithThemeProps {
   snacksTheme?: ThemePropTypes
 }
 
-interface WithThemeComponent<P, T> extends React.Component<P> {
-  wrapped: T
-}
-
-type WithThemeComponentClass<P, T> = React.ClassType<
-  P,
-  WithThemeComponent<P, T>,
-  React.ComponentClass<P>
->
-
 type WithThemeOuterProps<P extends WithThemeInjectedProps> = Omit<P, keyof WithThemeInjectedProps> &
   WithThemeProps
 
@@ -28,17 +18,11 @@ type WithThemeOuterProps<P extends WithThemeInjectedProps> = Omit<P, keyof WithT
 export type ApplyWithTheme<
   T extends React.ComponentType<P>,
   P extends WithThemeInjectedProps = React.ComponentProps<T>
-> = T extends React.ComponentClass<P>
-  ? WithThemeComponentClass<WithThemeOuterProps<P>, InstanceType<T>>
-  : WithThemeComponentClass<WithThemeOuterProps<P>, never>
+> = React.NamedExoticComponent<JSX.LibraryManagedAttributes<T, WithThemeOuterProps<P>>>
 
 declare function withTheme<
   T extends React.ComponentType<P>,
   P extends WithThemeInjectedProps = React.ComponentProps<T>
->(
-  component: T
-): T extends React.ComponentClass<P>
-  ? WithThemeComponentClass<WithThemeOuterProps<P>, InstanceType<T>>
-  : WithThemeComponentClass<WithThemeOuterProps<P>, never>
+>(component: T): React.NamedExoticComponent<JSX.LibraryManagedAttributes<T, WithThemeOuterProps<P>>>
 
 export default withTheme

@@ -32,7 +32,7 @@ class DateField extends React.Component {
     return this.input.getValue()
   }
 
-  triggerFocus = () => this.input.wrapped.FormComponent.triggerFocus()
+  triggerFocus = () => this.input.FormComponent.triggerFocus()
 
   render() {
     return (

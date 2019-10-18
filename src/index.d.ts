@@ -29,7 +29,7 @@ import spacing from './styles/spacing'
 import PhoneNumberField from './components/Forms/PhoneNumberField'
 import DateField from './components/Forms/DateField'
 import MaskedTextField from './components/Forms/MaskedTextField'
-import TextField from './components/Forms/TextField'
+import TextField, { TextFieldRefApi } from './components/Forms/TextField'
 import Select from './components/Forms/Select'
 import ServerError from './components/Forms/ServerError'
 import ValidationError from './components/Forms/ValidationError'
@@ -83,6 +83,11 @@ export type ElementAttributes<T> = (T extends keyof JSX.IntrinsicElements
 }
 
 export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+
+export type ComponentRef<
+  T extends React.ElementType,
+  P = React.ComponentProps<T>
+> = 'ref' extends keyof P ? (P extends { ref?: React.Ref<infer R> } ? R : never) : never
 
 export {
   // styles

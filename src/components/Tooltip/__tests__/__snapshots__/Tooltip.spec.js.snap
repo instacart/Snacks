@@ -39,135 +39,162 @@ exports[`Tooltip expect overlay to appear correctly when shown 1`] = `
       target={[Function]}
     >
       <Portal>
-        <TooltipRootClose
-          onRootClose={[Function]}
-          rootCloseEnabled={true}
+        <Portal
+          containerInfo={
+            <div>
+              <div
+                style="position: absolute; z-index: 99999;"
+              >
+                <div
+                  style="opacity: 0;"
+                >
+                  <div
+                    style="position: absolute; display: block; height: 12px; width: 12px; background-color: rgb(255, 255, 255); border-left: 1px solid #BDBDBD; border-top: 1px solid #BDBDBD; left: -6px; top: -7px;"
+                  />
+                  <div
+                    style="text-align: center; border-radius: 4px; white-space: nowrap; font-weight: 600; font-size: 14px; padding: 9px 8px 9px 8px; background: rgb(255, 255, 255); color: rgb(117, 117, 117); border: 1px solid #bdbdbd;"
+                  >
+                    <span
+                      id="contents"
+                    >
+                      Right Secondary small
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
         >
-          <TooltipPosition
-            placement="right"
-            style={
-              Object {
-                "zIndex": 2345,
-              }
-            }
-            target={[Function]}
+          <TooltipRootClose
+            onRootClose={[Function]}
+            rootCloseEnabled={true}
           >
-            <div
+            <TooltipPosition
+              placement="right"
               style={
                 Object {
-                  "position": "absolute",
-                  "zIndex": 99999,
+                  "zIndex": 2345,
                 }
               }
+              target={[Function]}
             >
-              <InnerToolTip
-                arrowPosition={
+              <div
+                style={
                   Object {
-                    "left": -6,
-                    "placement": "right",
-                    "top": -7,
+                    "position": "absolute",
+                    "zIndex": 99999,
                   }
                 }
-                placement="right"
-                size="small"
-                snacksStyle="secondary"
               >
-                <Fade
-                  appear={true}
-                  in={true}
-                  opacity={
+                <InnerToolTip
+                  arrowPosition={
                     Object {
-                      "end": 1,
-                      "start": 0,
+                      "left": -6,
+                      "placement": "right",
+                      "top": -7,
                     }
                   }
-                  style={Object {}}
-                  timeout={0}
-                  timingFunction="ease-in-out"
-                  transitionTime={400}
+                  placement="right"
+                  size="small"
+                  snacksStyle="secondary"
                 >
-                  <Transition
+                  <Fade
                     appear={true}
-                    enter={true}
-                    exit={true}
                     in={true}
-                    mountOnEnter={false}
-                    onEnter={[Function]}
-                    onEntered={[Function]}
-                    onEntering={[Function]}
-                    onExit={[Function]}
-                    onExited={[Function]}
-                    onExiting={[Function]}
-                    timeout={0}
-                    unmountOnExit={false}
-                  >
-                    <div
-                      style={
-                        Object {
-                          "opacity": 0,
-                          "transition": "all 400ms ease-in-out",
-                        }
+                    opacity={
+                      Object {
+                        "end": 1,
+                        "start": 0,
                       }
+                    }
+                    style={Object {}}
+                    timeout={0}
+                    timingFunction="ease-in-out"
+                    transitionTime={400}
+                  >
+                    <Transition
+                      appear={true}
+                      enter={true}
+                      exit={true}
+                      in={true}
+                      mountOnEnter={false}
+                      onEnter={[Function]}
+                      onEntered={[Function]}
+                      onEntering={[Function]}
+                      onExit={[Function]}
+                      onExited={[Function]}
+                      onExiting={[Function]}
+                      timeout={0}
+                      unmountOnExit={false}
                     >
-                      <TooltipArrow
-                        position={
-                          Object {
-                            "left": -6,
-                            "placement": "right",
-                            "top": -7,
-                          }
-                        }
-                        snacksStyle="secondary"
-                      >
-                        <div
-                          style={
-                            Object {
-                              "backgroundColor": "#FFF",
-                              "borderLeft": "1px solid #BDBDBD",
-                              "borderTop": "1px solid #BDBDBD",
-                              "boxShadow": undefined,
-                              "display": "block",
-                              "height": "12px",
-                              "left": -6,
-                              "position": "absolute",
-                              "top": -7,
-                              "transform": "rotate(-45deg)",
-                              "width": "12px",
-                            }
-                          }
-                        />
-                      </TooltipArrow>
                       <div
                         style={
                           Object {
-                            "background": "#FFF",
-                            "border": "1px solid #BDBDBD",
-                            "borderRadius": 4,
-                            "color": "#757575",
-                            "fontSize": "14px",
-                            "fontWeight": 600,
-                            "paddingBottom": "9px",
-                            "paddingLeft": 8,
-                            "paddingRight": 8,
-                            "paddingTop": "9px",
-                            "textAlign": "center",
-                            "whiteSpace": "nowrap",
+                            "opacity": 0,
+                            "transition": "all 400ms ease-in-out",
                           }
                         }
                       >
-                        <span
-                          id="contents"
+                        <TooltipArrow
+                          position={
+                            Object {
+                              "left": -6,
+                              "placement": "right",
+                              "top": -7,
+                            }
+                          }
+                          snacksStyle="secondary"
                         >
-                          Right Secondary small
-                        </span>
+                          <div
+                            style={
+                              Object {
+                                "backgroundColor": "#FFF",
+                                "borderLeft": "1px solid #BDBDBD",
+                                "borderTop": "1px solid #BDBDBD",
+                                "boxShadow": undefined,
+                                "display": "block",
+                                "height": "12px",
+                                "left": -6,
+                                "position": "absolute",
+                                "top": -7,
+                                "transform": "rotate(-45deg)",
+                                "width": "12px",
+                              }
+                            }
+                          />
+                        </TooltipArrow>
+                        <div
+                          style={
+                            Object {
+                              "background": "#FFF",
+                              "border": "1px solid #BDBDBD",
+                              "borderRadius": 4,
+                              "color": "#757575",
+                              "fontSize": "14px",
+                              "fontWeight": 600,
+                              "paddingBottom": "9px",
+                              "paddingLeft": 8,
+                              "paddingRight": 8,
+                              "paddingTop": "9px",
+                              "textAlign": "center",
+                              "whiteSpace": "nowrap",
+                            }
+                          }
+                        >
+                          <span
+                            id="contents"
+                          >
+                            Right Secondary small
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </Transition>
-                </Fade>
-              </InnerToolTip>
-            </div>
-          </TooltipPosition>
-        </TooltipRootClose>
+                    </Transition>
+                  </Fade>
+                </InnerToolTip>
+              </div>
+            </TooltipPosition>
+          </TooltipRootClose>
+        </Portal>
       </Portal>
     </TooltipOverlay>
   </div>

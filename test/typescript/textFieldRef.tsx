@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { TextField } from '../../src'
+import { TextField, ComponentRef } from '../../src'
 
 interface Props {
   value: string
@@ -7,11 +7,11 @@ interface Props {
 }
 
 export class MyField extends React.Component<Props> {
-  private inputRef = React.createRef<InstanceType<typeof TextField>>()
+  private inputRef = React.createRef<ComponentRef<typeof TextField>>()
 
   componentDidMount = () => {
     if (this.inputRef.current) {
-      this.inputRef.current.wrapped.FormComponent.triggerFocus()
+      this.inputRef.current.FormComponent.triggerFocus()
     }
   }
 
