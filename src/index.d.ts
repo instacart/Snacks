@@ -124,6 +124,7 @@ export {
   Button,
   CircleButton,
   Radio,
+  RadioGroup,
   Checkbox,
   Switch,
   Icon,
