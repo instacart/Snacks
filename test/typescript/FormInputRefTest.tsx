@@ -1,9 +1,9 @@
 import * as React from 'react'
 import FormInput from './FormInput'
-import { ComponentRef } from '../../src'
+import { GetRef } from '../../src'
 
 export class FormInputTest extends React.Component {
-  testRef = React.createRef<ComponentRef<typeof FormInput>>()
+  testRef = React.createRef<GetRef<typeof FormInput>>()
 
   componentDidMount = () => {
     this.testRef.current && this.testRef.current.FormComponent.focus()

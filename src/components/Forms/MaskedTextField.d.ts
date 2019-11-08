@@ -94,10 +94,14 @@ export interface MaskedTextFieldProps
 
   /** Value will make TextField a controlled component  */
   value?: string
+
+  ref?: React.Ref<{
+    triggerFocus(): void
+  }>
 }
 
 declare const MaskedTextField: ApplyWithTheme<
-  ApplyFormComponent<React.ComponentClass<MaskedTextFieldProps>>
+  ApplyFormComponent<React.ComponentType<MaskedTextFieldProps>>
 >
 
 export default MaskedTextField
