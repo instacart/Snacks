@@ -3,8 +3,12 @@ import { WithThemeInjectedProps, ApplyWithTheme } from '../styles/themer/withThe
 
 export interface RadioCheckboxBaseProps
   extends WithThemeInjectedProps,
-    Pick<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'onBlur' | 'onFocus'> {
+    Pick<React.InputHTMLAttributes<HTMLInputElement>, 'onBlur' | 'onFocus'> {
   children?: React.ReactNode
+  onChange?(
+    event: React.ChangeEvent<HTMLInputElement>,
+    props: RadioCheckboxBaseProps & { isSelected: boolean }
+  ): void
   renderInputButton(isSelected: boolean, style: React.CSSProperties): React.ReactNode
   id: string | number
   aria?: { label?: string }
