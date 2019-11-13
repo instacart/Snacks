@@ -69,10 +69,6 @@ export interface TextFieldProps
 
   /** Any additonal props to add to the element (e.g. data attributes). */
   elementAttributes?: ElementAttributes<React.ComponentPropsWithoutRef<'input'>>
-
-  // ref?: React.Ref<{
-  //   triggerFocus(): void
-  // }>
 }
 
 declare const TextField: ApplyWithTheme<
