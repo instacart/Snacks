@@ -62,7 +62,7 @@ export interface MaskedTextFieldProps
   id: string
 
   /** Style for input */
-  inputStyle: RadiumStyles
+  inputStyle?: RadiumStyles
 
   /** Set by FormComponent by default.   */
   isValid: boolean
@@ -84,7 +84,7 @@ export interface MaskedTextFieldProps
   required?: boolean
 
   /** Error from server to show ServerError message */
-  serverError: string | null
+  serverError?: string | null
 
   /** Wrapper styles */
   style?: RadiumStyles
@@ -94,14 +94,12 @@ export interface MaskedTextFieldProps
 
   /** Value will make TextField a controlled component  */
   value?: string
-
-  ref?: React.Ref<{
-    triggerFocus(): void
-  }>
 }
 
-declare const MaskedTextField: ApplyWithTheme<
-  ApplyFormComponent<React.ComponentType<MaskedTextFieldProps>>
->
+declare class MaskedTextFieldBase extends React.Component<MaskedTextFieldProps> {
+  triggerFocus(): void
+}
+
+declare const MaskedTextField: ApplyWithTheme<ApplyFormComponent<typeof MaskedTextFieldBase>>
 
 export default MaskedTextField

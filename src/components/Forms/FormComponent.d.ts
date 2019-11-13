@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react'
 import * as Validator from 'validator'
+import { GetRef } from '../..'
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
@@ -41,23 +42,19 @@ export interface FormComponentInjectedProps extends FormComponentProps {
   id: string
 }
 
-interface FormComponentOuterProps<P>
+interface FormComponentOuterProps<T extends React.ComponentType<any>>
   extends Partial<Pick<FormComponentInjectedProps, 'serverError' | 'hasError' | 'id' | 'isValid'>>,
     FormComponentProps,
-    FormComponentRef<P> {}
+    FormComponentRef<T> {}
 
 type WithoutInjectedProps<P extends FormComponentInjectedProps> = Omit<
   P,
   keyof FormComponentInjectedProps
 >
 
-type FormComponentRef<P> = {
+type FormComponentRef<T extends React.ComponentType<any>> = {
   ref?: React.Ref<{
-    FormComponent: 'ref' extends keyof P
-      ? P extends { ref?: React.Ref<infer R> }
-        ? R
-        : never
-      : never
+    FormComponent: GetRef<T>
   }>
 }
 
@@ -66,12 +63,12 @@ declare function formComponent<
   P extends FormComponentInjectedProps = React.ComponentProps<T>
 >(
   component: T
-): React.ComponentType<WithoutInjectedProps<React.PropsWithoutRef<P>> & FormComponentOuterProps<P>>
+): React.ComponentType<WithoutInjectedProps<React.PropsWithoutRef<P>> & FormComponentOuterProps<T>>
 
 // helper for applying hoc in .d.ts files
 export type ApplyFormComponent<
   T extends React.ComponentType<P>,
   P extends FormComponentInjectedProps = React.ComponentProps<T>
-> = React.ComponentType<WithoutInjectedProps<React.PropsWithoutRef<P>> & FormComponentOuterProps<P>>
+> = React.ComponentType<WithoutInjectedProps<React.PropsWithoutRef<P>> & FormComponentOuterProps<T>>
 
 export default formComponent
