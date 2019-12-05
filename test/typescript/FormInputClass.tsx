@@ -18,4 +18,4 @@ class FormInputClass extends React.Component<FormInputProps> {
   }
 }
 
-export default withTheme(FormComponent(FormInputClass))
+export default withTheme({ forwardRef: true })(FormComponent(FormInputClass))

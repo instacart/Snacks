@@ -70,7 +70,7 @@ const getSnackStyles = snacksTheme => {
   }
 }
 
-@withTheme
+@withTheme({ forwardRef: true })
 @FormComponent
 @Radium
 class TextField extends React.Component {

@@ -21,4 +21,4 @@ const Input = React.forwardRef<InputRefApi, InputProps>((_, ref) => {
   return <input ref={inputRef} />
 })
 
-export default withTheme(Input)
+export default withTheme({ forwardRef: true })(Input)

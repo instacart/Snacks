@@ -23,4 +23,7 @@ const FormInput = React.forwardRef<FormInputRefApi, FormInputProps>((_, ref) => 
   return <input ref={inputRef} />
 })
 
-export default withTheme(FormComponent(FormInput))
+export const Test = withTheme()(FormComponent(FormInput))
+export const Test2 = withTheme({ forwardRef: false })(FormComponent(FormInput))
+
+export default withTheme({ forwardRef: true })(FormComponent(FormInput))

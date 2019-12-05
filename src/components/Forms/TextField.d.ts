@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { FormComponentInjectedProps, ApplyFormComponent } from './FormComponent'
-import { WithThemeInjectedProps, ApplyWithTheme } from '../../styles/themer/withTheme'
+import { WithThemeInjectedProps, ApplyWithThemeForwardRef } from '../../styles/themer/withTheme'
 import { RadiumStyles, ElementAttributes } from '../..'
 
 export interface TextFieldProps
@@ -75,6 +75,6 @@ declare class TextFieldBase extends React.Component<TextFieldProps> {
   triggerFocus(): void
 }
 
-declare const TextField: ApplyWithTheme<ApplyFormComponent<typeof TextFieldBase>>
+declare const TextField: ApplyWithThemeForwardRef<ApplyFormComponent<typeof TextFieldBase>>
 
 export default TextField

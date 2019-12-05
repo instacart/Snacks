@@ -16,11 +16,11 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
         }
         open={null}
         triggerElement={
-          <ForwardRef(withTheme(RadiumEnhancer))
+          <withTheme(RadiumEnhancer)
             id="trigger"
           >
              Share 
-          </ForwardRef(withTheme(RadiumEnhancer))>
+          </withTheme(RadiumEnhancer)>
         }
       >
         <div
@@ -36,7 +36,7 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
               }
             }
           >
-            <ForwardRef(withTheme(RadiumEnhancer))
+            <withTheme(RadiumEnhancer)
               aria-expanded={true}
               aria-haspopup={true}
               elementAttributes={
@@ -48,96 +48,82 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
               id="trigger"
               onMouseDown={[Function]}
             >
-              <withTheme(RadiumEnhancer)
+              <Button
                 aria-expanded={true}
                 aria-haspopup={true}
+                disabled={false}
                 elementAttributes={
                   Object {
                     "aria-expanded": true,
                     "aria-haspopup": true,
                   }
                 }
-                forwardedRef={[Function]}
+                iconPosition="left"
                 id="trigger"
+                inverted={false}
+                onClick={[Function]}
                 onMouseDown={[Function]}
+                size="standard"
+                snacksStyle="primary"
+                snacksTheme={
+                  Object {
+                    "colors": Object {
+                      "action": "#43B02A",
+                      "actionHover": "#177D05",
+                      "primaryBackground": "#FFFFFF",
+                      "primaryForeground": "#43B02A",
+                      "secondaryBackground": "#43B02A",
+                      "secondaryForeground": "#FFFFFF",
+                      "secondaryForegroundFocus": "#757575",
+                    },
+                  }
+                }
+                type="button"
               >
-                <Button
+                <button
                   aria-expanded={true}
                   aria-haspopup={true}
+                  data-radium={true}
                   disabled={false}
-                  elementAttributes={
-                    Object {
-                      "aria-expanded": true,
-                      "aria-haspopup": true,
-                    }
-                  }
-                  iconPosition="left"
-                  id="trigger"
-                  inverted={false}
+                  onBlur={[Function]}
                   onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                   onMouseDown={[Function]}
-                  size="standard"
-                  snacksStyle="primary"
-                  snacksTheme={
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  style={
                     Object {
-                      "colors": Object {
-                        "action": "#43B02A",
-                        "actionHover": "#177D05",
-                        "primaryBackground": "#FFFFFF",
-                        "primaryForeground": "#43B02A",
-                        "secondaryBackground": "#43B02A",
-                        "secondaryForeground": "#FFFFFF",
-                        "secondaryForegroundFocus": "#757575",
-                      },
+                      "MozOsxFontSmoothing": "grayscale",
+                      "WebkitFontSmoothing": "antialiased",
+                      "alignItems": "center",
+                      "backgroundColor": "#146e04",
+                      "backgroundImage": "none",
+                      "border": "1px solid transparent",
+                      "borderBottomLeftRadius": 4,
+                      "borderBottomRightRadius": 4,
+                      "borderTopLeftRadius": 4,
+                      "borderTopRightRadius": 4,
+                      "color": "#FFFFFF",
+                      "cursor": "pointer",
+                      "display": "inline-flex",
+                      "fontSize": "16px",
+                      "fontWeight": 600,
+                      "height": "40px",
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "touchAction": "manipulation",
+                      "userSelect": "none",
+                      "whiteSpace": "nowrap",
                     }
                   }
                   type="button"
                 >
-                  <button
-                    aria-expanded={true}
-                    aria-haspopup={true}
-                    data-radium={true}
-                    disabled={false}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    style={
-                      Object {
-                        "MozOsxFontSmoothing": "grayscale",
-                        "WebkitFontSmoothing": "antialiased",
-                        "alignItems": "center",
-                        "backgroundColor": "#146e04",
-                        "backgroundImage": "none",
-                        "border": "1px solid transparent",
-                        "borderBottomLeftRadius": 4,
-                        "borderBottomRightRadius": 4,
-                        "borderTopLeftRadius": 4,
-                        "borderTopRightRadius": 4,
-                        "color": "#FFFFFF",
-                        "cursor": "pointer",
-                        "display": "inline-flex",
-                        "fontSize": "16px",
-                        "fontWeight": 600,
-                        "height": "40px",
-                        "paddingLeft": 16,
-                        "paddingRight": 16,
-                        "touchAction": "manipulation",
-                        "userSelect": "none",
-                        "whiteSpace": "nowrap",
-                      }
-                    }
-                    type="button"
-                  >
-                     Share 
-                  </button>
-                </Button>
-              </withTheme(RadiumEnhancer)>
-            </ForwardRef(withTheme(RadiumEnhancer))>
+                   Share 
+                </button>
+              </Button>
+            </withTheme(RadiumEnhancer)>
           </div>
           <div
             data-radium={true}

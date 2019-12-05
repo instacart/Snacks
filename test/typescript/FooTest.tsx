@@ -19,4 +19,4 @@ class FooTest extends React.Component<FooTestProps> {
   }
 }
 
-export default withTheme(FooTest)
+export default withTheme({ forwardRef: true })(FooTest)

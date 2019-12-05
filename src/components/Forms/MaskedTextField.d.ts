@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { MaskedInputProps } from 'react-text-mask'
 import { FormComponentInjectedProps, ApplyFormComponent } from './FormComponent'
-import { WithThemeInjectedProps, ApplyWithTheme } from '../../styles/themer/withTheme'
+import { WithThemeInjectedProps, ApplyWithThemeForwardRef } from '../../styles/themer/withTheme'
 import { RadiumStyles } from '../..'
 
 export interface MaskedTextFieldProps
@@ -84,7 +84,7 @@ export interface MaskedTextFieldProps
   required?: boolean
 
   /** Error from server to show ServerError message */
-  serverError?: string | null
+  serverError: string | null
 
   /** Wrapper styles */
   style?: RadiumStyles
@@ -100,6 +100,8 @@ declare class MaskedTextFieldBase extends React.Component<MaskedTextFieldProps> 
   triggerFocus(): void
 }
 
-declare const MaskedTextField: ApplyWithTheme<ApplyFormComponent<typeof MaskedTextFieldBase>>
+declare const MaskedTextField: ApplyWithThemeForwardRef<
+  ApplyFormComponent<typeof MaskedTextFieldBase>
+>
 
 export default MaskedTextField

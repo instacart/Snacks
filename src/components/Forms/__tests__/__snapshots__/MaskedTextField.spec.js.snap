@@ -154,7 +154,7 @@ exports[`renders correctly 1`] = `
                     }
                   }
                 >
-                  <ForwardRef(withTheme(RadiumEnhancer))
+                  <withTheme(RadiumEnhancer)
                     disabled={false}
                     float={false}
                     hasError={false}
@@ -180,10 +180,9 @@ exports[`renders correctly 1`] = `
                     }
                     text="SSN"
                   >
-                    <withTheme(RadiumEnhancer)
+                    <FloatingLabel
                       disabled={false}
                       float={false}
-                      forwardedRef={null}
                       hasError={false}
                       htmlFor="test_id"
                       snacksTheme={
@@ -206,58 +205,32 @@ exports[`renders correctly 1`] = `
                       }
                       text="SSN"
                     >
-                      <FloatingLabel
-                        disabled={false}
-                        float={false}
-                        hasError={false}
+                      <label
+                        data-radium={true}
                         htmlFor="test_id"
-                        snacksTheme={
-                          Object {
-                            "colors": Object {
-                              "action": "#43B02A",
-                              "actionHover": "#177D05",
-                              "primaryBackground": "#FFFFFF",
-                              "primaryForeground": "#43B02A",
-                              "secondaryBackground": "#43B02A",
-                              "secondaryForeground": "#FFFFFF",
-                              "secondaryForegroundFocus": "#757575",
-                            },
-                          }
-                        }
                         style={
                           Object {
+                            "color": "#757575",
+                            "cursor": "text",
+                            "fontSize": "16px",
+                            "marginBottom": 0,
+                            "marginLeft": 0,
+                            "marginRight": 0,
+                            "marginTop": 0,
                             "pointerEvents": "none",
+                            "position": "absolute",
+                            "transform": "scale(1) translate(8px, 17px)",
+                            "transformOrigin": "left top",
+                            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                            "userSelect": "none",
+                            "zIndex": 1,
                           }
                         }
-                        text="SSN"
                       >
-                        <label
-                          data-radium={true}
-                          htmlFor="test_id"
-                          style={
-                            Object {
-                              "color": "#757575",
-                              "cursor": "text",
-                              "fontSize": "16px",
-                              "marginBottom": 0,
-                              "marginLeft": 0,
-                              "marginRight": 0,
-                              "marginTop": 0,
-                              "pointerEvents": "none",
-                              "position": "absolute",
-                              "transform": "scale(1) translate(8px, 17px)",
-                              "transformOrigin": "left top",
-                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                              "userSelect": "none",
-                              "zIndex": 1,
-                            }
-                          }
-                        >
-                          SSN
-                        </label>
-                      </FloatingLabel>
-                    </withTheme(RadiumEnhancer)>
-                  </ForwardRef(withTheme(RadiumEnhancer))>
+                        SSN
+                      </label>
+                    </FloatingLabel>
+                  </withTheme(RadiumEnhancer)>
                   <TextFieldHint
                     disabled={false}
                     inputId="hint_test_id"
@@ -562,7 +535,7 @@ exports[`renders correctly with focus state 1`] = `
                     }
                   }
                 >
-                  <ForwardRef(withTheme(RadiumEnhancer))
+                  <withTheme(RadiumEnhancer)
                     disabled={false}
                     float={true}
                     hasError={false}
@@ -589,10 +562,9 @@ exports[`renders correctly with focus state 1`] = `
                     }
                     text="SSN"
                   >
-                    <withTheme(RadiumEnhancer)
+                    <FloatingLabel
                       disabled={false}
                       float={true}
-                      forwardedRef={null}
                       hasError={false}
                       htmlFor="test_id"
                       isActive={true}
@@ -616,59 +588,32 @@ exports[`renders correctly with focus state 1`] = `
                       }
                       text="SSN"
                     >
-                      <FloatingLabel
-                        disabled={false}
-                        float={true}
-                        hasError={false}
+                      <label
+                        data-radium={true}
                         htmlFor="test_id"
-                        isActive={true}
-                        snacksTheme={
-                          Object {
-                            "colors": Object {
-                              "action": "#43B02A",
-                              "actionHover": "#177D05",
-                              "primaryBackground": "#FFFFFF",
-                              "primaryForeground": "#43B02A",
-                              "secondaryBackground": "#43B02A",
-                              "secondaryForeground": "#FFFFFF",
-                              "secondaryForegroundFocus": "#757575",
-                            },
-                          }
-                        }
                         style={
                           Object {
+                            "color": "#43B02A",
+                            "cursor": "inherit",
+                            "fontSize": "16px",
+                            "marginBottom": 0,
+                            "marginLeft": 0,
+                            "marginRight": 0,
+                            "marginTop": 0,
                             "pointerEvents": "none",
+                            "position": "absolute",
+                            "transform": "scale(0.85) translate(8px, 6px)",
+                            "transformOrigin": "left top",
+                            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                            "userSelect": "none",
+                            "zIndex": 1,
                           }
                         }
-                        text="SSN"
                       >
-                        <label
-                          data-radium={true}
-                          htmlFor="test_id"
-                          style={
-                            Object {
-                              "color": "#43B02A",
-                              "cursor": "inherit",
-                              "fontSize": "16px",
-                              "marginBottom": 0,
-                              "marginLeft": 0,
-                              "marginRight": 0,
-                              "marginTop": 0,
-                              "pointerEvents": "none",
-                              "position": "absolute",
-                              "transform": "scale(0.85) translate(8px, 6px)",
-                              "transformOrigin": "left top",
-                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                              "userSelect": "none",
-                              "zIndex": 1,
-                            }
-                          }
-                        >
-                          SSN
-                        </label>
-                      </FloatingLabel>
-                    </withTheme(RadiumEnhancer)>
-                  </ForwardRef(withTheme(RadiumEnhancer))>
+                        SSN
+                      </label>
+                    </FloatingLabel>
+                  </withTheme(RadiumEnhancer)>
                   <TextFieldHint
                     disabled={false}
                     inputId="hint_test_id"
@@ -1003,7 +948,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                     }
                   }
                 >
-                  <ForwardRef(withTheme(RadiumEnhancer))
+                  <withTheme(RadiumEnhancer)
                     disabled={false}
                     float={false}
                     hasError={false}
@@ -1029,10 +974,9 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                     }
                     text="SSN"
                   >
-                    <withTheme(RadiumEnhancer)
+                    <FloatingLabel
                       disabled={false}
                       float={false}
-                      forwardedRef={null}
                       hasError={false}
                       htmlFor="test_id"
                       snacksTheme={
@@ -1055,58 +999,32 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                       }
                       text="SSN"
                     >
-                      <FloatingLabel
-                        disabled={false}
-                        float={false}
-                        hasError={false}
+                      <label
+                        data-radium={true}
                         htmlFor="test_id"
-                        snacksTheme={
-                          Object {
-                            "colors": Object {
-                              "action": "green",
-                              "actionHover": "darkgreen",
-                              "primaryBackground": "white",
-                              "primaryForeground": "green",
-                              "secondaryBackground": "green",
-                              "secondaryForeground": "white",
-                              "secondaryForegroundFocus": "gray",
-                            },
-                          }
-                        }
                         style={
                           Object {
+                            "color": "#757575",
+                            "cursor": "text",
+                            "fontSize": "16px",
+                            "marginBottom": 0,
+                            "marginLeft": 0,
+                            "marginRight": 0,
+                            "marginTop": 0,
                             "pointerEvents": "none",
+                            "position": "absolute",
+                            "transform": "scale(1) translate(8px, 17px)",
+                            "transformOrigin": "left top",
+                            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                            "userSelect": "none",
+                            "zIndex": 1,
                           }
                         }
-                        text="SSN"
                       >
-                        <label
-                          data-radium={true}
-                          htmlFor="test_id"
-                          style={
-                            Object {
-                              "color": "#757575",
-                              "cursor": "text",
-                              "fontSize": "16px",
-                              "marginBottom": 0,
-                              "marginLeft": 0,
-                              "marginRight": 0,
-                              "marginTop": 0,
-                              "pointerEvents": "none",
-                              "position": "absolute",
-                              "transform": "scale(1) translate(8px, 17px)",
-                              "transformOrigin": "left top",
-                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                              "userSelect": "none",
-                              "zIndex": 1,
-                            }
-                          }
-                        >
-                          SSN
-                        </label>
-                      </FloatingLabel>
-                    </withTheme(RadiumEnhancer)>
-                  </ForwardRef(withTheme(RadiumEnhancer))>
+                        SSN
+                      </label>
+                    </FloatingLabel>
+                  </withTheme(RadiumEnhancer)>
                   <TextFieldHint
                     disabled={false}
                     inputId="hint_test_id"
