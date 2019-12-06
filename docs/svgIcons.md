@@ -16,7 +16,7 @@ const groups = {
   Shopping: ['cart', 'bag', 'store', 'money', 'creditCard', 'loyaltyCard', 'giftcard', 'coupons', 'categories', 'recipes', 'sale'],
   Delivery: ['home', 'office', 'barcode', 'scan', 'car', 'clock', 'calendar', 'locationCurrent', 'locationMarker', 'parking'],
   Items: ['items', 'organic', 'cold', 'fire', 'alcohol', 'coffee', 'tobacco', 'weight'],
-  Actions: ['reaction', 'reactionAdd', 'thumbsUp', 'thumbsDown', 'saveForLater', 'like', 'listsAdd', 'star', 'flag'],
+  Actions: ['reaction', 'reactionAdd', 'thumbsUp', 'thumbsDown', 'saveForLater', 'like', 'listsAdd', 'star', 'flag', 'expand'],
   Communication: ['sendEmail', 'email', 'chat', 'phone', 'call', 'instructions', 'pencil'],
   Arrows: ['arrowLeft', 'arrowUp', 'arrowRight', 'arrowDown', 'arrowLeftSmall', 'arrowUpSmall', 'arrowRightSmall', 'arrowDownSmall'],
   Symbols: ['checkmark', 'checkmarkCircle', 'checkmarkCircleDashed', 'plus', 'minus', 'x', 'xCircle', 'xSmall', 'no', 'info', 'help', 'warning'],
