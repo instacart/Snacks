@@ -18,7 +18,7 @@ type WithThemeOuterProps<P extends WithThemeInjectedProps> = Omit<P, keyof WithT
 export type ApplyWithTheme<
   T extends React.ComponentType<P>,
   P extends WithThemeInjectedProps = React.ComponentProps<T>
-> = React.ComponentType<WithThemeOuterProps<React.PropsWithoutRef<P>>>
+> = React.ComponentClass<WithThemeOuterProps<React.PropsWithoutRef<P>>>
 
 export type ApplyWithThemeForwardRef<
   T extends React.ComponentType<P>,
@@ -35,9 +35,9 @@ declare function withTheme<TOptions extends WithThemeOptions>(
   component: T
 ) => TOptions extends { forwardRef: true }
   ? React.NamedExoticComponent<JSX.LibraryManagedAttributes<T, WithThemeOuterProps<P>>>
-  : React.ComponentType<WithThemeOuterProps<React.PropsWithoutRef<P>>>
+  : React.ComponentClass<WithThemeOuterProps<React.PropsWithoutRef<P>>>
 declare function withTheme<
   T extends React.ComponentType<P>,
   P extends WithThemeInjectedProps = React.ComponentProps<T>
->(component: T): React.ComponentType<WithThemeOuterProps<React.PropsWithoutRef<P>>>
+>(component: T): React.ComponentClass<WithThemeOuterProps<React.PropsWithoutRef<P>>>
 export default withTheme
