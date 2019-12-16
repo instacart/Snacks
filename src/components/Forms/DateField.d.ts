@@ -1,11 +1,18 @@
 import * as React from 'react'
-import { MaskedTextFieldProps } from './MaskedTextField'
+import MaskedTextField from './MaskedTextField'
 import { Omit } from '../..'
 
 export interface DateFieldProps
-  extends Omit<MaskedTextFieldProps, 'mask' | 'pipe' | 'getValue'>,
-    Partial<Pick<MaskedTextFieldProps, 'mask' | 'pipe' | 'getValue'>> {}
+  extends Omit<
+      React.ComponentPropsWithoutRef<typeof MaskedTextField>,
+      'type' | 'mask' | 'maskHint' | 'getValue'
+    >,
+    Partial<
+      Pick<React.ComponentPropsWithoutRef<typeof MaskedTextField>, 'mask' | 'pipe' | 'getValue'>
+    > {}
 
-declare const DateField: React.ComponentClass<DateFieldProps>
+declare class DateField extends React.Component<DateFieldProps> {
+  triggerFocus(): void
+}
 
 export default DateField

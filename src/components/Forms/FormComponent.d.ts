@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react'
 import * as Validator from 'validator'
+import { GetRef } from '../..'
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
@@ -36,40 +37,38 @@ interface FormComponentProps {
 
 export interface FormComponentInjectedProps extends FormComponentProps {
   isValid: boolean
-  ref(node: React.Component): void
   serverError: null | string
   hasError: boolean
   id: string
 }
 
-interface FormComponent<P, T> extends React.Component<P> {
-  FormComponent: T
-}
+interface FormComponentOuterProps<T extends React.ComponentType<any>>
+  extends Partial<Pick<FormComponentInjectedProps, 'serverError' | 'hasError' | 'id' | 'isValid'>>,
+    FormComponentProps,
+    FormComponentRef<T> {}
 
-type FormComponentClass<P, T> = React.ClassType<P, FormComponent<P, T>, React.ComponentClass<P>>
-
-type FormComponentOuterProps<P extends FormComponentInjectedProps> = Omit<
+type WithoutInjectedProps<P extends FormComponentInjectedProps> = Omit<
   P,
   keyof FormComponentInjectedProps
-> &
-  Partial<Pick<FormComponentInjectedProps, 'serverError' | 'hasError' | 'id' | 'isValid'>> &
-  FormComponentProps
+>
 
-// helper for applying hoc in .d.ts files
-export type ApplyFormComponent<
-  T extends React.ComponentType<P>,
-  P extends FormComponentInjectedProps = React.ComponentProps<T>
-> = T extends React.ComponentClass<P>
-  ? FormComponentClass<FormComponentOuterProps<P>, InstanceType<T>>
-  : FormComponentClass<FormComponentOuterProps<P>, never>
+type FormComponentRef<T extends React.ComponentType<any>> = {
+  ref?: React.Ref<{
+    FormComponent: GetRef<T>
+  }>
+}
 
 declare function formComponent<
   T extends React.ComponentType<P>,
   P extends FormComponentInjectedProps = React.ComponentProps<T>
 >(
   component: T
-): T extends React.ComponentClass<P>
-  ? FormComponentClass<FormComponentOuterProps<P>, InstanceType<T>>
-  : FormComponentClass<FormComponentOuterProps<P>, never>
+): React.ComponentType<WithoutInjectedProps<React.PropsWithoutRef<P>> & FormComponentOuterProps<T>>
+
+// helper for applying hoc in .d.ts files
+export type ApplyFormComponent<
+  T extends React.ComponentType<P>,
+  P extends FormComponentInjectedProps = React.ComponentProps<T>
+> = React.ComponentType<WithoutInjectedProps<React.PropsWithoutRef<P>> & FormComponentOuterProps<T>>
 
 export default formComponent

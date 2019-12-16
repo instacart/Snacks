@@ -27,7 +27,7 @@ class PhoneNumberField extends React.Component {
     return getValue(this.input.getValue())
   }
 
-  triggerFocus = () => this.input.wrapped.FormComponent.triggerFocus()
+  triggerFocus = () => this.input.FormComponent.triggerFocus()
 
   render() {
     return (

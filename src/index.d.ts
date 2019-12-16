@@ -84,6 +84,11 @@ export type ElementAttributes<T> = (T extends keyof JSX.IntrinsicElements
 
 export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 
+export type GetRef<
+  C extends React.ElementType,
+  P = React.ComponentPropsWithRef<C>
+> = 'ref' extends keyof P ? (P extends { ref?: React.Ref<infer R> } ? R : never) : never
+
 export {
   // styles
   colors,

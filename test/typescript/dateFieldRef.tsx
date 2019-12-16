@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { TextField, GetRef } from '../../src'
+import { DateField, GetRef } from '../../src'
 
 interface Props {
   value: string
@@ -7,12 +7,12 @@ interface Props {
 }
 
 export class MyField extends React.Component<Props> {
-  private inputRef = React.createRef<GetRef<typeof TextField>>()
+  private inputRef = React.createRef<GetRef<typeof DateField>>()
 
   componentDidMount = () => {
     if (this.inputRef.current) {
       console.log(this.inputRef.current)
-      this.inputRef.current.FormComponent.triggerFocus()
+      this.inputRef.current.triggerFocus()
     }
   }
 
@@ -20,7 +20,7 @@ export class MyField extends React.Component<Props> {
     const { value, onChange } = this.props
 
     return (
-      <TextField
+      <DateField
         ref={this.inputRef}
         name="search"
         value={value}

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import * as React from 'react'
-import FooTest from './FooTest'
+import FooTest, { FooTestRefApi } from './FooTest'
 
 export class FooRefTest extends React.Component {
-  testRef = React.createRef<InstanceType<typeof FooTest>>()
+  testRef = React.createRef<FooTestRefApi>()
 
   componentDidMount = () => {
-    this.testRef.current && this.testRef.current.wrapped
+    this.testRef.current && this.testRef.current.focus()
   }
 
   render() {

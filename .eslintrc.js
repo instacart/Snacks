@@ -45,7 +45,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.d.ts'],
+      files: ['*.d.ts', '*.tsx'],
       rules: {
         'react/prefer-stateless-function': OFF,
         'import/named': OFF,

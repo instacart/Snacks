@@ -160,7 +160,7 @@ export const maskedTextFieldPropTypes = {
   snacksTheme: themePropTypes,
 }
 
-@withTheme
+@withTheme({ forwardRef: true })
 @FormComponent
 @Radium
 class MaskedTextField extends React.Component {
