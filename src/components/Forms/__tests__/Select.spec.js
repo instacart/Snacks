@@ -170,3 +170,26 @@ it('uses a custom theme for all child components if one is provided', () => {
 
   expect(tree).toMatchSnapshot()
 })
+
+it('should provide access to the trigger element via its ref', () => {
+  let selectRef
+
+  const wrapper = mount(
+    <StyleRoot>
+      <Select
+        id="test_id"
+        name="country"
+        floatingLabelText="Country"
+        hintText="Select a country"
+        onOpen={() => {}}
+        onClose={() => {}}
+        onSelect={() => {}}
+        ref={node => (selectRef = node)}
+      >
+        <MenuItem label="United States" value="US" />
+      </Select>
+    </StyleRoot>
+  )
+
+  expect(selectRef.FormComponent.trigger).toBe(wrapper.find('div[role="button"]').getDOMNode())
+})

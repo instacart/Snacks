@@ -122,7 +122,7 @@ const getSnackStyles = snacksTheme => {
   }
 }
 
-@withTheme
+@withTheme({ forwardRef: true })
 @FormComponent
 @Radium
 class Select extends React.PureComponent {
