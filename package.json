@@ -79,6 +79,7 @@
     "react-test-renderer": "16.4.2",
     "react-transition-group": "^2.2.1",
     "sinon": "^7.3.2",
+    "terser-webpack-plugin": "^2.3.2",
     "typescript": "^3.2.2",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "url-parse": "1.4.3",
