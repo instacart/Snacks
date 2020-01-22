@@ -61,7 +61,7 @@ const NavigationPills = props => {
 
   return (
     <ScrollTrack>
-      <div style={wrapperStyles} ref="pillsTrack" {...props.elementAttributes}>
+      <div style={wrapperStyles} {...props.elementAttributes}>
         {renderLabel()}
         <ul style={pillsContainerStyles} {...props.listItemAttributes}>
           {props.pills.map(renderPill)}
