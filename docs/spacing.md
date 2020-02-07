@@ -28,7 +28,7 @@ const styles = {
 
   // Padding/margin in one direction
   ...spacing.PADDING_LEFT_MD,          // => { paddingLeft: 24 }
-  ...spacing.MARGIN_TOP_MD,            // => { marginLeft: 24 }
+  ...spacing.MARGIN_TOP_MD,            // => { marginTop: 24 }
 
   // Padding/margin along one dimension
   ...spacing.PADDING_Y_XL,             // => { paddingTop: 64, paddingBottom: 64 }
