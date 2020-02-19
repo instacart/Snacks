@@ -267,7 +267,7 @@ exports[`renders Select correctly 1`] = `
                           "paddingTop": 16,
                         }
                       }
-                      tabIndex={0}
+                      tabIndex={-1}
                     >
                       <div
                         data-radium={true}
@@ -311,7 +311,7 @@ exports[`renders Select correctly 1`] = `
                           "paddingTop": 16,
                         }
                       }
-                      tabIndex={0}
+                      tabIndex={-1}
                     >
                       <div
                         data-radium={true}
@@ -642,7 +642,7 @@ exports[`renders Select w/ server error correctly 1`] = `
                           "paddingTop": 16,
                         }
                       }
-                      tabIndex={0}
+                      tabIndex={-1}
                     >
                       <div
                         data-radium={true}
@@ -686,7 +686,7 @@ exports[`renders Select w/ server error correctly 1`] = `
                           "paddingTop": 16,
                         }
                       }
-                      tabIndex={0}
+                      tabIndex={-1}
                     >
                       <div
                         data-radium={true}
@@ -1019,7 +1019,7 @@ exports[`renders disabled Select correctly 1`] = `
                           "paddingTop": 16,
                         }
                       }
-                      tabIndex={0}
+                      tabIndex={-1}
                     >
                       <div
                         data-radium={true}
@@ -1063,7 +1063,7 @@ exports[`renders disabled Select correctly 1`] = `
                           "paddingTop": 16,
                         }
                       }
-                      tabIndex={0}
+                      tabIndex={-1}
                     >
                       <div
                         data-radium={true}
@@ -1394,7 +1394,7 @@ exports[`renders invalid Select correctly 1`] = `
                           "paddingTop": 16,
                         }
                       }
-                      tabIndex={0}
+                      tabIndex={-1}
                     >
                       <div
                         data-radium={true}
@@ -1438,7 +1438,7 @@ exports[`renders invalid Select correctly 1`] = `
                           "paddingTop": 16,
                         }
                       }
-                      tabIndex={0}
+                      tabIndex={-1}
                     >
                       <div
                         data-radium={true}
@@ -1768,7 +1768,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                         "paddingTop": 16,
                       }
                     }
-                    tabIndex={0}
+                    tabIndex={-1}
                   >
                     <div
                       data-radium={true}

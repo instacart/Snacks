@@ -147,7 +147,7 @@ class Menu extends React.Component {
   }
 
   renderChildren() {
-    const { children, onSelect } = this.props
+    const { children, onSelect, ariaHidden } = this.props
     const { currentTabIndex } = this.state
     let index = 0
 
@@ -160,6 +160,7 @@ class Menu extends React.Component {
           focus: currentTabIndex === index,
           _onClick: onSelect,
           onMenuItemFocus: this.handleMenuItemFocus,
+          ...(ariaHidden && { tabIndex: -1 }),
         })
         index += 1
         return component
