@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { RadiumStyles } from '../..'
+import { Omit } from '../../utils'
 
 interface CallbackProps {
   atStart: boolean
