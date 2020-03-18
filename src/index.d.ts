@@ -23,7 +23,10 @@ import SelectionPills from './components/SelectionPills/SelectionPills'
 import Normalize from './styles/Normalize'
 import responsive from './styles/responsive'
 import Row from './components/Grid/Row'
-import ScrollTrack from './components/ScrollTrack/ScrollTrack'
+import ScrollTrack, {
+  WithEqualWidthTrackInjectedProps,
+  WithTrackProps,
+} from './components/ScrollTrack/ScrollTrack'
 import SetStyles from './styles/SetStyles'
 import spacing from './styles/spacing'
 import PhoneNumberField from './components/Forms/PhoneNumberField'
@@ -141,6 +144,8 @@ export {
   SelectionPill,
   SelectionPills,
   ScrollTrack,
+  WithTrackProps,
+  WithEqualWidthTrackInjectedProps,
   Menu,
   MenuItem,
   MenuDivider,
