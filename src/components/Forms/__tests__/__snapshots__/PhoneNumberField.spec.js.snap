@@ -115,10 +115,12 @@ exports[`renders correctly 1`] = `
                 disabled={false}
                 floatingLabelText="Phone Number"
                 getValue={[Function]}
+                guide={false}
                 hasError={false}
                 hintText="(555) 555-555"
                 id="test_id"
                 isValid={true}
+                keepCharPositions={true}
                 mask={
                   Array [
                     "(",
@@ -528,10 +530,12 @@ exports[`renders correctly with focus state 1`] = `
                 disabled={false}
                 floatingLabelText="Phone Number"
                 getValue={[Function]}
+                guide={false}
                 hasError={false}
                 hintText="(555) 555-555"
                 id="test_id"
                 isValid={true}
+                keepCharPositions={true}
                 mask={
                   Array [
                     "(",
@@ -987,10 +991,12 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                 disabled={false}
                 floatingLabelText="Phone Number"
                 getValue={[Function]}
+                guide={false}
                 hasError={false}
                 hintText="(555) 555-555"
                 id="test_id"
                 isValid={true}
+                keepCharPositions={true}
                 mask={
                   Array [
                     "(",

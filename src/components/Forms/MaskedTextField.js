@@ -120,6 +120,11 @@ export const maskedTextFieldPropTypes = {
   floatingLabelText: PropTypes.string,
   /** Sets width to 100% */
   fullWidth: PropTypes.bool,
+  /**
+   * Tells the input whether to be in guide mode or not.
+   * https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#guide
+   */
+  guide: PropTypes.bool,
   /** Sets width to 162px */
   halfWidth: PropTypes.bool,
   /** FormComponent error for validation */
@@ -132,6 +137,13 @@ export const maskedTextFieldPropTypes = {
   inputStyle: PropTypes.object,
   /** Set by FormComponent by default.   */
   isValid: PropTypes.bool,
+  /**
+   * Changes the behavour of the input mask.
+   * When `true`, adding or deleting characters will not affect the positions of existing characters.
+   * When `false`, adding characters causes existing characters to advance.
+   * https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#keepcharpositions
+   */
+  keepCharPositions: PropTypes.bool,
   /** onFocus callback */
   onFocus: PropTypes.func,
   /** onChange callback
@@ -170,6 +182,8 @@ class MaskedTextField extends React.Component {
     autoComplete: 'on',
     disabled: false,
     defaultValue: null,
+    guide: false,
+    keepCharPositions: true,
     onChange: NoOp,
     onKeyDown: NoOp,
     onFocus: NoOp,
@@ -237,10 +251,12 @@ class MaskedTextField extends React.Component {
       defaultValue,
       disabled,
       fullWidth,
+      guide,
       halfWidth,
       hasError,
       id: inputId,
       isValid,
+      keepCharPositions,
       name,
       required,
       serverError,
@@ -288,7 +304,7 @@ class MaskedTextField extends React.Component {
             mask={mask}
             pipe={pipe}
             id={inputId}
-            guide={false}
+            guide={guide}
             name={name}
             aria-required={required}
             aria-invalid={hasError}
@@ -301,7 +317,7 @@ class MaskedTextField extends React.Component {
             placeholder=""
             defaultValue={value !== undefined ? undefined : defaultValue}
             disabled={disabled}
-            keepCharPositions
+            keepCharPositions={keepCharPositions}
             type={this.props.type}
             render={(ref, props) => (
               <input

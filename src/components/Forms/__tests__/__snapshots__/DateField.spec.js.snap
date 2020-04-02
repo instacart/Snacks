@@ -106,10 +106,12 @@ exports[`renders correctly 1`] = `
                 disabled={false}
                 floatingLabelText="Date of Birth"
                 getValue={[Function]}
+                guide={false}
                 hasError={false}
                 hintText="MM/DD/YYYY"
                 id="test_id"
                 isValid={true}
+                keepCharPositions={true}
                 mask={
                   Array [
                     /\\\\d/,
@@ -504,10 +506,12 @@ exports[`renders correctly with focus state 1`] = `
                 disabled={false}
                 floatingLabelText="Date of Birth"
                 getValue={[Function]}
+                guide={false}
                 hasError={false}
                 hintText="MM/DD/YYYY"
                 id="test_id"
                 isValid={true}
+                keepCharPositions={true}
                 mask={
                   Array [
                     /\\\\d/,
@@ -948,10 +952,12 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                 disabled={false}
                 floatingLabelText="Date of Birth"
                 getValue={[Function]}
+                guide={false}
                 hasError={false}
                 hintText="MM/DD/YYYY"
                 id="test_id"
                 isValid={true}
+                keepCharPositions={true}
                 mask={
                   Array [
                     /\\\\d/,
