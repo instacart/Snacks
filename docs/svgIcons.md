@@ -21,7 +21,7 @@ const groups = {
   Arrows: ['arrowLeft', 'arrowUp', 'arrowRight', 'arrowDown', 'arrowLeftSmall', 'arrowUpSmall', 'arrowRightSmall', 'arrowDownSmall'],
   Symbols: ['checkmark', 'checkmarkCircle', 'checkmarkCircleDashed', 'plus', 'minus', 'x', 'xCircle', 'xSmall', 'no', 'info', 'help', 'warning'],
   UI: ['browse', 'filter', 'more', 'menu', 'scissors', 'search', 'sort', 'zoomIn', 'zoomOut', 'copy', 'delete', 'lock', 'unlock', 'skip', 'logout', 'gear', 'share'],
-  Miscellaneous: ['accessibility', 'bell', 'backgroundCheck', 'folder', 'gift', 'glitter', 'graph', 'lightbulb', 'lightning', 'photo', 'photoMissing', shield, 'ticket', 'trending', 'view'],
+  Miscellaneous: ['accessibility', 'bell', 'backgroundCheck', 'folder', 'gift', 'glitter', 'graph', 'lightbulb', 'lightning', 'photo', 'photoMissing', 'shield', 'ticket', 'trending', 'view'],
 }
 const wrapperStyles = {
   display: 'flex',
