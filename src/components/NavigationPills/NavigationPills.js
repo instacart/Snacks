@@ -30,69 +30,80 @@ const styles = {
   },
 }
 
-const NavigationPills = props => {
-  const renderLabel = () => {
-    if (!props.label) {
-      return
+class NavigationPills extends React.Component {
+  static propTypes = {
+    /** Any additonal props to add to the element (e.g. data attributes). */
+    elementAttributes: PropTypes.object,
+
+    /** Any additonal props to add to the inner ul element (e.g. data attributes). */
+    listItemAttributes: PropTypes.object,
+
+    /** array of pill objects */
+    pills: PropTypes.array,
+    /** Callback function called after pill click
+     * @param {SyntheticEvent} event The react `SyntheticEvent`
+     * @param {props} object All the props passed to the component
+     */
+    onPillClick: PropTypes.func,
+    /** optional label placed in front of pills */
+    label: PropTypes.string,
+    /** string matching the text of one of the pills. Determines which pill is active, if any */
+    activePill: PropTypes.string,
+  }
+
+  static defaultProps = {
+    elementAttributes: {},
+  }
+
+  render() {
+    const {
+      label,
+      activePill,
+      onPillClick,
+      pills,
+      elementAttributes,
+      listItemAttributes,
+    } = this.props
+
+    const renderLabel = () => {
+      if (!label) {
+        return
+      }
+
+      // eslint-disable-next-line jsx-a11y/label-has-associated-control
+      return <label style={styles.labelStyles}>{label}</label>
     }
 
-    // eslint-disable-next-line jsx-a11y/label-has-associated-control
-    return <label style={styles.labelStyles}>{props.label}</label>
-  }
+    const renderPill = (pill, idx) => {
+      return (
+        <NavigationPill
+          isActive={activePill === pill.text}
+          onClick={e => onPillClick(e, pill)}
+          text={pill.text}
+          key={`pill-${idx}`}
+          elementAttributes={pill.elementAttributes}
+          anchorItemAttributes={pill.anchorItemAttributes}
+        />
+      )
+    }
 
-  const renderPill = (pill, idx) => {
+    const { pillsContainerStyles, wrapperStyles } = styles
+
+    if (!pills || pills.length <= 1) {
+      return null
+    }
+
     return (
-      <NavigationPill
-        isActive={props.activePill === pill.text}
-        onClick={e => props.onPillClick(e, pill)}
-        text={pill.text}
-        key={`pill-${idx}`}
-        elementAttributes={pill.elementAttributes}
-        anchorItemAttributes={pill.anchorItemAttributes}
-      />
+      <ScrollTrack>
+        <div style={wrapperStyles} ref="pillsTrack" {...elementAttributes}>
+          {renderLabel()}
+          <ul style={pillsContainerStyles} {...listItemAttributes}>
+            {pills.map(renderPill)}
+          </ul>
+        </div>
+      </ScrollTrack>
     )
   }
-
-  const { pillsContainerStyles, wrapperStyles } = styles
-
-  if (!props.pills || props.pills.length <= 1) {
-    return null
-  }
-
-  return (
-    <ScrollTrack>
-      <div style={wrapperStyles} ref="pillsTrack" {...props.elementAttributes}>
-        {renderLabel()}
-        <ul style={pillsContainerStyles} {...props.listItemAttributes}>
-          {props.pills.map(renderPill)}
-        </ul>
-      </div>
-    </ScrollTrack>
-  )
-}
-
-NavigationPills.propTypes = {
-  /** Any additonal props to add to the element (e.g. data attributes). */
-  elementAttributes: PropTypes.object,
-
-  /** Any additonal props to add to the inner ul element (e.g. data attributes). */
-  listItemAttributes: PropTypes.object,
-
-  /** array of pill objects */
-  pills: PropTypes.array,
-  /** Callback function called after pill click
-   * @param {SyntheticEvent} event The react `SyntheticEvent`
-   * @param {props} object All the props passed to the component
-   */
-  onPillClick: PropTypes.func,
-  /** optional label placed in front of pills */
-  label: PropTypes.string,
-  /** string matching the text of one of the pills. Determines which pill is active, if any */
-  activePill: PropTypes.string,
-}
-
-NavigationPills.defaultProps = {
-  elementAttributes: {},
 }
 
 export default Radium(NavigationPills)
