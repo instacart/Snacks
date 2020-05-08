@@ -94,9 +94,11 @@ exports[`renders correctly 1`] = `
               disabled={false}
               floatingLabelText="SSN"
               getValue={[Function]}
+              guide={false}
               hasError={false}
               id="test_id"
               isValid={true}
+              keepCharPositions={true}
               mask={
                 Array [
                   /\\\\d/,
@@ -475,9 +477,11 @@ exports[`renders correctly with focus state 1`] = `
               disabled={false}
               floatingLabelText="SSN"
               getValue={[Function]}
+              guide={false}
               hasError={false}
               id="test_id"
               isValid={true}
+              keepCharPositions={true}
               mask={
                 Array [
                   /\\\\d/,
@@ -888,9 +892,11 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
               disabled={false}
               floatingLabelText="SSN"
               getValue={[Function]}
+              guide={false}
               hasError={false}
               id="test_id"
               isValid={true}
+              keepCharPositions={true}
               mask={
                 Array [
                   /\\\\d/,
