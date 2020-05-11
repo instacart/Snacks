@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Radium, { Style } from 'radium'
+import Radium, { Style } from '@instacart/radium'
 import Normalize from './Normalize'
 import GlobalTheme from './GlobalTheme'
 

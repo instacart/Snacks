@@ -1,4 +1,4 @@
-import Radium from 'radium'
+import Radium from '@instacart/radium'
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { colors } from '../../styles'

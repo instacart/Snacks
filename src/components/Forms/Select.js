@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
+import Radium from '@instacart/radium'
 import { colors } from '../../styles'
 import FormComponent from './FormComponent'
 import DropdownMenu from '../Menus/DropdownMenu'

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
+import Radium from '@instacart/radium'
 import Icon from '../Icon/Icon'
 import withTheme from '../../styles/themer/withTheme'
 import { themePropTypes } from '../../styles/themer/utils'

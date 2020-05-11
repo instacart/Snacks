@@ -3,7 +3,7 @@
  *
  * @author [Dominic Cocchiarella ](https://github.com/docchia)
  */
-import Radium from 'radium'
+import Radium from '@instacart/radium'
 import React from 'react'
 import PropTypes from 'prop-types'
 import responsive from '../../styles/responsive'

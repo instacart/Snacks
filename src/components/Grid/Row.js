@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unused-prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
+import Radium from '@instacart/radium'
 import responsive from '../../styles/responsive'
 import { supportsCSSGrid } from '../../utils/detectFeature'
 

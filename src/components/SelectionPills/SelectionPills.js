@@ -1,5 +1,5 @@
 import React from 'react'
-import Radium from 'radium'
+import Radium from '@instacart/radium'
 import PropTypes from 'prop-types'
 import ScrollTrack from '../ScrollTrack/ScrollTrack'
 import SelectionPill from './SelectionPill'

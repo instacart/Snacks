@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { StyleRoot } from 'radium'
+import { StyleRoot } from '@instacart/radium'
 import { mount } from 'enzyme'
 import { spy, stub } from 'sinon'
 import Form from '../Form'

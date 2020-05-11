@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import isEqual from 'lodash.isequal'
-import Radium from 'radium'
+import Radium from '@instacart/radium'
 import PropTypes from 'prop-types'
 import componentStyles from './ScrollTrackStyles'
 import equalWidthTrack from './equalWidthTrack'

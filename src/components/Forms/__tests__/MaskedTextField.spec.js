@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleRoot } from 'radium'
+import { StyleRoot } from '@instacart/radium'
 import { mount } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import renderer from 'react-test-renderer'

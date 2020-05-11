@@ -54,6 +54,7 @@
     "@babel/preset-react": "^7.0.0",
     "@instacart/eslint-config": "0.2.0",
     "@instacart/prettier-config": "0.1.1",
+    "@instacart/radium": "^0.26.1",
     "@instacart/tsconfig": "0.1.1",
     "@svgr/cli": "4.3.0",
     "@svgr/webpack": "4.3.0",
@@ -72,7 +73,6 @@
     "jest": "^24.8.0",
     "prettier": "1.16.4",
     "prompt": "^1.0.0",
-    "radium": "^0.22.0",
     "react": "16.4.2",
     "react-dom": "16.4.2",
     "react-styleguidist": "9.0.9",
@@ -103,8 +103,8 @@
     "validator": "^9.1.1"
   },
   "peerDependencies": {
+    "@instacart/radium": "^0.26.1",
     "prop-types": "^15.0.0 || ^16.0.0",
-    "radium": ">=0.18.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-transition-group": "^2.2.1"
