@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { RadiumStyles } from '../..'
+import { RadiumStyles, Omit } from '../..'
 
 interface CallbackProps {
   atStart: boolean
@@ -64,6 +64,34 @@ export interface ScrollTrackProps {
   }
 }
 
-declare const ScrollTrack: React.ComponentClass<ScrollTrackProps>
+interface TrackProps {
+  showLeftArrow: boolean
+  showRightArrow: boolean
+  left: number
+  isSliding: boolean
+  parentWidth: number | false
+  trackWidth: number | false
+  trackBounds: DOMRect | false
+}
+
+export interface WithEqualWidthTrackInjectedProps {
+  startIndex: number
+  lastIndex: number
+  trackProps: TrackProps
+}
+
+export interface WithTrackProps extends TrackProps {}
+
+type GetChildWidth = (arguments: { trackProps: TrackProps }) => number
+
+type EqualWidthTrack = (
+  childWidth: number | GetChildWidth
+) => <T extends WithEqualWidthTrackInjectedProps>(
+  wrappedComponent: React.ComponentType<T>
+) => React.ComponentType<Omit<T, keyof WithEqualWidthTrackInjectedProps>>
+
+declare const ScrollTrack: React.ComponentClass<ScrollTrackProps> & {
+  equalWidthTrack: EqualWidthTrack
+}
 
 export default ScrollTrack

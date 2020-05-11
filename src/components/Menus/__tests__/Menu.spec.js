@@ -58,3 +58,22 @@ it('should fire onSelect when a MenuItem is selected', () => {
     .simulate('click')
   expect(onSelect.calledOnce).toBe(true)
 })
+
+it('should set tabIndex to -1 for children when aria-hidden is true', () => {
+  const wrapper = mount(
+    <StyleRoot>
+      <div>
+        <Menu ariaHidden>
+          <MenuItem label="First" value="First" />
+        </Menu>
+      </div>
+    </StyleRoot>
+  )
+
+  expect(
+    wrapper
+      .find(MenuItem)
+      .first()
+      .prop('tabIndex')
+  ).toBe(-1)
+})

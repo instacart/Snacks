@@ -8,7 +8,7 @@ export interface RowProps {
   forceFullPage?: boolean
 
   /** Maximum number of columns this Row should grow to as screen width increases. Cannot exceed 14. */
-  maxColumns?: boolean
+  maxColumns?: number
 
   style?: RadiumStyles
 }
