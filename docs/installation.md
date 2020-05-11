@@ -24,7 +24,7 @@ If you'd like to use animations: react-transition-group v2.2
 
 #### with yarn
 ```sh
-yarn add radium
+yarn add @instacart/radium
 yarn add prop-types
 yarn add react
 yarn add react-dom
@@ -33,7 +33,7 @@ yarn add react-transition-group
 
 #### with npm
 ```sh
-npm install radium
+npm install @instacart/radium
 npm install prop-types
 npm install react
 npm install react-dom
