@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
+import Radium from '@instacart/radium'
 import MaskedTextInput from 'react-text-mask'
 import { colors } from '../../styles'
 import withTheme from '../../styles/themer/withTheme'

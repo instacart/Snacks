@@ -2,45 +2,21 @@
 
 exports[`renders correctly 1`] = `
 <StyleRoot>
-  <div
-    data-radium={true}
-  >
+  <ForwardRef>
     <div
-      key=".0"
+      data-radium={true}
     >
-      <DateField
-        floatingLabelText="Date of Birth"
-        hintText="MM/DD/YYYY"
-        id="test_id"
-        name="test"
+      <div
+        key=".0"
       >
-        <ForwardRef(withTheme(FormComponent))
+        <DateField
           floatingLabelText="Date of Birth"
-          getValue={[Function]}
           hintText="MM/DD/YYYY"
           id="test_id"
-          mask={
-            Array [
-              /\\\\d/,
-              /\\\\d/,
-              "/",
-              /\\\\d/,
-              /\\\\d/,
-              "/",
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-            ]
-          }
-          maskHint="MM/DD/YYYY"
           name="test"
-          pipe={[Function]}
-          type="tel"
         >
-          <withTheme(FormComponent)
+          <ForwardRef(withTheme(FormComponent))
             floatingLabelText="Date of Birth"
-            forwardedRef={[Function]}
             getValue={[Function]}
             hintText="MM/DD/YYYY"
             id="test_id"
@@ -63,8 +39,9 @@ exports[`renders correctly 1`] = `
             pipe={[Function]}
             type="tel"
           >
-            <FormComponent
+            <withTheme(FormComponent)
               floatingLabelText="Date of Birth"
+              forwardedRef={[Function]}
               getValue={[Function]}
               hintText="MM/DD/YYYY"
               id="test_id"
@@ -85,31 +62,13 @@ exports[`renders correctly 1`] = `
               maskHint="MM/DD/YYYY"
               name="test"
               pipe={[Function]}
-              snacksTheme={
-                Object {
-                  "colors": Object {
-                    "action": "#43B02A",
-                    "actionHover": "#177D05",
-                    "primaryBackground": "#FFFFFF",
-                    "primaryForeground": "#43B02A",
-                    "secondaryBackground": "#43B02A",
-                    "secondaryForeground": "#FFFFFF",
-                    "secondaryForegroundFocus": "#757575",
-                  },
-                }
-              }
               type="tel"
             >
-              <MaskedTextField
-                autoComplete="on"
-                defaultValue={null}
-                disabled={false}
+              <FormComponent
                 floatingLabelText="Date of Birth"
                 getValue={[Function]}
-                hasError={false}
                 hintText="MM/DD/YYYY"
                 id="test_id"
-                isValid={true}
                 mask={
                   Array [
                     /\\\\d/,
@@ -126,12 +85,7 @@ exports[`renders correctly 1`] = `
                 }
                 maskHint="MM/DD/YYYY"
                 name="test"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
                 pipe={[Function]}
-                serverError={null}
                 snacksTheme={
                   Object {
                     "colors": Object {
@@ -147,298 +101,448 @@ exports[`renders correctly 1`] = `
                 }
                 type="tel"
               >
-                <div
-                  data-radium={true}
-                  style={
+                <withRadiumContexts(MaskedTextField)
+                  floatingLabelText="Date of Birth"
+                  getValue={[Function]}
+                  hasError={false}
+                  hintText="MM/DD/YYYY"
+                  id="test_id"
+                  isValid={true}
+                  mask={
+                    Array [
+                      /\\\\d/,
+                      /\\\\d/,
+                      "/",
+                      /\\\\d/,
+                      /\\\\d/,
+                      "/",
+                      /\\\\d/,
+                      /\\\\d/,
+                      /\\\\d/,
+                      /\\\\d/,
+                    ]
+                  }
+                  maskHint="MM/DD/YYYY"
+                  name="test"
+                  pipe={[Function]}
+                  serverError={null}
+                  snacksTheme={
                     Object {
-                      "cursor": "auto",
-                      "display": "inline-block",
-                      "position": "relative",
-                      "width": 343,
+                      "colors": Object {
+                        "action": "#43B02A",
+                        "actionHover": "#177D05",
+                        "primaryBackground": "#FFFFFF",
+                        "primaryForeground": "#43B02A",
+                        "secondaryBackground": "#43B02A",
+                        "secondaryForeground": "#FFFFFF",
+                        "secondaryForegroundFocus": "#757575",
+                      },
                     }
                   }
+                  type="tel"
                 >
-                  <div
-                    data-radium={true}
-                    key=".1"
-                    style={
+                  <MaskedTextField
+                    autoComplete="on"
+                    defaultValue={null}
+                    disabled={false}
+                    floatingLabelText="Date of Birth"
+                    getValue={[Function]}
+                    hasError={false}
+                    hintText="MM/DD/YYYY"
+                    id="test_id"
+                    isValid={true}
+                    mask={
+                      Array [
+                        /\\\\d/,
+                        /\\\\d/,
+                        "/",
+                        /\\\\d/,
+                        /\\\\d/,
+                        "/",
+                        /\\\\d/,
+                        /\\\\d/,
+                        /\\\\d/,
+                        /\\\\d/,
+                      ]
+                    }
+                    maskHint="MM/DD/YYYY"
+                    name="test"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    pipe={[Function]}
+                    serverError={null}
+                    snacksTheme={
                       Object {
-                        "borderRadius": 4,
-                        "position": "relative",
+                        "colors": Object {
+                          "action": "#43B02A",
+                          "actionHover": "#177D05",
+                          "primaryBackground": "#FFFFFF",
+                          "primaryForeground": "#43B02A",
+                          "secondaryBackground": "#43B02A",
+                          "secondaryForeground": "#FFFFFF",
+                          "secondaryForegroundFocus": "#757575",
+                        },
                       }
                     }
-                  >
-                    <withTheme(RadiumEnhancer)
-                      disabled={false}
-                      float={false}
-                      hasError={false}
-                      htmlFor="test_id"
-                      key=".0"
-                      snacksTheme={
-                        Object {
-                          "colors": Object {
-                            "action": "#43B02A",
-                            "actionHover": "#177D05",
-                            "primaryBackground": "#FFFFFF",
-                            "primaryForeground": "#43B02A",
-                            "secondaryBackground": "#43B02A",
-                            "secondaryForeground": "#FFFFFF",
-                            "secondaryForegroundFocus": "#757575",
-                          },
-                        }
+                    styleKeeperContext={
+                      StyleKeeper {
+                        "_cssSet": Object {},
+                        "_listeners": Array [
+                          [Function],
+                        ],
+                        "_userAgent": undefined,
                       }
+                    }
+                    type="tel"
+                  >
+                    <div
+                      data-radium={true}
                       style={
                         Object {
-                          "pointerEvents": "none",
+                          "cursor": "auto",
+                          "display": "inline-block",
+                          "position": "relative",
+                          "width": 343,
                         }
                       }
-                      text="Date of Birth"
-                    >
-                      <FloatingLabel
-                        disabled={false}
-                        float={false}
-                        hasError={false}
-                        htmlFor="test_id"
-                        snacksTheme={
-                          Object {
-                            "colors": Object {
-                              "action": "#43B02A",
-                              "actionHover": "#177D05",
-                              "primaryBackground": "#FFFFFF",
-                              "primaryForeground": "#43B02A",
-                              "secondaryBackground": "#43B02A",
-                              "secondaryForeground": "#FFFFFF",
-                              "secondaryForegroundFocus": "#757575",
-                            },
-                          }
-                        }
-                        style={
-                          Object {
-                            "pointerEvents": "none",
-                          }
-                        }
-                        text="Date of Birth"
-                      >
-                        <label
-                          data-radium={true}
-                          htmlFor="test_id"
-                          style={
-                            Object {
-                              "color": "#757575",
-                              "cursor": "text",
-                              "fontSize": "16px",
-                              "marginBottom": 0,
-                              "marginLeft": 0,
-                              "marginRight": 0,
-                              "marginTop": 0,
-                              "pointerEvents": "none",
-                              "position": "absolute",
-                              "transform": "scale(1) translate(8px, 17px)",
-                              "transformOrigin": "left top",
-                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                              "userSelect": "none",
-                              "zIndex": 1,
-                            }
-                          }
-                        >
-                          Date of Birth
-                        </label>
-                      </FloatingLabel>
-                    </withTheme(RadiumEnhancer)>
-                    <TextFieldHint
-                      disabled={false}
-                      inputId="hint_test_id"
-                      key=".1"
-                      text="MM/DD/YYYY"
                     >
                       <div
                         data-radium={true}
-                        id="hint_test_id"
+                        key=".1"
                         style={
                           Object {
-                            "color": "#BDBDBD",
-                            "cursor": "inherit",
-                            "fontSize": "16px",
-                            "opacity": 0,
-                            "pointerEvents": "none",
-                            "position": "absolute",
-                            "transform": "scale(1) translate(9px, 26px)",
-                            "transformOrigin": "left top",
-                            "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                            "visibility": "hidden",
-                            "zIndex": 1,
+                            "borderRadius": 4,
+                            "position": "relative",
                           }
                         }
                       >
-                        MM/DD/YYYY
-                      </div>
-                    </TextFieldHint>
-                    <t
-                      aria-describedby="hint_test_id"
-                      aria-invalid={false}
-                      autoComplete="on"
-                      defaultValue={null}
-                      disabled={false}
-                      guide={false}
-                      id="test_id"
-                      keepCharPositions={true}
-                      key=".2"
-                      mask={
-                        Array [
-                          /\\\\d/,
-                          /\\\\d/,
-                          "/",
-                          /\\\\d/,
-                          /\\\\d/,
-                          "/",
-                          /\\\\d/,
-                          /\\\\d/,
-                          /\\\\d/,
-                          /\\\\d/,
-                        ]
-                      }
-                      name="test"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      pipe={[Function]}
-                      placeholder=""
-                      render={[Function]}
-                      type="tel"
-                    >
-                      <input
-                        aria-describedby="hint_test_id"
-                        aria-invalid={false}
-                        autoComplete="on"
-                        defaultValue={null}
-                        disabled={false}
-                        id="test_id"
-                        name="test"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder=""
-                        style={
-                          Object {
-                            "WebkitOpacity": 1,
-                            "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-                            "backgroundColor": "#FFFFFF",
-                            "border": "solid 1px #BDBDBD",
-                            "borderRadius": 4,
-                            "boxSizing": "border-box",
-                            "color": "#424242",
-                            "fontSize": 16,
-                            "height": 56,
-                            "marginBottom": 0,
-                            "marginLeft": 0,
-                            "marginRight": 0,
-                            "marginTop": 0,
-                            "outline": "none",
-                            "paddingBottom": 8,
-                            "paddingLeft": 8,
-                            "paddingRight": 8,
-                            "paddingTop": "25px",
-                            "position": "relative",
-                            "width": "100%",
+                        <withTheme(withRadiumContexts(FloatingLabel))
+                          disabled={false}
+                          float={false}
+                          hasError={false}
+                          htmlFor="test_id"
+                          key=".0"
+                          snacksTheme={
+                            Object {
+                              "colors": Object {
+                                "action": "#43B02A",
+                                "actionHover": "#177D05",
+                                "primaryBackground": "#FFFFFF",
+                                "primaryForeground": "#43B02A",
+                                "secondaryBackground": "#43B02A",
+                                "secondaryForeground": "#FFFFFF",
+                                "secondaryForegroundFocus": "#757575",
+                              },
+                            }
                           }
-                        }
-                        type="tel"
+                          style={
+                            Object {
+                              "pointerEvents": "none",
+                            }
+                          }
+                          text="Date of Birth"
+                        >
+                          <withRadiumContexts(FloatingLabel)
+                            disabled={false}
+                            float={false}
+                            hasError={false}
+                            htmlFor="test_id"
+                            snacksTheme={
+                              Object {
+                                "colors": Object {
+                                  "action": "#43B02A",
+                                  "actionHover": "#177D05",
+                                  "primaryBackground": "#FFFFFF",
+                                  "primaryForeground": "#43B02A",
+                                  "secondaryBackground": "#43B02A",
+                                  "secondaryForeground": "#FFFFFF",
+                                  "secondaryForegroundFocus": "#757575",
+                                },
+                              }
+                            }
+                            style={
+                              Object {
+                                "pointerEvents": "none",
+                              }
+                            }
+                            text="Date of Birth"
+                          >
+                            <FloatingLabel
+                              disabled={false}
+                              float={false}
+                              hasError={false}
+                              htmlFor="test_id"
+                              snacksTheme={
+                                Object {
+                                  "colors": Object {
+                                    "action": "#43B02A",
+                                    "actionHover": "#177D05",
+                                    "primaryBackground": "#FFFFFF",
+                                    "primaryForeground": "#43B02A",
+                                    "secondaryBackground": "#43B02A",
+                                    "secondaryForeground": "#FFFFFF",
+                                    "secondaryForegroundFocus": "#757575",
+                                  },
+                                }
+                              }
+                              style={
+                                Object {
+                                  "pointerEvents": "none",
+                                }
+                              }
+                              styleKeeperContext={
+                                StyleKeeper {
+                                  "_cssSet": Object {},
+                                  "_listeners": Array [
+                                    [Function],
+                                  ],
+                                  "_userAgent": undefined,
+                                }
+                              }
+                              text="Date of Birth"
+                            >
+                              <label
+                                data-radium={true}
+                                htmlFor="test_id"
+                                style={
+                                  Object {
+                                    "color": "#757575",
+                                    "cursor": "text",
+                                    "fontSize": "16px",
+                                    "marginBottom": 0,
+                                    "marginLeft": 0,
+                                    "marginRight": 0,
+                                    "marginTop": 0,
+                                    "pointerEvents": "none",
+                                    "position": "absolute",
+                                    "transform": "scale(1) translate(8px, 17px)",
+                                    "transformOrigin": "left top",
+                                    "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                    "userSelect": "none",
+                                    "zIndex": 1,
+                                  }
+                                }
+                              >
+                                Date of Birth
+                              </label>
+                            </FloatingLabel>
+                          </withRadiumContexts(FloatingLabel)>
+                        </withTheme(withRadiumContexts(FloatingLabel))>
+                        <withRadiumContexts(TextFieldHint)
+                          disabled={false}
+                          inputId="hint_test_id"
+                          key=".1"
+                          text="MM/DD/YYYY"
+                        >
+                          <TextFieldHint
+                            disabled={false}
+                            inputId="hint_test_id"
+                            styleKeeperContext={
+                              StyleKeeper {
+                                "_cssSet": Object {},
+                                "_listeners": Array [
+                                  [Function],
+                                ],
+                                "_userAgent": undefined,
+                              }
+                            }
+                            text="MM/DD/YYYY"
+                          >
+                            <div
+                              data-radium={true}
+                              id="hint_test_id"
+                              style={
+                                Object {
+                                  "color": "#BDBDBD",
+                                  "cursor": "inherit",
+                                  "fontSize": "16px",
+                                  "opacity": 0,
+                                  "pointerEvents": "none",
+                                  "position": "absolute",
+                                  "transform": "scale(1) translate(9px, 26px)",
+                                  "transformOrigin": "left top",
+                                  "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                  "visibility": "hidden",
+                                  "zIndex": 1,
+                                }
+                              }
+                            >
+                              MM/DD/YYYY
+                            </div>
+                          </TextFieldHint>
+                        </withRadiumContexts(TextFieldHint)>
+                        <t
+                          aria-describedby="hint_test_id"
+                          aria-invalid={false}
+                          autoComplete="on"
+                          defaultValue={null}
+                          disabled={false}
+                          guide={false}
+                          id="test_id"
+                          keepCharPositions={true}
+                          key=".2"
+                          mask={
+                            Array [
+                              /\\\\d/,
+                              /\\\\d/,
+                              "/",
+                              /\\\\d/,
+                              /\\\\d/,
+                              "/",
+                              /\\\\d/,
+                              /\\\\d/,
+                              /\\\\d/,
+                              /\\\\d/,
+                            ]
+                          }
+                          name="test"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          pipe={[Function]}
+                          placeholder=""
+                          render={[Function]}
+                          type="tel"
+                        >
+                          <input
+                            aria-describedby="hint_test_id"
+                            aria-invalid={false}
+                            autoComplete="on"
+                            defaultValue={null}
+                            disabled={false}
+                            id="test_id"
+                            name="test"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder=""
+                            style={
+                              Object {
+                                "WebkitOpacity": 1,
+                                "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+                                "backgroundColor": "#FFFFFF",
+                                "border": "solid 1px #BDBDBD",
+                                "borderRadius": 4,
+                                "boxSizing": "border-box",
+                                "color": "#424242",
+                                "fontSize": 16,
+                                "height": 56,
+                                "marginBottom": 0,
+                                "marginLeft": 0,
+                                "marginRight": 0,
+                                "marginTop": 0,
+                                "outline": "none",
+                                "paddingBottom": 8,
+                                "paddingLeft": 8,
+                                "paddingRight": 8,
+                                "paddingTop": "25px",
+                                "position": "relative",
+                                "width": "100%",
+                              }
+                            }
+                            type="tel"
+                          />
+                        </t>
+                      </div>
+                      <withRadiumContexts(ValidationError)
+                        inputId="test_id"
+                        key=".2"
+                        show={false}
+                      >
+                        <ValidationError
+                          inputId="test_id"
+                          show={false}
+                          styleKeeperContext={
+                            StyleKeeper {
+                              "_cssSet": Object {},
+                              "_listeners": Array [
+                                [Function],
+                              ],
+                              "_userAgent": undefined,
+                            }
+                          }
+                        >
+                          <div
+                            aria-atomic={true}
+                            aria-live="assertive"
+                            data-radium={true}
+                            id="error_test_id"
+                            style={
+                              Object {
+                                "color": "#B30029",
+                                "display": "none",
+                                "fontSize": "12px",
+                                "marginLeft": "1px",
+                                "marginTop": "2px",
+                                "opacity": "0",
+                                "pointerEvents": "none",
+                                "textAlign": "left",
+                                "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              }
+                            }
+                          />
+                        </ValidationError>
+                      </withRadiumContexts(ValidationError)>
+                      <HelperText
+                        key=".3"
                       />
-                    </t>
-                  </div>
-                  <ValidationError
-                    inputId="test_id"
-                    key=".2"
-                    show={false}
-                  >
-                    <div
-                      aria-atomic={true}
-                      aria-live="assertive"
-                      data-radium={true}
-                      id="error_test_id"
-                      style={
-                        Object {
-                          "color": "#B30029",
-                          "display": "none",
-                          "fontSize": "12px",
-                          "marginLeft": "1px",
-                          "marginTop": "2px",
-                          "opacity": "0",
-                          "pointerEvents": "none",
-                          "textAlign": "left",
-                          "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        }
-                      }
-                    />
-                  </ValidationError>
-                  <HelperText
-                    key=".3"
-                  />
-                </div>
-              </MaskedTextField>
-            </FormComponent>
-          </withTheme(FormComponent)>
-        </ForwardRef(withTheme(FormComponent))>
-      </DateField>
-    </div>
-    <StyleSheet
-      key=".1"
-    >
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
+                    </div>
+                  </MaskedTextField>
+                </withRadiumContexts(MaskedTextField)>
+              </FormComponent>
+            </withTheme(FormComponent)>
+          </ForwardRef(withTheme(FormComponent))>
+        </DateField>
+      </div>
+      <withRadiumContexts(StyleSheet)
+        key=".1"
+      >
+        <StyleSheet
+          styleKeeperContext={
+            StyleKeeper {
+              "_cssSet": Object {},
+              "_listeners": Array [
+                [Function],
+              ],
+              "_userAgent": undefined,
+            }
           }
-        }
-      />
-    </StyleSheet>
-  </div>
+        >
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
+          />
+        </StyleSheet>
+      </withRadiumContexts(StyleSheet)>
+    </div>
+  </ForwardRef>
 </StyleRoot>
 `;
 
 exports[`renders correctly with focus state 1`] = `
 <StyleRoot>
-  <div
-    data-radium={true}
-  >
+  <ForwardRef>
     <div
-      key=".0"
+      data-radium={true}
     >
-      <DateField
-        floatingLabelText="Date of Birth"
-        hintText="MM/DD/YYYY"
-        id="test_id"
-        name="test"
+      <div
+        key=".0"
       >
-        <ForwardRef(withTheme(FormComponent))
+        <DateField
           floatingLabelText="Date of Birth"
-          getValue={[Function]}
           hintText="MM/DD/YYYY"
           id="test_id"
-          mask={
-            Array [
-              /\\\\d/,
-              /\\\\d/,
-              "/",
-              /\\\\d/,
-              /\\\\d/,
-              "/",
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-            ]
-          }
-          maskHint="MM/DD/YYYY"
           name="test"
-          pipe={[Function]}
-          type="tel"
         >
-          <withTheme(FormComponent)
+          <ForwardRef(withTheme(FormComponent))
             floatingLabelText="Date of Birth"
-            forwardedRef={[Function]}
             getValue={[Function]}
             hintText="MM/DD/YYYY"
             id="test_id"
@@ -461,8 +565,9 @@ exports[`renders correctly with focus state 1`] = `
             pipe={[Function]}
             type="tel"
           >
-            <FormComponent
+            <withTheme(FormComponent)
               floatingLabelText="Date of Birth"
+              forwardedRef={[Function]}
               getValue={[Function]}
               hintText="MM/DD/YYYY"
               id="test_id"
@@ -483,31 +588,13 @@ exports[`renders correctly with focus state 1`] = `
               maskHint="MM/DD/YYYY"
               name="test"
               pipe={[Function]}
-              snacksTheme={
-                Object {
-                  "colors": Object {
-                    "action": "#43B02A",
-                    "actionHover": "#177D05",
-                    "primaryBackground": "#FFFFFF",
-                    "primaryForeground": "#43B02A",
-                    "secondaryBackground": "#43B02A",
-                    "secondaryForeground": "#FFFFFF",
-                    "secondaryForegroundFocus": "#757575",
-                  },
-                }
-              }
               type="tel"
             >
-              <MaskedTextField
-                autoComplete="on"
-                defaultValue={null}
-                disabled={false}
+              <FormComponent
                 floatingLabelText="Date of Birth"
                 getValue={[Function]}
-                hasError={false}
                 hintText="MM/DD/YYYY"
                 id="test_id"
-                isValid={true}
                 mask={
                   Array [
                     /\\\\d/,
@@ -524,12 +611,7 @@ exports[`renders correctly with focus state 1`] = `
                 }
                 maskHint="MM/DD/YYYY"
                 name="test"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
                 pipe={[Function]}
-                serverError={null}
                 snacksTheme={
                   Object {
                     "colors": Object {
@@ -545,311 +627,451 @@ exports[`renders correctly with focus state 1`] = `
                 }
                 type="tel"
               >
-                <div
-                  data-radium={true}
-                  style={
+                <withRadiumContexts(MaskedTextField)
+                  floatingLabelText="Date of Birth"
+                  getValue={[Function]}
+                  hasError={false}
+                  hintText="MM/DD/YYYY"
+                  id="test_id"
+                  isValid={true}
+                  mask={
+                    Array [
+                      /\\\\d/,
+                      /\\\\d/,
+                      "/",
+                      /\\\\d/,
+                      /\\\\d/,
+                      "/",
+                      /\\\\d/,
+                      /\\\\d/,
+                      /\\\\d/,
+                      /\\\\d/,
+                    ]
+                  }
+                  maskHint="MM/DD/YYYY"
+                  name="test"
+                  pipe={[Function]}
+                  serverError={null}
+                  snacksTheme={
                     Object {
-                      "cursor": "auto",
-                      "display": "inline-block",
-                      "position": "relative",
-                      "width": 343,
+                      "colors": Object {
+                        "action": "#43B02A",
+                        "actionHover": "#177D05",
+                        "primaryBackground": "#FFFFFF",
+                        "primaryForeground": "#43B02A",
+                        "secondaryBackground": "#43B02A",
+                        "secondaryForeground": "#FFFFFF",
+                        "secondaryForegroundFocus": "#757575",
+                      },
                     }
                   }
+                  type="tel"
                 >
-                  <div
-                    data-radium={true}
-                    key=".1"
-                    style={
+                  <MaskedTextField
+                    autoComplete="on"
+                    defaultValue={null}
+                    disabled={false}
+                    floatingLabelText="Date of Birth"
+                    getValue={[Function]}
+                    hasError={false}
+                    hintText="MM/DD/YYYY"
+                    id="test_id"
+                    isValid={true}
+                    mask={
+                      Array [
+                        /\\\\d/,
+                        /\\\\d/,
+                        "/",
+                        /\\\\d/,
+                        /\\\\d/,
+                        "/",
+                        /\\\\d/,
+                        /\\\\d/,
+                        /\\\\d/,
+                        /\\\\d/,
+                      ]
+                    }
+                    maskHint="MM/DD/YYYY"
+                    name="test"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    pipe={[Function]}
+                    serverError={null}
+                    snacksTheme={
                       Object {
-                        "borderRadius": 4,
-                        "position": "relative",
+                        "colors": Object {
+                          "action": "#43B02A",
+                          "actionHover": "#177D05",
+                          "primaryBackground": "#FFFFFF",
+                          "primaryForeground": "#43B02A",
+                          "secondaryBackground": "#43B02A",
+                          "secondaryForeground": "#FFFFFF",
+                          "secondaryForegroundFocus": "#757575",
+                        },
                       }
                     }
-                  >
-                    <withTheme(RadiumEnhancer)
-                      disabled={false}
-                      float={true}
-                      hasError={false}
-                      htmlFor="test_id"
-                      isActive={true}
-                      key=".0"
-                      snacksTheme={
-                        Object {
-                          "colors": Object {
-                            "action": "#43B02A",
-                            "actionHover": "#177D05",
-                            "primaryBackground": "#FFFFFF",
-                            "primaryForeground": "#43B02A",
-                            "secondaryBackground": "#43B02A",
-                            "secondaryForeground": "#FFFFFF",
-                            "secondaryForegroundFocus": "#757575",
-                          },
-                        }
+                    styleKeeperContext={
+                      StyleKeeper {
+                        "_cssSet": Object {},
+                        "_listeners": Array [
+                          [Function],
+                        ],
+                        "_userAgent": undefined,
                       }
+                    }
+                    type="tel"
+                  >
+                    <div
+                      data-radium={true}
                       style={
                         Object {
-                          "pointerEvents": "none",
+                          "cursor": "auto",
+                          "display": "inline-block",
+                          "position": "relative",
+                          "width": 343,
                         }
                       }
-                      text="Date of Birth"
-                    >
-                      <FloatingLabel
-                        disabled={false}
-                        float={true}
-                        hasError={false}
-                        htmlFor="test_id"
-                        isActive={true}
-                        snacksTheme={
-                          Object {
-                            "colors": Object {
-                              "action": "#43B02A",
-                              "actionHover": "#177D05",
-                              "primaryBackground": "#FFFFFF",
-                              "primaryForeground": "#43B02A",
-                              "secondaryBackground": "#43B02A",
-                              "secondaryForeground": "#FFFFFF",
-                              "secondaryForegroundFocus": "#757575",
-                            },
-                          }
-                        }
-                        style={
-                          Object {
-                            "pointerEvents": "none",
-                          }
-                        }
-                        text="Date of Birth"
-                      >
-                        <label
-                          data-radium={true}
-                          htmlFor="test_id"
-                          style={
-                            Object {
-                              "color": "#43B02A",
-                              "cursor": "inherit",
-                              "fontSize": "16px",
-                              "marginBottom": 0,
-                              "marginLeft": 0,
-                              "marginRight": 0,
-                              "marginTop": 0,
-                              "pointerEvents": "none",
-                              "position": "absolute",
-                              "transform": "scale(0.85) translate(8px, 6px)",
-                              "transformOrigin": "left top",
-                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                              "userSelect": "none",
-                              "zIndex": 1,
-                            }
-                          }
-                        >
-                          Date of Birth
-                        </label>
-                      </FloatingLabel>
-                    </withTheme(RadiumEnhancer)>
-                    <TextFieldHint
-                      disabled={false}
-                      inputId="hint_test_id"
-                      key=".1"
-                      show={true}
-                      text="MM/DD/YYYY"
                     >
                       <div
                         data-radium={true}
-                        id="hint_test_id"
+                        key=".1"
                         style={
                           Object {
-                            "color": "#BDBDBD",
-                            "cursor": "inherit",
-                            "fontSize": "16px",
-                            "opacity": 1,
-                            "pointerEvents": "none",
-                            "position": "absolute",
-                            "transform": "scale(1) translate(9px, 26px)",
-                            "transformOrigin": "left top",
-                            "transition": "visibility 0ms linear 0ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                            "visibility": "visible",
-                            "zIndex": 1,
+                            "borderRadius": 4,
+                            "position": "relative",
                           }
                         }
                       >
-                        MM/DD/YYYY
-                      </div>
-                    </TextFieldHint>
-                    <t
-                      aria-describedby="hint_test_id"
-                      aria-invalid={false}
-                      autoComplete="on"
-                      defaultValue={null}
-                      disabled={false}
-                      guide={false}
-                      id="test_id"
-                      keepCharPositions={true}
-                      key=".2"
-                      mask={
-                        Array [
-                          /\\\\d/,
-                          /\\\\d/,
-                          "/",
-                          /\\\\d/,
-                          /\\\\d/,
-                          "/",
-                          /\\\\d/,
-                          /\\\\d/,
-                          /\\\\d/,
-                          /\\\\d/,
-                        ]
-                      }
-                      name="test"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      pipe={[Function]}
-                      placeholder=""
-                      render={[Function]}
-                      type="tel"
-                    >
-                      <input
-                        aria-describedby="hint_test_id"
-                        aria-invalid={false}
-                        autoComplete="on"
-                        defaultValue={null}
-                        disabled={false}
-                        id="test_id"
-                        name="test"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder=""
-                        style={
-                          Object {
-                            "WebkitOpacity": 1,
-                            "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-                            "backgroundColor": "#FFFFFF",
-                            "border": "1px solid #43B02A",
-                            "borderRadius": 4,
-                            "boxSizing": "border-box",
-                            "color": "#424242",
-                            "fontSize": 16,
-                            "height": 56,
-                            "marginBottom": 0,
-                            "marginLeft": 0,
-                            "marginRight": 0,
-                            "marginTop": 0,
-                            "outline": "none",
-                            "paddingBottom": 8,
-                            "paddingLeft": 8,
-                            "paddingRight": 8,
-                            "paddingTop": "25px",
-                            "position": "relative",
-                            "width": "100%",
+                        <withTheme(withRadiumContexts(FloatingLabel))
+                          disabled={false}
+                          float={true}
+                          hasError={false}
+                          htmlFor="test_id"
+                          isActive={true}
+                          key=".0"
+                          snacksTheme={
+                            Object {
+                              "colors": Object {
+                                "action": "#43B02A",
+                                "actionHover": "#177D05",
+                                "primaryBackground": "#FFFFFF",
+                                "primaryForeground": "#43B02A",
+                                "secondaryBackground": "#43B02A",
+                                "secondaryForeground": "#FFFFFF",
+                                "secondaryForegroundFocus": "#757575",
+                              },
+                            }
                           }
-                        }
-                        type="tel"
+                          style={
+                            Object {
+                              "pointerEvents": "none",
+                            }
+                          }
+                          text="Date of Birth"
+                        >
+                          <withRadiumContexts(FloatingLabel)
+                            disabled={false}
+                            float={true}
+                            hasError={false}
+                            htmlFor="test_id"
+                            isActive={true}
+                            snacksTheme={
+                              Object {
+                                "colors": Object {
+                                  "action": "#43B02A",
+                                  "actionHover": "#177D05",
+                                  "primaryBackground": "#FFFFFF",
+                                  "primaryForeground": "#43B02A",
+                                  "secondaryBackground": "#43B02A",
+                                  "secondaryForeground": "#FFFFFF",
+                                  "secondaryForegroundFocus": "#757575",
+                                },
+                              }
+                            }
+                            style={
+                              Object {
+                                "pointerEvents": "none",
+                              }
+                            }
+                            text="Date of Birth"
+                          >
+                            <FloatingLabel
+                              disabled={false}
+                              float={true}
+                              hasError={false}
+                              htmlFor="test_id"
+                              isActive={true}
+                              snacksTheme={
+                                Object {
+                                  "colors": Object {
+                                    "action": "#43B02A",
+                                    "actionHover": "#177D05",
+                                    "primaryBackground": "#FFFFFF",
+                                    "primaryForeground": "#43B02A",
+                                    "secondaryBackground": "#43B02A",
+                                    "secondaryForeground": "#FFFFFF",
+                                    "secondaryForegroundFocus": "#757575",
+                                  },
+                                }
+                              }
+                              style={
+                                Object {
+                                  "pointerEvents": "none",
+                                }
+                              }
+                              styleKeeperContext={
+                                StyleKeeper {
+                                  "_cssSet": Object {},
+                                  "_listeners": Array [
+                                    [Function],
+                                  ],
+                                  "_userAgent": undefined,
+                                }
+                              }
+                              text="Date of Birth"
+                            >
+                              <label
+                                data-radium={true}
+                                htmlFor="test_id"
+                                style={
+                                  Object {
+                                    "color": "#43B02A",
+                                    "cursor": "inherit",
+                                    "fontSize": "16px",
+                                    "marginBottom": 0,
+                                    "marginLeft": 0,
+                                    "marginRight": 0,
+                                    "marginTop": 0,
+                                    "pointerEvents": "none",
+                                    "position": "absolute",
+                                    "transform": "scale(0.85) translate(8px, 6px)",
+                                    "transformOrigin": "left top",
+                                    "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                    "userSelect": "none",
+                                    "zIndex": 1,
+                                  }
+                                }
+                              >
+                                Date of Birth
+                              </label>
+                            </FloatingLabel>
+                          </withRadiumContexts(FloatingLabel)>
+                        </withTheme(withRadiumContexts(FloatingLabel))>
+                        <withRadiumContexts(TextFieldHint)
+                          disabled={false}
+                          inputId="hint_test_id"
+                          key=".1"
+                          show={true}
+                          text="MM/DD/YYYY"
+                        >
+                          <TextFieldHint
+                            disabled={false}
+                            inputId="hint_test_id"
+                            show={true}
+                            styleKeeperContext={
+                              StyleKeeper {
+                                "_cssSet": Object {},
+                                "_listeners": Array [
+                                  [Function],
+                                ],
+                                "_userAgent": undefined,
+                              }
+                            }
+                            text="MM/DD/YYYY"
+                          >
+                            <div
+                              data-radium={true}
+                              id="hint_test_id"
+                              style={
+                                Object {
+                                  "color": "#BDBDBD",
+                                  "cursor": "inherit",
+                                  "fontSize": "16px",
+                                  "opacity": 1,
+                                  "pointerEvents": "none",
+                                  "position": "absolute",
+                                  "transform": "scale(1) translate(9px, 26px)",
+                                  "transformOrigin": "left top",
+                                  "transition": "visibility 0ms linear 0ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                  "visibility": "visible",
+                                  "zIndex": 1,
+                                }
+                              }
+                            >
+                              MM/DD/YYYY
+                            </div>
+                          </TextFieldHint>
+                        </withRadiumContexts(TextFieldHint)>
+                        <t
+                          aria-describedby="hint_test_id"
+                          aria-invalid={false}
+                          autoComplete="on"
+                          defaultValue={null}
+                          disabled={false}
+                          guide={false}
+                          id="test_id"
+                          keepCharPositions={true}
+                          key=".2"
+                          mask={
+                            Array [
+                              /\\\\d/,
+                              /\\\\d/,
+                              "/",
+                              /\\\\d/,
+                              /\\\\d/,
+                              "/",
+                              /\\\\d/,
+                              /\\\\d/,
+                              /\\\\d/,
+                              /\\\\d/,
+                            ]
+                          }
+                          name="test"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          pipe={[Function]}
+                          placeholder=""
+                          render={[Function]}
+                          type="tel"
+                        >
+                          <input
+                            aria-describedby="hint_test_id"
+                            aria-invalid={false}
+                            autoComplete="on"
+                            defaultValue={null}
+                            disabled={false}
+                            id="test_id"
+                            name="test"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder=""
+                            style={
+                              Object {
+                                "WebkitOpacity": 1,
+                                "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+                                "backgroundColor": "#FFFFFF",
+                                "border": "1px solid #43B02A",
+                                "borderRadius": 4,
+                                "boxSizing": "border-box",
+                                "color": "#424242",
+                                "fontSize": 16,
+                                "height": 56,
+                                "marginBottom": 0,
+                                "marginLeft": 0,
+                                "marginRight": 0,
+                                "marginTop": 0,
+                                "outline": "none",
+                                "paddingBottom": 8,
+                                "paddingLeft": 8,
+                                "paddingRight": 8,
+                                "paddingTop": "25px",
+                                "position": "relative",
+                                "width": "100%",
+                              }
+                            }
+                            type="tel"
+                          />
+                        </t>
+                      </div>
+                      <withRadiumContexts(ValidationError)
+                        inputId="test_id"
+                        key=".2"
+                        show={false}
+                      >
+                        <ValidationError
+                          inputId="test_id"
+                          show={false}
+                          styleKeeperContext={
+                            StyleKeeper {
+                              "_cssSet": Object {},
+                              "_listeners": Array [
+                                [Function],
+                              ],
+                              "_userAgent": undefined,
+                            }
+                          }
+                        >
+                          <div
+                            aria-atomic={true}
+                            aria-live="assertive"
+                            data-radium={true}
+                            id="error_test_id"
+                            style={
+                              Object {
+                                "color": "#B30029",
+                                "display": "none",
+                                "fontSize": "12px",
+                                "marginLeft": "1px",
+                                "marginTop": "2px",
+                                "opacity": "0",
+                                "pointerEvents": "none",
+                                "textAlign": "left",
+                                "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              }
+                            }
+                          />
+                        </ValidationError>
+                      </withRadiumContexts(ValidationError)>
+                      <HelperText
+                        key=".3"
                       />
-                    </t>
-                  </div>
-                  <ValidationError
-                    inputId="test_id"
-                    key=".2"
-                    show={false}
-                  >
-                    <div
-                      aria-atomic={true}
-                      aria-live="assertive"
-                      data-radium={true}
-                      id="error_test_id"
-                      style={
-                        Object {
-                          "color": "#B30029",
-                          "display": "none",
-                          "fontSize": "12px",
-                          "marginLeft": "1px",
-                          "marginTop": "2px",
-                          "opacity": "0",
-                          "pointerEvents": "none",
-                          "textAlign": "left",
-                          "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        }
-                      }
-                    />
-                  </ValidationError>
-                  <HelperText
-                    key=".3"
-                  />
-                </div>
-              </MaskedTextField>
-            </FormComponent>
-          </withTheme(FormComponent)>
-        </ForwardRef(withTheme(FormComponent))>
-      </DateField>
-    </div>
-    <StyleSheet
-      key=".1"
-    >
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
+                    </div>
+                  </MaskedTextField>
+                </withRadiumContexts(MaskedTextField)>
+              </FormComponent>
+            </withTheme(FormComponent)>
+          </ForwardRef(withTheme(FormComponent))>
+        </DateField>
+      </div>
+      <withRadiumContexts(StyleSheet)
+        key=".1"
+      >
+        <StyleSheet
+          styleKeeperContext={
+            StyleKeeper {
+              "_cssSet": Object {},
+              "_listeners": Array [
+                [Function],
+              ],
+              "_userAgent": undefined,
+            }
           }
-        }
-      />
-    </StyleSheet>
-  </div>
+        >
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
+          />
+        </StyleSheet>
+      </withRadiumContexts(StyleSheet)>
+    </div>
+  </ForwardRef>
 </StyleRoot>
 `;
 
 exports[`uses a custom theme for all child components if one is provided 1`] = `
 <StyleRoot>
-  <div
-    data-radium={true}
-  >
+  <ForwardRef>
     <div
-      key=".0"
+      data-radium={true}
     >
-      <DateField
-        floatingLabelText="Date of Birth"
-        hintText="MM/DD/YYYY"
-        id="test_id"
-        name="test"
-        onChange={[Function]}
-        snacksTheme={
-          Object {
-            "colors": Object {
-              "action": "green",
-              "actionHover": "darkgreen",
-              "primaryBackground": "white",
-              "primaryForeground": "green",
-              "secondaryBackground": "green",
-              "secondaryForeground": "white",
-              "secondaryForegroundFocus": "gray",
-            },
-          }
-        }
+      <div
+        key=".0"
       >
-        <ForwardRef(withTheme(FormComponent))
+        <DateField
           floatingLabelText="Date of Birth"
-          getValue={[Function]}
           hintText="MM/DD/YYYY"
           id="test_id"
-          mask={
-            Array [
-              /\\\\d/,
-              /\\\\d/,
-              "/",
-              /\\\\d/,
-              /\\\\d/,
-              "/",
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-              /\\\\d/,
-            ]
-          }
-          maskHint="MM/DD/YYYY"
           name="test"
           onChange={[Function]}
-          pipe={[Function]}
           snacksTheme={
             Object {
               "colors": Object {
@@ -863,11 +1085,9 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
               },
             }
           }
-          type="tel"
         >
-          <withTheme(FormComponent)
+          <ForwardRef(withTheme(FormComponent))
             floatingLabelText="Date of Birth"
-            forwardedRef={[Function]}
             getValue={[Function]}
             hintText="MM/DD/YYYY"
             id="test_id"
@@ -904,8 +1124,9 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
             }
             type="tel"
           >
-            <FormComponent
+            <withTheme(FormComponent)
               floatingLabelText="Date of Birth"
+              forwardedRef={[Function]}
               getValue={[Function]}
               hintText="MM/DD/YYYY"
               id="test_id"
@@ -942,16 +1163,11 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
               }
               type="tel"
             >
-              <MaskedTextField
-                autoComplete="on"
-                defaultValue={null}
-                disabled={false}
+              <FormComponent
                 floatingLabelText="Date of Birth"
                 getValue={[Function]}
-                hasError={false}
                 hintText="MM/DD/YYYY"
                 id="test_id"
-                isValid={true}
                 mask={
                   Array [
                     /\\\\d/,
@@ -968,12 +1184,8 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                 }
                 maskHint="MM/DD/YYYY"
                 name="test"
-                onBlur={[Function]}
                 onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
                 pipe={[Function]}
-                serverError={null}
                 snacksTheme={
                   Object {
                     "colors": Object {
@@ -989,253 +1201,428 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                 }
                 type="tel"
               >
-                <div
-                  data-radium={true}
-                  style={
+                <withRadiumContexts(MaskedTextField)
+                  floatingLabelText="Date of Birth"
+                  getValue={[Function]}
+                  hasError={false}
+                  hintText="MM/DD/YYYY"
+                  id="test_id"
+                  isValid={true}
+                  mask={
+                    Array [
+                      /\\\\d/,
+                      /\\\\d/,
+                      "/",
+                      /\\\\d/,
+                      /\\\\d/,
+                      "/",
+                      /\\\\d/,
+                      /\\\\d/,
+                      /\\\\d/,
+                      /\\\\d/,
+                    ]
+                  }
+                  maskHint="MM/DD/YYYY"
+                  name="test"
+                  onChange={[Function]}
+                  pipe={[Function]}
+                  serverError={null}
+                  snacksTheme={
                     Object {
-                      "cursor": "auto",
-                      "display": "inline-block",
-                      "position": "relative",
-                      "width": 343,
+                      "colors": Object {
+                        "action": "green",
+                        "actionHover": "darkgreen",
+                        "primaryBackground": "white",
+                        "primaryForeground": "green",
+                        "secondaryBackground": "green",
+                        "secondaryForeground": "white",
+                        "secondaryForegroundFocus": "gray",
+                      },
                     }
                   }
+                  type="tel"
                 >
-                  <div
-                    data-radium={true}
-                    key=".1"
-                    style={
+                  <MaskedTextField
+                    autoComplete="on"
+                    defaultValue={null}
+                    disabled={false}
+                    floatingLabelText="Date of Birth"
+                    getValue={[Function]}
+                    hasError={false}
+                    hintText="MM/DD/YYYY"
+                    id="test_id"
+                    isValid={true}
+                    mask={
+                      Array [
+                        /\\\\d/,
+                        /\\\\d/,
+                        "/",
+                        /\\\\d/,
+                        /\\\\d/,
+                        "/",
+                        /\\\\d/,
+                        /\\\\d/,
+                        /\\\\d/,
+                        /\\\\d/,
+                      ]
+                    }
+                    maskHint="MM/DD/YYYY"
+                    name="test"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    pipe={[Function]}
+                    serverError={null}
+                    snacksTheme={
                       Object {
-                        "borderRadius": 4,
-                        "position": "relative",
+                        "colors": Object {
+                          "action": "green",
+                          "actionHover": "darkgreen",
+                          "primaryBackground": "white",
+                          "primaryForeground": "green",
+                          "secondaryBackground": "green",
+                          "secondaryForeground": "white",
+                          "secondaryForegroundFocus": "gray",
+                        },
                       }
                     }
-                  >
-                    <withTheme(RadiumEnhancer)
-                      disabled={false}
-                      float={false}
-                      hasError={false}
-                      htmlFor="test_id"
-                      key=".0"
-                      snacksTheme={
-                        Object {
-                          "colors": Object {
-                            "action": "green",
-                            "actionHover": "darkgreen",
-                            "primaryBackground": "white",
-                            "primaryForeground": "green",
-                            "secondaryBackground": "green",
-                            "secondaryForeground": "white",
-                            "secondaryForegroundFocus": "gray",
-                          },
-                        }
+                    styleKeeperContext={
+                      StyleKeeper {
+                        "_cssSet": Object {},
+                        "_listeners": Array [
+                          [Function],
+                        ],
+                        "_userAgent": undefined,
                       }
+                    }
+                    type="tel"
+                  >
+                    <div
+                      data-radium={true}
                       style={
                         Object {
-                          "pointerEvents": "none",
+                          "cursor": "auto",
+                          "display": "inline-block",
+                          "position": "relative",
+                          "width": 343,
                         }
                       }
-                      text="Date of Birth"
-                    >
-                      <FloatingLabel
-                        disabled={false}
-                        float={false}
-                        hasError={false}
-                        htmlFor="test_id"
-                        snacksTheme={
-                          Object {
-                            "colors": Object {
-                              "action": "green",
-                              "actionHover": "darkgreen",
-                              "primaryBackground": "white",
-                              "primaryForeground": "green",
-                              "secondaryBackground": "green",
-                              "secondaryForeground": "white",
-                              "secondaryForegroundFocus": "gray",
-                            },
-                          }
-                        }
-                        style={
-                          Object {
-                            "pointerEvents": "none",
-                          }
-                        }
-                        text="Date of Birth"
-                      >
-                        <label
-                          data-radium={true}
-                          htmlFor="test_id"
-                          style={
-                            Object {
-                              "color": "#757575",
-                              "cursor": "text",
-                              "fontSize": "16px",
-                              "marginBottom": 0,
-                              "marginLeft": 0,
-                              "marginRight": 0,
-                              "marginTop": 0,
-                              "pointerEvents": "none",
-                              "position": "absolute",
-                              "transform": "scale(1) translate(8px, 17px)",
-                              "transformOrigin": "left top",
-                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                              "userSelect": "none",
-                              "zIndex": 1,
-                            }
-                          }
-                        >
-                          Date of Birth
-                        </label>
-                      </FloatingLabel>
-                    </withTheme(RadiumEnhancer)>
-                    <TextFieldHint
-                      disabled={false}
-                      inputId="hint_test_id"
-                      key=".1"
-                      text="MM/DD/YYYY"
                     >
                       <div
                         data-radium={true}
-                        id="hint_test_id"
+                        key=".1"
                         style={
                           Object {
-                            "color": "#BDBDBD",
-                            "cursor": "inherit",
-                            "fontSize": "16px",
-                            "opacity": 0,
-                            "pointerEvents": "none",
-                            "position": "absolute",
-                            "transform": "scale(1) translate(9px, 26px)",
-                            "transformOrigin": "left top",
-                            "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                            "visibility": "hidden",
-                            "zIndex": 1,
+                            "borderRadius": 4,
+                            "position": "relative",
                           }
                         }
                       >
-                        MM/DD/YYYY
-                      </div>
-                    </TextFieldHint>
-                    <t
-                      aria-describedby="hint_test_id"
-                      aria-invalid={false}
-                      autoComplete="on"
-                      defaultValue={null}
-                      disabled={false}
-                      guide={false}
-                      id="test_id"
-                      keepCharPositions={true}
-                      key=".2"
-                      mask={
-                        Array [
-                          /\\\\d/,
-                          /\\\\d/,
-                          "/",
-                          /\\\\d/,
-                          /\\\\d/,
-                          "/",
-                          /\\\\d/,
-                          /\\\\d/,
-                          /\\\\d/,
-                          /\\\\d/,
-                        ]
-                      }
-                      name="test"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      pipe={[Function]}
-                      placeholder=""
-                      render={[Function]}
-                      type="tel"
-                    >
-                      <input
-                        aria-describedby="hint_test_id"
-                        aria-invalid={false}
-                        autoComplete="on"
-                        defaultValue={null}
-                        disabled={false}
-                        id="test_id"
-                        name="test"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder=""
-                        style={
-                          Object {
-                            "WebkitOpacity": 1,
-                            "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-                            "backgroundColor": "#FFFFFF",
-                            "border": "solid 1px #BDBDBD",
-                            "borderRadius": 4,
-                            "boxSizing": "border-box",
-                            "color": "#424242",
-                            "fontSize": 16,
-                            "height": 56,
-                            "marginBottom": 0,
-                            "marginLeft": 0,
-                            "marginRight": 0,
-                            "marginTop": 0,
-                            "outline": "none",
-                            "paddingBottom": 8,
-                            "paddingLeft": 8,
-                            "paddingRight": 8,
-                            "paddingTop": "25px",
-                            "position": "relative",
-                            "width": "100%",
+                        <withTheme(withRadiumContexts(FloatingLabel))
+                          disabled={false}
+                          float={false}
+                          hasError={false}
+                          htmlFor="test_id"
+                          key=".0"
+                          snacksTheme={
+                            Object {
+                              "colors": Object {
+                                "action": "green",
+                                "actionHover": "darkgreen",
+                                "primaryBackground": "white",
+                                "primaryForeground": "green",
+                                "secondaryBackground": "green",
+                                "secondaryForeground": "white",
+                                "secondaryForegroundFocus": "gray",
+                              },
+                            }
                           }
-                        }
-                        type="tel"
+                          style={
+                            Object {
+                              "pointerEvents": "none",
+                            }
+                          }
+                          text="Date of Birth"
+                        >
+                          <withRadiumContexts(FloatingLabel)
+                            disabled={false}
+                            float={false}
+                            hasError={false}
+                            htmlFor="test_id"
+                            snacksTheme={
+                              Object {
+                                "colors": Object {
+                                  "action": "green",
+                                  "actionHover": "darkgreen",
+                                  "primaryBackground": "white",
+                                  "primaryForeground": "green",
+                                  "secondaryBackground": "green",
+                                  "secondaryForeground": "white",
+                                  "secondaryForegroundFocus": "gray",
+                                },
+                              }
+                            }
+                            style={
+                              Object {
+                                "pointerEvents": "none",
+                              }
+                            }
+                            text="Date of Birth"
+                          >
+                            <FloatingLabel
+                              disabled={false}
+                              float={false}
+                              hasError={false}
+                              htmlFor="test_id"
+                              snacksTheme={
+                                Object {
+                                  "colors": Object {
+                                    "action": "green",
+                                    "actionHover": "darkgreen",
+                                    "primaryBackground": "white",
+                                    "primaryForeground": "green",
+                                    "secondaryBackground": "green",
+                                    "secondaryForeground": "white",
+                                    "secondaryForegroundFocus": "gray",
+                                  },
+                                }
+                              }
+                              style={
+                                Object {
+                                  "pointerEvents": "none",
+                                }
+                              }
+                              styleKeeperContext={
+                                StyleKeeper {
+                                  "_cssSet": Object {},
+                                  "_listeners": Array [
+                                    [Function],
+                                  ],
+                                  "_userAgent": undefined,
+                                }
+                              }
+                              text="Date of Birth"
+                            >
+                              <label
+                                data-radium={true}
+                                htmlFor="test_id"
+                                style={
+                                  Object {
+                                    "color": "#757575",
+                                    "cursor": "text",
+                                    "fontSize": "16px",
+                                    "marginBottom": 0,
+                                    "marginLeft": 0,
+                                    "marginRight": 0,
+                                    "marginTop": 0,
+                                    "pointerEvents": "none",
+                                    "position": "absolute",
+                                    "transform": "scale(1) translate(8px, 17px)",
+                                    "transformOrigin": "left top",
+                                    "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                    "userSelect": "none",
+                                    "zIndex": 1,
+                                  }
+                                }
+                              >
+                                Date of Birth
+                              </label>
+                            </FloatingLabel>
+                          </withRadiumContexts(FloatingLabel)>
+                        </withTheme(withRadiumContexts(FloatingLabel))>
+                        <withRadiumContexts(TextFieldHint)
+                          disabled={false}
+                          inputId="hint_test_id"
+                          key=".1"
+                          text="MM/DD/YYYY"
+                        >
+                          <TextFieldHint
+                            disabled={false}
+                            inputId="hint_test_id"
+                            styleKeeperContext={
+                              StyleKeeper {
+                                "_cssSet": Object {},
+                                "_listeners": Array [
+                                  [Function],
+                                ],
+                                "_userAgent": undefined,
+                              }
+                            }
+                            text="MM/DD/YYYY"
+                          >
+                            <div
+                              data-radium={true}
+                              id="hint_test_id"
+                              style={
+                                Object {
+                                  "color": "#BDBDBD",
+                                  "cursor": "inherit",
+                                  "fontSize": "16px",
+                                  "opacity": 0,
+                                  "pointerEvents": "none",
+                                  "position": "absolute",
+                                  "transform": "scale(1) translate(9px, 26px)",
+                                  "transformOrigin": "left top",
+                                  "transition": "visibility 0ms linear 250ms, opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                  "visibility": "hidden",
+                                  "zIndex": 1,
+                                }
+                              }
+                            >
+                              MM/DD/YYYY
+                            </div>
+                          </TextFieldHint>
+                        </withRadiumContexts(TextFieldHint)>
+                        <t
+                          aria-describedby="hint_test_id"
+                          aria-invalid={false}
+                          autoComplete="on"
+                          defaultValue={null}
+                          disabled={false}
+                          guide={false}
+                          id="test_id"
+                          keepCharPositions={true}
+                          key=".2"
+                          mask={
+                            Array [
+                              /\\\\d/,
+                              /\\\\d/,
+                              "/",
+                              /\\\\d/,
+                              /\\\\d/,
+                              "/",
+                              /\\\\d/,
+                              /\\\\d/,
+                              /\\\\d/,
+                              /\\\\d/,
+                            ]
+                          }
+                          name="test"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          pipe={[Function]}
+                          placeholder=""
+                          render={[Function]}
+                          type="tel"
+                        >
+                          <input
+                            aria-describedby="hint_test_id"
+                            aria-invalid={false}
+                            autoComplete="on"
+                            defaultValue={null}
+                            disabled={false}
+                            id="test_id"
+                            name="test"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder=""
+                            style={
+                              Object {
+                                "WebkitOpacity": 1,
+                                "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+                                "backgroundColor": "#FFFFFF",
+                                "border": "solid 1px #BDBDBD",
+                                "borderRadius": 4,
+                                "boxSizing": "border-box",
+                                "color": "#424242",
+                                "fontSize": 16,
+                                "height": 56,
+                                "marginBottom": 0,
+                                "marginLeft": 0,
+                                "marginRight": 0,
+                                "marginTop": 0,
+                                "outline": "none",
+                                "paddingBottom": 8,
+                                "paddingLeft": 8,
+                                "paddingRight": 8,
+                                "paddingTop": "25px",
+                                "position": "relative",
+                                "width": "100%",
+                              }
+                            }
+                            type="tel"
+                          />
+                        </t>
+                      </div>
+                      <withRadiumContexts(ValidationError)
+                        inputId="test_id"
+                        key=".2"
+                        show={false}
+                      >
+                        <ValidationError
+                          inputId="test_id"
+                          show={false}
+                          styleKeeperContext={
+                            StyleKeeper {
+                              "_cssSet": Object {},
+                              "_listeners": Array [
+                                [Function],
+                              ],
+                              "_userAgent": undefined,
+                            }
+                          }
+                        >
+                          <div
+                            aria-atomic={true}
+                            aria-live="assertive"
+                            data-radium={true}
+                            id="error_test_id"
+                            style={
+                              Object {
+                                "color": "#B30029",
+                                "display": "none",
+                                "fontSize": "12px",
+                                "marginLeft": "1px",
+                                "marginTop": "2px",
+                                "opacity": "0",
+                                "pointerEvents": "none",
+                                "textAlign": "left",
+                                "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              }
+                            }
+                          />
+                        </ValidationError>
+                      </withRadiumContexts(ValidationError)>
+                      <HelperText
+                        key=".3"
                       />
-                    </t>
-                  </div>
-                  <ValidationError
-                    inputId="test_id"
-                    key=".2"
-                    show={false}
-                  >
-                    <div
-                      aria-atomic={true}
-                      aria-live="assertive"
-                      data-radium={true}
-                      id="error_test_id"
-                      style={
-                        Object {
-                          "color": "#B30029",
-                          "display": "none",
-                          "fontSize": "12px",
-                          "marginLeft": "1px",
-                          "marginTop": "2px",
-                          "opacity": "0",
-                          "pointerEvents": "none",
-                          "textAlign": "left",
-                          "transition": "opacity 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        }
-                      }
-                    />
-                  </ValidationError>
-                  <HelperText
-                    key=".3"
-                  />
-                </div>
-              </MaskedTextField>
-            </FormComponent>
-          </withTheme(FormComponent)>
-        </ForwardRef(withTheme(FormComponent))>
-      </DateField>
-    </div>
-    <StyleSheet
-      key=".1"
-    >
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
+                    </div>
+                  </MaskedTextField>
+                </withRadiumContexts(MaskedTextField)>
+              </FormComponent>
+            </withTheme(FormComponent)>
+          </ForwardRef(withTheme(FormComponent))>
+        </DateField>
+      </div>
+      <withRadiumContexts(StyleSheet)
+        key=".1"
+      >
+        <StyleSheet
+          styleKeeperContext={
+            StyleKeeper {
+              "_cssSet": Object {},
+              "_listeners": Array [
+                [Function],
+              ],
+              "_userAgent": undefined,
+            }
           }
-        }
-      />
-    </StyleSheet>
-  </div>
+        >
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
+          />
+        </StyleSheet>
+      </withRadiumContexts(StyleSheet)>
+    </div>
+  </ForwardRef>
 </StyleRoot>
 `;

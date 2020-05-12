@@ -27,7 +27,7 @@ Snacks has a few peer dependencies required to use the library.
 
 For the main component library:
 - prop-types v15 or v16
-- radium v18+
+- @instacart/radium v18+
 - React v15 or v16
 - ReactDom v15 or v16
 
@@ -57,7 +57,7 @@ npm unlink ic-snacks
 
 #### with yarn
 ```sh
-yarn add radium
+yarn add @instacart/radium
 yarn add prop-types
 yarn add react
 yarn add react-dom
@@ -66,7 +66,7 @@ yarn add react-transition-group
 
 #### with npm
 ```sh
-npm install radium
+npm install @instacart/radium
 npm install prop-types
 npm install react
 npm install react-dom

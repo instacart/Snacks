@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
+import Radium from '@instacart/radium'
 import spacing from '../../styles/spacing'
 import withTheme from '../../styles/themer/withTheme'
 
