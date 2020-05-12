@@ -2,183 +2,175 @@
 
 exports[`renders DropdownMenu in open state correctly 1`] = `
 <StyleRoot>
-  <div
-    data-radium={true}
-  >
+  <ForwardRef>
     <div
-      key=".0"
+      data-radium={true}
     >
-      <DropdownMenu
-        menuContainerOpenStyle={
-          Object {
-            "zIndex": 1234,
-          }
-        }
-        open={null}
-        triggerElement={
-          <withTheme(RadiumEnhancer)
-            id="trigger"
-          >
-             Share 
-          </withTheme(RadiumEnhancer)>
-        }
+      <div
+        key=".0"
       >
-        <div
-          data-radium={true}
-          onKeyDown={[Function]}
-        >
-          <div
-            data-radium={true}
-            key=".0"
-            style={
-              Object {
-                "position": "relative",
-              }
+        <withRadiumContexts(DropdownMenu)
+          menuContainerOpenStyle={
+            Object {
+              "zIndex": 1234,
             }
-          >
-            <withTheme(RadiumEnhancer)
-              aria-expanded={true}
-              aria-haspopup={true}
-              elementAttributes={
-                Object {
-                  "aria-expanded": true,
-                  "aria-haspopup": true,
-                }
-              }
+          }
+          triggerElement={
+            <withTheme(Component)
               id="trigger"
-              onMouseDown={[Function]}
             >
-              <Button
-                aria-expanded={true}
-                aria-haspopup={true}
-                disabled={false}
-                elementAttributes={
-                  Object {
-                    "aria-expanded": true,
-                    "aria-haspopup": true,
-                  }
-                }
-                iconPosition="left"
-                id="trigger"
-                inverted={false}
-                onClick={[Function]}
-                onMouseDown={[Function]}
-                size="standard"
-                snacksStyle="primary"
-                snacksTheme={
-                  Object {
-                    "colors": Object {
-                      "action": "#43B02A",
-                      "actionHover": "#177D05",
-                      "primaryBackground": "#FFFFFF",
-                      "primaryForeground": "#43B02A",
-                      "secondaryBackground": "#43B02A",
-                      "secondaryForeground": "#FFFFFF",
-                      "secondaryForegroundFocus": "#757575",
-                    },
-                  }
-                }
-                type="button"
-              >
-                <button
-                  aria-expanded={true}
-                  aria-haspopup={true}
-                  data-radium={true}
-                  disabled={false}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "MozOsxFontSmoothing": "grayscale",
-                      "WebkitFontSmoothing": "antialiased",
-                      "alignItems": "center",
-                      "backgroundColor": "#146e04",
-                      "backgroundImage": "none",
-                      "border": "1px solid transparent",
-                      "borderBottomLeftRadius": 4,
-                      "borderBottomRightRadius": 4,
-                      "borderTopLeftRadius": 4,
-                      "borderTopRightRadius": 4,
-                      "color": "#FFFFFF",
-                      "cursor": "pointer",
-                      "display": "inline-flex",
-                      "fontSize": "16px",
-                      "fontWeight": 600,
-                      "height": "40px",
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "touchAction": "manipulation",
-                      "userSelect": "none",
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                  type="button"
-                >
-                   Share 
-                </button>
-              </Button>
-            </withTheme(RadiumEnhancer)>
-          </div>
-          <div
-            data-radium={true}
-            data-testid="menu-container"
-            key=".1"
-            style={
+               Share 
+            </withTheme(Component)>
+          }
+        >
+          <DropdownMenu
+            menuContainerOpenStyle={
               Object {
-                "display": "block",
-                "pointerEvents": "inherit",
-                "position": "absolute",
-                "width": "100%",
                 "zIndex": 1234,
               }
             }
-          >
-            <Slide
-              appear={true}
-              axis="y"
-              in={true}
-              invert={false}
-              offset={30}
-              style={
-                Object {
-                  "paddingBottom": "5px",
-                  "paddingLeft": "5px",
-                  "paddingRight": "5px",
-                  "paddingTop": "2px",
-                  "transform": "translateX(-5px)",
-                  "width": "100%",
-                }
+            open={null}
+            styleKeeperContext={
+              StyleKeeper {
+                "_cssSet": Object {},
+                "_listeners": Array [
+                  [Function],
+                ],
+                "_userAgent": undefined,
               }
-              timeout={0}
-              timingFunction="ease-in-out"
-              transitionTime={200}
-            >
-              <Transition
-                appear={true}
-                enter={true}
-                exit={true}
-                in={true}
-                mountOnEnter={false}
-                onEnter={[Function]}
-                onEntered={[Function]}
-                onEntering={[Function]}
-                onExit={[Function]}
-                onExited={[Function]}
-                onExiting={[Function]}
-                timeout={0}
-                unmountOnExit={false}
+            }
+            triggerElement={
+              <withTheme(Component)
+                id="trigger"
               >
-                <div
+                 Share 
+              </withTheme(Component)>
+            }
+          >
+            <div
+              data-radium={true}
+              onKeyDown={[Function]}
+            >
+              <div
+                data-radium={true}
+                key=".0"
+                style={
+                  Object {
+                    "position": "relative",
+                  }
+                }
+              >
+                <withTheme(Component)
+                  aria-expanded={true}
+                  aria-haspopup={true}
+                  elementAttributes={
+                    Object {
+                      "aria-expanded": true,
+                      "aria-haspopup": true,
+                    }
+                  }
+                  id="trigger"
+                  onMouseDown={[Function]}
+                >
+                  <ForwardRef
+                    aria-expanded={true}
+                    aria-haspopup={true}
+                    disabled={false}
+                    elementAttributes={
+                      Object {
+                        "aria-expanded": true,
+                        "aria-haspopup": true,
+                      }
+                    }
+                    iconPosition="left"
+                    id="trigger"
+                    inverted={false}
+                    onClick={[Function]}
+                    onMouseDown={[Function]}
+                    size="standard"
+                    snacksStyle="primary"
+                    snacksTheme={
+                      Object {
+                        "colors": Object {
+                          "action": "#43B02A",
+                          "actionHover": "#177D05",
+                          "primaryBackground": "#FFFFFF",
+                          "primaryForeground": "#43B02A",
+                          "secondaryBackground": "#43B02A",
+                          "secondaryForeground": "#FFFFFF",
+                          "secondaryForegroundFocus": "#757575",
+                        },
+                      }
+                    }
+                    type="button"
+                  >
+                    <button
+                      aria-expanded={true}
+                      aria-haspopup={true}
+                      data-radium={true}
+                      disabled={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      style={
+                        Object {
+                          "MozOsxFontSmoothing": "grayscale",
+                          "WebkitFontSmoothing": "antialiased",
+                          "alignItems": "center",
+                          "backgroundColor": "#146e04",
+                          "backgroundImage": "none",
+                          "border": "1px solid transparent",
+                          "borderBottomLeftRadius": 4,
+                          "borderBottomRightRadius": 4,
+                          "borderTopLeftRadius": 4,
+                          "borderTopRightRadius": 4,
+                          "color": "#FFFFFF",
+                          "cursor": "pointer",
+                          "display": "inline-flex",
+                          "fontSize": "16px",
+                          "fontWeight": 600,
+                          "height": "40px",
+                          "paddingLeft": 16,
+                          "paddingRight": 16,
+                          "touchAction": "manipulation",
+                          "userSelect": "none",
+                          "whiteSpace": "nowrap",
+                        }
+                      }
+                      type="button"
+                    >
+                       Share 
+                    </button>
+                  </ForwardRef>
+                </withTheme(Component)>
+              </div>
+              <div
+                data-radium={true}
+                data-testid="menu-container"
+                key=".1"
+                style={
+                  Object {
+                    "display": "block",
+                    "pointerEvents": "inherit",
+                    "position": "absolute",
+                    "width": "100%",
+                    "zIndex": 1234,
+                  }
+                }
+              >
+                <Slide
+                  appear={true}
+                  axis="y"
+                  in={true}
+                  invert={false}
+                  offset={30}
                   style={
                     Object {
-                      "overflowX": "visible",
-                      "overflowY": "hidden",
                       "paddingBottom": "5px",
                       "paddingLeft": "5px",
                       "paddingRight": "5px",
@@ -187,465 +179,578 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
                       "width": "100%",
                     }
                   }
+                  timeout={0}
+                  timingFunction="ease-in-out"
+                  transitionTime={200}
                 >
-                  <div
-                    style={
-                      Object {
-                        "transform": "translateY(30px)",
-                        "transition": "all 200ms ease-in-out",
-                      }
-                    }
+                  <Transition
+                    appear={true}
+                    enter={true}
+                    exit={true}
+                    in={true}
+                    mountOnEnter={false}
+                    onEnter={[Function]}
+                    onEntered={[Function]}
+                    onEntering={[Function]}
+                    onExit={[Function]}
+                    onExited={[Function]}
+                    onExiting={[Function]}
+                    timeout={0}
+                    unmountOnExit={false}
                   >
-                    <Fade
-                      appear={true}
-                      in={true}
-                      opacity={
+                    <div
+                      style={
                         Object {
-                          "end": 1,
-                          "start": 0,
+                          "overflowX": "visible",
+                          "overflowY": "hidden",
+                          "paddingBottom": "5px",
+                          "paddingLeft": "5px",
+                          "paddingRight": "5px",
+                          "paddingTop": "2px",
+                          "transform": "translateX(-5px)",
+                          "width": "100%",
                         }
                       }
-                      style={Object {}}
-                      timeout={0}
-                      timingFunction="ease-in-out"
-                      transitionTime={200}
                     >
-                      <Transition
-                        appear={true}
-                        enter={true}
-                        exit={true}
-                        in={true}
-                        mountOnEnter={false}
-                        onEnter={[Function]}
-                        onEntered={[Function]}
-                        onEntering={[Function]}
-                        onExit={[Function]}
-                        onExited={[Function]}
-                        onExiting={[Function]}
-                        timeout={0}
-                        unmountOnExit={false}
+                      <div
+                        style={
+                          Object {
+                            "transform": "translateY(30px)",
+                            "transition": "all 200ms ease-in-out",
+                          }
+                        }
                       >
-                        <div
-                          style={
+                        <Fade
+                          appear={true}
+                          in={true}
+                          opacity={
                             Object {
-                              "opacity": 0,
-                              "transition": "all 200ms ease-in-out",
+                              "end": 1,
+                              "start": 0,
                             }
                           }
+                          style={Object {}}
+                          timeout={0}
+                          timingFunction="ease-in-out"
+                          transitionTime={200}
                         >
-                          <Menu
-                            ariaHidden={false}
-                            onBlur={[Function]}
-                            onSelect={[Function]}
-                            role="menu"
-                            style={Object {}}
+                          <Transition
+                            appear={true}
+                            enter={true}
+                            exit={true}
+                            in={true}
+                            mountOnEnter={false}
+                            onEnter={[Function]}
+                            onEntered={[Function]}
+                            onEntering={[Function]}
+                            onExit={[Function]}
+                            onExited={[Function]}
+                            onExiting={[Function]}
+                            timeout={0}
+                            unmountOnExit={false}
                           >
                             <div
-                              aria-hidden={false}
-                              onBlur={[Function]}
-                              onKeyDown={[Function]}
-                              role="menu"
                               style={
                                 Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderRadius": "4px",
-                                  "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
-                                  "display": "inline-block",
-                                  "maxHeight": "500px",
-                                  "outline": "none",
-                                  "overflowY": "auto",
-                                  "paddingBottom": 8,
-                                  "paddingLeft": 0,
-                                  "paddingRight": 0,
-                                  "paddingTop": 8,
-                                  "userSelect": "none",
+                                  "opacity": 0,
+                                  "transition": "all 200ms ease-in-out",
                                 }
                               }
-                              tabIndex={-1}
                             >
-                              <MenuItem
-                                _onClick={[Function]}
-                                disabled={false}
-                                focus={false}
-                                index={0}
-                                key=".$.0"
-                                label="Share via Email"
-                                leftIcon="emailFilled"
-                                onMenuItemFocus={[Function]}
-                                preventDefault={true}
-                                role="menuitem"
-                                useTabIndex={true}
-                                value="email"
+                              <Menu
+                                ariaHidden={false}
+                                onBlur={[Function]}
+                                onSelect={[Function]}
+                                role="menu"
+                                style={Object {}}
                               >
                                 <div
-                                  data-radium={true}
+                                  aria-hidden={false}
                                   onBlur={[Function]}
-                                  onClick={[Function]}
-                                  onFocus={[Function]}
                                   onKeyDown={[Function]}
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
-                                  role="menuitem"
+                                  role="menu"
                                   style={
                                     Object {
                                       "backgroundColor": "#ffffff",
-                                      "paddingBottom": 16,
+                                      "borderRadius": "4px",
+                                      "boxShadow": "0 3px 10px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.23)",
+                                      "display": "inline-block",
+                                      "maxHeight": "500px",
+                                      "outline": "none",
+                                      "overflowY": "auto",
+                                      "paddingBottom": 8,
                                       "paddingLeft": 0,
                                       "paddingRight": 0,
-                                      "paddingTop": 16,
+                                      "paddingTop": 8,
+                                      "userSelect": "none",
                                     }
                                   }
-                                  tabIndex={0}
+                                  tabIndex={-1}
                                 >
-                                  <div
-                                    data-radium={true}
-                                    style={
-                                      Object {
-                                        "display": "table",
-                                      }
-                                    }
+                                  <withRadiumContexts(MenuItem)
+                                    _onClick={[Function]}
+                                    focus={false}
+                                    index={0}
+                                    key=".$.0"
+                                    label="Share via Email"
+                                    leftIcon="emailFilled"
+                                    onMenuItemFocus={[Function]}
+                                    value="email"
                                   >
-                                    <div
-                                      data-radium={true}
-                                      key=".0"
-                                      style={
-                                        Object {
-                                          "display": "table-cell",
-                                          "paddingLeft": "16px",
-                                          "verticalAlign": "middle",
+                                    <MenuItem
+                                      _onClick={[Function]}
+                                      disabled={false}
+                                      focus={false}
+                                      index={0}
+                                      label="Share via Email"
+                                      leftIcon="emailFilled"
+                                      onMenuItemFocus={[Function]}
+                                      preventDefault={true}
+                                      role="menuitem"
+                                      styleKeeperContext={
+                                        StyleKeeper {
+                                          "_cssSet": Object {},
+                                          "_listeners": Array [
+                                            [Function],
+                                          ],
+                                          "_userAgent": undefined,
                                         }
                                       }
+                                      useTabIndex={true}
+                                      value="email"
                                     >
                                       <div
                                         data-radium={true}
+                                        onBlur={[Function]}
+                                        onClick={[Function]}
+                                        onFocus={[Function]}
+                                        onKeyDown={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
+                                        role="menuitem"
                                         style={
                                           Object {
-                                            "display": "flex",
+                                            "backgroundColor": "#ffffff",
+                                            "paddingBottom": 16,
+                                            "paddingLeft": 0,
+                                            "paddingRight": 0,
+                                            "paddingTop": 16,
                                           }
                                         }
+                                        tabIndex={0}
                                       >
-                                        <Icon
-                                          name="emailFilled"
+                                        <div
+                                          data-radium={true}
                                           style={
-                                            Array [
-                                              Object {
-                                                "fontSize": "22px",
-                                              },
-                                              undefined,
-                                            ]
+                                            Object {
+                                              "display": "table",
+                                            }
                                           }
                                         >
-                                          <i
-                                            aria-hidden={true}
+                                          <div
                                             data-radium={true}
+                                            key=".0"
                                             style={
                                               Object {
-                                                "fontFamily": "ic-icons",
-                                                "fontSize": "22px",
-                                                "fontSmoothing": "antialiased",
-                                                "fontStyle": "normal",
-                                                "fontVariant": "normal",
-                                                "fontWeight": "normal",
-                                                "lineHeight": "1",
-                                                "osxFontSmoothing": "grayscale",
-                                                "position": "relative",
-                                                "speak": "none",
-                                                "textTransform": "none",
+                                                "display": "table-cell",
+                                                "paddingLeft": "16px",
+                                                "verticalAlign": "middle",
                                               }
                                             }
                                           >
-                                            
-                                          </i>
-                                        </Icon>
+                                            <div
+                                              data-radium={true}
+                                              style={
+                                                Object {
+                                                  "display": "flex",
+                                                }
+                                              }
+                                            >
+                                              <ForwardRef
+                                                name="emailFilled"
+                                                style={
+                                                  Array [
+                                                    Object {
+                                                      "fontSize": "22px",
+                                                    },
+                                                    undefined,
+                                                  ]
+                                                }
+                                              >
+                                                <i
+                                                  aria-hidden={true}
+                                                  data-radium={true}
+                                                  style={
+                                                    Object {
+                                                      "fontFamily": "ic-icons",
+                                                      "fontSize": "22px",
+                                                      "fontSmoothing": "antialiased",
+                                                      "fontStyle": "normal",
+                                                      "fontVariant": "normal",
+                                                      "fontWeight": "normal",
+                                                      "lineHeight": "1",
+                                                      "osxFontSmoothing": "grayscale",
+                                                      "position": "relative",
+                                                      "speak": "none",
+                                                      "textTransform": "none",
+                                                    }
+                                                  }
+                                                >
+                                                  
+                                                </i>
+                                              </ForwardRef>
+                                            </div>
+                                          </div>
+                                          <div
+                                            data-radium={true}
+                                            key=".1"
+                                            style={
+                                              Object {
+                                                "paddingBottom": 0,
+                                                "paddingLeft": 16,
+                                                "paddingRight": 16,
+                                                "paddingTop": 0,
+                                                "whiteSpace": "nowrap",
+                                              }
+                                            }
+                                          >
+                                            Share via Email
+                                          </div>
+                                        </div>
                                       </div>
-                                    </div>
-                                    <div
-                                      data-radium={true}
-                                      key=".1"
-                                      style={
-                                        Object {
-                                          "paddingBottom": 0,
-                                          "paddingLeft": 16,
-                                          "paddingRight": 16,
-                                          "paddingTop": 0,
-                                          "whiteSpace": "nowrap",
-                                        }
-                                      }
-                                    >
-                                      Share via Email
-                                    </div>
-                                  </div>
-                                </div>
-                              </MenuItem>
-                              <MenuItem
-                                _onClick={[Function]}
-                                disabled={false}
-                                focus={false}
-                                index={1}
-                                key=".$.1"
-                                label="Share via Facebook"
-                                leftIcon="facebookFilled"
-                                leftIconStyles={
-                                  Object {
-                                    "color": "#3c5a99",
-                                  }
-                                }
-                                onMenuItemFocus={[Function]}
-                                preventDefault={true}
-                                role="menuitem"
-                                useTabIndex={true}
-                                value="facebook"
-                              >
-                                <div
-                                  data-radium={true}
-                                  onBlur={[Function]}
-                                  onClick={[Function]}
-                                  onFocus={[Function]}
-                                  onKeyDown={[Function]}
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
-                                  role="menuitem"
-                                  style={
-                                    Object {
-                                      "backgroundColor": "#ffffff",
-                                      "paddingBottom": 16,
-                                      "paddingLeft": 0,
-                                      "paddingRight": 0,
-                                      "paddingTop": 16,
-                                    }
-                                  }
-                                  tabIndex={0}
-                                >
-                                  <div
-                                    data-radium={true}
-                                    style={
+                                    </MenuItem>
+                                  </withRadiumContexts(MenuItem)>
+                                  <withRadiumContexts(MenuItem)
+                                    _onClick={[Function]}
+                                    focus={false}
+                                    index={1}
+                                    key=".$.1"
+                                    label="Share via Facebook"
+                                    leftIcon="facebookFilled"
+                                    leftIconStyles={
                                       Object {
-                                        "display": "table",
+                                        "color": "#3c5a99",
                                       }
                                     }
+                                    onMenuItemFocus={[Function]}
+                                    value="facebook"
                                   >
-                                    <div
-                                      data-radium={true}
-                                      key=".0"
-                                      style={
+                                    <MenuItem
+                                      _onClick={[Function]}
+                                      disabled={false}
+                                      focus={false}
+                                      index={1}
+                                      label="Share via Facebook"
+                                      leftIcon="facebookFilled"
+                                      leftIconStyles={
                                         Object {
-                                          "display": "table-cell",
-                                          "paddingLeft": "16px",
-                                          "verticalAlign": "middle",
+                                          "color": "#3c5a99",
                                         }
                                       }
+                                      onMenuItemFocus={[Function]}
+                                      preventDefault={true}
+                                      role="menuitem"
+                                      styleKeeperContext={
+                                        StyleKeeper {
+                                          "_cssSet": Object {},
+                                          "_listeners": Array [
+                                            [Function],
+                                          ],
+                                          "_userAgent": undefined,
+                                        }
+                                      }
+                                      useTabIndex={true}
+                                      value="facebook"
                                     >
                                       <div
                                         data-radium={true}
+                                        onBlur={[Function]}
+                                        onClick={[Function]}
+                                        onFocus={[Function]}
+                                        onKeyDown={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
+                                        role="menuitem"
                                         style={
                                           Object {
-                                            "display": "flex",
+                                            "backgroundColor": "#ffffff",
+                                            "paddingBottom": 16,
+                                            "paddingLeft": 0,
+                                            "paddingRight": 0,
+                                            "paddingTop": 16,
                                           }
                                         }
+                                        tabIndex={0}
                                       >
-                                        <Icon
-                                          name="facebookFilled"
+                                        <div
+                                          data-radium={true}
                                           style={
-                                            Array [
-                                              Object {
-                                                "fontSize": "22px",
-                                              },
-                                              Object {
-                                                "color": "#3c5a99",
-                                              },
-                                            ]
+                                            Object {
+                                              "display": "table",
+                                            }
                                           }
                                         >
-                                          <i
-                                            aria-hidden={true}
+                                          <div
                                             data-radium={true}
+                                            key=".0"
                                             style={
                                               Object {
-                                                "color": "#3c5a99",
-                                                "fontFamily": "ic-icons",
-                                                "fontSize": "22px",
-                                                "fontSmoothing": "antialiased",
-                                                "fontStyle": "normal",
-                                                "fontVariant": "normal",
-                                                "fontWeight": "normal",
-                                                "lineHeight": "1",
-                                                "osxFontSmoothing": "grayscale",
-                                                "position": "relative",
-                                                "speak": "none",
-                                                "textTransform": "none",
+                                                "display": "table-cell",
+                                                "paddingLeft": "16px",
+                                                "verticalAlign": "middle",
                                               }
                                             }
                                           >
-                                            
-                                          </i>
-                                        </Icon>
+                                            <div
+                                              data-radium={true}
+                                              style={
+                                                Object {
+                                                  "display": "flex",
+                                                }
+                                              }
+                                            >
+                                              <ForwardRef
+                                                name="facebookFilled"
+                                                style={
+                                                  Array [
+                                                    Object {
+                                                      "fontSize": "22px",
+                                                    },
+                                                    Object {
+                                                      "color": "#3c5a99",
+                                                    },
+                                                  ]
+                                                }
+                                              >
+                                                <i
+                                                  aria-hidden={true}
+                                                  data-radium={true}
+                                                  style={
+                                                    Object {
+                                                      "color": "#3c5a99",
+                                                      "fontFamily": "ic-icons",
+                                                      "fontSize": "22px",
+                                                      "fontSmoothing": "antialiased",
+                                                      "fontStyle": "normal",
+                                                      "fontVariant": "normal",
+                                                      "fontWeight": "normal",
+                                                      "lineHeight": "1",
+                                                      "osxFontSmoothing": "grayscale",
+                                                      "position": "relative",
+                                                      "speak": "none",
+                                                      "textTransform": "none",
+                                                    }
+                                                  }
+                                                >
+                                                  
+                                                </i>
+                                              </ForwardRef>
+                                            </div>
+                                          </div>
+                                          <div
+                                            data-radium={true}
+                                            key=".1"
+                                            style={
+                                              Object {
+                                                "paddingBottom": 0,
+                                                "paddingLeft": 16,
+                                                "paddingRight": 16,
+                                                "paddingTop": 0,
+                                                "whiteSpace": "nowrap",
+                                              }
+                                            }
+                                          >
+                                            Share via Facebook
+                                          </div>
+                                        </div>
                                       </div>
-                                    </div>
-                                    <div
-                                      data-radium={true}
-                                      key=".1"
-                                      style={
-                                        Object {
-                                          "paddingBottom": 0,
-                                          "paddingLeft": 16,
-                                          "paddingRight": 16,
-                                          "paddingTop": 0,
-                                          "whiteSpace": "nowrap",
-                                        }
-                                      }
-                                    >
-                                      Share via Facebook
-                                    </div>
-                                  </div>
-                                </div>
-                              </MenuItem>
-                              <MenuItem
-                                _onClick={[Function]}
-                                disabled={false}
-                                focus={false}
-                                index={2}
-                                key=".$.2"
-                                label="Share via Twitter"
-                                leftIcon="twitterFilled"
-                                leftIconStyles={
-                                  Object {
-                                    "color": "#1da1f2",
-                                  }
-                                }
-                                onMenuItemFocus={[Function]}
-                                preventDefault={true}
-                                role="menuitem"
-                                useTabIndex={true}
-                                value="twitter"
-                              >
-                                <div
-                                  data-radium={true}
-                                  onBlur={[Function]}
-                                  onClick={[Function]}
-                                  onFocus={[Function]}
-                                  onKeyDown={[Function]}
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
-                                  role="menuitem"
-                                  style={
-                                    Object {
-                                      "backgroundColor": "#ffffff",
-                                      "paddingBottom": 16,
-                                      "paddingLeft": 0,
-                                      "paddingRight": 0,
-                                      "paddingTop": 16,
-                                    }
-                                  }
-                                  tabIndex={0}
-                                >
-                                  <div
-                                    data-radium={true}
-                                    style={
+                                    </MenuItem>
+                                  </withRadiumContexts(MenuItem)>
+                                  <withRadiumContexts(MenuItem)
+                                    _onClick={[Function]}
+                                    focus={false}
+                                    index={2}
+                                    key=".$.2"
+                                    label="Share via Twitter"
+                                    leftIcon="twitterFilled"
+                                    leftIconStyles={
                                       Object {
-                                        "display": "table",
+                                        "color": "#1da1f2",
                                       }
                                     }
+                                    onMenuItemFocus={[Function]}
+                                    value="twitter"
                                   >
-                                    <div
-                                      data-radium={true}
-                                      key=".0"
-                                      style={
+                                    <MenuItem
+                                      _onClick={[Function]}
+                                      disabled={false}
+                                      focus={false}
+                                      index={2}
+                                      label="Share via Twitter"
+                                      leftIcon="twitterFilled"
+                                      leftIconStyles={
                                         Object {
-                                          "display": "table-cell",
-                                          "paddingLeft": "16px",
-                                          "verticalAlign": "middle",
+                                          "color": "#1da1f2",
                                         }
                                       }
+                                      onMenuItemFocus={[Function]}
+                                      preventDefault={true}
+                                      role="menuitem"
+                                      styleKeeperContext={
+                                        StyleKeeper {
+                                          "_cssSet": Object {},
+                                          "_listeners": Array [
+                                            [Function],
+                                          ],
+                                          "_userAgent": undefined,
+                                        }
+                                      }
+                                      useTabIndex={true}
+                                      value="twitter"
                                     >
                                       <div
                                         data-radium={true}
+                                        onBlur={[Function]}
+                                        onClick={[Function]}
+                                        onFocus={[Function]}
+                                        onKeyDown={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
+                                        role="menuitem"
                                         style={
                                           Object {
-                                            "display": "flex",
+                                            "backgroundColor": "#ffffff",
+                                            "paddingBottom": 16,
+                                            "paddingLeft": 0,
+                                            "paddingRight": 0,
+                                            "paddingTop": 16,
                                           }
                                         }
+                                        tabIndex={0}
                                       >
-                                        <Icon
-                                          name="twitterFilled"
+                                        <div
+                                          data-radium={true}
                                           style={
-                                            Array [
-                                              Object {
-                                                "fontSize": "22px",
-                                              },
-                                              Object {
-                                                "color": "#1da1f2",
-                                              },
-                                            ]
+                                            Object {
+                                              "display": "table",
+                                            }
                                           }
                                         >
-                                          <i
-                                            aria-hidden={true}
+                                          <div
                                             data-radium={true}
+                                            key=".0"
                                             style={
                                               Object {
-                                                "color": "#1da1f2",
-                                                "fontFamily": "ic-icons",
-                                                "fontSize": "22px",
-                                                "fontSmoothing": "antialiased",
-                                                "fontStyle": "normal",
-                                                "fontVariant": "normal",
-                                                "fontWeight": "normal",
-                                                "lineHeight": "1",
-                                                "osxFontSmoothing": "grayscale",
-                                                "position": "relative",
-                                                "speak": "none",
-                                                "textTransform": "none",
+                                                "display": "table-cell",
+                                                "paddingLeft": "16px",
+                                                "verticalAlign": "middle",
                                               }
                                             }
                                           >
-                                            
-                                          </i>
-                                        </Icon>
+                                            <div
+                                              data-radium={true}
+                                              style={
+                                                Object {
+                                                  "display": "flex",
+                                                }
+                                              }
+                                            >
+                                              <ForwardRef
+                                                name="twitterFilled"
+                                                style={
+                                                  Array [
+                                                    Object {
+                                                      "fontSize": "22px",
+                                                    },
+                                                    Object {
+                                                      "color": "#1da1f2",
+                                                    },
+                                                  ]
+                                                }
+                                              >
+                                                <i
+                                                  aria-hidden={true}
+                                                  data-radium={true}
+                                                  style={
+                                                    Object {
+                                                      "color": "#1da1f2",
+                                                      "fontFamily": "ic-icons",
+                                                      "fontSize": "22px",
+                                                      "fontSmoothing": "antialiased",
+                                                      "fontStyle": "normal",
+                                                      "fontVariant": "normal",
+                                                      "fontWeight": "normal",
+                                                      "lineHeight": "1",
+                                                      "osxFontSmoothing": "grayscale",
+                                                      "position": "relative",
+                                                      "speak": "none",
+                                                      "textTransform": "none",
+                                                    }
+                                                  }
+                                                >
+                                                  
+                                                </i>
+                                              </ForwardRef>
+                                            </div>
+                                          </div>
+                                          <div
+                                            data-radium={true}
+                                            key=".1"
+                                            style={
+                                              Object {
+                                                "paddingBottom": 0,
+                                                "paddingLeft": 16,
+                                                "paddingRight": 16,
+                                                "paddingTop": 0,
+                                                "whiteSpace": "nowrap",
+                                              }
+                                            }
+                                          >
+                                            Share via Twitter
+                                          </div>
+                                        </div>
                                       </div>
-                                    </div>
-                                    <div
-                                      data-radium={true}
-                                      key=".1"
-                                      style={
-                                        Object {
-                                          "paddingBottom": 0,
-                                          "paddingLeft": 16,
-                                          "paddingRight": 16,
-                                          "paddingTop": 0,
-                                          "whiteSpace": "nowrap",
-                                        }
-                                      }
-                                    >
-                                      Share via Twitter
-                                    </div>
-                                  </div>
+                                    </MenuItem>
+                                  </withRadiumContexts(MenuItem)>
                                 </div>
-                              </MenuItem>
+                              </Menu>
                             </div>
-                          </Menu>
-                        </div>
-                      </Transition>
-                    </Fade>
-                  </div>
-                </div>
-              </Transition>
-            </Slide>
-          </div>
-        </div>
-      </DropdownMenu>
-    </div>
-    <StyleSheet
-      key=".1"
-    >
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
+                          </Transition>
+                        </Fade>
+                      </div>
+                    </div>
+                  </Transition>
+                </Slide>
+              </div>
+            </div>
+          </DropdownMenu>
+        </withRadiumContexts(DropdownMenu)>
+      </div>
+      <withRadiumContexts(StyleSheet)
+        key=".1"
+      >
+        <StyleSheet
+          styleKeeperContext={
+            StyleKeeper {
+              "_cssSet": Object {},
+              "_listeners": Array [
+                [Function],
+              ],
+              "_userAgent": undefined,
+            }
           }
-        }
-      />
-    </StyleSheet>
-  </div>
+        >
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
+          />
+        </StyleSheet>
+      </withRadiumContexts(StyleSheet)>
+    </div>
+  </ForwardRef>
 </StyleRoot>
 `;
 
