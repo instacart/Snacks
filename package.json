@@ -89,7 +89,7 @@
   "dependencies": {
     "@babel/runtime": "^7.1.2",
     "@types/radium": "0.24.2",
-    "@types/react-text-mask": "5.4.4",
+    "@types/react-text-mask": "5.4.6",
     "@types/react-transition-group": "2.9.1",
     "@types/validator": "10.11.0",
     "js-yaml": "3.13.1",
