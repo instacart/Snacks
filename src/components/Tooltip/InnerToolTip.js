@@ -71,6 +71,7 @@ class InnerToolTip extends PureComponent {
       border: PropTypes.string,
       padding: PropTypes.string,
       boxShadow: PropTypes.string,
+      backgroundColor: PropTypes.string,
     }),
     arrowStyle: PropTypes.shape({
       border: PropTypes.string,

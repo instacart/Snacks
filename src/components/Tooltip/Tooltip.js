@@ -14,6 +14,7 @@ class Tooltip extends PureComponent {
       border: PropTypes.string,
       padding: PropTypes.string,
       boxShadow: PropTypes.string,
+      backgroundColor: PropTypes.string,
     }),
     overlayStyle: PropTypes.shape({}),
     arrowStyle: PropTypes.shape({
