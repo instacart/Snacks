@@ -14,6 +14,12 @@ class Tooltip extends PureComponent {
       border: PropTypes.string,
       padding: PropTypes.string,
       boxShadow: PropTypes.string,
+    }),
+    // phasing in a new style override prop to avoid using native react prop
+    customStyle: PropTypes.shape({
+      border: PropTypes.string,
+      padding: PropTypes.string,
+      boxShadow: PropTypes.string,
       backgroundColor: PropTypes.string,
     }),
     overlayStyle: PropTypes.shape({}),
@@ -88,11 +94,18 @@ class Tooltip extends PureComponent {
       placement,
       size,
       style,
+      customStyle,
       arrowStyle,
       snacksStyle,
       isVisible,
       overlayStyle,
     } = this.props
+
+    if (style) {
+      console.warn(
+        'You have passed a `style` prop which will be deprecated in a future version of this component. Use `customStyle` instead.'
+      )
+    }
 
     return (
       <div>
@@ -104,7 +117,12 @@ class Tooltip extends PureComponent {
           onRootClose={this.handleHideToolTip}
           style={overlayStyle}
         >
-          <InnerToolTip size={size} style={style} arrowStyle={arrowStyle} snacksStyle={snacksStyle}>
+          <InnerToolTip
+            size={size}
+            customStyle={customStyle || style}
+            arrowStyle={arrowStyle}
+            snacksStyle={snacksStyle}
+          >
             {children}
           </InnerToolTip>
         </TooltipOverlay>

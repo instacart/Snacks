@@ -67,7 +67,7 @@ class InnerToolTip extends PureComponent {
     children: PropTypes.node,
     snacksStyle: PropTypes.oneOf(['primary', 'secondary', 'dark']),
     size: PropTypes.oneOf(['small', 'medium', 'large']),
-    style: PropTypes.shape({
+    customStyle: PropTypes.shape({
       border: PropTypes.string,
       padding: PropTypes.string,
       boxShadow: PropTypes.string,
@@ -89,12 +89,12 @@ class InnerToolTip extends PureComponent {
   }
 
   get contentStyles() {
-    const { size, style, snacksStyle } = this.props
+    const { size, customStyle, snacksStyle } = this.props
     return {
       ...styles.innerContent,
       ...RESOLVED_SIZE[size],
       ...RESOLVED_COLOR[snacksStyle],
-      ...style,
+      ...customStyle,
     }
   }
 
