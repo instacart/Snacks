@@ -101,12 +101,6 @@ class Tooltip extends PureComponent {
       overlayStyle,
     } = this.props
 
-    if (style) {
-      console.warn(
-        'You have passed a `style` prop which will be deprecated in a future version of this component. Use `customStyle` instead.'
-      )
-    }
-
     return (
       <div>
         {this.renderTriggerElement()}
@@ -119,6 +113,7 @@ class Tooltip extends PureComponent {
         >
           <InnerToolTip
             size={size}
+            // @todo(JP): kill references to style
             customStyle={customStyle || style}
             arrowStyle={arrowStyle}
             snacksStyle={snacksStyle}
