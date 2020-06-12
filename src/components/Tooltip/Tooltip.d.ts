@@ -13,6 +13,14 @@ export interface TooltipProps {
     boxShadow?: string
   }
 
+  // phasing in a new style override prop to avoid using native react prop
+  customStyle?: {
+    border?: string
+    padding?: string
+    boxShadow?: string
+    backgroundColor?: string
+  }
+
   overlayStyle?: React.CSSProperties
 
   arrowStyle?: {
