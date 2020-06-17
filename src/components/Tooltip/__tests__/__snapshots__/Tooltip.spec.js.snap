@@ -46,10 +46,10 @@ exports[`Tooltip expect overlay to appear correctly when shown 1`] = `
                 style="position: absolute; z-index: 99999;"
               >
                 <div
-                  style="opacity: 0;"
+                  style="opacity: 0; transition: all 400ms ease-in-out;"
                 >
                   <div
-                    style="position: absolute; display: block; height: 12px; width: 12px; background-color: rgb(255, 255, 255); border-left: 1px solid #BDBDBD; border-top: 1px solid #BDBDBD; left: -6px; top: -7px;"
+                    style="position: absolute; display: block; height: 12px; width: 12px; background-color: rgb(255, 255, 255); transform: rotate(-45deg); border-left: 1px solid #BDBDBD; border-top: 1px solid #BDBDBD; left: -6px; top: -7px;"
                   />
                   <div
                     style="text-align: center; border-radius: 4px; white-space: nowrap; font-weight: 600; font-size: 14px; padding: 9px 8px 9px 8px; background: rgb(255, 255, 255); color: rgb(117, 117, 117); border: 1px solid #bdbdbd;"
