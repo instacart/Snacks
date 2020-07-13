@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { StyleRoot } from 'radium'
+import { StyleRoot } from '@instacart/radium'
 import { ReactWrapper, mount } from 'enzyme'
 import { spy } from 'sinon'
 import Icon from '../../Icon/Icon'
@@ -80,7 +80,7 @@ it('renders ScrollTrack buttons correctly', () => {
 
   // show right arrow
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .showRightArrow()
   track.update()
@@ -100,7 +100,7 @@ it('renders ScrollTrack buttons correctly', () => {
 
   // show left arrow
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .showLeftArrow()
   track.update()
@@ -117,7 +117,7 @@ it('renders ScrollTrack buttons correctly', () => {
 
   // hide both arrows
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .hideArrows()
   track.update()
@@ -210,7 +210,7 @@ it('works with custom ScrollTrack buttons correctly', () => {
 
   // show right arrow
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .showRightArrow()
   track.update()
@@ -230,7 +230,7 @@ it('works with custom ScrollTrack buttons correctly', () => {
 
   // show left arrow
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .showLeftArrow()
   track.update()
@@ -247,7 +247,7 @@ it('works with custom ScrollTrack buttons correctly', () => {
 
   // hide both arrows
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .hideArrows()
   track.update()
@@ -321,7 +321,7 @@ it('onBefore promises & callbacks called correctly', async () => {
 
   // show and click next
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .showRightArrow()
   track
@@ -333,11 +333,11 @@ it('onBefore promises & callbacks called correctly', async () => {
 
   // show and click back
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .hideRightArrow()
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .showLeftArrow()
   track
@@ -390,7 +390,7 @@ it('onAfter promises & callbacks called correctly', async () => {
 
   // show and click next
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .showRightArrow()
   track
@@ -403,11 +403,11 @@ it('onAfter promises & callbacks called correctly', async () => {
 
   // show and click back
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .hideRightArrow()
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .showLeftArrow()
   track
@@ -438,7 +438,7 @@ it('works without any callbacks passed in', async () => {
 
   // show and click next
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .showRightArrow()
   track
@@ -448,11 +448,11 @@ it('works without any callbacks passed in', async () => {
 
   // show and click back
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .hideRightArrow()
   track
-    .find(ScrollTrack)
+    .find('ScrollTrack')
     .instance()
     .showLeftArrow()
   track

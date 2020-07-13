@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
+import Radium from '@instacart/radium'
 import NavigationPill from './NavigationPill'
 import ScrollTrack from '../ScrollTrack/ScrollTrack'
 import colors from '../../styles/colors'

@@ -1,7 +1,7 @@
 import React from 'react'
 import { findDOMNode } from 'react-dom'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
+import Radium from '@instacart/radium'
 import Menu from './Menu'
 import Slide from '../Transitions/Slide'
 import Fade from '../Transitions/Fade'

@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { StyleRoot } from 'radium'
+import { StyleRoot } from '@instacart/radium'
 import TextFieldHint from '../TextFieldHint'
 
 it('renders TextFieldHint correctly', () => {

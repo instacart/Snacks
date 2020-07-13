@@ -1,7 +1,7 @@
 To start using a Snacks component in your app, first be sure to wrap your app root with the `StyleRoot` component from [Radium](https://github.com/FormidableLabs/radium/tree/master/docs/api#styleroot-component).
 
 ```jsx static
-import { StyleRoot } from 'radium'
+import { StyleRoot } from '@instacart/radium'
 import MyApp from '/dir/to/MyApp'
 
 ReactDOM.render(
