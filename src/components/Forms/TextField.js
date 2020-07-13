@@ -5,6 +5,7 @@ import { colors } from '../../styles'
 import FormComponent from './FormComponent'
 import ValidationError from './ValidationError'
 import FloatingLabel from './FloatingLabel'
+import Icon from '../Icon/Icon'
 import TextFieldHint from './TextFieldHint'
 import ServerError from './ServerError'
 import HelperText from './HelperText'
@@ -95,6 +96,10 @@ class TextField extends React.Component {
     helperText: PropTypes.string,
     /** Hint text will show up when input is focused and there is no value */
     hintText: PropTypes.string,
+    /** Icon to display next to input field */
+    icon: PropTypes.string,
+    /** Associated icon styles */
+    iconStyle: PropTypes.object,
     /** Uniq id for input */
     id: PropTypes.string,
     /** Style for input */
@@ -135,6 +140,7 @@ class TextField extends React.Component {
     type: 'text',
     defaultValue: null,
     onKeyDown: () => {}, // eslint-disable-line no-empty-function
+    iconStyle: {},
   }
 
   state = {
@@ -198,6 +204,8 @@ class TextField extends React.Component {
       halfWidth,
       hasError,
       hintText,
+      icon,
+      iconStyle,
       id,
       inputStyle,
       labelStyle,
@@ -221,6 +229,14 @@ class TextField extends React.Component {
 
     const inputId = id
     const showHintText = hintText && !hasValue && isFocused
+    const defaultIconStyle = {
+      bottom: '30%',
+      color: colors.GREEN_500,
+      fontSize: '24px',
+      marginLeft: '4px',
+      position: 'absolute',
+      zIndex: '1',
+    }
 
     return (
       <div
@@ -255,7 +271,7 @@ class TextField extends React.Component {
               disabled={disabled}
             />
           )}
-
+          {icon && <Icon name={icon} style={{ ...defaultIconStyle, ...iconStyle }} />}
           <input
             value={value}
             id={inputId}
