@@ -60,15 +60,15 @@ type FormComponentRef<T extends React.ComponentType<any>> = {
 
 declare function formComponent<
   T extends React.ComponentType<P>,
-  P extends FormComponentInjectedProps = React.ComponentProps<T>
+  P extends FormComponentInjectedProps
 >(
-  component: T
-): React.ComponentType<WithoutInjectedProps<React.PropsWithoutRef<P>> & FormComponentOuterProps<T>>
+  component: T & React.ComponentType<P>
+): React.ComponentType<WithoutInjectedProps<P> & FormComponentOuterProps<T>>
 
 // helper for applying hoc in .d.ts files
 export type ApplyFormComponent<
   T extends React.ComponentType<P>,
   P extends FormComponentInjectedProps = React.ComponentProps<T>
-> = React.ComponentType<WithoutInjectedProps<React.PropsWithoutRef<P>> & FormComponentOuterProps<T>>
+> = React.ComponentType<WithoutInjectedProps<P> & FormComponentOuterProps<T>>
 
 export default formComponent
