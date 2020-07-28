@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { useImperativeHandle } from 'react'
 
 import { withTheme, FormComponent } from '../../src'
 import { WithThemeInjectedProps } from '../../src/styles/themer/withTheme'
@@ -14,7 +13,7 @@ interface FormInputProps extends WithThemeInjectedProps, FormComponentInjectedPr
 const FormInput = React.forwardRef<FormInputRefApi, FormInputProps>((_, ref) => {
   const inputRef = React.useRef<HTMLInputElement>(null)
 
-  useImperativeHandle(ref, () => ({
+  React.useImperativeHandle(ref, () => ({
     focus: () => {
       inputRef.current && inputRef.current.focus()
     },
