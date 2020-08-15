@@ -238,6 +238,7 @@ const Button = props => {
       props.onMouseDown(e, props)
     },
     ...props.elementAttributes,
+    ...props?.['aria-label'],
   }
   if (props.href) {
     finalProps.href = props.href
@@ -319,6 +320,9 @@ Button.propTypes = {
 
   /** Snacks theme attributes provided by `Themer` */
   snacksTheme: themePropTypes,
+
+  /** Sets aria-label attribute */
+  'aria-label': PropTypes.string,
 }
 
 Button.defaultProps = {

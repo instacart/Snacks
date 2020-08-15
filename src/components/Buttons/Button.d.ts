@@ -31,6 +31,8 @@ export interface ButtonProps extends WithThemeInjectedProps {
    * tag with the supplied href value.
    */
   href?: string
+
+  'aria-label'?: string
 }
 
 type ButtonElementProps<C extends React.ElementType> = Pick<
