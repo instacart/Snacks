@@ -30,7 +30,7 @@ export interface NavigationPillsProps extends WithThemeInjectedProps {
   activePill?: string
 
   /** optional string for overriding the tag name of the label which appears in front of pills */
-  labelElementType?: string
+  labelElementType?: keyof JSX.IntrinsicElements
 }
 
 declare const NavigationPills: ApplyWithTheme<React.ComponentClass<NavigationPillsProps>>
