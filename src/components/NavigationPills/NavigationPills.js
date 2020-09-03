@@ -49,10 +49,13 @@ class NavigationPills extends React.Component {
     label: PropTypes.string,
     /** string matching the text of one of the pills. Determines which pill is active, if any */
     activePill: PropTypes.string,
+    /** optional string for overriding the tag name of the label which appears in front of pills */
+    labelElementType: PropTypes.string,
   }
 
   static defaultProps = {
     elementAttributes: {},
+    labelElementType: 'label',
   }
 
   render() {
@@ -70,8 +73,8 @@ class NavigationPills extends React.Component {
         return
       }
 
-      // eslint-disable-next-line jsx-a11y/label-has-associated-control
-      return <label style={styles.labelStyles}>{label}</label>
+      const { labelElementType: LabelElementType } = this.props
+      return <LabelElementType style={styles.labelStyles}>{label}</LabelElementType>
     }
 
     const renderPill = (pill, idx) => {

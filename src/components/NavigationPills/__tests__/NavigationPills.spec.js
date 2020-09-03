@@ -166,6 +166,27 @@ it("renders NavigationPills with each pill's elementAttributes correctly", () =>
   expect(tree).toMatchSnapshot()
 })
 
+it('renders NavigationPills with custom labelElementType', () => {
+  const onPillClick = spy()
+  const Pills = mount(
+    <StyleRoot>
+      <div>
+        <NavigationPills
+          pills={testPills}
+          onPillClick={onPillClick}
+          label={'Filter by'}
+          activePill={'dom2'}
+          labelElementType={'h2'}
+        />
+      </div>
+    </StyleRoot>
+  )
+
+  const h2 = Pills.find('h2')
+  expect(h2.length).toEqual(1)
+  expect(h2.first().text()).toEqual('Filter by')
+})
+
 it('it handles onPillClick correctly', () => {
   const onPillClick = spy()
   const Pills = mount(
