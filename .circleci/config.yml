@@ -31,3 +31,7 @@ jobs:
       - run:
           name: Upload code coverage report
           command: ./node_modules/.bin/codecov
+
+      - run:
+          name: Upload code coverage report - CoverAlls
+          command: ./node_modules/.bin/coveralls < ./coverage/lcov.info
