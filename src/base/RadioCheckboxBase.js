@@ -11,7 +11,7 @@ const INPUT_BTN_SIZE = 22
 const getStyles = ({ props, focused }) => ({
   button: {
     position: 'relative',
-    ...(focused && { border: 'solid 4px hotpink' }),
+    ...(focused && { outline: 'solid 2px #7DADD9' }),
   },
   inputBtn: {
     width: props.width || INPUT_BTN_SIZE,
@@ -150,7 +150,7 @@ class RadioCheckboxBase extends React.PureComponent {
     const { children: labelText, id, style, wrapEl } = this.props
     const { isDisabled } = this.props
     const Element = wrapEl
-    const internalStyle = getStyles(this.props)
+    const internalStyle = getStyles({ props: this.props, focused: this.state.focused })
 
     const isDisabledStyle = isDisabled ? internalStyle.disabled : {}
 
