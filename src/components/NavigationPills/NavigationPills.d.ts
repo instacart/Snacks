@@ -28,6 +28,9 @@ export interface NavigationPillsProps extends WithThemeInjectedProps {
 
   /** string matching the text of one of the pills. Determines which pill is active, if any */
   activePill?: string
+
+  /** optional string for overriding the tag name of the label which appears in front of pills */
+  labelElementType?: string
 }
 
 declare const NavigationPills: ApplyWithTheme<React.ComponentClass<NavigationPillsProps>>
