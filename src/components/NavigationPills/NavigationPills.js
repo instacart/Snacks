@@ -70,8 +70,7 @@ class NavigationPills extends React.Component {
         return
       }
 
-      // eslint-disable-next-line jsx-a11y/label-has-associated-control
-      return <label style={styles.labelStyles}>{label}</label>
+      return <h2 style={styles.labelStyles}>{label}</h2>
     }
 
     const renderPill = (pill, idx) => {
