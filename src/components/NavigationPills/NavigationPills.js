@@ -8,7 +8,9 @@ import spacing from '../../styles/spacing'
 
 const styles = {
   labelStyles: {
-    marginRight: '10px',
+    margin: '0 10px 0 0',
+    display: 'inline',
+    fontSize: 'inherot',
   },
   wrapperStyles: {
     display: 'inline-block',
