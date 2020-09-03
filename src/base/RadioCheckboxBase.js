@@ -8,9 +8,10 @@ import { themePropTypes } from '../styles/themer/utils'
 const NoOp = () => {} // eslint-disable-line no-empty-function
 const INPUT_BTN_SIZE = 22
 
-const getStyles = props => ({
+const getStyles = ({ props, focused }) => ({
   button: {
     position: 'relative',
+    ...(focused && { border: 'solid 4px hotpink' }),
   },
   inputBtn: {
     width: props.width || INPUT_BTN_SIZE,
@@ -106,11 +107,25 @@ class RadioCheckboxBase extends React.PureComponent {
     onChange(event, { ...this.props, isSelected: !isSelected })
   }
 
+  onFocus = () => {
+    const { onFocus } = this.props
+    onFocus && onFocus()
+
+    this.setState({ focused: true })
+  }
+
+  onBlur = () => {
+    const { onBlur } = this.props
+    onBlur && onBlur()
+
+    this.setState({ focused: false })
+  }
+
   renderInputBtn() {
     const { aria, btnType, isDisabled, id, style, value, renderInputButton } = this.props
     const { isSelected } = this.state
 
-    const internalStyle = getStyles(this.props)
+    const internalStyle = getStyles({ props: this.props, focused: this.state.focused })
 
     return (
       <div style={{ ...internalStyle.button, ...style.button }}>
@@ -124,8 +139,8 @@ class RadioCheckboxBase extends React.PureComponent {
           checked={isSelected}
           disabled={isDisabled}
           aria-label={aria.label}
-          onBlur={this.props.onBlur}
-          onFocus={this.props.onFocus}
+          onBlur={this.onBlur}
+          onFocus={this.onFocus}
         />
       </div>
     )
