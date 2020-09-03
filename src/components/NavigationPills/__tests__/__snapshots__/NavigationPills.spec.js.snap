@@ -101,7 +101,7 @@ exports[`renders NavigationPills correctly 1`] = `
               }
             }
           >
-            <h2
+            <label
               data-radium={true}
               style={
                 Object {
@@ -110,7 +110,7 @@ exports[`renders NavigationPills correctly 1`] = `
               }
             >
               Filter by
-            </h2>
+            </label>
             <ul
               data-radium={true}
               style={
@@ -887,7 +887,7 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
               }
             }
           >
-            <h2
+            <label
               data-radium={true}
               style={
                 Object {
@@ -896,7 +896,7 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
               }
             >
               Filter by
-            </h2>
+            </label>
             <ul
               data-radium={true}
               style={
@@ -1296,7 +1296,7 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
               }
             }
           >
-            <h2
+            <label
               data-radium={true}
               style={
                 Object {
@@ -1305,7 +1305,7 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
               }
             >
               Filter by
-            </h2>
+            </label>
             <ul
               data-radium={true}
               style={
@@ -1694,7 +1694,7 @@ exports[`renders NavigationPills with inner elementAttributes correctly 1`] = `
               }
             }
           >
-            <h2
+            <label
               data-radium={true}
               style={
                 Object {
@@ -1703,7 +1703,7 @@ exports[`renders NavigationPills with inner elementAttributes correctly 1`] = `
               }
             >
               Filter by
-            </h2>
+            </label>
             <ul
               ariaLabel="this is an aria label"
               data-radium={true}
