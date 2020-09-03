@@ -105,7 +105,9 @@ exports[`renders NavigationPills correctly 1`] = `
               data-radium={true}
               style={
                 Object {
-                  "marginRight": "10px",
+                  "display": "inline",
+                  "fontSize": "inherit",
+                  "margin": "0 10px 0 0",
                 }
               }
             >
@@ -891,7 +893,9 @@ exports[`renders NavigationPills with each pill's elementAttributes correctly 1`
               data-radium={true}
               style={
                 Object {
-                  "marginRight": "10px",
+                  "display": "inline",
+                  "fontSize": "inherit",
+                  "margin": "0 10px 0 0",
                 }
               }
             >
@@ -1300,7 +1304,9 @@ exports[`renders NavigationPills with elementAttributes correctly 1`] = `
               data-radium={true}
               style={
                 Object {
-                  "marginRight": "10px",
+                  "display": "inline",
+                  "fontSize": "inherit",
+                  "margin": "0 10px 0 0",
                 }
               }
             >
@@ -1698,7 +1704,9 @@ exports[`renders NavigationPills with inner elementAttributes correctly 1`] = `
               data-radium={true}
               style={
                 Object {
-                  "marginRight": "10px",
+                  "display": "inline",
+                  "fontSize": "inherit",
+                  "margin": "0 10px 0 0",
                 }
               }
             >

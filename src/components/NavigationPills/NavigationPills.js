@@ -10,7 +10,7 @@ const styles = {
   labelStyles: {
     margin: '0 10px 0 0',
     display: 'inline',
-    fontSize: 'inherot',
+    fontSize: 'inherit',
   },
   wrapperStyles: {
     display: 'inline-block',
