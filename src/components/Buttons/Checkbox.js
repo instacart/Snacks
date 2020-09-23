@@ -6,7 +6,11 @@ import checkboxSelectedSvg from '../../assets/checkboxSelected.svg'
 import checkboxIndeterminateSvg from '../../assets/checkboxIndeterminate.svg'
 
 const renderInputButton = (isSelected, style, isIndeterminate) => {
-  const SvgComponent = isIndeterminate ? checkboxIndeterminateSvg : isSelected ? checkboxSelectedSvg : checkboxBaseSvg
+  const SvgComponent = isIndeterminate
+    ? checkboxIndeterminateSvg
+    : isSelected
+    ? checkboxSelectedSvg
+    : checkboxBaseSvg
   return <SvgComponent aria-hidden="true" style={style} />
 }
 
