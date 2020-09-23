@@ -423,6 +423,52 @@ exports[`Checkbox renders the correct selected state 3`] = `
     data-radium={true}
     style={
       Object {
+        "fill": "#757575",
+        "height": 22,
+        "width": 22,
+      }
+    }
+  />
+  <input
+    checked={false}
+    data-radium={true}
+    id={2}
+    onChange={[Function]}
+    style={
+      Object {
+        "MozAppearance": "none",
+        "MsAppearance": "none",
+        "WebkitAppearance": "none",
+        "appearance": "none",
+        "backgroundImage": "none",
+        "cursor": "pointer",
+        "height": 22,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 22,
+      }
+    }
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Checkbox renders the correct selected state 4`] = `
+<div
+  data-radium={true}
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <test-file-stub
+    aria-hidden="true"
+    data-radium={true}
+    style={
+      Object {
         "fill": "#BDBDBD",
         "height": 22,
         "width": 22,

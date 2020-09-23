@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 import RadioCheckboxBase from '../../base/RadioCheckboxBase'
 import checkboxBaseSvg from '../../assets/checkboxBase.svg'
 import checkboxSelectedSvg from '../../assets/checkboxSelected.svg'
+import checkboxIndeterminateSvg from '../../assets/checkboxIndeterminate.svg'
 
-const renderInputButton = (isSelected, style) => {
-  const SvgComponent = isSelected ? checkboxSelectedSvg : checkboxBaseSvg
+const renderInputButton = (isSelected, style, isIndeterminate) => {
+  const SvgComponent = isIndeterminate ? checkboxIndeterminateSvg : isSelected ? checkboxSelectedSvg : checkboxBaseSvg
   return <SvgComponent aria-hidden="true" style={style} />
 }
 
@@ -21,6 +22,7 @@ Checkbox.propTypes = {
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   isDisabled: PropTypes.bool,
   isSelected: PropTypes.bool,
+  isIndeterminate: PropTypes.bool,
   name: PropTypes.string,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,

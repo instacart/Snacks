@@ -60,6 +60,7 @@ class RadioCheckboxBase extends React.PureComponent {
     children: PropTypes.node,
     id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     isSelected: PropTypes.bool,
+    isIndeterminate: PropTypes.bool,
     onChange: PropTypes.func,
     onBlur: PropTypes.func,
     onFocus: PropTypes.func,
@@ -107,14 +108,23 @@ class RadioCheckboxBase extends React.PureComponent {
   }
 
   renderInputBtn() {
-    const { aria, btnType, isDisabled, id, style, value, renderInputButton } = this.props
+    const {
+      aria,
+      btnType,
+      isDisabled,
+      isIndeterminate,
+      id,
+      style,
+      value,
+      renderInputButton,
+    } = this.props
     const { isSelected } = this.state
 
     const internalStyle = getStyles(this.props)
 
     return (
       <div style={{ ...internalStyle.button, ...style.button }}>
-        {renderInputButton(isSelected, getInputStyles(this.props, this.state))}
+        {renderInputButton(isSelected, getInputStyles(this.props, this.state), isIndeterminate)}
         <input
           id={id}
           type={btnType}
