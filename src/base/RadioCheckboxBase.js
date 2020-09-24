@@ -112,11 +112,11 @@ class RadioCheckboxBase extends React.PureComponent {
       aria,
       btnType,
       isDisabled,
-      isIndeterminate,
       id,
       style,
       value,
       renderInputButton,
+      isIndeterminate,
     } = this.props
     const { isSelected } = this.state
 
