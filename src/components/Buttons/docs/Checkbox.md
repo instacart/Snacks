@@ -18,6 +18,15 @@ import { Checkbox } from 'ic-snacks'
 ```
 **Important!** If you attach a label to a checkbox manually, make sure you set the line-height and margin-left properties as per the example above.
 
+### Indeterminate
+You can use the `indeterminate` checkbox by declaring the `isIndeterminate` prop:
+
+```jsx
+import { Checkbox } from 'ic-snacks'
+
+; <Checkbox id="checkbox3" isIndeterminate>Is Indeterminate</Checkbox>
+```
+
 ### Styling
 You can pass an object to the `style` prop for styling the label, radio button and wrap element using Radium's structure:
 
@@ -25,7 +34,7 @@ You can pass an object to the `style` prop for styling the label, radio button a
 import { Checkbox } from 'ic-snacks'
 
 ; <Checkbox
-    id="checkbox3"
+    id="checkbox4"
     wrapEl="span"
     style={{
       wrapEl: {padding: 10, border: '2px dotted lightblue'},
@@ -48,7 +57,7 @@ function onChange(event, props) {
   alert(`This button is ${props.isSelected ? '' : 'not '}selected`)
 }
 
-; <Checkbox id="checkbox4" onChange={onChange}>Click me!</Checkbox>
+; <Checkbox id="checkbox5" onChange={onChange}>Click me!</Checkbox>
 ```
 
 ### Disabling
@@ -61,6 +70,6 @@ function onChange(event, props) {
   alert(`This function will not be called`)
 }
 
-; <Checkbox id="checkbox5" onChange={onChange} isDisabled>I am disabled</Checkbox>
+; <Checkbox id="checkbox6" onChange={onChange} isDisabled>I am disabled</Checkbox>
 ```
 **Important!** If you attach a label to a checkbox manually, make sure the colors for the disabled state follow the styleguide.
