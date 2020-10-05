@@ -14,6 +14,7 @@ export interface RadioCheckboxBaseProps
   aria?: { label?: string }
   isDisabled?: boolean
   isSelected?: boolean
+  isIndeterminate?: boolean,
   value?: string
   wrapEl?: keyof JSX.IntrinsicElements
   width?: number

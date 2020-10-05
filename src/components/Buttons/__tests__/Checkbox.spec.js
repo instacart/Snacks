@@ -14,6 +14,7 @@ describe('Checkbox', () => {
     const testCases = [
       { id: 1, isSelected: false },
       { id: 2, isSelected: true },
+      { id: 2, isIndeterminate: true},
       { id: 2, isSelected: true, isDisabled: true },
     ]
 
