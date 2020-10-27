@@ -23,6 +23,9 @@ export interface ButtonProps extends WithThemeInjectedProps {
   /** Where the icon is positioned relative to primary text content. */
   iconPosition?: 'left' | 'right'
 
+  /** An optional id for the button element */
+  id?: string
+
   /** Reverses colors. Use for rendering buttons on dark backgrounds. */
   inverted?: boolean
 
