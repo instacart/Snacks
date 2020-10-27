@@ -7,6 +7,12 @@ import Icon from '../../Icon/Icon'
 import Button from '../Button'
 
 describe('Button', () => {
+  it('should support button prop', () => {
+    const wrapper = mount(<Button id="foo" />)
+
+    expect(wrapper.find('button#foo')).toHaveLength(1)
+  })
+
   it('renders all sizes correctly', () => {
     const testCases = [
       { snacksStyle: 'primary', size: 'tiny' },

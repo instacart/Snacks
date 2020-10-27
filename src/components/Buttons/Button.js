@@ -211,6 +211,7 @@ const Button = props => {
 
   const finalProps = {
     disabled: props.disabled,
+    id: props.id,
     tabIndex: props.tabIndex,
     type: props.type,
     style: [
@@ -283,6 +284,9 @@ Button.propTypes = {
 
   /** Sets the HTML type attribute on the element. */
   type: PropTypes.oneOf(['button', 'reset', 'submit']),
+
+  /** An optional id for the button element */
+  id: PropTypes.string,
 
   /**
     An optional icon. Can be a an icon name
