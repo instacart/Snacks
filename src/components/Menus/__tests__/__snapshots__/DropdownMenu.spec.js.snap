@@ -109,6 +109,7 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
                       aria-haspopup={true}
                       data-radium={true}
                       disabled={false}
+                      id="trigger"
                       onBlur={[Function]}
                       onClick={[Function]}
                       onFocus={[Function]}
