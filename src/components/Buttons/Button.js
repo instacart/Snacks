@@ -273,8 +273,8 @@ const Button = props => {
 }
 
 Button.propTypes = {
-  'aria-selected': PropTypes.boolean,
-  'aria-disabled': PropTypes.boolean,
+  'aria-selected': PropTypes.bool,
+  'aria-disabled': PropTypes.bool,
   'aria-label': PropTypes.string,
 
   /** Size of the button. */
