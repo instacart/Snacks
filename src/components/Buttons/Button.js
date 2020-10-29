@@ -211,6 +211,9 @@ const Button = props => {
 
   const finalProps = {
     disabled: props.disabled,
+    'aria-selected': props['aria-selected'],
+    'aria-disabled': props['aria-disabled'],
+    'aria-label': props['aria-label'],
     id: props.id,
     tabIndex: props.tabIndex,
     type: props.type,
@@ -270,6 +273,10 @@ const Button = props => {
 }
 
 Button.propTypes = {
+  'aria-selected': PropTypes.boolean,
+  'aria-disabled': PropTypes.boolean,
+  'aria-label': PropTypes.string,
+
   /** Size of the button. */
   size: PropTypes.oneOf(['tiny', 'small', 'standard', 'large']),
 

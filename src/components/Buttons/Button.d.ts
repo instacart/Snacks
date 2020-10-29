@@ -3,6 +3,12 @@ import { RadiumStyles, ElementAttributes } from '../..'
 import { WithThemeInjectedProps, ApplyWithTheme } from '../../styles/themer/withTheme'
 
 export interface ButtonProps extends WithThemeInjectedProps {
+  'aria-selected'?: boolean
+
+  'aria-disabled'?: boolean
+
+  'aria-label'?: string
+
   children?: React.ReactNode
 
   /** Whether or not the button is disabled. */

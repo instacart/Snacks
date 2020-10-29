@@ -7,7 +7,25 @@ import Icon from '../../Icon/Icon'
 import Button from '../Button'
 
 describe('Button', () => {
-  it('should support button prop', () => {
+  it('should support aria-selected prop', () => {
+    const wrapper = mount(<Button aria-selected />)
+
+    expect(wrapper.find('button[aria-selected]')).toHaveLength(1)
+  })
+
+  it('should support aria-disabled prop', () => {
+    const wrapper = mount(<Button aria-disabled />)
+
+    expect(wrapper.find('button[aria-disabled]')).toHaveLength(1)
+  })
+
+  it('should support aria-label prop', () => {
+    const wrapper = mount(<Button aria-label="foo-bar" />)
+
+    expect(wrapper.find('button[aria-label="foo-bar"]')).toHaveLength(1)
+  })
+
+  it('should support id prop', () => {
     const wrapper = mount(<Button id="foo" />)
 
     expect(wrapper.find('button#foo')).toHaveLength(1)
