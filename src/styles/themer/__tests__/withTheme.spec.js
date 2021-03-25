@@ -35,6 +35,7 @@ describe('while in production mode', () => {
 
     jest.resetModules()
     process.env.NODE_ENV = 'production'
+    // eslint-disable-next-line global-require
     TestComponent = require('../withTheme').default(Test)
   })
 
@@ -59,6 +60,7 @@ describe('while in production mode', () => {
   })
 
   it('falls back to active themer theme if props are invalid', () => {
+    // eslint-disable-next-line array-callback-return
     ;[null, undefined].map(invalidTheme => {
       const tree = renderer.create(<TestComponent snacksTheme={invalidTheme} />).toJSON()
       expect(tree.props.style.backgroundColor).toBe(defaultTheme.colors.primaryBackground)
