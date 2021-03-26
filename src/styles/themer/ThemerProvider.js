@@ -31,8 +31,9 @@ export class ThemerProvider extends React.Component {
 
   render() {
     const { themer, children } = this.props
-    const { tick } = this.state
-    return <ThemerContext.Provider value={{ themer, tick }}>{children}</ThemerContext.Provider>
+    // this creates a new reference every time render gets called
+    const themerContext = { themer }
+    return <ThemerContext.Provider value={themerContext}>{children}</ThemerContext.Provider>
   }
 }
 

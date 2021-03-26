@@ -44,7 +44,7 @@ import MenuItem from './components/Menus/MenuItem'
 import MenuDivider from './components/Menus/MenuDivider'
 import DropdownMenu from './components/Menus/DropdownMenu'
 import zIndex from './styles/zIndex'
-import { Themer, ThemerContext } from './styles/themer/index'
+import { Themer, ThemerContext, ThemerProvider } from './styles/themer/index'
 import withTheme, { WithThemeInjectedProps } from './styles/themer/withTheme'
 import Slide from './components/Transitions/Slide'
 import Grow from './components/Transitions/Grow'
@@ -103,6 +103,7 @@ export {
   // theming
   Themer,
   ThemerContext,
+  ThemerProvider,
   withTheme,
   WithThemeInjectedProps,
   themePropTypes,
