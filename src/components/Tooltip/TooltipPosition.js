@@ -53,7 +53,7 @@ class TooltipPosition extends PureComponent {
     const target = this.getTarget()
     const { overlay } = this
     const targetRect = this.getRect(target)
-    const documentWidth = document.documentElement.scrollWidth
+    const documentWidth = document.documentElement.offsetWidth
 
     const overlayRect = {
       top: targetRect.top,
