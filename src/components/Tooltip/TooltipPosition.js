@@ -27,7 +27,10 @@ class TooltipPosition extends PureComponent {
   }
 
   componentDidMount() {
-    this.calculatePosition()
+    // modified July 28, 2021. Need to delay calculatePosition function because documentWidth, overlay and targetRect may not be ready with the right sizes
+    // if we calculatePosition with these wrong sizes, we can't recalculate to the correct one in the next few frames, due to the side effects of calculatePosition 
+    // (overlayRect values already set)
+    setTimeout(()=>{this.calculatePosition()}, 300);
   }
 
   getTarget = () => {
@@ -53,7 +56,7 @@ class TooltipPosition extends PureComponent {
     const target = this.getTarget()
     const { overlay } = this
     const targetRect = this.getRect(target)
-    const documentWidth = document.documentElement.offsetWidth
+    const documentWidth = document.documentElement.scrollWidth
 
     const overlayRect = {
       top: targetRect.top,
