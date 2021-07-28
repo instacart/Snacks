@@ -35,7 +35,7 @@ class Tooltip extends PureComponent {
     onDismiss: PropTypes.func,
     onShow: PropTypes.func,
     isVisible: PropTypes.bool,
-    delayCalculatePosition: PropTypes.bool
+    delayCalculatePosition: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -100,7 +100,7 @@ class Tooltip extends PureComponent {
       snacksStyle,
       isVisible,
       overlayStyle,
-      delayCalculatePosition
+      delayCalculatePosition,
     } = this.props
 
     return (
