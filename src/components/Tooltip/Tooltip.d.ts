@@ -40,6 +40,8 @@ export interface TooltipProps {
   onShow(): void
 
   isVisible?: boolean
+
+  delayCalculatePosition?: boolean
 }
 
 declare const Tooltip: React.ComponentClass<TooltipProps>

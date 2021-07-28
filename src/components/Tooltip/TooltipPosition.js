@@ -19,6 +19,7 @@ class TooltipPosition extends PureComponent {
     target: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
     placement: PropTypes.oneOf(['top', 'left', 'right', 'bottom']).isRequired,
     style: PropTypes.shape({}),
+    delayCalculatePosition: PropTypes.bool,
   }
 
   state = {
@@ -27,7 +28,18 @@ class TooltipPosition extends PureComponent {
   }
 
   componentDidMount() {
-    this.calculatePosition()
+    const { delayCalculatePosition } = this.props
+
+    if (delayCalculatePosition) {
+      // modified July 28, 2021. Need to delay calculatePosition function because documentWidth, overlay and targetRect may not be ready with the right sizes
+      // if we calculatePosition with these wrong sizes, we can't recalculate to the correct one in the next few frames, due to the side effects of calculatePosition
+      // (overlayRect values already set)
+      setTimeout(() => {
+        this.calculatePosition()
+      }, 300)
+    } else {
+      this.calculatePosition()
+    }
   }
 
   getTarget = () => {
