@@ -146,6 +146,9 @@ npm run styleguide:build
 > [Two factor authenticaion](https://docs.npmjs.com/getting-started/using-two-factor-authentication) is required on your npm account. You'll need your authenticator code during the release step.
 
 1. `npm run release:build`
+  If you run into test failure issues that aren't your own (eg: snapshot failures), remember to `yarn install` once to get the right dependencies
+  If you run into "0.0.xyz" branch already exists, switch back to master and delete that branch so you can start again. 
+  Make sure your code is the lastest from the master branch. 
 2. Go to the branch created on Github and update the description of the release branch to include a list of new components, enhancements, fixes or other important changes.
 3. Merge the branch into master on Github
 4. Draft a new release with the same description as the release branch: https://github.com/instacart/Snacks/releases

@@ -13,6 +13,7 @@ class TooltipOverlay extends PureComponent {
     onRootClose: PropTypes.func,
     rootCloseEnabled: PropTypes.bool,
     style: PropTypes.shape({}),
+    delayCalculatePosition: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -20,14 +21,28 @@ class TooltipOverlay extends PureComponent {
   }
 
   render() {
-    const { show, children, target, placement, onRootClose, rootCloseEnabled, style } = this.props
+    const {
+      show,
+      children,
+      target,
+      placement,
+      onRootClose,
+      rootCloseEnabled,
+      style,
+      delayCalculatePosition,
+    } = this.props
 
     if (!show) {
       return false
     }
 
     let child = (
-      <TooltipPosition style={style} target={target} placement={placement}>
+      <TooltipPosition
+        style={style}
+        target={target}
+        placement={placement}
+        delayCalculatePosition={delayCalculatePosition}
+      >
         {children}
       </TooltipPosition>
     )
