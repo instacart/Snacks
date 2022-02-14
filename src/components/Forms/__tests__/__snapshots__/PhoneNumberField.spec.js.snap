@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <StyleRoot>
-  <ForwardRef>
+  <Component>
     <div
       data-radium={true}
     >
@@ -540,13 +540,13 @@ exports[`renders correctly 1`] = `
         </StyleSheet>
       </withRadiumContexts(StyleSheet)>
     </div>
-  </ForwardRef>
+  </Component>
 </StyleRoot>
 `;
 
 exports[`renders correctly with focus state 1`] = `
 <StyleRoot>
-  <ForwardRef>
+  <Component>
     <div
       data-radium={true}
     >
@@ -1089,13 +1089,13 @@ exports[`renders correctly with focus state 1`] = `
         </StyleSheet>
       </withRadiumContexts(StyleSheet)>
     </div>
-  </ForwardRef>
+  </Component>
 </StyleRoot>
 `;
 
 exports[`uses a custom theme for all child components if one is provided 1`] = `
 <StyleRoot>
-  <ForwardRef>
+  <Component>
     <div
       data-radium={true}
     >
@@ -1677,6 +1677,6 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
         </StyleSheet>
       </withRadiumContexts(StyleSheet)>
     </div>
-  </ForwardRef>
+  </Component>
 </StyleRoot>
 `;
