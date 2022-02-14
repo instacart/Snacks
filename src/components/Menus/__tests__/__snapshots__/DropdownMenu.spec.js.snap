@@ -2,7 +2,7 @@
 
 exports[`renders DropdownMenu in open state correctly 1`] = `
 <StyleRoot>
-  <ForwardRef>
+  <Component>
     <div
       data-radium={true}
     >
@@ -16,11 +16,11 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
             }
           }
           triggerElement={
-            <withTheme(Component)
+            <withTheme(Button)
               id="trigger"
             >
                Share 
-            </withTheme(Component)>
+            </withTheme(Button)>
           }
         >
           <DropdownMenu
@@ -40,11 +40,11 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
               }
             }
             triggerElement={
-              <withTheme(Component)
+              <withTheme(Button)
                 id="trigger"
               >
                  Share 
-              </withTheme(Component)>
+              </withTheme(Button)>
             }
           >
             <div
@@ -60,7 +60,7 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
                   }
                 }
               >
-                <withTheme(Component)
+                <withTheme(Button)
                   aria-expanded={true}
                   aria-haspopup={true}
                   elementAttributes={
@@ -72,7 +72,7 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
                   id="trigger"
                   onMouseDown={[Function]}
                 >
-                  <ForwardRef
+                  <Button
                     aria-expanded={true}
                     aria-haspopup={true}
                     disabled={false}
@@ -146,8 +146,8 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
                     >
                        Share 
                     </button>
-                  </ForwardRef>
-                </withTheme(Component)>
+                  </Button>
+                </withTheme(Button)>
               </div>
               <div
                 data-radium={true}
@@ -366,7 +366,7 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
                                                 }
                                               }
                                             >
-                                              <ForwardRef
+                                              <Icon
                                                 name="emailFilled"
                                                 style={
                                                   Array [
@@ -398,7 +398,7 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
                                                 >
                                                   
                                                 </i>
-                                              </ForwardRef>
+                                              </Icon>
                                             </div>
                                           </div>
                                           <div
@@ -509,7 +509,7 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
                                                 }
                                               }
                                             >
-                                              <ForwardRef
+                                              <Icon
                                                 name="facebookFilled"
                                                 style={
                                                   Array [
@@ -544,7 +544,7 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
                                                 >
                                                   
                                                 </i>
-                                              </ForwardRef>
+                                              </Icon>
                                             </div>
                                           </div>
                                           <div
@@ -655,7 +655,7 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
                                                 }
                                               }
                                             >
-                                              <ForwardRef
+                                              <Icon
                                                 name="twitterFilled"
                                                 style={
                                                   Array [
@@ -690,7 +690,7 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
                                                 >
                                                   
                                                 </i>
-                                              </ForwardRef>
+                                              </Icon>
                                             </div>
                                           </div>
                                           <div
@@ -750,7 +750,7 @@ exports[`renders DropdownMenu in open state correctly 1`] = `
         </StyleSheet>
       </withRadiumContexts(StyleSheet)>
     </div>
-  </ForwardRef>
+  </Component>
 </StyleRoot>
 `;
 

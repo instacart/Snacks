@@ -103,6 +103,11 @@
     "underscore": "^1.8.3",
     "validator": "^9.1.1"
   },
+  "resolutions": {
+    "lodash": "4.17.21",
+    "immer": "9.0.6",
+    "merge-deep": "3.0.3"
+  },
   "peerDependencies": {
     "@instacart/radium": "^0.26.1",
     "prop-types": "^15.0.0 || ^16.0.0",
