@@ -389,7 +389,7 @@ exports[`renders correctly 1`] = `
                           </TextFieldHint>
                         </withRadiumContexts(TextFieldHint)>
                         <t
-                          aria-describedby="hint_test_id"
+                          aria-describedby="hint_test_id error_test_id"
                           aria-invalid={false}
                           autoComplete="on"
                           defaultValue={null}
@@ -426,7 +426,7 @@ exports[`renders correctly 1`] = `
                           type="tel"
                         >
                           <input
-                            aria-describedby="hint_test_id"
+                            aria-describedby="hint_test_id error_test_id"
                             aria-invalid={false}
                             autoComplete="on"
                             defaultValue={null}
@@ -938,7 +938,7 @@ exports[`renders correctly with focus state 1`] = `
                           </TextFieldHint>
                         </withRadiumContexts(TextFieldHint)>
                         <t
-                          aria-describedby="hint_test_id"
+                          aria-describedby="hint_test_id error_test_id"
                           aria-invalid={false}
                           autoComplete="on"
                           defaultValue={null}
@@ -975,7 +975,7 @@ exports[`renders correctly with focus state 1`] = `
                           type="tel"
                         >
                           <input
-                            aria-describedby="hint_test_id"
+                            aria-describedby="hint_test_id error_test_id"
                             aria-invalid={false}
                             autoComplete="on"
                             defaultValue={null}
@@ -1526,7 +1526,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                           </TextFieldHint>
                         </withRadiumContexts(TextFieldHint)>
                         <t
-                          aria-describedby="hint_test_id"
+                          aria-describedby="hint_test_id error_test_id"
                           aria-invalid={false}
                           autoComplete="on"
                           defaultValue={null}
@@ -1563,7 +1563,7 @@ exports[`uses a custom theme for all child components if one is provided 1`] = `
                           type="tel"
                         >
                           <input
-                            aria-describedby="hint_test_id"
+                            aria-describedby="hint_test_id error_test_id"
                             aria-invalid={false}
                             autoComplete="on"
                             defaultValue={null}

@@ -292,7 +292,7 @@ class MaskedTextField extends React.Component {
             name={name}
             aria-required={required}
             aria-invalid={hasError}
-            aria-describedby={hasError ? `hint_${inputId} error_${inputId}` : `hint_${inputId}`}
+            aria-describedby={`hint_${inputId} error_${inputId}`}
             onBlur={this.handleInputBlur}
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
