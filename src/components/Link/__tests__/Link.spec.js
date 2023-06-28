@@ -4,10 +4,14 @@ import { StyleRoot } from '@instacart/radium'
 import { mount } from 'enzyme'
 import { spy } from 'sinon'
 import Link from '../Link'
-import themer from '../../../styles/themer'
+import { Themer, ThemerProvider } from '../../../styles/themer'
 import { defaultTheme } from '../../../styles/themer/utils'
 
 describe('Link', () => {
+  let themer
+  beforeEach(() => {
+    themer = new Themer()
+  })
   it('renders without throwing', () => {
     const tree = renderer
       .create(
@@ -64,7 +68,9 @@ describe('Link', () => {
   it('re-renders when the active theme changes', () => {
     const wrapper = mount(
       <StyleRoot>
-        <Link elementAttributes={{ 'aria-label': 'foo' }}>HI</Link>
+        <ThemerProvider themer={themer}>
+          <Link elementAttributes={{ 'aria-label': 'foo' }}>HI</Link>
+        </ThemerProvider>
       </StyleRoot>
     )
 
