@@ -1,0 +1,31 @@
+name: Test
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.5.2
+
+      - name: Setup node.js
+        uses: actions/setup-node@v3.6.0
+        with:
+          node-version: '14.18.2'
+
+      - name: Restore cache
+        uses: actions/cache@v3.3.1
+        with:
+          path: ~/.cache/yarn
+          key: yarn-node-modules-v1-${{ hashFiles('yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
+
+      - name: Run tests
+        run: yarn test:ci
+
+      - name: Upload code coverage report
+        run: ./node_modules/.bin/codecov
