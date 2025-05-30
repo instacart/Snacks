@@ -2,6 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import isEqual from 'lodash.isequal'
 
+// Create a new context
+export const FormContext = React.createContext({
+  registerComponent: () => {},
+  unregisterComponent: () => {},
+})
+
 class Form extends React.Component {
   static propTypes = {
     /** Form html chilren */
@@ -16,25 +22,12 @@ class Form extends React.Component {
     serverErrors: PropTypes.shape({}),
   }
 
-  static childContextTypes = {
-    ICFormable: PropTypes.object,
-  }
-
   constructor() {
     super()
     this.state = { serverErrors: null }
     this.model = {}
     this.formComponents = {}
     this.invalidComponents = []
-  }
-
-  getChildContext() {
-    return {
-      ICFormable: {
-        registerComponent: this.registerComponent,
-        unregisterComponent: this.unregisterComponent,
-      },
-    }
   }
 
   componentDidMount() {
@@ -100,11 +93,17 @@ class Form extends React.Component {
 
   render() {
     const { children, formProps } = this.props
+    const contextValue = {
+      registerComponent: this.registerComponent,
+      unregisterComponent: this.unregisterComponent,
+    }
 
     return (
-      <form {...formProps} onSubmit={this.handleSubmit}>
-        {children}
-      </form>
+      <FormContext.Provider value={contextValue}>
+        <form {...formProps} onSubmit={this.handleSubmit}>
+          {children}
+        </form>
+      </FormContext.Provider>
     )
   }
 }
