@@ -16,7 +16,7 @@ jobs:
           node-version: '14.18.2'
 
       - name: Restore cache
-        uses: actions/cache@v3.3.1
+        uses: actions/cache@v3
         with:
           path: ~/.cache/yarn
           key: yarn-node-modules-v1-${{ hashFiles('yarn.lock') }}
