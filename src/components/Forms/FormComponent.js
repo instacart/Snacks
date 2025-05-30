@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Validator from 'validator'
+import { FormContext } from './Form'
 
 const formComponent = WrappedComponent => {
   return class FormComponent extends React.Component {
@@ -19,9 +20,7 @@ const formComponent = WrappedComponent => {
       validations: PropTypes.object,
     }
 
-    static contextTypes = {
-      ICFormable: PropTypes.object,
-    }
+    static contextType = FormContext
 
     state = {
       isValid: true,
@@ -34,11 +33,13 @@ const formComponent = WrappedComponent => {
       this.uniqueId =
         id || `${name}-${Math.floor(Math.random() * 0xffff)}`.replace(/[^A-Za-z0-9-]/gi, '')
 
-      this.context.ICFormable && this.context.ICFormable.registerComponent(this)
+      const { registerComponent } = this.context
+      registerComponent && registerComponent(this)
     }
 
     componentWillUnmount() {
-      this.context.ICFormable && this.context.ICFormable.unregisterComponent(this)
+      const { unregisterComponent } = this.context
+      unregisterComponent && unregisterComponent(this)
     }
 
     getValue = () => {
