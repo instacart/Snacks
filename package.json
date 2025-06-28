@@ -101,7 +101,7 @@
     "text-mask-addons": "^3.8.0",
     "tinycolor2": "^1.4.1",
     "underscore": "^1.8.3",
-    "validator": "^9.1.1"
+    "validator": "^13.7.0"
   },
   "resolutions": {
     "lodash": "4.17.21",
