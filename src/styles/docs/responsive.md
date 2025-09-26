@@ -21,7 +21,7 @@ responsive.up('lg') //=> '@media (min-width: 1248px)'
 
 // Target a given screen size and smaller
 responsive.down('sm') //=> '@media (max-width: 831px)'
-responsive.down('lg') //=> '@media (min-width: 1248px)'
+responsive.down('lg') //=> '@media (max-width: 1455px)'
 
 // Target a single screen size
 responsive.only('xs') //=> '@media (max-width: 768px)'
