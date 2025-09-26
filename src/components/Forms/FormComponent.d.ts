@@ -13,7 +13,7 @@ type ParametersAfterFirst<T extends (value: string, ...args: any[]) => any> = T 
   : never
 
 type Validators = Omit<typeof Validator, 'toString' | 'version' | 'extend'>
-type Validations = { [Key in keyof Validators]: ParametersAfterFirst<Validators[Key]> }
+type Validations = Partial<{ [Key in keyof Validators]: ParametersAfterFirst<Validators[Key]> }>
 
 interface FormComponentProps {
   /** Model name for Form */
