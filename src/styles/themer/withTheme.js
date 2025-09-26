@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { isValidElementType } from 'react-is'
 import PropTypes from 'prop-types'
-import themer from './index'
+import { ThemerContext } from './ThemerContext'
 import { cleanConfig, themePropTypes } from './utils'
 
 function withTheme(options = {}) {
@@ -27,8 +27,10 @@ function withTheme(options = {}) {
         snacksTheme: themePropTypes,
       }
 
+      static contextType = ThemerContext
+
       componentDidMount() {
-        this.unsubscribe = themer.subscribe(this.onThemeChange)
+        this.unsubscribe = this.context.themer.subscribe(this.onThemeChange)
         this.validateSnacksTheme()
       }
 
@@ -60,7 +62,7 @@ function withTheme(options = {}) {
 
       render() {
         const { snacksTheme, forwardedRef, ...rest } = this.props
-        const theme = this.themeIsValid() ? snacksTheme : themer.themeConfig
+        const theme = this.themeIsValid() ? snacksTheme : this.context.themer.themeConfig
 
         return <WrappedComponent ref={forwardedRef} snacksTheme={theme} {...rest} />
       }
