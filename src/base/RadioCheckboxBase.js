@@ -38,14 +38,14 @@ const getStyles = props => ({
   },
 })
 
-const getEnabledColor = (props, state) => {
-  return state.isSelected ? props.snacksTheme.colors.action : colors.GRAY_46
+const getEnabledColor = (props, isSelected) => {
+  return isSelected ? props.snacksTheme.colors.action : colors.GRAY_46
 }
 
-const getInputStyles = (props, state) => ({
+const getInputStyles = (props, isSelected) => ({
   width: props.width || INPUT_BTN_SIZE,
   height: INPUT_BTN_SIZE,
-  fill: props.isDisabled ? colors.GRAY_74 : getEnabledColor(props, state),
+  fill: props.isDisabled ? colors.GRAY_74 : getEnabledColor(props, isSelected),
 })
 
 class RadioCheckboxBase extends React.PureComponent {
@@ -61,6 +61,7 @@ class RadioCheckboxBase extends React.PureComponent {
     id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     isSelected: PropTypes.bool,
     isIndeterminate: PropTypes.bool,
+    parentControlledState: PropTypes.bool,
     onChange: PropTypes.func,
     onBlur: PropTypes.func,
     onFocus: PropTypes.func,
@@ -78,6 +79,7 @@ class RadioCheckboxBase extends React.PureComponent {
   static defaultProps = {
     aria: {},
     isSelected: false,
+    parentControlledState: false,
     onChange: NoOp,
     style: {},
     wrapEl: 'div',
@@ -96,14 +98,16 @@ class RadioCheckboxBase extends React.PureComponent {
   }
 
   handleChange = event => {
-    const { btnType, onChange } = this.props
-    const { isSelected } = this.state
+    const { btnType, onChange, parentControlledState } = this.props
+    const isSelected = parentControlledState ? this.props.isSelected : this.state.isSelected
 
     if (btnType === 'radio' && isSelected) {
       return
     }
 
-    this.setState({ isSelected: !isSelected })
+    if (!parentControlledState) {
+      this.setState({ isSelected: !isSelected })
+    }
     onChange(event, { ...this.props, isSelected: !isSelected })
   }
 
@@ -117,14 +121,15 @@ class RadioCheckboxBase extends React.PureComponent {
       renderInputButton,
       aria,
       isIndeterminate,
+      parentControlledState,
     } = this.props
-    const { isSelected } = this.state
+    const isSelected = parentControlledState ? this.props.isSelected : this.state.isSelected
 
     const internalStyle = getStyles(this.props)
 
     return (
       <div style={{ ...internalStyle.button, ...style.button }}>
-        {renderInputButton(isSelected, getInputStyles(this.props, this.state), isIndeterminate)}
+        {renderInputButton(isSelected, getInputStyles(this.props, isSelected), isIndeterminate)}
         <input
           id={id}
           type={btnType}
