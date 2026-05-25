@@ -104,4 +104,62 @@ describe('Checkbox', () => {
     wrapper.find('input').simulate('blur')
     expect(onBlur.calledOnce).toBe(true)
   })
+
+  it('acts as uncontrolled when no isSelected prop is provided', () => {
+    const wrapper = mount(<Checkbox id={1} />)
+    const input = wrapper.find('input')
+    expect(input.instance().checked).toBe(false)
+
+    input.simulate('change')
+    wrapper.update()
+    expect(wrapper.find('input').instance().checked).toBe(true)
+  })
+
+  it('acts as uncontrolled by default even when isSelected prop is provided (legacy behavior)', () => {
+    const wrapper = mount(<Checkbox id={1} isSelected={true} />)
+    const input = wrapper.find('input')
+    expect(input.instance().checked).toBe(true)
+
+    input.simulate('change')
+    wrapper.update()
+    expect(wrapper.find('input').instance().checked).toBe(false)
+  })
+
+  it('acts as uncontrolled by default even when isSelected={false} prop is provided (legacy behavior)', () => {
+    const wrapper = mount(<Checkbox id={1} isSelected={false} />)
+    const input = wrapper.find('input')
+    expect(input.instance().checked).toBe(false)
+
+    input.simulate('change')
+    wrapper.update()
+    expect(wrapper.find('input').instance().checked).toBe(true)
+  })
+
+  it('acts as fully controlled when parentControlledState prop is true and isSelected={true}', () => {
+    const onChange = sinon.spy()
+    const wrapper = mount(
+      <Checkbox id={1} isSelected={true} parentControlledState={true} onChange={onChange} />
+    )
+    const input = wrapper.find('input')
+    expect(input.instance().checked).toBe(true)
+
+    input.simulate('change')
+    wrapper.update()
+    expect(wrapper.find('input').instance().checked).toBe(true)
+    expect(onChange.calledOnce).toBe(true)
+  })
+
+  it('acts as fully controlled when parentControlledState prop is true and isSelected={false}', () => {
+    const onChange = sinon.spy()
+    const wrapper = mount(
+      <Checkbox id={1} isSelected={false} parentControlledState={true} onChange={onChange} />
+    )
+    const input = wrapper.find('input')
+    expect(input.instance().checked).toBe(false)
+
+    input.simulate('change')
+    wrapper.update()
+    expect(wrapper.find('input').instance().checked).toBe(false)
+    expect(onChange.calledOnce).toBe(true)
+  })
 })
